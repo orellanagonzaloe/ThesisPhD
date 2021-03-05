@@ -1,0 +1,92 @@
+\documentclass[a4paper,12pt,twoside,spanish]{book}
+
+
+\input{include/packages.tex}
+\input{include/commands.tex} 
+\input{include/style.tex} 
+                      
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\pagenumbering{gobble}
+
+\input{sections/title.tex} 
+
+\thispagestyle{empty} 
+\cleardoublepage
+
+\pagenumbering{roman}    
+
+\tableofcontents  
+   
+\cleardoublepage 
+
+\pagenumbering{arabic}
+
+\setcounter{page}{1}
+
+\pagestyle{fancy}
+
+\input{sections/introduction.tex}
+
+\thispagestyle{empty}
+
+\input{sections/theory.tex}
+
+% \thispagestyle{empty}
+
+% \input{sections/lhc.tex}
+
+% \thispagestyle{empty}
+
+% \input{sections/reconstruction.tex}
+
+% \thispagestyle{empty}
+
+% \input{sections/strategy.tex}
+
+% \thispagestyle{empty}
+
+% \input{sections/background.tex}
+
+% \thispagestyle{empty}
+
+% \input{sections/conclusion.tex}
+
+% \thispagestyle{empty}
+
+% \input{sections/acknowledgements.tex}
+
+% \thispagestyle{empty}
+
+
+%%
+%%   Bibliography
+%%   ============
+
+% \bibliographystyle{unsrt}
+% \bibliographystyle{bibtex/bst/atlasBibStyleWoTitle}
+% \bibliography{bibtex/bib/reference.bib,bibtex/bib/ATLAS.bib,bibtex/bib/ConfNotes.bib,bibtex/bib/PubNotes.bib,bibtex/bib/Extra.bib,bibtex/bib/Higgs_paper.bib}
+%\addbibresource{reference.bib}
+%\addbibresource{bibtex/bib/ATLAS.bib}
+%\addbibresource{bibtex/bib/ConfNotes.bib}
+%\addbibresource{bibtex/bib/PubNotes.bib}
+
+\addcontentsline{toc}{chapter}{Bibliografía}  
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
