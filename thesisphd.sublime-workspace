@@ -1,0 +1,1120 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"el",
+				"elSigPt"
+			],
+			[
+				"muBa",
+				"muBaseEta"
+			],
+			[
+				"elB",
+				"elBaseEta"
+			],
+			[
+				"jetBa",
+				"jetBaseEta"
+			],
+			[
+				"jetB",
+				"jetBasePt"
+			],
+			[
+				"phBa",
+				"phBasePt"
+			],
+			[
+				"deca",
+				"decay_tpye"
+			],
+			[
+				"n",
+				"nevents"
+			],
+			[
+				"syst",
+				"systMassWin"
+			],
+			[
+				"sys",
+				"systMassWin"
+			],
+			[
+				"get",
+				"getFF"
+			],
+			[
+				"output",
+				"outputDir"
+			],
+			[
+				"LabelCustom",
+				"LabelCustomY"
+			],
+			[
+				"Fi",
+				"FitClass"
+			],
+			[
+				"pr",
+				"print_msj"
+			],
+			[
+				"f_",
+				"f_total"
+			],
+			[
+				"fit",
+				"fitFunction_10"
+			],
+			[
+				"figure",
+				"figure\tFigure"
+			],
+			[
+				"GetPara",
+				"GetParameters"
+			],
+			[
+				"par",
+				"par_sig"
+			],
+			[
+				"sam",
+				"sample_path"
+			],
+			[
+				"TG",
+				"TGraphAsymmErrors"
+			],
+			[
+				"SetFill",
+				"SetFillColorAlpha"
+			],
+			[
+				"cd",
+				"cdown"
+			],
+			[
+				"nom",
+				"nom_file"
+			],
+			[
+				"loo",
+				"loop_samples"
+			],
+			[
+				"all",
+				"all_files"
+			],
+			[
+				"ph",
+				"ph_pt"
+			],
+			[
+				"reg",
+				"reg_weights"
+			],
+			[
+				"plot_",
+				"plot_stack"
+			],
+			[
+				"Plot",
+				"PlotObject"
+			],
+			[
+				"plot",
+				"plot_main"
+			],
+			[
+				"setup",
+				"hist_style_setup"
+			],
+			[
+				"hist",
+				"hist_style_steup"
+			],
+			[
+				"data",
+				"dataLabel"
+			],
+			[
+				"le",
+				"setup_legend"
+			],
+			[
+				"prin",
+				"print_event"
+			],
+			[
+				"pair",
+				"pair_mass"
+			],
+			[
+				"eta",
+				"eta_bin"
+			],
+			[
+				"h",
+				"h_seed"
+			],
+			[
+				"te",
+				"test_2"
+			],
+			[
+				"SetB",
+				"SetBinLabel"
+			],
+			[
+				"ye",
+				"year"
+			],
+			[
+				"we",
+				"weight_mc"
+			],
+			[
+				"wei",
+				"weight_names"
+			],
+			[
+				"do_",
+				"do_theosyst"
+			],
+			[
+				"lon",
+				"\\longrightarrow"
+			],
+			[
+				"file",
+				"filename"
+			],
+			[
+				"var",
+				"varexp"
+			],
+			[
+				"w",
+				"w_name"
+			],
+			[
+				"dph",
+				"dphi_gammet"
+			],
+			[
+				"frame",
+				"frame\tBeamer frame"
+			],
+			[
+				"lo",
+				"\\longrightarrow"
+			],
+			[
+				"footnote",
+				"\\footnotesize"
+			],
+			[
+				"footno",
+				"\\footnotesize"
+			],
+			[
+				"i",
+				"\\item"
+			],
+			[
+				"bb",
+				"bbmass"
+			],
+			[
+				"I",
+				"IGEV"
+			],
+			[
+				"so",
+				"sorted_x"
+			],
+			[
+				"slha_tm",
+				"slha_tmp"
+			],
+			[
+				"slha_tmp",
+				"slha_tmp_x"
+			],
+			[
+				"bin",
+				"bin_nx"
+			],
+			[
+				"jet",
+				"jet_isb"
+			],
+			[
+				"for",
+				"for\tFor Loop"
+			],
+			[
+				"in",
+				"inputfile"
+			],
+			[
+				"truth",
+				"truth_plotter"
+			],
+			[
+				"MC",
+				"MC15JobOptions"
+			],
+			[
+				"samples",
+				"samples_dict"
+			],
+			[
+				"lumi",
+				"lumi_w"
+			],
+			[
+				"cond",
+				"cond_skip"
+			],
+			[
+				"hi",
+				"hist_1"
+			],
+			[
+				"lep",
+				"lep_n"
+			],
+			[
+				"total",
+				"total_reg"
+			],
+			[
+				"yea",
+				"year_dict"
+			],
+			[
+				"write",
+				"write_root"
+			],
+			[
+				"wri",
+				"write_root"
+			],
+			[
+				"def",
+				"default"
+			],
+			[
+				"is",
+				"is_data"
+			],
+			[
+				"b",
+				"b_print"
+			],
+			[
+				"year",
+				"year_dict"
+			],
+			[
+				"Get",
+				"GetNbinsX"
+			],
+			[
+				"rego",
+				"regions_d"
+			],
+			[
+				"re",
+				"regions"
+			],
+			[
+				"eff",
+				"efficiency"
+			],
+			[
+				"his",
+				"hists"
+			],
+			[
+				"tru",
+				"truth_plotter"
+			],
+			[
+				"bas",
+				"baseline_jets"
+			],
+			[
+				"mass",
+				"mass_tmp"
+			],
+			[
+				"Generat",
+				"Generate_tf"
+			],
+			[
+				"im",
+				"img_format_others"
+			],
+			[
+				"cub",
+				"cube_list"
+			],
+			[
+				"ma",
+				"max_y"
+			],
+			[
+				"va",
+				"variable_x"
+			],
+			[
+				"min",
+				"min_y"
+			],
+			[
+				"max",
+				"max_x"
+			],
+			[
+				"br",
+				"br_max"
+			],
+			[
+				"sorte",
+				"sortedlist"
+			],
+			[
+				"sl",
+				"slha_files"
+			],
+			[
+				"trig",
+				"triggerList_g"
+			],
+			[
+				"Genr",
+				"Generate_tf"
+			],
+			[
+				"ph_offtight_new",
+				"ph_offtight_new"
+			],
+			[
+				"fil",
+				"filelist"
+			],
+			[
+				"data16",
+				"data16_3"
+			],
+			[
+				"data15",
+				"data15_3"
+			],
+			[
+				"arra",
+				"array_new"
+			],
+			[
+				"FF",
+				"FF_w1"
+			],
+			[
+				"even",
+				"event_number"
+			],
+			[
+				"h_d",
+				"h_dphi_gammet_ele"
+			],
+			[
+				"h_",
+				"h_met_et_ele"
+			],
+			[
+				"met",
+				"met_et"
+			],
+			[
+				"n_bk",
+				"n_bkg_tight"
+			],
+			[
+				"el_",
+				"el_phi"
+			],
+			[
+				"new",
+				"new_tag"
+			],
+			[
+				"set",
+				"set_weight_1"
+			],
+			[
+				"tag",
+				"tag_tmp"
+			],
+			[
+				"bin_pt",
+				"bin_pt_width"
+			],
+			[
+				"bin_m_",
+				"bin_m_width"
+			],
+			[
+				"bint",
+				"bin_eta_n"
+			],
+			[
+				"bin_et",
+				"bin_eta_max"
+			],
+			[
+				"bin_e",
+				"bin_eta_min"
+			],
+			[
+				"i_",
+				"i_small"
+			],
+			[
+				"bin_eta",
+				"bin_eta_min"
+			],
+			[
+				"bin_eta_",
+				"bin_eta_width"
+			],
+			[
+				"tge_k",
+				"tge_khilesh_ABon"
+			],
+			[
+				"count",
+				"count_OR_e"
+			],
+			[
+				"tg",
+				"tge_stefano"
+			],
+			[
+				"Z",
+				"Z_alg"
+			],
+			[
+				"crack",
+				"crack_bin"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "thesisphd.sublime-project",
+			"settings":
+			{
+				"buffer_size": 138,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/introduction.tex",
+			"settings":
+			{
+				"buffer_size": 100,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sections/conclusion.tex",
+			"settings":
+			{
+				"buffer_size": 95,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Makefile/Make.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/Makefile/Make.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 244.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: column"
+			],
+			[
+				"package control in",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 461.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/home/gonza/projects/SUSY_phb/C1N1-WphbbGG-h.tex",
+		"/home/gonza/projects/thesisphd/thesisphd.sublime-project",
+		"/home/gonza/projects/thesisphd/sections/acknowledgements.tex",
+		"/home/gonza/projects/thesisphd/sections/strategy.tex",
+		"/home/gonza/projects/thesisphd/sections/objects.tex",
+		"/home/gonza/projects/thesisphd/sections/introduction.tex",
+		"/home/gonza/projects/thesisphd/sections/lhc.tex",
+		"/home/gonza/projects/thesisphd/sections/conclusion.tex",
+		"/home/gonza/projects/thesisphd/sections/results.tex",
+		"/home/gonza/projects/thesisphd/sections/trigger.tex",
+		"/home/gonza/projects/thesisphd/sections/theory.tex",
+		"/home/gonza/projects/thesisphd/ThesisPhD.tex",
+		"/home/gonza/Desktop/untitled.sublime-project",
+		"/tmp/rsub-7w80cl/download.sh",
+		"/home/gonza/projects/thesisphd/Makefile",
+		"/tmp/rsub-jmgtln/xAODTruthAnalysis.cxx",
+		"/tmp/rsub-l__9iy/xAODTruthAnalysis.h",
+		"/tmp/rsub-u_ez8e/TruthTree.h",
+		"/tmp/rsub-aqrcu1/TruthTree.cxx",
+		"/tmp/rsub-zij8bu/checkMetaSG.py",
+		"/tmp/rsub-9hhdv8/run.py",
+		"/tmp/rsub-jvzouf/MiniClone.h",
+		"/tmp/rsub-9s0bu3/MiniClone.cxx",
+		"/tmp/rsub-g5y18z/create_fr2_efake_mini.py",
+		"/tmp/rsub-w3o2kz/MiniClone.cxx",
+		"/tmp/rsub-oltnde/xAODTruthAnalysis.cxx",
+		"/tmp/rsub-wivr_1/xsutils.py",
+		"/tmp/rsub-dufaca/TruthTree.cxx",
+		"/tmp/rsub-f9brok/xAODAnalysis.cxx",
+		"/tmp/rsub-s5pgcf/Common.h",
+		"/tmp/rsub-zx5f3a/MiniTree.h",
+		"/tmp/rsub-sy5p_c/MiniTree.cxx",
+		"/tmp/rsub-8p8lgt/xAODAnalysis.h",
+		"/tmp/rsub-gombuh/MiniTree.cxx",
+		"/tmp/rsub-55qzmj/MiniTree.h",
+		"/tmp/rsub-eeiyfl/xAODAnalysis.h",
+		"/tmp/rsub-6idzvh/xAODAnalysis.cxx",
+		"/tmp/rsub-o88e3_/TruthTree.h",
+		"/tmp/rsub-c9h4tx/TruthTree.cxx",
+		"/tmp/rsub-s5k8po/xAODTruthAnalysis.cxx",
+		"/tmp/rsub-qsinvr/setup.sh3",
+		"/tmp/rsub-yeu8qh/build.sh3",
+		"/tmp/rsub-402yb3/build.sh2",
+		"/tmp/rsub-ex0yq0/setup.sh2",
+		"/home/gonza/Downloads/MadGraphControl_SimplifiedModel_C1N2_WZ.py_withGuess_usesystF_noIf",
+		"/tmp/rsub-vbkfif/mc.MGPy8EG_A14NNPDF23LO_GGM_ChiChi_bhmix_XXXX.py",
+		"/tmp/rsub-tn_oc_/loopTRUTH_v2.py",
+		"/tmp/rsub-5t6ik1/send_grid_Gen.sh",
+		"/home/gonza/Desktop/JO.py",
+		"/tmp/rsub-y6lc7v/createPlots.py",
+		"/home/gonza/projects/PhotonMetNtuple/src/PhotonMetNtuple/Root/MiniTree.cxx",
+		"/home/gonza/projects/PhotonMetNtuple/src/PhotonMetNtuple/Root/xAODAnalysis.cxx",
+		"/tmp/rsub-h79m0r/harry_plotter.py",
+		"/home/gonza/projects/PhotonMetNtuple/src/PhotonMetNtuple/scripts/run.py",
+		"/tmp/rsub-a3164s/loopTRUTH",
+		"/tmp/rsub-zxzfcf/send_grid_Gen.sh",
+		"/home/gonza/projects/GGMScan_GO/output/EWK_R21_request/param.susy.GGM_ChiChi_bhmix_-750.dat",
+		"/home/gonza/projects/GGMScan_GO/output/EWK_R21_request/param.susy.GGM_ChiChi_bhmix_750.dat",
+		"/home/gonza/projects/GGMScan_GO/output/EWK_R21_request/param.susy.GGM_ChiChi_bhmix_-550.dat",
+		"/home/gonza/projects/GGMScan_GO/scripts/getMassesBRMix.py",
+		"/tmp/rsub-5lvrnh/send_grid_Gen.sh",
+		"/tmp/rsub-uc19ny/mc.MGPy8EG_A14NNPDF23LO_GGM_ChiChi_bhmix_XXXX.py",
+		"/home/gonza/projects/GGMScan_GO/scripts/plot_VarvsVar.py",
+		"/home/gonza/projects/GGMScan_GO/output/EWK_R21_request/param.susy.GGM_ChiChi_bhmix_450.dat",
+		"/tmp/rsub-8gqf0v/mc.MGPy8EG_A14NNPDF23LO_GGM_ChiChi_bhmix_XXXX.py",
+		"/home/gonza/projects/GGMScan_GO/scripts/plot_BRvsVar.py",
+		"/home/gonza/projects/GGMScan_GO/output/EWK_R21_request/param.susy.GGM_ChiChi_bhmix_-150.dat",
+		"/home/gonza/projects/GGMScan_GO/output/EWK_R21_request/param.susy.GGM_ChiChi_bhmix_150.dat",
+		"/home/gonza/projects/GGMScan_GO/lib/pyslha.py",
+		"/home/gonza/projects/GGMScan_GO/output/EWK_R21_request/param.susy.GGM_ChiChi_bhmix_250.dat",
+		"/tmp/rsub-2fsg0i/createPlots.py",
+		"/home/gonza/projects/slides/EWK/presentation.tex",
+		"/home/gonza/projects/slides/phb/sqgl_19_09_12/sqgl_19_09_12.tex",
+		"/home/gonza/projects/slides/phb/signal_request/signal_request.tex",
+		"/home/gonza/projects/slides/EWK/Makefile",
+		"/home/gonza/projects/slides/atlas_lp/Makefile",
+		"/home/gonza/projects/slides/EWK/EWK_request/presentation.tex",
+		"/tmp/rsub-g66w3b/common.py",
+		"/tmp/rsub-rh0eth/style.py",
+		"/tmp/rsub-ghkezv/plot.py",
+		"/tmp/rsub-d3_hqz/mc.MGPy8EG_A14NNPDF23LO_GGM_ChiChi_bhmix_XXXX.py",
+		"/tmp/rsub-ds12a0/loopTRUTH_v2.py",
+		"/tmp/rsub-tdgl2a/harry_plotter.py",
+		"/tmp/rsub-_todlr/createPlots.py",
+		"/tmp/rsub-9lh9h_/harry_plotter.py",
+		"/tmp/rsub-38hcb1/download.sh",
+		"/home/gonza/projects/GGMScan_GO/output/phj_EWK/susy.XXXXXX.GGM_ChiChi_bhmix_450.dat",
+		"/tmp/rsub-8ioft6/createPlots.py",
+		"/tmp/rsub-k7tb_h/hp_EWK_R21_v6_mu_150",
+		"/tmp/rsub-oown09/count_hp.py",
+		"/tmp/rsub-6bdggt/loopTRUTH.py",
+		"/tmp/rsub-1qrjdu/loopTRUTH_v2.py",
+		"/home/gonza/projects/SUSY_phb/Ph-j_param_cards/slha(1)/slha/susy.377693.GGM_GG_bhmix_2000_1650.slha",
+		"/tmp/rsub-8a121a/count_finalstates.py",
+		"/tmp/rsub-a2ashu/count_finalstates.py",
+		"/tmp/rsub-u66nna/hp_MG_ChiChi_mu_450.json",
+		"/tmp/rsub-mb5u2_/send_grid_Reco.sh",
+		"/tmp/rsub-y7unfq/send_grid_Reco.sh",
+		"/tmp/rsub-6npf2c/count_finalstates.py",
+		"/tmp/rsub-8iq3ui/loopTRUTH.py",
+		"/tmp/rsub-abok78/count_hp.py",
+		"/home/gonza/tmp/tmp.py",
+		"/tmp/rsub-twyeso/AddBranch.cxx",
+		"/tmp/rsub-kwal2s/add_branch.py",
+		"/tmp/rsub-0zjz5i/eventReconstruct.py",
+		"/tmp/rsub-qb0j1w/count_finalstates.py",
+		"/tmp/rsub-uzpl52/xAODTruthAnalysis.cxx",
+		"/home/gonza/projects/PhotonMetNtuple/src/PhotonMetNtuple/Root/xAODTruthAnalysis.cxx",
+		"/home/gonza/projects/PhotonMetNtuple/src/PhotonMetNtuple/Root/TruthTree.cxx",
+		"/tmp/rsub-mpmlcd/loopTRUTH.py",
+		"/tmp/rsub-faer0m/count_hp.py",
+		"/tmp/rsub-ntkqd6/optimization.py",
+		"/tmp/rsub-zo17yx/loopTRUTH.py",
+		"/tmp/rsub-wk1x68/eventReconstruct.py",
+		"/tmp/rsub-zhlquc/mc.MGPy8EG_A14NNPDF23LO_GGM_ChiChi_bhmix_XXXX.py",
+		"/tmp/rsub-xt171l/send_grid_Gen.sh",
+		"/tmp/rsub-jlf04_/SUSY_SimplifiedModel_GGM_ChiChi_bhmix.py",
+		"/tmp/rsub-nh38_9/delete.sh",
+		"/tmp/rsub-y9ou7l/mc.MGPy8EG_A14NNPDF23LO_GGM_ChiChi_bhmix_XXXX.py",
+		"/tmp/rsub-s2xa7i/send_grid_Gen.sh",
+		"/tmp/rsub-6wipnc/send_grid_Reco.sh",
+		"/tmp/rsub-d9g7nf/susy.XXXXXX.GGM_ChiChi_bhmix_450.dat",
+		"/tmp/rsub-3h2xtx/susy.XXXXXX.GGM_ChiChi_bhmix_150.dat",
+		"/tmp/rsub-c02ewh/susy.XXXXXX.GGM_ChiChi_bhmix_1250.dat",
+		"/home/gonza/projects/GGMScan_GO/config/config_EWK.py",
+		"/tmp/rsub-9kmage/log.generate",
+		"/tmp/rsub-tj_f_x/log.generate_1",
+		"/tmp/rsub-hw_e_m/log.generate"
+	],
+	"find":
+	{
+		"height": 41.0
+	},
+	"find_in_files":
+	{
+		"height": 105.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Resultados e interpretación del análisis",
+			"tex",
+			"Resultados e interpretación del análisis",
+			"Eficiencia del trigger de fotones",
+			"LHC y detector ATLAS",
+			"objects",
+			"Recosntrucción",
+			"LHC y detector ATLAS",
+			"Experimento ATLAS",
+			"Introducción",
+			"_18k",
+			"MU",
+			"mu",
+			"MU",
+			"mu",
+			"MU",
+			"mu",
+			"MU",
+			"mu",
+			"MU",
+			"mu",
+			"MU",
+			"mu",
+			"MU",
+			"mu",
+			"MU",
+			"mu",
+			"MU",
+			"mu",
+			"MU",
+			"mu",
+			"MU",
+			"mu",
+			"MU",
+			"mu",
+			"MU",
+			"mu",
+			"MU",
+			"mu",
+			"MU",
+			"mu",
+			"MU",
+			"mu",
+			"MU",
+			"mu",
+			"MU",
+			"mu",
+			"MU",
+			"_v6",
+			"stream_names",
+			"cbk_lhe3_idx",
+			"MetaData",
+			"metadata",
+			"MetaData",
+			"metadata",
+			"MetaData",
+			"metadata",
+			"MetaData",
+			"metadata",
+			"ANA_MSG_ERROR",
+			"CutBookkeeperAuxContainer",
+			"xAODCutFlow",
+			"dopdfrw",
+			"do_lhe3",
+			"do_pdfrw",
+			"do_lhe3",
+			"met_sig",
+			"clone",
+			"met_sig",
+			"h_events",
+			");",
+			"+  ",
+			"met_sig_map",
+			"bbmass_lead",
+			"bb",
+			"bbmass_lead_map",
+			"bbmass_w_map",
+			"bbmass_lead_map",
+			"bbmass_w_map",
+			"bb",
+			"bbmass_w_map",
+			"param",
+			"decay",
+			"final_state",
+			"YRange",
+			"reweighting",
+			"']",
+			"= reweigh",
+			"Exclude",
+			"exclude",
+			"find_last_replica",
+			"fill",
+			"Fill",
+			"fill",
+			"1.)",
+			"['h_N1N1_decays']",
+			":",
+			"h_br_c1",
+			"reweighting",
+			"h_mc_w_total",
+			"mc_reweighting",
+			"in N1dec",
+			"find_last_replica",
+			" ## CHECK/FIX",
+			"absPdgId",
+			"setupATLAS",
+			"mN1",
+			"MU",
+			"mu",
+			"MU",
+			"mu",
+			"MU",
+			"_v6",
+			"+00",
+			"0.5",
+			"mu",
+			"(3",
+			"N3",
+			"'mu'",
+			"U",
+			"N",
+			"X', (1",
+			"IX', (1",
+			", (1",
+			"N1",
+			"tgVar[part][dec]",
+			"_color",
+			"idtodecay"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "thesisphd.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 138,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								133,
+								133
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sections/introduction.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 100,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sections/conclusion.tex",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 95,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 33.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 127.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 127.0
+	},
+	"pinned_build_system": "Packages/Makefile/Make.sublime-build",
+	"project": "thesisphd.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/projects/thesisphd/thesisphd.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 242.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
