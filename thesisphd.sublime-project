@@ -1,17 +1,17 @@
 {
+	"build_systems":
+	[
+		{
+			"name": "Make",
+			"shell_cmd": "make",
+			"working_dir": "$project_path"
+		}
+	],
 	"folders":
 	[
 		{
-			"path": "sections"
-		},
-		{
-			"path": "include"
-		},
-		{
-			"path": "images"
-		},
-		{
-			"path": "bib"
+			"name": "ThesisPhD",
+			"path": "."
 		},
 	]
 }
