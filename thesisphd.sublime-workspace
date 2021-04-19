@@ -520,28 +520,27 @@
 	"buffers":
 	[
 		{
-			"file": "thesisphd.sublime-project",
+			"file": "sections/objects.tex",
 			"settings":
 			{
-				"buffer_size": 138,
+				"buffer_size": 9380,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "sections/introduction.tex",
+			"file": "bib/ATLAS.bib",
 			"settings":
 			{
-				"buffer_size": 100,
-				"encoding": "UTF-8",
+				"buffer_size": 548423,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "sections/conclusion.tex",
+			"file": "sections/todo.tex",
 			"settings":
 			{
-				"buffer_size": 95,
+				"buffer_size": 918,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -623,9 +622,15 @@
 	},
 	"console":
 	{
-		"height": 0.0,
+		"height": 165.0,
 		"history":
 		[
+			"List",
+			"ls -l",
+			"List",
+			"make",
+			".ls",
+			"ls"
 		]
 	},
 	"distraction_free":
@@ -639,20 +644,32 @@
 	},
 	"expanded_folders":
 	[
+		"/home/gonza/projects/thesisphd",
+		"/home/gonza/projects/thesisphd/bib",
+		"/home/gonza/projects/thesisphd/include",
+		"/home/gonza/projects/thesisphd/sections"
 	],
 	"file_history":
 	[
-		"/home/gonza/projects/SUSY_phb/C1N1-WphbbGG-h.tex",
+		"/home/gonza/tmp/blackjack.py",
+		"/home/gonza/Downloads/ControlSimplified(3).py",
+		"/home/gonza/projects/thesisphd/include/commands.tex",
+		"/home/gonza/projects/thesisphd/bib/ATLAS.bib",
+		"/home/gonza/projects/thesisphd/bib/Extra.bib",
+		"/home/gonza/projects/thesisphd/include/packages.tex",
+		"/home/gonza/projects/thesisphd/include/style.tex",
+		"/home/gonza/projects/thesisphd/sections/theory.tex",
+		"/home/gonza/projects/thesisphd/ThesisPhD.pdf",
 		"/home/gonza/projects/thesisphd/thesisphd.sublime-project",
+		"/home/gonza/projects/thesisphd/sections/conclusion.tex",
+		"/home/gonza/projects/thesisphd/sections/introduction.tex",
+		"/home/gonza/projects/SUSY_phb/C1N1-WphbbGG-h.tex",
 		"/home/gonza/projects/thesisphd/sections/acknowledgements.tex",
 		"/home/gonza/projects/thesisphd/sections/strategy.tex",
 		"/home/gonza/projects/thesisphd/sections/objects.tex",
-		"/home/gonza/projects/thesisphd/sections/introduction.tex",
 		"/home/gonza/projects/thesisphd/sections/lhc.tex",
-		"/home/gonza/projects/thesisphd/sections/conclusion.tex",
 		"/home/gonza/projects/thesisphd/sections/results.tex",
 		"/home/gonza/projects/thesisphd/sections/trigger.tex",
-		"/home/gonza/projects/thesisphd/sections/theory.tex",
 		"/home/gonza/projects/thesisphd/ThesisPhD.tex",
 		"/home/gonza/Desktop/untitled.sublime-project",
 		"/tmp/rsub-7w80cl/download.sh",
@@ -761,15 +778,7 @@
 		"/tmp/rsub-jlf04_/SUSY_SimplifiedModel_GGM_ChiChi_bhmix.py",
 		"/tmp/rsub-nh38_9/delete.sh",
 		"/tmp/rsub-y9ou7l/mc.MGPy8EG_A14NNPDF23LO_GGM_ChiChi_bhmix_XXXX.py",
-		"/tmp/rsub-s2xa7i/send_grid_Gen.sh",
-		"/tmp/rsub-6wipnc/send_grid_Reco.sh",
-		"/tmp/rsub-d9g7nf/susy.XXXXXX.GGM_ChiChi_bhmix_450.dat",
-		"/tmp/rsub-3h2xtx/susy.XXXXXX.GGM_ChiChi_bhmix_150.dat",
-		"/tmp/rsub-c02ewh/susy.XXXXXX.GGM_ChiChi_bhmix_1250.dat",
-		"/home/gonza/projects/GGMScan_GO/config/config_EWK.py",
-		"/tmp/rsub-9kmage/log.generate",
-		"/tmp/rsub-tj_f_x/log.generate_1",
-		"/tmp/rsub-hw_e_m/log.generate"
+		"/tmp/rsub-s2xa7i/send_grid_Gen.sh"
 	],
 	"find":
 	{
@@ -787,6 +796,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Calorimeter Clustering Algorithms: Description and Performance",
+			"”",
+			"“",
+			"    ",
 			"Resultados e interpretación del análisis",
 			"tex",
 			"Resultados e interpretación del análisis",
@@ -910,11 +923,7 @@
 			"N",
 			"X', (1",
 			"IX', (1",
-			", (1",
-			"N1",
-			"tgVar[part][dec]",
-			"_color",
-			"idtodecay"
+			", (1"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -937,28 +946,28 @@
 			[
 				{
 					"buffer": 0,
-					"file": "thesisphd.sublime-project",
+					"file": "sections/objects.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 138,
+						"buffer_size": 9380,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								133,
-								133
+								7398,
+								7398
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"spell_check": true,
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1073.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -966,27 +975,29 @@
 				},
 				{
 					"buffer": 1,
-					"file": "sections/introduction.tex",
+					"file": "bib/ATLAS.bib",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 100,
+						"buffer_size": 548423,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								400557,
+								400557
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+							"syntax": "Packages/LaTeXTools/BibLaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 202032.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -994,24 +1005,25 @@
 				},
 				{
 					"buffer": 2,
-					"file": "sections/conclusion.tex",
-					"semi_transient": true,
+					"file": "sections/todo.tex",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 95,
+						"buffer_size": 918,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								345,
+								345
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1029,7 +1041,7 @@
 	},
 	"input":
 	{
-		"height": 40.0
+		"height": 41.0
 	},
 	"layout":
 	{
@@ -1066,7 +1078,7 @@
 	{
 		"height": 127.0
 	},
-	"pinned_build_system": "Packages/Makefile/Make.sublime-build",
+	"pinned_build_system": "Make",
 	"project": "thesisphd.sublime-project",
 	"replace":
 	{

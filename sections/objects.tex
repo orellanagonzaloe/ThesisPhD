@@ -1,5 +1,86 @@
-\chapter{Reconstrucción e identificación de objectos físicos en el detector ATLAS}
-% \addcontentsline{toc}{chapter}{Reconstrucción e identificación de objectos físicos en el detector ATLAS}
-\chaptermark{Reconstrucción e identificación de objectos físicos en el detector ATLAS}
+\chapter{Reconstrucción e identificación de objectos físicos en el detector ATLAS} %
+\addcontentsline{toc}{chapter}{Reconstrucción e identificación de objectos físicos en el detector
+ATLAS} \chaptermark{Reconstrucción e identificación de objectos físicos en el detector ATLAS}
 
-...
+
+
+El diseño del detector ATLAS permite la reconstrucción e identificación de prácticamente todas las
+partículas producidas en la colisión $pp$. Dada la energía de colisión entregada por el LHC, es
+posible producir todas las partículas del SM. Las partículas que tienen una vida media muy corta,
+decaen antes de llegar a la parte más interna del detector y se detectan los productos de su
+decaimiento. Teniendo en cuenta esto, se reduce considerablemente las posibles partículas que llegan
+al detector, ya que solo van a ser aquellas que sean estables o con suficiente vida media. Estas
+partículas consisten prácticamente en: $\gamma$, $e^{\pm}$, $\mu^{\pm}$, $\nu$ y algunos hadrones
+como $p$, $n$, piones y kaones. El diseño de los distintos subdetector permite aprovechar las
+características de cada una de ellas, permitiendo su reconstrucción e identificación. La
+reconstrucción se realiza una vez que el evento pasó los requisitos del \trigger y fue almacenado
+(\textit{offline}) \tosolve{Revisar todo este párrafo}
+
+% depositing a significant amount of energy in a restricted number of neighbouring calorimeter cells. Asphotons and electrons have very similar signatures in the EMC, their reconstruction proceeds in parallel
+
+
+\section{Electrones y fotones}
+
+% La reconstrucción de electrones y fotones en el detector ATLAS se realiza principalmente a partir de los depósitos
+% de energía medidos en el calorímetro electromagnético. Como la deposición de ambas partículas son
+% similares, se utiliza además información del detector de trazas para poder distinguir una de otra.
+% Las técnicas de reconstrucción de electrones y fotones son similares y por ende pueden ser
+% descriptas simultáneamente.
+
+Los electrones y fotones producto de la colisión $pp$ depositan la mayor parte de su energía en el calorímetro EM. Estos depósitos están restringidos a un número de celdas vecinas cuyo conjunto se denomina \textit{cluster}, que tienen formas características de la producción de estas partículas. Como los depósitos de ambas partículas son similares, se utiliza además información del detector de trazas para poder distinguir una de otra. Al ser el fotón neutro no deja traza en el ID, por lo que los \textit{clusters} que no están asociados a trazas son considerados fotones. Por otro lado, los \textit{clusters} asociados a trazas del ID son considerados electrones. 
+
+Procesos como la producción de pares ($\gamma\to e^{-}e^{+}$) producto de la interacción de los fotones con el material del detector, pueden dejar trazas o depósitos que no corresponden con la reconstrucción de un fotón. El algoritmo de reconstrucción tiene en cuenta esto y puede reconstruir los vértices de conversión, por lo que los \textit{clusters} asociados a vértices de conversión son considerados fotones. Finalmente, ciertos procesos (ej. $\pi^{0}\to\gamma\gamma$) pueden generar depósitos que erróneamente son reconstruidos como fotones o electrones. Es por eso se aplican una serie de criterios de identificación y aislamiento, basados en las formas de los depósitos de energía, que permiten discriminar estos procesos de los procesos \textit{prompt}. 
+
+Las técnicas de reconstrucción de electrones y fotones se realizan en paralelo y son son similares, pudiendo ser
+descriptas simultáneamente.
+
+\subsection{Reconstrucción}
+
+
+La reconstrucción de electrones y fotones en el detector ATLAS se realiza utilizando un algoritmo para la reconstrucción de \textit{clusters} dinámicos de tamaño variable, denominados \textit{superclusters} \cite{EGAM-2018-01}. Durante Run 1 el algoritmo reconstruía \textit{clusters} de tamaño fijo \cite{PERF-2013-04, PERF-2013-05, ATL-LARG-PUB-2008-002}, que si bien tenían una respuesta lineal energética y un estabilidad frente a pile-up, no permitía reconstruir eficientemente la energía de fotones \textit{bremsstrahlung} o de electrones/positrones producto de la creación de pares. La calibración de la energía descripta en \cite{PERF-2017-03} permite sacar ventaja de los \textit{superclusters}, solucionando esto sin perder la linealidad y estabilidad de los \textit{clusters} de tamaño fijo.
+
+El algoritmo comienza buscando las celdas en el calorímetro EM con una señal mayor a un cierto nivel de ruido, y a partir de ellas agrupa las celdas vecinas que cumplan otros criterios mas relajados de señal, formando lo que se denomina \textit{topo-clusters} \cite{PERF-2014-07, ATL-LARG-PUB-2008-002}. Cabe mencionar que los \textit{topo-clusters} pueden incluir celdas del calorímetro hadrónico para tener en cuenta los depósitos que se filtran. 
+
+Luego reconstruye las trazas utilizando un algoritmo de búsqueda de patrones de trazas estándar \cite{ATL-SOFT-PUB-2007-007} en todo el ID. A su vez, utiliza los depósitos en el calorímetro EM que tengan una forma compatible con la de una lluvia electromagnética \tosolve{definir mejor?} para definir regiones de interés. En estas regiones se utiliza otro algoritmo de búsqueda de trazas con criterios más relajados \cite{Kalman} para reconstruir trazas adicionales. Finalmente las trazas son ajustadas y asociadas a los \textit{topo-clusters}. \tosolve{entender mejor el tema de las trazas. calibraciones?}
+
+Los vértices de conversión son reconstruidos a partir de pares trazas con signo opuesto y consistentes con el decaimiento de una partícula sin masa. Adicionalmente se pueden reconstruir vértices de conversión a partir de una sola traza que no haya dejado señal en las capas más internas del ID.
+
+A continuación el algoritmo construye los \textit{superclusters} para electrones y fotones por separado. Para ello selecciona los \textit{topo-clusters} con una energía mayor a cierto \tosolve{Nota 1} umbral, y los agrupa con los demás \textit{topo-clusters} satélites que estén contenidos dentro de una ventana angular fija centrada en el \textit{topo-cluster} inicial. Dependiendo si el algoritmo es para fotones o electrones los umbrales son distintos, y en el caso de electrones o fotones convertidos, \textit{topo-clusters} satélites adicionales son incluidos utilizando las trazas asociadas. Como los \textit{supercluster} de electrones y fotones son generados independientemente, puede ocurrir que un mismo \textit{supercluster} produzca tanto un electrón como un fotón. En ese caso el candidato es guardado tanto como electrón y fotón simultáneamente, pero marcados como ambiguos y es decisión de cada análisis utilizarlos o no. Al finalizar esta etapa se obtienen los objetos finales que van a ser utilizados por los distintos análisis. \tosolve{calibración? eficiencia?}
+
+\subsection{Identificación}
+
+Como se mencionó anteriormente, distintos criterios de identificación son utilizados para poder discriminar los objetos \textit{prompt} de aquellos que no lo son. Para ello se definen una serie de variables basadas en la información del calorímetro y del ID, que mediante distintas técnicas permiten la correcta identificación de los objetos. Finalmente se definen diferentes puntos de trabajo (\textit{Working Points}, WP) que permiten mejorar la pureza de los objetos seleccionados al costo de tener una menor eficiencia de selección.
+
+La identificación de electrones tiene como principal objetivo discriminar los electrones \textit{prompt} de los fotones convertidos, de jets que depositaron energía en el calorímetro EM y de electrones producidos en el decaimiento de hadrones de sabor pesado. Esta identificación se basa en un método de likelihood que utiliza las variables descriptas en la Tabla \tosolve{Tabla variables}, y cuyas pdfs se obtienen de eventos con decaimientos de $J/\Psi$ y $Z$ para electrones de bajo y alto \ET respectivamente \cite{PERF-2016-01}. Para electrones se definen tres WP, \textit{Loose}, \textit{Medium} y \textit{Tight}, cuyas eficiencias son  93\%, 88\% y 80\% respectivamente. \tosolve{estas eficiencias son solo para EW?}
+
+La identificación de fotones esta diseñada para seleccionar eficientemente fotones \textit{prompt} y rechazar los fotones falsos provenientes de jets, principalmente del decaimiento de mesones livianos ($\pi^{0}\to\gamma\gamma$). La identificación de basa en una serie de cortes rectangulares sobre las variables presentes en la Tabla \tosolve{Tabla variables}. Las variables que utilizan las primeras capas del calorímetro electromagnéticos son esenciales para discriminar los decaimientos del $\pi^{0}$ en dos fotones muy colimados, ya que los depósitos de energía de este decaimiento se extienden en más celdas de este capa en comparación con el depósito de un fotón real. En la Figura \tosolve{figura pi vs fotón} se puede observar la comparación de ambos procesos. 
+Para la identificación de fotones también se definen tres WPs, \textit{Loose}, \textit{Medium} y \textit{Tight}, cada uno inclusivo con respecto al anterior. En la Tabla \tosolve{Tabla variables fotones} se muestran las variables utilizadas por cada WP. Los WPs \textit{Loose} y \textit{Medium} \tosolve{joaco pone que solo el medium es online} fueron utilizados por los algoritmos del trigger durante la toma de datos del Run 2 para seleccionar eventos con uno o dos fotones. Como los depósitos de energía varían debido a la geometría del calorímetros, los tres WPs fueron optimizados para diferentes valores de $|\eta|$, y adicionalmente la selección \textit{Tight} fue optimizada para distintos valores de \ET. Los depósitos de energía de los fotones convertidos difiere de los no convertidos, debido a la separación angular entre el $e^-$ y el $e^+$ que se amplifica por el campo magnético, y debido a la interacción de los pares con capas mas altas del calorímetro, permitiendo optimizar la selección \textit{Tight} de forma separada para fotones convertidos de los no convertidos. Esto no fue posible para las selecciones \textit{Loose} y \textit{Medium} ya que la información que utilizan no permite saber si un fotón es convertido o no. La optimización fue realizada a bajo \ET utilizando simulaciones de decaimientos radiativos del bosón $Z$ junto con datos con eventos con bosones $Z$, y a alto \ET con simulaciones de producción de fotones inclusiva y jets. \tosolve{Resultados de la eficiencia + citas}.
+
+
+
+\subsection{Aislamiento}
+
+
+Criterios de aislamiento se pueden aplicar sobre los fotones y electrones para aumentar aún más calidad de selección de los mismos. A su vez, la presencia de otros objetos cerca del fotón o el electrón puede interferir en la correcta reconstrucción de las variables cinemáticas del mismo, como su energía. El aislamiento de estos objetos de puede cuantizar definiendo variables no solo para los depósitos de energía, sino también para las trazas.
+
+La variable de aislamiento calorimétrico \cite{PERF-2017-01} (\ETcone{XX}) se define como la suma de la energía transversa de todas las celdas contenidas en un cono centrado en el \textit{topo-cluster}, y cuyo radio $\Delta R$ \tosolve{footnote definiendo esto?} (en el plano $\eta-\phi$) es igual a XX. La contribución energética del objeto a asilar se sustrae ignorando las celdas contenidas en un rectángulo en el centro del cono, y cuyos lados miden $\Delta\eta\times\Delta\phi = 5 \times 7$. Las filtraciones energéticas del candidato fuera del rectángulo son tenidas en cuenta junto con los efectos de pile-up \cite{Cacciari}. Para electrones se utiliza un cono de radio $\Delta R = 0.2$ (\ETcone{20}), mientras que para fotones se utiliza uno de $\Delta R = 0.2$ (\ETcone{20}) o $\Delta R = 0.4$ (\ETcone{40}) dependiendo del WP. La Figura \tosolve{figura cono} muestra un esquema del cono utilizado para construir la variable \ETcone{XX}.
+
+La variable de aislamiento de trazas (\pTcone{XX}) se define como la suma del momento transverso de todas las trazas contenidas dentro de un cono centrado en la traza del electrón o en la dirección del cluster del fotón convertido. La traza asociada al electrón o al fotón convertido son excluidas de esta suma, al igual que aquellas que no pasen una serie de criterios de calidad \tosolve{Nota 1}. Como los electrones producidos en el decaimiento de partículas pesadas pueden estar en cercanía de otras partículas, la variable de aislamiento de trazas utiliza un cono de radio variable, cuyo tamaño se reduce a alto \pt. La variable se denomina \pTvarcone{XX} donde XX es el radio máximo utilizado, que para el caso de los electrones es $\Delta R_{\text{máx}} = 0.2$ (\pTvarcone{20}). En el caso de los fotones el radio del cono mide $\Delta R = 0.2$ (\pTcone{20}).
+
+\tosolve{Poner en algún lado esto?: prompt electrons, isolated or produced in a busy environment, vs electrons from heavy-flavour decays or light hadrons misidentified as electrons}. Se definen distintos WPs de aislamiento de electrones dependiendo de si se desea mantener constante la eficiencia o si se desea aplicar cortes fijos en las variables de aislamiento. Un ejemplo de WP de aislamiento para electrones es el \textit{Loose} con una eficiencia de selección mayor a 90\% para electrones con $\ET>10$ GeV \cite{EGAM-2018-01}. En el caso de fotones también se definen distintos WPs que pueden no utilizar todas las variables de aislamiento, como el caso del WP \textit{FixedCutTightCaloOnly} que solo utiliza un corte en la variable \ETcone. Las definiciones de los distintos WPs de interés para esta tesis se listan en la Tabla \tosolve{tabla con iso WPs}.
+
+
+
+
+
+
+
+
+
+\section{Muones}
+
+\section{Jets}
+
+\subsection{Jets provenientes de quarks $b$ ($b$-jets)}
+
+\section{Energía transversa faltante}
