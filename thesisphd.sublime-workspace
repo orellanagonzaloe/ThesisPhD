@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"sigma",
+				"\\Sigma"
+			],
+			[
 				"el",
 				"elSigPt"
 			],
@@ -510,10 +514,6 @@
 			[
 				"Z",
 				"Z_alg"
-			],
-			[
-				"crack",
-				"crack_bin"
 			]
 		]
 	},
@@ -523,7 +523,25 @@
 			"file": "sections/objects.tex",
 			"settings":
 			{
-				"buffer_size": 9380,
+				"buffer_size": 21530,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "include/style.tex",
+			"settings":
+			{
+				"buffer_size": 1498,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "include/commands.tex",
+			"settings":
+			{
+				"buffer_size": 2571,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -537,10 +555,19 @@
 			}
 		},
 		{
+			"file": "bib/Extra.bib",
+			"settings":
+			{
+				"buffer_size": 20306,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "sections/todo.tex",
 			"settings":
 			{
-				"buffer_size": 918,
+				"buffer_size": 1679,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -589,6 +616,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"Snippet: eq",
+				"Snippet: Equation"
+			],
 			[
 				"pack",
 				"Package Control: Install Package"
@@ -652,6 +683,9 @@
 	"file_history":
 	[
 		"/home/gonza/tmp/blackjack.py",
+		"/home/gonza/projects/PhotonMetNtuple/src/PhotonMetNtuple/data/ST_PhotonMet_std.conf",
+		"/home/gonza/projects/PhotonMetNtuple/src/PhotonMetNtuple/data/PhotonMetNtuple_std.conf",
+		"/home/gonza/projects/PhotonMetNtuple/src/PhotonMetNtuple/Root/xAODAnalysis.cxx",
 		"/home/gonza/Downloads/ControlSimplified(3).py",
 		"/home/gonza/projects/thesisphd/include/commands.tex",
 		"/home/gonza/projects/thesisphd/bib/ATLAS.bib",
@@ -710,7 +744,6 @@
 		"/home/gonza/Desktop/JO.py",
 		"/tmp/rsub-y6lc7v/createPlots.py",
 		"/home/gonza/projects/PhotonMetNtuple/src/PhotonMetNtuple/Root/MiniTree.cxx",
-		"/home/gonza/projects/PhotonMetNtuple/src/PhotonMetNtuple/Root/xAODAnalysis.cxx",
 		"/tmp/rsub-h79m0r/harry_plotter.py",
 		"/home/gonza/projects/PhotonMetNtuple/src/PhotonMetNtuple/scripts/run.py",
 		"/tmp/rsub-a3164s/loopTRUTH",
@@ -776,9 +809,7 @@
 		"/tmp/rsub-zhlquc/mc.MGPy8EG_A14NNPDF23LO_GGM_ChiChi_bhmix_XXXX.py",
 		"/tmp/rsub-xt171l/send_grid_Gen.sh",
 		"/tmp/rsub-jlf04_/SUSY_SimplifiedModel_GGM_ChiChi_bhmix.py",
-		"/tmp/rsub-nh38_9/delete.sh",
-		"/tmp/rsub-y9ou7l/mc.MGPy8EG_A14NNPDF23LO_GGM_ChiChi_bhmix_XXXX.py",
-		"/tmp/rsub-s2xa7i/send_grid_Gen.sh"
+		"/tmp/rsub-nh38_9/delete.sh"
 	],
 	"find":
 	{
@@ -796,6 +827,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"joaco",
+			"muon",
+			"Performance of missing transverse momentum recons",
+			"Performance of missing transverse",
+			"Performance of missing transverse momentumreconstruction with the ATLAS detector using",
+			"met",
+			"Cacciari",
+			"erformance of the ATLAS Silicon Pattern Recognition Algorithm ",
+			"Design and Implementation of the ATLAS New Tracking",
+			"Muon reconstruction performance of the ATLAS de",
+			"•",
+			"Kalman",
+			" }",
 			"Calorimeter Clustering Algorithms: Description and Performance",
 			"”",
 			"“",
@@ -910,20 +954,7 @@
 			"MU",
 			"mu",
 			"MU",
-			"mu",
-			"MU",
-			"_v6",
-			"+00",
-			"0.5",
-			"mu",
-			"(3",
-			"N3",
-			"'mu'",
-			"U",
-			"N",
-			"X', (1",
-			"IX', (1",
-			", (1"
+			"mu"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -941,7 +972,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -950,15 +981,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9380,
+						"buffer_size": 21530,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7398,
-								7398
+								20985,
+								20985
 							]
 						],
 						"settings":
@@ -967,14 +998,72 @@
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1073.0,
+						"translation.y": 4526.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "include/style.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1498,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1203,
+								1203
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 95.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "include/commands.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2571,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2426,
+								2426
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 171.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "bib/ATLAS.bib",
 					"semi_transient": false,
 					"settings":
@@ -986,8 +1075,8 @@
 						"selection":
 						[
 							[
-								400557,
-								400557
+								275077,
+								275077
 							]
 						],
 						"settings":
@@ -997,27 +1086,61 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 202032.0,
+						"translation.y": 138914.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "sections/todo.tex",
+					"buffer": 4,
+					"file": "bib/Extra.bib",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 918,
+						"buffer_size": 20306,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								345,
-								345
+								20273,
+								20273
+							],
+							[
+								20302,
+								20302
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXTools/BibLaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 436.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "sections/todo.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1679,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								366,
+								366
 							]
 						],
 						"settings":
@@ -1029,7 +1152,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

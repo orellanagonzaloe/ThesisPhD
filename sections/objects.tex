@@ -54,7 +54,7 @@ Como se mencionó anteriormente, distintos criterios de identificación son util
 La identificación de electrones tiene como principal objetivo discriminar los electrones \textit{prompt} de los fotones convertidos, de jets que depositaron energía en el calorímetro EM y de electrones producidos en el decaimiento de hadrones de sabor pesado. Esta identificación se basa en un método de likelihood que utiliza las variables descriptas en la Tabla \tosolve{Tabla variables}, y cuyas pdfs se obtienen de eventos con decaimientos de $J/\Psi$ y $Z$ para electrones de bajo y alto \ET respectivamente \cite{PERF-2016-01}. Para electrones se definen tres WP, \textit{Loose}, \textit{Medium} y \textit{Tight}, cuyas eficiencias son  93\%, 88\% y 80\% respectivamente. \tosolve{estas eficiencias son solo para EW?}
 
 La identificación de fotones esta diseñada para seleccionar eficientemente fotones \textit{prompt} y rechazar los fotones falsos provenientes de jets, principalmente del decaimiento de mesones livianos ($\pi^{0}\to\gamma\gamma$). La identificación de basa en una serie de cortes rectangulares sobre las variables presentes en la Tabla \tosolve{Tabla variables}. Las variables que utilizan las primeras capas del calorímetro electromagnéticos son esenciales para discriminar los decaimientos del $\pi^{0}$ en dos fotones muy colimados, ya que los depósitos de energía de este decaimiento se extienden en más celdas de este capa en comparación con el depósito de un fotón real. En la Figura \tosolve{figura pi vs fotón} se puede observar la comparación de ambos procesos. 
-Para la identificación de fotones también se definen tres WPs, \textit{Loose}, \textit{Medium} y \textit{Tight}, cada uno inclusivo con respecto al anterior. En la Tabla \tosolve{Tabla variables fotones} se muestran las variables utilizadas por cada WP. Los WPs \textit{Loose} y \textit{Medium} \tosolve{joaco pone que solo el medium es online} fueron utilizados por los algoritmos del trigger durante la toma de datos del Run 2 para seleccionar eventos con uno o dos fotones. Como los depósitos de energía varían debido a la geometría del calorímetros, los tres WPs fueron optimizados para diferentes valores de $|\eta|$, y adicionalmente la selección \textit{Tight} fue optimizada para distintos valores de \ET. Los depósitos de energía de los fotones convertidos difiere de los no convertidos, debido a la separación angular entre el $e^-$ y el $e^+$ que se amplifica por el campo magnético, y debido a la interacción de los pares con capas mas altas del calorímetro, permitiendo optimizar la selección \textit{Tight} de forma separada para fotones convertidos de los no convertidos. Esto no fue posible para las selecciones \textit{Loose} y \textit{Medium} ya que la información que utilizan no permite saber si un fotón es convertido o no. La optimización fue realizada a bajo \ET utilizando simulaciones de decaimientos radiativos del bosón $Z$ junto con datos con eventos con bosones $Z$, y a alto \ET con simulaciones de producción de fotones inclusiva y jets. \tosolve{Resultados de la eficiencia + citas}.
+Para la identificación de fotones también se definen tres WPs, \textit{Loose}, \textit{Medium} y \textit{Tight}, cada uno inclusivo con respecto al anterior. En la Tabla \tosolve{Tabla variables fotones} se muestran las variables utilizadas por cada WP. Los WPs \textit{Loose} y \textit{Medium} \tosolve{no me queda claro del paper que solo el medium sea online} fueron utilizados por los algoritmos del trigger durante la toma de datos del Run 2 para seleccionar eventos con uno o dos fotones. Como los depósitos de energía varían debido a la geometría del calorímetros, los tres WPs fueron optimizados para diferentes valores de $|\eta|$, y adicionalmente la selección \textit{Tight} fue optimizada para distintos valores de \ET. Los depósitos de energía de los fotones convertidos difiere de los no convertidos, debido a la separación angular entre el $e^-$ y el $e^+$ que se amplifica por el campo magnético, y debido a la interacción de los pares con capas mas altas del calorímetro, permitiendo optimizar la selección \textit{Tight} de forma separada para fotones convertidos de los no convertidos. Esto no fue posible para las selecciones \textit{Loose} y \textit{Medium} ya que la información que utilizan no permite saber si un fotón es convertido o no. La optimización fue realizada a bajo \ET utilizando simulaciones de decaimientos radiativos del bosón $Z$ junto con datos con eventos con bosones $Z$, y a alto \ET con simulaciones de producción de fotones inclusiva y jets. \tosolve{Resultados de la eficiencia + citas}.
 
 
 
@@ -79,8 +79,60 @@ La variable de aislamiento de trazas (\pTcone{XX}) se define como la suma del mo
 
 \section{Muones}
 
+\tosolve{Me gustaría poner algo de cuánto interactúan los muones con el detector, y algo de los muones cósmicos}
+
+La reconstrucción de muones se realiza de forma independiente en el ID y en el MS. La información de los distintos subdetectores, que incluye a los calorímetros, se combina para formar a los objetos finales utilizados en los análisis \cite{PERF-2015-10}. La reconstrucción en el ID se realiza de la misma forma que con cualquier otra partícula cargada \cite{newt, silicon}. La reconstrucción en el MS comienza con una búsqueda de patrones de \textit{hits} \tosolve{definir?} para definir segmentos en cada cámara de muones, que luego son combinados con un ajuste de $\chi^2$ global.
+
+Luego se combina la información del ID, MS y los calorímetros, utilizando una serie de algoritmos que definen 4 tipos de muones dependiendo del subdetector que se utilizó en la reconstrucción:
+
+\begin{itemize}
+
+	\item Muones Combinados (CB): reconstruidos en el ID y el MS de forma independiente, y luego mediante un ajuste se reconstruye una traza combinada. \tosolve{algo más de descripción}
+
+	\item Muones Segmentados (ST): trazas del ID que al extrapolarlas al MS tienen asociadas un segmento en el MDT o el CSC. Se definen principalmente para reconstruir aquellos muones de bajo \pt o que caen en regiones del MS con baja aceptancia.
+
+	\item Muones Calorimétricos (CT): trazas del ID que están asociadas a depósitos de energía en el calorímetro compatibles con una partícula mínimamente ionizante. Este tipo de muones son los de menor pureza pero permite detectarlos en regiones donde el MS está parcialmente instrumentado.
+
+	\item Muones Extrapolados (ME): reconstruidos utilizando solo el MS y requiriendo que hayan dejado traza en la región \textit{forward} además de una mínima compatibilidad con el punto de interacción. Se definen principalmente para extender la aceptancia a la región $2.5<|\eta|<2.7$ donde el ID no llega a cubrir.
+
+\end{itemize}
+
+En caso de solapamiento entre los distintos tipos de muones se resuelve teniendo prioridad por los CB, luego por los ST y finalmente por los CT. Para los ME se priorizan aquellos muones con mejor calidad en el ajuste de la traza y mayor cantidad de \textit{hits}.
+
+La identificación de muones se realiza con el objetivo de discriminar muones \textit{prompt} de aquellos producidos principalmente en el decaimientos de piones y kaones, manteniendo una alta eficiencia y garantizando una medida robusta de su momento. Los muones producidos en el decaimiento de hadrones cargados dejan una traza en el ID con una topología enroscada \tosolve{traducir mejor!} que genera discrepancias entre el momento reconstruido en el ID y el reconstruido en el MS. La identificación se realiza aplicando una serie de cortes en diferentes variables \cite{PERF-2015-10} obtenidas a partir del estudio de simulaciones de producción de pares de \textit{top} quarks. Se definen cuatro WPS, \textit{Loose}, \textit{Medium}, \textit{Tight}, y \textit{High-pT}, para satisfacer las necesidades de los distintos análisis. Por ejemplo, la selección \textit{Loose} está optimizada para reconstruir candidatos del decaimiento del bosón de Higgs, la selección \textit{Medium} es la selección más genérica para todos los análisis, y la selección \textit{High-pT} está orientada a búsquedas de resonancias de alta masa del $Z'$ y $W'$.
+
+Finalmente se definen criterios de aislamiento que permiten distinguir aquellos muones producidos en los de caimientos de los bosones $Z$, $W$ y Higgs que en general se producen de forma aislada, de aquellos producidos en los decaimientos semi-leptónicos que quedan embebidos en los \textit{jets}. Para ello se definen siete WPS, utilizando las mismas variables de aislamiento calorimétrico y de trazas utilizadas para fotones y electrones (\pTvarcone{30} y \ETcone{20}).
+
+
 \section{Jets}
+
+
+
+
 
 \subsection{Jets provenientes de quarks $b$ ($b$-jets)}
 
+
+
+
+
+
+
 \section{Energía transversa faltante}
+
+\tosolve{Probablemente ya haya mencionado antes MET y su importancia no? Por las dudas los explco nuevamente y de última lo saco}
+
+Como se mencionó en \tosolve{definición MET}, el momento transverso faltante se utiliza como un sustituto \tosolve{indicio?} para obtener el momento de las partículas que prácticamente no interactúan con el detector, por ejemplo neutrinos o partículas más allá del SM. El momento en la dirección del haz que acarrea cada partón \tosolve{o quark?} previo a la colisión es desconocido, pero en la dirección transversa al haz se puede considerar que es nulo. Por conservación del momento se puede deducir que luego de la colisión la suma de los momentos en el plano transverso de todas las partículas producidas debería ser nulo, y en caso de no serlo puede ser un indicio de una partícula que escapó la detección. La reconstrucción del momento transverso faltante se basa en esta conservación y se define como menos la suma de los momentos transversos de todas las partículas observadas en el evento. En esta suma se incluyen los electrones, muones, fotones, taus decayendo hadrónicamente y jets reconstruidos con los métodos descriptos en las secciones anteriores. Además se incluye un termino (\textit{soft}) que tiene en cuenta el momento en la traza de las partículas que dejaron señal en el ID pero que no llegaron a reconstruirse. Quedando la definición del momento transverso faltante como \cite{PERF-2016-07}:
+
+\begin{equation}
+\textbf{E}_{\text{T}}^{\text{miss}} = -\sum_{i}\textbf{p}_{\text{T}}^{e_i}-\sum_{i}\textbf{p}_{\text{T}}^{\gamma_i}-\sum_{i}\textbf{p}_{\text{T}}^{\tau_i}-\sum_{i}\textbf{p}_{\text{T}}^{j_i}-\sum_{i}\textbf{p}_{\text{T}}^{\mu_i}-\sum_{i}\textbf{p}_{\text{T}}^{\text{Soft}_i}
+\end{equation}
+
+
+En general no se utilizan las componentes de este vector sino que se utiliza su módulo (\met) y su ángulo ($\phi^{\text{miss}}$), y cuando se menciona al momento transverso faltante se está haciendo referencia a su módulo. Otra variable que se utiliza además es $\Sigma E_{\text{T}}$ que se define como la suma del módulo de los momentos de todas las partículas anteriormente consideradas. Cabe aclarar que esta definición introduce un sesgo a tener \met no nula en eventos donde no se produjo ninguna partícula no interactuante, debido a la incorrecta o insuficiente reconstrucción de todos los objetos presentes en el evento.
+
+Como la reconstrucción se realiza de forma independiente para cada objeto, puede ocurrir que dos objetos distintos compartan algunas celdas calorimétricas. Para evitar el doble conteo, se define el siguiente orden de prioridad: electrones, fotones, taus y jets \cite{PERF-2011-07, PERF-2014-04}. Si alguna de estas partículas comparte celdas con otra de una prioridad mayor, la misma se elimina del cálculo de \met. Los muones son principalmente reconstruidos en el ID y el MS, por lo que el solapamiento con las demás partículas es mínimo y salvo algunos casos particulares ninguno es descartado. Muones no aislados que se solapan con los jets, jets que se solapan mínimamente con otros objetos o jets reconstruidos a partir de un depósito de energía de muones o de pile-up tienen un tratamiento especial descripto en la Referencia \cite{PERF-2016-07}.
+
+Los objetos que se incluyen en el cálculo de \met dependen de la selección de cada análisis, en el caso del presente análisis la selección base utilizada está descripta en la Sección \tosolve{sección donde describo la selección baseline}\tosolve{esta bien esto? MET depende de los objetos seleccionados?}. En el término \textit{Soft} se incluyen solamente aquellas trazas provenientes del vértice principal que no estén asociadas las partículas anteriormente seleccionadas. Los depósitos de partículas neutras \textit{soft} no se incluyen en este término ya que en su mayoría son producto del \textit{pile-up} y su inclusión reduce el desempeño en la reconstrucción de \met. \tosolve{resultados de eficiencia?}
+
+
