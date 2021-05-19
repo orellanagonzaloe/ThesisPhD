@@ -1,22 +1,29 @@
-\chapter{Reconstrucción e identificación de objectos físicos en el detector ATLAS} %
-\addcontentsline{toc}{chapter}{Reconstrucción e identificación de objectos físicos en el detector
-ATLAS} \chaptermark{Reconstrucción e identificación de objectos físicos en el detector ATLAS}
+\chapter{Reconstrucción e identificación de objectos físicos} %
+\addcontentsline{toc}{chapter}{Reconstrucción e identificación de objectos físicos}
+\chaptermark{Reconstrucción e identificación de objectos físicos}
 
 
 
 El diseño del detector ATLAS permite la reconstrucción e identificación de prácticamente todas las
-partículas producidas en la colisión $pp$. Dada la energía de colisión entregada por el LHC, es
-posible producir todas las partículas del SM. Las partículas que tienen una vida media muy corta,
-decaen antes de llegar a la parte más interna del detector y se detectan los productos de su
-decaimiento. Teniendo en cuenta esto, se reduce considerablemente las posibles partículas que llegan
-al detector, ya que solo van a ser aquellas que sean estables o con suficiente vida media. Estas
-partículas consisten prácticamente en: $\gamma$, $e^{\pm}$, $\mu^{\pm}$, $\nu$ y algunos hadrones
+partículas producidas en la colisión $pp$. 
+La mayoría de las partículas del SM son inestables por lo que decaen rápidamente en otras partículas estables. Esto reduce considerablemente las posibles partículas que llegan
+al detector, ya que solo van a ser aquellas que sean estables o con suficiente vida media, siendo estas principalmente: $\gamma$, $e^{\pm}$, $\mu^{\pm}$, $\nu$ y algunos hadrones
 como $p$, $n$, piones y kaones. El diseño de los distintos subdetector permite aprovechar las
-características de cada una de ellas, permitiendo su reconstrucción e identificación. La
+características de cada una de ellas, haciendo que cada una de las partículas anteriores dejen señales distintivas, permitiendo su reconstrucción e identificación \tosolve{figura tipica de una seccion de ATLAS con los depositos de las distintas particulas?}. La
 reconstrucción se realiza una vez que el evento pasó los requisitos del \trigger y fue almacenado
-(\textit{offline}) \tosolve{Revisar todo este párrafo}
+(\textit{offline}).
 
-% depositing a significant amount of energy in a restricted number of neighbouring calorimeter cells. Asphotons and electrons have very similar signatures in the EMC, their reconstruction proceeds in parallel
+
+% Dada la energía de colisión entregada por el LHC, es
+% posible producir todas las partículas del SM. Las partículas que tienen una vida media muy corta,
+% decaen antes de llegar a la parte más interna del detector y se detectan los productos de su
+% decaimiento. Teniendo en cuenta esto, se reduce considerablemente las posibles partículas que llegan
+% al detector, ya que solo van a ser aquellas que sean estables o con suficiente vida media. Estas
+% partículas consisten prácticamente en: $\gamma$, $e^{\pm}$, $\mu^{\pm}$, $\nu$ y algunos hadrones
+% como $p$, $n$, piones y kaones. El diseño de los distintos subdetector permite aprovechar las
+% características de cada una de ellas, permitiendo su reconstrucción e identificación. La
+% reconstrucción se realiza una vez que el evento pasó los requisitos del \trigger y fue almacenado
+% (\textit{offline}) \tosolve{Revisar todo este párrafo}
 
 
 \section{Electrones y fotones}
@@ -27,25 +34,39 @@ reconstrucción se realiza una vez que el evento pasó los requisitos del \trigg
 % Las técnicas de reconstrucción de electrones y fotones son similares y por ende pueden ser
 % descriptas simultáneamente.
 
-Los electrones y fotones producto de la colisión $pp$ depositan la mayor parte de su energía en el calorímetro EM. Estos depósitos están restringidos a un número de celdas vecinas cuyo conjunto se denomina \textit{cluster}, que tienen formas características de la producción de estas partículas. Como los depósitos de ambas partículas son similares, se utiliza además información del detector de trazas para poder distinguir una de otra. Al ser el fotón neutro no deja traza en el ID, por lo que los \textit{clusters} que no están asociados a trazas son considerados fotones. Por otro lado, los \textit{clusters} asociados a trazas del ID son considerados electrones. 
+Los electrones y fotones producidos tanto en la colisión $pp$ como aquellos producto del decaimiento de otras partículas, depositan la mayor parte de su energía en el calorímetro EM. Estos depósitos están restringidos a un número de celdas vecinas cuyo conjunto se denomina \textit{cluster}, y que tienen estructuras propias de la producción de estas partículas. Los depósitos que dejan ambas partículas son similares y con el objetivo de poder distinguirlas se utiliza además información del detector de trazas. Al ser el fotón una partícula neutra no deja traza en el ID, por lo que los \textit{clusters} que no están asociados a trazas son considerados fotones, mientras que los que los que sí lo están son considerados electrones. 
 
-Procesos como la producción de pares ($\gamma\to e^{-}e^{+}$) producto de la interacción de los fotones con el material del detector, pueden dejar trazas o depósitos que no corresponden con la reconstrucción de un fotón. El algoritmo de reconstrucción tiene en cuenta esto y puede reconstruir los vértices de conversión, por lo que los \textit{clusters} asociados a vértices de conversión son considerados fotones. Finalmente, ciertos procesos (ej. $\pi^{0}\to\gamma\gamma$) pueden generar depósitos que erróneamente son reconstruidos como fotones o electrones. Es por eso se aplican una serie de criterios de identificación y aislamiento, basados en las formas de los depósitos de energía, que permiten discriminar estos procesos de los procesos \textit{prompt}. 
+Procesos como la producción de pares ($\gamma\to e^{-}e^{+}$) producto de la interacción de los fotones con el material del detector, pueden dejar trazas o depósitos que no corresponden con la reconstrucción de un fotón. El algoritmo de reconstrucción tiene en cuenta esto y puede reconstruir los vértices de conversión, por lo que los \textit{clusters} asociados a vértices de conversión son considerados fotones. Finalmente, ciertos procesos (ej. $\pi^{0}\to\gamma\gamma$) pueden generar depósitos que erróneamente son reconstruidos como fotones o electrones. Para reducir la identificación errónea se aplican entonces una serie de criterios de identificación y aislamiento, basados en las formas de los depósitos de energía, que permiten discriminar estos procesos de los procesos \textit{prompt}. 
 
-Las técnicas de reconstrucción de electrones y fotones se realizan en paralelo y son son similares, pudiendo ser
+Las técnicas de reconstrucción de electrones y fotones se realizan en paralelo y son similares, pudiendo ser
 descriptas simultáneamente.
 
 \subsection{Reconstrucción}
 
 
-La reconstrucción de electrones y fotones en el detector ATLAS se realiza utilizando un algoritmo para la reconstrucción de \textit{clusters} dinámicos de tamaño variable, denominados \textit{superclusters} \cite{EGAM-2018-01}. Durante Run 1 el algoritmo reconstruía \textit{clusters} de tamaño fijo \cite{PERF-2013-04, PERF-2013-05, ATL-LARG-PUB-2008-002}, que si bien tenían una respuesta lineal energética y un estabilidad frente a pile-up, no permitía reconstruir eficientemente la energía de fotones \textit{bremsstrahlung} o de electrones/positrones producto de la creación de pares. La calibración de la energía descripta en \cite{PERF-2017-03} permite sacar ventaja de los \textit{superclusters}, solucionando esto sin perder la linealidad y estabilidad de los \textit{clusters} de tamaño fijo.
+La reconstrucción de electrones y fotones en el detector ATLAS se realiza utilizando un algoritmo para la reconstrucción de \textit{clusters} dinámicos de tamaño variable, denominados \textit{superclusters} \cite{EGAM-2018-01}. Durante Run 1 el algoritmo reconstruía \textit{clusters} de tamaño fijo \cite{PERF-2013-04, PERF-2013-05, Lampl:1099735}, que si bien tenían una respuesta lineal energética y un estabilidad frente a pile-up, no permitía reconstruir eficientemente la energía de fotones \textit{bremsstrahlung} o de electrones/positrones producto de la creación de pares. La implementación de \textit{superclusters} durante el Run 2, junto con la calibración de la energía descripta en la Referencia \cite{PERF-2017-03} permite solucionar esto sin perder la linealidad y estabilidad de los \textit{clusters} de tamaño fijo.
 
-El algoritmo comienza buscando las celdas en el calorímetro EM con una señal mayor a un cierto nivel de ruido, y a partir de ellas agrupa las celdas vecinas que cumplan otros criterios mas relajados de señal, formando lo que se denomina \textit{topo-clusters} \cite{PERF-2014-07, ATL-LARG-PUB-2008-002}. Cabe mencionar que los \textit{topo-clusters} pueden incluir celdas del calorímetro hadrónico para tener en cuenta los depósitos que se filtran. 
+\subsubsection{\textit{Topo-clusters}}
 
-Luego reconstruye las trazas utilizando un algoritmo de búsqueda de patrones de trazas estándar \cite{ATL-SOFT-PUB-2007-007} en todo el ID. A su vez, utiliza los depósitos en el calorímetro EM que tengan una forma compatible con la de una lluvia electromagnética \tosolve{definir mejor?} para definir regiones de interés. En estas regiones se utiliza otro algoritmo de búsqueda de trazas con criterios más relajados \cite{Kalman} para reconstruir trazas adicionales. Finalmente las trazas son ajustadas y asociadas a los \textit{topo-clusters}. \tosolve{entender mejor el tema de las trazas. calibraciones?}
+El algoritmo comienza buscando las celdas en el calorímetro EM y hadrónico con una señal cuatro veces mayor al ruido esperado dadas las condiciones de luminosidad y \textit{pileup} del Run 2. A partir de ellas agrega las celdas vecinas cuya señal sea dos veces mayor al ruido, que a su vez son utilizadas en la siguiente iteración del algoritmo. Finalmente se agregan todas las celdas vecinas a las celdas anteriores, independientemente de la intensidad de señal que tengan, formando lo que se denominan \textit{topo-clusters} \cite{PERF-2014-07, Lampl:1099735}. Los \textit{topo-clusters} que compartan celdas son unificados, mientras que los \textit{topo-clusters} que tengan dos máximos locales son divididos.
 
-Los vértices de conversión son reconstruidos a partir de pares trazas con signo opuesto y consistentes con el decaimiento de una partícula sin masa. Adicionalmente se pueden reconstruir vértices de conversión a partir de una sola traza que no haya dejado señal en las capas más internas del ID.
+\tosolve{Preguntar: Electron and photon reconstruction starts from the topo-clusters but only uses the energy from cells in theEM calorimeter,  This is referred to as theEM energy of the cluster, and the EM fraction (fEM) is the ratio of the EM energy to the total cluster energy.A preselectionrequirement off $EM>0.5$ was chosen for the initial topo-clusters,}
 
-A continuación el algoritmo construye los \textit{superclusters} para electrones y fotones por separado. Para ello selecciona los \textit{topo-clusters} con una energía mayor a cierto \tosolve{Nota 1} umbral, y los agrupa con los demás \textit{topo-clusters} satélites que estén contenidos dentro de una ventana angular fija centrada en el \textit{topo-cluster} inicial. Dependiendo si el algoritmo es para fotones o electrones los umbrales son distintos, y en el caso de electrones o fotones convertidos, \textit{topo-clusters} satélites adicionales son incluidos utilizando las trazas asociadas. Como los \textit{supercluster} de electrones y fotones son generados independientemente, puede ocurrir que un mismo \textit{supercluster} produzca tanto un electrón como un fotón. En ese caso el candidato es guardado tanto como electrón y fotón simultáneamente, pero marcados como ambiguos y es decisión de cada análisis utilizarlos o no. Al finalizar esta etapa se obtienen los objetos finales que van a ser utilizados por los distintos análisis. \tosolve{calibración? eficiencia?}
+\subsubsection{Trazas y vértices de conversión}
+
+La reconstrucción de trazas se realiza utilizando un algoritmo de búsqueda de patrones de trazas estándar \cite{ATL-SOFT-PUB-2007-007, PERF-2017-02, PERF-2017-01} en todo el ID. A su vez, utiliza los depósitos en el calorímetro EM que presenten una forma compatible con la de una lluvia electromagnética para definir regiones de interés. En caso de que el algoritmo anterior falle, se utiliza en estas regiones otro algoritmo de búsqueda de trazas \cite{Kalman}, permitiendo reconstruir trazas adicionales. Luego se realiza una serie de ajustes ($\chi^2$ \cite{chi2}, GSF \cite{gsf}) de las trazas permitiendo obtener correctamente los parámetros que la caracterizan. Finalmente las trazas son asociadas a los \textit{topo-clusters} extrapolando a la misma desde el perigeo hasta la segunda capa del calorímetro EM. Una traza se considera asociada con un \textit{topo-clusters} si $|\Delta\eta|<0.05$ y $-0.10<q\cdot(\phi_{\text{traza}}-\phi_{cluster})<0.05$, donde $q$ es la carga de la traza. A su vez, el momento de la traza es escaleado para que coincida con al energía del \textit{topo-cluster} asociado. Si múltiples trazas son asociadas a un mismo \textit{topo-cluster} se clasifica a las mismas utilizando criterios de calidad, siendo la mejor clasificada la que se utiliza para reconstruir a los electrones. 
+
+Los vértices de conversión son reconstruidos a partir de pares de trazas con cargas de signo opuesto y consistentes con el decaimiento de una partícula sin masa. Adicionalmente se pueden reconstruir vértices de conversión a partir de una sola traza que no haya dejado señal en las capas más internas del ID. En ambos casos se busca que la traza tenga altas probabilidad de ser un electrón en el TRT \cite{trt} pero baja en el SCT. Es esperado que las trazas de los vértices de conversión estén muy cerca una de otra, en general compartiendo \textit{hits}, haciendo que una de las trazas no llegue a reconstruirse. Para ello se utilizan trazas con requisitos de asociación a \textit{topo-clusters} más relajados que los anteriormente descriptos, y con distintos criterios de ambigüedad ante solapamiento. Finalmente los vértices son asociados a los \textit{topo-clusters}, y en caso de múltiples vértices asociados a un mismo \textit{topo-cluster} se prioriza aquellos reconstruidos a partir de dos trazas y cuyo radio sea menor.
+
+\subsubsection{\textit{Superclusters}}
+
+La reconstrucción de los \textit{superclusters} para electrones y fotones se realiza de forma independiente y en dos etapas: primero se encuentran los \textit{topo-clusters} semilla \tosolve{mejor traduccion de seed?} y luego se le adjuntan los \textit{topo-clusters} satélites producidos generalmente por \textit{bremsstrahlung} o por la división de \textit{topo-clusters}. El algoritmo comienza ordenando todos los \textit{topo-clusters} por \ET y verifica si pasan los requerimientos para ser un \textit{topo-clusters} semilla (comenzando por los más energéticos). En el caso de los electrones el requisito es tener \ET mayor a $1$ GeV y una traza asociada con al menos cuatro \textit{hits} en el SCT, mientras que el de los fotones es tener \ET mayor a $1.5$ GeV. Cuando un \textit{topo-clusters} pasa estos requisitos se busca sus \textit{topo-clusters} satélites asociados y el mismo no puede ser utilizado como satélite en las siguientes iteraciones. Los \textit{topo-clusters} satélites son aquellos que se encuentran dentro de una ventana de $\Delta\eta\times\Delta\phi=0.075\times0.125$ alrededor del centro del \textit{topo-cluster} inicial. Para electrones además se consideran \textit{topo-clusters} satélites aquellos que se encuentran dentro de una ventana de $\Delta\eta\times\Delta\phi=0.125\times0.3$ cuya traza mejor ajustada coincide con la traza mejor ajustada del \textit{topo-cluster} inicial. Para fotones convertidos además se consideran \textit{topo-clusters} satélites aquellos que compartan el vértice de conversión con el \textit{topo-cluster} inicial. 
+
+Para limitar la sensibilidad de los \textit{superclusters} al \textit{pileup}, el tamaño de cada \textit{topo-cluster} constituyente es restringido a un máximo de $0.075$ ($0.125$) en la dirección de $\eta$  en la región \textit{barrel} (\textit{endcap}). Como el algoritmo se utiliza de forma independiente tanto para electrones como para fotones, puede ocurrir que un mismo \textit{supercluster} se asocie tanto a un electrón como a un fotón. En ese caso se utilizan una serie de criterios de ambigüedad que permiten determinar si el candidato es un electrón o un fotón. En el caso que aún no pasen los criterios de ambigüedad el candidato es guardado como electrón y fotón simultáneamente, pero marcados como ambiguos y es decisión de cada análisis incluirlos en el mismo\tosolve{quisieras que aclare: dependiendo de la aceptancia deseada en cada análisis?}.
+
+Finalmente se calibra la energía de los \textit{superclusters}, las trazas son nuevamente ajustadas pero ahora utilizando los \textit{superclusters} anteriores, y la energía es recalibrada teniendo en cuenta este nuevo último ajuste siguiendo el procedimiento descripto en la Referencia \cite{PERF-2017-03}.
+
+% A continuación el algoritmo construye los \textit{superclusters} para electrones y fotones por separado. Para ello selecciona los \textit{topo-clusters} con una energía mayor a cierto \tosolve{Nota 1} umbral, y los agrupa con los demás \textit{topo-clusters} satélites que estén contenidos dentro de una ventana angular fija centrada en el \textit{topo-cluster} inicial. Dependiendo si el algoritmo es para fotones o electrones los umbrales son distintos, y en el caso de electrones o fotones convertidos, \textit{topo-clusters} satélites adicionales son incluidos utilizando las trazas asociadas. Como los \textit{supercluster} de electrones y fotones son generados independientemente, puede ocurrir que un mismo \textit{supercluster} produzca tanto un electrón como un fotón. En ese caso el candidato es guardado tanto como electrón y fotón simultáneamente, pero marcados como ambiguos y es decisión de cada análisis utilizarlos o no. Al finalizar esta etapa se obtienen los objetos finales que van a ser utilizados por los distintos análisis. \tosolve{calibración? eficiencia?}
 
 \subsection{Identificación}
 
@@ -106,8 +127,49 @@ Finalmente se definen criterios de aislamiento que permiten distinguir aquellos 
 
 \section{Jets}
 
+Debido al confinamiento de color los quarks o gluones, que tienen carga de color no nula, no pueden existir libres en la naturaleza. Al producirse quarks o gluones en la colisión estos crean nuevas partículas de color para generar partículas de carga de colo nula. Este proceso que se denomina hadronización, produce en el detector una cascada de partículas de forma similar a un cono alrededor de la partícula inicial, llamada \textit{jet}. Como los jets están compuestos de un numero de elevado de partículas que a su vez dejan trazas y deposiciones de energía, es necesario utilizar algoritmos especiales que permitan reagrupar a todas esas señales en su respectivo jet de forma correcta.
+
+La reconstrucción de los jets comienza a partir de los depósitos de energía en el calorímetro hadrónico \tosolve{el EM entra también? creo que sí}, generando \textit{topo-clusters} de la misma forma que para electrones y fotones \cite{Lampl:1099735}\tosolve{realmente es la misma?}. Luego los \textit{topo-clusters} son combinados mediante un algoritmo denominado 'anti-$k_t$' \cite{Cacciari:2008gp} que realiza los siguientes pasos:
+
+\begin{itemize}
+	\item Calcula la distancia \tosolve{aclarar que no es una distancia real?} de todos los \textit{topo-clusters} entre sí, y de cada \textit{topo-cluster} con el haz:
+
+	\begin{equation}
+		d_{ij} = \min(p_{\text{T},i}^{-2}, p_{\text{T},j}^{-2})\frac{\Delta_{ij}^{2}}{R^{2}}
+	\end{equation}
+	\begin{equation}
+		d_{iB} = p_{\text{T},i}^{-2}
+	\end{equation}
+
+	Donde $\Delta_{ij}^{2} = \Delta\phi_{ij}^{2} + \Delta\eta_{ij}^{2}$ y $R$ es un parámetro que asociado al radio del cono del jet a reconstruir, cuyo valor para el actual análisis es de $0.4$
+
+	\item Si el mínimo entre todas las distancias anteriormente calculadas es $d_{iB}$, se clasifica al \textit{topo-cluster} $i$ como un jet, y se lo descarta de sucesivas iteraciones
+
+	\item Si el mínimo entre todas las distancias anteriormente calculadas es $d_{ij}$, los \textit{topo-cluster} $i$ y $j$ son recombinados \tosolve{explicar cómo}, se vuelven a calcular todas las distancias con este nuevo \textit{topo-cluster} y se itera nuevamente
+
+\end{itemize}
+
+Este algoritmo tiende a unificar las partículas 'soft' con las 'hard' y separar a las partículas 'hard' entre sí, formando conos de radio $R$ que van a resultar útiles para determinar el solapamiento con otros objetos reconstruidos del evento.
+
+Los jets son objetos muy complejos de reconstruir y por ende requieren de una serie de calibraciones y correcciones \cite{JETM-2018-05}. Se realizan correcciones de pile-up para suprimir la contribución de otros vertices, y se calibra el momento del jet a partir de simulaciones de MC de eventos de dos jets.
+
+\cite{ATLAS-CONF-2014-018}
 
 
+% ATL-PHYS-PROC-2017-236
+%  Topo-clusters are formed fromseed cell(s) with more than 4σof energy, whereσis the average amount of noise expected in the cellin question, defined as the sum of the expected electronic and pile-up noise [3]. In current data-takingconditions, the pile-up noise dominates over the electronic noise. All cells adjacent to the seed cell(s)in three dimensions are then grouped together, so long as they have at least 2σof energy, and thisprocess repeats until there are no such adjacent cells. The process concludes by adding all calorimetercells adjacent to the topo-cluster, irrespective of their energy.
+
+% topo-clusters can be calibrated at either the raw (electromagnetic, EM) scale, where the energy ofan isolated topo-cluster is the sum of its constituent cell energies, or at the local cell weighting (LCW)scale. The LCW scale accounts for the difference between electromagnetic and hadronic interactionsin the ATLAS calorimeters, thereby correcting the average topo-cluster to the hadronic energy scale.
+
+% l jets in ATLAS make use of standard topo-clusters,  using  EM  topo-clusters  for  small-Rjets  and  LCW  topo-clusters  for  large-Rjets
+
+% topo-clusters are formed, they are naturally pile-up suppressed. However,this form of pile-up suppression is designed for the average topo-cluster in average expected data-taking conditions. By taking advantage of event-by-event measurements of the pile-up levels, as wellas local observables, it is possible to further reduce the pile-up dependence of topo-clusters
+
+%  Two different distance parametersRare typically used, corresponding to differentintended uses.  Jets representing quarks and gluons are typically called small-Rjets, and are recon-structed withR=0.4.  On the other hand, jets representing hadronically decaying massive particlesare typically called large-Rjets, and are reconstructed withR=1.0.
+
+%  In the latter case, the larger radius is useful to capture all of the decay products within a single jet,as the angular separation∆Rbetween the constituents of a massive particleχundergoing a two-bodydecay follow∆R&2mχ/pχT, as seen in Figure 1. For multi-stage decays, such ast→bW→bqq, thedecay products are less collimated, further necessitating the use of large distance parameters.
+
+%  Using large-Rjets is necessary to fully contain the hadronic massive particle decays,  but it comeswith a substantially increased sensitivity to pile-up effects due to the larger fraction of the calorimeterenclosed within the jet volume.  Additionally, while pile-up may be low energy and thus not changethe total jet kinematics by a large amount, it is randomly distributed, and can thus obscure the angularstructure within the jet that is the key to identifying massive particle decays
 
 
 \subsection{Jets provenientes de quarks $b$ ($b$-jets)}
@@ -120,7 +182,7 @@ Finalmente se definen criterios de aislamiento que permiten distinguir aquellos 
 
 \section{Energía transversa faltante}
 
-\tosolve{Probablemente ya haya mencionado antes MET y su importancia no? Por las dudas los explco nuevamente y de última lo saco}
+\tosolve{Probablemente ya haya mencionado antes MET y su importancia no? Por las dudas los explico nuevamente y de última lo saco}
 
 Como se mencionó en \tosolve{definición MET}, el momento transverso faltante se utiliza como un sustituto \tosolve{indicio?} para obtener el momento de las partículas que prácticamente no interactúan con el detector, por ejemplo neutrinos o partículas más allá del SM. El momento en la dirección del haz que acarrea cada partón \tosolve{o quark?} previo a la colisión es desconocido, pero en la dirección transversa al haz se puede considerar que es nulo. Por conservación del momento se puede deducir que luego de la colisión la suma de los momentos en el plano transverso de todas las partículas producidas debería ser nulo, y en caso de no serlo puede ser un indicio de una partícula que escapó la detección. La reconstrucción del momento transverso faltante se basa en esta conservación y se define como menos la suma de los momentos transversos de todas las partículas observadas en el evento. En esta suma se incluyen los electrones, muones, fotones, taus decayendo hadrónicamente y jets reconstruidos con los métodos descriptos en las secciones anteriores. Además se incluye un termino (\textit{soft}) que tiene en cuenta el momento en la traza de las partículas que dejaron señal en el ID pero que no llegaron a reconstruirse. Quedando la definición del momento transverso faltante como \cite{PERF-2016-07}:
 
