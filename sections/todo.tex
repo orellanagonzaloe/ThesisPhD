@@ -13,11 +13,15 @@
 	\end{itemize}
 	\item Definiciones
 	\begin{itemize}
+		\item qué cosas van con itálica (trigger?)
 		\item pile up, convención para escribirlo
 		\item Run 1, 2
 		\item prompt
 		\item crack region
 		\item barrel, endcap
+		\item z0 y sigmad0
+		\item prescale y rerun
+		\item derivation
 	\end{itemize}
 \end{itemize}
 
@@ -37,6 +41,7 @@
 	\item trt: ATLAS Collaboration,Particle Identification Performance of the ATLAS Transition RadiationTracker, ATLAS-CONF-2011-128, 2011,url:https://cds.cern.ch/record/1383793.
 	\item trimming: JHEP 02, 084 (2010), 0912.1342
 	\item btag:  ATLAS b-jet identification performance and efficiency measurement with ttbar events in pp collisions at sqrt(s) 13 TeV, Eur. Phys. J. C 79 (2019) 970, arXiv:1907.05120, FTAG-2018-01 
+	\item jeffrey: arXiv:0908.0130
 
 \end{itemize}
 
@@ -44,10 +49,13 @@
 \vspace{2cm}
 
 
-{\LARGE Nota 1}
+{\LARGE Notas}
 
-Ciertas magnitudes no tiene sentido ponerlas explícitamente ya que no aportan mucho. Aún así el texto no debería quedar vago...
+\newcommand{\commentNotaI}{\pdfcomment[color=Orchid1, hspace=25pt]{Nota 1: Ciertas magnitudes no tiene sentido ponerlas explícitamente ya que no aportan mucho. Aún así el texto no debería quedar vago...}} \commentNotaI
 
+\newcommand{\commentNotaII}{\pdfcomment[color=Orchid1, hspace=25pt]{Nota 2: La expresión `trigger' se utiliza en diferentes contextos que no son lo mismo, para un solo algoritmo, para en conjunto de triggers, para todo el sistema en sí, etc. Capaz habría que aclarar esta `vaguedad' en la expresión.}} \commentNotaII
+
+\newcommand{\commentNotaIII}{\pdfcomment[color=Orchid1, hspace=25pt]{Nota 3: Los gráficos colocados en general son `dummy'. Cuando esté la mayor parte de la tesis escrita pienso dedicarme a buscar la versión de mejor calidad o emprolijarlos yo mismo. Tal vez los haga de nuevo, con colores uniformes para toda la tesis ?}} \commentNotaIII
 
 \vspace{2cm}
 
@@ -55,8 +63,17 @@ Ciertas magnitudes no tiene sentido ponerlas explícitamente ya que no aportan m
 {\LARGE Dudas}
 
 \begin{itemize}
-	\item Fotones convertidos dejan 2 depósitos en el EM o 1? Figura?
-	\item En nuestro análisis los taus están como jets?
-	\item Usamos los objetos baseline para calcular MET?
+	\item Fotones convertidos dejan 2 depósitos en el EM o 1? Figura? Al parecer dejan 2 pero están muy juntos al estar boosteados, no es que dejan 2 depósitos bien separados en el detector y esos 2 se unifican en un fotón. De todas formas me gustaría confirmarlo
+	\item En nuestro análisis los taus están como jets? No hay veto?
+	\item Usamos los objetos baseline para calcular MET? Al final NO. MET se calcula por default por la tool con todos los objetos presentes en el evento
+	\item El pt de los muones se mide solo con su traza? o algo de su energia se deposita en el MS y con eso se puede deducir el pt?
+	\item Si al pi0 lo reconstruimos como a un jet, por que en la figura 3.2 hablamos de los 2 depositos de energía que deja su decaimiento a 2 fotones?
+	\item Cuestiones sobre la definicion de objetos prompt: \\
+	No entiendo tu comentario, la identificación son criterios de calidad del objeto que ya se clasificó como electrón o fotón. \\
+	En	el paper EGAM-2018-01 se utiliza la jerga prompt vs background para motivar la iden-
+	tificación. Aquellos e/y que vienen de decaimientos prompt se depositan en el ECAL y
+	los podemos considerar prompt, aquellos que vienen en otro tipo de decaimiento supongo
+	que estarán contenidos dentro de los jets... \\
+	Revisar mejor definicion de prompt
 \end{itemize}
 

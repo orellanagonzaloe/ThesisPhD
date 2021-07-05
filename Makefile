@@ -7,6 +7,7 @@ src = $(file).tex sections/*.tex include/*.tex bib/*.bib
 all: $(file).pdf
 
 $(file).pdf: $(src)
+	make clean
 	$(cmd) $(file); bibtex $(file) ; $(cmd) $(file) ; $(cmd) $(file) 
 	rm -f *.aux
 	rm -f *.log

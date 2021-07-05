@@ -1,5 +1,6 @@
 \usepackage[spanish, es-tabla]{babel}
 \usepackage[utf8x]{inputenc}
+\usepackage[dvipsnames,x11names]{xcolor}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -26,7 +27,6 @@
 \usepackage{minibox}
 \usepackage{listings}
 % \usepackage{enumitem}
-\usepackage{xcolor}
 \usepackage{tikz}
 % \usepackage{fontspec}
 \usepackage{etoolbox}
@@ -35,6 +35,7 @@
 \usepackage[absolute,overlay]{textpos}
 \usepackage{indentfirst}
 \usepackage{xspace}
+\usepackage[author={Gonzalo Orellana}]{pdfcomment}
 
 \DeclarePairedDelimiter\bra{\langle}{\rvert}
 \DeclarePairedDelimiter\ket{\lvert}{\rangle}
@@ -52,3 +53,14 @@
 
 % \usepackage{lmodern}
 % \usepackage[T1]{fontenc}
+
+
+% \pdfcomment[color=red,icon=Insert]{insert: miss}
+
+% \pdfmarkupcomment[markup=Squiggly,color=green]{with pdfcomment}{move to the front}.
+
+% \pdfmarkupcomment[markup=StrikeOut,color=red]{stupid}{replace stupid with funny}
+
+% \pdfmarkupcomment[markup=Highlight,color=yellow]{Of course, you can highlight complete sentences.}{Highlight}
+
+% \pdfcomment[icon=Note,color=blue]{insert graphic!}

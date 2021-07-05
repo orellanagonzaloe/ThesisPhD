@@ -5,6 +5,11 @@
 			"name": "Make",
 			"shell_cmd": "make",
 			"working_dir": "$project_path"
+		},
+		{
+			"name": "Make Clean",
+			"shell_cmd": "make clean",
+			"working_dir": "$project_path"
 		}
 	],
 	"folders":
