@@ -203,4 +203,62 @@ El MS se compone de diferentes tipos de cámaras de detección de muones (ver Fi
 
 \section{Sistema de \textit{trigger}}
 
+Como se mencionó anteriormente, el diseño del LHC permite tener una frecuencia de cruces de haces de 40 MHz y más de 30 \tosolve{ver número} interacciones por cruce, lo que da una tasa de interacción protón-protón del orden del GHz. Tal frecuencia excede tanto las capacidades de cómputo del detector, como la capacidad de alamcenamiento de semejante cantidad de datos. Aún así, no todos los eventos son de interés para la colaboración, como por ejemplo la colisión elástica de los protones que no genera ningún tipo de decaimiento. El sistema de trigger del detector ATLAS \cite{TRIG-2016-01} es el encargado de filtrar esos eventos de poco interés y, junto con el sistema de adquisición de datos (DAQ), almacena aquellos que potencialmente pueden llegar a ser de interés para los distintos análisis, reduciendo así la frecuencia de flujo de datos al orden del kHz. El sistema de trigger cumple un rol central en el correcto funcionamiento de todo el experimento, ya que en definitiva determina qué tipos de análisis se realizarán y qué nueva física podrá encontrarse. El mismo debe tener una alta eficiencia, para no desechar eventos importantes, pero con el compromiso de mantener el flujo de datos relativamente bajo. 
+
+El sistema de trigger está compuesto por dos niveles consecutivos capaces de realizar una identificación de partículas cada vez más compleja: un primer nivel de trigger (L1) basado en hardware y luego un trigger basado en software de alto nivel (HLT). La Figura \tosolve{figura trigger+daq} muestra un esquema del sistema trigger y DAQ del detector ATLAS.
+
+\subsubsection{Level 1 (L1)}
+
+El primer nivel del trigger \cite{level1} está basado en hardware, y reduce los 40 MHz del LHC a menos de 100 kHz en aproximadamente 2.5 $\mu$s, tiempo determinado por el limitado tamaño de los buffers de memoria y por el tiempo que le toma a los muones producidos en el evento alcanzar el MS. Utiliza la información recolectada en una región reducida (capas) del calorímetro y del MS, para así reconstruir lo que se denominan Regiones de Interés (RoI). Las RoIs se determinan por la posición de la deposición de energía en el calorímetro por parte de las partículas consideradas de interés (en el caso de los muones es en el MS), permitiendo una rápida reconstrucción de su energía transversa, y aplicando un posible filtro en esta magnitud. El diseño del L1 permite tener una aceptancia en el rango de $|\eta|<2.5$ para electrones, fotones, muones y taus, hasta $|\eta|<3.2$ para jets, y $|\eta|<4.9$ para el cálculo del momento transverso faltante. Las RoIs a su vez sirven como semilla para el HLT que realiza selecciones más detalladas a partir de las mismas.
+
+\subsubsection{High Level Trigger (HLT)}
+
+Cuando un evento es aceptado por el L1, el mismo pasa a ser analizado por High Level Trigger \cite{ATLAS-TDR-16}, que está basado en software y permite reducir la tasa de eventos que se almacena a 1.5 kHz en un tiempo de 0.2 s. El mismo utliza las RoIs previamente recosntruidas por el L1, y ejecuta una secuencia de algoritmos aplicados sobre el objeto candidato. Si uno de los pasos de la secuencia falla en los requisitos, los siguientes pasos no son aplicados para ahorrar tiempo de cómputo. 
+
+
+Los algoritmos del HLT constantan de dos estapas: los algoritmos de reconstrucción rápida ejecutados primero, y luego los algoritmos de reconstrucción de precisión similar a los que se utilizan en la selección offline. Los algoritmos de reconstrucción rápida utilizan la información de los calorímetros y de las trazas sólo dentro de la RoI para realizar la selección e identificación de los candidatos, y realizar el rechazo de fondo lo más rápido y temprano posible. Si la partícula candidata pasa los criterios definidos por la selección de reconstrucción rápida, se ejecutan los algoritmos de selección de precisión. Estos tienen acceso a la información del detector fuera de la RoI, con la máxima granularidad e incluyendo detalles sobre la calibración de energía de los calorímetros, la alineación de los subdetectores y el mapa de campo magnético. Los eventos aceptados por el HLT son finalmente grabados a disco y distribuidos, accesibles offline para todos los diferentes estudios y análisis.
+
 \section{Modelo computacional y distribución de datos}
+
+
+La arquitectura computacional de ATLAS está diseñada para permitir a todos los miembros de la colaboración un acceso ágil, directo y distribuido a la gran cantidad de datos colectados por el detector ($\sim$ PB/año). La arquitectura se basa en la tecnología GRID \cite{grid}, compartiendo el poder de procesamiento y la capacidad de almacenamiento disponibles en distintos centros de cómputo asociados alrededor del
+mundo.
+
+El software de ATLAS se desarrolla dentro un entorno C++ común llamado ATHENA \cite{ATLAS-TDR-17, analysistools, athena}, en el que se realiza todo el procesamiento de datos. Los eventos aceptados por el trigger deben ser procesados para reducir su tamaño y ser utilizados para los análisis offline. A la salida del HLT, los eventos son almacenados como Raw Data Objects (RDOs). Luego de aplicar los algoritmos de reconstrucción y calibración, las colecciones de los distintos objetos físicos obtenidas son almacenadas en formato ESD (Event Summary Data) y AOD (Analysis Object Data), una versión reducida del primero ($\sim$100 kB/evento). A partir de las ESDs/AODs, se ha definido un formato de datos significativamente más pequeño (10-15 kB/evento) conocido como xAOD, sobre el que se realiza el análisis final. Las xAOD son archivos accesibles vía el entorno de análisis de datos ROOT \cite{root}, que contienen el conjunto de variables de diferentes objetos físicos, según las necesidades de los distintos grupos de análisis dentro de ATLAS. En base a esto y para agilizar el análisis final, la colaboración preselecciona eventos offline en las llamadas derivaciones. Desde los raw data hasta las distintas derivaciones, se aplican distintos criterios de sliming (se remueven los eventos que no son de interés), skiming (se remueve la información irrelevante de los objetos) y thining (se remueven objetos y/o colecciones de objetos irrelevantes) según los estudios y análisis que se vayan a realizar sobre los datos colectados.
+
+Las derivaciones de interés para esta tesis son las denominadas EGAM3, EGAM4 y SUSY1. Las EGAM3 y EGAM4 son utlizadas en esta tesis para la medida de la eficiencia de los trigger de fotones, ya que preseleccionan eventos con bosones $Z$ decayendo radiativamente a partir de electrones o muones respectivamente. Una selección resumida de ambas derivaciones se lista a continuación:
+
+
+\begin{itemize}
+  \item ...
+\end{itemize}
+% EGAM3:
+
+%     OR of four separate selections:
+%         1a (for photon ID and iso efficiency):
+%             electrons: 2 OS central electrons, medium or LLH medium, pT>9.5 GeV, invariant mass > 40 GeV
+%             photon: ET>9.5 GeV 
+%         1b (for photon reco efficiency):
+%             electrons: at least 3 reco electrons with pT>9.5 ~GeV; 2 OS central electrons, medium or LLH medium, pT>9.5 GeV, invariant mass > 40 GeV 
+%         2 (for low-pT central e):
+%             electrons: 2 OS central electrons, one tight or LLH tight, pT>24.5 GeV, second one with pT>6.5 GeV, invariant mass > 40 GeV
+%             photon: ET>9.5 GeV, tight 
+%         3 (for low-pT forward e):
+%             electrons: 2 OS electrons, one central tight or LLH tight, pT>24.5 GeV, second one forward and pT>6.5 GeV, invariant mass > 40 GeV
+%             photon: ET>9.5 GeV, tight 
+
+% EGAM4:
+
+%     OR of two separate selections:
+%         1a (for photon ID and iso efficiency):
+%             muons: 2 OS "CommonGood" muons with pT>9.5 GeV, |eta|<2.7, invariant mass > 40 GeV
+%             photon: 1 photon with ET>9.5 GeV 
+%         1b (for photon reco efficiency):
+%             muons: 2 OS "CommonGood" muons with pT>9.5 GeV, |eta|<2.7, invariant mass > 40 GeV
+%             electron: at least 1 reco electrons with pT>9.5 GeV 
+
+La derivación SUSY1 es utilizada en esta tesis para preseleccionar los eventos para la búsqueda de supersimetría. La misma preselecciona eventos que cumplan al menos uno de los siguientes requisitos:
+
+\begin{itemize}
+  \item ...
+\end{itemize}
