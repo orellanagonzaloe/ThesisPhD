@@ -8,31 +8,31 @@ all: $(file).pdf
 
 $(file).pdf: $(src)
 	make clean
+
 	$(cmd) $(file); bibtex $(file) ; $(cmd) $(file) ; $(cmd) $(file) 
-	rm -f *.aux
-	rm -f *.log
-	rm -f *.nav
-	rm -f *.out
-	rm -f *.snm
-	rm -f *.toc
-	rm -f *.vrb
-	rm -f *.blg
-	rm -f *.bbl
+
+	make clean_aux
+
 
 view:	
 	evince $(file).pdf &
 
 
 clean:
-	rm -f *.toc
-	rm -f *.out
-	rm -f *.log
-	rm -f *.aux
-	rm -f *.blg
-	rm -f *.bbl
-	rm -f *.nav
-	rm -f *.snm
-	rm -f *.vrb
+	make clean_aux
 
 	rm -f $(file).pdf
 
+
+clean_aux:
+	rm -f *.aux
+	rm -f *.bbl
+	rm -f *.blg
+	rm -f *.log
+	rm -f *.nav
+	rm -f *.out
+	rm -f *.snm
+	rm -f *.toc
+	rm -f *.upa
+	rm -f *.upb
+	rm -f *.vrb

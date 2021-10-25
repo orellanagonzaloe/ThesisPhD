@@ -1,5 +1,296 @@
-\chapter{Estrategia de búsqueda de SUSY con fotones, jets y MET en el estado final}
-% \addcontentsline{toc}{chapter}{Estrategia de búsqueda de SUSY con fotones, jets y MET en el estado final}
-\chaptermark{Estrategia de búsqueda de SUSY con fotones, jets y MET en el estado final}
+\chapter{Elementos estadísticos para ls búsqueda de nueva física}
+% \addcontentsline{toc}{chapter}{Elementos estadísticos para ls búsqueda de nueva física}
+\chaptermark{Elementos estadísticos para ls búsqueda de nueva física}
+
+Un búsqueda general de nueva física consiste a grandes rasgos en un experimento de conteo de eventos con características asociadas al modelo de estudio, y su comparación con las predicciones que el Modelo Estándar hace de eventos con las mismas características. En caso de que haya un <<buen acuerdo>> entre las predicciones del SM y los datos observados, es posible afirmar que bajo las condiciones del experimento no hay evidencia de nuevos procesos físicos y que las predicciones del SM son correctas. En el caso de observar un <<exceso>> \tosolve{en la jerga se usa exceso, pero en realidad no debería ser un déficit en la predicción del SM?} de eventos observados con respecto a las predicciones del SM, se puede afirmar que el SM tiene una carencia en sus predicciones y que se podría estar en presencia de un nuevo fenómeno físico. Los criterios para definir <<buen acuerdo>> y <<exceso>> requieren evaluaciones estadísticas rigurosas y se explican más adelante en este Capítulo. 
+
+En el contexto de esta Tesis se denomina \textbf{señal} a los procesos del modelo bajo estudio, y \textbf{fondo} a las predicciones del SM. Para poder identificar los eventos de señal es necesario conocer las características del mismo, y luego así, discriminarlos de otros procesos físicos presentes en el experimento. Se utilizan simulaciones de Monte Carlo para modelar la señal, reconstruyendo los observables cinemáticos que caracterizan a los eventos. Aplicando diferentes cortes en esas variables se puede favorecer ciertos procesos y desfavorecer otros. Un conjunto de cortes define una \textbf{región} en el espacio de observables. Las regiones donde la señal abunda con respecto al fondo, y por ende donde se espera observar un exceso significativo en los datos, se denominan \textbf{Regiones de Señal (SR)}.
+
+En este tipo de experimentos es fundamental un correcto modelado de los procesos de fondo. Existen diferentes técnicas para modelar estos procesos: basadas exclusivamente en datos, exclusivamente en simulaciones de Monte Carlo o basadas en simulaciones y corregidas con datos. La motivación de esta última se debe a que las simulaciones en general son validadas en regiones asociadas al proceso que modelan (SM por ejemplo), y como en este caso es necesario utilizarlas en regiones de señal, probablemente alejadas o más extremas de donde se validó, es esperable que esas predicciones en esas regiones no sean del todo correctas. Para ello se definen \textbf{Regiones de Control (CR)} donde abundan eventos de algún proceso de fondo de interés, dedicadas a normalizar las simulaciones de ese proceso en particular a los datos observados en la misma.
+
+Finalmente se definen \textbf{Regiones de Validación (VR)} que justamente se utilizan para validar la estimación de los fondos anteriormente mencionados. Es importante destacar que el diseño de todas las regiones se realiza sin utilizar en ningún momento los datos en las SRs (\textit{blinding}) para evitar todo tipo de sesgo en el resultado del experimento. Por este motivo el diseño de todas las CRs y VRs debe ser ortogonal a las SRs, de tal forma que ningún evento de las mismas estén incluido en las SRs. Una vez que se tiene confianza en la estimación de los fondos y son validados en las distintas VRs, se procede a observar los datos en las SRs (\textit{unblinding}).
+
+\section{Intro}
+
+El concepto central en cualquier resultado estadístico es la probabilidad del modelo, que asigna una probabilidad a cada resultado posible del mismo. Un ejemplo muy utilizado en física de partículas es el modelo de Poisson que describe el resultado de un experimento de conteo:
+
+\begin{equation}
+	P(N|\mu) = \frac{\mu^{n}e^{-\mu}}{N!}
+\end{equation}
+
+que define la probabilidad de observar N veces cierto proceso aleatorio, medido en un intervalo fijo de tiempo, donde $\mu$ es el número medio de eventos esperado. La distribución de Poisson es utilizada para describir múltiples fenómenos como decaimientos radiactivos o cualquier experimento de partículas que conste de contar eventos en un intervalo de tiempo. Es importante mencionar que las probabilidades obtenidas en esta distribución dependen estrictamente del modelo asumido como hipótesis, en este caso representado por el número medio de eventos esperados. De tal forma que la probabilidad de obtener el número observado de eventos en el experimento va a depender del modelo a estudiar, por ejemplo un modelo que sólo espera fondo o un modelo que considera la composición de fondo y señal. La probabilidad de ocurrencia de los datos observados (x) bajo la hipótesis bajo estudio se denomina \textit{likelihood}:
+
+\begin{equation}
+	\mathcal{L}(x|\mu) = \text{Pois}(N=x|\mu) 
+\end{equation}
+
+\section{Maximum \textit{likelihood}}
+
+Para trabajar con distribuciones en resultados estadísticos primero es necesario construir le modelo probabilistico para distribuciones. Si bien muchas distribuyciones pueden ser derivadas de la teoría analíticamente, en general se utilizan simulaciones del detector para generarlas. Esas simulaciones se describen mediante histogramas de la variable observada. Cada clase del histograma puede ser considerado como un experimento de conteo independiente con una distribución de Poisson, quedando el \textit{likelihood} como:
+
+\begin{equation}
+	\mathcal{L}(x|\mu) = \prod_i \text{Pois}(N=x|\mu) 
+\end{equation}
+
+
+El likelihood puede ser utilizado adicionalmente para estimar parámetros de la teoria (hipotesis) que estamos estudiando. Por ejemplo, si nuestra hipotesis está caracterizada por un conjunto de parámetros \textbf{$\theta$}, y asumimos que esa hipotesis es verdadera, se esperaria que la probabilidad de observar esos datos bajo esa hipotesis sea maxima cuando los parametros \textbf{$\theta$} sean los mas proximos a los valores reales del modelo. El estimador de máximo likelihood (MLE) consiste en obtener los valores \textbf{$\theta$} hat de \textbf{$\theta$} que maximicen a la funion lakilehood. Una practic mas coomun es en realida buscar el minimo del ogaritmo del likelihood por lo que el MLE queda como:
+
+\begin{equation}
+	-\ln{\mathcal{L}(\theta)} = - \sum_{i=-1}^{N}\ln{f(x_i; \theta)}
+\end{equation}
+
+
+
+En el límite asintótico, cuando el número de mediciones N tiende a infinito, el MLE es consistente,
+es decir, para cada parámetro \textbf{$\theta$} el valor estimado \textbf{$\theta$} converge al valor verdadero \textbf{$\theta$}. En este límite
+también el MLE es no sesgado y tiene su menor varianza. Esto significa que ningún otro estimador
+puede ser más eficiente. Para un número finito de eventos N , sin embargo, el MLE tiene un sesgo
+proporcional a 1 /N.
+
+
+\section{Constratación de hipótesis}
+
+Como se menciono anteriormente el experimento esta caracterizado por una o multiples hipotesis. Con el objetivo de descubrir procesos de nueva señal, se define la hipótesis nula ($H_0$) para describir los procesos ya conocidos (fondo). La cual va a ser evaluada contra la hipótesis alternativa ($H_1$) que incluye tanto fondo como señal. Si los resultados observadors en el experimento difieren de los esperados bajo la hipotesis nula, es posible rechazar a la misma y dando lugar a un descubirmiento. Caso contrario de no poder rechazarla, es posible poner límites al modelo donde los roles de las hipótesis se inviertnen, y ahora la hipótesis nula incluye a la señal y la alternativa solo fondo.
+
+Las hipotesis pueden estar completamente determinadas o estar caractirazadas por distintos parametros, y las mismas definen a las PDFs de los distintos observables. Para poder discriminar una hipotesis de otra se define un estadistico de prueba que es una funcion de los observables, t(x), que al aplicar un corte sobre el mismo define una region critica en el espacio de observables. Si los datos observados dan un valor de t dentro de esa region la hipotesis nula es rechazada.
+
+Alternativamente, se puede cuantizar el acuerdo entre el resultado de dicha búsqueda y una hipótesis dada calculando el p/value, que se define como la probabilidad bajo la hipótesis de obtener un resultado igual o peor de incompatible con las predicciones de la hipótesis:
+
+\begin{equation}
+	p = \int_{t_{obs}}^{\infty} g(t|H)dt
+\end{equation}
+
+Pudiendose excluir la hipótesis si el p/value observador es menor a un cierto valor previamente definido.
+
+En física de partículas usalmente se convierte el p-values a una significancia equivalente, $Z$, definida tal que una variable con distribucvin gaussiana que se encuentra Z desviaciones standadr por encima de su meadia tiene una probabilidad superior igual a p:
+
+\begin{equation}
+	Z=\Phi^{-1}(1-p)
+\end{equation}
+
+donde $\Phi^{-1}$ es la inversa de la cumilativa (cuantil) de la distribución normal. La comunidad de física de partículas es tiende a definir un rechazo de hipótesis de solo fondo con una significancia superior a los 5 sigmas ($p=2.87 \cdot 10^{-7}$) como un nivel apropiado para definir un descubirmiento. Para excluir hipótesis de señal se define en cambio a partir de 1.64 sigmas ($p=0.05$). Cabe destacar que al rechazar la hipótesis de solo fondo es solo parte del proceso de descubrimiento de un nuevo fenómeno. La certeza de que un nuevo proceso está presente va a depender en general de otros factores, como la plausibilidad de una nueva hipótesis de señal y el grado al cual la misma describe a lso datos observados
+
+
+\section{Estadísticos de prueba}
+
+% refrasear pues sacado de fran!!!
+
+
+Generalmente, cuando se modela un fenómeno aleatorio de interés, el modelo elegido para ajustar a
+las observaciones de dicho fenómeno suele tener varios parámetros, de los cuales solo algunos pueden
+ser de interés. De manera formal a estos parámetros se los denomina parámetros de interés ($\mu$) y al
+resto, parámetros \textit{nuisance} ($\bm{\theta}$), y conviene separarlos explícitamente, $\mathcal{L}(\mu, \bm{\theta})$.
+
+Para la búsqueda de nueva física es común definir como parámetro de interés a la intensidad de la
+señal de forma tal que la hipótesis de solo-fondo corresponde a $\mu = 0$ , y la hipótesis de señal+fondo
+a $\mu = 1$. En general, las incertezas sistemáticas son incluidas en el modelo utilizando parámetros
+nuisance.
+En este escenario, donde hay un único parámetro de interés $\mu$, y el resto de parámetros nuisance $\bm{\theta}$,
+es conveniente definir el profile likelihood ratio (PLR):
+
+\begin{equation}
+	\lambda(\mu)=\frac{\mathcal{L}(\mu, \doublehat{\bm{\theta}})}{\mathcal{L}(\hat{\mu}, \hat{\bm{\theta}})}
+\end{equation}
+
+
+donde en el denominador, los valores $\hat{\mu}$ y $\hat{\bm{\theta}})$ son los valores estimados MLE. En el numerador, los
+parámetros $\doublehat{\bm{\theta}}$ son los valores que maximizan la función likelihood para un valor fijo de $\mu$, es decir que
+es una función multidimensional que depende solo del parámetro $\mu$. Este proceso de elegir valores
+específicos de los parámetros nuisance para un valor dado de $\mu$ se lo conoce como profiling. El PLR
+depende explícitamente de $\mu$ pero es independiente de los parámetros nuisance que han sido `eliminados'
+vía el profiling. La presencia de los parámetros nuisance que son ajustados a los datos ensanchan la
+función likelihood como función de $\mu$ , respecto a la distribución si sus valores estuvieran fijos. De cierta
+forma reflejan una pérdida de información sobre $\mu$  debido a estos parámetros desconocidos, que suelen
+ser las incertezas sistemáticas.
+
+De la definición de $\lambda(\mu)$ se puede observar que la misma puede tomar valores solamente entre 0 y 1, donde 1 implica un buen acuerdo entre los datos y el valor hipotetizado de $\mu$. De forma equivalente es conveniente usar el estadístico de prueba:
+
+\begin{equation}
+	t_{\mu} = -2\ln{\lambda(\mu)}
+\end{equation}
+
+donde ahora valores grandes de $t_{\mu}$ implica una gran incompatibilidad entre datos y $\mu$.
+
+En muchos análisis la contribución del proceso de señal al valor medio de eventos se asume como no negativo, lo que implica que cualquier estimador de 
+$\mu$ debería ser no negativo. Aún si no fuese así el caso, es conveniente definir un estimador efectivo $\hat{\mu}$ que maximice el likelihood y que tenga la posibilidad de tomar valores negativos (siemmpre y cuando los valores medios de Poisson, $\mu s_i + b_i$ sean no negativos). Esto va a permitir más adelante modelar a $\hat{\mu}$ como una variable con distribución gaussiana. Para un modelo con $\mu\ge0$ si se encuentra que su estimador es negativo ($\hat{\mu}<0$) entonces el mejor nivel de acuerdo entre datos y cualquier valor físico de $\mu$ va a ser cuando $\mu=0$. Por lo que se puede denufuur un test estadistíco alternativo que tenga en cuenta esto:
+
+\begin{equation}
+	\tilde{t}_{\mu}=-2\ln{\tilde{\lambda}(\mu)}=
+	\begin{cases}
+		-2\ln{\frac{\mathcal{L}(\mu, \doublehat{\bm{\theta}}(\mu))}{\mathcal{L}(0, \hat{\bm{\theta}}(0))}} & \hat{\mu}<0\\
+		-2\ln{\frac{\mathcal{L}(\mu, \doublehat{\bm{\theta}}(\mu))}{\mathcal{L}(\hat{\mu}, \hat{\bm{\theta}})}} & \hat{\mu}\ge0
+	\end{cases}
+\end{equation}
+
+
+Un caso especial de estadístico de prueba es $q_{0}=\tilde{t}_{0}$, ya que el rechazo de esta hipótesis puede llevar al descrubimiento de nueva señal:
+
+\begin{equation}
+	q_{0}=
+	\begin{cases}
+		-2\ln{\lambda(0)} & \hat{\mu}<0\\
+		0 & \hat{\mu}\ge0
+	\end{cases}
+\end{equation}
+
+En contraste con $t_{\mu}$, este permite discriminar la hipótesis tanto si hay una fluctiacion arriba o abajo, por ejemplo en presencia de un fenómeno que pueda aumentar o disminuuir el numero de eventos. En cambio con $q_{0}$, solamente consideramos un bajo acuerdo de los datos con la hiptesis de solo fondo, solo si $\hat{\mu}>0$, ya que si bien un valor de $\hat{\mu}>0$ mucho menor a cero puede significar evidencia en contra de la hipotesis, no implica que los datos tengan eventos de señal sino que alguna fluctuación estadística.
+
+
+El p-value para este estadístico de prubea queda entonces:
+
+\begin{equation}
+	p_0 = \int_{q_{0, obs}}^{\infty} f(q_0|0)dq_0
+\end{equation}
+
+
+\section{Límites superiores}
+
+Cuando el p-value obtenido es mayor al límite definido para un descubrimiento, no es posible rechazar la hipótesis de solo fondo. En ese caso es posible establecer límites sobre el modelo caracterizado por el parámetro $\mu$
+
+\begin{equation}
+	q_{\mu}=
+	\begin{cases}
+		-2\ln{\lambda(\mu)} & \hat{\mu}\le\mu\\
+		0 & \hat{\mu}>\mu
+	\end{cases}
+\end{equation}
+
+% sacado de fran
+
+La razón para poner $q_{\mu} = 0$ para $\hat{\mu}>\mu$ es que cuando se establece un límite superior, el hecho
+de que $\hat{\mu}>\mu$ representa menos compatibilidad con $\mu$ que los datos obtenidos, y por lo tanto no se
+considera parte de la región de rechazo de la contrastación.
+También es importante notar que $q_0$ (utilizado como estadístico de prueba para descubrimiento) no
+es simplemente un caso especial de la ecuación, sino que tiene una definición diferente. Es decir,
+$q_0$ es cero si los datos fluctúan hacia abajo ($\hat{\mu}\langle 0\rangle$), pero $q_{\mu}$ es cero si los datos fluctúan hacia arriba
+($\hat{\mu}>\mu$).
+Para cuantificar la consistencia de los datos observados con la hipótesis de intensidad de señal $\mu$ se
+calcula el valor-p
+
+
+\begin{equation}
+	p_{\mu} = \int_{q_{\mu, obs}}^{\infty} f(q_\mu|\mu)dq_\mu \equiv \text{CL}_{s+b}
+\end{equation}
+
+
+
+donde valores chicos de $p_{\mu}$ indican baja compatibilidad con la hipótesis de señal+fondo.
+El límite superior con un nivel de confianza del 95\% se obtiene resolviendo la siguiente ecuación:
+
+\begin{equation}
+	p_{\mu} = 0.05
+\end{equation}
+
+Sin embargo, el límite superior calculado de esta forma tiene un problema: de acuerdo a este, se
+dice que una señal está excluida a 95\% CL, si $\text{CL}_{s+b} < 0.05$. Si se considera el caso de $\mu = 0$, se espera
+que por construcción el $\text{CL}_{s+b}$ sea menor o igual que $0.05$ con una probabilidad de 5\%. Esto significa
+que el 5\% de los análisis estarían excluyendo modelos con cero señal. Otro problema del $\text{CL}_{s+b}$ es que
+para dos experimentos con el mismo número chico de eventos de señal esperado pero con un número
+de eventos de fondo distinto, el experimento con mayor fondo va a imponer mejores límites.
+Con motivo de solucionar estos inconvenientes se introduce el método de $\text{CL}_{s}$.
+
+
+\begin{equation}
+	\text{CL}_{s} = \frac{p_{\mu}}{1-p_{b}} \equiv \frac{\text{CL}_{s+b}}{\text{CL}_{b}}
+\end{equation}
+
+donde $p_b$ es el valor del mismo estadístico bajo la hipótesis de solo-fondo,
+
+\begin{equation}
+	1-p_b = \int_{q_{\mu, obs}}^{\infty} f(q_\mu|0)dq_\mu \equiv \text{CL}_{b}
+\end{equation}
+
+El límite superior $\text{CL}_{s}$ en $\mu$, $\mu_{up}$ se obtiene resolviendo $\text{CL}_{s} = 0.05$. Se rechazan los valores de $\mu$ si
+$\mu < \mu_{up}$ con un nivel de confianza de 95\%.
+Cabe mencionarse para una observación cercana al número de eventos esperado de solo-fondo
+($\text{CL}_{b} \sim 0.05$) el $\text{CL}_{s}$ da un valor del orden de dos veces el obtenido utilizando el $\text{CL}_{s+b}$.
+
+
+\section{Aproximación de las distribuciones de los estadísticos de prueba}
+
+Para hallar el p-value de una hipótesis es necesaria la función densidad de probabildiad del estadístico de prueba. En el caso del rechazo de la hipótesis nula se necesitaría $f(q_{0}|0)$, y para poner límtes superiores al modelo se necesitaría $f(q_{\mu}|\mu)$. A su vez es necesario $f(q_{\mu}|\mu')$ con $\mu\neq\mu'$ para hallar la significancia esperada y cómo esta distribuida si los datos corresponden a un parámetro distinto al que se esta evaluando. 
+
+Considerando una hipótesis con el parámetro $\mu$ que puede ser cero o no, y suponiendo que los datos se distribuyen de acuerdo a un parámetro $\mu'$, la distribución $f(q_{\mu}|\mu')$ se puede aproximar utilizando los resultados de Wald %A. Wald, Tests of Statistical Hypotheses Concerning Several Parameters When the Number of Observations is Large, Transactions of the American Mathematical Society, Vol. 54, No. 3 (Nov., 1943), pp. 426-482.
+que muestra que para el caso de un solo parámetro de interés:
+
+\begin{equation}
+	-2\ln{\lambda(\mu)}=\frac{(\mu-\hat{\mu})^{2}}{\sigma^{2}}+\mathcal{O}(1/\sqrt{N})
+\end{equation}
+
+Aquí $\mu$ sigue una distribución Gaussiana con una media $\mu'$ y una desviación estándar $\sigma$, y $N$ representa el tamaño de la muestra. Si despreciamos el término $\mathcal{O}(1/\sqrt{N})$ se puede mostrar que el estadístico de prueba $t_{\mu}$ sigue una distribución de $\chi^{2}$ no central con un grado de libertad.
+
+En este caso el estadístico $q_{\mu}$ puede aproximarse como:
+
+\begin{equation}
+	q_{\mu}=
+	\begin{cases}
+		\frac{(\mu-\hat{\mu})^{2}}{\sigma^{2}} & \hat{\mu}\le\mu\\
+		0 & \hat{\mu}>\mu
+	\end{cases}
+\end{equation}
+
+al p-value como $p_{\mu}=1-\Phi(\sqrt{q_{\mu}})$ y a su correspondiente signifiacnia equivalemten como $Z_{\mu}=\sqrt{q_{\mu}}$.
+
+Estas aproximaciones permiten conocer las distribuciones muéstrales y calcular valores-p y significancias en el caso de un gran número de datos, de una forma simple y computacionalmente poco
+costosa. A pesar de que estrictamente es válido para $N\to\infty$, esta aproximación es suficientemente
+precisa para un número de eventos de fondo $\sim \mathcal{O}(10)$.
+Para muestras de datos muy pequeñas, o en casos donde la precisión es importante, siempre pueden
+validarse estas aproximaciones utilizando la generación Monte Carlo. Para esto es necesario utilizar
+simulaciones Monte Carlo para generar lo que se denomina `pseudo-experimentos'. El procedimiento
+consiste en generar el conjunto de observables x utilizando la pdf $f(x|H)$ y calcular el valor del
+estadístico de prueba $t(x)$ para cada conjunto. Este proceso se repite hasta acumular suficiente
+estadística en la distribución muestral del estadístico $g(t|H)$.
+
+\section{Optimización de las regiones de señal}
+
+La búsqueda comienza definiendo las regiones de señal. Las mismas están caracterizadas por un estado final (motivado por un modelo en particular) que determina los cortes preliminares de la región. Adicional a esos cortes se agregan otros que aumentan el poder discriminatorio de las regiones de señal. El proceso de definir el conjunto de SRs y los cortes más aptos de cada una se denomina optimización. Es posible definir un conjunto de SRs optimizadas para discriminar al mismo modelo pero con distintos parámetros (masas por ejemplo), pudiendo estas ser independientes entre sí u ortogonales. Esto último puede ser ventajoso dependiendo de si se está realizando la búsqueda con el objetivo de descubrir algún fenómeno, o si se quiere poner límites al modelo estudiado. Cabe mencionar que si bien se buscan las regiones con mayor poder discriminatorio, es importante evitar definirlas basándose fuertemente en las predicciones del modelo. En caso de realizar una búsqueda muy dependiente del modelo y de no observar un exceso, se estarían poniedo límites a un modelo muy particular resultando poco útil para la comunidad científica. En por eso que el proceso de optimización, si bien está motivado por un estado final determinado por el modelo, termina siendo un compromiso entre un buen poder discriminatorio sin perder la idependencia al mismo. Una forma de garantizar esa independiencia es utilizar cortes un poco más relajados y pedir un número mínimo de eventos de señal y fondo.
 
 ...
+
+% Una parte clave del proceso de optimización es poder definir a priori el poder discriminatorio de una dada signal region.
+%  To
+% establish a discovery of the signal, one can calculate the p-value of the hypothesis that s = 0,
+% or equivalently it is convenient to use the Gaussian significance, Z. This is related to the
+% p-value by
+% Z = Φ−1(1 − p)
+% where Φ−1 is the quantile of the standard Gaussian (inverse of the cumulative distribution).
+% For the case where the p-value refers to the background-only (s = 0) hypothesis, we will
+% refer to the corresponding Z value as the discovery significance. In particle physics a widely
+% used threshold for a discovery has been a p-value of 2.9 × 10−7 or less, corresponding to a
+% significance of Z = 5 or more
+% When designing a new experiment it is important to know what discovery significance to
+% expect if a certain signal model is in fact true. For this one can report the mean or median
+% value of Z under assumption of some nominal value of s, i.e., assuming that n will have a
+% mean of s + b. As noted in Ref. [1], because the p-value and significance Z have a nonlinear,
+% monotonic relation, it is convenient to take “expected significance” to refer to the median,
+% so that the median Z is given by Z evaluated with the median p.
+
+%  a Poisson distributed quantity n with
+% a large mean value s+b can be approximated by a Gaussian distributed variable x with mean
+% s + b and standard deviation √s + b. The p-value of the background-only hypothesis given
+% an observation x is therefore
+
+% where μ = b and σ = √b refer to the mean and standard deviation of x under assumption of
+% s = 0. Using this with Eq. (1) gives the discovery significance
+
+
+
+\section{Ajuste de solo fondo}
+
+Key ingredients of the fitting procedure are the ratios of expected event counts, called transfer
+factors, or TFs, of each normalized background process between each SR and each CR. The TFs
+allow the observations in the CRs to be converted into background estimates in the SRs, using:
+
+\begin{equation}
+    N^{(SR)}_{p}(est.) = N^{(SR)}_{p}(raw) \times \frac{N^{(CR)}_{p}(obs.)}{N^{(CR)}_{p}(est.)} = \mu_{p} \times N^{(SR)}_{p}(raw)
+\end{equation}
+
+where Np(SR,est.) is the SR background estimate for each simulated physics processes p considered
+in the analysis, Np(CR,obs.) is the observed number of data events in the CR for the process, and
+MCp(SR,raw) and MCp(CR,raw) are raw and unnormalized estimates of the contributions from
+the process to the SR and CR respectively, as obtained from MC simulation. An important feature of using TFs is that systematic uncertainties on the predicted background
+processes can be canceled in the extrapolation; a virtue of using the ratio of MC estimates. The total uncertainty on the number of background events in the SR is then a combination of the
+statistical uncertainties in the CR(s) and the residual systematic uncertainties of the extrapolation.
+For this reason, CRs are often defined by somewhat looser cuts than the SR, in order to increase
+CR data event statistics without significantly increasing residual uncertainties in the TFs, which in
+turn reduces the extrapolation uncertainties to the SR

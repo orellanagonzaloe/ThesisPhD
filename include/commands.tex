@@ -24,6 +24,7 @@
 % units
 \newcommand{\tev}{\ensuremath{\text{TeV}}}
 \newcommand{\gev}{\ensuremath{\text{GeV}}}
+\newcommand{\mev}{\ensuremath{\text{MeV}}}
 
 % variables
 \newcommand{\pt}{\ensuremath{p_{\text{T}}}\xspace}
@@ -66,3 +67,10 @@
 \newcommand{\xmark}{\ding{55}}%
 
 
+\usepackage{accents}
+\newlength{\dhatheight}
+\newcommand{\doublehat}[1]{%
+    \settoheight{\dhatheight}{\ensuremath{\hat{#1}}}%
+    \addtolength{\dhatheight}{-0.35ex}%
+    \hat{\vphantom{\rule{1pt}{\dhatheight}}%
+    \smash{\hat{#1}}}}
