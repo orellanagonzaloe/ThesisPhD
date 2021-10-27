@@ -1,0 +1,113 @@
+\chapter{Búsqueda de SUSY con fotones y Higgs en el estado final}
+% \addcontentsline{toc}{chapter}{Búsqueda de SUSY con fotones y Higgs en el estado final}
+\chaptermark{Búsqueda de SUSY con fotones y Higgs en el estado final}
+
+
+El análisis para el cual está orientada esta Tesis consiste en la búsqueda de Supersimetría en eventos con un fotón aislado muy energético, jets y gran cantidad de energía faltante en estado final \cite{Alonso:2147473,ATLAS:2016fks,Collaboration:2198651}. La estrategia general de la búsqueda consiste en el conteo del número de eventos observado en exceso sobre el SM en una cierta región del espacio de observables rica en eventos de la señal considerada.
+
+
+\section{Identificación de eventos de fondo}
+
+Para un correcto procedimiento, es necesario conocer los procesos del SM que tengan un estado final equivalente a de la señal buscada. Estos eventos toman el rol de fondo en el contexto de un análisis de búsqueda de SUSY. Para este análisis, son procesos que tienen un fotón, jets y energía faltante en el estado final, y pueden dividirse en varias categorías. Por un lado, los procesos que dan lugar a eventos con un fotón y energía faltante real, es decir, los que se llaman fondos irreducibles. Estos son:
+
+\begin{itemize}
+
+	\item $Z(\rightarrow \nu\nu)$ + $\gamma$
+
+	\item $W (\rightarrow l\nu)$ + $\gamma$
+
+	\item $t \overline{t}$ + $\gamma$
+
+\end{itemize}
+
+También es posible que, aunque el proceso no tenga fotones en el estado final, un electrón o un jet sean identificados como un fotón, dando lugar a un estado final idéntico al buscado. En esta categoría están:
+
+\begin{itemize}
+
+	\item $W (\rightarrow l\nu)$ + jets
+
+	\item $Z (\rightarrow \nu\nu)$ + jets
+
+	\item $t \overline{t}$
+
+	\item $WW$, $ZZ$, $WZ$
+
+\end{itemize}
+
+Y por último, también puede haber procesos que a pesar de no generar energía faltante real, poseen lo que se denomina energía faltante instrumental, proveniente generalmente de la incorrecta reconstrucción de la energía de los jets. De esta manera, pueden dar lugar a eventos con el estado final de interés, los procesos QCD:
+
+\begin{itemize}
+
+	\item $\gamma$ + jets
+
+	\item multijet, con alguno de los jets identificado como fotón
+
+	\item $Z(\rightarrow ll)$ + jets, donde un leptón o un jet es identificado como un fotón
+
+\end{itemize}
+
+
+\section{Muestras a partir de simulaciones de Monte Carlo}
+
+Muestras de señal de SUSY y fondos del SM fueron simulados
+utilziando generadores de Monte Carlo (MC) dedicados a $\sqrt{s} = 13 \tev$.
+Las muestras de señal de SUSY se realizaron mediante una simulación rápida \textsc{ATLFAST-II} \cite{Richter-Was:683751} del detector ATLAS, mientras que las muestras de fondo SM realizaron con una simulación completa basada en \textsc{Geant4}\cite{Geant4} del detector ATLAS, y reconstruido con los mismos
+algoritmos utilizados en los datos. Un peso evento a evento es aplicado
+a todas las muestras de MC para modelar las condiciones del detector de la muestra de datos bajo estudio,
+haciendo coincidir la distribución simulada del número de colisiones inelásticas $pp$ por cruce de haces con el observado en los datos.
+
+Las simulaciones se corrigen a su vez con factores de escala de eficiencia.
+y correciones en la escala de energía de fotones, leptones y
+jets, para describir mejor los datos. Las muestras se generaron con un
+distribución de pileup esperada, denominadas MC16a, MC16d y MC16e para el conjunto de datos 2015-2016, 2017 y
+2018 respectivamente, con un peso adicional para igualar
+el perfil de interacción real de los datos. 
+
+
+\subsection{Muestras de fondo}
+
+
+Varios procesos del SM pueden imitar una señal SUSY con fotones, jets y
+energía transversa faltante. Estos surgen de eventos con
+fotones reales o eventos en los que un electrón o un jet es
+identificado erróneamente como un fotón. Es esperado que la primera sea principalmente
+de eventos en los que se produce un bosón  $W$, $Z$ o un par $t\bar{t}$ en
+asociación con al menos un fotón real, decayendo subsecuentemente a neutrino prodciendo importantes cantidades de \met. 
+Estos fondos son denominados $W\gamma$, $W\gamma\gamma$, $Z\gamma$, $Z\gamma\gamma$ y
+$t\bar{t}\gamma$. Los eventos con fotones reales también pueden contribuir
+al fondo cuando \met surge de una reconstrucción instrumental incorrecta de la energía. Los fondos de $W\gamma$, $t\bar{t}\gamma$ y $\gamma + $jets
+se estiman normalizando la muestra de MC correspondiente para que coincida con el
+número de eventos observados en las regiones de control correspondientes, enriqeucidas en el fondo dado
+y cinemáticamente similares a las
+regiones de señal. Contribuciones más pequeñas de $\gamma\gamma$,
+$W\gamma\gamma$, $Z\gamma$ y $Z\gamma\gamma$ son estimados
+directamente de las simulaciones de MC. La contaminación
+a partir de fondos de fotones falsos debido a la identificación errónea de electrones y jets
+que surgen de $W$ + jets, $Z$ + jets, \ttbar o eventos de multijets, se estiman con una técnica basada en datos que se explica en las siguientes secciones.
+La Tabla \ref{tab:background} resume las principales fuentes de fondo anteriormente mencionadas.
+
+\begin{table}[ht!]
+\centering
+        \begin{tabular}{|c|c|c|}
+      \hline
+      & \textbf{Real {\met}} & \textbf{Instrumental {\met}} \\
+        \hline
+        \textbf{Real photon} &
+      \begin{tabular}[c]{@{}c@{}}
+        $Z(\nu\nu)\gamma$, $W\gamma$ \\
+        $t\bar{t}\gamma$, $Z(\nu\nu)\gamma\gamma$, $W\gamma\gamma$ \\
+      \end{tabular}
+      &    $\gamma+$jets, $\gamma\gamma$, $Z(ll)\gamma$, $Z(ll)\gamma\gamma$  \\
+      \hline
+      \textbf{Fake photons}    &
+      \begin{tabular}[c]{@{}c@{}}
+        $W$+jets, $Z(\nu\nu)+$jets \\
+        $t\bar{t}$ \\
+      \end{tabular}
+      &     multijet, $Z(ll)+$jets \\
+      \hline
+      \end{tabular}
+\caption{Procesos del SM que constribuyen al fondo.}
+ \label{tab:background}
+\end{table} 
+

@@ -1,6 +1,8 @@
-\chapter{Elementos estadísticos para ls búsqueda de nueva física}
-% \addcontentsline{toc}{chapter}{Elementos estadísticos para ls búsqueda de nueva física}
-\chaptermark{Elementos estadísticos para ls búsqueda de nueva física}
+\chapter{Elementos estadísticos para la búsqueda de nueva física}
+% \addcontentsline{toc}{chapter}{Elementos estadísticos para la búsqueda de nueva física}
+\chaptermark{Elementos estadísticos para la búsqueda de nueva física}
+
+\section{Estrategia general}
 
 Un búsqueda general de nueva física consiste a grandes rasgos en un experimento de conteo de eventos con características asociadas al modelo de estudio, y su comparación con las predicciones que el Modelo Estándar hace de eventos con las mismas características. En caso de que haya un <<buen acuerdo>> entre las predicciones del SM y los datos observados, es posible afirmar que bajo las condiciones del experimento no hay evidencia de nuevos procesos físicos y que las predicciones del SM son correctas. En el caso de observar un <<exceso>> \tosolve{en la jerga se usa exceso, pero en realidad no debería ser un déficit en la predicción del SM?} de eventos observados con respecto a las predicciones del SM, se puede afirmar que el SM tiene una carencia en sus predicciones y que se podría estar en presencia de un nuevo fenómeno físico. Los criterios para definir <<buen acuerdo>> y <<exceso>> requieren evaluaciones estadísticas rigurosas y se explican más adelante en este Capítulo. 
 
@@ -9,8 +11,6 @@ En el contexto de esta Tesis se denomina \textbf{señal} a los procesos del mode
 En este tipo de experimentos es fundamental un correcto modelado de los procesos de fondo. Existen diferentes técnicas para modelar estos procesos: basadas exclusivamente en datos, exclusivamente en simulaciones de Monte Carlo o basadas en simulaciones y corregidas con datos. La motivación de esta última se debe a que las simulaciones en general son validadas en regiones asociadas al proceso que modelan (SM por ejemplo), y como en este caso es necesario utilizarlas en regiones de señal, probablemente alejadas o más extremas de donde se validó, es esperable que esas predicciones en esas regiones no sean del todo correctas. Para ello se definen \textbf{Regiones de Control (CR)} donde abundan eventos de algún proceso de fondo de interés, dedicadas a normalizar las simulaciones de ese proceso en particular a los datos observados en la misma.
 
 Finalmente se definen \textbf{Regiones de Validación (VR)} que justamente se utilizan para validar la estimación de los fondos anteriormente mencionados. Es importante destacar que el diseño de todas las regiones se realiza sin utilizar en ningún momento los datos en las SRs (\textit{blinding}) para evitar todo tipo de sesgo en el resultado del experimento. Por este motivo el diseño de todas las CRs y VRs debe ser ortogonal a las SRs, de tal forma que ningún evento de las mismas estén incluido en las SRs. Una vez que se tiene confianza en la estimación de los fondos y son validados en las distintas VRs, se procede a observar los datos en las SRs (\textit{unblinding}).
-
-\section{Intro}
 
 El concepto central en cualquier resultado estadístico es la probabilidad del modelo, que asigna una probabilidad a cada resultado posible del mismo. Un ejemplo muy utilizado en física de partículas es el modelo de Poisson que describe el resultado de un experimento de conteo:
 
