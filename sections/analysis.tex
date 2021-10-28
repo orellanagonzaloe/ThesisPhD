@@ -66,7 +66,6 @@ el perfil de interacción real de los datos.
 
 \subsection{Muestras de fondo}
 
-
 Varios procesos del SM pueden imitar una señal SUSY con fotones, jets y
 energía transversa faltante. Estos surgen de eventos con
 fotones reales o eventos en los que un electrón o un jet es
@@ -111,3 +110,162 @@ La Tabla \ref{tab:background} resume las principales fuentes de fondo anteriorme
  \label{tab:background}
 \end{table} 
 
+\subsection{Muestras de señal}
+
+
+El presente análisis está motivado por la presencia de neutralinos mezcla de bino-higgsino
+mezcla con un estado final predicho por el modelo de General Gauge Mediation
+compuesto de al menos un
+fotón, jets y alto \met. El componente bino del neutralino más liviano se acopla tanto al fotón como al bosón $Z$. El gluino es
+considerada como la única espartícula de color relevante para establecer un
+límite conservador en la masa de gluino.
+
+Todas las masas de los squark se establecen en 5 $\tev$. Esto da como resultado una producción de procsos SUSY a través de la creación de pares de gluinos, cada uno de los cuales
+que decae posteriormente a través de un squark virtual (los 12 estados de sabor de los squarks se consideran completamente degenerados) a un
+pares quark-antiquark más el neutralino NLSP.
+
+Otros parámetros del modelo se establecen en $M_ {2} = 3\ \tev$, $ \tan{\beta} = 1.5$ y $m_{\tilde{G}} = 1$ eV.
+Todos los términos de acoplamiento trilineal se establecen en cero y las masas de sleptons se establecen en 5 \tev. El bosón de Higgs está en el régimen de desacoplamiento con $m_{A} = 2\ \tev $ y
+$m_{h} = 125\ \gev$, valor medido recientemente en el LHC para el
+Bosón de Higgs del SM \cite{Aad: 2015zhl}. En escenarios SUSY \textit{gauge mediated}
+existen varios mecanismos \cite{Craig: 2011yk, Auzzi: 2011eu, Csaki: 2012fh, Larsen: 2012rq, Craig: 2012hc} para generar una masa de bosón de Higgs como este valor observado, sin cambiar el
+fenomenología de los modelos aquí considerados. Además $c\tau_{\mathrm{NLSP}}
+<0.1$ mm se estableció para asegurar que el neutralino decaiga rápidamente y el
+decaimiento directo del gluino está prohibido fijando $BR(\gluino \to \gravino g) = 0$.
+
+Como $M_1$ y $\mu$ determinan la masa neutralino más ligera, están relacionados
+de tal manera que las fracciones de decaimiento del \ninoone\ sean aproximadamente
+constante, resultando en $\text{BR} (\ninoone \to \gamma \gravino) \sim 50 \%$,
+$\text{BR} (\ninoone \to Z\gravino) \sim 0 \% $ y $ \text{BR} (\ninoone \to h
+\gravino) \sim 50 \%$, números que varían en $\pm 1 \%$ para todas las muestras.
+% como se muestra en la Figura \ ref {fig: br_n1_X}.
+
+Vale la pena señalar que $\sim 25 \%$ de eventos tendrán dos fotones en el estado final,
+por lo que se realiza una búsqueda inclusiva que requiera al menos un
+$\gamma$, más dos \gravino\ en el estado final.
+
+El valor de $\mu$ también debe ser negativo para no favorecer los decaimientos al bosón de $Z$, lo que daría lugar a un estado final que es cubierto por otro análisis. Esto deja $M_3$ y $\mu$ como los únicos dos parámetros libres del modelo, que son variados desde $150\ \gev<m_{\ninoone}<(m_{\ gluino} - 50) \ \ gev $ y $1200\ \gev<m_{\gluino}<2400\ \gev$
+con $m_{\ninoone}<m_{\gluino}$.
+
+% Para hacer coincidir las masas de gluinos correspondientes a los archivos LHE disponibles, no se tienen en cuenta las correcciones radiativas, lo que implica que
+% Las masas de gluino ahora coinciden con los valores del parámetro M3 (este no fue el caso
+% para la producción anterior de MC15).
+
+
+Los puntos de señal generados se resumen en la Figura \ref{fig: signal_grid}. Consta de 81 puntos de produccion fuerte ($\gluino\gluino$) generados con $10000$ eventos cada uno.
+
+
+Se calcularon el espectro de masas completo, las fracciones de decaimiento del gluino y neutralino y los anchos de desintegración de este conjunto de puntos utilizando SUSPECT v2.43 \cite{Djouadi2007426}, SDECAY v1.5 \cite{Muhlleitner: 2004mka} y HDECAY v3.4 \cite{Djouadi: 1997yw},
+ejecutados como parte del paquete SUSYHIT v1.5a \cite{Djouadi: 2006bz}.
+Como ejemplo, la Figura \ref{fig: mass_spectra} muestra el espectro de masas para uno de los puntos en la cuadrícula de señales GGM, con ($M_3$, $\mu$) = (1600 {\gev}, 650 \gev). 
+
+
+
+\section{Selección de eventos de señal}
+
+El análisis está diseñado para comparar el número de eventos observados en tres regiones de señal para la producción fuerte (denominadas SRL, SRM y SRH) con las predicciones de los procesos de SM.
+La SRL apunta al espacio de fase con grandes diferencias de masa entre el gluino y el neutralino, lo que resulta en eventos caracterizados por una gran multiplicidad de jets y actividad hadrónica, pero momento transverso faltante moderado. La región de señal SRH está optimizada para los escenarios comprimidos, cerca de la diagonal en el plano de masa gluino-neutralino, dando eventos con un alto momento transverso faltante, fotones con \pt\ más alto y una multiplicidad de jets y actividad hadrónica más bajas. Finalmente, la región SRM se define para el espacio de fase intermedia entre SRL y SRH.
+
+Dada la gran masa de gluinos producidos en el modelo GGM explorado, se espera que el momento transversal visible total sea grande. Esto da como resultado un valor grande para la variable \HT, definida como la suma escalar de los momentos transversales de todos los jets de señal individuales y el fotón principal en el estado final.
+La selección de eventos de señal incluye un requisito un \HT \ y \met.
+En SRL, SRM y SRH, se requiere que los eventos contengan al menos un fotón aislado con $\ET> 145$, $>300 $ o $>400\ \gev$, respectivamente, y cero leptones para eliminar los eventos SM que contengan $ V\gamma$ donde el bosón del vector decae leptónicamente. Además, se requieren más de cuatro jets en SRL y SRM, mientras que se requieren más de dos jets en SRH.
+
+En eventos caracterizados por elevado \met\ reconstruidos sin una contribución significativa de partículas que no interactuantes o que surge de fuentes instrumentales y objetos físicos mal reconstruidos, el vector de momento transverso faltante tiende a
+estar alineado con el fotón o con uno de los dos jets principales. Una selección basada en la separación angular entre estos objetos y el vector \met\ ($\dphijetmet$ y $\dphigammet$) proporciona una gran supresión de estos procesos de fondo.
+
+Las señales de SUSY consideradas en este análisis se caracterizan por
+eventos con alta multiplicdad de jets en una amplia región del espacio de parámetros. Los jets secundarios son comparativamente más duros que los de los eventos de fondo SM. Como consecuencia, para procesos de señal con jets duros, \rtf\ (definido como la suma escalar de \pt\ para los cuatro jets de \pt\ más alto, dividido la suma escalar del \pt\ de todos los jets de señal) toma valores inferiores a uno, mientras que para el fondo SM con menos jets y más suaves, \ \rtf\ suele estar más cerca de la unidad \cite{SUSY-2016-27}.
+No se aplica una selección de \rtf\ para SRH debido al menor número de jets en esta región.
+
+La selección de eventos para todas las regiones de señales se resume en la Tabla \ref{tab: sr_selection}. 
+
+\begin{table}[ht!]
+  \centering
+  \begin{tabular}{lrrr}
+    \hline
+    \hline
+                                                    &        SRL    &       SRM     &         SRH \\
+      \hline
+      $\nph$                        &        $\ge1$ &        $\ge1$ &        $\ge1$ \\
+      $\ptph$                 &  $>145\ \gev$ &  $>300\ \gev$ &  $>400\ \gev$ \\
+      $\nlep$                        &             0 &             0 &             0 \\
+      $\njet$                           &       $\ge 5$ &       $\ge 5$ &       $\ge 3$ \\
+      $\dphijetmet$                &        $>0.4$ &        $>0.4$ &        $>0.4$ \\
+      $\dphigammet$                    &        $>0.4$ &        $>0.4$ &        $>0.4$ \\
+      $\met$                                       &  $>250\ \gev$ &  $>300\ \gev$ &  $>600\ \gev$ \\
+      $\HT$                                         & $>2000\ \gev$ & $>1600\ \gev$ & $>1600\ \gev$ \\
+      $\rtf$                            &       $<0.90$ &       $<0.90$ &             - \\
+      \hline
+      \hline
+    \end{tabular}
+  \caption{Selección para las tres regiones de señal.}
+  \label{tab:sr_selection}
+\end{table}
+
+
+
+\section{Regiones de control y validación}
+
+Se espera que las contribuciones de fondo dominantes del SM en las SR sean de la
+producción de $W \gamma$ y \ttbarph\, seguida de una producción de fotones con \met instrumental. Estas tres contribuciones se determinan utilizando simulaciones de MC restringidas por eventos observados en regiones de control dedicadas a través de la estimación de factores de normalización. Las fuentes de fondo más pequeñas,
+$ W \gamma \gamma $, $ Z \gamma $, $ Z \gamma \gamma $ y $ \gamma \gamma $, se obtienen
+directamente de MC.
+
+Las regiones de control denominadas como CRW, CRT y CRQ se utilizan para obtener el MC
+normalización para los eventos $ W \gamma $, \ttbarph y QCD \phj\, respectivamente.
+Los criterios de selección para las CR asociadas con las SR se presentan en la Tabla \ref{tab: CR_VR_selection}. Las CR están diseñadas para ser ortogonales pero aún cinemáticamente similares a las SR, y que favorezcan el proceso de fondo de interés, con una contaminación de señal insignificante.
+
+La selección para la CRQ se define a partir de las SRs pero
+aplicando un requisito en \met\ más bajo ($> 100\ \gev $), una selección \HT\ similar
+y $ \dphijetmet$ invertido, aplicados para aumentar la fracción de
+\phj\ en la muestra de control.
+
+La región CRW se define al requerir un fotón, un leptón y $ 100\ \gev <\met <200 \ \gev $. Se aplica un requisito de veto de $b$-jets para reducir la contaminación de \ttbarph.
+
+La región CRT se define al requerir un fotón, un leptón, jets y $ 50 \ \gev <\met <200 \ \gev $. Se requieren al menos dos jets etiquetados con $b$ para aumentar la pureza de la población de eventos de \ttbarph. También se aplican requisitos más flexibles en ambos casos para aumentar los rendimientos. No se aplica ningún requisito en \rtf por la misma razón. Se aplica un requisito de \met máximo para reducir la contaminación de la señal.
+
+Se utiliza un conjunto adicional de Regiones de validación (VR) para verificar
+los resultados del procedimiento de estimación de anteriores. Fueron diseñadas para encontrarse
+cinemáticamente entre las regiones de señal y las regiones de control, pero con uno o más criterios
+invertido o modificado para reducir una posible contaminación de la señal. Las regiones VRL son
+diseñado para enriquecer los fondos $ W \gamma $ y $ \ttbarph $. No se aplica ningún requisito de $ b $-jets,
+por lo que se espera la contribución de ambos procesos. Las cuatro regiones (VRL 1 a 4) cubren
+diferentes partes del espacio de parámetros entre las regiones de control y de señal, variando principalmente los requisitos de \met y \HT.
+Las regiones VRM están diseñadas para validar la extrapolación del fondo $ \phj$ de la CR a la SR.
+Una VRQ similar a una región de señal está diseñada para ser ortogonal a la SR solo debido al requisito reducido en \met.
+Además, se diseñaron específicamente dos conjuntos de VRM para producir eventos de baja multiplicidad de jets y con fotones de alto \pt (VRM1H y VRM2H), o eventos con alta multiplicidad de jets y fotones menos energéticos (VRM1L y VRM2L), para validar la estimación de fondo en regiones
+más cerca de SRH o SRL respectivamente. Cada conjunto se divide en dos, uno incluido en el otro, seleccionando un rango diferente en \met.
+Un resumen de los diferentes criterios de selección se muestra en la Tabla \ref{tab: CR_VR_selection}. 
+
+\begin{table}[ht!]
+  \centering
+   \resizebox{\textwidth}{!}{
+  \begin{tabular}{lcccccccccc}
+      \hline
+      \hline
+      Regions & $\nph$ & $\ptph$ [\gev] & $\nlep$ & $\njet$ & $\nbjet$ & $\dphijetmet$ & $\dphigammet$ & \met [\gev] & \HT  [\gev] & $\rtf$  \\
+      \hline
+      CRQ   & $\ge1$ & $>145$ & 0      & $\ge3$ & -      & $<0.4$ & $>0.4$ & $>100$      & $>1600$      &  -       \\
+      CRW   & $\ge1$ & $>145$ & $\ge1$ & $\ge1$ & 0      & $>0.4$ & -      & $[100,200]$ & $>400$       &  -       \\
+      CRT   & $\ge1$ & $>145$ & $\ge1$ & $\ge2$ & $\ge2$ & $>0.4$ & -      & $[50 ,200]$ & $>400$       &  -       \\
+      \hline
+      VRL1  & $\ge1$ & $>145$ & $\ge1$ & $\ge2$ & -      & $>0.4$ & -      & $[50 ,200]$ & $>800$       &  -       \\
+      VRL2  & $\ge1$ & $>145$ & $\ge1$ & $\ge2$ & -      & $>0.4$ & -      & $[50 ,200]$ & $>1300$      &  -       \\
+      VRL3  & $\ge1$ & $>145$ & $\ge1$ & $\ge2$ & -      & $>0.4$ & -      & $>200$      & $[600,1600]$ &  -       \\
+      VRL4  & $\ge1$ & $>145$ & $\ge1$ & $\ge2$ & -      & $<0.4$ & -      & $>200$      & $>1100$      &  -       \\
+      \hline
+      VRQ   & $\ge1$ & $>145$ & 0      & $\ge3$ & -      & $>0.4$ & $>0.4$ & $[100,200]$ & $>1600$      &  -       \\
+      VRM1L & $\ge1$ & $>145$ & 0      & $\ge5$ & -      & $>0.4$ & $>0.4$ & $[100,200]$ & $>1600$      &  $<0.90$ \\
+      VRM2L & $\ge1$ & $>145$ & 0      & $\ge5$ & -      & $>0.4$ & $>0.4$ & $[150,200]$ & $>1600$      &  $<0.90$ \\
+      VRM1H & $\ge1$ & $>300$ & 0      & $\ge3$ & -      & $>0.4$ & $>0.4$ & $[100,200]$ & $>1600$      &  -       \\
+      VRM2H & $\ge1$ & $>300$ & 0      & $\ge3$ & -      & $>0.4$ & $>0.4$ & $[150,200]$ & $>1600$      &  -       \\
+      \hline
+      VRE   & $\ge1$ & $>145$ & -      & $\ge1$ & $\ge1$ & $>0.4$ & $<0.4$ & $>200$      & $[100,1600]$ &  -       \\
+      \hline
+      \hline
+
+    \end{tabular}
+    }
+    \caption{Selección para las regiones de control y validación.}
+    \label{tab:CR_VR_selection}
+\end{table}
