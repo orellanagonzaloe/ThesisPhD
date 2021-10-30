@@ -269,3 +269,105 @@ Un resumen de los diferentes criterios de selección se muestra en la Tabla \ref
     \caption{Selección para las regiones de control y validación.}
     \label{tab:CR_VR_selection}
 \end{table}
+
+
+\section{Fondo de jets identificados como fotones}
+
+Los jets pueden identificarse erróneamente como fotones (fotones falsos) si contienen principalmente $\pi^{0}$ (o cualquier otro hadrón neutro) que se lleva la mayor parte de la
+energía del jet y se desintegra en un par de fotones colimados, lo que da como resultado un objeto electromagnético
+similar a un solo fotón altamente energético.
+Este fondo surge principalmente de multijets QCD, \wj\ y eventos \ttbar\ semileptónicos. Los criterios de identificación "tight" aplicados a los candidatos a fotones reducen este fondo. Después de aplicar esta selección, se espera que la muestra de datos contenga fotones reales con contaminación moderada de jets. Como no se espera que esta tasa de identificación errónea sea precisa
+utilizando simulaciones de MC, se utiliza un método de recuento de banda lateral basado en datos \cite{ATLAS: 2020uiq}. El método llamado ABCD hace uso de los diferentes perfiles de aislamiento esperados para fotones reales y jets mal identificados \cite{STDM-2010-08}.
+Se consideraron dos variables incluyen simultáneamente aislamiento calorimétrico y de trazas cuando para el fotón candidato, como se define en la Sec. \ref{sec: objetos}.
+La identificación fuera offline 'tight' es por diseño más estricta queel trigger de fotones utilizado para recopilar los datos, por lo que se espera tener candidatos a fotones
+de los jets que fallan la seleccion tight pero satisfacen una seleccion intermedia. Estos jets de tipo fotón, en lo sucesivo denominados fotones non-tight, se definen como aquellos que pasan la identificación loose y satisfacen los cortes de selección "tight", con la excepción de al menos una de las cuatro selecciones asociadas con los depósitos de energía en el calorímetro EM. \cite{ATLAS: 2020uiq}, elegidos por no estar correlacionados con las variables de aislamiento. De esta manera, el uso de fotones non-tight mejora la contribución de los jets que simulan ser fotones, necesarios para este método.
+En el plano de identificación-aislamiento, el método define una región de señal $A$ que consta de candidatos a fotones aislados que satisfacen la identificación 'tight', y tres regiones de control, $B$, $C$ y $D$, con candidatos a fotones no aislados y "tight", aislado y no tight y no aislado y no tight, respectivamente.
+
+Se estima una posible correlación residual entre la identificación de fotones y el aislamiento, y la contaminación de las regiones de fondo por fotones reales, utilizando simulaciones de MC. Este método calcula la contribución de jets mal identificados en todas las regiones utilizadas en el análisis. Las incertidumbres sistemáticas del método se evalúan variando la definición de los objetos no ajustados y considerando las diferencias introducidas por la correlación residual entre las regiones.
+
+\section{Fondo de electrones identificados como fotones}
+
+
+Se espera una contaminación significativa en las regiones de señal de los procesos SM como $W/Z$ + jets y eventos \ttbar\ en los casos en los que un electrón de alto \pt\ se identifica erróneamente como un fotón.
+Este fondo se estima ponderando el número de eventos observados en una muestra de control de electrones por la tasa de identificación errónea de electrón a fotón.
+Estas muestras de control de electrones son las mismas regiones de control, validación y señal del análisis, pero aplicando las mismas selecciones cinemáticas de fotones a los electrones, donde se solicita un electrón aislado alto \pt\ y se vetan los fotones de señal.
+Para estimar la tasa de identificación errónea de electrón a fotón, se utiliza un método basado en una muestra de eventos de datos de \zee\ \cite{ATLASCollaboration: 2016wlb, ATLAS: 2020uiq}. Dado que el bosón $Z$ no puede decaer directamente en un electrón y un fotón, los eventos de electrones-fotones que aparecen bajo el pico $Z$ corresponden con mayor probabilidad a
+electrones mal identificados. Se aplica una técnica de sustracción de fondo, que tiene en cuenta también la
+contaminación procedente de combinaciones de pares aleatorios. El factor falso electrón-fotón se estima luego como la relación entre el número de pares electrón-fotón y electrón-electrón encontrados.
+por debajo del pico $Z$ en el ajuste de la distribución de masa invariante.
+Este ajuste utiliza una función doubl sided Crystal-Ball (DSCB) (un núcleo gaussiano con colas asimétricas exponenciales) para modelar el pico $Z$, y una distribución gaussiana para modelar los pequeños fondos no resonantes para \zee\.
+Solo se seleccionan los pares entre una ventana de masa invariante definida para calcular el factor de falsificación de electrón a fotón. Esta ventana se define como $\pm 3 \sigma$ alrededor del centro del pico de la DSCB, donde $\sigma$ es el ancho del pico.
+Solo se seleccionan los eventos con $\met<40\ \gev $,
+para evitar que los electrones provengan de las desintegraciones de $W$.
+
+Se diseñó una región de validación dedicada (VRE) con la selección de eventos descrita en la Tabla
+\ref{tab:CR_VR_selection}, para validar la precisión del fondo correspondiente de electrón a fotón
+con las predicciones basadas con los factores falsos calculados. El conjunto de requisitos selecciona
+predominantemente $W(e \nu)$ + eventos de jets, donde un $W$ impulsado (incluidos los que provienen de los quarks superiores) decae en un
+neutrino colineal (con alto \met) y un electrón de alto \pt  (identificado erróneamente como un
+fotón).
+
+\section{Incertidumbres sistemáticas}
+
+
+Todos los procesos de fondo estimados por
+haciendo uso de simulaciones de MC o mediante métodos basados en datos, y también predicciones de señales MC,
+se ven afectados por incertidumbres sistemáticas que se originan principalmente en dos tipos de fuentes:
+experimentales y teóricos. Estas incertidumbres sistemáticas pueden afectar el número de eventos esperados tanto en las regiones de control como en las de señal.
+
+La incertidumbre en la luminosidad integrada combinada de 2015-2018 es de 1,7\% \cite{ATLAS-CONF-2019-021}, obtenida con el detector LUCID-2 \cite{Avoni_2018} para las medidas de luminosidad primaria.
+
+Se estiman las incertidumbres sistemáticas debidas a la identificación de fotones y las eficiencias de aislamiento.
+siguiendo las prescripciones de la Ref. \cite{EGAM-2018-01}. Se evalúan variando los factores de corrección de fotones en simulaciiones de MC con las incertidumbres correspondientes. La escala de energía de fotones se determina usando muestras de eventos $Z \to ee$, cambiando las correcciones y resoluciones de escala en una desviación estándar hacia arriba y hacia abajo.
+
+Para electrones \cite{EGAM-2018-01} y muones \cite{PERF-2015-10}, similar
+a los fotones, la incertidumbre para la eficiencia de identificación, escala de energía y
+la resolución se determinó de $Z \to l^{+}l^{-}$ y
+$W^{\pm}\to l^{\pm}\nu$ muestras de control.
+
+Para los jets, la escala de energía y las incertidumbres de resolución se derivan siguiendo el
+procedimiento descrito en la Ref. \cite{PERF-2016-04}, donde se usa un esquema simplificado con 38 parámetros.
+
+Para \met, las incertidumbres de todos los objetos subyacentes con los que se
+construye se propagan al cálculo, y se consideran las incertidumbres adicionales que tienen en cuenta la escala y la resolución en el término soft \cite{PERF-2016-07}.
+También se considera la incertidumbre sobre la reponderación acumulada.
+
+Para los fondos de fotones falsos ($j\to\gamma$ y $e\to\gamma$), hay
+dos tipos diferentes de incertidumbres que afectan sus estimaciones: la incertidumbre sistemática del método utilizado para estimar los factores falsos y la
+incertidumbre estadística de la muestra de control.
+
+Para cada una de las principales muestras de simulación de fondo, se evalúa una incertidumbre teórica considerando diferentes fuentes de incertidumbres sistemáticas. Cada muestra
+contiene varios pesos internos que representan el efecto de las variaciones de diferentes parámetros de la teoría. Las variaciones sistemáticas consideradas
+para cada muestra son las escalas de renormalización y factorización $\mu_{r}$ y $\mu_{f}$ a nivel de generador, variaciones de los PDF \cite{Butterworth: 2015oua} y la constante de acoplamiento fuerte ($\alpha_S$) .
+Para $\mu_{r}$ y $\mu_{f}$, se utilizan tres parámetros nuisance independientes, construidos manteniendo una de las escalas constante mientras se varía la otra, o como una variación coherente de ambas escalas.
+Para la incertidumbre de la PDF, la PDF nominal (NNPDF3.0) y las variaciones se combinan en envelope. Finalmente, se consideran las incertidumbres asociadas con la determinación y el truncamiento de $\alpha_S$. Las incertidumbres de PDF y $\alpha_S$ se agregan en cuadratura. La incertidumbre sistemática teórica total en las regiones de señal está entre el 15 \% y el 30 \% dependiendo de la muestra de MC.
+
+El impacto relativo de cada sistemática en la expectativa de fondo SM después del ajuste de solo fondo se presenta en la Tabla \ref{tab: syst_rel_impact}. Una de las mayores incertidumbres sistemáticas experimentales está relacionada con la escala y resolución de la energía del jet (excepto para la SRH, donde se reduce debido a la menor multiplicidad del jets y la actividad hadrónica). Las incertidumbres teóricas sistemáticas se acercan al 3 \% para SRL y SRM, y son las mayores en SRH, alcanzando el nivel del 10 \%.
+
+
+\begin{table}[ht!]
+  \centering
+  \caption{Resumen de las diferentes fuentes de sistemáticos en las predicciones del SM para las distintas SRs.}
+    \begin{tabular}{lccc}
+      \hline
+      \hline
+                                                  & SRL [\%] & SRM [\%] & SRH [\%] \\
+      \hline
+      Total (stat. + syst.) uncertainty           & 28      & 25      &  17 \\
+      Statistical uncertainty                     & 20      & 15      &  12 \\
+      \hline
+      Jet energy scale and resolution             & 18      & 19      & 4.1  \\
+      b-tagging calibration                       & 3.2     & 4.3     & 3.6  \\
+      Jet fakes                                   & 2.1     & 2.5     & 2.3  \\
+      MC theory                                   & 3.6     & 3.1     & 10   \\
+      Electron fakes                              & 1.4     & 1.9     & < 1  \\
+      Electron/photon energy resolution and scale & 5.5     & 1.1     & 4.1  \\
+      Muon reconstruction and identification      & 2.6     & 1.8     & < 1  \\
+      Photon ID and isolation                     & 2.6     & 2.1     & 1.1  \\
+      Pile-up reweighting                         & < 1     & 1.2     & 1.0  \\
+      \met\ soft-term scale and resolution        & < 1     & < 1     & < 1  \\
+      \hline
+      \hline
+    \end{tabular}
+\label{tab:syst_rel_impact}
+\end{table}
