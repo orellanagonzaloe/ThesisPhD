@@ -1,6 +1,6 @@
-\chapter{Búsqueda de SUSY con fotones y Higgs en el estado final}
+\chapter{Búsqueda de SUSY con fotones y Higgs en el estado final con producción fuerte}
 % \addcontentsline{toc}{chapter}{Búsqueda de SUSY con fotones y Higgs en el estado final}
-\chaptermark{Búsqueda de SUSY con fotones y Higgs en el estado final}
+\chaptermark{Búsqueda de SUSY con fotones y Higgs en el estado final con producción fuerte}
 
 
 El análisis para el cual está orientada esta Tesis consiste en la búsqueda de Supersimetría en eventos con un fotón aislado muy energético, jets y gran cantidad de energía faltante en estado final \cite{Alonso:2147473,ATLAS:2016fks,Collaboration:2198651}. La estrategia general de la búsqueda consiste en el conteo del número de eventos observado en exceso sobre el SM en una cierta región del espacio de observables rica en eventos de la señal considerada.
@@ -111,6 +111,7 @@ La Tabla \ref{tab:background} resume las principales fuentes de fondo anteriorme
 \end{table} 
 
 \subsection{Muestras de señal}
+\label{sec:signal}
 
 
 El presente análisis está motivado por la presencia de neutralinos mezcla de bino-higgsino
@@ -127,8 +128,8 @@ pares quark-antiquark más el neutralino NLSP.
 Otros parámetros del modelo se establecen en $M_ {2} = 3\ \tev$, $ \tan{\beta} = 1.5$ y $m_{\tilde{G}} = 1$ eV.
 Todos los términos de acoplamiento trilineal se establecen en cero y las masas de sleptons se establecen en 5 \tev. El bosón de Higgs está en el régimen de desacoplamiento con $m_{A} = 2\ \tev $ y
 $m_{h} = 125\ \gev$, valor medido recientemente en el LHC para el
-Bosón de Higgs del SM \cite{Aad: 2015zhl}. En escenarios SUSY \textit{gauge mediated}
-existen varios mecanismos \cite{Craig: 2011yk, Auzzi: 2011eu, Csaki: 2012fh, Larsen: 2012rq, Craig: 2012hc} para generar una masa de bosón de Higgs como este valor observado, sin cambiar el
+Bosón de Higgs del SM \cite{Aad:2015zhl}. En escenarios SUSY \textit{gauge mediated}
+existen varios mecanismos \cite{Craig:2011yk, Auzzi:2011eu, Csaki:2012fh, Larsen:2012rq, Craig:2012hc} para generar una masa de bosón de Higgs como este valor observado, sin cambiar el
 fenomenología de los modelos aquí considerados. Además $c\tau_{\mathrm{NLSP}}
 <0.1$ mm se estableció para asegurar que el neutralino decaiga rápidamente y el
 decaimiento directo del gluino está prohibido fijando $BR(\gluino \to \gravino g) = 0$.
@@ -152,14 +153,26 @@ con $m_{\ninoone}<m_{\gluino}$.
 % para la producción anterior de MC15).
 
 
-Los puntos de señal generados se resumen en la Figura \ref{fig: signal_grid}. Consta de 81 puntos de produccion fuerte ($\gluino\gluino$) generados con $10000$ eventos cada uno.
+Los puntos de señal generados se resumen en la Figura \ref{fig:signal_grid}. Consta de 81 puntos de produccion fuerte ($\gluino\gluino$) generados con $10000$ eventos cada uno.
 
 
-Se calcularon el espectro de masas completo, las fracciones de decaimiento del gluino y neutralino y los anchos de desintegración de este conjunto de puntos utilizando SUSPECT v2.43 \cite{Djouadi2007426}, SDECAY v1.5 \cite{Muhlleitner: 2004mka} y HDECAY v3.4 \cite{Djouadi: 1997yw},
-ejecutados como parte del paquete SUSYHIT v1.5a \cite{Djouadi: 2006bz}.
-Como ejemplo, la Figura \ref{fig: mass_spectra} muestra el espectro de masas para uno de los puntos en la cuadrícula de señales GGM, con ($M_3$, $\mu$) = (1600 {\gev}, 650 \gev). 
+Se calcularon el espectro de masas completo, las fracciones de decaimiento del gluino y neutralino y los anchos de desintegración de este conjunto de puntos utilizando SUSPECT v2.43 \cite{Djouadi2007426}, SDECAY v1.5 \cite{Muhlleitner:2004mka} y HDECAY v3.4 \cite{Djouadi:1997yw},
+ejecutados como parte del paquete SUSYHIT v1.5a \cite{Djouadi:2006bz}.
+Como ejemplo, la \ref{fig:mass_spectra} muestra el espectro de masas para uno de los puntos en la cuadrícula de señales GGM, con ($M_3$, $\mu$) = (1600 {\gev}, 650 \gev). 
 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{images/phb_grid.pdf}
+  \caption{Grid de puntos de señal simulados.}
+  \label{fig:signal_grid}
+\end{figure}
 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{images/phb_mass_spectrum.pdf}
+  \caption{Espectro de masas para el punto de señal ($M_3$, $\mu$) = (1600 {\gev}, 650 \gev).}
+  \label{fig:mass_spectra}
+\end{figure}
 
 \section{Selección de eventos de señal}
 
@@ -177,7 +190,7 @@ Las señales de SUSY consideradas en este análisis se caracterizan por
 eventos con alta multiplicdad de jets en una amplia región del espacio de parámetros. Los jets secundarios son comparativamente más duros que los de los eventos de fondo SM. Como consecuencia, para procesos de señal con jets duros, \rtf\ (definido como la suma escalar de \pt\ para los cuatro jets de \pt\ más alto, dividido la suma escalar del \pt\ de todos los jets de señal) toma valores inferiores a uno, mientras que para el fondo SM con menos jets y más suaves, \ \rtf\ suele estar más cerca de la unidad \cite{SUSY-2016-27}.
 No se aplica una selección de \rtf\ para SRH debido al menor número de jets en esta región.
 
-La selección de eventos para todas las regiones de señales se resume en la Tabla \ref{tab: sr_selection}. 
+La selección de eventos para todas las regiones de señales se resume en la Tabla \ref{tab:sr_selection}. 
 
 \begin{table}[ht!]
   \centering
@@ -213,7 +226,7 @@ directamente de MC.
 
 Las regiones de control denominadas como CRW, CRT y CRQ se utilizan para obtener el MC
 normalización para los eventos $ W \gamma $, \ttbarph y QCD \phj\, respectivamente.
-Los criterios de selección para las CR asociadas con las SR se presentan en la Tabla \ref{tab: CR_VR_selection}. Las CR están diseñadas para ser ortogonales pero aún cinemáticamente similares a las SR, y que favorezcan el proceso de fondo de interés, con una contaminación de señal insignificante.
+Los criterios de selección para las CR asociadas con las SR se presentan en la Tabla \ref{tab:CR_VR_selection}. Las CR están diseñadas para ser ortogonales pero aún cinemáticamente similares a las SR, y que favorezcan el proceso de fondo de interés, con una contaminación de señal insignificante.
 
 La selección para la CRQ se define a partir de las SRs pero
 aplicando un requisito en \met\ más bajo ($> 100\ \gev $), una selección \HT\ similar
@@ -235,7 +248,7 @@ Las regiones VRM están diseñadas para validar la extrapolación del fondo $ \p
 Una VRQ similar a una región de señal está diseñada para ser ortogonal a la SR solo debido al requisito reducido en \met.
 Además, se diseñaron específicamente dos conjuntos de VRM para producir eventos de baja multiplicidad de jets y con fotones de alto \pt (VRM1H y VRM2H), o eventos con alta multiplicidad de jets y fotones menos energéticos (VRM1L y VRM2L), para validar la estimación de fondo en regiones
 más cerca de SRH o SRL respectivamente. Cada conjunto se divide en dos, uno incluido en el otro, seleccionando un rango diferente en \met.
-Un resumen de los diferentes criterios de selección se muestra en la Tabla \ref{tab: CR_VR_selection}. 
+Un resumen de los diferentes criterios de selección se muestra en la Tabla \ref{tab:CR_VR_selection}. 
 
 \begin{table}[ht!]
   \centering
@@ -276,11 +289,11 @@ Un resumen de los diferentes criterios de selección se muestra en la Tabla \ref
 Los jets pueden identificarse erróneamente como fotones (fotones falsos) si contienen principalmente $\pi^{0}$ (o cualquier otro hadrón neutro) que se lleva la mayor parte de la
 energía del jet y se desintegra en un par de fotones colimados, lo que da como resultado un objeto electromagnético
 similar a un solo fotón altamente energético.
-Este fondo surge principalmente de multijets QCD, \wj\ y eventos \ttbar\ semileptónicos. Los criterios de identificación "tight" aplicados a los candidatos a fotones reducen este fondo. Después de aplicar esta selección, se espera que la muestra de datos contenga fotones reales con contaminación moderada de jets. Como no se espera que esta tasa de identificación errónea sea precisa
-utilizando simulaciones de MC, se utiliza un método de recuento de banda lateral basado en datos \cite{ATLAS: 2020uiq}. El método llamado ABCD hace uso de los diferentes perfiles de aislamiento esperados para fotones reales y jets mal identificados \cite{STDM-2010-08}.
-Se consideraron dos variables incluyen simultáneamente aislamiento calorimétrico y de trazas cuando para el fotón candidato, como se define en la Sec. \ref{sec: objetos}.
+Este fondo surge principalmente de multijets QCD, \wj\ y eventos \ttbar\ semileptónicos. Los criterios de identificación 'tight' aplicados a los candidatos a fotones reducen este fondo. Después de aplicar esta selección, se espera que la muestra de datos contenga fotones reales con contaminación moderada de jets. Como no se espera que esta tasa de identificación errónea sea precisa
+utilizando simulaciones de MC, se utiliza un método de recuento de banda lateral basado en datos. El método llamado ABCD hace uso de los diferentes perfiles de aislamiento esperados para fotones reales y jets mal identificados \cite{STDM-2010-08}.
+Se consideraron dos variables incluyen simultáneamente aislamiento calorimétrico y de trazas cuando para el fotón candidato, como se define en la \ref{isolation}.
 La identificación fuera offline 'tight' es por diseño más estricta queel trigger de fotones utilizado para recopilar los datos, por lo que se espera tener candidatos a fotones
-de los jets que fallan la seleccion tight pero satisfacen una seleccion intermedia. Estos jets de tipo fotón, en lo sucesivo denominados fotones non-tight, se definen como aquellos que pasan la identificación loose y satisfacen los cortes de selección "tight", con la excepción de al menos una de las cuatro selecciones asociadas con los depósitos de energía en el calorímetro EM. \cite{ATLAS: 2020uiq}, elegidos por no estar correlacionados con las variables de aislamiento. De esta manera, el uso de fotones non-tight mejora la contribución de los jets que simulan ser fotones, necesarios para este método.
+de los jets que fallan la seleccion tight pero satisfacen una seleccion intermedia. Estos jets de tipo fotón, en lo sucesivo denominados fotones non-tight, se definen como aquellos que pasan la identificación loose y satisfacen los cortes de selección "tight", con la excepción de al menos una de las cuatro selecciones asociadas con los depósitos de energía en el calorímetro EM elegidos por no estar correlacionados con las variables de aislamiento. De esta manera, el uso de fotones non-tight mejora la contribución de los jets que simulan ser fotones, necesarios para este método.
 En el plano de identificación-aislamiento, el método define una región de señal $A$ que consta de candidatos a fotones aislados que satisfacen la identificación 'tight', y tres regiones de control, $B$, $C$ y $D$, con candidatos a fotones no aislados y "tight", aislado y no tight y no aislado y no tight, respectivamente.
 
 Se estima una posible correlación residual entre la identificación de fotones y el aislamiento, y la contaminación de las regiones de fondo por fotones reales, utilizando simulaciones de MC. Este método calcula la contribución de jets mal identificados en todas las regiones utilizadas en el análisis. Las incertidumbres sistemáticas del método se evalúan variando la definición de los objetos no ajustados y considerando las diferencias introducidas por la correlación residual entre las regiones.
@@ -291,7 +304,7 @@ Se estima una posible correlación residual entre la identificación de fotones 
 Se espera una contaminación significativa en las regiones de señal de los procesos SM como $W/Z$ + jets y eventos \ttbar\ en los casos en los que un electrón de alto \pt\ se identifica erróneamente como un fotón.
 Este fondo se estima ponderando el número de eventos observados en una muestra de control de electrones por la tasa de identificación errónea de electrón a fotón.
 Estas muestras de control de electrones son las mismas regiones de control, validación y señal del análisis, pero aplicando las mismas selecciones cinemáticas de fotones a los electrones, donde se solicita un electrón aislado alto \pt\ y se vetan los fotones de señal.
-Para estimar la tasa de identificación errónea de electrón a fotón, se utiliza un método basado en una muestra de eventos de datos de \zee\ \cite{ATLASCollaboration: 2016wlb, ATLAS: 2020uiq}. Dado que el bosón $Z$ no puede decaer directamente en un electrón y un fotón, los eventos de electrones-fotones que aparecen bajo el pico $Z$ corresponden con mayor probabilidad a
+Para estimar la tasa de identificación errónea de electrón a fotón, se utiliza un método basado en una muestra de eventos de datos de \zee\ \cite{ATLASCollaboration:2016wlb}. Dado que el bosón $Z$ no puede decaer directamente en un electrón y un fotón, los eventos de electrones-fotones que aparecen bajo el pico $Z$ corresponden con mayor probabilidad a
 electrones mal identificados. Se aplica una técnica de sustracción de fondo, que tiene en cuenta también la
 contaminación procedente de combinaciones de pares aleatorios. El factor falso electrón-fotón se estima luego como la relación entre el número de pares electrón-fotón y electrón-electrón encontrados.
 por debajo del pico $Z$ en el ajuste de la distribución de masa invariante.
@@ -308,14 +321,14 @@ neutrino colineal (con alto \met) y un electrón de alto \pt  (identificado err�
 fotón).
 
 \section{Incertidumbres sistemáticas}
-
+\label{sec:uncertainties}
 
 Todos los procesos de fondo estimados por
 haciendo uso de simulaciones de MC o mediante métodos basados en datos, y también predicciones de señales MC,
 se ven afectados por incertidumbres sistemáticas que se originan principalmente en dos tipos de fuentes:
 experimentales y teóricos. Estas incertidumbres sistemáticas pueden afectar el número de eventos esperados tanto en las regiones de control como en las de señal.
 
-La incertidumbre en la luminosidad integrada combinada de 2015-2018 es de 1,7\% \cite{ATLAS-CONF-2019-021}, obtenida con el detector LUCID-2 \cite{Avoni_2018} para las medidas de luminosidad primaria.
+La incertidumbre en la luminosidad integrada combinada de 2015-2018 es de 1,7\% \cite{ATLAS-CONF-2019-021}, obtenida con el detector LUCID-2 para las medidas de luminosidad primaria.
 
 Se estiman las incertidumbres sistemáticas debidas a la identificación de fotones y las eficiencias de aislamiento.
 siguiendo las prescripciones de la Ref. \cite{EGAM-2018-01}. Se evalúan variando los factores de corrección de fotones en simulaciiones de MC con las incertidumbres correspondientes. La escala de energía de fotones se determina usando muestras de eventos $Z \to ee$, cambiando las correcciones y resoluciones de escala en una desviación estándar hacia arriba y hacia abajo.
@@ -338,11 +351,11 @@ incertidumbre estadística de la muestra de control.
 
 Para cada una de las principales muestras de simulación de fondo, se evalúa una incertidumbre teórica considerando diferentes fuentes de incertidumbres sistemáticas. Cada muestra
 contiene varios pesos internos que representan el efecto de las variaciones de diferentes parámetros de la teoría. Las variaciones sistemáticas consideradas
-para cada muestra son las escalas de renormalización y factorización $\mu_{r}$ y $\mu_{f}$ a nivel de generador, variaciones de los PDF \cite{Butterworth: 2015oua} y la constante de acoplamiento fuerte ($\alpha_S$) .
+para cada muestra son las escalas de renormalización y factorización $\mu_{r}$ y $\mu_{f}$ a nivel de generador, variaciones de los PDF \cite{Butterworth:2015oua} y la constante de acoplamiento fuerte ($\alpha_S$) .
 Para $\mu_{r}$ y $\mu_{f}$, se utilizan tres parámetros nuisance independientes, construidos manteniendo una de las escalas constante mientras se varía la otra, o como una variación coherente de ambas escalas.
 Para la incertidumbre de la PDF, la PDF nominal (NNPDF3.0) y las variaciones se combinan en envelope. Finalmente, se consideran las incertidumbres asociadas con la determinación y el truncamiento de $\alpha_S$. Las incertidumbres de PDF y $\alpha_S$ se agregan en cuadratura. La incertidumbre sistemática teórica total en las regiones de señal está entre el 15 \% y el 30 \% dependiendo de la muestra de MC.
 
-El impacto relativo de cada sistemática en la expectativa de fondo SM después del ajuste de solo fondo se presenta en la Tabla \ref{tab: syst_rel_impact}. Una de las mayores incertidumbres sistemáticas experimentales está relacionada con la escala y resolución de la energía del jet (excepto para la SRH, donde se reduce debido a la menor multiplicidad del jets y la actividad hadrónica). Las incertidumbres teóricas sistemáticas se acercan al 3 \% para SRL y SRM, y son las mayores en SRH, alcanzando el nivel del 10 \%.
+El impacto relativo de cada sistemática en la expectativa de fondo SM después del ajuste de solo fondo se presenta en la Tabla \ref{tab:syst_rel_impact}. Una de las mayores incertidumbres sistemáticas experimentales está relacionada con la escala y resolución de la energía del jet (excepto para la SRH, donde se reduce debido a la menor multiplicidad del jets y la actividad hadrónica). Las incertidumbres teóricas sistemáticas se acercan al 3 \% para SRL y SRM, y son las mayores en SRH, alcanzando el nivel del 10 \%.
 
 
 \begin{table}[ht!]

@@ -17,7 +17,7 @@ La producción de protones comienza extrayendo los electrones de un contenedor c
 \begin{figure}
   \centering
   \includegraphics[width=0.65\textwidth]{images/LHC_complex.png}
-  \caption{...}
+  \caption{Complejo de aceleradores del LHC}
   \label{LHC_complex}
   % https://cds.cern.ch/record/2684277?ln=es
 \end{figure}
@@ -51,7 +51,9 @@ N=\sigma \int \mathcal{L} dt
 \noindent
 donde al factor integral se lo conoce como luminosidad integrada.
 
-El LHC comenzó a funcionar en 2010 en lo que se denominó \textit{Run 1}, a una energía de de centro de masa de 7 TeV y logrando recolectar <<<lumi>>. En el 2013 finaliza la toma de datos y comienza el \textit{Long shutdown 1}, período que se utilizó para realizar distintas actualizaciones preparándose para la siguiente toma de datos. En el 2015 comenzó el \textit{Run 2} que operaba a una energía de de centro de masa de 13 TeV y logró recolectar <<<lumi>>, finalizando en el 2018 dando lugar al \textit{Long shutdown 2}. Este último estaba previsto con una duración de dos años, pero dada la situación epidemiológica de COVID-19 el mismo se terminó extendiendo hasta (???). Los planes a futuro del LHC preveen un tercer \textit{run} a 14 TeV, y luego ingresar en un nuevo período de inactividad para realizar las mejoras necesarias para el \textit{High Luminosity LHC}.
+El LHC comenzó a funcionar en 2010 en lo que se denominó \textit{Run 1}, a una energía de de centro de masa de 7 TeV y logrando recolectar <<<lumi>>. En el 2013 finaliza la toma de datos y comienza el \textit{Long shutdown 1}, período que se utilizó para realizar distintas actualizaciones preparándose para la siguiente toma de datos. En el 2015 comenzó el \textit{Run 2} que operaba a una energía de de centro de masa de 13 TeV y logró recolectar <<<lumi>>, finalizando en el 2018 dando lugar al \textit{Long shutdown 2}. Este último estaba previsto con una duración de dos años, pero dada la situación epidemiológica de COVID-19 el mismo se terminó extendiendo hasta 2021.
+% TMPChange \tosolve{mirar año}
+Los planes a futuro del LHC preveen un tercer \textit{run} a 14 TeV, y luego ingresar en un nuevo período de inactividad para realizar las mejoras necesarias para el \textit{High Luminosity LHC}.
 
 
 
@@ -71,7 +73,14 @@ En la parte más externa, se encuentra el espectrómetro de muones (MS) diseñad
 
 El detector ATLAS se divide geométricamente en dos regiones, la parte central denominada \textit{barrel} y la región extrema \textit{endcap}. En la región \textit{barrel} los detectores se ubican en forma de cilindros concéntricos alrededor del eje del haz, mientras en la región \textit{endcap} se disponen como discos perpendiculares a la dirección del haz. 
 
-La Figura \tosolve{agregar figura} detalla todas las componentes que integran al detector ATLAS y son descriptas en detalle a en las siguientes secciones.
+La Figura \ref{atlas_1} detalla todas las componentes que integran al detector ATLAS y son descriptas en detalle a en las siguientes secciones.
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.8\textwidth]{images/atlas_1.jpg}
+  \caption{Esquema del detector ATLAS, indicando cada uno de los subdtectores que lo componen.}
+  \label{atlas_1}
+\end{figure}
 
 \section{Sistema de coordenadas}
 
@@ -110,10 +119,25 @@ donde \textit{p} es el momento de la partícula. De esta forma es posible descri
 
 El detector ATLAS posee un poderoso sistema de imanes \cite{magnet} utilizado para curvar la trayectoria de las partículas cargadas, pudiendo así medir tanto su impulso de forma precisa como también su carga. El mismo consta de dos tipos de imanes superconductores, uno en forma solenoidal y otros tres forma toroidal, enfriados a una temperatura de 4.5 K para poder producir los fuertes campos magnéticos.
 
-El solenoide rodea al detector interno, y tiene un tamaño de 5.6 m de largo y 2.56 m de diámetro \commentNotaIV, y con un espesor de apenas 4.5 cm. El mismo produce un campo magnético de 2 T en la dirección del haz, por lo que las partículas cargadas son curvadas en la dirección de $\phi$ \tosolve{revisar}. Para minimizar la interacción de las partículas que lo atraviesan y ahorrar la mayor cantidad de material posible, el solenoide comparte la cámara de vacío del calorímetro de LAr (\tosolve{sección...})
+El solenoide rodea al detector interno, y tiene un tamaño de 5.6 m de largo y 2.56 m de diámetro 
+% TMPChange \commentNotaIV
+, y con un espesor de apenas 4.5 cm. El mismo produce un campo magnético de 2 T en la dirección del haz, por lo que las partículas cargadas son curvadas en la dirección de $\phi$ 
+% TMPChange \tosolve{revisar}
+. Para minimizar la interacción de las partículas que lo atraviesan y ahorrar la mayor cantidad de material posible, el solenoide comparte la cámara de vacío del calorímetro de LAr % TMPChange (\tosolve{sección...})
 
-Los toroides de ATLAS se componen de ocho bobinas, que generan campos de hasta 4 T \tosolve{mirar bien estos números} en la dirección $\phi$, por lo que las partículas que lo atraviesan (muones) so curvadas en la dirección $\eta$. El más grande de ellos mide 25.3 m de largo y 20.1 m de diámetro, y se ubica en la parte más externa del detector \textit{barrel} intercalado con el Espectrómetro de Muones (\tosolve{seccion...}). Los otros dos restantes se encuentran en la región \textit{endcap}, por fuera de los calorímetros, y miden 5.0 m de largo y 10.7 m de diámetro. 
+Los toroides de ATLAS se componen de ocho bobinas, que generan campos de hasta 4 T 
+% TMPChange \tosolve{mirar bien estos números} 
+en la dirección $\phi$, por lo que las partículas que lo atraviesan (muones) so curvadas en la dirección $\eta$. El más grande de ellos mide 25.3 m de largo y 20.1 m de diámetro, y se ubica en la parte más externa del detector \textit{barrel} intercalado con el Espectrómetro de Muones % TMPChange (\tosolve{seccion...})
+. Los otros dos restantes se encuentran en la región \textit{endcap}, por fuera de los calorímetros, y miden 5.0 m de largo y 10.7 m de diámetro. 
 
+La Figura \ref{magnet_1} muestra el esquema de imanes del detector ATLAS.
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.8\textwidth]{images/magnet_1.png}
+  \caption{Sistema de imanes del detector ATLAS.}
+  \label{magnet_1}
+\end{figure}
 
 
 \section{Los subdetectores de ATLAS}
@@ -122,10 +146,32 @@ Los toroides de ATLAS se componen de ocho bobinas, que generan campos de hasta 4
 
 El detector interno es el más próximo al haz y su función principal es la reconstrucción de las trazas de las partículas cargadas, que a su vez sirve para medir la dirección, momento y carga de la misma, y la reconstrucción de los vértices primarios. Para ello combina detectores de muy alta resolución cerca del haz, junto con detectores continuos de trazas en la zona más alejada. El principio básico de funcionamiento consiste en utilizar su alta granularidad, para mapear las señales que dejan las partículas al atravesar cada celda, en coordenadas espaciales. El conjunto de esas señales son reconstruidas como trazas mediante algoritmos especializados. El detector interno contenido dentro del solenoide superconductor y mide 6.2 m de largo y 2.1 m de diámetro. 
 
-% https://cds.cern.ch/record/2724037 pixel.png
+% https://cds.cern.ch/record/2724037 pixel_1.png
 % https://cds.cern.ch/record/1095926 pixel_2.png
 % https://cds.cern.ch/record/1957197 pixel_3.png
 % https://cds.cern.ch/record/1298112 pixel_4.png
+
+Las \Cref{pixel_1,pixel_23} muestran un equema del detector interno.
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.8\textwidth]{images/pixel_2.jpg}
+  \caption{Esquema del detector interno}
+  \label{pixel_1}
+\end{figure}
+
+\begin{figure}
+\centering
+  \begin{subfigure}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{images/pixel_1.png}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{images/pixel_4.png}
+  \end{subfigure}
+  \caption{Diferentes vistas del detector interno}
+  \label{pixel_23}
+\end{figure}
 
 
 \subsubsection{Detector de píxeles}
@@ -136,7 +182,16 @@ Luego del Run 1 la luminosidad del LHC aumentó notablemente, lo que podía sign
 
 El IBL está compuesto por $8$ millones de chips de rápida lectura y con sensores de silicio, que detectan el paso de partículas cargadas mediante la deposición de carga inducida. El tamaño de los píxeles es de $50\times250\:\mu$m$^{2}$, con una resolución de $8\:\mu$m ($R-\phi$) y $40\:\mu$m ($z$). La distancia entre el IBL y la tubería es de $0.2$ mm, y entre el tubo y el detector de píxeles es de $1.9$ mm. 
 
+La Figura \ref{pixel_3} muestra un esquema del detector de trazas.
+
 % the modules in the barrels are slightly overlapping and rotated to provide full azimuthal coverage
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{images/pixel_3.png}
+  \caption{Esquema del detector de trazas}
+  \label{pixel_3}
+\end{figure}
 
 \subsubsection{Detector Semiconductor de Trazas (SCT)}
 
@@ -156,6 +211,15 @@ Es el detector más externo del ID y está diseñado, no solo para detectar part
 El sistema de calorímetros de ATLAS está diseñado para medir la energía y la posición de las partículas, mediante la absorción de la energía depositada por las cascadas de partículas secundarias que estas generan en el material del mismo. Además, permite discriminar electrones y fotones de jets, detectar aquellas partículas neutras que no dejaron trazas en el ID y realizar la selección \textit{online} de eventos potencialmente interesantes (Ver Sistema de \textit{trigger}). Gracias a su amplia cobertura y a que absorbe la energía de prácticamente todas las partículas producidas (salvo muones) es de gran utilidad para poder medir el desbalance de energía transversa, magnitud discriminatoria utilizada en la mayoría de análisis fuera del SM.
 
 Está compuesto de un calorímetro electromagnético (ECAL) dedicado principalmente a la medida de las deposiciones de partículas como fotones y electrones (partículas interactuantes principalmente vía interacción EM), y otro hadrónico (HCAL) dedicado a las cascadas de partículas producto de la hadronización de los quarks o gluones (\textit{jets}) (partículas interactuantes principalmente vía interacción fuerte).
+
+La Figura \ref{calo_1} muestra un esquema de los calorímetros del detector ATLAS.
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.7\textwidth]{images/calo_1.jpg}
+  \caption{Esquema de los calorímetros del detector ATLAS.}
+  \label{calo_1}
+\end{figure}
 
 \subsubsection{Calorímetro electromagnético (ECAL)}
 
@@ -212,13 +276,31 @@ con la que llegan los hadrones al HCAL, queda allí depositada.
 
 El espectrómetro de muones (MS) se encuentra situado en la parte más externa del detector ATLAS. Esto se debe a que los muones de alto $p_{T}$ generados en el punto de interacción tienen un altísimo poder de penetración y son poco interactuantes, siendo las únicas partículas detectables capaces de llegar a este detector. El mismo se encuentra intercalado con el sistema de imanes toroidales, y está diseñado para obtener mediciones de alta precisión de la posición e impulso de los muones, y para una rápida identificación para el sistema de \textit{trigger}. Este es el subdetector más grande y el que le da a ATLAS su tamaño característico. 
 
-El MS se compone de diferentes tipos de cámaras de detección de muones (ver Figura \ref{muon}). Las \textit{Monitored Drift Tubes} (MDTs) son responsables de la mayoría de las medidas de precisión y cubren el rango de $|\eta|<2.7$. Funcionan de forma similar al TRT, con tubos llenos de un gas que ioniza y un ánodo central que recoge los electrones producidos, y el tiempo de deriva se asocia con la distancia a la traza. En la región \textit{endcap} se encuentran las \textit{Cathode Strip Chambers} (CSCs) que poseen alta resolución espacio-temporal y una cobertura $|\eta|>2.0$. Estas cámaras funcionan midiendo la carga depositada en un ánodo, producto de la cascada de electrones creados cerca del mismo. Las \textit{Resistive Plate Chamber} (RPCs) proveen una estimación rápida del momento de los muones al primer nivel del \textit{trigger} con una cobertura de $|\eta|<1.05$. Las RPCs miden la descarga ocasionada entre dos placas resistivas paralelas sometidas a una alta diferencia de potencial, tras la ionización del volumen de gas interno causada por el paso de muones energéticos. Finalmente se encuentra en la región \textit{endcap} las \textit{Thin Gap Chambers} (TGCs), similares en funcionamiento a las CSCs. Proveen también información al sistema de \textit{trigger} en esta región y tienen una cobertura de $|\eta|<2.4$.
+El MS se compone de diferentes tipos de cámaras de detección de muones (ver Figura \ref{muon_1}). Las \textit{Monitored Drift Tubes} (MDTs) son responsables de la mayoría de las medidas de precisión y cubren el rango de $|\eta|<2.7$. Funcionan de forma similar al TRT, con tubos llenos de un gas que ioniza y un ánodo central que recoge los electrones producidos, y el tiempo de deriva se asocia con la distancia a la traza. En la región \textit{endcap} se encuentran las \textit{Cathode Strip Chambers} (CSCs) que poseen alta resolución espacio-temporal y una cobertura $|\eta|>2.0$. Estas cámaras funcionan midiendo la carga depositada en un ánodo, producto de la cascada de electrones creados cerca del mismo. Las \textit{Resistive Plate Chamber} (RPCs) proveen una estimación rápida del momento de los muones al primer nivel del \textit{trigger} con una cobertura de $|\eta|<1.05$. Las RPCs miden la descarga ocasionada entre dos placas resistivas paralelas sometidas a una alta diferencia de potencial, tras la ionización del volumen de gas interno causada por el paso de muones energéticos. Finalmente se encuentra en la región \textit{endcap} las \textit{Thin Gap Chambers} (TGCs), similares en funcionamiento a las CSCs. Proveen también información al sistema de \textit{trigger} en esta región y tienen una cobertura de $|\eta|<2.4$.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{images/muon_1.jpg}
+  \caption{Espetrómetro de muones del detector ATLAS.}
+  \label{muon_1}
+\end{figure}
 
 \section{Sistema de \textit{trigger}}
+\label{trigger}
 
-Como se mencionó anteriormente, el diseño del LHC permite tener una frecuencia de cruces de haces de 40 MHz y más de 30 \tosolve{ver número} interacciones por cruce, lo que da una tasa de interacción protón-protón del orden del GHz. Tal frecuencia excede tanto las capacidades de cómputo del detector, como la capacidad de alamcenamiento de semejante cantidad de datos. Aún así, no todos los eventos son de interés para la colaboración, como por ejemplo la colisión elástica de los protones que no genera ningún tipo de decaimiento. El sistema de trigger del detector ATLAS \cite{TRIG-2016-01} es el encargado de filtrar esos eventos de poco interés y, junto con el sistema de adquisición de datos (DAQ), almacena aquellos que potencialmente pueden llegar a ser de interés para los distintos análisis, reduciendo así la frecuencia de flujo de datos al orden del kHz. El sistema de trigger cumple un rol central en el correcto funcionamiento de todo el experimento, ya que en definitiva determina qué tipos de análisis se realizarán y qué nueva física podrá encontrarse. El mismo debe tener una alta eficiencia, para no desechar eventos importantes, pero con el compromiso de mantener el flujo de datos relativamente bajo. 
+Como se mencionó anteriormente, el diseño del LHC permite tener una frecuencia de cruces de haces de 40 MHz y más de 30 
+% TMPChange \tosolve{ver número}
+interacciones por cruce, lo que da una tasa de interacción protón-protón del orden del GHz. Tal frecuencia excede tanto las capacidades de cómputo del detector, como la capacidad de alamcenamiento de semejante cantidad de datos. Aún así, no todos los eventos son de interés para la colaboración, como por ejemplo la colisión elástica de los protones que no genera ningún tipo de decaimiento. El sistema de trigger del detector ATLAS \cite{TRIG-2016-01} es el encargado de filtrar esos eventos de poco interés y, junto con el sistema de adquisición de datos (DAQ), almacena aquellos que potencialmente pueden llegar a ser de interés para los distintos análisis, reduciendo así la frecuencia de flujo de datos al orden del kHz. El sistema de trigger cumple un rol central en el correcto funcionamiento de todo el experimento, ya que en definitiva determina qué tipos de análisis se realizarán y qué nueva física podrá encontrarse. El mismo debe tener una alta eficiencia, para no desechar eventos importantes, pero con el compromiso de mantener el flujo de datos relativamente bajo. 
 
-El sistema de trigger está compuesto por dos niveles consecutivos capaces de realizar una identificación de partículas cada vez más compleja: un primer nivel de trigger (L1) basado en hardware y luego un trigger basado en software de alto nivel (HLT). La Figura \tosolve{figura trigger+daq} muestra un esquema del sistema trigger y DAQ del detector ATLAS.
+El sistema de trigger está compuesto por dos niveles consecutivos capaces de realizar una identificación de partículas cada vez más compleja: un primer nivel de trigger (L1) basado en hardware y luego un trigger basado en software de alto nivel (HLT). La Figura \ref{tdaq} muestra un esquema del sistema trigger y DAQ del detector ATLAS.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{images/tdaq.png}
+  % https://twiki.cern.ch/twiki/pub/AtlasPublic/ApprovedPlotsDAQ/tdaqFullNew2017.png
+  \caption{Esquema del sistema de trigger y el sistema de adquisición de datos de ATLAS.}
+  \label{tdaq}
+\end{figure}
 
 \subsubsection{Level 1 (L1)}
 
@@ -239,12 +321,14 @@ mundo.
 
 El software de ATLAS se desarrolla dentro un entorno C++ común llamado ATHENA \cite{ATLAS-TDR-17, analysistools, athena}, en el que se realiza todo el procesamiento de datos. Los eventos aceptados por el trigger deben ser procesados para reducir su tamaño y ser utilizados para los análisis offline. A la salida del HLT, los eventos son almacenados como Raw Data Objects (RDOs). Luego de aplicar los algoritmos de reconstrucción y calibración, las colecciones de los distintos objetos físicos obtenidas son almacenadas en formato ESD (Event Summary Data) y AOD (Analysis Object Data), una versión reducida del primero ($\sim$100 kB/evento). A partir de las ESDs/AODs, se ha definido un formato de datos significativamente más pequeño (10-15 kB/evento) conocido como xAOD, sobre el que se realiza el análisis final. Las xAOD son archivos accesibles vía el entorno de análisis de datos ROOT \cite{root}, que contienen el conjunto de variables de diferentes objetos físicos, según las necesidades de los distintos grupos de análisis dentro de ATLAS. En base a esto y para agilizar el análisis final, la colaboración preselecciona eventos offline en las llamadas derivaciones. Desde los raw data hasta las distintas derivaciones, se aplican distintos criterios de sliming (se remueven los eventos que no son de interés), skiming (se remueve la información irrelevante de los objetos) y thining (se remueven objetos y/o colecciones de objetos irrelevantes) según los estudios y análisis que se vayan a realizar sobre los datos colectados.
 
-Las derivaciones de interés para esta tesis son las denominadas EGAM3, EGAM4 y SUSY1. Las EGAM3 y EGAM4 son utlizadas en esta tesis para la medida de la eficiencia de los trigger de fotones, ya que preseleccionan eventos con bosones $Z$ decayendo radiativamente a partir de electrones o muones respectivamente. Una selección resumida de ambas derivaciones se lista a continuación:
+Las derivaciones de interés para esta tesis son las denominadas EGAM3, EGAM4 y SUSY1. Las EGAM3 y EGAM4 son utlizadas en esta tesis para la medida de la eficiencia de los trigger de fotones, ya que preseleccionan eventos con bosones $Z$ decayendo radiativamente a partir de electrones o muones respectivamente. 
+
+% TMPChangeUna selección resumida de ambas derivaciones se lista a continuación:
 
 
-\begin{itemize}
-  \item ...
-\end{itemize}
+% \begin{itemize}
+%   \item ...
+% \end{itemize}
 % EGAM3:
 
 %     OR of four separate selections:
@@ -270,8 +354,8 @@ Las derivaciones de interés para esta tesis son las denominadas EGAM3, EGAM4 y 
 %             muons: 2 OS "CommonGood" muons with pT>9.5 GeV, |eta|<2.7, invariant mass > 40 GeV
 %             electron: at least 1 reco electrons with pT>9.5 GeV 
 
-La derivación SUSY1 es utilizada en esta tesis para preseleccionar los eventos para la búsqueda de supersimetría. La misma preselecciona eventos que cumplan al menos uno de los siguientes requisitos:
+% La derivación SUSY1 es utilizada en esta tesis para preseleccionar los eventos para la búsqueda de supersimetría. La misma preselecciona eventos que cumplan al menos uno de los siguientes requisitos:
 
-\begin{itemize}
-  \item ...
-\end{itemize}
+% \begin{itemize}
+%   \item ...
+% \end{itemize}

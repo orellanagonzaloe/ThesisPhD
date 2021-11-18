@@ -14,10 +14,11 @@ características de cada una de ellas, haciendo que cada una de las partículas 
 
 \begin{figure}
 \centering
+  \includegraphics[width=0.5\textwidth]{images/cross_section_2-eps-converted-to.pdf}
 \caption{Esquema de los distintos tipos de señal que pueden dejar las partículas en el detector ATLAS 
 % \commentyellow{Puede omitirse esta imagen} 
-\commentNotaIII }
-  \includegraphics[width=0.5\textwidth]{images/cross_section_2-eps-converted-to.pdf}
+% TMPChange\commentNotaIII 
+}
 \label{particulasATLAS}
 \end{figure}
 
@@ -43,7 +44,11 @@ características de cada una de ellas, haciendo que cada una de las partículas 
 
 Los electrones y fotones producidos tanto en la colisión $pp$ como aquellos producto del decaimiento de otras partículas, depositan la mayor parte de su energía en el ECAL. Estos depósitos están restringidos a un número de celdas vecinas cuyo conjunto se denomina \textit{cluster}, y que tienen estructuras propias de estas partículas. Los depósitos que dejan ambas partículas son similares y con el objetivo de poder distinguirlas se utiliza además información del detector de trazas. Al ser el fotón una partícula neutra no deja traza en el ID, por lo que los \textit{clusters} que no están asociados a trazas son considerados fotones, mientras que los que los que sí lo están son considerados electrones. 
 
-Procesos como la producción de pares ($\gamma\to e^{-}e^{+}$) producto de la interacción de los fotones con el material del detector, pueden dejar trazas o depósitos que no corresponden con la reconstrucción de un fotón. El algoritmo de reconstrucción tiene en cuenta esto y puede reconstruir los vértices de conversión, por lo que los \textit{clusters} asociados a vértices de conversión son considerados fotones. Finalmente, ciertos procesos (ej. $\pi^{0}\to\gamma\gamma$) pueden generar depósitos que erróneamente son reconstruidos como fotones o electrones \commentyellow{Ver dudas sobre pi0}. Para reducir la identificación errónea se aplican entonces una serie de criterios de identificación y aislamiento, basados en las formas de los depósitos de energía, que permiten discriminar estos procesos de los procesos \textit{prompt} \commentyellow{Ver dudas sobre la definicion de prompt}. 
+Procesos como la producción de pares ($\gamma\to e^{-}e^{+}$) producto de la interacción de los fotones con el material del detector, pueden dejar trazas o depósitos que no corresponden con la reconstrucción de un fotón. El algoritmo de reconstrucción tiene en cuenta esto y puede reconstruir los vértices de conversión, por lo que los \textit{clusters} asociados a vértices de conversión son considerados fotones. Finalmente, ciertos procesos (ej. $\pi^{0}\to\gamma\gamma$) pueden generar depósitos que erróneamente son reconstruidos como fotones o electrones 
+% TMPChange\commentyellow{Ver dudas sobre pi0}
+. Para reducir la identificación errónea se aplican entonces una serie de criterios de identificación y aislamiento, basados en las formas de los depósitos de energía, que permiten discriminar estos procesos de los procesos \textit{prompt} 
+% TMPChange \commentyellow{Ver dudas sobre la definicion de prompt}
+. 
 
 Las técnicas de reconstrucción de electrones y fotones se realizan en paralelo y son similares, pudiendo ser
 descriptas simultáneamente.
@@ -86,7 +91,9 @@ Finalmente se calibra la energía de los \textit{superclusters}, las trazas son 
 
 \subsection{Identificación}
 
-Como se mencionó anteriormente, distintos criterios de identificación son utilizados para poder discriminar los objetos \textit{prompt} \commentyellow{Ver dudas sobre la definicion de prompt} de aquellos que no lo son. Para ello se definen una serie de variables basadas en la información del calorímetro y del ID, que mediante distintas técnicas permiten la correcta identificación de los objetos. Finalmente se definen diferentes puntos de trabajo (\textit{Working Points}, WP) que permiten mejorar la pureza de los objetos seleccionados al costo de tener una menor eficiencia de selección.
+Como se mencionó anteriormente, distintos criterios de identificación son utilizados para poder discriminar los objetos \textit{prompt} 
+% TMPChange\commentyellow{Ver dudas sobre la definicion de prompt} 
+de aquellos que no lo son. Para ello se definen una serie de variables basadas en la información del calorímetro y del ID, que mediante distintas técnicas permiten la correcta identificación de los objetos. Finalmente se definen diferentes puntos de trabajo (\textit{Working Points}, WP) que permiten mejorar la pureza de los objetos seleccionados al costo de tener una menor eficiencia de selección.
 
 La identificación de electrones tiene como principal objetivo discriminar los electrones \textit{prompt}  de los fotones convertidos, de jets que depositaron energía en el ECAL y de electrones producidos en el decaimiento de hadrones de sabor pesado. Esta identificación se basa en un método de likelihood que utiliza algunas de las variables descriptas en la Tabla \ref{phIDVars}, y cuyas PDFs se obtienen de eventos con decaimientos de $J/\Psi$ y $Z$ para electrones de bajo y alto \ET respectivamente \cite{PERF-2016-01}. Para electrones se definen tres WP, \textit{Loose}, \textit{Medium} y \textit{Tight}, cuyas eficiencias de identificación promedio son  93\%, 88\% y 80\% respectivamente.
 
@@ -95,8 +102,11 @@ Para la identificación de fotones también se definen tres WPs, \textit{Loose},
 
 \begin{figure}
 \centering
-\caption{Depósitos de energía característicos de un fotón aislado (izquierda) y un $\pi^0$ (derecha) \commentyellow{Ver dudas sobre pi0} \commentNotaIII}
-  \includegraphics[width=0.5\textwidth]{images/PhotonPizero.png}
+  \includegraphics[width=0.6\textwidth]{images/PhotonPizero.png}
+\caption{Depósitos de energía característicos de un fotón aislado (izquierda) y un $\pi^0$ (derecha) 
+% TMPChange\commentyellow{Ver dudas sobre pi0} 
+% TMPChange\commentNotaIII
+}
   \label{phpizero}
 \end{figure}
 
@@ -105,42 +115,78 @@ Para la identificación de fotones también se definen tres WPs, \textit{Loose},
 \centering 
 
 \caption{Variables utilizadas en la definición de los WPs de identificación de fotones, \textit{Loose} (L), \textit{Medium} (M) y \textit{Tight} (T).
-\commentred{Poner variablezs de electrones. Entender y traducir bien algunas variables. Considerar: For variables calculated in the first EM layer, if the cluster has more than one cell in the phi direction at a given eta, the two cells closest in phi to the cluster barycentre are merged and the definitions below are given in terms of this merged cell.}}
+% TMPChange\commentred{Poner variablezs de electrones. Entender y traducir bien algunas variables. Considerar: For variables calculated in the first EM layer, if the cluster has more than one cell in the phi direction at a given eta, the two cells closest in phi to the cluster barycentre are merged and the definitions below are given in terms of this merged cell.}
+}
 
 	\begin{tabular}{ l p{2cm} p{8cm} c c c}
 
-		Categoría & Nombre & Descripción & L & M & T \\
+  Categoría & Nombre & Descripción & L & M & T \\
 
-		\hline
-		\hline
+  \hline
+  \hline
 
-		% c & d \\
+  % c & d \\
 
-		Fuga hadrónica & $R_{\text{had}_{1}}$ & Fracción de \ET en la primer capa del HCAL con respecto al \ET total del \textit{cluster} (para $|\eta|<0.8$ y $|\eta|>1.37$) & \cmark & \cmark & \cmark\\
+  Fuga hadrónica & $R_{\text{had}_{1}}$ & Fracción de \ET en la primer capa del HCAL con respecto al \ET total del \textit{cluster} (para $|\eta|<0.8$ y $|\eta|>1.37$) & \cmark & \cmark & \cmark\\
 
-		 & $R_{\text{had}}$ & Fracción de \ET en el HCAL con respecto al \ET total del \textit{cluster} (para $0.8<|\eta|<1.37$) & \cmark & \cmark & \cmark \\
+   & $R_{\text{had}}$ & Fracción de \ET en el HCAL con respecto al \ET total del \textit{cluster} (para $0.8<|\eta|<1.37$) & \cmark & \cmark & \cmark \\
 
-		\hline
+  \hline
+  
+  $2^{\text{da}}$ capa del ECAL  & $w_{\eta 2}$ & Ancho lateral de la lluvia: $\sqrt{\frac{\Sigma E_{i}\eta_{i}^{2}}{\Sigma E_{i}}-(\frac{\Sigma E_{i}\eta_{i}}{\Sigma E_{i}}})^{2}$ , donde la suma es calculada en una ventana de $3\times5$ celdas & \cmark & \cmark & \cmark \\
+
+   & $R_{\eta}$ & Fracción de la suma de las energías contenida en un rectángulo de $\eta\times\phi = 3\times7$ celdas con respecto a un rectángulo $7\times7$ celdas, ambos centrados en la celda más energética & \cmark & \cmark & \cmark \\
+
+   & $R_{\phi}$ & Fracción de la suma de las energías contenida en un rectángulo de $\eta\times\phi = 3\times3$ celdas con respecto a un rectángulo $3\times7$ celdas, ambos centrados en la celda más energética & \xmark & \xmark & \cmark \\
+
+  \hline
+
+  $1^{\text{er}}$ capa del ECAL & $E_{\text{ratio}}$ & Ratio of the energy difference between the maximum energy depositand the energy deposit in a secondary maximum in the cluster to thesum of these energies & \xmark & \cmark & \cmark \\
+
+   & $w_{s\:\text{tot}}$ & Ancho lateral total de la lluvia: $\sqrt{\frac{\Sigma E_{i}(i-i_{\text{máx}})^{2}}{\Sigma E_{i}}}$, donde la suma se realiza sobre todas las celdas contenidas en una ventana de $\Delta\eta\approx0.0625$ e $i_{\text{máx}}$ es la celda con mayor energía & \xmark & \xmark & \cmark \\
+
+   & $w_{s\:\text{3}}$ & Ancho lateral de la lluvia: $\sqrt{\frac{\Sigma E_{i}(i-i_{\text{máx}})^{2}}{\Sigma E_{i}}}$, donde la suma se realiza sobre todas las celdas contenidas en una ventana de tres celdas alrededor de la celda de mayor energía, $i_{\text{máx}}$ & \xmark & \xmark & \cmark \\
+
+   & $f_{\text{side}}$ & Energy fraction outside core of three central cells, within seven cells & \xmark & \xmark & \cmark \\
+
+   & $\Delta E_{s}$ & Difference between the energy of the cell associated with the secondmaximum, and the energy reconstructed in the cell with the smallestvalue found between the first and second maxima & \xmark & \xmark & \cmark \\
+
+   & $f_{\text{1}}$ & Fracción de energía medida en la primer capa del ECAL con respecto a la energía total del \textit{cluster} electromagnético & \xmark & \xmark & \cmark \\
+
+   % TMPChange
+
+		% Categoría & Nombre & Descripción & L & M & T \\
+
+		% \hline
+		% \hline
+
+		% % c & d \\
+
+		% Fuga hadrónica & $R_{\text{had}_{1}}$ & Fracción de \ET en la primer capa del HCAL con respecto al \ET total del \textit{cluster} (para $|\eta|<0.8$ y $|\eta|>1.37$) & \cmark & \cmark & \cmark\\
+
+		%  & $R_{\text{had}}$ & Fracción de \ET en el HCAL con respecto al \ET total del \textit{cluster} (para $0.8<|\eta|<1.37$) & \cmark & \cmark & \cmark \\
+
+		% \hline
 		
-		$2^{\text{da}}$ capa del ECAL  & $w_{\eta 2}$\tosolve{va el 2?} & Ancho lateral de la lluvia: $\sqrt{\frac{\Sigma E_{i}\eta_{i}^{2}}{\Sigma E_{i}}-(\frac{\Sigma E_{i}\eta_{i}}{\Sigma E_{i}}})^{2}$ \tosolve{esta bien el cuadrado del primer termino?}, donde la suma es calculada en una ventana de $3\times5$ celdas & \cmark & \cmark & \cmark \\
+		% $2^{\text{da}}$ capa del ECAL  & $w_{\eta 2}$\tosolve{va el 2?} & Ancho lateral de la lluvia: $\sqrt{\frac{\Sigma E_{i}\eta_{i}^{2}}{\Sigma E_{i}}-(\frac{\Sigma E_{i}\eta_{i}}{\Sigma E_{i}}})^{2}$ \tosolve{esta bien el cuadrado del primer termino?}, donde la suma es calculada en una ventana de $3\times5$ celdas & \cmark & \cmark & \cmark \\
 
-		 & $R_{\eta}$ & Fracción de la suma de las energías contenida en un rectángulo de $\eta\times\phi = 3\times7$ celdas con respecto a un rectángulo $7\times7$ celdas, ambos centrados en la celda más energética & \cmark & \cmark & \cmark \\
+		%  & $R_{\eta}$ & Fracción de la suma de las energías contenida en un rectángulo de $\eta\times\phi = 3\times7$ celdas con respecto a un rectángulo $7\times7$ celdas, ambos centrados en la celda más energética & \cmark & \cmark & \cmark \\
 
-		 & $R_{\phi}$ & Fracción de la suma de las energías contenida en un rectángulo de $\eta\times\phi = 3\times3$ celdas con respecto a un rectángulo $3\times7$ celdas, ambos centrados en la celda más energética & \xmark & \xmark & \cmark \\
+		%  & $R_{\phi}$ & Fracción de la suma de las energías contenida en un rectángulo de $\eta\times\phi = 3\times3$ celdas con respecto a un rectángulo $3\times7$ celdas, ambos centrados en la celda más energética & \xmark & \xmark & \cmark \\
 
-		\hline
+		% \hline
 
-		$1^{\text{er}}$ capa del ECAL & $E_{\text{ratio}}$ & Ratio of the energy difference between the maximum energy depositand the energy deposit in a secondary maximum in the cluster to thesum of these energies & \xmark & \cmark & \cmark \\
+		% $1^{\text{er}}$ capa del ECAL & $E_{\text{ratio}}$ & Ratio of the energy difference between the maximum energy depositand the energy deposit in a secondary maximum in the cluster to thesum of these energies & \xmark & \cmark & \cmark \\
 
-		 & $w_{s\:\text{tot}}$ & Ancho lateral total de la lluvia: $\sqrt{\frac{\Sigma E_{i}(i-i_{\text{máx}})^{2}}{\Sigma E_{i}}}$, donde la suma se realiza sobre todas las celdas contenidas en una ventana de $\Delta\eta\approx0.0625$ e $i_{\text{máx}}$ es la celda con mayor energía \tosolve{alto de la ventana?} & \xmark & \xmark & \cmark \\
+		%  & $w_{s\:\text{tot}}$ & Ancho lateral total de la lluvia: $\sqrt{\frac{\Sigma E_{i}(i-i_{\text{máx}})^{2}}{\Sigma E_{i}}}$, donde la suma se realiza sobre todas las celdas contenidas en una ventana de $\Delta\eta\approx0.0625$ e $i_{\text{máx}}$ es la celda con mayor energía \tosolve{alto de la ventana?} & \xmark & \xmark & \cmark \\
 
-		 & $w_{s\:\text{3}}$ & Ancho lateral de la lluvia: $\sqrt{\frac{\Sigma E_{i}(i-i_{\text{máx}})^{2}}{\Sigma E_{i}}}$, donde la suma se realiza sobre todas las celdas contenidas en una ventana de tres celdas alrededor de la celda de mayor energía, $i_{\text{máx}}$ & \xmark & \xmark & \cmark \\
+		%  & $w_{s\:\text{3}}$ & Ancho lateral de la lluvia: $\sqrt{\frac{\Sigma E_{i}(i-i_{\text{máx}})^{2}}{\Sigma E_{i}}}$, donde la suma se realiza sobre todas las celdas contenidas en una ventana de tres celdas alrededor de la celda de mayor energía, $i_{\text{máx}}$ & \xmark & \xmark & \cmark \\
 
-		 & $f_{\text{side}}$ & Energy fraction outside core of three central cells, within seven cells \tosolve{entender y traducir bien} & \xmark & \xmark & \cmark \\
+		%  & $f_{\text{side}}$ & Energy fraction outside core of three central cells, within seven cells \tosolve{entender y traducir bien} & \xmark & \xmark & \cmark \\
 
-		 & $\Delta E_{s}$ & Difference between the energy of the cell associated with the secondmaximum, and the energy reconstructed in the cell with the smallestvalue found between the first and second maxima & \xmark & \xmark & \cmark \\
+		%  & $\Delta E_{s}$ & Difference between the energy of the cell associated with the secondmaximum, and the energy reconstructed in the cell with the smallestvalue found between the first and second maxima & \xmark & \xmark & \cmark \\
 
-		 & $f_{\text{1}}$ & Fracción de energía medida en la primer capa del ECAL con respecto a la energía total del \textit{cluster} electromagnético & \xmark & \xmark & \cmark \\
+		%  & $f_{\text{1}}$ & Fracción de energía medida en la primer capa del ECAL con respecto a la energía total del \textit{cluster} electromagnético & \xmark & \xmark & \cmark \\
 
 
 
@@ -153,6 +199,7 @@ Para la identificación de fotones también se definen tres WPs, \textit{Loose},
 
 
 \subsection{Aislamiento}
+\label{isolation}
 
 
 Criterios de aislamiento se pueden aplicar sobre los fotones y electrones para aumentar aún más calidad de selección de los mismos. A su vez, la presencia de otros objetos cerca del fotón o el electrón puede interferir en la correcta reconstrucción de las variables cinemáticas del mismo, como su energía. El aislamiento de estos objetos se puede cuantizar definiendo variables no solo para los depósitos de energía, sino también para las trazas.
@@ -162,8 +209,10 @@ La variable de aislamiento calorimétrico \cite{PERF-2017-01} (\ETcone{X}) se de
 
 \begin{figure}
 \centering
-\caption{Esquema del cono utilizado para el cálculo de la variable de aislamiento calorimétrico \commentNotaIII }
   \includegraphics[width=0.3\textwidth]{images/iso.pdf}
+\caption{Esquema del cono utilizado para el cálculo de la variable de aislamiento calorimétrico 
+% TMPChange \commentNotaIII 
+}
   \label{IDcone}
 \end{figure}
 
@@ -180,7 +229,9 @@ A partir de estas variables se definen distintos WPs de aislamiento de electrone
 
 \begin{table} 
 \centering
-\caption{Definición de los WPs de aislamiento para fotones y electrones.\commentyellow{los nombres deberían llevar el FixedCut o FC}}
+\caption{Definición de los WPs de aislamiento para fotones y electrones.
+% TMPChange\commentyellow{los nombres deberían llevar el FixedCut o FC}
+}
 	\begin{tabular}{ l l c c}
 
 		Objeto & WP & Aislamiento calorimétrico & Aislamiento de trazas \\
@@ -209,7 +260,7 @@ A partir de estas variables se definen distintos WPs de aislamiento de electrone
 
 \section{Muones}
 
-\commentyellow{Me gustaría poner algo de cuánto interactúan los muones con el detector, y algo de los muones cósmicos}
+% TMPChange\commentyellow{Me gustaría poner algo de cuánto interactúan los muones con el detector, y algo de los muones cósmicos}
 
 La reconstrucción de muones se realiza de forma independiente en el detector interno y en el espectrómetro de muones. La información de los distintos subdetectores, que incluye a los calorímetros, se combina para formar a los objetos finales utilizados en los análisis \cite{PERF-2015-10}. La reconstrucción en el ID se realiza de la misma forma que con cualquier otra partícula cargada \cite{newt, silicon}. La reconstrucción en el MS comienza con una búsqueda de patrones de \textit{hits} para definir segmentos en cada cámara de muones, que luego son combinados con un ajuste de $\chi^2$ global. Luego se combina la información del ID, MS y los calorímetros, utilizando una serie de algoritmos que definen 4 tipos de muones dependiendo del subdetector que se utilizó en la reconstrucción:
 
@@ -219,7 +270,8 @@ La reconstrucción de muones se realiza de forma independiente en el detector in
 
 	\item Muones Segmentados (ST): trazas del ID que al extrapolarlas al MS tienen asociadas un segmento en el MDT o el CSC. Se definen principalmente para reconstruir aquellos muones de bajo \pt o que atraviesan las regiones del MS con baja aceptancia.
 
-	\item Muones Calorimétricos (CT): trazas del ID que están asociadas a depósitos de energía en el calorímetro compatibles con una partícula mínimamente ionizante. Este tipo de muones son los de menor pureza pero permite detectarlos en regiones donde el MS está parcialmente instrumentado. \commentyellow{Ver dudas sobre muones en el MS}
+	\item Muones Calorimétricos (CT): trazas del ID que están asociadas a depósitos de energía en el calorímetro compatibles con una partícula mínimamente ionizante. Este tipo de muones son los de menor pureza pero permite detectarlos en regiones donde el MS está parcialmente instrumentado. 
+  % TMPChange\commentyellow{Ver dudas sobre muones en el MS}
 
 	\item Muones Extrapolados (ME): reconstruidos utilizando solo el MS y requiriendo que hayan dejado traza en la región \textit{forward} además de una mínima compatibilidad con el punto de interacción. Se definen principalmente para extender la aceptancia a la región $2.5<|\eta|<2.7$ donde el ID no llega a cubrir.
 
@@ -227,9 +279,13 @@ La reconstrucción de muones se realiza de forma independiente en el detector in
 
 En caso de solapamiento entre los distintos tipos de muones se resuelve teniendo prioridad por los CB, luego por los ST y finalmente por los CT. Para los ME se priorizan aquellos muones con mejor calidad en el ajuste de la traza y mayor cantidad de \textit{hits}.
 
-La identificación de muones se realiza con el objetivo de discriminar muones \textit{prompt} de aquellos producidos principalmente en el decaimientos de piones y kaones, manteniendo una alta eficiencia y garantizando una medida robusta de su momento. Los muones producidos en el decaimiento de hadrones cargados dejan una traza en el ID con una topología enroscada \commentyellow{kinky: retorcida? compleja? traducir mejor!} que genera discrepancias entre el momento reconstruido en el ID y el reconstruido en el MS. La identificación se realiza aplicando una serie de cortes en diferentes variables \cite{PERF-2015-10} obtenidas a partir del estudio de simulaciones de producción de pares de quarks \textit{top}. Se definen cuatro WPS, \textit{Loose}, \textit{Medium}, \textit{Tight}, y \textit{High-pT}, para satisfacer las necesidades de los distintos análisis. Por ejemplo, la selección \textit{Loose} está optimizada para reconstruir candidatos del decaimiento del bosón de Higgs, la selección \textit{Medium} es la selección más genérica para todos los análisis, y la selección \textit{High-pT} está orientada a búsquedas de resonancias de alta masa del $Z'$ y $W'$. \commentyellow{agregar alguna referencia a análisis/definición de estas partículas}
+La identificación de muones se realiza con el objetivo de discriminar muones \textit{prompt} de aquellos producidos principalmente en el decaimientos de piones y kaones, manteniendo una alta eficiencia y garantizando una medida robusta de su momento. Los muones producidos en el decaimiento de hadrones cargados dejan una traza en el ID con una topología enroscada 
+% TMPChange\commentyellow{kinky: retorcida? compleja? traducir mejor!} 
+que genera discrepancias entre el momento reconstruido en el ID y el reconstruido en el MS. La identificación se realiza aplicando una serie de cortes en diferentes variables \cite{PERF-2015-10} obtenidas a partir del estudio de simulaciones de producción de pares de quarks \textit{top}. Se definen cuatro WPS, \textit{Loose}, \textit{Medium}, \textit{Tight}, y \textit{High-pT}, para satisfacer las necesidades de los distintos análisis. Por ejemplo, la selección \textit{Loose} está optimizada para reconstruir candidatos del decaimiento del bosón de Higgs, la selección \textit{Medium} es la selección más genérica para todos los análisis, y la selección \textit{High-pT} está orientada a búsquedas de resonancias de alta masa del $Z'$ y $W'$. 
+% TMPChange\commentyellow{agregar alguna referencia a análisis/definición de estas partículas}
 
-Finalmente se definen criterios de aislamiento que permiten distinguir aquellos muones producidos en los de caimientos de los bosones $Z$, $W$ y Higgs que en general se producen de forma aislada, de aquellos producidos en los decaimientos semi-leptónicos que quedan embebidos en los \textit{jets}. Para ello se definen siete WPs, utilizando las mismas variables de aislamiento calorimétrico y de trazas utilizadas para fotones y electrones (\pTvarcone{30} y \ETcone{20}). \commentyellow{mencionar al menos los WPs que se usan en el análisis}
+Finalmente se definen criterios de aislamiento que permiten distinguir aquellos muones producidos en los de caimientos de los bosones $Z$, $W$ y Higgs que en general se producen de forma aislada, de aquellos producidos en los decaimientos semi-leptónicos que quedan embebidos en los \textit{jets}. Para ello se definen siete WPs, utilizando las mismas variables de aislamiento calorimétrico y de trazas utilizadas para fotones y electrones (\pTvarcone{30} y \ETcone{20}). 
+% TMPChange\commentyellow{mencionar al menos los WPs que se usan en el análisis}
 
 
 \section{Jets}
@@ -260,15 +316,19 @@ Este algoritmo tiende a unificar las partículas \textit{soft} con las \textit{h
 
 \begin{figure}
 \centering
-\caption{Esquema de agrupamiento de \textit{topo-clusters} realizado por el algoritmo \textit{anti-$k_t$} \commentNotaIII }
-  \includegraphics[width=0.3\textwidth]{images/antikt.png}
+  \includegraphics[width=0.5\textwidth]{images/antikt.png}
+\caption{Esquema de agrupamiento de \textit{topo-clusters} realizado por el algoritmo \textit{anti-$k_t$} 
+% TMPChange \commentNotaIII
+ }
   \label{antikt}
 \end{figure}
 
-A continuación los jets pasan por una serie de correcciones y calibraciones antes de reconstruir el objeto final para los análisis. Primero se remueve la contribución por pile-up, en el caso de los \textit{large-R} jets afecta principalmente a las distribuciones angulares que son necesarias para la reconstrucción de su masa invariante, y se remueve utilizando una técnica denominada \textit{grooming} descripta en la Referencia \cite{trimming}. Para los \textit{small-R} jets primero se realiza una corrección del origen de su vértice y luego se suprime la contribución por pile-up utilizando métodos que tienen en cuenta la densidad de energía de pile-up \cite{PERF-2016-04} junto con variables asociadas a las trazas y al vértice primario \cite{PERF-2014-03} \commentred{tengo que mencionar JVT, JVF tal vez también}. A continuación se calibra la energía del jet utilizando simulaciones de MC
-\commentyellow{HW: No se si estoy de acuerdo en decir que usan MC. El ultimo paso in situ usa datos... Diría algo como se calibra la energía del jet utilizando MC y datos comparativamente ?. GO: ATL-PHYS-PROC-2017-236: En esta estapa entiendo que se utiliza exclusivamente calibraciónes con MC. Y que posteriormente viene la calibración in situ, que menciono al final del parrafo. No me queda claro del texto si la in situ se usa exclusivamente para datos o si utiliza exclusivamente datos (o ambas)}
+A continuación los jets pasan por una serie de correcciones y calibraciones antes de reconstruir el objeto final para los análisis. Primero se remueve la contribución por pile-up, en el caso de los \textit{large-R} jets afecta principalmente a las distribuciones angulares que son necesarias para la reconstrucción de su masa invariante, y se remueve utilizando una técnica denominada \textit{grooming} descripta en la Referencia \cite{trimming}. Para los \textit{small-R} jets primero se realiza una corrección del origen de su vértice y luego se suprime la contribución por pile-up utilizando métodos que tienen en cuenta la densidad de energía de pile-up \cite{PERF-2016-04} junto con variables asociadas a las trazas y al vértice primario \cite{PERF-2014-03} 
+% TMPChange\commentred{tengo que mencionar JVT, JVF tal vez también}. 
+A continuación se calibra la energía del jet utilizando simulaciones de MC
+% TMPChange\commentyellow{HW: No se si estoy de acuerdo en decir que usan MC. El ultimo paso in situ usa datos... Diría algo como se calibra la energía del jet utilizando MC y datos comparativamente ?. GO: ATL-PHYS-PROC-2017-236: En esta estapa entiendo que se utiliza exclusivamente calibraciónes con MC. Y que posteriormente viene la calibración in situ, que menciono al final del parrafo. No me queda claro del texto si la in situ se usa exclusivamente para datos o si utiliza exclusivamente datos (o ambas)}
 . Esto es necesario debido a que gran parte del jet es invisible al detector, por ejemplo cuando el jet se encuentra en las zonas del mismo donde la sensibilidad es baja. 
-\commentyellow{Posibilidad de agregar: hadronic showers inherently rely on interactions with the strong force to start electromagnetic cascades, typically via the creation of pi0 and pipm . However, these strong interactions result in a substantial amount of energy going into splitting nuclei, and thus overcoming the binding energy. This energy is not observed}
+% TMPChange\commentyellow{Posibilidad de agregar: hadronic showers inherently rely on interactions with the strong force to start electromagnetic cascades, typically via the creation of pi0 and pipm . However, these strong interactions result in a substantial amount of energy going into splitting nuclei, and thus overcoming the binding energy. This energy is not observed}
 . La escala de energía del jet (\textit{Jet Energy Scale}, JES) \cite{JETM-2018-05} calcula un factor de respuesta en bines de $|\eta|$ y \pt utilizando simulaciones de MC, y que al aplicarlo a los datos permite la corrección en energía de los jets. Para los \textit{large-R} jets se aplica a su vez una corrección similar en la masa necesaria para la correcta reconstrucción de su masa invariante. Los \textit{small-R} jets por su parte pasan por una calibración (\textit{Global Sequential Calibration}, GSC) que mejoran la resolución de energía del jet (\textit{Jet Energy Resolution}, JER). Finalmente se realiza una corrección \textit{in situ} aplicada exclusivamente a los datos.
 
 
@@ -294,16 +354,16 @@ A continuación los jets pasan por una serie de correcciones y calibraciones ant
 \subsection{Jets provenientes de quarks $b$ ($b$-jets)}
 
 Los decaimientos de los hadrones pesados están gobernados generalmente por el hadrón más pesado en la cascada del decaimiento. Un hadrón $b$ generalmente decae a través de una cascada a un hadrón $c$, que a su vez decae a un hadrón $s$, etc. Esto genera la existencia de múltiples 
-\commentyellow{HW: en general es un solo vértice secundario. Te referís acá al algo tipo B- > JPsi ->Ks ?
-GO: arXiv:1711.08811: The typical heavy hadron topology presents one or more vertices that are displaced from
-the hard-scatter interaction point. The longer lifetimes of heavy-flavor hadrons correspond
-to macroscopic decay lengths that can be resolved by the ATLAS vertexing detectors. The
-hadrons decay is governed by its heavy quark decay chain. A b-hadron will usually decay
-through a cascade to a c-hadron, strange hadron, etc. Therefore, in a b-initiated event, the goal
-is to reconstruct not only the primary vertex whence the event initiates, but also a secondary,
-and possibly tertiary vertex along the decay cascade. Finally, the heavy-flavor hadrons non-
-negligible branching ratio to semi-leptonic decays (21\%) suggests using the presence of soft
-muons within jets as yet another discriminating feature for flavor tagging.}
+% TMPChange\commentyellow{HW: en general es un solo vértice secundario. Te referís acá al algo tipo B- > JPsi ->Ks ?
+% GO: arXiv:1711.08811: The typical heavy hadron topology presents one or more vertices that are displaced from
+% the hard-scatter interaction point. The longer lifetimes of heavy-flavor hadrons correspond
+% to macroscopic decay lengths that can be resolved by the ATLAS vertexing detectors. The
+% hadrons decay is governed by its heavy quark decay chain. A b-hadron will usually decay
+% through a cascade to a c-hadron, strange hadron, etc. Therefore, in a b-initiated event, the goal
+% is to reconstruct not only the primary vertex whence the event initiates, but also a secondary,
+% and possibly tertiary vertex along the decay cascade. Finally, the heavy-flavor hadrons non-
+% negligible branching ratio to semi-leptonic decays (21\%) suggests using the presence of soft
+% muons within jets as yet another discriminating feature for flavor tagging.}
 vértices secundarios, que junto con la información de las trazas y la elevada vida media de los hadrones $b$, son utilizados por distintos algoritmos para poder distinguir los hadrones $b$ de hadrones con sabores más livianos (\textit{b-tagging}). Algunos ejemplos de algoritmos \cite{btag} son el MV2 basado en un \textit{boosted decision tree} y compuesto de clasificadores de bajo nivel, y el DL1 basado en una red neuronal profunda. Para cada algoritmo se definen WPs con distintas eficiencias de selección, que a mayor eficiencia mayor es la probabilidad de identificar otros tipos de jets erróneamente como $b$-jets. Con el WP de 77\% del algoritmo MV2 (DL1) 1 de cada 5 (5) $c$-jets, 1 de cada 15 (14) $\tau$-jets y 1 de cada 110 (130) jets livianos son identificados erróneamente como $b$-jets \cite{btag}.
 
  % The performance of a b-tagging algorithm is characterised by the probability of tagging a b-jet (b-jet tagging efficiency,εb) and the probability of mistakenly identifying a c-jet or a light-flavour jet as a b-jet, labelled εc (εl). In this paper, the performance of the algorithms is quantified in terms of c-jet and light-flavour jet rejections, defined as 1/ε cand 1/εl, respectively
@@ -312,7 +372,8 @@ vértices secundarios, que junto con la información de las trazas y la elevada 
 \section{Energía transversa faltante}
 
 
-Como se mencionó en \tosolve{definición MET}, el momento transverso faltante se utiliza como un sustituto para obtener el momento de las partículas que prácticamente no interactúan con el detector, por ejemplo neutrinos o partículas más allá del SM. El momento en la dirección del haz que acarrea cada partón previo a la colisión es desconocido, pero en la dirección transversa al haz se puede considerar que es nulo. Por conservación del momento se puede deducir que luego de la colisión la suma de los momentos en el plano transverso de todas las partículas producidas debería ser nulo, y en caso de no serlo puede ser un indicio de una partícula que escapó la detección. La reconstrucción del momento transverso faltante se basa en esta conservación y se define como menos la suma de los momentos transversos de todas las partículas observadas en el evento. En esta suma se incluyen los electrones, muones, fotones, taus decayendo hadrónicamente y jets reconstruidos con los métodos descriptos en las secciones anteriores. Además se incluye un termino (\textit{soft}) que tiene en cuenta el momento en la traza de las partículas que dejaron señal en el ID pero que no llegaron a reconstruirse. Quedando la definición del vector momento transverso faltante como \cite{PERF-2016-07}:
+Como se mencionó en % TMPChange\tosolve{definición MET}
+, el momento transverso faltante se utiliza como un sustituto para obtener el momento de las partículas que prácticamente no interactúan con el detector, por ejemplo neutrinos o partículas más allá del SM. El momento en la dirección del haz que acarrea cada partón previo a la colisión es desconocido, pero en la dirección transversa al haz se puede considerar que es nulo. Por conservación del momento se puede deducir que luego de la colisión la suma de los momentos en el plano transverso de todas las partículas producidas debería ser nulo, y en caso de no serlo puede ser un indicio de una partícula que escapó la detección. La reconstrucción del momento transverso faltante se basa en esta conservación y se define como menos la suma de los momentos transversos de todas las partículas observadas en el evento. En esta suma se incluyen los electrones, muones, fotones, taus decayendo hadrónicamente y jets reconstruidos con los métodos descriptos en las secciones anteriores. Además se incluye un termino (\textit{soft}) que tiene en cuenta el momento en la traza de las partículas que dejaron señal en el ID pero que no llegaron a reconstruirse. Quedando la definición del vector momento transverso faltante como \cite{PERF-2016-07}:
 
 \begin{equation}
 \textbf{E}_{\text{T}}^{\text{miss}} = -\sum_{i}\textbf{p}_{\text{T}}^{e_i}-\sum_{i}\textbf{p}_{\text{T}}^{\gamma_i}-\sum_{i}\textbf{p}_{\text{T}}^{\tau_i}-\sum_{i}\textbf{p}_{\text{T}}^{j_i}-\sum_{i}\textbf{p}_{\text{T}}^{\mu_i}-\sum_{i}\textbf{p}_{\text{T}}^{\text{Soft}_i}
