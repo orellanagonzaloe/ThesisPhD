@@ -4,6 +4,265 @@
 
 \section{Modelo estándar de la física de partículas}
 
+El Modelo Estándar de la física de partículas (SM, por sus siglas en inglés) es la teoría que describe y clasifica a las partículas elementales de la naturaleza, junto con tres de las cuatro interacciones fundamentales conocidas hasta el momento. El mismo fue formulado en la década de los 70, a partir de varios trabajos científicos realizados durante la segunda mitad de ese siglo, entre los que se encuentra principalmente los realizados por Glasgow, Salam, Weinberg, Brout, Englert, Higgs. Para ese momento, el SM incorporaba a todas las partículas conocidas y predecía la existencia de otras adicionales, lo que motivó al desarrollo de nuevos detectores para realizar dichas búsquedas. El descubrimiento de nuevas partículas e interacciones predichas por el SM, junto con la medida de precisión de distintos parámetros del mismo, han convertido al SM en una teoría ampliamente aceptada por toda la comunidad científica, con una formulación matemática que sirve a su vez para nuevas futuras teorías.
+
+\subsection{Partículas y clasificación del SM}
+
+Las partículas en el SM se clasifican a primer orden entre bosones y fermiones. Los primeros son los mediadores de las interacciones entre las distintas partículas del modelo. El primero de ellos es el fotón ($\gamma$), mediador de la interacción electromagnética, que afecta a las partículas que tienen carga eléctrica. No hay una fecha exacta del descubrimiento del mismo, pero se puede entender a la descripción del efecto fotoeléctrico por parte del Albert Einstein, como la primera formulación con objetos discretos de esta interacción. A su vez están los bosones $W$ y $Z$, asociados a la interacción débil y gobiernan los intercambios de 'sabor' de las partículas. Descubiertos de forma propia (no sólo su interacción) en 1983 en el Super Proton Synchrotron del CERN. Por otro lado se encuentran los gluones, mediadores de la interacción fuerte de aquellas partículas con carga de 'color'. Su primera observación experimental se realizó en 1978 en el detector PLUTO del colisionador electrón-positrón DORIS del DESY. Finalmente está el bosón de Higgs, partícula asociada al mecanismo Brout-Englert-Higgs que describe el rompimiento espontáneo de simetría electrodébil, asociado a la generación de masas de todas las partículas que componen al SM. El mismo fue descubierto en el 2012 por los experimentos ATLAS y CMS del CERN. Cabe mencionar que la bien conocida interacción gravitatoria no es incluida en el SM debido a las contradicciones que aparecen al querer combinarla con la teoría de la Relatividad General. La partícula hipotética que gobernaría a esta interacción se denomina gravitón.
+
+Los fermiones están asociados a las partículas interactuantes o que forman la materia (aunque no necesariamente tengan masa), esto se debe a que al obedecer la estadística de Fermi-Dirac, no es posible encontrarlos simultáneamente en un mismo estado cuántico y por ende tienden a formar estructuras. A su vez, estos se clasifican en leptones y quarks. Los primeros son aquellos que no tienen carga de color y por ende no interactúan fuertemente. Existen seis leptones: electrón, neutrino electrónico, muón, neutrino muónico tau y neutrino tauónico, los cuales es común agruparlos en generaciones, que son pares de partículas que exhiben propiedades similares. Todos ellos pueden interactuar débilmente, y salvo por los neutrinos, también electromagnéticamente. Los quarks, en cambio, son los fermiones con carga de color, y por ende los que pueden interactuar fuertemente. También existen seis quarks que se agrupan en tres generaciones: up, down, charm, strange, top y bottom. Debido al efecto del confinamiento de color, los quarks nunca pueden ser observados independientemente en la naturaleza, sino que se los observa en estados ligados sin color, denominados hadrones. Cuando el hadrón se forma de un quark-antiquark se los llama mesones, y cuando es un conjunto de tres quarks se los llama bariones. Los bariones más conocidos son los protones y neutrones, compuesto por quarks de valencia $uud$ y $udd$ respectivamente, donde cada quarks toma uno de los tres posibles colores. Toda la materia ordinaria observada se compone de electrones y quarks up y down.
+
+\tosolve{agregar citas}
+
+\tosolve{agregar imagen de las partículas del SM}
+
+\tosolve{agregar tabla con partículas y propiedades (carga, masa, interacción)}
+
+\tosolve{agregar tabla con parámetros?}
+
+\subsection{Breve descripción matemática del SM}
+
+El SM se formula como una teoría cuántica de campos, en general considerada efectiva ya que por ejemplo describe los fenómenos en una escala donde la gravedad no tiene mucha injerencia. A su vez se compone de teorías de gauge en las que a partir de imponer simetrías en el lagrangiano, no solo están asociados cantidades conservadas como bien enuncia el Teorema de Emily Noether, sino que también implica la existencia de de interacciones mediadas por bosones de gauge. 
+
+Hasta la actualidad todos los experimentos demuestran que con tres simetrías es necesario y suficiente para describir las interacciones conocidas. Estas simetrías otorgan a las distintas partículas respectivas cargas, que vienen a representar etiquetas que se les puede dar a las mismas, y que el conjunto de ellas describe en su totalidad las propiedades de cada una.
+
+El grupo de simetría del SM se define como:
+
+\begin{equation}
+	\mathcal{G}_{\text{SM}} = SU(3)_C \otimes SU(2)_L \otimes U(1)_Y
+\end{equation}
+
+\tosolve{mencionar subindices}
+La primer simetría a mencionar es la U(1), relacionada con la interacción electromagnética. El bosón de gauge requerido para mantener la invarianza se denomina $B_{\mu}$. El  índice $\mu$ está presente debido a que $B_{\mu}$ debe transformarse bajo rotaciones espaciales de la misma forma que la derivada tradicional, garantizando así que la partícula tenga spin 1.
+A su vez, todas las partículas deben tener una segunda invarianza denominada SU(2) electrodébil. Los bosones de gauge asociados se denominan $W_{\mu}^{i}$. El índice $i$ representa cada uno de los tres bosones de spin 1  asociados a los tres generadores de las transformaciones SU(2).
+Finalmente, la última simetría requerida es la SU(3). Los bosones de gauge asociados se denominan $G_{\mu}^{a}$. El índice a representa cada uno de los ocho bosones de spin 1  asociados a los tres generadores de las transformaciones SU(3). Estos bosones son los gluones, y la teoría que los describe es la cromodinámica cuántica (QCD).
+
+Por su parte, los fermiones se describen mediante campos que definen estados dentro del espacio formado por las distintas simetrías. La simetría SU(2) es análoga al spin, partículas con spin 0 son singletes, con spin 1/2 forman dobletes y con spin 1 forman tripletes. En el caso de SU(2) electrodébil los fermiones izquierdos forman dobletes, y los derechos forman singletes:
+
+\begin{equation}
+	f_L = 
+	\begin{pmatrix}
+	\nu_{e} \\
+	e^{-} \\
+	\end{pmatrix}_{L},
+	\begin{pmatrix}
+	u_\alpha \\
+	d_\alpha \\
+	\end{pmatrix}_{L}
+	\quad
+	f_R = e^{-}_{R},u_{R\alpha},d_{R\alpha}
+\end{equation}
+
+Esta distinción entre izquierdos y derechos, es lo que hace que aparezca la violación de paridad electrodébil de forma natural en la teoría.
+
+El índice que aparece en los estados de los quarks, $\alpha$, es para describir cómo los mismos se transforman en el espacio SU(3) de la misma forma que en SU(2). En SU(3) la representación básica son tripletes cuyas componentes representan los tres estados de color posible (denominados en general $r$, $g$ y $b$). Los quarks forman tripletes producto de la combinación de esos estados, mientras que los leptones forman un singlete sin color y por ello no requieren de este índice.
+
+Con esto en mente, el lagrangiano se comienza a construir a partir del lagrangiano de la partícula libre, pero reemplazando la derivada ordinaria con la covariante, que con las simetrías consideradas, queda de la siguiente forma:
+
+
+\begin{equation}
+D_{\mu} = \partial_{\mu} - i g_{1} \frac{Y}{2}B_{\mu} - i g_{2} \frac{\tau^{i}}{2}W_{\mu}^{i} - i g_{3} \frac{\lambda^{a}}{2}G_{\mu}^{a}
+\end{equation}
+%
+donde $Y$, $\tau$ y $\lambda$ son los respectivos generadores de las transformaciones U(1), SU(2) y SU(3); y $g_1$, $g_2$ y $g_3$ son constantes que representan la intensidad de cada acoplamiento y deben medirse experimentalmente. Una convención para escribir las ecuaciones de forma más compacta es utilizada, en donde los términos de $D_{\mu}$ que actúen en los fermiones con una forma de matriz diferente se anulan. Por lo que los $W_{\mu}^{i}$ actuando sobre leptones derechos (singletes de SU(2)) se anulan, y los $G_{\mu}^{a}$ actuando sobre leptones (singletes de SU(3)) se anulan. Quedando así el término fermiónico del lagrangiano:
+
+\begin{equation}
+\mathcal{L}_{\text{ferm}} = \sum_{\text{fermiones}} \bar{f}i\gamma^{\mu}D_{\mu}f
+\end{equation}
+
+Al desglosar los distintos términos de este lagrangiano es posible relacionar algunos de ellos tanto con observaciones experimentales, como con predicciones de la teoría. Por ejemplo, al mirar solo los términos U(1) y SU(2), se puede obtener el lagrangiano asociado a la teoría electrodébil, donde se obtienen las denominadas corrientes neutras y cargadas, que posteriormente dieron con el descubrimiento de los bosones $W$ y $Z$. A su vez es posible obtener relaciones entre las constantes del modelo, diferentes mecanismos para su medición. Algunas relaciones a mencionar son por ejemplo:
+
+\begin{equation}
+\begin{split}
+g_2 & = e/\sin{\theta_w} \\
+g_1 & = e/\cos{\theta_w}
+\end{split}
+\end{equation}
+%
+donde $\theta_w$ es un nuevo parámetro determinado experimentalmente, llamado ángulo de mezcla electrodébil \tosolve{poner valor?}. También la relación:
+
+\begin{equation}
+Q = T_3 + \frac{Y_W}{2} 
+\end{equation}
+%
+donde $Q$ es la carga eléctrica, $Y_W$ es el anterior mencionado generador de U(1) que en este contexto se denomina hipercarga débil y $T_3$ es la tercer componente del isospin débil, que toma valores $1/2$ o $-1/2$ dependiendo del estado SU(2) del doblete, o $0$ si es un singlete.
+
+De la misma forma se puede obtener el lagrangiano asociado a QCD mirando solo los términos SU(3). Aún así no es posible sacar conclusiones de la misma forma que para la teoría electrodébil, debido al confinamiento de los quarks y gluones, que no permiten observarlos de forma aislada en la naturaleza. En la sección \ref{sec:qcd} se describe algunos detalles de QCD.
+
+Por último cabe mencionar que en ningún momento se hizo distinción alguna entre las familias de leptones, por lo que es posible reemplazar en cualquier momento al electrón por el muón y lo mismo para su neutrino, y las ecuaciones siguen valiendo de la misma forma. Esto se denomina universalidad leptónica, y es una propiedad que se ha observado a lo largo de los años en diferentes experimentos \tosolve{mencionar posibles violaciones?}.
+
+
+\subsection{Mecanismo de Higgs}
+
+La formulación hasta ahora descripta no incluye en ningún momento las masas de ninguna de las partículas. Esto se debe a que al agregar términos de masa explícitos al lagrangiano, como por ejemplo $m\psi\hat{\psi}$ o $m_B^2 B^{\mu}B_{\mu}$, el mismo pierde la invarianza de SU(2). Si se incluyeran a las masas 'a mano' la teoría termina teniendo cantidades físicas infinitas (\tosolve{entender bien, renormalización?}). La forma de incluir masas a la teoría sin que estas sean nulas es mediante el mecanismo de Higgs. 
+
+\tosolve{revisar la formalidad de toda esta sección} Para ello se asume que en el SM el universo está inmerso en un campo de spin 0, denominado campo de Higgs. El mismo es un doblete en el espacio SU(2) y tiene hipercarga no nula en U(1), pero es un singlete en el espacio de color. Es un caso similar al del campo electromagnético, pero en el caso deHiggs no se consideran fuentes del campo en esta instancia. Los bosones de gauge y los fermiones pueden interactuar con este campo, y en su presencia dejan de tener masa nula. Si bien el lagrangiano conserva la simetría SU(2) y U(1), el estado fundamental no, en lo que se denomina un rompimiento espontáneo de simetría.
+
+La parte escalar del lagrangiano de Higgs está dada por:
+
+\begin{equation}
+\mathcal{L} = (D^{\mu}\phi)^{\dagger}(D^{\mu}\phi) - V(\phi)
+\end{equation}
+%
+donde el $\phi$ es un campo escalar complejo en la representación de SU(2):
+
+\begin{equation}
+	\phi = 
+	\begin{pmatrix}
+	\phi^{+} \\
+	\phi^{+} \\
+	\end{pmatrix} = \frac{1}{\sqrt{2}}
+	\begin{pmatrix}
+	\phi_{1} + i\phi_{2} \\
+	\phi_{3} + i\phi_{4} \\
+	\end{pmatrix}
+\end{equation}
+%
+con hipercarga U(1), $Y=+1$. La derivada covariante en este termino es similar a la descripta en pero sin el término de color, y con los mismos bosones de gauge de SU(2) y U(1). Esta simetría $U(1)_Y$ adicional es necesaria para que la teoría genere un boson de gauge no masivo.
+$V(\phi)$ es el potencial de Higgs, que para garantizar la renormalización de la teoría e invarianza de SU(2) y U(1), requiere ser de la forma:
+
+\begin{equation}
+	V(\phi) = - \mu^{2}\phi^{\dagger}\phi + \lambda(\phi^{\dagger}\phi)^{2}
+\end{equation}
+%
+donde $\lambda$ es un parámetro que debe ser mayor a $0$ para garantizar un mínimo del potencial, quedando el comportamiento determinado por el signo del otro parámetro, $\mu$. Para $\mu^2>0$ el campo genera un valor de expectación de vacío (VEV) no nulo que rompe espontáneamente la simetría. El potencial $V(\phi)$ toma la forma de un sombrero mexicano \tosolve{agregar imagen} y tiene infinitos números de estados degenerados con energía mínima que satisfacen $\phi^{\dagger}\phi = v^2/2$. De esos estados se elige arbitrariamente el estado:
+
+\begin{equation}
+	\left<\phi\right> = \frac{1}{\sqrt{2}}
+	\begin{pmatrix}
+	0 \\
+	v \\
+	\end{pmatrix}
+\end{equation}
+
+Debido a la conservación de la carga solo un campo escalar neutro puede adquirir VEV, por lo que $\phi^0$ se interpreta como la componente neutral del doblete, y por ende $Q(\phi)=0$. El electromagnetismo no se modifica por el campo escalar VEV y la ruptura de simetría se representa como:
+
+\begin{equation}
+SU(2)_L \otimes U(1)_Y \rightarrow U(1)_Q
+\end{equation}
+
+Para estudiar el espectro de partículas, se estudia al campo alrededor del mínimo utilizando una expansión en la dirección radial:
+
+\begin{equation}
+	\phi = \frac{1}{\sqrt{2}}
+	\begin{pmatrix}
+	0 \\
+	v + h \\
+	\end{pmatrix}
+\end{equation}
+
+Al elegir una dirección particular tenemos tres simetrías globales rotas, y por el teorema de Goldstone, aparecen tres bosones escalares no masivos. Estos bosones de Goldstone son absorbidos por los bosones $W$ y $Z$, adquiriendo así su respectiva masa, mientras que la expansión en la dirección radial da la masa de la excitación $h$, que es la masa del boson de Higgs. De esta forma queda la masa de los bosones de la teoría de la forma:
+
+\begin{equation}
+\begin{split}
+	M_{\gamma} & = 0 \\
+	M_{W} & = \frac{g_2 v}{2} \\
+	M_{Z} & = \frac{v}{2}\sqrt{g_1^2 + g_2^2} \\
+	M_{h} & = \sqrt{2\lambda}v \\
+\end{split}
+\end{equation}
+
+Este mecanismo también permite otorgar masas a los fermiones, incluyendo en el lagrangiano términos con acoplamiento del tipo Yukawa:
+
+\begin{equation}
+	\mathcal{L}_{\text{Yuk}} = g_f(\bar{\psi}_L\phi \psi_R) + \text{h.c.}
+\end{equation}
+%
+siendo este ahora sí invariante de SU(2). La constante $g_f$ describe el acoplamiento entre el doblete de Higgs y los fermiones. Al hacer una expansión del campo como se hizo anteriormente, aparecen en el lagrangiano términos de masas fermiónicos que dan masa a los mismos de la forma:
+
+\begin{equation}
+m_f = \frac{g_f v}{\sqrt{2}}
+\end{equation}
+
+\tosolve{mención a las masas de quarks y neutrinos que hay en el Gordon Kane?)}
+
+\tosolve{mencionar renormalizacion?}
+
+\subsection{Comentarios adicionales sobre QCD}\label{sec:qcd}
+
+Como se mencionó anteriormente, QCD \cite{qcdcollider} es la teoría de campos de gauge renormalizable
+que describe la interacción fuerte entre quarks mediados por gluones. Los gluones son los objetos que generan las transiciones de un quark de color a otro. Las propiedades de los quarks en QCD son análogas de alguna forma a las del fotón en QED, con la distinción de que estos sí llevan carga (de color), y por ende pueden autointeractuar y además cambiar la carga  de color de los quarks (a diferencia de las partículas cargadas eléctricamente, que si bien pueden emitir o absorber un fotón, esto nunca cambia su carga). Esto se debe principalmente a la estructura no abeliana de su grupo de simetría.
+Esto a su vez afecta a la constante de acoplamiento fuerte ($\alpha_s$) que termina dependiendo de la distancia de las cargas o la energía de la interacción (\textit{running coupling constant}). 
+
+En QED, la polarización del vacío es inducida por los
+pares virtuales $e^{+}e^{-}$, que apantallan (\textit{screening}) la carga eléctrica y resulta en la disminución del
+acoplamiento con la distancia. Por el contrario, los gluones no sólo producen pares $q\bar{q}$ (que
+causan un efecto análogo al de QED) sino que crean también pares de gluones adicionales,
+que tienden a antiapantallar (\textit{anti-screening}) la carga aparente de color. El efecto neto es entonces que
+el acoplamiento fuerte decrece con la energía y crece con la distancia \tosolve{sacado de la tesis de martin}. Esto da lugar al ya mencionado confinamiento de color, debido a que el potencial del campo de color aumenta linealmente con la distancia, y por lo tanto no se pueden observar quarks ni gluones libres en la naturaleza, solo observarlos en conjuntos sin color. Por otro lado, a pequeñas distancias o altas energías, se produce la libertad asintótica, donde la intensidad de
+la interacción fuerte decrece, de tal forma que los quarks y gluones se comportan
+esencialmente libres ($\alpha_s \ll 1$), posibilitando así un tratamiento perturbativo. 
+
+En un colisionador de protones, los quarks y
+gluones producidos altas energías sufren un proceso conocido como hadronización,
+a medida que pierden energía, de manera que no se detectan quarks o gluones en el
+detector, sino que unos objetos conocidos como jets, que son un chorro de hadrones
+o una cascada de partículas, que forma un cono desde el quark/gluon inicial hasta el
+calorímetro. \tosolve{sacado de la tesis de joaco}
+
+
+
+\subsection{Colisiones protón-protón}
+
+El LHC es principalmente un colisionador de protones, por lo que describir las interacciones que subyacen en la colisión misma no solo es importante para entender los fenómenos que se producen, sino también para poder generar simulaciones de dichos procesos con una elevada precisión. Si bien la colisión $pp$ es bastante eficaz a la hora de obtener colisiones de altas energías, la misma está gobernada principalmente por interacciones QCD que son complejas en su propia naturaleza a la hora de realizar una descripción teórica. Para ello se utiliza el modelo de partones, introducido por Feynman \cite{feynman} y Bjorken \cite{bjorken} a fines de los años 60. 
+
+El modelo de partones propone que a altas energías los hadrones están compuesto por partículas puntuales denominadas partones, que vienen a representar los quarks de valencia y los quarks, antiquarks y gluones del mar presentes en el protón. Cada uno de los partones lleva entonces una fracción de la energía y momento del protón, que a priori son desconocidas. Esto representa un problema a la hora de medir secciones eficaces partónicas, $\sigma(qg\to qg)$, sumado a que tampoco es posible medir los productos finales de forma directa. En cambio, es posible medir una sección eficaz hadrónica, $\sigma(pp\to jj)$, entre los protones incidentes y los jets del estado final. Para realizar este pasaje se emplea el teorema de factorización \cite{ELLIS1978281}, que permite una separación sistemática
+entre las interacciones de corta distancia (de los partones) y las interacciones de larga distancia (responsables del confinamiento de color y la formación de hadrones). El teorema establece que la sección eficaz de producción de cualquier proceso de QCD del tipo $A+B\to X$ puede ser expresada como:
+
+\begin{equation}
+	\label{eq:xs_fact}
+	\sigma_{AB\to X} = \sum_{ij} \int dx_{a_i} dx_{b_j} f_{A/a_i}(x_{a_i}, \mu_{F}^2) f_{B/b_j}(x_{b_j}, \mu_{F}^2) \sigma_{a_i b_j \to X}(\mu_{F}^2, \mu_{R}^2)
+\end{equation}
+%
+
+\tosolve{a partir de aca esta igual a la tesis de Martin, seguramente tenga que refrasear todo, pero el contenido me parecio bueno}
+donde $x_i(x_j)$ es la fracción del momento del hadrón $A(B)$ que lleva el partón $a_i(b_j)$ y $\sigma_{a_i b_j \to X}$ es la sección eficaz de la interacción a nivel partónico, calcada a un dado orden en QCD perturbativo (pQCD) y una escala de renormalización $\mu_R$. La escala de renormalización es introducida
+para absorber las divergencias ultravioletas que aparecen en los cálculos perturbativos más
+allá de LO.
+
+Las funciones $f_{h/n}(x_{n}, \mu_{F}^2)$, llamadas funciones de distribución partónica (PDFs), representan la probabilidad de encontrar un partón de tipo $n$ en el hadrón $h$ con una fracción de
+momento $x_n$, dada una escala de factorización $\mu_{F}$. Esta escala es un parámetro arbitrario
+introducido para tratar singularidades que aparecen en el régimen no perturbativo. Estas
+divergencias son absorbidas, en forma similar a la renormalización, dentro de las funciones
+de distribución partónicas a la escala $\mu_F$. Si bien las PDFs no pueden ser determinadas
+perturbativamente, se puede predecir su dependencia con $Q^2$ por medio de las ecuaciones
+de evolución DGLAP (Dokshitzer-Gribov-Lipatov-Altarelli-Parisi) \cite{dis,lipatovparton,altarelli-parisi}. De esta forma, la
+medida experimental de su forma funcional a un dado $Q^2_0$ fijo permite obtener predicciones
+de las PDFs para un amplio espectro de $Q^2$. En la presente tesis se consideran las predicciones teóricas a NLO utilizando las parametrizaciones CTEQ \cite{cteq}, MSTW \cite{mstw1, mstw2, mstw3} y NNPDF \cite{nnpdf}.
+
+Luego de la interacción dura, cada partón del estado final comienza a radiar gluones,
+perdiendo energía. Estos gluones fragmentan en pares $q\bar{q}$ y gluones adicionales, y así sucesivamente, creando una lluvia de partones, de cada vez más bajo \pt. Esto continúa hasta
+que la energía es suficientemente baja y todos los partones se recombinan para formar
+mesones y bariones, en lo que se conoce como hadronización. Las bajas transferencias de
+energía involucradas en el proceso son tales que este no puede ser tratado perturbativamente. La dinámica de esta evolución es absorbida en funciones de fragmentación, que
+representan la probabilidad de un partón de fragmentar en un determinado hadrón del
+estado final. La sección eficaz $\sigma_{AB\to X}$ en la Ecuación \ref{eq:xs_fact} puede ser modificada entonces para
+calcular el proceso $A + B \to C + X$:
+
+\begin{equation}
+	\sigma_{a_i b_j \to C+X} = \int dz_{C} D_{c_k}(z_C, \mu_{f}^2) \sigma_{a_i b_j \to c_k + X}(\mu_{F}^2, \mu_{R}^2)
+\end{equation}
+
+donde $C$ es un hadrón, $D_{c_k}$ es la función de fragmentación, que define la probabilidad
+de que un partón $c_k$ fragmente en un hadrón $C$ con una fracción $z_C$ de su momento a la
+escala de fragmentación (o factorización del estado final) $\mu_{f}$. Esta escala es introducida
+de manera similar a $\mu_{f}$ para el estado inicial, a fin de remover las singularidades por
+radiación colineal en el estado final.
+
+
+\tosolve{aca joaco pone lo de underlying event, hard scatter, etc. me parece mejor ponerlo en la parte de detector, al final, en la seccion simulaciones de MC}
+
+
+
+
+
+
+
+
+
+
 
 
 \section{Supersimetría}
+
+\subsection{Limitaciones del SM}
