@@ -291,7 +291,7 @@ donde $\Lambda_{\text{UV}}$ es la escala de energía donde el SM deja de ser vá
 	\Delta m_H^2 = - \frac{|\lambda_S|}{16 \pi^2}\left[\Lambda_{\text{UV}^2} - 2m_S^2 \ln{\Lambda_{\text{UV}}/m_S} + ... \right]
 \end{equation}
 
-Considerando la diferencia de signos entre el \textit{loop} fermiónico y bosónico, si cada fermión del SM estuviera acompañado por dos campos complejos con $\lambda_S = |\lambda_f|^2$ genera una cancelación automática de los términos. Esto motiva la inclusión de una nueva simetría a la teoría, entre fermiones y bosones, llamada Supersimetría (SUSY).
+Considerando la diferencia de signos entre el \textit{loop} fermiónico y bosónico, si cada fermión del SM estuviera acompañado por dos campos complejos con $\lambda_S = |\lambda_f|^2$ genera una cancelación automática de los términos. Esto motiva la inclusión de una nueva simetría a la teoría, entre fermiones y bosones, llamada Supersimetría (SUSY). Las secciones siguientes que describen la teoría supersimétrica fueron basadas en la Referencia \cite{martin}.
 
 \subsection{Álgebra de SUSY}
 
@@ -326,7 +326,7 @@ El bosón de Higgs debe encontrarse en un supermultiplete escalar debido a que t
 
 Por otro lado, los bosones de gauge del SM deben estar contenidos en un supermultiplete vectorial con sus respectivos supercompañeros denominados gauginos. El gluón tiene un supercompañero de spin $1/2$ denominado gluino ($\tilde{g}$). Por su parte, la simetría $SU(2)_L\times U(1)_Y$ asociada a los bosones de gauge $W^+$, $W^0$, $W^-$ y $B^0$ tienen sus supercompañeros $\widetilde{W}^+$, $\widetilde{W}^0$, $\widetilde{W}^-$ y $\tilde{B}^0$, llamados winos y bino. Luego de la ruptura de simetría electrodébil los estados de gauge $W^0$ y $B^0$ se mezclan en los estados de masa $Z^0$ y $\gamma$, y de la misma forma lo hacen los $\widetilde{W}^0$ y $\widetilde{B}^0$ para dar lugar al zino ($\widetilde{Z}^0$) y photino ($\tilde{\gamma}$).
 
-En la Tabla \ref{mssm_particles} se resume todas las partículas requeridas por el MSSM, donde vale remarcar que ninguno de los supercompañeros del SM mencionados anteriormente ha sido observado experimentalmente hasta la fecha. Otro comentario de interés es que tanto el supermultiplete vectorial $H_d$ ($H_d^0$, $H_d^-$, $\widetilde{H}_d^0$, $\widetilde{H}_d^-$), como el de los \textit{sleptons} izquierdos ($\tilde{\nu}$, $\tilde{e}_L$, $\nu$, $e_L$) tienen los mismos números cuánticos. Esto podría llevar a pensar que no es necesario incluir u nuevo doblete de Higgs y en cambio utilizar el de los \textit{sleptons} izquierdos. si bien esto es posible, conlleva a diversos problemas fenomenológicos como violaciones en el número de leptones y necesidad de neutrinos del SM muy masivos, lo que motiva a descartar esto.
+En la Tabla \ref{tab:mssm_particles} se resume todas las partículas requeridas por el MSSM, donde vale remarcar que ninguno de los supercompañeros del SM mencionados anteriormente ha sido observado experimentalmente hasta la fecha. Otro comentario de interés es que tanto el supermultiplete vectorial $H_d$ ($H_d^0$, $H_d^-$, $\widetilde{H}_d^0$, $\widetilde{H}_d^-$), como el de los \textit{sleptons} izquierdos ($\tilde{\nu}$, $\tilde{e}_L$, $\nu$, $e_L$) tienen los mismos números cuánticos. Esto podría llevar a pensar que no es necesario incluir u nuevo doblete de Higgs y en cambio utilizar el de los \textit{sleptons} izquierdos. si bien esto es posible, conlleva a diversos problemas fenomenológicos como violaciones en el número de leptones y necesidad de neutrinos del SM muy masivos, lo que motiva a descartar esto.
 
 
 \begin{table} 
@@ -374,7 +374,7 @@ En la Tabla \ref{mssm_particles} se resume todas las partículas requeridas por 
 	\end{tabular}
 
 	\caption{Espectro de partículas del MSSM. Solo una de las tres familias de fermiones y sfermions es mostrada. Por convención, las componentes derechas de los mismos aparecen como conjugados/adjuntos. También al lado del nombre de los supermultipletes escalares aparece el símbolo para representar al supermultiplete como un todo. La barra arriba de los fermiones y sfermions derechos es parte del nombre y no representa una conjugación \tosolve{entender esto y por que la negrita y la barra en los numeros}.}
-	\label{mssm_particles}
+	\label{tab:mssm_particles}
 
 \end{table}
 
@@ -416,7 +416,7 @@ En una teoría supersimétrica renormalizable, la interacción y las masas de to
 	\label{eq:susy_potential}
 \end{equation}
 
-Los campos que aparecen son los mismos de la Tabla \ref{mssm_particles}, y las matrices 3x3 $\textbf{y}_\textbf{u}$, $\textbf{y}_\textbf{d}$, $\textbf{y}_\textbf{e}$, son los parámetros adimensionales del acoplamientos de Yukawa. Los índices para las transformaciones de gauge y familia de sabores fueron omitidos por practicidad. El último término con el parámetro $\mu$ es la versión supersimétrica de la masa del Higgs del SM.
+Los campos que aparecen son los mismos de la Tabla \ref{tab:mssm_particles}, y las matrices 3x3 $\textbf{y}_\textbf{u}$, $\textbf{y}_\textbf{d}$, $\textbf{y}_\textbf{e}$, son los parámetros adimensionales del acoplamientos de Yukawa. Los índices para las transformaciones de gauge y familia de sabores fueron omitidos por practicidad. El último término con el parámetro $\mu$ es la versión supersimétrica de la masa del Higgs del SM.
 
 Por su parte, el término que describe el rompimiento de supersimetría de la forma más general toma la forma:
 
@@ -429,11 +429,71 @@ Por su parte, el término que describe el rompimiento de supersimetría de la fo
 	\end{split}
 \end{equation}
 
-$M_1$, $M_2$ y $M_3$ son los términos de masa del bino, wino y gluino. Las matrices complejas de 3x3 con unidades de masa \textbf{a}_\textbf{u}, \textbf{a}_\textbf{d} y \textbf{a}_\textbf{e}, se corresponden con los acoplamientos de Yukawa del superpotencial. El resto de los términos contienen los términos de masa de los sfermions y sector de Higgs.
+$M_1$, $M_2$ y $M_3$ son los términos de masa del bino, wino y gluino. Las matrices complejas de 3x3 con unidades de masa $\textbf{a}_\textbf{u}$, $\textbf{a}_\textbf{d}$ y $\textbf{a}_\textbf{e}$, se corresponden con los acoplamientos de Yukawa del superpotencial. El resto de los términos contienen los términos de masa de los sfermions y sector de Higgs.
 
 Si bien esta es la forma más general de enunciar la ruptura de SUSY, existen diferentes mecanismos para realizarlo donde más adelante se describirán brevemente alguno de ellos .
 
 \subsection{Mecanismos para la ruptura de SUSY}
+
+\tosolve{tesis joaco principalmente}
+
+En el MSSM la ruptura de supersimetría es introducida explícitamente. Toda de una simetría global genera un modo no masivo de Nambu-Goldstone con los mismos números cuánticos que el generador de la simetría rota.
+Para el caso de la supersimetría global, el generador es la carga fermiónica $Q_{\alpha}$,
+por lo que la partícula de Nambu-Goldstone será un fermión de Weyl no masivo
+neutro, llamado goldstino.
+El rompimiento espontáneo de SUSY requiere un extensión del MSSM, agregando un sector oculto de partículas sin acoplamientos directos con los supermultipletes quirales del sector visible del
+MSSM. Estos dos sectores comparten interacciones, que median el rompimiento de
+SUSY desde el sector oculto al observable como se esquematiza en la Figura \ref{fig:hidden_sector}, que dan lugar a los términos soft del lagrangiano del MSSM.
+Las interacciones mediadoras entre el sector oculto y el observable pueden ser
+de distinta naturaleza, por lo que existen muchos modelos que intentan explicar de
+esta forma el rompimiento de SUSY. Uno de ellos es mediante interacciones gravitacionales, con modelos que se enmarcan en lo que se conoce como Planck scale mediated supersymmetry breaking (PMSB), debido a que la gravedad entra cerca de la escala de Planck. Si SUSY se rompe en el sector oculto
+por un valor de expectación de vacío $\left< F \right>$, entonces los términos soft en el sector visible serán:
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/hidden_sector.png}
+  \caption{Estructura esquemática de la ruptura de supersimetría}\
+  \label{fig:hidden_sector}
+\end{figure}
+
+\begin{equation}
+m_{\text{soft}} \sim \left< F \right>/M_P
+\label{eq:pmsb}
+\end{equation}
+
+Para $m_{\text{soft}}$ del orden de $\sim 100$ GeV, la escala de rompimiento de SUSY en el sector oculto es $\sqrt{\left< F \right>}\sim 10^{11}$ GeV.
+
+Cuando se tiene en cuenta la gravedad, SUSY deber ser una simetría local y la
+teoría se conoce como supergravedad. En este caso, el gravitón de espín $2$ tiene un
+supercompañero fermión de espín $3/2$, el gravitino, inicialmente no masivos. Una vez
+que SUSY es espontáneamente rota, el gravitino absorbe al goldstino, adquiriendo
+masa, que se convierte en sus componentes longitudinales (helicidad $\pm1/2$). La masa
+del gravitino $m_{3/2}$, se puede estimar de la Ecuación \ref{eq:pmsb}, y se espera que sea comparable
+a la masa de las partículas del MSSM $\sim100/1000$ GeV.
+
+Si se considera interacciones de gauge electrodébiles y QCD ordinarias, se tienen
+los modelos Gauge Mediated Supersymmetry Breaking o GMSB \cite{gmsb1, gmsb2, gmsb3} (se considera aquí que estas interacciones siempre dominan sobre gravedad). Los términos
+soft del MSSM provienen de diagramas a un loop que involucran partículas mensajeras, que son nuevos supermultipletes quirales que se acoplan al vev $\left< F \right>$ que
+rompe SUSY, y tienen a su vez interacciones $SU(3)_C \times SU_(2)_L \times U(1)_Y$ que generan
+la conexión con el MSSM. Se tiene en este caso:
+
+\begin{equation}
+m_{\text{soft}} \sim \frac{\alpha_i}{4\pi}\frac{\left< F \right>/M_P}{M_\text{mens.}}
+\label{eq:gmsb}
+\end{equation}
+%
+donde $M_\text{mens.}$ es la escala característica de las masas de los campos mensajeros. En
+caso que $M_\text{mens.}$ y $\left< F \right>$ sean comparables, se pueden tener $m_{\text{soft}}$ en el correcto
+orden de magnitud con sólo $\left< F \right>\sim 10^4$ GeV.
+
+El marco más general se conoce como General Gauge Mediation (GGM), en el
+cual se define al mecanismo de mediación por campos de gauge como el límite en
+que las constantes de acoplamiento del MSSM $\alpha_i\to 0$, la teoría se desacopla en el
+MSSM y un sector oculto separado que rompe SUSY. Como característica principal, la masa del
+gravitino es $m_{3/2} \ll M_W$, típicamente del orden del eV, lo que implica que es la LSP
+de la teoría. Es interesante notar que debido a que la LSP es siempre el gravitino, la
+partícula más liviana del MSSM es la NLSP de la teoría y su naturaleza determina
+entonces el estado final que se encuentra en un colisionador.
 
 \subsection{Paridad R}
 
@@ -459,5 +519,168 @@ donde $s$ es el spín de la partícula. Las partículas del SM más los bosones 
 
 \subsection{Espectro de masa del MSSM}
 
+Como ocurre en el SM, los estados de gauge que se muestran en la tabla \ref{tab:mssm_particles} no son necesariamente los estados de masa que se pueden observar experimentalmente, sino combinaciones de los mismos. En el MSSM no es una tarea trivial obtener los distintos autovalores de masa, ya que ahora hay dos dobletes complejos de Higgs, y varios conjuntos de partículas con los mismos números cuánticos que pueden dar una mezcla. Un parámetro que aparece en las masas es el ángulo $\beta$, que se define a partir de los valores de expectación de vacío de $H_u^0$ y $H_d^0$:
+	
+\begin{equation}
+	\tan(\beta) \equiv \frac{v_u}{v_d} = \frac{\left< H_u^0 \right>}{\left< H_d^0 \right>}
+\end{equation}
+
+La Figura \ref{fig:susy_part} resume los estados de gauge y masa del MSSM. A continuación se listan los estados de masa de la teoría.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/sm_susy.pdf}
+  \caption{Estados de gauge y masa del MSSM. \tosolve{esta figura va a ser mejorada}}
+  \label{fig:susy_part}
+\end{figure}
+
+\subsubsection{Neutralinos y charginos}
+
+Los higgsinos y los gauginos electrodébiles se mezclan debido a la ruptura de la simetría electrodébil. Los higgsinos neutrales ($\widetilde{H}_u^0$ y $\widetilde{H}_d^0$) y los gauginos neutrales ($\widetilde{B}$, $\widetilde{W}^0$) se combinan para formar cuatro estados de masa llamados neutralinos ($\ninoone$, $\ninotwo$, $\ninothree$, $\ninofour$). Los higgsinos cargados ($\widetilde{H}_u^+$ y $\widetilde{H}_d^-$) y los winos ($\widetilde{W}^+$, $\widetilde{W}^-$) se combinan para formar dos estados de masa con carga $\pm$ llamados charginos ($\chinoonepm$, $\chinotwopm$). Por convención se utiliza el índice para ordenarlos de forma ascendente a partir de su masa. En general se supone al neutralino más liviano, $\ninoone$, como la LSP ya que es la única partícula del MSSM que es buen candidato a materia oscura \footnote{Esto no ocurre en modelos con gravitinos más livianos, o con violación de la paridad R}. Los valores de las masas se obtienen diagonalizando las matrices que entran en el término de masa del lagrangiano. En el caso de los neutralinos la matriz 4x4 no es fácil resolver analíticamente. Una aproximación no tan irreal en la que la ruptura de simetría electrodébil se puede ver como una pequeña perturbación en la matriz de masa de los neutralinos. Si 
+
+\begin{equation}
+	m_Z \ll |\mu \pm M_1|, |\mu \pm M_2|
+\end{equation}
+%
+entonces se obtienen neutralinos prácticamente 'bino-like' ($\ninoone \approx \widetilde{B}$), 'wino-like' ($\ninotwo \approx \widetilde{W}^0$) y 'higgsino-like' ($\ninothree, \ninofour \approx (\widetilde{H}_u^0 \pm \widetilde{H}_d^0)\sqrt{2})$), con autovalores:
+
+\begin{equation}
+	\begin{split}
+		m_{\ninoone} = & M_1 - \frac{m_Z^2 s_W^2 (M_1 + \mu \sin{2\beta})}{\mu^2 - M_1^2} + ... \\
+		m_{\ninotwo} = & M_2 - \frac{m_W^2 (M_2 + \mu \sin{2\beta})}{\mu^2 - M_2^2} + ... \\
+		m_{\ninothree} = & |\mu| + \frac{m_Z^2 (I - \sin{2\beta})(\mu + M_1 c_W^2 + M_2 s_W^2)}{2 (\mu + M_1) (\mu + M_2)} + ... \\
+		m_{\ninofour} = & |\mu| + \frac{m_Z^2 (I + \sin{2\beta})(\mu - M_1 c_W^2 - M_2 s_W^2)}{2 (\mu - M_1) (\mu - M_2)} + ... \\
+	\end{split}
+	\label{eq:nc_mass}
+\end{equation}
+%
+donde $M_1$ y $M_2$ se asumen reales y positivos, $\mu$ real con signo $I=\pm1$. El índice de cada neutralino debe ser acomodado de tal forma de que queden ordenados por su masa. Lo mismo ocurre con los charginos \footnote{Esta matriz sí tiene solución analítica: \\ $m_{\chinoonepm, \chinotwopm}^2 = \frac{1}{2} \left[ |M_2|^2 + |\mu|^2 + 2 m_W^2 \mp \sqrt{(|M_2|^2 + |\mu|^2 + 2 m_W^2)^2 - 4 |\mu M_2 - m_W^2 \sin{2\beta}|^2} \right]$} que terminan siendo 'wino-like' y 'higgsino-like' con masas:
+
+\begin{equation}
+	\begin{split}
+		m_{\chinoonepm} = & M_2 - \frac{m_W^2 (M_2 + \mu \sin{2\beta})}{\mu^2 - M_2^2} + ... \\
+		m_{\chinotwopm} = & |\mu| + \frac{I m_W^2 (\mu + M_2 \sin{2\beta})}{\mu^2 - M_2^2} + ... \\
+	\end{split}
+\end{equation}
+
+\subsubsection{Gluino}
+
+El gluino no puede mezclarse con ninguna otra partícula del MSSM debido a
+que es un fermión de color de ocho componentes. La masa la obtiene del término de ruptura de SUSY incluido en $\mathcal{L}_{\text{soft}}$, cuyo parámetro de masa es $M_3$.
+
+\subsubsection{Squarks y sleptons}
+
+En principio todo escalar con la misma carga eléctrica, paridad R y color puede mezclarse entre sí, por lo que los estados de masa de los squarks y slpetons se obtiene doagonalizando las matrices de masa cuadrada de 6x6 para los squarks de tipo 'up' ($\tilde{u}_L$, $\tilde{c}_L$, $\tilde{t}_L$, $\tilde{u}_R$, $\tilde{c}_R$, $\tilde{t}_R$), de tipo 'down' ($\tilde{d}_L$, $\tilde{s}_L$, $\tilde{b}_L$, $\tilde{d}_R$, $\tilde{s}_R$, $\tilde{b}_R$), sleptones cargados ($\tilde{e}_L$, $\tilde{\mu}_L$, $\tilde{\tau}_L$, $\tilde{e}_R$, $\tilde{\mu}_R$, $\tilde{\tau}_R$) y sleptons neutros ($\tilde{\nu}_e$, $\tilde{\nu}_{\mu}$, $\tilde{\nu}_{\tau}$). \tosolve{se puede mencionar algo sobre los $t_{1,2}$ y $b_{1,2}$}En general se puede asumir que la mayoría de os ángulos de mezcla son pequeños facilitando las expresiones para la masa, las cuales no son de interés para esta Tesis.
 
 
+\subsubsection{Escalares de Higgs}
+
+Los campos de Higgs escalares en le MSSM se componen de dos dobletes de SU(2) complejos, con ocho grados de libertad. Cuando ocurre la ruptura de simetría electrodébil tres de ellos son los bosones de Nambu-Goldstone que se convierten en los modos longitudinales de los bosones $Z^0$ y $W^{\pm}$. Los cincos restantes consisten en dos escalares neutrales CP-par $h^0$ y $H^0$, un escalar neutral CP-impar $A^0$, y dos escalares cargados $H^+$ y $H^-$. Por convención $h^0$ es el bosón de Higgs del SM y las masas de los mismos se pueden escribir como:
+
+\begin{equation}
+	\begin{split}
+		m_{A^0}^2 = &\ 2b/\sin(2\beta) \\
+		m_{h^0 , H^0}^2 = &\ \frac{1}{2}\left( m_{A^0}^2 + m_Z^2 \mp \sqrt{(m_{A^0}^2-m_Z^2)^2 + 4m_Z^2 m_{A^0}^2 \sin^2(2\beta)} \right) \\
+		m_{H^{\pm}}^2 = &\ m_{A^0}^2 + m_W^2 \\
+	\end{split}
+\end{equation}
+
+
+\subsection{Decaimientos de las partículas supersimétricas}
+
+A continuación se describe los posibles decaimientos de las partículas supersimétricas. En general se asume que se conserva la paridad R y se considera al $\ninoone$ como la LSP, aunque también se describe el caso donde el $\gravino$ es la LSP.
+
+\subsubsection{Neutralinos y charginos}
+
+Los posibles decaimientos de los neutralinos y charginos pueden ser:
+
+\begin{equation}
+	\begin{split}
+		\tilde{N}_i \to &\ Z\tilde{N}_j,\ W\tilde{C}_j,\ h^0\tilde{N}_j,\ l\tilde{l},\ \nu\tilde{\nu},\ [A^0\tilde{N}_j,\ H^0\tilde{N}_j,\ H^{\pm}\tilde{C}_j^{\mp},\ q\tilde{q}] \\
+		\tilde{C}_i \to &\ W\tilde{N}_j,\ Z\tilde{C}_j,\ h^0\tilde{C}_1,\ l\tilde{\nu},\ \nu\tilde{l},\ [A^0\tilde{C}_1,\ H^0\tilde{C}_1,\ H^{\pm}\tilde{N}_j,\ q\tilde{q}'] \\
+	\end{split}
+\end{equation}
+
+Los estados en corchetes son los menos cinemáticamente posibles. Puede ocurrir también que todos estos decaimientos a dos cuerpos estén cinemáticamente prohibidos para un cierto gaugino, principalmente $\tilde{C}_1$ y $\ninotwo$. En ese caso pueden ocurrir decaimientos a tres cuerpos de forma off-shell a partir de bosones de gauge, escalares de Higgs, sleptones y saquarks:
+
+\begin{equation}
+	\tilde{N}_i \to ff\tilde{N}_j,\ \tilde{N}_i \to ff'\tilde{C}_j,\ \tilde{C}_i \to ff'\tilde{N}_j,\ \tilde{C}_2 \to ff\tilde{C}_1
+\end{equation}
+%
+donde $f$ es una notación genérica para los leptones y quarks, y $f'$ es el otro miembro del multiplete de SU(2)$_L$. La Figura \ref{fig:susy_three_body_decays} muestra los estados finales más comunes de los neutralinos y charginos.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/nc_decays.png}
+  \caption{Decaimientos a tres cuerpos más comunes de los neutralinos y charginos.}
+  \label{fig:susy_three_body_decays}
+\end{figure}
+
+\subsubsection{Decaimientos de los gluinos}
+
+El gluino solo puede decaer a través de un squark, ya sea on-shell o virtual. Si el decaimiento a
+dos cuerpos está abierto, este va a dominar debido al acoplamiento gluino-quark-squark es fuerte.
+En el caso de que todos los squarks sean más pesados que el gluino, este va a decaer solo vía
+squarks virtuales.
+
+
+
+\begin{equation}
+	\begin{split}
+		\tilde{g}\to &\ q\tilde{q} \\
+		\tilde{g}\to &\ qq\tilde{N}_i,\ qq\tilde{C}_i \\
+	\end{split}
+\end{equation}
+
+\subsubsection{Decaimientos de los squarks y sleptons}
+
+Los decaimientos posibles de los sfermions son:
+
+\begin{equation}
+	\begin{split}
+		\tilde{l}\to &\ l\tilde{N}_i,\ \tilde{l}\to \nu\tilde{C}_i,\ \tilde{\nu}\to \nu\tilde{N}_i,\ \tilde{\nu}\to l\tilde{C}_i \\
+		\tilde{q}\to &\ q\tilde{g},\ q\tilde{N}_i,\ q'\tilde{C}_i
+	\end{split}
+\end{equation}
+
+\subsubsection{Decaimientos a gravitinos}
+
+Como se mencionó anteriormente, en modelos como GGM la LSP puede ser el gravitino. En general, el decaimiento $\tilde{X} \to X\gravino$ no compite frente a los otros posibles decaimientos de la sparticle, excepto cuando esta es la NLSP ya que esta necesariamente debe decaer al gravitino más su supercompañero. De particular interés es cuando la NLSP es el $\ninoone$, en ese caso los posibles decaimientos son a $\gamma\gravino$, $Z\gravino$, $h^0\gravino$, $A^0\gravino$ y $H^0\gravino$. De estos decaimientos los últimos dos son muy poco probables cinemáticamente, y el primero es el único cinemáticamente garantizado \tosolve{?}. Los decaimientos a $Z^0$ y $h^0$ últimos están sujetos a una fuerte supresión cinemática proporcional a $ (1-m_{Z}^{2}/m_{\ninoone}^{2})^4$ y $(1-m_{h^{0}}^{2}/m_{\ninoone}^{2})^4$, pero aún juegan un papel importante en la fenomenología si $ \langle F \rangle $ no es demasiado grande, \ninoone\ tiene un contenido considerable de zino o higgsino y $m_{\ninoone}$ es significativamente mayor que $m_{Z}$ o $m_{h^{0}}$. \tosolve{Esto lo puse también en el capitulo de EWK, capaz mejor queda aca}. En general la probabilidad de decaimiento del $\ninoone$ depende los parámetros de mezcla de los neutralinos, del ángulo de Weinberg y también de su masa, por lo que en definitiva depende de los parámetros que las definen en las ecuaciones \ref{eq:nc_mass}.
+
+\subsection{Producción de partículas supersimétricas en colisionadores de hadrones}
+
+En colisionadores de hadrones las partículas supersimétricas pueden producirse de a pares a partir de colisiones de partones con interacciones fuertes:
+
+\begin{equation}
+	\begin{split}
+		gg\to &\ \tilde{g}\tilde{g},\ \tilde{q}_i\tilde{q}_j^* \\ 
+		gq\to &\ \tilde{g}\tilde{q}_i \\ 
+		q\bar{q}\to &\ \tilde{g}\tilde{g},\ \tilde{q}_i\tilde{q}_j^* \\ 
+		qq\to &\ \tilde{q}_i\tilde{q}_j \\ 
+	\end{split}
+\end{equation}
+%
+o interacciones electrodébiles:
+
+\begin{equation}
+	\begin{split}
+		q\bar{q}\to &\ \tilde{C}_i^{+}\tilde{C}_j^{-},\tilde{N}_i\tilde{N}_j \quad u\bar{d}\to\tilde{C}_i^{+}\tilde{N}_j \quad d\bar{u}\to\tilde{C}_i^{-}\tilde{N}_j \\
+		q\bar{q}\to &\ \tilde{l}_i^{+}\tilde{l}_j^{-},\tilde{\nu}_l\tilde{\nu}_l^* \quad u\bar{d}\to\tilde{l}_L^{+}\tilde{\nu}_l \quad d\bar{u}\to\tilde{l}_L^{-}\tilde{\nu}_l^* \\
+	\end{split}
+\end{equation}
+
+En la Figura \ref{fig:sp_production} se puede observar los diagramas de Feynman de las distintas producciones. En la Figura \ref{fig:susy_xs} se puede observar las secciones eficaces de producción de los distintos procesos, donde se ve que la producción electrodébil tiene una sección eficaz notablemente menor a la fuerte.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/sp_production.png}
+  \caption{Diagramas de Feynman de producción de partículas supersimétricas en colisionadores de hadrones. \tosolve{acá puse algunos de ejemplos, en el martin hay un montón mas, tal vez deba poner solo los relevantes.}}
+  \label{fig:sp_production}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/SUSY_xsecs_13TeV_overview.pdf}
+  \caption{Sección eficaz de producción de partículas electrodébiles en colisionadores de hadrones. \tosolve{seguramente haya una mejor imagen}.}
+  \label{fig:susy_xs}
+\end{figure}
