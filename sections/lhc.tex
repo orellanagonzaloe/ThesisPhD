@@ -52,7 +52,7 @@ N=\sigma \int \mathcal{L} dt
 donde al factor integral se lo conoce como luminosidad integrada.
 
 El LHC comenzó a funcionar en 2010 en lo que se denominó \textit{Run 1}, a una energía de de centro de masa de 7 TeV y logrando recolectar <<<lumi>>. En el 2013 finaliza la toma de datos y comienza el \textit{Long shutdown 1}, período que se utilizó para realizar distintas actualizaciones preparándose para la siguiente toma de datos. En el 2015 comenzó el \textit{Run 2} que operaba a una energía de de centro de masa de 13 TeV y logró recolectar <<<lumi>>, finalizando en el 2018 dando lugar al \textit{Long shutdown 2}. Este último estaba previsto con una duración de dos años, pero dada la situación epidemiológica de COVID-19 el mismo se terminó extendiendo hasta 2021.
-% TMPChange \tosolve{mirar año}
+ \tosolve{mirar año}
 Los planes a futuro del LHC preveen un tercer \textit{run} a 14 TeV, y luego ingresar en un nuevo período de inactividad para realizar las mejoras necesarias para el \textit{High Luminosity LHC}.
 
 
@@ -120,14 +120,14 @@ donde \textit{p} es el momento de la partícula. De esta forma es posible descri
 El detector ATLAS posee un poderoso sistema de imanes \cite{magnet} utilizado para curvar la trayectoria de las partículas cargadas, pudiendo así medir tanto su impulso de forma precisa como también su carga. El mismo consta de dos tipos de imanes superconductores, uno en forma solenoidal y otros tres forma toroidal, enfriados a una temperatura de 4.5 K para poder producir los fuertes campos magnéticos.
 
 El solenoide rodea al detector interno, y tiene un tamaño de 5.6 m de largo y 2.56 m de diámetro 
-% TMPChange \commentNotaIV
+\commentNotaIV
 , y con un espesor de apenas 4.5 cm. El mismo produce un campo magnético de 2 T en la dirección del haz, por lo que las partículas cargadas son curvadas en la dirección de $\phi$ 
-% TMPChange \tosolve{revisar}
-. Para minimizar la interacción de las partículas que lo atraviesan y ahorrar la mayor cantidad de material posible, el solenoide comparte la cámara de vacío del calorímetro de LAr % TMPChange (\tosolve{sección...})
+\tosolve{revisar}
+. Para minimizar la interacción de las partículas que lo atraviesan y ahorrar la mayor cantidad de material posible, el solenoide comparte la cámara de vacío del calorímetro de LAr (\tosolve{sección...})
 
 Los toroides de ATLAS se componen de ocho bobinas, que generan campos de hasta 4 T 
-% TMPChange \tosolve{mirar bien estos números} 
-en la dirección $\phi$, por lo que las partículas que lo atraviesan (muones) so curvadas en la dirección $\eta$. El más grande de ellos mide 25.3 m de largo y 20.1 m de diámetro, y se ubica en la parte más externa del detector \textit{barrel} intercalado con el Espectrómetro de Muones % TMPChange (\tosolve{seccion...})
+\tosolve{mirar bien estos números} 
+en la dirección $\phi$, por lo que las partículas que lo atraviesan (muones) so curvadas en la dirección $\eta$. El más grande de ellos mide 25.3 m de largo y 20.1 m de diámetro, y se ubica en la parte más externa del detector \textit{barrel} intercalado con el Espectrómetro de Muones (\tosolve{seccion...})
 . Los otros dos restantes se encuentran en la región \textit{endcap}, por fuera de los calorímetros, y miden 5.0 m de largo y 10.7 m de diámetro. 
 
 La Figura \ref{magnet_1} muestra el esquema de imanes del detector ATLAS.
@@ -289,7 +289,7 @@ El MS se compone de diferentes tipos de cámaras de detección de muones (ver Fi
 \label{trigger}
 
 Como se mencionó anteriormente, el diseño del LHC permite tener una frecuencia de cruces de haces de 40 MHz y más de 30 
-% TMPChange \tosolve{ver número}
+\tosolve{ver número}
 interacciones por cruce, lo que da una tasa de interacción protón-protón del orden del GHz. Tal frecuencia excede tanto las capacidades de cómputo del detector, como la capacidad de alamcenamiento de semejante cantidad de datos. Aún así, no todos los eventos son de interés para la colaboración, como por ejemplo la colisión elástica de los protones que no genera ningún tipo de decaimiento. El sistema de trigger del detector ATLAS \cite{TRIG-2016-01} es el encargado de filtrar esos eventos de poco interés y, junto con el sistema de adquisición de datos (DAQ), almacena aquellos que potencialmente pueden llegar a ser de interés para los distintos análisis, reduciendo así la frecuencia de flujo de datos al orden del kHz. El sistema de trigger cumple un rol central en el correcto funcionamiento de todo el experimento, ya que en definitiva determina qué tipos de análisis se realizarán y qué nueva física podrá encontrarse. El mismo debe tener una alta eficiencia, para no desechar eventos importantes, pero con el compromiso de mantener el flujo de datos relativamente bajo. 
 
 El sistema de trigger está compuesto por dos niveles consecutivos capaces de realizar una identificación de partículas cada vez más compleja: un primer nivel de trigger (L1) basado en hardware y luego un trigger basado en software de alto nivel (HLT). La Figura \ref{tdaq} muestra un esquema del sistema trigger y DAQ del detector ATLAS.
@@ -323,42 +323,42 @@ El software de ATLAS se desarrolla dentro un entorno C++ común llamado ATHENA \
 
 Las derivaciones de interés para esta tesis son las denominadas EGAM3, EGAM4 y SUSY1. Las EGAM3 y EGAM4 son utlizadas en esta tesis para la medida de la eficiencia de los trigger de fotones, ya que preseleccionan eventos con bosones $Z$ decayendo radiativamente a partir de electrones o muones respectivamente. 
 
-% TMPChangeUna selección resumida de ambas derivaciones se lista a continuación:
+Una selección resumida de ambas derivaciones se lista a continuación:
 
 
-% \begin{itemize}
-%   \item ...
-% \end{itemize}
-% EGAM3:
+\begin{itemize}
+  \item ...
+\end{itemize}
+EGAM3:
 
-%     OR of four separate selections:
-%         1a (for photon ID and iso efficiency):
-%             electrons: 2 OS central electrons, medium or LLH medium, pT>9.5 GeV, invariant mass > 40 GeV
-%             photon: ET>9.5 GeV 
-%         1b (for photon reco efficiency):
-%             electrons: at least 3 reco electrons with pT>9.5 ~GeV; 2 OS central electrons, medium or LLH medium, pT>9.5 GeV, invariant mass > 40 GeV 
-%         2 (for low-pT central e):
-%             electrons: 2 OS central electrons, one tight or LLH tight, pT>24.5 GeV, second one with pT>6.5 GeV, invariant mass > 40 GeV
-%             photon: ET>9.5 GeV, tight 
-%         3 (for low-pT forward e):
-%             electrons: 2 OS electrons, one central tight or LLH tight, pT>24.5 GeV, second one forward and pT>6.5 GeV, invariant mass > 40 GeV
-%             photon: ET>9.5 GeV, tight 
+    OR of four separate selections:
+        1a (for photon ID and iso efficiency):
+            electrons: 2 OS central electrons, medium or LLH medium, pT>9.5 GeV, invariant mass > 40 GeV
+            photon: ET>9.5 GeV 
+        1b (for photon reco efficiency):
+            electrons: at least 3 reco electrons with pT>9.5 ~GeV; 2 OS central electrons, medium or LLH medium, pT>9.5 GeV, invariant mass > 40 GeV 
+        2 (for low-pT central e):
+            electrons: 2 OS central electrons, one tight or LLH tight, pT>24.5 GeV, second one with pT>6.5 GeV, invariant mass > 40 GeV
+            photon: ET>9.5 GeV, tight 
+        3 (for low-pT forward e):
+            electrons: 2 OS electrons, one central tight or LLH tight, pT>24.5 GeV, second one forward and pT>6.5 GeV, invariant mass > 40 GeV
+            photon: ET>9.5 GeV, tight 
 
-% EGAM4:
+EGAM4:
 
-%     OR of two separate selections:
-%         1a (for photon ID and iso efficiency):
-%             muons: 2 OS "CommonGood" muons with pT>9.5 GeV, |eta|<2.7, invariant mass > 40 GeV
-%             photon: 1 photon with ET>9.5 GeV 
-%         1b (for photon reco efficiency):
-%             muons: 2 OS "CommonGood" muons with pT>9.5 GeV, |eta|<2.7, invariant mass > 40 GeV
-%             electron: at least 1 reco electrons with pT>9.5 GeV 
+    OR of two separate selections:
+        1a (for photon ID and iso efficiency):
+            muons: 2 OS "CommonGood" muons with pT>9.5 GeV, |eta|<2.7, invariant mass > 40 GeV
+            photon: 1 photon with ET>9.5 GeV 
+        1b (for photon reco efficiency):
+            muons: 2 OS "CommonGood" muons with pT>9.5 GeV, |eta|<2.7, invariant mass > 40 GeV
+            electron: at least 1 reco electrons with pT>9.5 GeV 
 
-% La derivación SUSY1 es utilizada en esta tesis para preseleccionar los eventos para la búsqueda de supersimetría. La misma preselecciona eventos que cumplan al menos uno de los siguientes requisitos:
+La derivación SUSY1 es utilizada en esta tesis para preseleccionar los eventos para la búsqueda de supersimetría. La misma preselecciona eventos que cumplan al menos uno de los siguientes requisitos:
 
-% \begin{itemize}
-%   \item ...
-% \end{itemize}
+\begin{itemize}
+  \item ...
+\end{itemize}
 
 
 \section{Simulaciones de Monte Carlo}
