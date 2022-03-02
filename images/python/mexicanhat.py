@@ -30,7 +30,7 @@ Z = 0.7*((R**2 - 1)**2)
 X, Y = R*np.cos(P), R*np.sin(P)
 
 
-surf = ax.plot_surface(X, Y, Z, cmap=cm.PuBu, linewidth=0, antialiased=True)
+surf = ax.plot_surface(X, Y, Z, cmap=cm.coolwarm, linewidth=0, antialiased=True)
 
 ax.set_zlim(0, 1)
 ax.set_xlabel(r'$\phi_\mathrm{real}$')
