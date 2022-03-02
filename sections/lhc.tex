@@ -202,7 +202,7 @@ Es el detector más externo del ID y está diseñado, no solo para detectar part
 % https://cds.cern.ch/record/1095927 calo_1.png
 % https://cds.cern.ch/record/2239809 calo_2.png
 
-El sistema de calorímetros de ATLAS está diseñado para medir la energía y la posición de las partículas, mediante la absorción de la energía depositada por las cascadas de partículas secundarias que estas generan en el material del mismo. Además, permite discriminar electrones y fotones de jets, detectar aquellas partículas neutras que no dejaron trazas en el ID y realizar la selección \textit{online} de eventos potencialmente interesantes (Ver Sistema de \textit{trigger}). Gracias a su amplia cobertura y a que absorbe la energía de prácticamente todas las partículas producidas (salvo muones) es de gran utilidad para poder medir el desbalance de energía transversa, magnitud discriminatoria utilizada en la mayoría de análisis fuera del SM.
+El sistema de calorímetros de ATLAS está diseñado para medir la energía y la posición de las partículas, mediante la absorción de la energía depositada por las cascadas de partículas secundarias que estas generan en el material del mismo. Además, permite discriminar electrones y fotones de jets, detectar aquellas partículas neutras que no dejaron trazas en el ID y realizar la selección \textit{online} de eventos potencialmente interesantes (Ver Sistema de trigger). Gracias a su amplia cobertura y a que absorbe la energía de prácticamente todas las partículas producidas (salvo muones) es de gran utilidad para poder medir el desbalance de energía transversa, magnitud discriminatoria utilizada en la mayoría de análisis fuera del SM.
 
 Está compuesto de un calorímetro electromagnético (ECAL) dedicado principalmente a la medida de las deposiciones de partículas como fotones y electrones (partículas interactuantes principalmente vía interacción EM), y otro hadrónico (HCAL) dedicado a las cascadas de partículas producto de la hadronización de los quarks o gluones (\textit{jets}) (partículas interactuantes principalmente vía interacción fuerte).
 
@@ -267,9 +267,9 @@ con la que llegan los hadrones al HCAL, queda allí depositada.
 
 % https://cds.cern.ch/record/1095929 muon_1.png
 
-El espectrómetro de muones (MS) se encuentra situado en la parte más externa del detector ATLAS. Esto se debe a que los muones de alto $p_{T}$ generados en el punto de interacción tienen un altísimo poder de penetración y son poco interactuantes, siendo las únicas partículas detectables capaces de llegar a este detector. El mismo se encuentra intercalado con el sistema de imanes toroidales, y está diseñado para obtener mediciones de alta precisión de la posición e impulso de los muones, y para una rápida identificación para el sistema de \textit{trigger}. Este es el subdetector más grande y el que le da a ATLAS su tamaño característico. 
+El espectrómetro de muones (MS) se encuentra situado en la parte más externa del detector ATLAS. Esto se debe a que los muones de alto $p_{T}$ generados en el punto de interacción tienen un altísimo poder de penetración y son poco interactuantes, siendo las únicas partículas detectables capaces de llegar a este detector. El mismo se encuentra intercalado con el sistema de imanes toroidales, y está diseñado para obtener mediciones de alta precisión de la posición e impulso de los muones, y para una rápida identificación para el sistema de trigger. Este es el subdetector más grande y el que le da a ATLAS su tamaño característico. 
 
-El MS se compone de diferentes tipos de cámaras de detección de muones (ver Figura \ref{muon_1}). Las \textit{Monitored Drift Tubes} (MDTs) son responsables de la mayoría de las medidas de precisión y cubren el rango de $|\eta|<2.7$. Funcionan de forma similar al TRT, con tubos llenos de un gas que ioniza y un ánodo central que recoge los electrones producidos, y el tiempo de deriva se asocia con la distancia a la traza. En la región \textit{endcap} se encuentran las \textit{Cathode Strip Chambers} (CSCs) que poseen alta resolución espacio-temporal y una cobertura $|\eta|>2.0$. Estas cámaras funcionan midiendo la carga depositada en un ánodo, producto de la cascada de electrones creados cerca del mismo. Las \textit{Resistive Plate Chamber} (RPCs) proveen una estimación rápida del momento de los muones al primer nivel del \textit{trigger} con una cobertura de $|\eta|<1.05$. Las RPCs miden la descarga ocasionada entre dos placas resistivas paralelas sometidas a una alta diferencia de potencial, tras la ionización del volumen de gas interno causada por el paso de muones energéticos. Finalmente se encuentra en la región \textit{endcap} las \textit{Thin Gap Chambers} (TGCs), similares en funcionamiento a las CSCs. Proveen también información al sistema de \textit{trigger} en esta región y tienen una cobertura de $|\eta|<2.4$.
+El MS se compone de diferentes tipos de cámaras de detección de muones (ver Figura \ref{muon_1}). Las \textit{Monitored Drift Tubes} (MDTs) son responsables de la mayoría de las medidas de precisión y cubren el rango de $|\eta|<2.7$. Funcionan de forma similar al TRT, con tubos llenos de un gas que ioniza y un ánodo central que recoge los electrones producidos, y el tiempo de deriva se asocia con la distancia a la traza. En la región \textit{endcap} se encuentran las \textit{Cathode Strip Chambers} (CSCs) que poseen alta resolución espacio-temporal y una cobertura $|\eta|>2.0$. Estas cámaras funcionan midiendo la carga depositada en un ánodo, producto de la cascada de electrones creados cerca del mismo. Las \textit{Resistive Plate Chamber} (RPCs) proveen una estimación rápida del momento de los muones al primer nivel del trigger con una cobertura de $|\eta|<1.05$. Las RPCs miden la descarga ocasionada entre dos placas resistivas paralelas sometidas a una alta diferencia de potencial, tras la ionización del volumen de gas interno causada por el paso de muones energéticos. Finalmente se encuentra en la región \textit{endcap} las \textit{Thin Gap Chambers} (TGCs), similares en funcionamiento a las CSCs. Proveen también información al sistema de trigger en esta región y tienen una cobertura de $|\eta|<2.4$.
 
 \begin{figure}
   \centering
@@ -305,6 +305,8 @@ Cuando un evento es aceptado por el L1, el mismo pasa a ser analizado por High L
 
 
 Los algoritmos del HLT constan de dos etapas: los algoritmos de reconstrucción rápida ejecutados primero, y luego los algoritmos de reconstrucción de precisión similar a los que se utilizan en la selección offline. Los algoritmos de reconstrucción rápida utilizan la información de los calorímetros y de las trazas sólo dentro de la RoI para realizar la selección e identificación de los candidatos, y realizar el rechazo de fondo lo más rápido y temprano posible. Si la partícula candidata pasa los criterios definidos por la selección de reconstrucción rápida, se ejecutan los algoritmos de selección de precisión. Estos tienen acceso a la información del detector fuera de la RoI, con la máxima granularidad e incluyendo detalles sobre la calibración de energía de los calorímetros, la alineación de los subdetectores y el mapa de campo magnético. Los eventos aceptados por el HLT son finalmente grabados a disco y distribuidos, accesibles offline para todos los diferentes estudios y análisis.
+
+\tosolve{Definir prescale}
 
 \section{Modelo computacional y distribución de datos}
 
@@ -397,9 +399,9 @@ puede ser tratado perturbativamente.
   \caption{Esquema de una colisión protón-protón simulada por un generador de
 eventos de Monte-Carlo. La región roja en el centro representa la dispersión dura,
 rodeada por una estructura parecida a un árbol que representa al Bremsstrahlung
-como es simulado por los PS. La parte violeta indica un evento secunda-
-rio de dispersión dura. Las transiciones de partones a hadrones están representadas
-por las partes verdes claras, mientras que las partes verdes oscuras indican el de-
-caimiento de los hadrones. Finalmente, las líneas amarillas señalan la radiación de
-fotones\cite{mc_simulation}.}
+como es simulado por los PS. La parte violeta indica un evento secundario 
+de dispersión dura. Las transiciones de partones a hadrones están representadas
+por las partes verdes claras, mientras que las partes verdes oscuras indican el 
+decaimiento de los hadrones. Finalmente, las líneas amarillas señalan la radiación de
+fotones\cite{mc_simulation}. \tosolve{Mejorar imagen}}
 \end{figure}
