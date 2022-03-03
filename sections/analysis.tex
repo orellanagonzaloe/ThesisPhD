@@ -4,48 +4,44 @@
 
 
 % / Tesis lic / %
+% El análisis para el cual está orientada esta Tesis consiste en la búsqueda de Supersimetría en eventos con un fotón aislado muy energético, jets y gran cantidad de energía faltante en estado final \cite{Alonso:2147473,ATLAS:2016fks,Collaboration:2198651}. La estrategia general de la búsqueda consiste en el conteo del número de eventos observado en exceso sobre el SM en una cierta región del espacio de observables rica en eventos de la señal considerada.
 
-El análisis para el cual está orientada esta Tesis consiste en la búsqueda de Supersimetría en eventos con un fotón aislado muy energético, jets y gran cantidad de energía faltante en estado final \cite{Alonso:2147473,ATLAS:2016fks,Collaboration:2198651}. La estrategia general de la búsqueda consiste en el conteo del número de eventos observado en exceso sobre el SM en una cierta región del espacio de observables rica en eventos de la señal considerada.
 
+El trabajo realizado en esta Tesis se centra en la búsqueda de Supersimetría en eventos con un fotón energético y aislado, jets y gran cantidad de energía faltante en el estado final. La estrategia general de la búsqueda consiste en el conteo del número de eventos observado en exceso sobre el SM en una cierta región del espacio de observables rica en eventos de la señal considerada, método descripto en la Sección \ref{sec:statistical}. El objetivo es poder discriminar de los datos observados aquellos que podrían ser producto de un proceso supsersimétricos (señal) de aquellos producto de procesos del SM (fondo).
 
-\section{Identificación de eventos de fondo}
+% \section{Motivación teórica del análisis}
 
-Para un correcto procedimiento, es necesario conocer los procesos del SM que tengan un estado final equivalente a de la señal buscada. Estos eventos toman el rol de fondo en el contexto de un análisis de búsqueda de SUSY. Para este análisis, son procesos que tienen un fotón, jets y energía faltante en el estado final, y pueden dividirse en varias categorías. Por un lado, los procesos que dan lugar a eventos con un fotón y energía faltante real, es decir, los que se llaman fondos irreducibles. Estos son:
+El modelo supersimétrico que motiva a la presente búsqueda consiste en un modelo GGM, por lo tanto la LSP es el gravitino cuya masa será del orden de unos pocos eV. La NLSP es en este caso el neutralino más liviano, que va a consistir en un estado de gauge mezcla de bino y higgsino, lo que le permite acoplar a fotones, bosones $Z$ y bosones de higgs. Este análisis en particular se centra en la fenomenología en la cual el netrualino decae en proporciones casi iguales tanto a fotones como a higgs (más sus correspondientes gravitino). Para la producción de partículas supersimétricas a partir de la colisión $pp$ se consideró inicialmente la producción de gluinos. La parte del análisis que comprende la producción de gauginos se describe en el Capítulo \ref{cap:analysis_EWK}. Los gluinos pueden decaer subsecuentemente en partículas más livianas, hasta llegar a las NLSP y luego a la LSP, produciendo jets a su paso y generando el estado final buscado.
+
+\section{Fondos del Modelo Estándar}
+
+Los procesos del SM que son de interés como fondo para el análisis son aquellos que tienen un estado final igual al de la señal: fotones, jets y energía transversa faltante. Los mismos pueden clasificarse en distintos tipos. Por un lado, los procesos que dan lugar a eventos con un fotón y energía faltante real, es decir, los que se llaman fondos irreducibles. En este caso la energía la faltante proviene de los neutrinos, por lo que se componen principalmente de partículas que decaen a ellos, junto con fotones y jets de la ISR. Los procesos que cumplen con estos requisitos son la producción de bosones $Z$, $W$ y pares de top quarks que decaen subsecuentemente a bosones $W$:
 
 \begin{itemize}
-
-	\item $Z(\rightarrow \nu\nu)$ + $\gamma$
-
-	\item $W (\rightarrow l\nu)$ + $\gamma$
-
-	\item $t \overline{t}$ + $\gamma$
-
+	\item $Z(\rightarrow \nu\nu) + \gamma + \text{jets}$
+  \item $Z(\rightarrow \nu\nu) + \gamma + \gamma + \text{jets}$
+	\item $W(\rightarrow l\nu) + \gamma + \text{jets}$
+  \item $W(\rightarrow l\nu) + \gamma + \gamma + \text{jets}$
+	\item $t\bar{t} + \gamma + \text{jets}$
 \end{itemize}
 
-También es posible que, aunque el proceso no tenga fotones en el estado final, un electrón o un jet sean identificados como un fotón, dando lugar a un estado final idéntico al buscado. En esta categoría están:
+Por otro lado es posible tener procesos que si bien no se producen fotones, unos de los objetos presentes en el mismo sea erróneamente reconstruido como tal, y genere un estado final igual al buscado pero con fotones `falsos'. Los objetos que pueden ser erróneamente reconstruidos como fotones en este caso pueden ser electrones o jets, por lo que hay que considerar aquellos procesos en los que se produzcan junto a neutrinos. Estos pueden ser:
 
 \begin{itemize}
-
-	\item $W (\rightarrow l\nu)$ + jets
-
-	\item $Z (\rightarrow \nu\nu)$ + jets
-
-	\item $t \overline{t}$
-
-	\item $WW$, $ZZ$, $WZ$
-
+  \item $Z(\rightarrow \nu\nu) + \text{jets}$
+  \item $W(\rightarrow l\nu) + \text{jets}$
+  \item $t\bar{t} + \text{jets}$
 \end{itemize}
 
-Y por último, también puede haber procesos que a pesar de no generar energía faltante real, poseen lo que se denomina energía faltante instrumental, proveniente generalmente de la incorrecta reconstrucción de la energía de los jets. De esta manera, pueden dar lugar a eventos con el estado final de interés, los procesos QCD:
+Por último, puede ocurrir que si bien en el proceso no hayan neutrinos, una reconstrucción errónea de la energía de los distintos objetos presentes en el evento genere un desbalance a la hora de calcular la energía transversa faltante, y por ende tengan una cantidad no despreciable de la misma denominada energía transversa faltante instrumental. Este tipo de eventos puede ocurrir también en simultáneo junto con fotones `falsos', por lo que existen diversos procesos que cumplan estos requisitos, entre ellos se encuentran:
 
 \begin{itemize}
-
-	\item $\gamma$ + jets
-
-	\item multijet, con alguno de los jets identificado como fotón
-
-	\item $Z(\rightarrow ll)$ + jets, donde un leptón o un jet es identificado como un fotón
-
+	\item Producción de jets
+	\item $\gamma + \text{jets}$
+  \item $\gamma + \gamma + \text{jets}$
+	\item $Z(\rightarrow ll) + \text{jets}$
+  \item $Z(\rightarrow ll) + \gamma + \text{jets}$
+  \item $Z(\rightarrow ll) + \gamma + \gamma + \text{jets}$
 \end{itemize}
 
 
