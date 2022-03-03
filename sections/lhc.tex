@@ -24,7 +24,7 @@ La producción de protones comienza extrayendo los electrones de un contenedor c
 
 El último de los aceleradores es el LHC, donde los protones circulan en direcciones opuestas por cavidades de ultra alto vacío a una presión de $10^{-10}$ torr. El mismo cuenta con $1232$ dipolos magnéticos superconductores de 15 m de largo enfriados a $1.9$ K mediante helio superfluído, que generan un campo magnético de $8.4$ T y permite mantener en su órbita circular a los protones. Los dipolos están equipados con sextupolos, octupolos y decapolos, que permiten corregir las pequeñas imperfecciones del campo magnético en las extremidades de los dipolos. Para aumentar la probabilidad de colisión, existe un sistema de focalización de los haces en las proximidades de los detectores, que estrecha el camino que recorren los protones. El mismo consiste de $392$ cuadrupolos magnéticos que generan campos magnéticos de $6.8$ T. 
 
-Los protones son acelerados mediante cavidades de radiofrecuencia que generan un voltaje longitudinal a una frecuencia específica. En esa frecuencia los protones sincronizados con la energía deseada no van sufrir aceleración alguna, mientras que aquellos desincronizados van a ser acelerados o desacelerados hasta obtener la energía deseada. De esta forma el haz de protones se divide en paquetes discretos denominados \textit{bunches}, cada uno conteniendo del orden de 10$^{11}$ protones. El número de \textit{bunches} totales posibles en un haz con un espaciado de 25 ns es de 3564 \footnote{Se obtiene al dividir la frecuencia de las cavidades, 400 MHz, por la frecuencia de revolución, 11 kHz, y considerando que sólo 1 de cada 10 \textit{bunches} es llenado para lograr el espaciado deseado}. Considerando los tiempos que se necesitan para en la inyección y descarte del haz, junto con los tiempos que necesita cada detector para procesar la información, no todos los \textit{bunches} son llenados, sino que se dejan `espacios' definidos por diferentes esquemas, dejando así el número efectivo de \textit{bunches} llenos a 2808.
+Los protones son acelerados mediante cavidades de radiofrecuencia que generan un voltaje longitudinal a una frecuencia específica. En esa frecuencia los protones sincronizados con la energía deseada no van sufrir aceleración alguna, mientras que aquellos desincronizados van a ser acelerados o desacelerados hasta obtener la energía deseada. De esta forma el haz de protones se divide en paquetes discretos denominados \textit{bunches}, cada uno conteniendo del orden de 10$^{11}$ protones. El número de bunches totales posibles en un haz con un espaciado de 25 ns es de 3564 \footnote{Se obtiene al dividir la frecuencia de las cavidades, 400 MHz, por la frecuencia de revolución, 11 kHz, y considerando que sólo 1 de cada 10 bunches es llenado para lograr el espaciado deseado}. Considerando los tiempos que se necesitan para en la inyección y descarte del haz, junto con los tiempos que necesita cada detector para procesar la información, no todos los bunches son llenados, sino que se dejan `espacios' definidos por diferentes esquemas, dejando así el número efectivo de bunches llenos a 2808.
 
 Los aceleradores pueden ser caracterizados no solo por su energía de centro de masa sino también por su luminosidad instantánea ($\mathcal{L}$), que mide el número de colisiones que ocurren en un período de tiempo y se define como: 
 
@@ -33,26 +33,25 @@ Los aceleradores pueden ser caracterizados no solo por su energía de centro de 
 \end{equation}
 
 \noindent
-donde $f_{\text{rev}}$ es la frecuencia de revolución ($\sim$11 kHz), $n_{b}$ es el número de \textit{bunches} por haz, $N_{i}$ es el número de partículas en cada \textit{bunch} y \textit{A} es la sección efectiva del haz, que puede expresarse en término de los parámetros del acelerador como:
+donde $f_{\text{rev}}$ es la frecuencia de revolución ($\sim$11 kHz), $n_{b}$ es el número de bunches por haz, $N_{i}$ es el número de partículas en cada bunch y $A$ es la sección efectiva del haz, que puede expresarse en término de los parámetros del acelerador como:
 
 \begin{equation}
 A=\frac{4 \pi \epsilon_{n}\beta^{*}}{\gamma F}
 \end{equation} 
 
 \noindent
-donde $\epsilon_{n}$ es la emitancia transversal normalizada (la dispersión transversal media de las partículas del  haz en el espacio de coordenadas e impulsos), $\beta^{*}$ es la función de amplitud en el punto de interacción, relacionada al poder de focalización de los cuadrupolos), $\gamma$ es el factor relativista de Lorentz y \textit{F} es un factor de reducción geométrico, debido al ángulo de cruce de los haces en el punto de interacción.
+donde $\epsilon_{n}$ es la emitancia transversal normalizada (la dispersión transversal media de las partículas del  haz en el espacio de coordenadas e impulsos), $\beta^{*}$ es la función de amplitud en el punto de interacción, relacionada al poder de focalización de los cuadrupolos), $\gamma$ es el factor relativista de Lorentz y $F$ es un factor de reducción geométrico, debido al ángulo de cruce de los haces en el punto de interacción.
 
 El número total de eventos esperados para un dado proceso con una sección eficaz $\sigma$, se obtiene como:
 
 \begin{equation}
 N=\sigma \int \mathcal{L} dt
 \end{equation}	
-
-\noindent
+%
 donde al factor integral se lo conoce como luminosidad integrada.
 
 El LHC comenzó a funcionar en 2010 en lo que se denominó \textit{Run 1}, a una energía de de centro de masa de 7 TeV y logrando recolectar una luminosidad de \tosolve{Agregar lumi del Run 1}. En el 2013 finaliza la toma de datos y comienza el \textit{Long shutdown 1}, período que se utilizó para realizar distintas actualizaciones preparándose para la siguiente toma de datos. En el 2015 comenzó el \textit{Run 2} que operaba a una energía de de centro de masa de 13 TeV y logró recolectar \tosolve{Agregar lumi del Run 2}, finalizando en el 2018 dando lugar al \textit{Long shutdown 2}. Este último estaba previsto con una duración de dos años, pero dada la situación epidemiológica de COVID-19 el mismo se terminó extendiendo hasta 2022.
-Los planes a futuro del LHC preveen un tercer \textit{run} a 14 TeV, y luego ingresar en un nuevo período de inactividad para realizar las mejoras necesarias para el \textit{High Luminosity LHC}. \tosolve{Se puede agregar la típica imagen con los períodos.}
+Los planes a futuro del LHC preveen el \textit{Run 3} a 14 TeV, y luego ingresar en un nuevo período de inactividad para realizar las mejoras necesarias para el \textit{High Luminosity LHC}. \tosolve{Se puede agregar la típica imagen con los períodos.}
 
 
 
@@ -70,7 +69,7 @@ A continuación se ubica el sistema de calorímetros compuesto por el calorímet
 
 En la parte más externa, se encuentra el espectrómetro de muones (MS) diseñado para detectar la producción de muones y además medir su momento. Este último es el que le da a ATLAS su tamaño característico de $45$ m de largo y $25$ m de alto. Intercalado con el MS se encuentra un sistema de imanes toroidales, que generan un campo magnético de $4$ T para curvar la trayectoria de los muones hacia el final del detector.
 
-El detector ATLAS se divide geométricamente en dos regiones, la parte central denominada \textit{barrel} y la región extrema \textit{endcap}. En la región \textit{barrel} los detectores se ubican en forma de cilindros concéntricos alrededor del eje del haz, mientras en la región \textit{endcap} se disponen como discos perpendiculares a la dirección del haz. 
+El detector ATLAS se divide geométricamente en dos regiones, la parte central denominada \textit{barrel} y la región extrema \textit{endcap}. En la región barrel los detectores se ubican en forma de cilindros concéntricos alrededor del eje del haz, mientras en la región endcap se disponen como discos perpendiculares a la dirección del haz. 
 
 La Figura \ref{atlas_1} detalla todas las componentes que integran al detector ATLAS y son descriptas en detalle a en las siguientes secciones.
 
@@ -83,22 +82,20 @@ La Figura \ref{atlas_1} detalla todas las componentes que integran al detector A
 
 \section{Sistema de coordenadas}
 
-El sistema de coordenadas de ATLAS corresponde a un sistema cartesiano, cuyo origen coincide con el punto de interacción nominal ubicado en el centro del detector. El eje \textit{z} está orientado con hacia la dirección del haz, el eje \textit{x} se define desde el punto de interacción hacia el centro del anillo del LHC, y el eje \textit{y} se define apuntando hacia la superficie terrestre. Es conveniente además definir un sistema de coordenadas cilíndricas donde el radio \textit{R} representa la distancia perpendicular al haz, el ángulo azimutal $\phi$ es medido alrededor del eje del haz, y el ángulo polar $\theta$ se mide con respecto al eje del haz perpendicular al eje \textit{x} \tosolve{Agregar imagen de esto}. 
+El sistema de coordenadas de ATLAS corresponde a un sistema cartesiano, cuyo origen coincide con el punto de interacción nominal ubicado en el centro del detector. El eje $z$ está orientado con hacia la dirección del haz, el eje $x$ se define desde el punto de interacción hacia el centro del anillo del LHC, y el eje $y$ se define apuntando hacia la superficie terrestre. Es conveniente además definir un sistema de coordenadas cilíndricas donde el radio $R$ representa la distancia perpendicular al haz, el ángulo azimutal $\phi$ es medido alrededor del eje del haz, y el ángulo polar $\theta$ se mide con respecto al eje del haz perpendicular al eje $x$ \tosolve{Agregar imagen de esto}. 
 
 Una variable utilizada en física experimental de altas energías es la rapidez:
 
 \begin{equation}
 y=\frac{1}{2}\ln\left( \frac{E+p_{z}}{E-p_{z}}\right)
 \end{equation}
-
-\noindent
-donde \textit{E} es la energía total de la partícula y $p_{z}$ es la componente en la dirección del haz de su impulso\footnote{Esta definición es un caso particular de la rapidez utilizada en relatividad especial, cuando se realiza una transformación en la dirección del haz del sistema de laboratorio a un sistema donde la partícula solo se mueve perpendicular al haz.}. En el límite de altas energías, en donde la masa de la partícula es despreciable frente a su momento, es posible aproximarla a la llamada pseudorapidez $\eta$:
+%
+donde $E$ es la energía total de la partícula y $p_{z}$ es la componente en la dirección del haz de su impulso\footnote{Esta definición es un caso particular de la rapidez utilizada en relatividad especial, cuando se realiza una transformación en la dirección del haz del sistema de laboratorio a un sistema donde la partícula solo se mueve perpendicular al haz.}. En el límite de altas energías, en donde la masa de la partícula es despreciable frente a su momento, es posible aproximarla a la llamada pseudorapidez $\eta$:
 
 \begin{equation}
 \eta =-\ln \tan\left( \frac{\theta}{2} \right)
 \end{equation}
-
-\noindent
+%
 estando completamente relacionada con el ángulo $\theta$. La razón detrás de esta transformación de coordenadas se debe a que la multiplicidad de partículas producidas es aproximadamente constante como función de $\eta$, y que la diferencia de pseudorapidez entre dos partículas es invariante frente a transformaciones de Lorentz a lo largo de la dirección del haz. 
 
 % dR y editar parrafo que sigue!
@@ -108,9 +105,8 @@ En el caso de colisiones hadrónicas, la fracción del impulso del protón adqui
 \begin{equation}
 p_{T}=p\sin\theta=\frac{p}{\cosh{\eta}}
 \end{equation}
-
-\noindent
-donde \textit{p} es el momento de la partícula. De esta forma es posible describir la cinemática de cada partícula en términos de ($\pt$, $\eta$, $\phi$)
+%
+donde $p$ es el momento de la partícula. De esta forma es posible describir la cinemática de cada partícula en términos de ($\pt$, $\eta$, $\phi$)
 
 \section{Sistema de imanes}
 
@@ -122,7 +118,7 @@ y con un espesor de apenas 4.5 cm. El mismo produce un campo magnético de 2 T e
 
 Los toroides de ATLAS se componen de ocho bobinas, que generan campos de hasta 4 T 
 \tosolve{Revisar este número ya que a veces se utiliza el campo promedio en una longitud} 
-en la dirección $\phi$, por lo que las partículas que lo atraviesan (prácticamente solo muones) son curvadas en la dirección $\eta$. El más grande de ellos mide 25.3 m de largo y 20.1 m de diámetro, y se ubica en la parte más externa del detector \textit{barrel} intercalado con el Espectrómetro de Muones descripto en las siguientes secciones. Los otros dos restantes se encuentran en la región \textit{endcap}, por fuera de los calorímetros, y miden 5.0 m de largo y 10.7 m de diámetro. 
+en la dirección $\phi$, por lo que las partículas que lo atraviesan (prácticamente solo muones) son curvadas en la dirección $\eta$. El más grande de ellos mide 25.3 m de largo y 20.1 m de diámetro, y se ubica en la parte más externa del detector barrel intercalado con el Espectrómetro de Muones descripto en las siguientes secciones. Los otros dos restantes se encuentran en la región endcap, por fuera de los calorímetros, y miden 5.0 m de largo y 10.7 m de diámetro. 
 
 La Figura \ref{magnet_1} muestra el esquema de imanes del detector ATLAS.
 
@@ -170,9 +166,9 @@ Las \Cref{pixel_1,pixel_23} muestran un esquema del detector interno.
 
 \subsubsection{Detector de píxeles}
 
-El detector de píxeles fue construido para medir la posición de las trazas de partículas cargadas con la más alta precisión posible y es de vital importancia para la reconstrucción de los vértices primarios y secundarios. En la región \textit{barrel} el detector se compone de tres capas cilíndricas, mientras que la \textit{endcap} de tres discos. La capa más interna, denominada \textit{B-Layer}, se encuentra a $50.5$ mm del punto de interacción. El principio de detección para partículas cargadas es la medida de la deposición de la carga inducida en una capa de silicio por ionización. El sistema contiene un total de $80$ millones de sensores, cada uno con una resolución de $10\:\mu$m ($R-\phi$) y $115\:\mu$m ($z$).
+El detector de píxeles fue construido para medir la posición de las trazas de partículas cargadas con la más alta precisión posible y es de vital importancia para la reconstrucción de los vértices primarios y secundarios. En la región barrel el detector se compone de tres capas cilíndricas, mientras que la endcap de tres discos. La capa más interna, denominada \textit{B-Layer}, se encuentra a $50.5$ mm del punto de interacción. El principio de detección para partículas cargadas es la medida de la deposición de la carga inducida en una capa de silicio por ionización. El sistema contiene un total de $80$ millones de sensores, cada uno con una resolución de $10\:\mu$m ($R-\phi$) y $115\:\mu$m ($z$).
 
-Luego del Run 1 la luminosidad del LHC aumentó notablemente, lo que podía significar un daño por radiación en los detectores internos. En vez de reemplazar las partes del detector de píxeles que podían ser dañadas, se decidió colocar una capa adicional entre el detector de píxeles y la tubería donde circulan los protones denominado \textit{Insertable B-Layer} \cite{ATLAS-TDR-2010-19}. El objetivo del mismo es mejorar la eficiencia en la identificación de trazas, vértices, y en la identificación de \textit{bottom} quarks, que decaen típicamente fuera del radio del IBL.
+Luego del Run 1 la luminosidad del LHC aumentó notablemente, lo que podía significar un daño por radiación en los detectores internos. En vez de reemplazar las partes del detector de píxeles que podían ser dañadas, se decidió colocar una capa adicional entre el detector de píxeles y la tubería donde circulan los protones denominado \textit{Insertable B-Layer} \cite{ATLAS-TDR-2010-19}. El objetivo del mismo es mejorar la eficiencia en la identificación de trazas, vértices, y en la identificación de bottom quarks, que decaen típicamente fuera del radio del IBL.
 
 El IBL está compuesto por $8$ millones de chips de rápida lectura y con sensores de silicio, que detectan el paso de partículas cargadas mediante la deposición de carga inducida. El tamaño de los píxeles es de $50\times250\:\mu$m$^{2}$, con una resolución de $8\:\mu$m ($R-\phi$) y $40\:\mu$m ($z$). La distancia entre el IBL y la tubería es de $0.2$ mm, y entre el tubo y el detector de píxeles es de $1.9$ mm. 
 
@@ -189,22 +185,22 @@ La Figura \ref{pixel_3} muestra un esquema del detector de trazas.
 
 \subsubsection{Detector Semiconductor de Trazas (SCT)}
 
-Se encuentra por fuera del detector de píxeles y está diseñado para medir las trazas con alta precisión en la zona intermedia del detector. A diferencia del detector de píxeles, estos sensores de silicio están segmentados en micro bandas, dado que es más baja multiplicidad de partículas es posible reducir la resolución al costo de aumentar el área de cobertura. La resolución de $17\:\mu$m ($R-\phi$) y $580\:\mu$m ($z$). En la región \textit{barrel} los módulos de SCT están dispuestos en 4 capas concéntricas, mientras que en la región \textit{endcap} consiste en 9 discos transversales al eje del haz.
+Se encuentra por fuera del detector de píxeles y está diseñado para medir las trazas con alta precisión en la zona intermedia del detector. A diferencia del detector de píxeles, estos sensores de silicio están segmentados en micro bandas, dado que es más baja multiplicidad de partículas es posible reducir la resolución al costo de aumentar el área de cobertura. La resolución de $17\:\mu$m ($R-\phi$) y $580\:\mu$m ($z$). En la región barrel los módulos de SCT están dispuestos en 4 capas concéntricas, mientras que en la región endcap consiste en 9 discos transversales al eje del haz.
 
 % the modules in the barrels are slightly overlapping and rotated to provide full azimuthal coverage
 
 \subsubsection{Detector de Radiación de Transición (TRT)}
 
-Es el detector más externo del ID y está diseñado, no solo para detectar partículas cargadas, sino también para distinguir entre partículas pesadas y livianas. El TRT se compone de tubos detectores de $4$ mm de diámetro, con un gas que ioniza al ser atravesado por partículas cargadas. Los electrones producidos son colectados por una ánodo, y el tiempo de deriva es una medida de la distancia a la traza del mismo. Además, los tubos están rodeados de fibras de polipropileno con un índice de refracción diferente, por lo que las partículas que atraviesan el detector emiten radiación con una intensidad proporcional a $\gamma=E/m$, permitiendo al TRT  distinguir partículas cargadas pesadas ($\pi^{\pm}$) de aquellas más livianas ($e^{\pm}$). La región \textit{barrel} contiene $50000$ tubos paralelos al eje del haz y la región \textit{endcap} $320000$ tubos orientados radialmente. Su resolución es de $0.17$ mm.
+Es el detector más externo del ID y está diseñado, no solo para detectar partículas cargadas, sino también para distinguir entre partículas pesadas y livianas. El TRT se compone de tubos detectores de $4$ mm de diámetro, con un gas que ioniza al ser atravesado por partículas cargadas. Los electrones producidos son colectados por una ánodo, y el tiempo de deriva es una medida de la distancia a la traza del mismo. Además, los tubos están rodeados de fibras de polipropileno con un índice de refracción diferente, por lo que las partículas que atraviesan el detector emiten radiación con una intensidad proporcional a $\gamma=E/m$, permitiendo al TRT  distinguir partículas cargadas pesadas ($\pi^{\pm}$) de aquellas más livianas ($e^{\pm}$). La región barrel contiene $50000$ tubos paralelos al eje del haz y la región endcap $320000$ tubos orientados radialmente. Su resolución es de $0.17$ mm.
 
 \subsection{Calorímetros}
 
 % https://cds.cern.ch/record/1095927 calo_1.png
 % https://cds.cern.ch/record/2239809 calo_2.png
 
-El sistema de calorímetros de ATLAS está diseñado para medir la energía y la posición de las partículas, mediante la absorción de la energía depositada por las cascadas de partículas secundarias que estas generan en el material del mismo. Además, permite discriminar electrones y fotones de jets, detectar aquellas partículas neutras que no dejaron trazas en el ID y realizar la selección \textit{online} de eventos potencialmente interesantes (Ver Sistema de trigger). Gracias a su amplia cobertura y a que absorbe la energía de prácticamente todas las partículas producidas (salvo muones) es de gran utilidad para poder medir el desbalance de energía transversa, magnitud discriminatoria utilizada en la mayoría de análisis fuera del SM.
+El sistema de calorímetros de ATLAS está diseñado para medir la energía y la posición de las partículas, mediante la absorción de la energía depositada por las cascadas de partículas secundarias que estas generan en el material del mismo. Además, permite discriminar electrones y fotones de jets, detectar aquellas partículas neutras que no dejaron trazas en el ID y realizar la selección online de eventos potencialmente interesantes (Ver Sistema de trigger). Gracias a su amplia cobertura y a que absorbe la energía de prácticamente todas las partículas producidas (salvo muones) es de gran utilidad para poder medir el desbalance de energía transversa, magnitud discriminatoria utilizada en la mayoría de análisis fuera del SM.
 
-Está compuesto de un calorímetro electromagnético (ECAL) dedicado principalmente a la medida de las deposiciones de partículas como fotones y electrones (partículas interactuantes principalmente vía interacción EM), y otro hadrónico (HCAL) dedicado a las cascadas de partículas producto de la hadronización de los quarks o gluones (\textit{jets}) (partículas interactuantes principalmente vía interacción fuerte).
+Está compuesto de un calorímetro electromagnético (ECAL) dedicado principalmente a la medida de las deposiciones de partículas como fotones y electrones (partículas interactuantes principalmente vía interacción EM), y otro hadrónico (HCAL) dedicado a las cascadas de partículas producto de la hadronización de los quarks o gluones (jets) (partículas interactuantes principalmente vía interacción fuerte).
 
 La Figura \ref{calo_1} muestra un esquema de los calorímetros del detector ATLAS.
 
@@ -221,10 +217,10 @@ El ECAL en un calorímetro de muestreo (inhomogéneo) no compensado, que utiliza
 
 
 El ECAL está dividido en dos mitades dentro de la
-región \textit{barrel} ($\eta < 1.475$) y en dos componentes (una a cada
-lado) en la región \textit{endcap} ($1.375 < |\eta| < 3.2$) En la región de transición entre el \textit{barrel} y el \textit{endcap} se encuentra una zona no instrumentada, por donde se conecta el detector. Esta región, denominada \textit{crack}, está comprendida entre $1.37 < |\eta| < 1.52$. Es por este motivo que la mayoría de los análisis se requiere que los candidatos a fotones/electrones estén fuera de la región \textit{crack}.
+región barrel ($\eta < 1.475$) y en dos componentes (una a cada
+lado) en la región endcap ($1.375 < |\eta| < 3.2$) En la región de transición entre el barrel y el endcap se encuentra una zona no instrumentada, por donde se conecta el detector. Esta región, denominada \textit{crack}, está comprendida entre $1.37 < |\eta| < 1.52$. Es por este motivo que la mayoría de los análisis se requiere que los candidatos a fotones/electrones estén fuera de la región crack.
 
-En la región diseñada para medidas de precisión ($\eta < 2.5$, excluyendo el \textit{crack}),
+En la región diseñada para medidas de precisión ($\eta < 2.5$, excluyendo el crack),
 el ECAL está segmentado en tres capas longitudinales. La primera capa consiste de
 bandas con fina granularidad (en la dirección de $\eta$), para discriminar entre fotones
 aislados y pares de fotones espacialmente cercanos provenientes del decaimiento
@@ -243,12 +239,12 @@ sólo parte de la componente hadrónica llega al HCAL.
 
 El HCAL es un conjunto de calorímetros que rodean al ECAL, extendiendo la aceptancia del calorímetro de ATLAS hasta cubrir prácticamente la totalidad de ángulo sólido del punto de colisión.
 
-El primero de los calorímetros se denomina \textit{Tile Calorimeter}, es un calorímetro de muestreo que utiliza acero como material absorbente y tejas centelladoras plásticas como material activo, se encuentra en la región \textit{barrel} y está dividido en dos partes que tienen una cobertura de $|\eta|<1.0$ y $0.8<|\eta|<1.7$ respectivamente. 
+El primero de los calorímetros se denomina \textit{Tile Calorimeter}, es un calorímetro de muestreo que utiliza acero como material absorbente y tejas centelladoras plásticas como material activo, se encuentra en la región barrel y está dividido en dos partes que tienen una cobertura de $|\eta|<1.0$ y $0.8<|\eta|<1.7$ respectivamente. 
 % Los centelladores, dispuesto en un arreglo
 % periódico, se conectan a una fibra óptica que trasporta la luz producida por el paso
 % de partículas, hacia un tubo fotomultiplicador. Este arreglo se extiende, en R, de los
 % 2.28 a los 4.25 m. 
-En la región \textit{endcap} se encuentra un calorímetro hadrónico de muestreo (HEC) con placas de cobre como absorbente y argón líquido como material activo, que consiste en dos ruedas, una atrás de la otra con las placas planas de Cu dispuestas perpendicularmente al eje del haz, con un radio de 2.3 m. Finalmente se encuentra el Forward Calorimeter (FCAL), un calorímetro de muestreo que extiende la cobertura del sistema a $|\eta|<4.9$, coaxial
+En la región endcap se encuentra un calorímetro hadrónico de muestreo (HEC) con placas de cobre como absorbente y argón líquido como material activo, que consiste en dos ruedas, una atrás de la otra con las placas planas de Cu dispuestas perpendicularmente al eje del haz, con un radio de 2.3 m. Finalmente se encuentra el Forward Calorimeter (FCAL), un calorímetro de muestreo que extiende la cobertura del sistema a $|\eta|<4.9$, coaxial
 al eje del haz y ubicado a 4.7 m a cada lado del punto de interacción. El material
 principal de los módulos es argón líquido (con cobre o tungsteno), y si bien no se
 utiliza para mediciones de precisión, provee información para el cómputo de la energía transversa faltante y la reconstrucción de jets en regiones muy cercanas al eje
@@ -269,7 +265,7 @@ con la que llegan los hadrones al HCAL, queda allí depositada.
 
 El espectrómetro de muones (MS) se encuentra situado en la parte más externa del detector ATLAS. Esto se debe a que los muones de alto $p_{T}$ generados en el punto de interacción tienen un altísimo poder de penetración y son poco interactuantes, siendo las únicas partículas detectables capaces de llegar a este detector. El mismo se encuentra intercalado con el sistema de imanes toroidales, y está diseñado para obtener mediciones de alta precisión de la posición e impulso de los muones, y para una rápida identificación para el sistema de trigger. Este es el subdetector más grande y el que le da a ATLAS su tamaño característico. 
 
-El MS se compone de diferentes tipos de cámaras de detección de muones (ver Figura \ref{muon_1}). Las \textit{Monitored Drift Tubes} (MDTs) son responsables de la mayoría de las medidas de precisión y cubren el rango de $|\eta|<2.7$. Funcionan de forma similar al TRT, con tubos llenos de un gas que ioniza y un ánodo central que recoge los electrones producidos, y el tiempo de deriva se asocia con la distancia a la traza. En la región \textit{endcap} se encuentran las \textit{Cathode Strip Chambers} (CSCs) que poseen alta resolución espacio-temporal y una cobertura $|\eta|>2.0$. Estas cámaras funcionan midiendo la carga depositada en un ánodo, producto de la cascada de electrones creados cerca del mismo. Las \textit{Resistive Plate Chamber} (RPCs) proveen una estimación rápida del momento de los muones al primer nivel del trigger con una cobertura de $|\eta|<1.05$. Las RPCs miden la descarga ocasionada entre dos placas resistivas paralelas sometidas a una alta diferencia de potencial, tras la ionización del volumen de gas interno causada por el paso de muones energéticos. Finalmente se encuentra en la región \textit{endcap} las \textit{Thin Gap Chambers} (TGCs), similares en funcionamiento a las CSCs. Proveen también información al sistema de trigger en esta región y tienen una cobertura de $|\eta|<2.4$.
+El MS se compone de diferentes tipos de cámaras de detección de muones (ver Figura \ref{muon_1}). Las \textit{Monitored Drift Tubes} (MDTs) son responsables de la mayoría de las medidas de precisión y cubren el rango de $|\eta|<2.7$. Funcionan de forma similar al TRT, con tubos llenos de un gas que ioniza y un ánodo central que recoge los electrones producidos, y el tiempo de deriva se asocia con la distancia a la traza. En la región endcap se encuentran las \textit{Cathode Strip Chambers} (CSCs) que poseen alta resolución espacio-temporal y una cobertura $|\eta|>2.0$. Estas cámaras funcionan midiendo la carga depositada en un ánodo, producto de la cascada de electrones creados cerca del mismo. Las \textit{Resistive Plate Chamber} (RPCs) proveen una estimación rápida del momento de los muones al primer nivel del trigger con una cobertura de $|\eta|<1.05$. Las RPCs miden la descarga ocasionada entre dos placas resistivas paralelas sometidas a una alta diferencia de potencial, tras la ionización del volumen de gas interno causada por el paso de muones energéticos. Finalmente se encuentra en la región endcap las \textit{Thin Gap Chambers} (TGCs), similares en funcionamiento a las CSCs. Proveen también información al sistema de trigger en esta región y tienen una cobertura de $|\eta|<2.4$.
 
 \begin{figure}
   \centering
@@ -306,9 +302,9 @@ Cuando un evento es aceptado por el L1, el mismo pasa a ser analizado por High L
 
 Los algoritmos del HLT constan de dos etapas: los algoritmos de reconstrucción rápida ejecutados primero, y luego los algoritmos de reconstrucción de precisión similar a los que se utilizan en la selección offline. Los algoritmos de reconstrucción rápida utilizan la información de los calorímetros y de las trazas sólo dentro de la RoI para realizar la selección e identificación de los candidatos, y realizar el rechazo de fondo lo más rápido y temprano posible. Si la partícula candidata pasa los criterios definidos por la selección de reconstrucción rápida, se ejecutan los algoritmos de selección de precisión. Estos tienen acceso a la información del detector fuera de la RoI, con la máxima granularidad e incluyendo detalles sobre la calibración de energía de los calorímetros, la alineación de los subdetectores y el mapa de campo magnético. Los eventos aceptados por el HLT son finalmente grabados a disco y distribuidos, accesibles offline para todos los diferentes estudios y análisis.
 
-\tosolve{Definir prescale}
+\tosolve{Definir pileup, prescale y rerun}
 
-\section{Modelo computacional y distribución de datos}
+\section{Modelo computacional y distribución de datos}\label{sec:lhc_samples}
 
 
 La arquitectura computacional de ATLAS está diseñada para permitir a todos los miembros de la colaboración un acceso ágil, directo y distribuido a la gran cantidad de datos colectados por el detector ($\sim$ PB/año). La arquitectura se basa en la tecnología GRID \cite{grid}, compartiendo el poder de procesamiento y la capacidad de almacenamiento disponibles en distintos centros de cómputo asociados alrededor del
@@ -316,11 +312,11 @@ mundo.
 
 El software de ATLAS se desarrolla dentro un entorno C++ común llamado ATHENA \cite{ATLAS-TDR-17, analysistools, athena}, en el que se realiza todo el procesamiento de datos. Los eventos aceptados por el trigger deben ser procesados para reducir su tamaño y ser utilizados para los análisis offline. A la salida del HLT, los eventos son almacenados como Raw Data Objects (RDOs). Luego de aplicar los algoritmos de reconstrucción y calibración, las colecciones de los distintos objetos físicos obtenidas son almacenadas en formato ESD (Event Summary Data) y AOD (Analysis Object Data), una versión reducida del primero ($\sim$100 kB/evento). A partir de las ESDs/AODs, se ha definido un formato de datos significativamente más pequeño (10-15 kB/evento) conocido como xAOD, sobre el que se realiza el análisis final. Las xAOD son archivos accesibles vía el entorno de análisis de datos ROOT \cite{root}, que contienen el conjunto de variables de diferentes objetos físicos, según las necesidades de los distintos grupos de análisis dentro de ATLAS. En base a esto y para agilizar el análisis final, la colaboración preselecciona eventos offline en las llamadas derivaciones. Desde los raw data hasta las distintas derivaciones, se aplican distintos criterios de sliming (se remueven los eventos que no son de interés), skiming (se remueve la información irrelevante de los objetos) y thining (se remueven objetos y/o colecciones de objetos irrelevantes) según los estudios y análisis que se vayan a realizar sobre los datos colectados.
 
-Las derivaciones de interés para esta tesis son las denominadas EGAM3, EGAM4 y SUSY1. Las EGAM3 y EGAM4 son utilizadas en esta tesis para la medida de la eficiencia de los trigger de fotones, ya que preseleccionan eventos con bosones $Z$ decayendo radiativamente a partir de electrones o muones respectivamente. La derivación SUSY1 es utilizada en esta tesis para preseleccionar los eventos para la búsqueda de supersimetría. A continuación se lista un resumen de las selecciones que deben cumplir los eventos para ser aceptados por estas derivations.
+Las derivaciones de interés para esta tesis son las denominadas \texttt{EGAM3}, \texttt{EGAM4} y \texttt{SUSY1}. Las \texttt{EGAM3} y \texttt{EGAM4} son utilizadas en esta tesis para la medida de la eficiencia de los trigger de fotones, ya que preseleccionan eventos con bosones $Z$ decayendo radiativamente a partir de electrones o muones respectivamente. La derivación SUSY1 es utilizada en esta tesis para preseleccionar los eventos para la búsqueda de supersimetría. A continuación se lista un resumen de las selecciones que deben cumplir los eventos para ser aceptados por estas derivations.
 
 \tosolve{No se si es útil listar así las derivations. Sumado a que tienen WP de identificación o variables que todavía no se definieron. Por ahora lo dejo así...}
 
-\subsubsection{EGAM3}
+\subsubsection{\texttt{EGAM3}}
 \begin{itemize}
 
   \item Dos electrones centrales de carga opuesta, con identificación medium o LLHmedium, con $\pt>9.5$ GeV y masa invariante de ambos mayor a $40$ GeV, más un fotón con $\ET>9.5$ GeV.
@@ -333,7 +329,7 @@ Las derivaciones de interés para esta tesis son las denominadas EGAM3, EGAM4 y 
 
 \end{itemize}
 
-\subsubsection{EGAM4}
+\subsubsection{\texttt{EGAM4}}
 \begin{itemize}
 
   \item Al menos dos muones de carga opuesta 'commongood' con $\pt>9.5$ GeV, $|\eta|<2.7$ y masa invariante de ambos mayor a $40$ GeV, más un fotón con $\ET>9.5$ GeV.
@@ -346,7 +342,7 @@ Las derivaciones de interés para esta tesis son las denominadas EGAM3, EGAM4 y 
 
 \end{itemize}
 
-\subsubsection{SUSY1}
+\subsubsection{\texttt{SUSY1}}
 \begin{itemize}
 
   \item $\HT>150$ GeV
