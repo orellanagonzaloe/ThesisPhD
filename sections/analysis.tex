@@ -13,7 +13,7 @@ El trabajo realizado en esta Tesis se centra en la búsqueda de Supersimetría e
 
 El modelo supersimétrico que motiva a la presente búsqueda consiste en un modelo GGM, por lo tanto la LSP es el gravitino cuya masa será del orden de unos pocos eV. La NLSP es en este caso el neutralino más liviano, que va a consistir en un estado de gauge mezcla de bino y higgsino, lo que le permite acoplar a fotones, bosones $Z$ y bosones de higgs. Este análisis en particular se centra en la fenomenología en la cual el netrualino decae en proporciones casi iguales tanto a fotones como a higgs (más sus correspondientes gravitino). Para la producción de partículas supersimétricas a partir de la colisión $pp$ se consideró inicialmente la producción de gluinos. La parte del análisis que comprende la producción de gauginos se describe en el Capítulo \ref{cap:analysis_EWK}. Los gluinos pueden decaer subsecuentemente en partículas más livianas, hasta llegar a las NLSP y luego a la LSP, produciendo jets a su paso y generando el estado final buscado.
 
-\section{Fondos del Modelo Estándar}
+% \section{Fondos del Modelo Estándar}
 
 Los procesos del SM que son de interés como fondo para el análisis son aquellos que tienen un estado final igual al de la señal: fotones, jets y energía transversa faltante. Los mismos pueden clasificarse en distintos tipos. Por un lado, los procesos que dan lugar a eventos con un fotón y energía faltante real, es decir, los que se llaman fondos irreducibles. En este caso la energía la faltante proviene de los neutrinos, por lo que se componen principalmente de partículas que decaen a ellos, junto con fotones y jets de la ISR. Los procesos que cumplen con estos requisitos son la producción de bosones $Z$, $W$ y pares de top quarks que decaen subsecuentemente a bosones $W$:
 
@@ -36,7 +36,7 @@ Por otro lado es posible tener procesos que si bien no se producen fotones, unos
 Por último, puede ocurrir que si bien en el proceso no hayan neutrinos, una reconstrucción errónea de la energía de los distintos objetos presentes en el evento genere un desbalance a la hora de calcular la energía transversa faltante, y por ende tengan una cantidad no despreciable de la misma denominada energía transversa faltante instrumental. Este tipo de eventos puede ocurrir también en simultáneo junto con fotones `falsos', por lo que existen diversos procesos que cumplan estos requisitos, entre ellos se encuentran:
 
 \begin{itemize}
-	\item Producción de jets
+	\item jets
 	\item $\gamma + \text{jets}$
   \item $\gamma + \gamma + \text{jets}$
 	\item $Z(\rightarrow ll) + \text{jets}$
@@ -47,10 +47,10 @@ Por último, puede ocurrir que si bien en el proceso no hayan neutrinos, una rec
 
 \section{Muestras a partir de simulaciones de Monte Carlo}
 
-Muestras de señal de SUSY y fondos del SM fueron simulados
-utilziando generadores de Monte Carlo (MC) dedicados a $\sqrt{s} = 13 \tev$.
-Las muestras de señal de SUSY se realizaron mediante una simulación rápida \textsc{ATLFAST-II} \cite{Richter-Was:683751} del detector ATLAS, mientras que las muestras de fondo SM realizaron con una simulación completa basada en \textsc{Geant4}\cite{Geant4} del detector ATLAS, y reconstruido con los mismos
-algoritmos utilizados en los datos. Un peso evento a evento es aplicado
+Se generaron muestras tanto de los fondos del SM como de la señal de SUSY utilizando generadores de Monte Carlo (MC) a $\sqrt{s} = 13\ \tev$. Las muestras de fondo se realizaron con una simulación completa del detector basada en \textsc{Geant4} \cite{Geant4} y reconstruidas con los mismos
+algoritmos utilizados en los datos. Las muestras de señal se realizaron con una simulación rápida del detector ATLAS, \textsc{ATLFAST-II} \cite{Richter-Was:683751,Lukas_2012}, que simula la interacción en el calorímetro de forma simplificada para ahorrar tiempo de cómputo.
+
+Un peso evento a evento es aplicado
 a todas las muestras de MC para modelar las condiciones del detector de la muestra de datos bajo estudio,
 haciendo coincidir la distribución simulada del número de colisiones inelásticas $pp$ por cruce de haces con el observado en los datos.
 
