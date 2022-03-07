@@ -7,22 +7,78 @@
 % El análisis para el cual está orientada esta Tesis consiste en la búsqueda de Supersimetría en eventos con un fotón aislado muy energético, jets y gran cantidad de energía faltante en estado final \cite{Alonso:2147473,ATLAS:2016fks,Collaboration:2198651}. La estrategia general de la búsqueda consiste en el conteo del número de eventos observado en exceso sobre el SM en una cierta región del espacio de observables rica en eventos de la señal considerada.
 
 
-El trabajo realizado en esta Tesis se centra en la búsqueda de Supersimetría en eventos con un fotón energético y aislado, jets y gran cantidad de energía faltante en el estado final. La estrategia general de la búsqueda consiste en el conteo del número de eventos observado en exceso sobre el SM en una cierta región del espacio de observables rica en eventos de la señal considerada, método descripto en la Sección \ref{sec:statistical}. El objetivo es poder discriminar de los datos observados aquellos que podrían ser producto de un proceso supsersimétricos (señal) de aquellos producto de procesos del SM (fondo).
+El trabajo realizado en esta Tesis se centra en la búsqueda de Supersimetría en eventos con un fotón energético y aislado, jets y gran cantidad de energía faltante en el estado final. La estrategia general de la búsqueda consiste en el conteo del número de eventos observado en exceso sobre el SM en una cierta región del espacio de observables rica en eventos de la señal considerada, método descripto en la Sección \ref{sec:statistical}. El objetivo es poder discriminar de los datos observados aquellos que podrían ser producto de un proceso supersimétricos (señal) de aquellos producto de procesos del SM (fondo).
 
-% \section{Motivación teórica del análisis}
 
-El modelo supersimétrico que motiva a la presente búsqueda consiste en un modelo GGM, por lo tanto la LSP es el gravitino cuya masa será del orden de unos pocos eV. La NLSP es en este caso el neutralino más liviano, que va a consistir en un estado de gauge mezcla de bino y higgsino, lo que le permite acoplar a fotones, bosones $Z$ y bosones de higgs. Este análisis en particular se centra en la fenomenología en la cual el netrualino decae en proporciones casi iguales tanto a fotones como a higgs (más sus correspondientes gravitino). Para la producción de partículas supersimétricas a partir de la colisión $pp$ se consideró inicialmente la producción de gluinos. La parte del análisis que comprende la producción de gauginos se describe en el Capítulo \ref{cap:analysis_EWK}. Los gluinos pueden decaer subsecuentemente en partículas más livianas, hasta llegar a las NLSP y luego a la LSP, produciendo jets a su paso y generando el estado final buscado.
+\section{Muestras de señal a partir de simulaciones de Monte Carlo}
 
-% \section{Fondos del Modelo Estándar}
+El modelo supersimétrico que motiva a la presente búsqueda consiste en un modelo GGM, por lo tanto la LSP es el gravitino cuya masa será del orden de unos pocos eV. La NLSP es en este caso el neutralino más liviano, que va a consistir en un estado de gauge mezcla de bino y higgsino
+% , lo que le permite acoplar a fotones y bosones de higgs
+. En particular para esta Tesis se estudia el caso fenomenológico en el cual el neutralino más liviano decae en proporciones iguales a $\gamma+\gravino$ y a $h+\gravino$. Esto último es posible si se elige al parámetro $\mu<0$ que favorece el decaimiento al higgs, y reduce el decaimiento al bosón $Z$, en cuyo caso ya fue previamente estudiado por otros análisis \cite{tesis_fran, tesis_joaco}. Para la producción de partículas supersimétricas a partir de la colisión $pp$ se consideró inicialmente la producción de gluinos. La parte del análisis que comprende la producción electrodébil se describe en el Capítulo \ref{cap:analysis_EWK}. Los gluinos pueden decaer subsecuentemente en partículas más livianas, hasta llegar a las NLSP y luego a la LSP, produciendo jets a su paso y generando el estado final buscado. Una cadena de decaimiento típica de este modelo se puede observar en la Figura \ref{fig:phb_feyn}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/analysis/gogo-qqqqbbphGG-h.pdf}
+  \caption{Posible cadena de decaimiento del modelo supersimétrico en el que se centra esta Tesis.}
+  \label{fig:phb_feyn}
+\end{figure}
+
+En la Sección \ref{sec:susy} se describe al MSSM juntos con la gran cantidad de parámetros que lo caracteriza. Cuando se desea generar muestras para un modelo, se debe elegir valores para esos parámetros que a priori son arbitrarios, y cuya única posible elección son los distintos objetivos del análisis. A su vez, se busca que al seleccionar valores para esos parámetros, tener el compromiso de no ser muy específicos con esos valores, ya que de esa forma el análisis terminaría siendo demasiado dedicado a un modelo particular. Ni tampoco muy arbitrarios, ya que se busca seguir manteniendo de alguna forma la fenomenología del mismo. Lo que se hace entonces es reducir los parámetros que caracterizan al modelo a unos pocos, y utilizar distintos programas de calculo que se encargan a partir de ellos generar tanto el espectro completo de masas, como los distintos posibles decaimientos de cada partícula.
+
+El parámetro característico de este modelo es el $\mu$, el cual se elige negativo para habilitar el decaimiento del \ninoone a higgs. A su vez se desea anular el decaimiento al bosón $Z$, y que el decaimiento a fotones sea igual al de higgs, y para ello se eligió el valor óptimo de $M_1\sim -\mu$ \tosolve{Acá había encontrado una fórmula mediante un fit para M(mu), pero no se si es importante}. Con estos valores fue posible reducir el decaimiento al bosón $Z$ hasta casi un 10\%, dejando a los otros dos decaimientos aproximadamente en un 45\% como muestra la Figura \ref{fig:n1_br}. Como el modelo es un GGM, se fijó la masa del \gravino en $1$ eV \tosolve{esto no es tan así, la masa variaba de acuerdo al mu, lo deberia poner?}. 
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth]{images/analysis/phb_n1_br.pdf}
+  \caption{Fracción de decaimiento del \ninoone en función de la masa del mismo.}
+  \label{fig:n1_br}
+\end{figure}
+
+Las muestras fueron generadas considerando solamente la producción de gluinos a partir de la colisión $pp$. Además se eligió al gluino como la única partícula supersimétrica de color relevante, por lo que las masas de los squarks fueron fijadas a $5$ TeV, evitando así toda posible producción de los mismos. Los gluinos producidos en la colisión podían decaer un par de quark-antiquark más algún gaugino como se muestra en la Ecuación \ref{eq:gluino_dec}. Esto ocurre mediante squarks virtuales los cuales son completamente degenerados, pudiendo ser cualquiera de los 12 estados de sabor/quiralidad.
+
+Además, se fijo a $M_2=3\ \tev$ y a $\tan{\beta}=1.5$ \tosolve{motivos formales?}. Todos los términos de acoplamiento trilineal fueron fijados a 0. Se eligió a la masa de los sleptons igual a $5$ TeV, para evitar así su producción la cual es estudiada por otros análisis. El bosón de higgs tiene una masa igual a la medida por las colaboraciones ATLAS y CMS \cite{higgs_mass}, $m_h=125\ \gev$, y sus decaimientos son elegidos de acuerdo a las predicciones del SM \tosolve{es asi?}, donde el predominante con un $\sim58$\% es a dos $b$-jets.
+Adicionalmente se pone al mismo en el régimen de desacoplamiento con $m_A = 2\ \tev$. Al \ninoone se le fija su vida media, $c\tau_{\text{NLSP}}<0.1$ mm, de tal forma de que decaiga rápidamente  para que su vértice no esté muy desplazado del punto de colisión. Finalmente se anularon los decaimientos directos de los gluinos, charginos y neutralinos 1, 2 y 3. 
+
+Debido a que son varios los análisis que estudian la producción de gluinos, la colaboración ATLAS puso a disposición unos archivos comunes a todos los análisis donde ya tiene almacenada la información de varios eventos de producción de gluinos. Estos archivos se denominan Les Houches Event (LHE), que le ahorran a cada análisis esta etapa de simulación, y sólo le resta generar las cadenas de decaimiento de los gluinos de acuerdo a sus modelos. En el presente análisis se omitieron correcciones radiativas así la masa de los los gluinos coincidía con el parámetro $M_3$, pudiendo así coincidir con los archivos LHE que están en función de la masa del mismo.
+
+Los únicos parámetros libres del modelo son entonces $\mu$ y $M_3$ que determinan básicamente la masa de los \ninoone y gluinos. Se simularon 80 modelos distintos (puntos) con 10000 eventos en función de ambos parámetros, donde $150\ \gev<m_{\ninoone}<(m_{\tilde{g}}50)\ \gev$ y $1200\ \gev < m_{\tilde{g}}<2800\ \gev$. El arreglo completo de puntos de señal (grid) se puede observar en la Figura \ref{fig:grid_points}. Las muestras se realizaron con la simulación rápida del detector \textsc{ATLFAST-II} \tosolve{se supone que la voy a comentar en el segundo capitulo}. El espectro de masas completo, las fracciones de decaimiento de las sparticles y los anchos de decaimientos fueron calculados a partir del conjunto de parámetros anteriormente mencionados utilizando SUSPECT v2.43 \cite{Djouadi2007426}, SDECAY v1.5 \cite{Muhlleitner:2004mka} y HDECAY v3.4 \cite{Djouadi:1997yw}, que son parte del paquete SUSYHIT v1.5a \cite{Djouadi:2006bz}.
+Como ejemplo se muestra en la Figura \ref{fig:mass_spec} un espectro de masas para unos de los puntos de señal con ($M_3$, $\mu$) = (1800 GeV, -1050 GeV). Un ejemplo de posibles decaimientos de los gluinos para ese mismo punto de señal se puede observar en la Figura \ref{fig:gluino_decays}. 
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth]{images/analysis/phb_grid.pdf}
+  \caption{Arreglo de muestras de señal generados en función de la masa del \ninoone y $\tilde{g}$. La densidad del mismo disminuye al aumentar $m_{\tilde{g}}$ debido a que la sensibilidad del análisis se estimó ser menor a los 2 TeV.}
+  \label{fig:grid_points}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth]{images/analysis/phb_go_br.pdf}
+  \caption{Fracción de decaimiento del gluino para el punto de señal con ($M_3$, $\mu$) = (1800 GeV, -1050 GeV). \tosolve{no sé si es necesario este plot...}}
+  \label{fig:gluino_decays}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth]{images/analysis/phb_mass_spectrum.pdf}
+  \caption{Espectro de masas de las sparticles para el punto de señal con ($M_3$, $\mu$) = (1800 GeV, -1050 GeV). \tosolve{hay una versión mejor de esta imagen}}
+  \label{fig:mass_spec}
+\end{figure}
+
+
+\tosolve{Hay mas graficos de BR para poner, hacen falta? no lo creo...}
+
+\section{Fondos del Modelo Estándar}
+
 
 Los procesos del SM que son de interés como fondo para el análisis son aquellos que tienen un estado final igual al de la señal: fotones, jets y energía transversa faltante. Los mismos pueden clasificarse en distintos tipos. Por un lado, los procesos que dan lugar a eventos con un fotón y energía faltante real, es decir, los que se llaman fondos irreducibles. En este caso la energía la faltante proviene de los neutrinos, por lo que se componen principalmente de partículas que decaen a ellos, junto con fotones y jets de la ISR. Los procesos que cumplen con estos requisitos son la producción de bosones $Z$, $W$ y pares de top quarks que decaen subsecuentemente a bosones $W$:
 
 \begin{itemize}
-	\item $Z(\rightarrow \nu\nu) + \gamma + \text{jets}$
+  \item $Z(\rightarrow \nu\nu) + \gamma + \text{jets}$
   \item $Z(\rightarrow \nu\nu) + \gamma + \gamma + \text{jets}$
-	\item $W(\rightarrow l\nu) + \gamma + \text{jets}$
+  \item $W(\rightarrow l\nu) + \gamma + \text{jets}$
   \item $W(\rightarrow l\nu) + \gamma + \gamma + \text{jets}$
-	\item $t\bar{t} + \gamma + \text{jets}$
+  \item $t\bar{t} + \gamma + \text{jets}$
 \end{itemize}
 
 Por otro lado es posible tener procesos que si bien no se producen fotones, unos de los objetos presentes en el mismo sea erróneamente reconstruido como tal, y genere un estado final igual al buscado pero con fotones `falsos'. Los objetos que pueden ser erróneamente reconstruidos como fotones en este caso pueden ser electrones o jets, por lo que hay que considerar aquellos procesos en los que se produzcan junto a neutrinos. Estos pueden ser:
@@ -36,141 +92,27 @@ Por otro lado es posible tener procesos que si bien no se producen fotones, unos
 Por último, puede ocurrir que si bien en el proceso no hayan neutrinos, una reconstrucción errónea de la energía de los distintos objetos presentes en el evento genere un desbalance a la hora de calcular la energía transversa faltante, y por ende tengan una cantidad no despreciable de la misma denominada energía transversa faltante instrumental. Este tipo de eventos puede ocurrir también en simultáneo junto con fotones `falsos', por lo que existen diversos procesos que cumplan estos requisitos, entre ellos se encuentran:
 
 \begin{itemize}
-	\item jets
-	\item $\gamma + \text{jets}$
+  \item jets (denominado Multijet o QCD)
+  \item $\gamma + \text{jets}$
   \item $\gamma + \gamma + \text{jets}$
-	\item $Z(\rightarrow ll) + \text{jets}$
+  \item $Z(\rightarrow ll) + \text{jets}$
   \item $Z(\rightarrow ll) + \gamma + \text{jets}$
   \item $Z(\rightarrow ll) + \gamma + \gamma + \text{jets}$
 \end{itemize}
 
+A partir de aquí, como notación simplificada de los fondos del análisis, se omite en el nombre tanto el `+' como la producción de jets en la ISR. Cabe destacar que existen más procesos que cumplen las condiciones anteriores pero que no fueron considerados para el análisis. Lo que ocurre con ellos es que la sección eficaz es demasiado baja o el estado final tiene una cinemática muy fácil de suprimir por las selecciones básicas del análisis, por lo que su contribución es completamente despreciable. Algunos ejemplos de ellos son la producción doble de bosones  ($WW$, $ZZ$, $WZ$), bosones decayendo a quarks ($W(\rightarrow qq)$, $Z(\rightarrow qq)$), producción de top ($t\gamma$, $tW$), entre otros.
 
-\section{Muestras a partir de simulaciones de Monte Carlo}
+Para modelar los fondos con fotones `reales' se utilizaron simulaciones de MC, mientras que para aquellos con fotones `falsos' se utilizaron técnicas basadas en datos. \tosolve{mencionar que para la optimizacion sí se usaron MC para los fakes?}. Para los jets falseando fotones se utilizó un método denominado \texttt{ABCD}, y para los electrones falseando fotones un método denominado \texttt{Tag\&Probe}. El modelado de todos los fondos se describe en las siguientes Secciones.
 
-Se generaron muestras tanto de los fondos del SM como de la señal de SUSY utilizando generadores de Monte Carlo (MC) a $\sqrt{s} = 13\ \tev$. Las muestras de fondo se realizaron con una simulación completa del detector basada en \textsc{Geant4} \cite{Geant4} y reconstruidas con los mismos
-algoritmos utilizados en los datos. Las muestras de señal se realizaron con una simulación rápida del detector ATLAS, \textsc{ATLFAST-II} \cite{Richter-Was:683751,Lukas_2012}, que simula la interacción en el calorímetro de forma simplificada para ahorrar tiempo de cómputo.
+\subsection{Muestras de fondo a partir de simulaciones de Monte Carlo}
 
-Un peso evento a evento es aplicado
-a todas las muestras de MC para modelar las condiciones del detector de la muestra de datos bajo estudio,
-haciendo coincidir la distribución simulada del número de colisiones inelásticas $pp$ por cruce de haces con el observado en los datos.
+Los fondos del SM con fotones `reales' fueron modelados utilizando simulaciones de MC, los cuales consisten en: \phj, \wph, \ttbarph, \wphph, \zph, \zphph, \phph. Los tres primeros son considerados los de mayor impacto en el análisis y por ende fueron normalizados en respectivas regiones de control. Para el resto de los fondos se utilizaron las simulaciones con las normalizaciones usuales. 
+Cabe mencionar que también el fondo \znunuph es considerado de alta importancia en el análisis, pero la dificultad para diseñar una región de control dedicada llevó a la decisión de utilizarlo con las normalizaciones usuales. La parte del análisis que se basa en la producción electrodébil  sí hace uso de una región de control dedicada para este análisis, y se describe en el Capítulo \ref{cap:analysis_EWK}.
 
-Las simulaciones se corrigen a su vez con factores de escala de eficiencia.
-y correciones en la escala de energía de fotones, leptones y
-jets, para describir mejor los datos. Las muestras se generaron con un
-distribución de pileup esperada, denominadas MC16a, MC16d y MC16e para el conjunto de datos 2015-2016, 2017 y
-2018 respectivamente, con un peso adicional para igualar
-el perfil de interacción real de los datos. 
+Todos los procesos salvo \ttbarph fueron simulador utilizando el generador \texttt{SHERPA} v2.2 \cite{Bothmann:2019yzt}. Los elementos de la matriz se calculan para un máximo de cuatro partones
+a LO y se fusionan con la lluvia de partones de \texttt{SHERPA} \cite{Schumann:2007mg} utilizando la prescripción de \texttt{MEPS@LO} \cite{Hoeche:2012yf}. La muestra de \ttbarph se genera con \texttt{MG5\_aMC@NLO} \cite{Alwall:2014hca} a segundo orden en teoría de perturbaciones (NLO), con \texttt{Pythia8} para el modelo de la lluvia de partones \cite{Sjostrand:2014zea}. \tosolve{algún dato más debería poner, cual?}. En la Tabla \ref{tab:mc_samples} se muestran todas las muestras de fondos utilizadas en el análisis. 
 
 
-\subsection{Muestras de fondo}
-
-Varios procesos del SM pueden imitar una señal SUSY con fotones, jets y
-energía transversa faltante. Estos surgen de eventos con
-fotones reales o eventos en los que un electrón o un jet es
-identificado erróneamente como un fotón. Es esperado que la primera sea principalmente
-de eventos en los que se produce un bosón  $W$, $Z$ o un par $t\bar{t}$ en
-asociación con al menos un fotón real, decayendo subsecuentemente a neutrino prodciendo importantes cantidades de \met. 
-Estos fondos son denominados $W\gamma$, $W\gamma\gamma$, $Z\gamma$, $Z\gamma\gamma$ y
-$t\bar{t}\gamma$. Los eventos con fotones reales también pueden contribuir
-al fondo cuando \met surge de una reconstrucción instrumental incorrecta de la energía. Los fondos de $W\gamma$, $t\bar{t}\gamma$ y $\gamma + $jets
-se estiman normalizando la muestra de MC correspondiente para que coincida con el
-número de eventos observados en las regiones de control correspondientes, enriqeucidas en el fondo dado
-y cinemáticamente similares a las
-regiones de señal. Contribuciones más pequeñas de $\gamma\gamma$,
-$W\gamma\gamma$, $Z\gamma$ y $Z\gamma\gamma$ son estimados
-directamente de las simulaciones de MC. La contaminación
-a partir de fondos de fotones falsos debido a la identificación errónea de electrones y jets
-que surgen de $W$ + jets, $Z$ + jets, \ttbar o eventos de multijets, se estiman con una técnica basada en datos que se explica en las siguientes secciones.
-La Tabla \ref{tab:background} resume las principales fuentes de fondo anteriormente mencionadas.
-
-\begin{table}[ht!]
-\centering
-        \begin{tabular}{|c|c|c|}
-      \hline
-      & \textbf{Real {\met}} & \textbf{Instrumental {\met}} \\
-        \hline
-        \textbf{Real photon} &
-      \begin{tabular}[c]{@{}c@{}}
-        $Z(\nu\nu)\gamma$, $W\gamma$ \\
-        $t\bar{t}\gamma$, $Z(\nu\nu)\gamma\gamma$, $W\gamma\gamma$ \\
-      \end{tabular}
-      &    $\gamma+$jets, $\gamma\gamma$, $Z(ll)\gamma$, $Z(ll)\gamma\gamma$  \\
-      \hline
-      \textbf{Fake photons}    &
-      \begin{tabular}[c]{@{}c@{}}
-        $W$+jets, $Z(\nu\nu)+$jets \\
-        $t\bar{t}$ \\
-      \end{tabular}
-      &     multijet, $Z(ll)+$jets \\
-      \hline
-      \end{tabular}
-\caption{Procesos del SM que constribuyen al fondo.}
- \label{tab:background}
-\end{table} 
-
-\subsection{Muestras de señal}
-\label{sec:signal}
-
-
-El presente análisis está motivado por la presencia de neutralinos mezcla de bino-higgsino
-mezcla con un estado final predicho por el modelo de General Gauge Mediation
-compuesto de al menos un
-fotón, jets y alto \met. El componente bino del neutralino más liviano se acopla tanto al fotón como al bosón $Z$. El gluino es
-considerada como la única espartícula de color relevante para establecer un
-límite conservador en la masa de gluino.
-
-Todas las masas de los squark se establecen en 5 $\tev$. Esto da como resultado una producción de procsos SUSY a través de la creación de pares de gluinos, cada uno de los cuales
-que decae posteriormente a través de un squark virtual (los 12 estados de sabor de los squarks se consideran completamente degenerados) a un
-pares quark-antiquark más el neutralino NLSP.
-
-Otros parámetros del modelo se establecen en $M_ {2} = 3\ \tev$, $ \tan{\beta} = 1.5$ y $m_{\tilde{G}} = 1$ eV.
-Todos los términos de acoplamiento trilineal se establecen en cero y las masas de sleptons se establecen en 5 \tev. El bosón de Higgs está en el régimen de desacoplamiento con $m_{A} = 2\ \tev $ y
-$m_{h} = 125\ \gev$, valor medido recientemente en el LHC para el
-Bosón de Higgs del SM \cite{Aad:2015zhl}. En escenarios SUSY \textit{gauge mediated}
-existen varios mecanismos \cite{Craig:2011yk, Auzzi:2011eu, Csaki:2012fh, Larsen:2012rq, Craig:2012hc} para generar una masa de bosón de Higgs como este valor observado, sin cambiar el
-fenomenología de los modelos aquí considerados. Además $c\tau_{\mathrm{NLSP}}
-<0.1$ mm se estableció para asegurar que el neutralino decaiga rápidamente y el
-decaimiento directo del gluino está prohibido fijando $BR(\gluino \to \gravino g) = 0$.
-
-Como $M_1$ y $\mu$ determinan la masa neutralino más ligera, están relacionados
-de tal manera que las fracciones de decaimiento del \ninoone\ sean aproximadamente
-constante, resultando en $\text{BR} (\ninoone \to \gamma \gravino) \sim 50 \%$,
-$\text{BR} (\ninoone \to Z\gravino) \sim 0 \% $ y $ \text{BR} (\ninoone \to h
-\gravino) \sim 50 \%$, números que varían en $\pm 1 \%$ para todas las muestras.
-% como se muestra en la Figura \ ref {fig: br_n1_X}.
-
-Vale la pena señalar que $\sim 25 \%$ de eventos tendrán dos fotones en el estado final,
-por lo que se realiza una búsqueda inclusiva que requiera al menos un
-$\gamma$, más dos \gravino\ en el estado final.
-
-El valor de $\mu$ también debe ser negativo para no favorecer los decaimientos al bosón de $Z$, lo que daría lugar a un estado final que es cubierto por otro análisis. Esto deja $M_3$ y $\mu$ como los únicos dos parámetros libres del modelo, que son variados desde $150\ \gev<m_{\ninoone}<(m_{\ gluino} - 50) \ \ gev $ y $1200\ \gev<m_{\gluino}<2400\ \gev$
-con $m_{\ninoone}<m_{\gluino}$.
-
-% Para hacer coincidir las masas de gluinos correspondientes a los archivos LHE disponibles, no se tienen en cuenta las correcciones radiativas, lo que implica que
-% Las masas de gluino ahora coinciden con los valores del parámetro M3 (este no fue el caso
-% para la producción anterior de MC15).
-
-
-Los puntos de señal generados se resumen en la Figura \ref{fig:signal_grid}. Consta de 81 puntos de produccion fuerte ($\gluino\gluino$) generados con $10000$ eventos cada uno.
-
-
-Se calcularon el espectro de masas completo, las fracciones de decaimiento del gluino y neutralino y los anchos de desintegración de este conjunto de puntos utilizando SUSPECT v2.43 \cite{Djouadi2007426}, SDECAY v1.5 \cite{Muhlleitner:2004mka} y HDECAY v3.4 \cite{Djouadi:1997yw},
-ejecutados como parte del paquete SUSYHIT v1.5a \cite{Djouadi:2006bz}.
-Como ejemplo, la \ref{fig:mass_spectra} muestra el espectro de masas para uno de los puntos en la cuadrícula de señales GGM, con ($M_3$, $\mu$) = (1600 {\gev}, 650 \gev). 
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.7\textwidth]{images/phb_grid.pdf}
-  \caption{Grid de puntos de señal simulados.}
-  \label{fig:signal_grid}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.7\textwidth]{images/phb_mass_spectrum.pdf}
-  \caption{Espectro de masas para el punto de señal ($M_3$, $\mu$) = (1600 {\gev}, 650 \gev).}
-  \label{fig:mass_spectra}
-\end{figure}
 
 \section{Selección de eventos de señal}
 

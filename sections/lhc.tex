@@ -355,6 +355,8 @@ Las derivaciones de interés para esta tesis son las denominadas \texttt{EGAM3},
 
 \section{Simulaciones de Monte Carlo}
 
+% principalmente de la tesis de joaco
+
 El método de Monte Carlo utiliza una serie de algoritmos computacionales basados en la repetición de eventos con un factor variable y aleatorio, que permite obtener resultados numéricos globales.
 En el contexto de la física de partículas no solo se utiliza para reproducir la aleatoriedad impuesta por la mecánica cuántica, sino también para realizar diferentes aproximaciones, como es el caso de integrales numéricas.
 Las simulaciones de Monte Carlo cumplen un rol fundamental a la hora de realizar predicciones de la teoría, teniendo un rol primordial en prácticamente todos los análisis realizados por la colaboración ATLAS. 
@@ -401,3 +403,20 @@ por las partes verdes claras, mientras que las partes verdes oscuras indican el
 decaimiento de los hadrones. Finalmente, las líneas amarillas señalan la radiación de
 fotones\cite{mc_simulation}. \tosolve{Mejorar imagen}}
 \end{figure}
+
+\subsubsection{Correciones a las simulacioness}
+
+% Agregar 
+% Se generaron muestras tanto de los fondos del SM como de la señal de SUSY utilizando generadores de Monte Carlo (MC) a $\sqrt{s} = 13\ \tev$. Las muestras de fondo se realizaron con una simulación completa del detector basada en \textsc{Geant4} \cite{Geant4} y reconstruidas con los mismos
+% algoritmos utilizados en los datos. Las muestras de señal se realizaron con una simulación rápida del detector ATLAS, \textsc{ATLFAST-II} \cite{Richter-Was:683751,Lukas_2012}, que simula la interacción en el calorímetro de forma simplificada para ahorrar tiempo de cómputo.
+
+% Un peso evento a evento es aplicado
+% a todas las muestras de MC para modelar las condiciones del detector de la muestra de datos bajo estudio,
+% haciendo coincidir la distribución simulada del número de colisiones inelásticas $pp$ por cruce de haces con el observado en los datos.
+
+% Las simulaciones se corrigen a su vez con factores de escala de eficiencia.
+% y correciones en la escala de energía de fotones, leptones y
+% jets, para describir mejor los datos. Las muestras se generaron con un
+% distribución de pileup esperada, denominadas MC16a, MC16d y MC16e para el conjunto de datos 2015-2016, 2017 y
+% 2018 respectivamente, con un peso adicional para igualar
+% el perfil de interacción real de los datos. 
