@@ -193,7 +193,7 @@ Es posible que un jet sea erróneamente reconstruido como un fotón principalmen
 
 El método empleado para estimar este fondo se denomina \texttt{ABCD} \cite{Alonso:2233238}. El mismo hace uso de la diferencia que existe en las distribuciones de aislamiento de fotones `reales' (señal en este contexto) y la de los `falsos' (fondo), para poder selecciones eventos de uno u otro \tosolve{Esto cuando se utilizaría? Me parece que mirar las formas quedó de un método viejo no? Ahora solo miramos número de eventos. O es para la correlación?}. En el contexto de este método se definen fotones aislados como aquellos que pasan el WP \texttt{FixedCutTight} \tosolve{esta bien esto?}, $-20\ \gev<\ETiso<0\ \gev$ y $0<\pTiso<0.05$, y los no-aislados aquellos con $8\ \gev<\ETiso<80\ \gev$ o $0.15<\pTiso<1$ \tosolve{capaz deba definir estas variables aca, o en la parte de fotones}. A su vez se utiliza una selección de identificación adicional que discrimina los fotones `reales' \texttt{Tight} de los fotones `falsos'. Este criterio de identificación se denomina \texttt{Non-Tight} (también \textit{pseudo-photons}, \texttt{Tight-4} o \texttt{LoosePrime}) y consiste en los fotones que pasan la selección \texttt{Loose} y que además fallan alguno de los criterios de selección \texttt{Tight} que emplea las variables $w_{s3}$, $F_{\text{side}}$, $\Delta E$, $E_{\text{ratio}}$. Por lo que esta selección es un subconjunto de los eventos seleccionados por el trigger de fotones loose pero ortogonal a la identificación \texttt{Tight}. 
 
-El método \texttt{ABCD} preselecciona eventos con al menos un fotón con $\pt>1450\ \gev$, al menos dos jets y ningún leptón, cuyos requisitos son idénticos a los que se usan en el análisis descriptos en la Sección \ref{sec:obj_sel} \tosolve{Acá los objetos son 'signal', que todavia no esta definido, no se si esta seccion deberia ir aca...}. A partir de ello define cuatro regiones \cite{ATL-COM-PHYS-2016-1626}:
+El método \texttt{ABCD} preselecciona eventos con al menos un fotón con $\pt>1450\ \gev$, al menos dos jets y ningún leptón, cuyos requisitos son idénticos a los que se usan en el análisis descriptos en la Sección \ref{sec:selection}. A partir de ello define cuatro regiones \cite{ATL-COM-PHYS-2016-1626}:
 
 \begin{itemize}
   \item Región A: fotones \texttt{Tight} y aislados
@@ -329,7 +329,7 @@ quedando entonces el fake factor como:
 \end{equation}
 
 
-El método emplea una muestra a partir de todos los datos tomados durante el Run 2, seleccionando aquellos que tengan al menos dos electrones, o al menos un electrón y un fotón. En el caso de múltiples posibles pares en el evento, se utiliza la combinación cuya masa invariante esté más cerca de $m_Z=91.1876\ \gev$. A su vez, se aplica un corte con $\met<40\ \gev$ para suprimir eventos con $W$ decayendo a electrones. Los requisitos de los objetos son idénticos a los que se usan en el análisis descriptos en la Sección \ref{sec:obj_sel}.
+El método emplea una muestra a partir de todos los datos tomados durante el Run 2, seleccionando aquellos que tengan al menos dos electrones, o al menos un electrón y un fotón. En el caso de múltiples posibles pares en el evento, se utiliza la combinación cuya masa invariante esté más cerca de $m_Z=91.1876\ \gev$. A su vez, se aplica un corte con $\met<40\ \gev$ para suprimir eventos con $W$ decayendo a electrones. Los requisitos de los objetos son idénticos a los que se usan en el análisis descriptos en la Sección \ref{sec:selection}.
 
 Para identificar si el par proviene del decaimiento de un bosón $Z$ se reconstruye su masa invariante, de forma separada dependiendo si el par es $ee$ o $e\gamma$. Como el FF se calcula en función de $|\eta|$, se obtienen distribuciones de la masa invariante de cada par para distintos intervalos de $|\eta|$, como se describe en la Figura \ref{fig:efakes_matrix}. En estas selecciones puede ocurrir que haya un conjunto de eventos que no provenga del $Z$ (fondo no resonante), por lo que se hace un ajuste de cada distribución de masa invariante con una función del tipo `señal+fondo'. Para la señal se utiliza una \textit{Double-sided crystal ball} \tosolve{definir} y para el fondo una función Gaussiana.
 
@@ -385,6 +385,59 @@ Finalmente, el fondo para cada región (R) del análisis se estima definiendo un
 En el caso de no observar eventos en alguna CSE, se hace una estimación conservadora con un evento\tosolve{no sabia esto!!!}.
 
 \tosolve{esto tambien se hace para jfakes, por que nunca lo hacemos explicito?}
+
+
+\section{Selección de eventos y objetos para el análisis}\label{sec:selection}
+
+El presente análisis hace uso de la totalidad de datos con una energía de centro de masa de $13$ TeV tomados con el detector ATLAS durante el Run 2 y que son aptos para física \tosolve{definir esto}, acumulando una luminosidad integrada de $139 \ifb$. Los datos fueron seleccionados a partir del trigger \texttt{HLT\_g140\_loose}, que selecciona eventos con al menos un fotón con identificación \texttt{Loose} y con $\ET>140\ \gev$. Este trigger es completamente eficiente \cite{TRIG-2018-05}, superando el 99\% de eficiencia para $\ET>145\ \gev$, estable frente a pileup y sin dependencia con $\eta$.
+
+Los datos y simulaciones de MC empleados para el análisis fueron preseleccionados con la derivación \texttt{SUSY1} descripta en la Sección \ref{sec:lhc_samples}, orientada a análisis con moderada actividad hadrónica y con la presencia de un fotón energético entre otras cosas.
+
+Los objetos de interés para esta Tesis son los fotones, jets y leptones (electrones y muones) a los que se les aplica diferentes requisitos offline. Inicialmente se les requiere una selección base (\textit{baseline}) siguiendo algunas de las recomendaciones que hace el grupo de SUSY de la colaboración ATLAS y que se describe a continuación. La misma se emplea para aplicar un requisito de solapamiento (\textit{overlap removal}) entre los distintos objetos del evento y posteriormente empleados para el cálculo de \met. Finalmente a los fotones, jets y leptones se les aplica una selección denominada \textit{signal}, siendo estos objetos los que definen las distintas regiones del análisis.
+
+\tosolve{como son cortos, capaz los siguientes items podrían ser subsubsection}
+
+\subsection{Fotones}
+
+Los fotones baseline deben pasar la selección de identificación \texttt{Tight}, tener $\ET>25\ \gev$, $|\eta|<2.37$ excluyendo la región del crack. Para los fotones signal se requiere adicionalmente tener $\ET>50\ \gev$, aunque para la selección de las regiones se pide adicionalmente que el fotón leading tenga $\ET>145\ \gev$ para garantizar la eficiencia del trigger. Adicionalmente se les aplica un requisito de aislamiento tanto calorimétrico como de traza, mediante el WP \texttt{FixedCutTight}.
+
+
+\subsection{Electrones}
+
+Los electrones baseline son requeridos tener $\pt>10\ \gev$, $|\eta|<2.47$ excluyendo la región crack y ser originados en el vértice primario. El requerimiento de identificación \texttt{LooseAndBLayerLLH} es aplicado \tosolve{definir o poner solo loose}. Los electrones signal son seleccionados además con $\pt>25\ \gev$, aplicando la identificación \texttt{TightLLH} y el requisito de aislamiento \texttt{FCLoose}, o \texttt{FCHighPtCaloOnly} si tienen $\pt>200\ \gev$.
+
+
+\subsection{Muon}
+
+Los muones baseline son seleccionados con la identificación \texttt{Medium}, tener $\pt>10\ \gev$, $|\eta|<2.7$ y ser originados del vértice primario. A los muones signal se les requiere adicionalmente tener $\pt>25\ \gev$ y el WP de aislamiento \texttt{Loose\_VarRad}.
+
+
+\subsection{Jets}
+
+Jets baseline son seleccionados con $\pt>20\ \gev$ y $|\eta|<2.8$. Este último requisito no es empleado en el cálculo de \met. Selecciones basadas en las trazas son aplicadas para rechazar jets con $\pt<120\ \gev$ y $|\eta|<2.4$ que se originen de las interacciones de pileup. Jets signal son seleccionados con $\pt>30\ \gev$ y $|\eta|<2.5$. La identificación de $b$-jets es empleada en la definición de algunas regiones de control. Para ello se utiliza el algoritmo \texttt{MV2c10}, con una eficiencia de selección de los mismos del 77\%.
+
+\subsection{Overlap removal}
+
+Como se mencionó en capítulos anteriores, los algoritmos de reconstrucción pueden fallar en los criterios de ambigüedad entre objetos, decidiendo almacenar simultáneamente a ambos. Una forma de lidiar con esto es eliminando al objeto que comparta alguna región espacial del detector con otro, en lo que se denomina overlap removal \cite{Adams:1743654}. Esta eliminación se hace en diferentes pasos, y en cada uno hay un objeto eliminado en presencia de otro. Los objetos eliminados en un dado paso no influye en los sucesivos.
+El overlap removal sigue unas recomendaciones diseñadas específicamente para el tipo de análisis \cite{ATL-COM-PHYS-2016-1518}, y los diferentes pasos aplicados en el presente análisis se resumen a continuación: 
+
+\begin{itemize}
+  \item los muones CT que compartan traza con algún electrón de se eliminan
+  \item los electrones que compartan traza con algún muon se eliminan
+  \item los fotones que tengan $\Delta R<0.4$ con algún electrón se eliminan
+  \item los fotones que tengan $\Delta R<0.4$ con algún muón se eliminan
+  \item los jets que tengan $\Delta R<0.2$ con algún electrón se eliminan
+  \item los electrones que tengan $\Delta R<0.4$ con algún jet se eliminan
+  \item los jets con número de trazas menor a 3 y que tengan $\Delta R<0.2$ con algún muón se eliminan
+  \item los muones que tengan $\Delta R<0.4$ con algún jet se eliminan
+  \item los jets que tengan $\Delta R<0.4$ con algún fotón se eliminan
+\end{itemize}
+
+
+\subsection{Energía transversa faltante}
+
+El cálculo de \met se realiza de acuerdo a lo descripto en la Sección \ref{sec:met}. Los depósitos de energía en el calorímetro son asociados a los objetos de alto \pt en el siguiente orden: electrones, fotones, jets y muones. Las trazas que no fueron asociadas con ninguno de los objetos anteriores son incluidas en el término soft. Para el análisis una vez hecha la selección final de los objetos se hace una selección de eventos con $\met>50\ \gev$.
+
 
 \section{Selección de eventos de señal}
 
@@ -496,41 +549,7 @@ Un resumen de los diferentes criterios de selección se muestra en la Tabla \ref
 \end{table}
 
 
-\section{Fondo de jets identificados como fotones}
 
-Los jets pueden identificarse erróneamente como fotones (fotones falsos) si contienen principalmente $\pi^{0}$ (o cualquier otro hadrón neutro) que se lleva la mayor parte de la
-energía del jet y se desintegra en un par de fotones colimados, lo que da como resultado un objeto electromagnético
-similar a un solo fotón altamente energético.
-Este fondo surge principalmente de multijets QCD, \wj\ y eventos \ttbar\ semileptónicos. Los criterios de identificación 'tight' aplicados a los candidatos a fotones reducen este fondo. Después de aplicar esta selección, se espera que la muestra de datos contenga fotones reales con contaminación moderada de jets. Como no se espera que esta tasa de identificación errónea sea precisa
-utilizando simulaciones de MC, se utiliza un método de recuento de banda lateral basado en datos. El método llamado ABCD hace uso de los diferentes perfiles de aislamiento esperados para fotones reales y jets mal identificados \cite{STDM-2010-08}.
-Se consideraron dos variables incluyen simultáneamente aislamiento calorimétrico y de trazas cuando para el fotón candidato, como se define en la \ref{isolation}.
-La identificación fuera offline 'tight' es por diseño más estricta queel trigger de fotones utilizado para recopilar los datos, por lo que se espera tener candidatos a fotones
-de los jets que fallan la seleccion tight pero satisfacen una seleccion intermedia. Estos jets de tipo fotón, en lo sucesivo denominados fotones non-tight, se definen como aquellos que pasan la identificación loose y satisfacen los cortes de selección "tight", con la excepción de al menos una de las cuatro selecciones asociadas con los depósitos de energía en el calorímetro EM elegidos por no estar correlacionados con las variables de aislamiento. De esta manera, el uso de fotones non-tight mejora la contribución de los jets que simulan ser fotones, necesarios para este método.
-En el plano de identificación-aislamiento, el método define una región de señal $A$ que consta de candidatos a fotones aislados que satisfacen la identificación 'tight', y tres regiones de control, $B$, $C$ y $D$, con candidatos a fotones no aislados y "tight", aislado y no tight y no aislado y no tight, respectivamente.
-
-Se estima una posible correlación residual entre la identificación de fotones y el aislamiento, y la contaminación de las regiones de fondo por fotones reales, utilizando simulaciones de MC. Este método calcula la contribución de jets mal identificados en todas las regiones utilizadas en el análisis. Las incertidumbres sistemáticas del método se evalúan variando la definición de los objetos no ajustados y considerando las diferencias introducidas por la correlación residual entre las regiones.
-
-\section{Fondo de electrones identificados como fotones}
-
-
-Se espera una contaminación significativa en las regiones de señal de los procesos SM como $W/Z$ + jets y eventos \ttbar\ en los casos en los que un electrón de alto \pt\ se identifica erróneamente como un fotón.
-Este fondo se estima ponderando el número de eventos observados en una muestra de control de electrones por la tasa de identificación errónea de electrón a fotón.
-Estas muestras de control de electrones son las mismas regiones de control, validación y señal del análisis, pero aplicando las mismas selecciones cinemáticas de fotones a los electrones, donde se solicita un electrón aislado alto \pt\ y se vetan los fotones de señal.
-Para estimar la tasa de identificación errónea de electrón a fotón, se utiliza un método basado en una muestra de eventos de datos de \zee\ \cite{ATLASCollaboration:2016wlb}. Dado que el bosón $Z$ no puede decaer directamente en un electrón y un fotón, los eventos de electrones-fotones que aparecen bajo el pico $Z$ corresponden con mayor probabilidad a
-electrones mal identificados. Se aplica una técnica de sustracción de fondo, que tiene en cuenta también la
-contaminación procedente de combinaciones de pares aleatorios. El factor falso electrón-fotón se estima luego como la relación entre el número de pares electrón-fotón y electrón-electrón encontrados.
-por debajo del pico $Z$ en el ajuste de la distribución de masa invariante.
-Este ajuste utiliza una función doubl sided Crystal-Ball (DSCB) (un núcleo gaussiano con colas asimétricas exponenciales) para modelar el pico $Z$, y una distribución gaussiana para modelar los pequeños fondos no resonantes para \zee\.
-Solo se seleccionan los pares entre una ventana de masa invariante definida para calcular el factor de falsificación de electrón a fotón. Esta ventana se define como $\pm 3 \sigma$ alrededor del centro del pico de la DSCB, donde $\sigma$ es el ancho del pico.
-Solo se seleccionan los eventos con $\met<40\ \gev $,
-para evitar que los electrones provengan de las desintegraciones de $W$.
-
-Se diseñó una región de validación dedicada (VRE) con la selección de eventos descrita en la Tabla
-\ref{tab:CR_VR_selection}, para validar la precisión del fondo correspondiente de electrón a fotón
-con las predicciones basadas con los factores falsos calculados. El conjunto de requisitos selecciona
-predominantemente $W(e \nu)$ + eventos de jets, donde un $W$ impulsado (incluidos los que provienen de los quarks superiores) decae en un
-neutrino colineal (con alto \met) y un electrón de alto \pt  (identificado erróneamente como un
-fotón).
 
 \section{Incertidumbres sistemáticas}
 \label{sec:uncertainties}
