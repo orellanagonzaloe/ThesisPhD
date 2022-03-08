@@ -35,7 +35,7 @@ características de cada una de ellas, haciendo que cada una de las partículas 
 \label{particulasATLAS}
 \end{figure}
 
-\section{Electrones y fotones}
+\section{Electrones y fotones}\label{sec:ph_el}
 
 % / Reescrito /
 % La reconstrucción de electrones y fotones en el detector ATLAS se realiza principalmente a partir de los depósitos
@@ -90,7 +90,7 @@ Finalmente se calibra la energía de los superclusters, las trazas son nuevament
 % / Reescrito /
 % A continuación el algoritmo construye los superclusters para electrones y fotones por separado. Para ello selecciona los topo-clusters con una energía mayor a cierto \tosolve{Nota 1} umbral, y los agrupa con los demás topo-clusters satélites que estén contenidos dentro de una ventana angular fija centrada en el \textit{topo-cluster} inicial. Dependiendo si el algoritmo es para fotones o electrones los umbrales son distintos, y en el caso de electrones o fotones convertidos, topo-clusters satélites adicionales son incluidos utilizando las trazas asociadas. Como los \textit{supercluster} de electrones y fotones son generados independientemente, puede ocurrir que un mismo \textit{supercluster} produzca tanto un electrón como un fotón. En ese caso el candidato es guardado tanto como electrón y fotón simultáneamente, pero marcados como ambiguos y es decisión de cada análisis utilizarlos o no. Al finalizar esta etapa se obtienen los objetos finales que van a ser utilizados por los distintos análisis. \tosolve{calibración? eficiencia?}
 
-\subsection{Identificación}
+\subsection{Identificación}\label{sec:ph_id}
 
 Como se mencionó anteriormente, distintos criterios de identificación son utilizados para poder discriminar los objetos prompt
 % \commentyellow{Ver dudas sobre la definicion de prompt} 

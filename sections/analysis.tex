@@ -110,9 +110,281 @@ Los fondos del SM con fotones `reales' fueron modelados utilizando simulaciones 
 Cabe mencionar que también el fondo \znunuph es considerado de alta importancia en el análisis, pero la dificultad para diseñar una región de control dedicada llevó a la decisión de utilizarlo con las normalizaciones usuales. La parte del análisis que se basa en la producción electrodébil  sí hace uso de una región de control dedicada para este análisis, y se describe en el Capítulo \ref{cap:analysis_EWK}.
 
 Todos los procesos salvo \ttbarph fueron simulador utilizando el generador \texttt{SHERPA} v2.2 \cite{Bothmann:2019yzt}. Los elementos de la matriz se calculan para un máximo de cuatro partones
-a LO y se fusionan con la lluvia de partones de \texttt{SHERPA} \cite{Schumann:2007mg} utilizando la prescripción de \texttt{MEPS@LO} \cite{Hoeche:2012yf}. La muestra de \ttbarph se genera con \texttt{MG5\_aMC@NLO} \cite{Alwall:2014hca} a segundo orden en teoría de perturbaciones (NLO), con \texttt{Pythia8} para el modelo de la lluvia de partones \cite{Sjostrand:2014zea}. \tosolve{algún dato más debería poner, cual?}. En la Tabla \ref{tab:mc_samples} se muestran todas las muestras de fondos utilizadas en el análisis. 
+a LO y se fusionan con la lluvia de partones de \texttt{SHERPA} \cite{Schumann:2007mg} utilizando la prescripción de \texttt{MEPS@LO} \cite{Hoeche:2012yf}. La muestra de \ttbarph se genera con \texttt{MadGgraph5\_aMC@NLO} \cite{Alwall:2014hca} a segundo orden en teoría de perturbaciones (NLO), con \texttt{Pythia8} para el modelo de la lluvia de partones \cite{Sjostrand:2014zea}. \tosolve{algún dato más debería poner, cual?}. En la Tabla \ref{tab:mc_samples} se muestran todas las muestras de fondos utilizadas en el análisis, las mismas se encuentras segmentadas (\textit{slicing}) de acuerdo a diferentes criterios.
+
+\begin{table}[h!]
+  \centering
+  \caption{Muestras de fondos de MC utilizadas en el análisis, donde se especifica su generador, sección eficaz, $k$-factor y eficiencia de filtro.}
+  \label{tab:mc_samples}
+  \resizebox{\textwidth}{!}{
+  \begin{tabular}{llrrr}
+
+    Proceso & Generador & Sección Eficaz [pb] & $k$-factor & Eficiencia de filtro \\
+
+    \hline
+
+    \ttbarph, $\pt^{\gamma} > 140$ \gev  & \texttt{MadGgraph5\_aMC@NLO}/\texttt{Pythia8} & 0.21551  & 1.0 & 1.0  \\
+
+    \hline
+
+    $Z(ee)\gamma$, $\pt^\gamma>140$ \gev                 & \texttt{SHERPA} v2.2.2 & 0.0634   & 1.0 & 1.0\\
+    $Z(\mu\mu)\gamma$, $\pt^\gamma>140$ \gev             & \texttt{SHERPA} v2.2.2 & 0.0632   & 1.0 & 1.0\\
+
+    $Z(\tau\tau)\gamma$, $\pt^\gamma>140$ \gev           & \texttt{SHERPA} v2.2.2 & 0.0634   & 1.0 & 1.0\\
+
+    $Z(\nu\nu)\gamma$, $\pt^\gamma>140$ \gev             & \texttt{SHERPA} v2.2.2 & 0.2446   & 1.0 & 1.0\\
+
+  \hline
+    $W(e \nu)\gamma$, $\pt^\gamma>140$ \gev              & \texttt{SHERPA} v2.2.2 & 0.2980   & 1.0 & 1.0\\
 
 
+    $W(\mu \nu)\gamma$, $\pt^\gamma>140$ \gev            & \texttt{SHERPA} v2.2.2 & 0.2987   & 1.0 & 1.0\\
+
+
+    $W(\tau \nu)\gamma$, $\pt^\gamma>140$ \gev           & \texttt{SHERPA} v2.2.2 & 0.2983   & 1.0 & 1.0\\
+    \hline
+    \phj, $\pt^\gamma \in [70-140]$ \gev      & \texttt{SHERPA} v2.2.2 & 4526.5   & 1.0 & 1.0 \\
+    \phj, $\pt^\gamma \in [140-280]$ \gev     & \texttt{SHERPA} v2.2.2 & 376.05   & 1.0 & 1.0 \\
+    \phj, $\pt^\gamma \in [280-500]$ \gev     & \texttt{SHERPA} v2.2.2 & 21.851   & 1.0 & 1.0 \\
+    \phj, $\pt^\gamma \in [500-1000]$ \gev    & \texttt{SHERPA} v2.2.2 & 1.4637   & 1.0 & 1.0 \\
+    \phj, $\pt^\gamma \in [1000 - ]$ \gev       & \texttt{SHERPA} v2.2.2 & 0.02987  & 1.0 & 1.0 \\
+    \hline
+    \phph, $m_{\gamma\gamma} \in [0-50]     $ \gev         & \texttt{SHERPA} v2.2.4 & 93.499                 & 1.0 & 1.0 \\
+    \phph, $m_{\gamma\gamma} \in [50-90]    $ \gev         & \texttt{SHERPA} v2.2.4 & 139.04                 & 1.0 & 1.0 \\
+    \phph, $m_{\gamma\gamma} \in [90-175]   $ \gev         & \texttt{SHERPA} v2.2.4 & 51.818                 & 1.0 & 1.0 \\
+    \phph, $m_{\gamma\gamma} \in [175-2000] $ \gev         & \texttt{SHERPA} v2.2.4 & 10.999                 & 1.0 & 1.0 \\
+    \phph, $m_{\gamma\gamma} \in [2000-]    $ \gev         & \texttt{SHERPA} v2.2.4 & 0.0007                 & 1.0 & 1.0 \\
+      \hline
+      $Z(ee)\gamma\gamma$,      $\pt^{\text{sub}-\gamma} \in [9-17]$ \gev                 &  \texttt{SHERPA} v2.2.4 & $0.8705$ & 1.0 & 1.0 \\
+      $Z(ee)\gamma\gamma$,      $\pt^\gamma>17$ \gev, $m_{\gamma\gamma} \in [0-80]$ \gev  &  \texttt{SHERPA} v2.2.4 & $0.1993$ & 1.0 & 1.0 \\
+      $Z(ee)\gamma\gamma$,      $\pt^\gamma>17$ \gev, $m_{\gamma\gamma}>80$ \gev          &  \texttt{SHERPA} v2.2.4 & $0.0345$ & 1.0 & 1.0 \\
+
+      $Z(\mu\mu)\gamma\gamma$,  $\pt^{\text{sub}-\gamma} \in [9-17]$ \gev                 &  \texttt{SHERPA} v2.2.4 & $0.8689$ & 1.0 & 1.0 \\
+      $Z(\mu\mu)\gamma\gamma$,  $\pt^\gamma>17$ \gev, $m_{\gamma\gamma} \in [0-80]$ \gev  &  \texttt{SHERPA} v2.2.4 & $0.1999$ & 1.0 & 1.0 \\
+      $Z(\mu\mu)\gamma\gamma$,  $\pt^\gamma>17$ \gev, $m_{\gamma\gamma}>80$ \gev          &  \texttt{SHERPA} v2.2.4 & $0.0346$ & 1.0 & 1.0 \\
+
+      $Z(\tau\tau)\gamma\gamma$,$\pt^{\text{sub}-\gamma} \in [9-17]$ \gev                 &  \texttt{SHERPA} v2.2.4 & $0.8718$ & 1.0 & 1.0 \\
+      $Z(\tau\tau)\gamma\gamma$,$\pt^\gamma>17$ \gev, $m_{\gamma\gamma} \in [0-80]$ \gev  &  \texttt{SHERPA} v2.2.4 & $0.2005$ & 1.0 & 1.0 \\
+      $Z(\tau\tau)\gamma\gamma$,$\pt^\gamma>17$ \gev, $m_{\gamma\gamma}>80$ \gev          &  \texttt{SHERPA} v2.2.4 & $0.0345$ & 1.0 & 1.0 \\
+
+      $Z(\nu\nu)\gamma\gamma$,  $\pt^{\text{sub}-\gamma} \in [9-17]$ \gev                 &  \texttt{SHERPA} v2.2.4 & $0.0919$ & 1.0 & 1.0 \\
+      $Z(\nu\nu)\gamma\gamma$,  $\pt^\gamma>17$ \gev, $m_{\gamma\gamma} \in [0-80]$ \gev  &  \texttt{SHERPA} v2.2.4 & $0.0237$ & 1.0 & 1.0 \\
+      $Z(\nu\nu)\gamma\gamma$,  $\pt^\gamma>17$ \gev, $m_{\gamma\gamma}>80$ \gev          &  \texttt{SHERPA} v2.2.4 & $0.0184$ & 1.0 & 1.0 \\
+      \hline
+      $W(e\nu)\gamma\gamma$,    $\pt^{\text{sub}-\gamma} \in [9-17]$ \gev                 &  \texttt{SHERPA} v2.2.4 & $0.4396$ & 1.0 & 1.0 \\
+      $W(e\nu)\gamma\gamma$,    $\pt^\gamma>17$ \gev, $m_{\gamma\gamma} \in [0-80]$ \gev  &  \texttt{SHERPA} v2.2.4 & $0.0715$ & 1.0 & 1.0 \\
+      $W(e\nu)\gamma\gamma$,    $\pt^\gamma>17$ \gev, $m_{\gamma\gamma}>80$ \gev          &  \texttt{SHERPA} v2.2.4 & $0.0379$ & 1.0 & 1.0 \\
+
+      $W(\mu\nu)\gamma\gamma$,  $\pt^{\text{sub}-\gamma} \in [9-17]$ \gev                 &  \texttt{SHERPA} v2.2.4 & $0.4384$ & 1.0 & 1.0 \\
+      $W(\mu\nu)\gamma\gamma$,  $\pt^\gamma>17$ \gev, $m_{\gamma\gamma} \in [0-80]$ \gev  &  \texttt{SHERPA} v2.2.4 & $0.0711$ & 1.0 & 1.0 \\
+      $W(\mu\nu)\gamma\gamma$,  $\pt^\gamma>17$ \gev, $m_{\gamma\gamma}>80$ \gev          &  \texttt{SHERPA} v2.2.4 & $0.0379$ & 1.0 & 1.0 \\
+
+      $W(\tau\nu)\gamma\gamma$, $\pt^{\text{sub}-\gamma} \in [9-17]$ \gev                 &  \texttt{SHERPA} v2.2.4 & $0.4373$ & 1.0 & 1.0 \\
+      $W(\tau\nu)\gamma\gamma$, $\pt^\gamma>17$ \gev, $m_{\gamma\gamma} \in [0-80]$ \gev  &  \texttt{SHERPA} v2.2.4 & $0.0715$ & 1.0 & 1.0 \\
+      $W(\tau\nu)\gamma\gamma$, $\pt^\gamma>17$ \gev, $m_{\gamma\gamma}>80$ \gev          &  \texttt{SHERPA} v2.2.4 & $0.0379$ & 1.0 & 1.0 \\
+    % \hline
+  \end{tabular}
+  }
+\end{table}
+
+\subsection{Fondo de jets erróneamente reconstruidos como fotones}
+
+Es posible que un jet sea erróneamente reconstruido como un fotón principalmente cuando proviene de un $\pi^0$. Los piones neutrales decaen rápidamente a dos fotones que naturalmente son reconstruidos en el ECAL. Para poder distinguir el decaimiento de un pión de la producción de un fotón individual utiliza la primera capa del calorímetro, que tiene mayor granularidad (Sección \ref{sec:ph_id}). En el caso de que el pión se produzca con un elevado \pt, los dos fotones pueden estar muy colimados y por ende ser prácticamente indistinguibles de un fotón individual. Si bien la identificación \texttt{Tight} se encarga se suprimir en gran parte esta reconstrucción errónea, aún así puede contener una contaminación moderada de este proceso. Este tipo de fondo proviene principalmente de procesos como Multijets, $W+\text{jets}$ o de \ttbar decayendo semi-leptónicamente. Esta reconstrucción errónea de jets no es esperable que sea modelada correctamente mediante simulaciones de MC, por lo que se utilizan técnicas basadas en datos para modelarla.
+
+El método empleado para estimar este fondo se denomina \texttt{ABCD} \cite{Alonso:2233238}. El mismo hace uso de la diferencia que existe en las distribuciones de aislamiento de fotones `reales' (señal en este contexto) y la de los `falsos' (fondo), para poder selecciones eventos de uno u otro \tosolve{Esto cuando se utilizaría? Me parece que mirar las formas quedó de un método viejo no? Ahora solo miramos número de eventos. O es para la correlación?}. En el contexto de este método se definen fotones aislados como aquellos que pasan el WP \texttt{FixedCutTight} \tosolve{esta bien esto?}, $-20\ \gev<\ETiso<0\ \gev$ y $0<\pTiso<0.05$, y los no-aislados aquellos con $8\ \gev<\ETiso<80\ \gev$ o $0.15<\pTiso<1$ \tosolve{capaz deba definir estas variables aca, o en la parte de fotones}. A su vez se utiliza una selección de identificación adicional que discrimina los fotones `reales' \texttt{Tight} de los fotones `falsos'. Este criterio de identificación se denomina \texttt{Non-Tight} (también \textit{pseudo-photons}, \texttt{Tight-4} o \texttt{LoosePrime}) y consiste en los fotones que pasan la selección \texttt{Loose} y que además fallan alguno de los criterios de selección \texttt{Tight} que emplea las variables $w_{s3}$, $F_{\text{side}}$, $\Delta E$, $E_{\text{ratio}}$. Por lo que esta selección es un subconjunto de los eventos seleccionados por el trigger de fotones loose pero ortogonal a la identificación \texttt{Tight}. 
+
+El método \texttt{ABCD} preselecciona eventos con al menos un fotón con $\pt>1450\ \gev$, al menos dos jets y ningún leptón, cuyos requisitos son idénticos a los que se usan en el análisis descriptos en la Sección \ref{sec:obj_sel} \tosolve{Acá los objetos son 'signal', que todavia no esta definido, no se si esta seccion deberia ir aca...}. A partir de ello define cuatro regiones \cite{ATL-COM-PHYS-2016-1626}:
+
+\begin{itemize}
+  \item Región A: fotones \texttt{Tight} y aislados
+  \item Región B: fotones \texttt{Tight} y no aislados
+  \item Región C: fotones \texttt{Non-Tight} y aislados
+  \item Región D: fotones \texttt{Non-Tight} y no aislados
+\end{itemize}
+
+La Figura \ref{fig:abcd_regions} muestra la distribución de datos en las variables de aislamiento para las regiones A, B, C y D. En la misma se ve explícita la brecha (\textit{gap}) que existe entre las variables de aislamiento para reducir así la contaminación entre las regiones \tosolve{es por esto?}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.45\textwidth]{images/analysis/tight_ABCD_data.pdf}
+  \includegraphics[width=0.45\textwidth]{images/analysis/nontight_ABCD_data.pdf}
+  \caption{Distribución de datos en las variables de aislamiento para las regiones A, B, C y D.}
+  \label{fig:abcd_regions}
+\end{figure}
+
+
+El método se basa en asumir que no hay correlación entre las variables de aislamiento y la selección de identificación \cite{tesis_tony}, y que tampoco hay contaminación de eventos de señal en las regiones B, C y D ($N_{B,C,D}^b=N_{B,C,D}$), lo que permite esperar la siguiente relación $N_A^b/N_B=N_C/N_D$. 
+% Donde cada término representa el número de fondo en cada región. 
+Reescribiendo la expresión anterior se puede estimar el número de fondo en la región A como:
+
+\begin{equation}
+  N_A^b = \text{FF}_{\text{iso}}\times N_B = \text{FF}_{\text{ID}}\times N_C
+  \label{eq:jfakes_ff}
+\end{equation}
+%
+donde:
+\begin{equation}
+  \begin{split}
+    \text{FF}_{\text{iso}} &= \frac{N_C}{N_D} \\
+    \text{FF}_{\text{ID}} &= \frac{N_B}{N_D} \\
+  \end{split}
+\end{equation}
+%
+denominados \textit{fake factors} (FF). 
+Si bien ambos factores deberían dar resultado equivalente, se encontró que al usar $\text{FF}_{\text{iso}}$ las incertidumbres sistemáticas se veían reducidas, y por ende se decidió usar al mismo en el análisis.
+
+Distintas correcciones se realizan sobre este método. El primero es considerar que efectivamente hay una contaminación de señal en las regiones B, C y D. La misma es estimada utilizando simulaciones de MC con fotones `reales' a nivel generador, y restada a los datos observados en cada región. Adicionalmente se consideró que podría llegar a haber una correlación entre variables calorimétricas y de identificación, que se puede agregar como un factor multiplicativo a la Ecuación \ref{eq:jfakes_ff}. Ese factor se define como:
+
+\begin{equation}
+  R = \frac{N_a^b N_D^b}{N_B^b N_C^b} \neq 1
+\end{equation}
+
+Debido al blinding del análisis, no es posible conocer el número de eventos en la región A, por lo que se calcula el factor $R$ en regiones distintas pero asumiendo que tienen la misma correlación entre ellas:
+
+\begin{equation}
+  R' = \frac{N_a' N_D'}{N_B' N_C'} \neq 1
+\end{equation}
+%
+donde:
+\begin{itemize}
+  \item Región A: fotones \texttt{Tight}, $9\ \gev<\ETiso<15\ \gev$ y $0.2<\pTiso<0.3$
+  \item Región B: fotones \texttt{Tight}, $15\ \gev<\ETiso<80\ \gev$ y $0.3<\pTiso<1$
+  \item Región C: fotones \texttt{Non-Tight}, $9\ \gev<\ETiso<15\ \gev$ y $0.2<\pTiso<0.3$
+  \item Región D: fotones \texttt{Non-Tight}, $15\ \gev<\ETiso<80\ \gev$ y $0.3<\pTiso<1$
+\end{itemize}
+%
+cuyas definiciones apuntan a tener regiones con fondo exclusivamente pero con estadística suficiente.
+
+Con estas correcciones la estimación del fondo queda de la forma:
+
+\begin{equation}
+    N_{\jfake} = N_A^b = \left[R' \frac{N_C - N_C^s}{N_D - N_D^s} \left( 1 - \frac{N_B^s}{N_B} \right)  \right] \times N_B = \text{FF}_{\text{iso}} \times N_B \\
+\end{equation}
+
+Los FFs fueron estimados en función del \pt y $|\eta|$ del fotón, y la \met del evento. Distintas fuentes de incertidumbre sistemática fueron consideradas. Una fue cambiar la definición de la identificación \texttt{Non-Tight} utilizando ahora \texttt{Tight-3} (fallando ahora $w_{s3}$, $F_{\text{side}}$ o $\Delta E$) y \texttt{Tight-5} ($w_{s3}$, $F_{\text{side}}$, $\Delta E$, $E_{\text{ratio}}$ o $w_{\text{stot}}$). A su vez se consideró los efectos de la correlación residual calculado los FFs con $R'=1$ e incluyéndolos como sistemático.
+
+En la Tabla \ref{tab:jfake_ff} se puede observar los valores de los FFs obtenidos en función del \pt y $|\eta|$ del fotón, y la \met del evento. Los valores obtenidos para $R'$ dieron cercanos a la unidad con desviaciones cercanas al 10\%.
+
+\begin{table}[!ht]
+  \centering
+  \caption{Valores obtenidos para los factores de reconstrucción errónea de jets en fotones en función del \pt y $|\eta|$ del fotón, y la \met del evento. Las incertidumbres son tanto estadísticas como sistemáticas.}
+  \resizebox{.6\textwidth}{!}{
+  \begin{tabular}{c||l||ccc}
+    \hline
+    \hline
+      \multirow{2}{*}{$|\eta|$} & \multirow{2}{*}{{\pt} [{\gev}]}  & \multicolumn{3}{c}{\met [GeV]}                                      \\
+                                  &                                  & $[50-100]$         & $[100-200]$        & $>200$              \\
+    \hline
+    \hline
+    \multirow{6}{*}{Barrel}       & $[145-200]$                      & 0.055 $\pm$ 0.0077 & 0.042 $\pm$ 0.0047 &  0.066 $\pm$ 0.0241 \\
+                                  & $[200-250]$                      & 0.044 $\pm$ 0.0051 & 0.027 $\pm$ 0.0033 &  0.059 $\pm$ 0.0163 \\
+                                  & $[250-300]$                      & 0.041 $\pm$ 0.0034 & 0.022 $\pm$ 0.0047 &  0.057 $\pm$ 0.0095 \\
+                                  & $[300-350]$                      & 0.037 $\pm$ 0.0043 & 0.019 $\pm$ 0.0026 &  0.046 $\pm$ 0.014  \\
+                                  & $[350-400]$                      & 0.036 $\pm$ 0.0033 & 0.019 $\pm$ 0.0035 &  0.057 $\pm$ 0.0117 \\
+                                  & $>400$                           & 0.038 $\pm$ 0.0053 & 0.013 $\pm$ 0.0022 &  0.047 $\pm$ 0.011  \\
+
+    \hline
+    \multirow{6}{*}{End-cap}      & $[145-200]$                      & 0.048 $\pm$ 0.0152 & 0.053 $\pm$ 0.0139 & 0.213 $\pm$ 0.0963 \\
+                                  & $[200-250]$                      & 0.045 $\pm$ 0.0114 & 0.041 $\pm$ 0.0102 & 0.226 $\pm$ 0.125  \\
+                                  & $[250-300]$                      & 0.05  $\pm$ 0.0079 & 0.039 $\pm$ 0.0097 & 0.143 $\pm$ 0.043  \\
+                                  & $[300-350]$                      & 0.052 $\pm$ 0.0085 & 0.03  $\pm$ 0.0058 & 0.08  $\pm$ 0.0515 \\
+                                  & $[350-400]$                      & 0.058 $\pm$ 0.0071 & 0.043 $\pm$ 0.0079 & 0.179 $\pm$ 0.1064 \\
+                                  & $>400$                           & 0.07  $\pm$ 0.0095 & 0.047 $\pm$ 0.0077 & 0.141 $\pm$ 0.0528 \\
+    \hline
+    \hline
+  \end{tabular}
+  }
+  \label{tab:jfake_ff}
+\end{table}
+
+
+
+
+\subsection{Fondo de electrones erróneamente reconstruidos como fotones}
+
+Los fotones y los electrones pueden dejan lluvias electromagnéticas muy
+similares en el ECAL, y su reconstrucción se describió en la Sección \ref{sec:ph_el}.
+Si bien los algoritmos de reconstrucción de electrones y fotones están diseñados para poder discriminar uno de otros, una pequeña fracción residual de electrones puede ser reconstruida erróneamente como fotón. Si bien la reconstrucción de los clusters es altamente efectiva, la fracción de electrones mal reconstruidos se debe prácticamente a ineficiencias en la reconstrucción de trazas. Por ejemplo, la traza de un electrón puede ser mal reconstruida como un vértice de conversión y por ende el mismo es reconstruido como un fotón convertido. O inclusive una errónea asociación de la traza con el cluster puede hacer que el electrón sea reconstruido como fotón no convertido.
+Puede ocurrir a su vez que el cluster no pase los criterios de ambigüedad y el objeto sea almacenado por duplicado como electrón y fotón. Esto en general es fácil de suprimir aplicando requisitos de solapamiento, pero estos pueden favorecer al electrón y por ende tener en la selección del análisis nuevos electrones mal reconstruidos. Este tipo de efectos se ve principalmente en procesos como $W(l\nu)+\text{jets}$, $Z(ee)+\text{jets}$ o \ttbar. Nuevamente como es prácticamente imposible estimar esta reconstrucción errónea con simulaciones de MC, se utiliza una técnica basada en datos para estimar una fracción de reconstrucción errónea.
+
+Para ello lo que se hace es utilizar una muestra e eventos con producción de bosón $Z$. Como el mismo no puede decaer a $e+\gamma$, los eventos con este par de partículas y que parecieran provenir del decaimiento de un $Z$ son un buen indicio de que ese fotón en realidad es un electrón mal reconstruido. En ese caso se puede estimar una fracción de reconstrucción errónea (fake factor, FF) como:
+
+\begin{equation}
+  F_{e\to \gamma} \equiv \frac{P(e^{\text{real}}\to \gamma^{\text{reco}})}{P(e^{\text{real}}\to e^{\text{reco}})}  = \frac{\epsilon(e^{\text{real}}\to \gamma^{\text{reco}})}{\epsilon(e^{\text{real}}\to e^{\text{reco}})} \frac{\epsilon^{\text{ID}}_{\gamma}}{\epsilon^{\text{ID}}_{e}} = \frac{N_{e^{\text{real}}\to \gamma^{\text{reco}}}}{N_{e^{\text{real}}\to e^{\text{reco}}}} \frac{\epsilon^{\text{ID}}_{\gamma}}{\epsilon^{\text{ID}}_{e}}
+  \label{eq:efake_ff}
+\end{equation} 
+%
+donde $P(e\to e(\gamma))$ es la probabilidad de reconstruir e identificar un electrón `real' como un electrón (fotón), $\epsilon(e^{\text{real}}\to e(\gamma)^{\text{reco}})$ es la eficiencia de reconstruir un electrón `real' como un electrón (fotón)\footnote{Definida como $\frac{N_{e^{\text{real}}\to e(\gamma)^{\text{reco}}}}{N_{e^{\text{real}}\to e^{\text{reco}}}+N_{e^{\text{real}}\to \gamma^{\text{reco}}}}$}, $\epsilon^{\text{ID}}_{e} (\epsilon^{\text{ID}}_{\gamma})$ es la eficiencia de identificar un electrón (fotón) y $N_{\text{real } e\to \text{reco } e(\gamma)}$ el número electrones reconstruidos como electrones (fotones). Como no es posible saber a partir de los datos cuándo un electrón es `real', este factor debe ser estimado a partir de los objetos ya reconstruidos y sus eficiencias, magnitudes que sí son mensurables en datos. Para una dada muestra con eventos de bosones $Z$, la probabilidad de reconstruir a sus productos de decaimiento como pares $ee$ o $e\gamma$ esta dada por \tosolve{tengo que pensar mejor estas fórmulas, pero va por aca la cosa}:
+
+\begin{equation}
+\frac{N_{ee}}{N_Z} = (\epsilon^{ID}_{e})^{2} (1-\epsilon(e^{\text{true}}\to \gamma^{\text{reco}}))^{2}
+\quad
+\frac{N_{e\gamma}}{N_Z} = \epsilon^{ID}_{e}\epsilon^{ID}_{\gamma} (1-\epsilon(e^{\text{true}}\to \gamma^{\text{reco}}))\epsilon(e^{\text{true}}\to \gamma^{\text{reco}})
+\end{equation}
+% 
+quedando entonces el fake factor como:
+
+\begin{equation}
+  F_{e\to \gamma}(|\eta|) = \frac{N_{e\gamma}(|\eta^{\gamma}|)}{N_{ee}(|\eta^{e}|)}
+\end{equation}
+
+
+El método emplea una muestra a partir de todos los datos tomados durante el Run 2, seleccionando aquellos que tengan al menos dos electrones, o al menos un electrón y un fotón. En el caso de múltiples posibles pares en el evento, se utiliza la combinación cuya masa invariante esté más cerca de $m_Z=91.1876\ \gev$. A su vez, se aplica un corte con $\met<40\ \gev$ para suprimir eventos con $W$ decayendo a electrones. Los requisitos de los objetos son idénticos a los que se usan en el análisis descriptos en la Sección \ref{sec:obj_sel}.
+
+Para identificar si el par proviene del decaimiento de un bosón $Z$ se reconstruye su masa invariante, de forma separada dependiendo si el par es $ee$ o $e\gamma$. Como el FF se calcula en función de $|\eta|$, se obtienen distribuciones de la masa invariante de cada par para distintos intervalos de $|\eta|$, como se describe en la Figura \ref{fig:efakes_matrix}. En estas selecciones puede ocurrir que haya un conjunto de eventos que no provenga del $Z$ (fondo no resonante), por lo que se hace un ajuste de cada distribución de masa invariante con una función del tipo `señal+fondo'. Para la señal se utiliza una \textit{Double-sided crystal ball} \tosolve{definir} y para el fondo una función Gaussiana.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth]{images/analysis/grid_en_2.pdf}
+  \caption{Esquema de reconstrucción de las distintas distribuciones de masa invariante utilizadas en el método. Cabe destacar que la clasificación en \pt de la imagen se heredó de un método anterior, pero actualmente solo se utiliza la clasificación en $|\eta|$. Si bien la imagen parece favorecer el número de pares de $ee$, en realidad es porque se está considerando tanto al electrón leading como al sub-leading, cosa que ocurre de forma similar para los pares $e\gamma$ pero no está explícito en la imagen.}
+  \label{fig:efakes_matrix}
+\end{figure}
+
+Una vez ajustada cada distribución, la función se integra alrededor del pico del $Z$ en una ventana definida como $[\mu - 3\sigma, \mu + 3\sigma]$, para obtener el número de eventos que se emplea en los factores de la Ecuación \ref{eq:efake_ff} para cada intervalo de $|\eta|$. En la Figura \ref{fig:efakes_fit} se puede observar el resultado del ajuste para la distribución de masa invariante de pares $ee$ y $e\gamma$ con $|\eta| \in [0-0.6]$. Cabe mencionar que anteriormente el método empleada una clasificación adicional en \pt, y que eso introducía un sesgo en las distribuciones que era contemplado agregando una función Gaussiana adicional, centrada en valores \tosolve{donde?}. Como actualmente se aplica un corte en $\pt>145\ \gev$ el efecto del mismo es completamente despreciable para los eventos cerca del pico del $Z$.
+
+\begin{figure*}[ht!]
+  \centering
+  \includegraphics[width=0.45\textwidth]{images/analysis/egFF_fit_ee_eta_0_06.pdf}
+  \includegraphics[width=0.45\textwidth]{images/analysis/egFF_fit_eg_eta_0_06.pdf}
+  \caption{Ajuste a la masa invariante para los pares $ee$ (izquierda) and $e\gamma$ (derecha) con $|\eta| \in [0-0.6]$. La región celeste representa la ventana de integración empleada para calcular los FFs. A alto \pt una Gaussiana adicional es incluida para tener en cuenta el sesgo al aplicar un corte en \pt, pero resulta despreciable su contribución en el número de eventos cerca del pico del $Z$.}
+  \label{fig:efakes_fit}
+\end{figure*}
+
+Distintas fuentes de incertidumbre sistemática fueron consideradas en el método. Se emplearon distintas ventanas de integración como $[\mu - 2\sigma, \mu + 2\sigma]$ y $[\mu - 4\sigma, \mu + 4\sigma]$. A su vez se calcularon los FFs utilizando sin la sustracción del fondo, incluyendo esta variación como sistemático que contempla el sesgo en la elección de la función de ajuste. Finalmente, como la energía del fotón `falso' es reconstruida con algoritmos para fotones, cuando en realidad deberían haber sido empleados los de electrones, se considera esto como una incertidumbre sistemática. Para ellos se calcula nuevamente los FFs ahora modificando el valor de energía de los fotones en un factor 1.5\%. Dicho valor se obtiene de las desviaciones que existen en el $\mu$ con respecto al valor de $m_Z$ de la función ajustada a los pares $e\gamma$ \cite{ATL-COM-PHYS-2016-1626}. Los valores obtenidos para los FFs junto con sus incertidumbres se pueden observar en la Tabla \ref{tab:efakes_ff}. Se puede ver como los mismos aumentan con $|\eta|$, relacionados con la cantidad de material que atraviesan y con la mayor fracción de reconstrucción de fotones convertidos con una sola traza.
+
+\begin{table}
+\centering
+\caption{Factores de reconstrucción errónea de electrones como fotones en función de $|\eta|$ para todos los datos del Run 2. Se ponen explícitas las incertidumbres estadísticas y sistemáticas provenientes de variar la ventana de integración, no emplear la sustracción de fondo y el sesgo en la energía de los fotones.}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{ l | c | c c c c | c }
+\hline
+\hline
+\multirow{2}{*}{$|\eta|$} & \multirow{2}{*}{Fake factor} & Incertidumbre & \multicolumn{3}{c |}{Incertidumbre sistemática} & Incertidumbre \\
+\cline{4-6}
+ & & estadística. & V. integración & Sin sustracción & Sesgo energía & Total\\
+\hline
+\hline
+0.00-0.60 & 0.0194 & 0.0000 & 0.0001 & 0.0006 & 0.0012 & 0.0013 \\
+0.60-1.37 & 0.0244 & 0.0000 & 0.0003 & 0.0014 & 0.0001 & 0.0014 \\
+1.52-1.82 & 0.0497 & 0.0001 & 0.0000 & 0.0009 & 0.0028 & 0.0029 \\
+1.82-2.37 & 0.0863 & 0.0001 & 0.0007 & 0.0016 & 0.0051 & 0.0054 \\
+\hline
+\hline
+\end{tabular}
+}
+\label{tab:efakes_ff}
+\end{table}
+
+
+Finalmente, el fondo para cada región (R) del análisis se estima definiendo una correspondiente región de control de electrones (CSE), definida de igual forma que R pero reemplazando los cortes sobre fotones por electrones. Se estima la contribución del fondo entonces como:
+
+\begin{equation}
+  N^{\text{R}}_{e\rightarrow\gamma}(|\eta|) = \text{FF}_{e\gamma}(|\eta|)\cdot N^{\text{R}}_{\mathrm{CSE}}(|\eta|)
+\end{equation}
+
+En el caso de no observar eventos en alguna CSE, se hace una estimación conservadora con un evento\tosolve{no sabia esto!!!}.
+
+\tosolve{esto tambien se hace para jfakes, por que nunca lo hacemos explicito?}
 
 \section{Selección de eventos de señal}
 
@@ -127,7 +399,7 @@ En eventos caracterizados por elevado \met\ reconstruidos sin una contribución 
 estar alineado con el fotón o con uno de los dos jets principales. Una selección basada en la separación angular entre estos objetos y el vector \met\ ($\dphijetmet$ y $\dphigammet$) proporciona una gran supresión de estos procesos de fondo.
 
 Las señales de SUSY consideradas en este análisis se caracterizan por
-eventos con alta multiplicdad de jets en una amplia región del espacio de parámetros. Los jets secundarios son comparativamente más duros que los de los eventos de fondo SM. Como consecuencia, para procesos de señal con jets duros, \rtf\ (definido como la suma escalar de \pt\ para los cuatro jets de \pt\ más alto, dividido la suma escalar del \pt\ de todos los jets de señal) toma valores inferiores a uno, mientras que para el fondo SM con menos jets y más suaves, \ \rtf\ suele estar más cerca de la unidad \cite{SUSY-2016-27}.
+eventos con alta multiplicidad de jets en una amplia región del espacio de parámetros. Los jets secundarios son comparativamente más duros que los de los eventos de fondo SM. Como consecuencia, para procesos de señal con jets duros, \rtf\ (definido como la suma escalar de \pt\ para los cuatro jets de \pt\ más alto, dividido la suma escalar del \pt\ de todos los jets de señal) toma valores inferiores a uno, mientras que para el fondo SM con menos jets y más suaves, \ \rtf\ suele estar más cerca de la unidad \cite{SUSY-2016-27}.
 No se aplica una selección de \rtf\ para SRH debido al menor número de jets en esta región.
 
 La selección de eventos para todas las regiones de señales se resume en la Tabla \ref{tab:sr_selection}. 
