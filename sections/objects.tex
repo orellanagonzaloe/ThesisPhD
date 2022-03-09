@@ -118,6 +118,10 @@ Como los depósitos de energía varían debido a la geometría del calorímetros
 \caption{Variables utilizadas en la definición de los WPs de identificación de fotones, \texttt{Loose} (L), \texttt{Medium} (M) y \texttt{Tight} (T). La identificación de electrones utiliza, además de algunas de estas, variables adicionales que no se muestran en la tabla. Para las variables de la primer capa del ECAL, si el cluster tiene más de una celda en la dirección de $\phi$ a un dado $\eta$, las dos celdas más cercanas en $\phi$ al baricentro del cluster son combinadas y las variables se consideran utilizando esa celda combinada. \tosolve{Algunas definiciones no son muy claras, tampoco en el paper...}}
 	\begin{tabular}{ l p{2cm} p{8cm} c c c}
 
+  \hline
+
+  \hline
+
 		Categoría & Nombre & Descripción & L & M & T \\
 
 		\hline
@@ -151,7 +155,8 @@ Como los depósitos de energía varían debido a la geometría del calorímetros
 		 & $f_{\text{1}}$ & Fracción de energía medida en la primer capa del ECAL con respecto a la energía total del cluster electromagnético & \xmark & \xmark & \cmark \\
 
 
-
+     \hline
+     \hline
 
 	\end{tabular}
 
@@ -197,6 +202,8 @@ A partir de estas variables se definen distintos WPs de aislamiento de electrone
 }
 	\begin{tabular}{ l l c c}
 
+  \hline
+  \hline
 		Objeto & WP & Aislamiento calorimétrico & Aislamiento de trazas \\
 
 		\hline
@@ -209,6 +216,9 @@ A partir de estas variables se definen distintos WPs de aislamiento de electrone
 		\hline
 
 		Electrón & FixedCutLoose & $\ETcone{20}/\pt<0.2$ & $\pTvarcone{20}/\pt<0.15$\\
+
+    \hline
+    \hline
 
 	\end{tabular}
 \label{IDWPs}
@@ -254,6 +264,10 @@ Finalmente se definen criterios de aislamiento que permiten distinguir aquellos 
 \caption{Definición de algunos de los WPs de aislamiento para muones. \tosolve{No encuentro la definición de VarRad. FixedCutTight no aparece en el paper, sí en la twiki, raro...}}
   \begin{tabular}{ l c c}
 
+  \hline
+
+  \hline
+
     WP & Aislamiento calorimétrico & Aislamiento de trazas \\
 
     \hline
@@ -266,6 +280,8 @@ Finalmente se definen criterios de aislamiento que permiten distinguir aquellos 
     \hline
 
     Loose\_VarRad & ??? & ??? \\
+
+    \hline
 
   \end{tabular}
 \label{tab:muon_WPs}
