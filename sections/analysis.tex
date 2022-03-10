@@ -193,7 +193,7 @@ a LO y se fusionan con la lluvia de partones de \texttt{SHERPA} \cite{Schumann:2
   }
 \end{table}
 
-\subsection{Fondo de jets erróneamente reconstruidos como fotones}
+\subsection{Fondo de jets erróneamente reconstruidos como fotones}\label{sec:jfakes}
 
 Es posible que un jet sea erróneamente reconstruido como un fotón principalmente cuando proviene de un $\pi^0$. Los piones neutrales decaen rápidamente a dos fotones que naturalmente son reconstruidos en el ECAL. Para poder distinguir el decaimiento de un pión de la producción de un fotón individual utiliza la primera capa del calorímetro, que tiene mayor granularidad (Sección \ref{sec:ph_id}). En el caso de que el pión se produzca con un elevado \pt, los dos fotones pueden estar muy colimados y por ende ser prácticamente indistinguibles de un fotón individual. Si bien la identificación \texttt{Tight} se encarga se suprimir en gran parte esta reconstrucción errónea, aún así puede contener una contaminación moderada de este proceso. Este tipo de fondo proviene principalmente de procesos como Multijets, $W+\text{jets}$ o de \ttbar decayendo semi-leptónicamente. Esta reconstrucción errónea de jets no es esperable que sea modelada correctamente mediante simulaciones de MC, por lo que se utilizan técnicas basadas en datos para modelarla.
 
@@ -306,7 +306,7 @@ En la Tabla \ref{tab:jfake_ff} se puede observar los valores de los FFs obtenido
 
 
 
-\subsection{Fondo de electrones erróneamente reconstruidos como fotones}
+\subsection{Fondo de electrones erróneamente reconstruidos como fotones}\label{sec:efakes}
 
 Los fotones y los electrones pueden dejan lluvias electromagnéticas muy
 similares en el ECAL, y su reconstrucción se describió en la Sección \ref{sec:ph_el}.
@@ -386,6 +386,7 @@ Finalmente, el fondo para cada región (R) del análisis se estima definiendo un
 
 \begin{equation}
   N^{\text{R}}_{e\rightarrow\gamma}(|\eta|) = \text{FF}_{e\gamma}(|\eta|)\cdot N^{\text{R}}_{\mathrm{CSE}}(|\eta|)
+  \label{eq:efake_cs}
 \end{equation}
 
 En el caso de no observar eventos en alguna CSE, se hace una estimación conservadora con un evento\tosolve{no sabia esto!!!}.
@@ -609,4 +610,118 @@ Para los fondos \wph y \ttbarph se definieron cuatro regiones de validación, po
   \end{tabular}
   \label{tab:vrl_def}
 \end{table}
+
+\tosolve{me falta VRE xD}
+
+\section{Incertezas sistemáticas}
+
+Un factor clave en el análisis es la estimación de las incertezas sistemáticas involucradas en el análisis, las cuales afectan tanto la estimación de los fondos como de la señal en las distintas regiones del análisis. Las mismas son incluidas como parámetros nuisance en los distintos ajustes realizados. Existen dos tipos de incertidumbres sistemáticas, las experimentales y las teóricas, y se describen a continuación.
+
+
+\subsection{Incertezas sistemáticas experimentales}
+
+Las incertezas experimentales están asociadas a la estimación de los fondos, ya sea por incertidumbres provenientes del detector en las simulaciones como en los métodos de estimación de fondos basados en datos.
+
+
+\subsubsection{Incerteza en la luminosidad}
+
+La luminosidad del LHC en el Run 2 se midió utilizando el detector de Cherenkov LUCID2 \cite{lucid2} durante tomas de datos especiales de baja luminosidad del LHC, usando el método van der Meer \cite{vandermeer1,vandermeer2}. La misma es empleada en general para la medida de secciones eficaces, aunque en este análisis cumple un rol fundamental en la normalización de las simulaciones de MC a las condiciones del LHC del Run 2. La incertidumbre en la luminosidad total del Run 2 fue de $1.7$\% \cite{ATLAS-CONF-2019-021}.
+
+
+\subsubsection{Incertezas asociadas a fotones, electrones y muones}
+
+Las incertezas en la identificación y aislamiento de fotones son estimadas a partir de las diferencias que hay en las shower shapes \tosolve{no se si esta definido} entre datos y MC, utilizando eventos de bosón $Z$ decayendo radiativamente \cite{ph_unc1}. La escala de energía es determinada utilizando eventos de $Z\to ee$ y $J/\Psi \to ee$, y sus correcciones fueron aplicadas como variaciones de una desviación estándar del valor nominal. La misma metodología se empleó para correcciones en la resolución.
+
+De manera similar se obtuvieron los sistemáticos asociados a electrones \cite{ATLAS-CONF-2014-032} y muones \cite{PERF-2015-10}, las cuales fueron determinadas a partir de eventos $Z\to l^+l^-$, $J\Psi\to l^+l^-$ y $W\to l^\pm \nu$. Las incertidumbres consideradas fueron en la identificación, reconstrucción, aislamiento y escala de energía de los electrones. Para los muones se consideraron las incertidumbres en la resolución y escala del momento, la dependencia del momento con la carga, reconstrucción y aislamiento.
+
+\subsubsection{Incertezas asociadas a jets}
+
+Las incertezas asociadas a jets se estiman siguiendo la metodología descripta en las Referencias \cite{PERF-2011-03} y \cite{ATLAS-CONF-2015-037}. Las incertezas consideradas son varias y aportan una gran cantidad de parámetros nuisance, entre ellas están la incertidumbre asociadas a la resolución y escala de energía, las eficiencias de identificación de sabor del jet y la incertidumbre en el JVT. \tosolve{Me pareció que describirlas en detalle era demasiada información sin precisiones...}.
+
+\subsubsection{Incertezas asociadas a \met}
+
+Cuando se modifica la escala o resolución de energía de algún objeto, esa variación se propaga en conjunto al término correspondiente al cálculo de \met. Adicionalmente los sistemáticos asociados al término Soft de \met se obtienen mediante la comparación de la escala y resolución entre datos y MC, con distintos generadores y simulaciones de detector.
+
+\subsubsection{Incertezas asociadas al pile-up}
+
+El factor de corrección de pile-up se obtiene para hacer coincidir el número promedio de interacciones por cruces de haces de las simulaciones de MC con la de datos. El mismo era de $1/1.03$ y  la incerteza sistemática se obtuvo variando el mismo a $1/0.99$ y $1/1.07$. \tosolve{Esto nunca lo expliqué y no lo sé bien, seguro que se aplica estas variaciones?}
+
+\subsubsection{Incertezas en los métodos de estimación de fondos basados en datos}
+
+Los métodos para la estimación de fondos de jets y electrones reconstruidos erróneamente como fotones, descriptos en las Secciones \ref{sec:jfakes} y \ref{sec:efakes}, tienen también incertezas asociadas. Una es la propia incerteza estadística propia de la muestra de control durante la estimación de estos fondos (Ecuación \ref{eq:efake_cs} \tosolve{Debería estar la de jfakes no?}). La otra es la incerteza propia de los FFs descripta en esas mismas Secciones y ambas son incluidas como parámetros nuisance.
+
+
+\subsection{Incertezas sistemáticas teóricas}
+
+Las incertezas teóricas afectan a todas las simulaciones de MC, y provienen principalmente tanto del generador empleado como de los distintos parámetros de la teoría utilizados en los cálculos de las propias simulaciones. 
+
+Para cada muestra de fondo en cada región del análisis se calculó una incertidumbre teórica total que incluía los efectos que más adelante se describen. Contrario a lo que se esperaría, las incertezas sistemáticas se ven afectadas por la estadística de la muestra, principalmente cuando la región tiene bajo número de eventos. Es por esto que para el cálculo de las incertidumbres teóricas se emplearon regiones equivalentes a la del análisis pero relajando varios de sus cortes para ganar una mayor estadística. Se empleó una región para sistemáticos común a todas las SRs del análisis, y una para cada grupo de VRs, las cuales se muestran en la Tabla \ref{tab:syst_reg}. Para las CRs se decidió utilizar exactamente las mismas ya que por definición abundan los eventos de un dado fondo. 
+
+\begin{table}[ht!]
+  \caption{Regiones empleadas para el cálculo de los sistemáticos teóricos. Las mismas fueron obtenidas a partir de las regiones del análisis pero relajando algunos de sus cortes. Para las CRs se emplearon las mismas regiones del análisis por lo que no se muestran.}
+  \centering
+   \resizebox{.9\textwidth}{!}{
+    \begin{tabular}{l|r|r|r|r}
+    \hline
+    \hline
+      & SR\_syst & VRM\_syst   & VRL\_syst & VRE\_syst   \\
+      \hline
+      \hline
+      $N_{\text{fotones}}$              & $\ge1$   & $\ge1$      & $\ge1$    &  $\ge1$      \\
+      \ptph [\gev] & $>145$   & $>300$      & $>145$    &  $>145$      \\
+      $N_{\text{leptones}}$              &      0   &     0       & $>0$      &     -        \\
+      \njet                 & $\ge3$   & $\ge3$      & $\ge2$    &  $\ge1$      \\
+      \nbjet               &     -    &      -      &    -      &  $\ge1$      \\
+      \dphijetmet      &     -    &      -      &    -      &  $>0.4$      \\
+      \dphigammet          & $>0.4$   & $>0.4$      &    -      &     -        \\
+      \met [\gev]                         & $>200$   & $>100$      & $>100$    &  $>200$      \\
+      \HT  [\gev]                         & $>1600$  & $>1000$     & $>800$    &  [100-1600]  \\
+      \hline
+      \hline
+    \end{tabular}
+    }
+\label{tab:syst_reg}
+\end{table}
+
+Todas las muestras de fondo contenían un conjunto de pesos internos que representan el efecto de la variación de distintos parámetros de la teoría. Las variaciones consideradas para cada muestra fueron las de la escala de renormalización ($\mu_R$) y factorización ($\mu_F$), la variación de los elementos de matriz (ME) de la PDF nominal, variación de la familia de PDFs empleada en la generación de los eventos, y las incertidumbres asociadas a la determinación y truncamiento de la constante de acoplamiento fuerte ($\alpha_S$). Para la muestra de \ttbarph solo estaban disponible las dos primeras variaciones, las cuales se esperaba que sean las predominantes. Tampoco se tuvieron en cuenta variaciones en la escala de matching (CKKW) \tosolve{mirar esto} ni en la escala de resumación (QSF). Estas variaciones requerían la generación de unas nuevas muestras pero se omitieron ya que se esperaban que sean despreciables. 
+
+El cálculo de la incertidumbre teórica total se calculó siguiendo las recomendaciones \texttt{PDF4LHC} \tosolve{no se si fue asi...}. Para calcular las variaciones de los MEs de las PDFs se empleó \texttt{LHAPDF} \cite{lhapdf} con la PDF nominal, \texttt{NNPDF30\_nnlo\_as\_0118}, y 100 variaciones de sus MEs. A su vez se consideraron dos familias de PDFs alternativas, \texttt{CT14} y \texttt{MMHT2014nnlo68c1}. Para las variaciones de escala se consideraron siete posibles valores: $(\mu_R, \mu_F) = (0.5,0.5), (1,0.5), (0.5,1), (1,1), (2,1), (1,2), (2,2)$. Finalmente se consideraron dos variaciones asociadas a $\alpha_S$. Todas estas variaciones fueron combinadas en una sola incertidumbre total para cada muestra y para cada región, y cuyos valores porcentuales promedio se muestran en la Tabla \ref{tab:syst_values}.
+
+\begin{table}[ht!]
+  \centering
+  \begin{minipage}{\textwidth}
+
+
+  \caption{Valores porcentuales promedios de las incertidumbres teóricas de cada muestra de fondo en cada región. Los fondos con baja estadística no afectaban el análisis y sus incertidumbres fueron fijadas a 100\%.}
+
+  \resizebox{.9\textwidth}{!}{
+  \begin{tabular}{  r | c | c | c | c | c | c | c }
+    \hline
+     \hline
+      & CRQ & CRW & CRT & SR\_syst & VRE\_syst & VRM\_syst & VRL\_syst\\
+    \hline
+     \hline
+    \phj       & 32.26\% & 38.83\% & 75.33\%  & 30.66\% & 38.23\% & 31.08\% & 46.26\%\\
+    \wph             & 26.07\% & 22.75\% & 27.90\%  & 25.54\% & 22.83\% & 25.80\% & 25.78\%\\
+    \ttbarph      & 13.66\% & 12.67\% & 12.57\%  & 14.07\% & 13.26\% & 12.59\% & 12.79\%\\
+    \znunuph     & 27.90\% & 32.06\% & 100\% & 27.14\% & 21.04\% & 27.45\% & 35.03\%\\
+    % $Z(\nu\nu)\gamma$     & 27.90\% & 32.06\% & 114.57\% & 27.14\% & 21.04\% & 27.45\% & 35.03\%\\
+    \zllph         & 31.84\% & 22.16\% & 27.55\%  & 35.97\% & 17.53\% & 26.88\% & 27.13\%\\
+    % $W\gamma\gamma/Z\gamma\gamma$ & 23.32\% & 19.50\% & 26.79\% & 21.36\% & 21.37\% & 19.62\% & 18.81\%\\
+    % $\gamma\gamma$ & 31.19\% & 46.51\% & 65.19\% & 42.13\% & 45.03\% & 29.17\% & 44.49\%\\
+    \hline
+     \hline
+  \end{tabular}
+  }
+\label{tab:syst_values}
+\end{minipage}
+\end{table}
+
+
+
+
+
+
+
+
 
