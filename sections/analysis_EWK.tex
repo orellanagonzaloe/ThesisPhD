@@ -2,68 +2,61 @@
 % \addcontentsline{toc}{chapter}{Búsqueda de SUSY con producción electrodébil}
 \chaptermark{Búsqueda de SUSY con producción electrodébil en estados finales con fotones, bosones $Z$ y Higgs}
 
+Las búsquedas de supersimetría están caracterizadas por distintas propiedad, en particular en la que se centra esta tesis está caracterizada por la producción fuerte de gluinos, y los resultados de la misma fueron mostrados en los capítulos anteriores. De forma análoga es posible realizar una búsqueda con el mismo estado final, motivada por un modelo supersimétrico similar al anterior pero dedicado a la producción electrodébil de partículas SUSY.
+
+La metodología empleada para realizar dicha búsqueda es similar a la búsqueda con producción fuerte, que consiste en el modelado de muestras de señal y fondo, diseño de regiones sensibles a dicho modelo, para una posterior comparación con los eventos observados. El siguiente capítulo describe los pasos seguidos hasta la realización del ajuste de solo fondo.
 
 
-Es posible realizar una búsqueda alternativa con el mismo estado final, para realizar un búsqueda de un modelo supersimétrico similar al anterior pero dedicado a la preducción electrodébil de partículas de SUSY.
+\section{Muestras de señal a partir de simulaciones de Monte Carlo}
 
-El estado final esta motivado por modelos de supersimetría (SUSY) \cite{Golfand:1971iw, Volkov:1973ix, Wess:1974tw, Wess:1974jb, Ferrara:1974pu, Salam:1974ig, Martin:1997ns}, que son candidatos teóricamente bien motivados para la física más allá del Modelo Estándar (SM). Teorías de ruptura de simetría gauge mediated (GMSB) \cite{Dine:1981gu, AlvarezGaume:1981wy, Nappi:1982hm} predicen un sector oculto en el que la supersimetría se rompe con un valor de expectación de vacío $ \langle F \rangle $, donde la ruptura de simetría se transfiere al sector visible a través de interacciones de bosones gauge del modelo estándar. La partícula supersimétrica más ligera (LSP) en GMSB es el gravitino ultraligero (\gravino), que en determinadas circunstancias es un candidato viable a materia oscura \cite{Goldberg:1983nd, Ellis:1983ew}. La fenomenología de los modelos GMSB está determinada por la naturaleza de la partícula supersimétrica próxima a la más ligera (NLSP), que para una gran parte del espacio de parámetros del GMSB es el neutralino \ninoone. Los neutralinos son mezclas de autoestados de gauginos neutros ($\tilde{B}$, $\tilde{W}^{0}$) y higgsinos neutros ($\tilde{H}^{0}_{u},\tilde{H}^{0}_{d}$), y por lo tanto el neutralino más ligero puede decar a un \gravino by a $\gamma$, $Z$ o $h$ (el bosón de Higgs neutro más ligero, asumido compatible con el bosón de Higgs observado en ATLAS y CMS). Los dos últimos están sujetos a una fuerte supresión cinemática proporcional a $ (1-m_{Z}^{2}/m_{\ninoone}^{2})^4$ y $(1-m_{h^{0}}^{2}/m_{\ninoone}^{2})^4$, pero que aún juegan un papel importante en la fenomenología si $ \langle F \rangle $ no es demasiado grande, \ninoone\ tiene un contenido considerable de zino o higgsino y $m_{\ninoone}$ es significativamente mayor que $m_{Z}$ o $m_{h^{0}}$. Teóricamente se permiten las desintegraciones a \Azero o \Hzero \, pero es poco probable que se permitan cinemáticamente.
+El modelo que motiva a esta parte de la búsqueda es similar al descripto en la Sección \label{sec:signal_samples} con algunas salvedades. En el mismo se optimizaron los parámetros del modelo para obtener las masas y decaimientos deseados, en los cuales no estaba contemplado el decaimiento a bosones $Z$. La búsqueda electrodébil emplea una estrategia simplificada para generar las muestras de señal. En principio se fijan directamente las masas y los decaimientos de todas las partículas, sin centrarse en los parámetros de la teoría que llevan a tales valores. A su vez, la búsqueda se realiza de forma sensible a posibles decaimientos del \ninoone a fotones, bosones $Z$ y Higgs. La Figura \ref{fig:EWK_GGM_diagrams} muestra posibles diagramas de decaimiento para la búsqueda electrodébil.
 
-En consecuencia, un par de \ninoone\  producidos en un colisionador puede dar lugar a un estado final que contenga dos bosones ($hh$, $h\gamma$, $hZ$, $Z\gamma$, $ZZ$, $\gamma\gamma$) más \met\ de las partículas LSP estables e indetectables (\gravino). Se han realizado varias búsquedas de estas signaturas \cite{SUSY-2011-12, SUSY-2012-12,EXOT-2010-06,SUSY-2011-04,ATLAS-CONF-2012-144,CMS-SUS-10-002 ,CMS-SUS-11-002,CMS-SUS-14-009,SUSY-2014-01,CMS-SUS-14-004,SUSY-2014-08}.
-Los escenarios considerados en este análisis son aquellos con al menos un fotón
-más dos \gravino\ en el estado final, esperados en el caso en que el \ninoone\ sea una mezcla bino-higgsino, como se muestra en la Figura \ref{fig:GGM_diagrams}.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.3\textwidth]{images/N1N2C1-qqZhphGG-GGM.pdf}%
-  \includegraphics[width=0.3\textwidth]{images/C1C1N2-qqqqZhphGG-GGM.pdf}
-  \caption{Diagramas de producción de gauginos con estado final de fotones y gravitinos.}
-  \label{fig:GGM_diagrams}
+  \includegraphics[width=0.45\textwidth]{images/N1N2C1-qqZhphGG-GGM.pdf}%
+  \includegraphics[width=0.45\textwidth]{images/C1C1N2-qqqqZhphGG-GGM.pdf}
+  \caption{Diagramas de producción de gauginos con estado final de fotones, bosones $Z$, Higgs y gravitinos}
+  \label{fig:EWK_GGM_diagrams}
 \end{figure}
 
-Los esfuerzos para formular al GMSB de una forma independiente de modelo han llevado al desarrollo de la general gauge mediated (GGM) \cite{Cheung:2007es,Meade:2008wd}. GGM incluye un sector observable con todos los campos del Modelo Estándar Mínimo Supersimétrico (MSSM), junto con un sector oculto que contiene la fuente de ruptura de SUSY.
-En GGM, no hay necesidad de ninguna jerarquía de masas entre los estados de color y no de color y, por lo tanto, no existe una restricción teórica sobre la masa de los estados de color, por lo que estos estados están al alcance del LHC. 
 
-Muestras de la señal de SUSY fueron generadas utilizando simulaciones de Monte Carlo a $\sqrt{s} = 13\ \tev$. Las mismas pasaron por la simulación rápida del detector ATLAS \textsc{ATLFAST-II} \cite{Richter-Was:683751}. Un peso evento a evento es aplicado para modelar las condiciones del detector de la toma de datos bajo estudio, haciendo coincidir las distribuciones del número de colisiones inelásticas $pp$ por cruce de haces (pile-up) a las obtenidas en datos.
+Se generaron 12 puntos de señal en función de la masa del \ninoone, la cual podía tomar los valores: $150\ \gev$, $250\ \gev$, $350\ \gev$, $450\ \gev$, $650\ \gev$, $750\ \gev$, $850\ \gev$, $950\ \gev$, $1050\ \gev$, $1250 \gev$ y $1450 \gev$. Los decaimientos del mismos se fijaron a $33\%$ de igual forma para $\gamma + \gravino$, $Z + \gravino$ y $h + \gravino$. Los estados finales de cada evento están caracterizados por los posibles decaimientos de los dos \ninoone de la cadena de decaimiento, los cuales pueden ser $\gamma\gamma$, $\gamma Z$, $\gamma h$, $ZZ$, $Zh$ y $hh$ (omitiendo los \gravino por simplicidad). Al estar permitidos todos los decaimientos es posible realizar un ponderado de los eventos, con el objetivo generar todas las combinaciones de decaimiento posibles. Es decir, que aquellos decaimientos que no sean de interés se les asigna un peso menor con respecto a los que se desea estudiar. Esto permite analizar múltiples modelos utilizando una sola muestra, y además calcular posibles límites de exclusión en función de las fracciones de decaimiento.
 
-A su vez, las simulaciones son corregidas con factores de escala de eficiencia, y una corrección adicional a la escala de energía de los fotones, leptones y jets para coincidirlas con la de datos. 
+Cada modelo está caracterizado por un conjunto de fracciones de decaimientos que genera un par de partículas en el estado final. A nivel generador de las muestras es posible saber cuáles partículas se generaron y aplicarles un peso al evento dependiendo de eso. El peso que se aplica a cada evento, dependiendo del par de partículas producido y en función de las fracciones de decaimientos es:
 
 
-\section{Muestras de señal}
+% \begin{equation}
+% \begin{split}
+%   \textbf{w}(\text{BR}_{\gam}, \text{BR}_{Z}, \text{BR}_{h^{0}})  = &\ [w_{\gam\gam}, w_{\gam Z}, w_{\gam h^{0}}, w_{ZZ}, w_{Zh^{0}}, w_{h^{0}h^{0}}] \\
+%      = &\ \left(\frac{1}{3}\right)^{-2} \cdot [\text{BR}_{\gam}^{2}, \text{BR}_{\gam}\cdot\text{BR}_{Z}, \text{BR}_{\gam}\cdot\text{BR}_{h^{0}}, \text{BR}_{Z}^{2}, \text{BR}_{Z}\cdot\text{BR}_{h^{0}}, \text{BR}_{h^{0}}^{2}] \\
+% \end{split}
+% \end{equation}
 
-El presente análisis está motivado por las signaturas de nuetralinos mezcla de bino-higgsino
-con un estado final que consta de al menos un
-fotón, jets y alto \met. El componente bino de los neutralinos más ligeros se acopla tanto al fotón como al bosón $Z$, mientras que el componente higgsino se acopla al bosón de Higgs.
 
-Las muestras de señales se generaron utilizando un enfoque simplificado de este modelo. Se consideraron cuatro canales de producción de electroweakino: \ninoone \ninotwo, \ninoone \chinoonepm, \ninotwo \chinoonepm y \chinoonep \chinoonem. La sección transversal de cada proceso se calculó usando \textsc{resummino-3.0.0} en el orden de precisión NLO + NLL, usando CTEQ6.6 y los PDF MSTW2008, con sus correspondientes conjuntos de PDF y variaciones de escala para las incertidumbres. La Figura \ref{fig:SUSY_xs} muestra la sección transversal de cada producción de gaugino y la sección transversal total en función de la masa \ninoone. Los puntos de señal se produjeron en función de la masa de \ninoone: $m_{\ninoone} = [150, 250, 350, 450, 550, 650, 750, 850, 950, 1050, 1250, 1450] \: \gev$. La masa de \ninotwo (\chinoonepm) se estableció en $m_{\ninoone} + 11 (10)$ GeV, mientras que la masa de \ gravino se estableció en 1 eV. Todo el resto de las masas de espartículas se establecieron en el régimen desacoplado definido como 4,5 GeV.
+\begin{equation}
+  w(\text{BR}_{\gamma}, \text{BR}_{Z}, \text{BR}_{h^{0}})=\left(\frac{1}{3}\right)^{-2}\cdot\begin{cases}
+    \text{BR}_{\gamma}^{2} & \text{si el par es } \gamma\gamma \\
+    \text{BR}_{\gamma}\cdot\text{BR}_{Z} & \text{si el par es } \gamma Z \\
+    \text{BR}_{\gamma}\cdot\text{BR}_{h^{0}} & \text{si el par es } \gamma h \\
+    \text{BR}_{Z}^{2} & \text{si el par es } ZZ \\
+    \text{BR}_{Z}\cdot\text{BR}_{h^{0}} & \text{si el par es } Zh \\
+    \text{BR}_{h^{0}}^{2} & \text{si el par es } hh \\
+  \end{cases}
+\end{equation}
+
+El peso está normalizado de tal forma que la suma de todas las probabilidades de decaimiento de la unidad. En particular, y a modo de estudio preliminar, la búsqueda se centró en dos modelos: el modelo equivalente al de producción fuerte, donde el \ninoone decaía $50\%$ a $\gamma + \gravino$ y $50\%$ a $\gamma + h$, denominado modelo `ph+h' donde $w(0.5, 0, 0.5)$. Y el modelo donde el \ninoone decaía $50\%$ a $\gamma + \gravino$ y $50\%$ a $\gamma + Z$, denominado modelo `ph+Z' donde $w(0.5, 0.5, 0)$.
+
+Las masas del \ninotwo y \chinopm se eligieron levemente degeneradas, e iguales a la del \ninoone más $10\ \gev$ y $11\ \gev$ respectivamente. Sus decaimientos se fijaron en $100\%$ al \ninoone a través de un $Z$ o $W$ virtual, con sus respectivos decaimientos del SM. Todas las demás partículas SUSY se desacoplaron con una masa de $4500\ \gev$. A partir de ellos se consideraron todos los posibles canales de producción electrodébil, los cuales eran: $\ninoone \ninotwo$, $\ninoone \chinoonepm$, $\ninotwo \chinoonepm$ y $\chinoonep \chinoonem$. La sección eficaz de producción de cada uno se calculó utilizando \texttt{RESUMMINO-3.0.0} \cite{Beenakker:1999xh,Debove:2010kf,Fuks:2012qx,Fuks:2013vua,Fiaschi:2018hgm} con una precisión de NLO+NLL, utilizando la familia de PDFs \texttt{CTEQ6.6} y \texttt{MSTW2008}, siguiendo las recomendaciones de \texttt{PDF4LHC} \cite{Butterworth:2015oua}. La Figura \ref{fig:SUSY_EWK_xs} muestra las secciones eficaces de cada proceso junto con la total.
 
 \begin{figure}
   \centering
   \includegraphics[width=0.7\textwidth]{images/SUSY_EWK_xsecs_m.pdf}
-  \caption{Sección eficaz de la producción de gauginos en función de la masa de \ninoone.}
-  \label{fig:SUSY_xs}
-\end{figure}
-
-Las desintegraciones \ninotwo (\chinoonepm) se establecen 100 \% en \ninoone a través de un $ Z $ ($ W ^ {\pm} $) fuera de la cáscara, y el último tiene la fracción de ramificación SM. Las fracciones de ramificación de \ninoone se establecieron 33 \% en $ \gravino + \gamma$, 33 \% en $ \ gravino + Z $ y 33 \% en $ \ gravino + h^{0} $. Esto se hizo para tener una buena cantidad de estadísticas para todos los posibles estados finales, con el fin de volver a ponderar cada evento al estado final deseado. Favorecer (o desfavorecer) un modelo con una \ninoone caracterizada con una fracción de ramificación particular a $\gamma$, $ Z $ o $ h^{0} $ ($ \text{BR}_{\gamma}, \text{BR}_{Z}, \text{BR}_{h^{0}} $), los eventos se ponderaron según:
-
-
-\begin{equation}
-	w  = [w_{\gamma\gamma}, w_{\gamma Z}, w_{\gamma h^{0}}, w_{ZZ}, w_{Zh^{0}}, w_{h^{0}h^{0}}] = 9 \cdot [\text{BR}_{\gamma}^{2}, \text{BR}_{\gamma}\cdot\text{BR}_{Z}, \text{BR}_{\gamma}\cdot\text{BR}_{h^{0}}, \text{BR}_{Z}^{2}, \text{BR}_{Z}\cdot\text{BR}_{h^{0}}, \text{BR}_{h^{0}}^{2}]
-\end{equation}
-
-Se estudiaron dos modelos particulares siguiendo ejemplos previos de análisis. El modelo fue la \ninoone decae 50 \% a $ \gamma + \gravino $ y 50 \% a $ Z + \gravino $ ($ w = \frac{9}{4} [1, 1, 0, 1, 0, 0] $) llamado 'modelo ph + Z', y el modelo donde \ninoone decae 50 \% a $ \gamma + \gravino $ y 50 \% a $ h^{0} + \gravino $ ($ w = \frac{9}{4} [1, 0, 1, 0, 0, 1] $) el llamado 'modelo ph + h'. Las \Cref{fig:met_srd200,fig:metmeff_metsig_srd200} muestran las distribuciones de \met, \met/\meff y \met\ significance para distintos puntos de señal, en comparación con las distribuciones de fondo, en una región sensible a bajas masas de \ninoone.
-
-\begin{figure}
-\centering
-  \includegraphics[width=0.6\textwidth]{images_tmp/can_SRd_200_met_et_afterFit.pdf}
-  \caption{Distribución de \met\ para la región de señal de baja masa.}
-  \label{fig:met_srd200}
+  \caption{Sección eficaz de la producción de gauginos en función de la masa de \ninoone. En rosa la sección eficaz total considerando todos los procesos.}
+  \label{fig:SUSY_EWK_xs}
 \end{figure}
 
 
-\begin{figure}
-\centering
-  \includegraphics[width=0.4\textwidth]{images_tmp/can_SRd_200_met_etmeff_afterFit.pdf}%
-  \includegraphics[width=0.4\textwidth]{images_tmp/can_SRd_200_met_sig_obj_afterFit.pdf}
-  \caption{Distribución de \met/\meff (izquierda) y \met\ significance para la región de señal de baja masa.}
-  \label{fig:metmeff_metsig_srd200}
-\end{figure}
+
+\section{Fondos del Modelo Estándar}
+

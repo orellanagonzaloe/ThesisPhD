@@ -10,11 +10,11 @@
 El trabajo realizado en esta Tesis se centra en la búsqueda de Supersimetría en eventos con un fotón energético y aislado, jets y gran cantidad de energía faltante en el estado final. La estrategia general de la búsqueda consiste en el conteo del número de eventos observado en exceso sobre el SM en una cierta región del espacio de observables rica en eventos de la señal considerada, siguiendo método descripto en el Capítulo \ref{cap:statistical}. El objetivo es poder discriminar de los datos observados aquellos que podrían ser producto de un proceso supersimétricos (señal) de aquellos producto de procesos del SM (fondo).
 
 
-\section{Muestras de señal a partir de simulaciones de Monte Carlo}
+\section{Muestras de señal a partir de simulaciones de Monte Carlo}\label{sec:signal_samples}
 
 El modelo supersimétrico que motiva a la presente búsqueda consiste en un modelo GGM, por lo tanto la LSP es el gravitino cuya masa será del orden de unos pocos eV. La NLSP es en este caso el neutralino más liviano, que va a consistir en un estado de gauge mezcla de bino y higgsino
-% , lo que le permite acoplar a fotones y bosones de higgs
-. En particular para esta Tesis se estudia el caso fenomenológico en el cual el neutralino más liviano decae en proporciones iguales a $\gamma+\gravino$ y a $h+\gravino$. Esto último es posible si se elige al parámetro $\mu<0$ que favorece el decaimiento al higgs, y reduce el decaimiento al bosón $Z$, en cuyo caso ya fue previamente estudiado por otros análisis \cite{tesis_fran, tesis_joaco}. Para la producción de partículas supersimétricas a partir de la colisión $pp$ se consideró inicialmente la producción de gluinos. La parte del análisis que comprende la producción electrodébil se describe en el Capítulo \ref{cap:analysis_EWK}. Los gluinos pueden decaer subsecuentemente en partículas más livianas, hasta llegar a las NLSP y luego a la LSP, produciendo jets a su paso y generando el estado final buscado. Una cadena de decaimiento típica de este modelo se puede observar en la Figura \ref{fig:phb_feyn}.
+, lo que le permite acoplar a fotones, bosone $Z$ y bosones de higgs.
+Análisis anteriores se centraron en los casos donde el neutralino acopla solamente a fotones y bosones $Z$ \cite{tesis_fran, tesis_joaco, Collaboration:2198651}, o solamente a fotones \cite{Jinnouchi:2233741}. El trabajo realizado en esta Tesis se centra en el caso fenomenológico en el cual el neutralino más liviano decae en proporciones iguales a $\gamma+\gravino$ y a $h+\gravino$. Esto último es posible si se elige al parámetro $\mu<0$ que favorece el decaimiento al higgs, y reduce el decaimiento al bosón $Z$, en cuyo caso ya fue previamente estudiado por otros análisis \cite{tesis_fran, tesis_joaco}. Para la producción de partículas supersimétricas a partir de la colisión $pp$ se consideró inicialmente la producción de gluinos. La parte del análisis que comprende la producción electrodébil se describe en el Capítulo \ref{cap:analysis_EWK}. Los gluinos pueden decaer subsecuentemente en partículas más livianas, hasta llegar a las NLSP y luego a la LSP, produciendo jets a su paso y generando el estado final buscado. Una cadena de decaimiento típica de este modelo se puede observar en la Figura \ref{fig:phb_feyn}.
 
 \begin{figure}
   \centering
@@ -69,6 +69,7 @@ Como ejemplo se muestra en la Figura \ref{fig:mass_spec} un espectro de masas pa
 
 
 \tosolve{Hay mas graficos de BR para poner, hacen falta? no lo creo...}
+\tosolve{mencionar como se calculo la XS}
 
 \section{Fondos del Modelo Estándar}
 
@@ -555,7 +556,7 @@ En la Tabla \ref{tab:cr_def} se muestra la definición completa de las tres regi
 
 
 
-A continuación se definen las VRs, las cuales fueron diseñadas para verificar el correcto modelado de los fondos. Las mismas se encuentran en una región intermedia entre las CRs y las SRs, siempre siendo ortogonales a estas últimas. Se diseñaron un conjunto de VRs orientadas al modelado de los fondos de \wph y \ttbarph, y otras para el de \phj. Nuevamente se requiere en todas ellas al menos un fotón con $\pt>145\ \gev$.
+A continuación se definen las VRs, las cuales fueron diseñadas para verificar el correcto modelado de los fondos. Las mismas se encuentran en una región intermedia entre las CRs y las SRs, siempre siendo ortogonales a estas últimas. Se diseñaron un conjunto de VRs orientadas al modelado de los fondos de \wph y \ttbarph, otras para el de \phj y una dedicada al fondo de electrones erróneamente reconstruidos como fotones. Nuevamente se requiere en todas ellas al menos un fotón con $\pt>145\ \gev$.
 
 Se definieron cinco VRs orientadas al fondo de \phj. Estas regiones recuperan el corte en \dphijetmet de las SRs, pero agregan un corte superior en \met de $200\ \gev$, siendo así ortogonales a ellas. Entre ellas se encuentran las VRM1L y VRM1H, orientadas a validar las regiones SRL y SRH respectivamente, emulando sus cortes en \pt del fotón y \met. A su vez la VRM1L incluye un corte similar en \rtf para validar la aplicación del mismo en las SRs. Ambas tienen un corte inferior en \met de $100\ \gev$, y se desprenden de ambas regiones de validación equivalente pero con un corte inferior en \met de $150\ \gev$, denominadas VRM2L y VRM2H. Finalmente se encuentra la VRQ, que es un compromiso entre las regiones anteriores, solicitando una baja cantidad de jets y a su vez bajo \pt de fotones. La definición completa de las VRs dedicadas al fondo de \phj se muestra en la Tabla \ref{tab:vrm_def}.
 
@@ -611,7 +612,35 @@ Para los fondos \wph y \ttbarph se definieron cuatro regiones de validación, po
   \label{tab:vrl_def}
 \end{table}
 
-\tosolve{me falta VRE xD}
+
+Finalmente se diseñó la región de validación para el fondo de electrones erróneamente reconstruidos como fotones. La misma fue diseñada sin el veto de leptones y requiriendo al menos un $b$-jet. Como es un fondo donde el fotón es `falso' se espera que su energía no esté del todo bien reconstruida y esto genere \met instrumental. En ese caso \met y el fotón deberían estar alineados y por eso se pide un corte superior en \dphigammet, garantizando a su vez la ortogonalidad con las SRs. La definición de la misma se puede observar en la Tabla \ref{tab:vre_def}.
+
+
+\begin{table}[ht!]
+  \centering
+  \caption{Definición de la región de validación VRE, empleadas para la validación del fondo de electrones erróneamente reconstruidos como fotones. En color están los cortes que garantizan la ortogonalidad con las SRs.}
+
+  \begin{tabular}{l|r}
+    \hline
+    \hline
+    & VRE \\
+    \hline
+    \hline
+    $N_{\text{fotones}}$                  &       $\ge1$                     \\
+    \ptph         &    $145\gev$                     \\
+    $N_{\text{leptones}}$                  &           -                      \\
+    \njet                     &       $\ge1$                     \\
+    \nbjet                   &       $\ge1$                     \\
+    \dphijetmet          &       $>0.4$                     \\
+    \dphigammet                &\cellcolor{lightgreen} {$<0.4$}               \\
+    \met                                &   $>200\ \gev$                   \\
+    \HT                                &\cellcolor{lightgreen} {$[100, 1600]\ \gev$}  \\
+    \hline
+    \hline
+  \end{tabular}
+  \label{tab:vre_def}
+\end{table}
+
 
 \section{Incertezas sistemáticas}
 
@@ -685,15 +714,11 @@ Para cada muestra de fondo en cada región del análisis se calculó una incerti
 
 Todas las muestras de fondo contenían un conjunto de pesos internos que representan el efecto de la variación de distintos parámetros de la teoría. Las variaciones consideradas para cada muestra fueron las de la escala de renormalización ($\mu_R$) y factorización ($\mu_F$), la variación de los elementos de matriz (ME) de la PDF nominal, variación de la familia de PDFs empleada en la generación de los eventos, y las incertidumbres asociadas a la determinación y truncamiento de la constante de acoplamiento fuerte ($\alpha_S$). Para la muestra de \ttbarph solo estaban disponible las dos primeras variaciones, las cuales se esperaba que sean las predominantes. Tampoco se tuvieron en cuenta variaciones en la escala de matching (CKKW) \tosolve{mirar esto} ni en la escala de resumación (QSF). Estas variaciones requerían la generación de unas nuevas muestras pero se omitieron ya que se esperaban que sean despreciables. 
 
-El cálculo de la incertidumbre teórica total se calculó siguiendo las recomendaciones \texttt{PDF4LHC} \tosolve{no se si fue asi...}. Para calcular las variaciones de los MEs de las PDFs se empleó \texttt{LHAPDF} \cite{lhapdf} con la PDF nominal, \texttt{NNPDF30\_nnlo\_as\_0118}, y 100 variaciones de sus MEs. A su vez se consideraron dos familias de PDFs alternativas, \texttt{CT14} y \texttt{MMHT2014nnlo68c1}. Para las variaciones de escala se consideraron siete posibles valores: $(\mu_R, \mu_F) = (0.5,0.5), (1,0.5), (0.5,1), (1,1), (2,1), (1,2), (2,2)$. Finalmente se consideraron dos variaciones asociadas a $\alpha_S$. Todas estas variaciones fueron combinadas en una sola incertidumbre total para cada muestra y para cada región, y cuyos valores porcentuales promedio se muestran en la Tabla \ref{tab:syst_values}.
+El cálculo de la incertidumbre teórica total se calculó siguiendo las recomendaciones \texttt{PDF4LHC} \tosolve{no se si fue asi... en todo caso citar}. Para calcular las variaciones de los MEs de las PDFs se empleó \texttt{LHAPDF} \cite{lhapdf} con la PDF nominal, \texttt{NNPDF30\_nnlo\_as\_0118}, y 100 variaciones de sus MEs. A su vez se consideraron dos familias de PDFs alternativas, \texttt{CT14} y \texttt{MMHT2014nnlo68c1}. Para las variaciones de escala se consideraron siete posibles valores: $(\mu_R, \mu_F) = (0.5,0.5), (1,0.5), (0.5,1), (1,1), (2,1), (1,2), (2,2)$. Finalmente se consideraron dos variaciones asociadas a $\alpha_S$. Todas estas variaciones fueron combinadas en una sola incertidumbre total para cada muestra y para cada región, y cuyos valores porcentuales promedio se muestran en la Tabla \ref{tab:syst_values}.
 
 \begin{table}[ht!]
   \centering
-  \begin{minipage}{\textwidth}
-
-
   \caption{Valores porcentuales promedios de las incertidumbres teóricas de cada muestra de fondo en cada región. Los fondos con baja estadística no afectaban el análisis y sus incertidumbres fueron fijadas a 100\%.}
-
   \resizebox{.9\textwidth}{!}{
   \begin{tabular}{  r | c | c | c | c | c | c | c }
     \hline
@@ -707,17 +732,18 @@ El cálculo de la incertidumbre teórica total se calculó siguiendo las recomen
     \znunuph     & 27.90\% & 32.06\% & 100\% & 27.14\% & 21.04\% & 27.45\% & 35.03\%\\
     % $Z(\nu\nu)\gamma$     & 27.90\% & 32.06\% & 114.57\% & 27.14\% & 21.04\% & 27.45\% & 35.03\%\\
     \zllph         & 31.84\% & 22.16\% & 27.55\%  & 35.97\% & 17.53\% & 26.88\% & 27.13\%\\
-    % $W\gamma\gamma/Z\gamma\gamma$ & 23.32\% & 19.50\% & 26.79\% & 21.36\% & 21.37\% & 19.62\% & 18.81\%\\
-    % $\gamma\gamma$ & 31.19\% & 46.51\% & 65.19\% & 42.13\% & 45.03\% & 29.17\% & 44.49\%\\
+    \wphph / \zphph & 23.32\% & 19.50\% & 26.79\% & 21.36\% & 21.37\% & 19.62\% & 18.81\%\\
+    \phph & 31.19\% & 46.51\% & 65.19\% & 42.13\% & 45.03\% & 29.17\% & 44.49\%\\
     \hline
      \hline
   \end{tabular}
   }
 \label{tab:syst_values}
-\end{minipage}
 \end{table}
 
+Finalmente, se calcularon las incertezas teóricas para las muestras de señal, empleadas al establecer límites al modelo. Las mismas se obtuvieron a partir del número de eventos en cada región, variando la estimación de la sección eficaz en una desviación estándar tanto para arriba como abajo.
 
+\tosolve{poner algun plot de las barras de sistematicos?}
 
 
 
