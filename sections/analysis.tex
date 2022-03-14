@@ -71,7 +71,7 @@ Como ejemplo se muestra en la Figura \ref{fig:mass_spec} un espectro de masas pa
 \tosolve{Hay mas graficos de BR para poner, hacen falta? no lo creo...}
 \tosolve{mencionar como se calculo la XS}
 
-\section{Fondos del Modelo Estándar}
+\section{Fondos del Modelo Estándar}\label{sec:sm_backgrounds}
 
 
 Los procesos del SM que son de interés como fondo para el análisis son aquellos que tienen un estado final igual al de la señal: fotones, jets y energía transversa faltante. Los mismos pueden clasificarse en distintos tipos. Por un lado, los procesos que dan lugar a eventos con un fotón y energía faltante real, es decir, los que se llaman fondos irreducibles. En este caso la energía la faltante proviene de los neutrinos, por lo que se componen principalmente de partículas que decaen a ellos, junto con fotones y jets de la ISR. Los procesos que cumplen con estos requisitos son la producción de bosones $Z$, $W$ y pares de top quarks que decaen subsecuentemente a bosones $W$:
@@ -401,7 +401,7 @@ El presente análisis hace uso de la totalidad de datos con una energía de cent
 
 Los datos y simulaciones de MC empleados para el análisis fueron preseleccionados con la derivación \texttt{SUSY1} descripta en la Sección \ref{sec:lhc_samples}, orientada a análisis con moderada actividad hadrónica y con la presencia de un fotón energético entre otras cosas.
 
-Los objetos de interés para esta Tesis son los fotones, jets y leptones (electrones y muones) a los que se les aplica diferentes requisitos offline. Inicialmente se les requiere una selección base (\textit{baseline}) siguiendo algunas de las recomendaciones que hace el grupo de SUSY de la colaboración ATLAS y que se describe a continuación. La misma se emplea para aplicar un requisito de solapamiento (\textit{overlap removal}) entre los distintos objetos del evento y posteriormente empleados para el cálculo de \met. Finalmente a los fotones, jets y leptones se les aplica una selección denominada \textit{signal}, siendo estos objetos los que definen las distintas regiones del análisis.
+Los objetos de interés para esta Tesis son los fotones, jets y leptones (electrones y muones) a los que se les aplica diferentes requisitos offline. Inicialmente se les requiere una selección base (\textit{baseline}) siguiendo algunas de las recomendaciones que hace el grupo de SUSY de la colaboración ATLAS y que se describe a continuación. La misma se emplea para aplicar un requisito de solapamiento (\textit{overlap removal}) entre los distintos objetos del evento y posteriormente empleados para el cálculo de \met. Finalmente a los fotones, jets y leptones se les aplica una selección denominada \textit{signal}, siendo estos objetos los que definen las distintas regiones del análisis. \tosolve{mencionar a VgammaORTool}
 
 \tosolve{como son cortos, capaz los siguientes items podrían ser subsubsection}
 
@@ -422,7 +422,7 @@ Los muones baseline son seleccionados con la identificación \texttt{Medium}, te
 
 \subsection{Jets}
 
-Jets baseline son seleccionados con $\pt>20\ \gev$ y $|\eta|<2.8$. Este último requisito no es empleado en el cálculo de \met. Selecciones basadas en las trazas son aplicadas para rechazar jets con $\pt<120\ \gev$ y $|\eta|<2.4$ que se originen de las interacciones de pileup. Jets signal son seleccionados con $\pt>30\ \gev$ y $|\eta|<2.5$. La identificación de $b$-jets es empleada en la definición de algunas regiones de control. Para ello se utiliza el algoritmo \texttt{MV2c10}, con una eficiencia de selección de los mismos del 77\%.
+Jets baseline son seleccionados con $\pt>30\ \gev$ y $|\eta|<2.8$. Este último requisito no es empleado en el cálculo de \met. Selecciones basadas en las trazas son aplicadas para rechazar jets con $\pt<120\ \gev$ y $|\eta|<2.4$ que se originen de las interacciones de pileup. Jets signal son seleccionados con $\pt>30\ \gev$ y $|\eta|<2.5$. La identificación de $b$-jets es empleada en la definición de algunas regiones de control. Para ello se utiliza el algoritmo \texttt{MV2c10}, con una eficiencia de selección de los mismos del 77\%.
 
 \subsection{Overlap removal}
 
@@ -455,7 +455,7 @@ Una vez definidas las SRs, se puede proceder a la definición de las regiones de
 
 A continuación se detallan los pasos que se siguieron en la optimización hasta el diseño final de las SRs y sus respectivas CRs y VRs.
 
-\subsection{Selección de eventos de señal}
+\subsection{Selección de eventos de señal}\label{sec:sig_selection}
 
 El estado final del modelo bajo estudio consiste en al menos un fotón, presencia de jets y elevada \met, como describe el diagrama de la Figura \ref{fig:phb_feyn}. Para seleccionar eventos con al menos un fotón es necesario el trigger de fotones simple con menor umbral y sin prescale, el cual es el \texttt{HLT\_g140\_loose}, por lo que a todos los fotones leading de las regiones se les solicita tener $\pt>145\ \gev$, donde el trigger es completamente eficiente. Una selección inclusiva en el número de fotones contempla el caso en el que ambos \ninoone decaen mediante fotones. El decaimiento a \gravino produce grandes cantidades de \met, que se espera que sea al menos mayor a $200\ \gev$, un valor bastante más alto que los procesos usuales del SM. Los jets del estado final pueden provenir tanto de los decaimientos de los \chinoonepm o \ninotwo, como de la ISR o del decaimiento del higgs. Para el primero de los casos el número de jets va a depender de la diferencia de masas entre el gluino y el \ninoone. Si la diferencia es pequeña (escenario comprimido) el decaimiento del gluino va a ir en mayor proporción al \ninoone, por lo que la cadena será corta y el número de jets bajo. En cambio si la diferencia es grande, el gluino tiene otros gauginos intermedios para decaer hasta el \ninoone, por lo que lo hará más en múltiples etapas dejando un número de jets mayor. A su vez esta diferencia afecta al \pt del fotón y a \met. En el escenario comprimido, la masa del neutralino es relativamente alta y por ende el producto de sus decaimientos pueden ser más energéticos. A diferencia del caso con masas de neutralino bajas, donde se esperan fotones de menor \pt y menor \met. Estas diferencias entre los distintos puntos de señal motivó al diseño de tres regiones de señal, optimizadas para distintas puntos de señal. La SRH, optimizada para el escenario comprimida, caracterizada por fotones y \met energéticos, pero bajo número de jets. En contraposición, está la SRL optimizada para masas de \ninoone baja, y caracterizada por un mayor número de jets, pero con fotones y \met no tan energéticos. Finalmente la SRM fue optimizada para un región intermedia y con características de las anteriores SRs. La Figura \ref{fig:sr_design} \tosolve{agregar} muestra el espacio de puntos para los cuales fue diseñada cada SR. Finalmente, si bien se pueden generar leptones en el estado final, se aplica un veto a los mismos para evitar el solapamiento con otro análisis que realiza una búsqueda similar con fotones y leptones en el estado final \cite{diph_8TeV}.
 
@@ -517,7 +517,7 @@ La definición formal de las regiones de señales se muestra en la Tabla \ref{ta
 
 
 
-\subsection{Regiones de control y validación}
+\subsection{Regiones de control y validación}\label{sec:cr_vr_sel}
 
 En el presente análisis se consideraron que los procesos \phj, \wph y \ttbarph eran los de mayor impacto por lo que se diseñaron regiones de control dedicadas a los mismos, denominadas CRQ, CRW y CRT respectivamente. Todas las CRs requieren al menos un fotón con $\pt>145\ \gev$ y luego un conjunto de cortes que no solo generen una buena estadística del fondo a modelar, sino también garanticen la ortogonalidad con las SRs. El corte en \HT en general es reducido con respecto a las SRs para aumentar así la estadística de los fondos, y por la misma razón el corte en \rtf se omite en todas ellas. Cabe destacar que las tres regiones de control fueron empleadas para todas las regiones de señal, a diferencia de otros análisis donde hacen uso de CRs dedicadas además para cada SR.
 

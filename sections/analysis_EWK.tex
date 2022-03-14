@@ -14,8 +14,8 @@ El modelo que motiva a esta parte de la búsqueda es similar al descripto en la 
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.45\textwidth]{images/N1N2C1-qqZhphGG-GGM.pdf}%
-  \includegraphics[width=0.45\textwidth]{images/C1C1N2-qqqqZhphGG-GGM.pdf}
+  \includegraphics[width=0.45\textwidth]{images/analysis_EWK/N1N2C1-qqZhphGG-GGM.pdf}%
+  \includegraphics[width=0.45\textwidth]{images/analysis_EWK/C1C1N2-qqqqZhphGG-GGM.pdf}
   \caption{Diagramas de producción de gauginos con estado final de fotones, bosones $Z$, Higgs y gravitinos}
   \label{fig:EWK_GGM_diagrams}
 \end{figure}
@@ -51,7 +51,7 @@ Las masas del \ninotwo y \chinopm se eligieron levemente degeneradas, e iguales 
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.7\textwidth]{images/SUSY_EWK_xsecs_m.pdf}
+  \includegraphics[width=0.7\textwidth]{images/analysis_EWK/SUSY_EWK_xsecs_m.pdf}
   \caption{Sección eficaz de la producción de gauginos en función de la masa de \ninoone. En rosa la sección eficaz total considerando todos los procesos.}
   \label{fig:SUSY_EWK_xs}
 \end{figure}
@@ -60,3 +60,204 @@ Las masas del \ninotwo y \chinopm se eligieron levemente degeneradas, e iguales 
 
 \section{Fondos del Modelo Estándar}
 
+Tantos las simulaciones de fondos del SM, como las técnicas para modelar fondos a partir de datos descriptas en la Sección \ref{sec:sm_backgrounds}, se emplearon de forma equivalente para esta búsqueda. Adicionalmente, se incluyen simulaciones de producción de tops y bosones de Higgs decayendo a fotones, listadas en la Tabla \ref{tab:higgs_bkg}. Esto está motivado por el valor del factor de normalización obtenido para la región de control CRT, que al ser superior a la unidad es indicio de que algún procesos con el mismo estado final no está siendo considerado.
+
+\begin{table}[h!]
+  \centering
+  \caption{Muestras de de producción de tops y bosones de Higgs decayendo a fotones utilizadas en el análisis con producción electrodébil, donde se especifica su generador, sección eficaz, $k$-factor y eficiencia de filtro.}
+  \label{tab:higgs_bkg}
+  \resizebox{\textwidth}{!}{
+  \begin{tabular}{llrrr}
+
+     \hline
+      \hline
+    Proceso & Generador & Sección Eficaz [pb] & $k$-factor & Eficiencia de filtro \\
+
+    \hline
+     \hline
+
+    $\ttbar h(\to \gamma\gamma)$  & \texttt{Powheg\_aMC@NLO}/\texttt{Pythia8} & 0.52493  & 1.0 & 1.0  \\
+    $\ttbar h(\to Z\gamma)$  & \texttt{Powheg\_aMC@NLO}/\texttt{Pythia8} & 0.52492  & 1.0 & 1.0  \\
+
+    \hline
+     \hline
+  \end{tabular}
+  }
+\end{table}
+
+
+
+\section{Selección de eventos y objetos para el análisis}
+
+Para la presente búsqueda se empleó el conjunto de datos con un centro de masa de $13\ \tev$ y una luminosidad integrada de $139\ \ifb$ tomados durante el Run 2. Los datos fueron seleccionados con el trigger \texttt{HLT\_g140\_loose}, y se empleó la derivación \texttt{SUSY1} tanto para los datos como para las simulaciones. La selección de objetos fue similar a la descripta en la Sección \ref{sec:selection}, con leves modificaciones en los leptones. Dentro de la colaboración existen grupos dedicados a combinar los resultados obtenidos para distintos análisis de SUSY. Para ello necesitan que los análisis combinados tengan selecciones ortogonales, por lo que crearon recomendaciones en la selección de leptones para lograr ese objetivo. El presente análisis sigue tales recomendaciones la cuales son seleccionar electrones baseline con un $\pt>4.5\ \gev$ y los signal con un $\pt>10 \ \gev$, mientras que los muones baseline se seleccionan con un $\pt>3\ \gev$ y los signal con un $\pt>10\ \gev$. A su vez en todas las regiones del análisis se solicita que el número de leptones baseline sea igual al número de leptones signal. Los jets empleados en la selección de eventos son \texttt{PFlow} jets con un $\pt>20\ \gev$. El algoritmo para identificar $b$-jets es el \texttt{DL1r}, con un $77\%$ de eficiencia.
+
+
+
+\section{Definición de las regiones del análisis}
+
+La definición de las regiones de señal se realiza siguiendo metodología de optimización similar a la descripta en la Sección \ref{sec:sig_selection}.
+Si bien el estado final de esta búsqueda coincide con la búsqueda anterior, la cinemática de los mismos tiene algunos aspectos distintos. Dada la baja masa de los gauginos producidos en la colisión, con respecto a la producción de gluinos, se espera que los productos generados en el decaimiento sean menos energéticos. Con el mismo criterio el número de jets reconstruidos de la cadena de decaimiento se espera que sea menor.
+
+Se optó por diseñar cuatro regiones de señal dedicadas a cubrir todo el espectro de masas de \ninoone de las muestras de señal. Las regiones se definen empleando los mismos cortes para todas salvo por un corte inclusivo en \met. Estos cortes consistían en al menos un fotón con $\pt>145\ \gev$, un veto de leptones, al menos un jet y las mismas separaciones angulares en \dphijetmet y \dphigammet. A su vez se agregaron cortes en dos variables para incrementar la separación de señal y fondo. La primera definida como:
+
+\begin{equation}
+  \frac{\met}{\meff} = \frac{\met}{\HT + \met}
+\end{equation}
+%
+La misma se entiende como la fracción de \met presente entre todos los objetos del eventos, que para una señal de SUSY con gran actividad de partículas no interactuantes es esperable que sea mayor a $0.5$ \tosolve{en realidad todavía no entendemos esta variable...}. La segunda variable empleada es la Significancia de \met ($\mathcal{S}$) con una reconstrucción denominada \textit{object-based} que se describe en la Referencia \cite{ATLAS-CONF-2018-038}. La misma sirve para discriminar eventos con \met proveniente de partículas poco interactuantes, de aquella producto de la reconstrucción ineficiente de las partículas (instrumental), valores altos de $\mathcal{S}$ son un indicio del primer caso. Finalmente, y solo en el caso de eventos con dos fotones, se aplica un corte en la masa invariante de los mismos, excluyendo el rango de valores centrados en la masa del Higgs. Esto se hace con el objetivo de ser ortogonales a un análisis con estado final similar, que selecciona dos fotones provenientes del decaimiento de bosones de Higgs. La selección empleada para las distintas regiones de señal se muestra en la Tabla \ref{tab:sr_ewk}.
+
+
+
+\begin{table} 
+\centering
+  \caption{Regiones de señal empleadas para el análisis de búsqueda de SUSY con producción electrodébil.}
+  % \resizebox{\linewidth}{!}{
+    \begin{tabular}{ l | c | c | c | c }
+    \hline
+    \hline
+      & SRd\_200 & SRd\_300 & SRd\_400 & SRd\_500 \\
+    \hline
+    \hline
+    % Trigger & \multicolumn{4}{c}{g140\_loose} \\
+    % \hline
+    \nph & \multicolumn{4}{c}{$\ge1$} \\
+    % \hline
+    \nlep & \multicolumn{4}{c}{$0$} \\
+    % \hline
+    \njet & \multicolumn{4}{c}{$\ge1$} \\
+    % \hline
+    \ptph [GeV] & \multicolumn{4}{c}{$>145$} \\
+    % \hline
+    $\met/\meff$ & \multicolumn{4}{c}{$>0.5$} \\
+    % \hline
+    $\met$ Sig. & \multicolumn{4}{c}{$>21$} \\
+    % \hline
+    \dphijetmet & \multicolumn{4}{c}{$>0.4$} \\
+    % \hline
+    \dphigammet & \multicolumn{4}{c}{$>0.4$} \\
+    % \hline
+    \myy [GeV]& \multicolumn{4}{c}{$<120,\ >130$} \\
+    % \hline
+    \cline{2-5}
+    \met [GeV] & $>200$ & $>300$ & $>400$ & $>500$ \\
+    \hline
+    \hline
+      \end{tabular}
+  % }
+  \label{tab:sr_ewk}
+\end{table}
+
+
+\tosolve{mencionar SRs para exclusion?}
+
+Los fondos del SM con mayor impacto en el análisis son \wph, \ttbarph, $\ttbar h$ y \znunuph, y para las cuales se diseñan regiones de control dedicada. El fondo \phj no se considera importante y por ende no tiene su respectiva región de control, sino que se lo emplea sin normalización. Todas las regiones de control emplean selecciones similares a las descriptas en la Sección \ref{sec:cr_vr_sel} para favorecer cada fondo, pero adaptadas a las actuales SRs. En todas se omite el corte en $\met/\meff$ y en la Significancia de \met, debido a la elevada reducción de fondo que producen.
+
+
+Los fondos \ttbarph y $\ttbar h$, son normalizados simultáneamente en una región de control CRT que selecciona al menos un leptón y dos $b$-jets. Para el fondo de \wph se diseña una región de control CRW que selecciona un leptón con un veto a los $b$-jets, junto con un corte en la masa transversa del leptón y \met \footnote{$\mtlep = \sqrt{2p_{\text{T}}^{\text{leptón}}\met[1-\cos(\phi^{\text{miss}}-\phi^{\text{leptón}})]}$}, que incrementa la pureza del fondo. Dado que el fondo de \znunuph presenta un estado final similar al de la señal, resulta prácticamente imposible diseñar una región de control para ese fondo que no tenga contaminación de señal. Para ello se emplea un método alternativo, en donde se diseñan regiones de control para los procesos \zeeph y \zmumuph, y se asume que las correcciones que necesita la simulación van a ser equivalentes para la simulación de \znunuph, por lo que se aplica el mismo factor de normalización a los tres fondos simultáneamente. Como los fondos \zeeph y \zmumuph tienen \met despreciable, se construye una una energía transversa alternativa pero omitiendo del cálculo a los leptones. De esta forma se obtiene una \met alineada con los leptones del evento, a la cual se le aplica un corte para ser lo más similar posible a las SRs. A su vez los cortes empleados para \dphijetmet y \dphigammet hacen uso de esta \met. En la Figura \ref{fig:met_inv} se puede observar una comparación entre \met de \znunuph y la reconstruida en las simulaciones de \zeeph y \zmumuph, en la que se puede ver un buen acuerdo entre todas. La definición de las regiones de control empleadas para el presente análisis se muestran en la Tabla \ref{tab:cr_ewk}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth]{images/analysis_EWK/ZnunugCutR_100_vs_ZllgCutR_100_v183_0_met_et.png}
+  \caption{Comparación de \met en el fondo de \znunuph y la reconstruida para los fondos de \zeeph y \zmumuph.}
+  \label{fig:met_inv}
+\end{figure}
+
+
+\begin{table}
+\centering
+    \caption{Definición de las regiones de control para el análisis con producción electrodébil. El asterisco representa que la \met empleada en ese corte es calculada removiendo los leptones de su cálculo.}
+  % \resizebox{\linewidth}{!}{
+    \begin{tabular}{ l | c | c | c | c }
+    \hline
+    \hline
+      & CRW & CRT & CRZ\_el & CRZ\_mu \\
+    \hline
+    \hline
+    % Trigger & \multicolumn{4}{c}{g140\_loose} \\
+    % \hline
+    \nph & \multicolumn{4}{c}{$\ge1$} \\
+    % \hline
+    \ptph [GeV] & \multicolumn{4}{c}{$>145$} \\
+    % \hline
+    \njet & \multicolumn{4}{c}{$\ge1$} \\
+    % \hline
+    \cline{2-5}
+    \nbjet & 0 & $\ge 2$ & - & - \\
+    % \hline
+    \nlep & $1$ & $\ge1$ & $2$ (el) & $2$ (mu) \\
+    % \hline
+    \dphijetmet & $>0.4$ & $>0.4$ & $>0.4$ (*) & $>0.4$ (*)\\
+    % \hline
+    \dphigammet & $>0.4$ & $>0.4$ & $>0.4$ (*) & $>0.4$ (*)\\
+    % \hline
+    \met [GeV] & $>200$ & $>150$ & $<50$ & $<50$ \\
+    % \hline
+    \met (*) [GeV] & - & - & $>100$ & $>100$ \\
+    % \hline
+    \mtlep [GeV] & $<100$ & - & - & - \\
+    \hline
+    \hline
+    % $m_{ll}$ [GeV] & - & - & $[80-100]$ & $[80-100]$ \\
+    % \hline
+    \end{tabular}
+    \label{tab:cr_ewk}
+  % }
+\end{table}
+
+
+\section{Resultados preliminares}
+
+
+En la Tabla \ref{tab:bkg_only_fit_ewk} se muestran los resultados preliminares del ajuste de solo fondo, empleando las cuatro regiones de control. En las mismas se muestra el aporte de cada fondo antes y después del ajuste, junto con la pureza del fondo y el factor de normalización. Los fondos \ttbarph y $\ttbar h$ se ajustan con el mismo factor de normalización en la CRT, mientras que los fondos de \znunuph, \zeeph y \zmumuph lo hacen con su respectivo factor en las CRZ\_el y CRZ\_mu. De forma preliminar se emplea un sistemático \textit{dummy} del $25\%$ para todos los fondos en todas las regiones, emulando el aporte de los sistemáticos teóricos y del detector. En general se obtuvieron factores de normalización cercanos a la unidad, lo que evidencia un correcto modelado por parte de las simulaciones. En las Figuras \ref{fig:crw_crt_dist_ewk} y \ref{fig:crz_el_mu_dist_ewk} se puede observar el buen acuerdo entre las simulaciones y los datos luego del ajuste.
+
+\begin{table}[ht!]
+  \centering
+  \caption{Resultados del ajuste de solo fondo en las diferentes regiones de control para el análisis de producción electrodébil. Se muestran los resultados antes y después del ajuste, la pureza del fondo y los factores de normalización.}
+  \input{tables/fr2/table_cr.tex}
+  \label{tab:bkgonly_cr}
+\end{table}
+
+
+\begin{figure}[ht!]
+  \begin{center}
+
+    \includegraphics[width=0.32\textwidth]{images/analysis_EWK/v192_0_nosyst/can_CRW_met_et_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/analysis_EWK/v192_0_nosyst/can_CRW_met_etmeff_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/analysis_EWK/v192_0_nosyst/can_CRW_met_sig_obj_afterFit.pdf}
+
+    \includegraphics[width=0.32\textwidth]{images/analysis_EWK/v192_0_nosyst/can_CRT_met_et_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/analysis_EWK/v192_0_nosyst/can_CRT_met_etmeff_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/analysis_EWK/v192_0_nosyst/can_CRT_met_sig_obj_afterFit.pdf}
+
+    \caption{Distribuciones en la región de control CRW y CRT luego del ajuste de solo fondo, para el análisis de producción electrodébil. Las incertidumbre mostradas son sólo estadísticas.}
+    \label{fig:crw_crt_dist_ewk}
+  \end{center}
+\end{figure}
+
+
+\begin{figure}[ht!]
+  \begin{center}
+
+    \includegraphics[width=0.32\textwidth]{images/analysis_EWK/v192_0_nosyst/can_CRZ_el_met_et_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/analysis_EWK/v192_0_nosyst/can_CRZ_el_met_etmeff_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/analysis_EWK/v192_0_nosyst/can_CRZ_el_met_sig_obj_afterFit.pdf}
+
+    \includegraphics[width=0.32\textwidth]{images/analysis_EWK/v192_0_nosyst/can_CRZ_mu_met_et_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/analysis_EWK/v192_0_nosyst/can_CRZ_mu_met_etmeff_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/analysis_EWK/v192_0_nosyst/can_CRZ_mu_met_sig_obj_afterFit.pdf}
+
+    \caption{Distribuciones en la región de control CRZ\_el y CRZ\_mu luego del ajuste de solo fondo, para el análisis de producción electrodébil. Las incertidumbre mostradas son sólo estadísticas.}
+    \label{fig:crz_el_mu_dist_ewk}
+  \end{center}
+\end{figure}
+
+
+En la Tabla \ref{tab:sr_ewk} se muestran los resultados blinded en las regiones de señal para el presente análisis. \tosolve{agregar distribuciones}
+
+
+\begin{table}[ht!]
+  \centering
+  \caption{Estimación de los fondos y de la señal en las distintas regiones de señal luego del ajuste de solo fondo para el análisis de producción electrodébil.}
+  \resizebox{\textwidth}{!}{\input{tables/analysis_EWK/table_sr.tex}}
+  \label{tab:fit_result_sr}
+\end{table}
