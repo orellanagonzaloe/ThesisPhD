@@ -12,20 +12,20 @@ El Gran Colisionador de Hadrones (\textit{\textbf{L}arge \textbf{H}adron \textbf
 
 El LHC está diseñado para colisionar protones a un máximo de energía de centro de masa\footnote{Definida como la raíz cuadrada de la variable de Mandelstan, $\sqrt{s}=|p_1+p_2|$, donde $p_1$ y $p_2$ representan los cuadrimomentos de las partículas incidentes.} de \com{14}{TeV}. Para ello el CERN posee un complejo de aceleradores que en sucesivas etapas incrementan la energía de los protones, para luego inyectarlos en el LHC y hacerlos colisionar en cuatro puntos distintos donde se encuentran los detectores más importantes: ATLAS \cite{PERF-2007-01}, CMS \cite{CMS}, LHCb \cite{LHCb} y ALICE \cite{ALICE}.
 
-La producción de protones comienza extrayendo los electrones de un contenedor con gas de hidrógeno mediante campos magnéticos. Luego los protones pasan por un complejo de aceleradores que en el pasado funcionaban como experimentos y que actualmente se utilizan para incrementan la energía de los protones en sucesivas etapas, como muestra la Figura \ref{LHC_complex}. Inicialmente los protones son inyectados al acelerador lineal LINAC 2, que mediante cavidades de radiofrecuencia, acelera a los protones a una energía de \magn{50}{MeV}. Desde aquí son dirigidos al \textit{Proton Synchrotron Booster} que consiste en cuatro anillos superpuestos con un radio de \magn{25}{m} que aceleran los protones hasta una energía de \magn{1.4}{GeV}. Este último inyecta los protones en el \textit{Proton Synchroton}, cuya circunferencia de \magn{628}{m} e inyecta protones de hasta \magn{26}{GeV} en el \textit{Super Proton Synchroton}, y este a su vez tiene una circunferencia de \magn{7}{km} e inyecta protones de hasta \magn{450}{GeV} en ambos anillos del LHC. 
+La producción de protones comienza extrayendo los electrones de un contenedor con gas de hidrógeno mediante campos magnéticos. Luego los protones pasan por un complejo de aceleradores que en el pasado funcionaban como experimentos y que actualmente se utilizan para incrementan la energía de los protones en sucesivas etapas, como muestra la Figura \ref{fig:LHC_complex}. Inicialmente los protones son inyectados al acelerador lineal LINAC 2, que mediante cavidades de radiofrecuencia, acelera a los protones a una energía de \magn{50}{MeV}. Desde aquí son dirigidos al \textit{Proton Synchrotron Booster} que consiste en cuatro anillos superpuestos con un radio de \magn{25}{m} que aceleran los protones hasta una energía de \magn{1.4}{GeV}. Este último inyecta los protones en el \textit{Proton Synchroton}, cuya circunferencia de \magn{628}{m} e inyecta protones de hasta \magn{26}{GeV} en el \textit{Super Proton Synchroton}, y este a su vez tiene una circunferencia de \magn{7}{km} e inyecta protones de hasta \magn{450}{GeV} en ambos anillos del LHC. 
 
 \begin{figure}
   \centering
   \includegraphics[width=0.65\textwidth]{images/lhc/LHC_complex.png}
   \caption{Complejo de aceleradores del LHC \cite{Lopienska:2800984}.}
-  \label{LHC_complex}
+  \label{fig:LHC_complex}
   % https://cds.cern.ch/record/2684277?ln=es
   % https://cds.cern.ch/images/CERN-GRAPHICS-2022-001-1
 \end{figure}
 
 El último de los aceleradores es el LHC, donde los protones circulan en direcciones opuestas por cavidades de ultra alto vacío a una presión de \magn{$10^{-10}$}{torr}. El mismo cuenta con $1232$ dipolos magnéticos superconductores de \magn{15}{m} de largo enfriados a \magn{1.9}{K} mediante helio superfluído, que generan un campo magnético de $8.4$ T y permiten mantener en su órbita circular a los protones. Los dipolos están equipados con sextupolos, octupolos y decapolos, que permiten corregir las pequeñas imperfecciones del campo magnético en las extremidades de los dipolos. Para aumentar la probabilidad de colisión, existe un sistema de focalización de los haces en las proximidades de los detectores, que estrecha el camino que recorren los protones. El mismo consiste de $392$ cuadrupolos magnéticos que generan campos magnéticos de \magn{6.8}{T}.
 
-Los protones son acelerados mediante cavidades de radiofrecuencia que generan una diferencia de potencial longitudinal a una frecuencia específica. En esa frecuencia los protones sincronizados con la energía deseada no van sufrir aceleración alguna, mientras que aquellos desincronizados van a ser acelerados o desacelerados hasta obtener la energía deseada. De esta forma el haz de protones se divide en paquetes discretos denominados \textit{bunches}, cada uno conteniendo del orden de 10$^{11}$ protones. El número de bunches totales posibles en un haz con un espaciado de \magn{25}{ns} es de 3564 \footnote{Se obtiene al dividir la frecuencia de las cavidades, \magn{400}{MHz}, por la frecuencia de revolución, \magn{11}{kHz}, y considerando que sólo 1 de cada 10 bunches es llenado para lograr el espaciado deseado}. Considerando los tiempos que se necesitan para en la inyección y descarte del haz, junto con los tiempos que necesita cada detector para procesar la información, no todos los bunches son llenados, sino que se dejan `espacios' definidos por diferentes esquemas, dejando así el número efectivo de bunches llenos a 2808.
+Los protones son acelerados mediante cavidades de radiofrecuencia que generan una diferencia de potencial longitudinal a una frecuencia específica. En esa frecuencia los protones sincronizados con la energía deseada no van sufrir aceleración alguna, mientras que aquellos desincronizados van a ser acelerados o desacelerados hasta obtener la energía deseada. De esta forma el haz de protones se divide en paquetes discretos denominados \textit{bunches}, cada uno conteniendo del orden de 10$^{11}$ protones. El número de paquetes totales posibles en un haz con un espaciado de \magn{25}{ns} es de 3564 \footnote{Se obtiene al dividir la frecuencia de las cavidades, \magn{400}{MHz}, por la frecuencia de revolución, \magn{11}{kHz}, y considerando que sólo 1 de cada 10 paquetes es llenado para lograr el espaciado deseado}. Considerando los tiempos que se necesitan para en la inyección y descarte del haz, junto con los tiempos que necesita cada detector para procesar la información, no todos los paquetes son llenados, sino que se dejan `espacios' definidos por diferentes esquemas, dejando así el número efectivo de paquetes llenos a 2808.
 
 Los aceleradores pueden ser caracterizados no solo por su energía de centro de masa sino también por su luminosidad instantánea ($\mathcal{L}$), que mide el número de colisiones por unidad de área que ocurren en un período de tiempo y se define como: 
 
@@ -34,7 +34,7 @@ Los aceleradores pueden ser caracterizados no solo por su energía de centro de 
 \end{equation}
 
 \noindent
-donde $\sigma$ es la sección eficaz de la colisión y $R$ el número de colisiones. La expresión se puede escribir para el caso de un acelerador circular como el LHC, donde $f_{\text{rev}}$ es la frecuencia de revolución ($\sim$\magn{11}{kHz}), $n_{b}$ es el número de bunches por haz, $N_{i}$ es el número de partículas en cada bunch y $A$ es la sección efectiva del haz, que puede expresarse en término de los parámetros del acelerador como:
+donde $\sigma$ es la sección eficaz de la colisión y $R$ el número de colisiones. La expresión se puede escribir para el caso de un acelerador circular como el LHC, donde $f_{\text{rev}}$ es la frecuencia de revolución ($\sim$\magn{11}{kHz}), $n_{b}$ es el número de paquetes por haz, $N_{i}$ es el número de partículas en cada paquete y $A$ es la sección efectiva del haz, que puede expresarse en término de los parámetros del acelerador como:
 
 \begin{equation}
 A=\frac{4 \pi \epsilon_{n}\beta^{*}}{\gamma F}
@@ -47,6 +47,7 @@ El número total de eventos esperados para un dado proceso con una sección efic
 
 \begin{equation}
 N=\sigma \int \mathcal{L} dt = \sigma \mathcal{L}_{\text{int}}
+\label{eq:lumi_xs}
 \end{equation}	
 %
 donde al factor integral se lo conoce como luminosidad integrada.
@@ -68,22 +69,23 @@ Los planes a futuro del LHC preveen un \textit{Run 3} a \magn{14}{TeV} de tres a
   \label{fig:run2_lumi}
 \end{figure}
 
+Las nuevas condiciones del Run 2 significaron un desafío para la toma de datos, en particular el incremento de \textit{pile-up}, que se define como el número promedio de interacciones por cruce de paquetes ($\langle \mu \rangle$). Cuando se cruzan dos paquetes de protones, varios protones de los mismos pueden interactuar, generando múltiples vértices primarios (\textit{in-time} pile-up). Esto dificulta la reconstrucción de los objetos del evento, debido a que la trayectoria de los mismos debe estar correctamente asociada a su correcto vértice. Inclusive puede ocurrir la superposición de señales provenientes del paquete anterior o posterior, lo que implica una nueva dificultad. Estos efectos están contemplados en los dinstintos algoritmos de recotrsucción de obetos que se describen en el Capítulo \ref{cap:objects}. En la Figura \ref{fig:pileup} se puede observar el número promedio de interacciones por cruce de paquetes durante el Run 2. Allí se observa que en promedio se tuvieron 30 interacciones por cruce, y hasta un máximo de 70. 
 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/lhc/mu_2015_2018.pdf}
+  \caption{Interacciones por cruce de paquetes promedio durante el Run 2 \cite{lumi_plot}.}
+  \label{fig:pileup}
+\end{figure}
 
 \section{El detector ATLAS}
 
 
-ATLAS (\textit{\textbf{A} \textbf{T}oroidal \textbf{L}HC \textbf{A}pparatu\textbf{S}})  \cite{PERF-2007-01} es uno de los experimentos multipropósito del LHC, diseñado para estudiar las colisiones protón-protón a altas energías provistas por el LHC.
+ATLAS (\textit{\textbf{A} \textbf{T}oroidal \textbf{L}HC \textbf{A}pparatu\textbf{S}})  \cite{PERF-2007-01} es uno de los experimentos multipropósito del LHC, diseñado para estudiar las colisiones protón-protón a altas energías provistas por el LHC. El mismo tiene una simetría aproximadamente cilíndrica y está compuesto de distintos subdetectores, que cumplen diversas funciones en la identificación de las partículas producidas durante las colisiones. 
 
-El mismo tiene una simetría aproximadamente cilíndrica y está compuesto de distintos subdetectores, que cumplen diversas funciones en la identificación de las partículas producidas durante las colisiones. En la zona más próxima al haz se encuentra detector interno de trazas (ID) cuyo objetivo principal es reconstruir la trayectoria de las partículas cargadas. Está compuesto del \textit{Insertable B-Layer} (IBL), un detector de píxeles, un detector de bandas de silicio (SCT) y un detector de radiación de transición (TRT). A su vez, envolviendo al ID, se encuentra un solenoide superconductor que genera un campo magnético de \magn{2}{T}, el cual curva la trayectoria de las partículas cargadas permitiendo así medir su impulso.
+En la zona más próxima al haz se encuentra detector interno de trazas (ID) cuyo objetivo principal es reconstruir la trayectoria de las partículas cargadas. Está compuesto del \textit{Insertable B-Layer} (IBL), un detector de píxeles, un detector de bandas de silicio (SCT) y un detector de radiación de transición (TRT). A su vez, envolviendo al ID, se encuentra un solenoide superconductor que genera un campo magnético de \magn{2}{T}, el cual curva la trayectoria de las partículas cargadas permitiendo así medir su impulso. A continuación se ubica el sistema de calorímetros compuesto por el calorímetro electromagnético (ECAL) que mide principalmente la energía depositada por fotones y electrones, y el calorímetro hadrónico (HCAL) para medir la energía de los jets y hadrones. En la parte más externa, se encuentra el espectrómetro de muones (MS) diseñado para detectar la producción de muones y además medir su momento. Este último es el que le da a ATLAS su tamaño característico de \magn{45}{m} de largo y \magn{25}{m} de alto. Intercalado con el MS se encuentra un sistema de imanes toroidales, que generan un campo magnético de \magn{4}{T} para curvar la trayectoria de los muones hacia el final del detector.
 
-A continuación se ubica el sistema de calorímetros compuesto por el calorímetro electromagnético (ECAL) que mide principalmente la energía depositada por fotones y electrones, y el calorímetro hadrónico (HCAL) para medir la energía de los jets y hadrones.
-
-En la parte más externa, se encuentra el espectrómetro de muones (MS) diseñado para detectar la producción de muones y además medir su momento. Este último es el que le da a ATLAS su tamaño característico de \magn{45}{m} de largo y \magn{25}{m} de alto. Intercalado con el MS se encuentra un sistema de imanes toroidales, que generan un campo magnético de \magn{4}{T} para curvar la trayectoria de los muones hacia el final del detector.
-
-El detector ATLAS se divide geométricamente en dos regiones, la parte central denominada \textit{barrel} y la región extrema denominada \textit{endcap}. En la región barrel los detectores se ubican en forma de cilindros concéntricos alrededor del eje del haz, mientras en la región endcap se disponen como discos perpendiculares a la dirección del haz. 
-
-La Figura \ref{fig:atlas_1} detalla todas las componentes que integran al detector ATLAS y son descriptas en detalle a en las siguientes secciones.
+El detector ATLAS se divide geométricamente en dos regiones, la parte central denominada \textit{barrel} y la región extrema denominada \textit{endcap}. En la región barrel los detectores se ubican en forma de cilindros concéntricos alrededor del eje del haz, mientras en la región endcap se disponen como discos perpendiculares a la dirección del haz. La Figura \ref{fig:atlas_1} detalla todas las componentes que integran al detector ATLAS y son descriptas en detalle a en las siguientes secciones.
 
 \begin{figure}
 \centering
@@ -128,7 +130,7 @@ estando completamente relacionada con el ángulo $\theta$. La razón detrás de 
 % dR, ???
 % parrafor que viene similar a tesis de lic, que es basicamente la tesis de fran: ya modificado!
 
-Como se mencionó anteriormente, se emplead al modelo de partones al considerar colisiones hadrónicas de altas energías. Los partones acarrean una fracción del momento inicial de los hadrones, que a priori es desconocida. Si bien es posible medir una parte de ese momento, principalmente de los partones interactuantes que conforman la interacción fuerte, hay una fracción que escapa la detección. Esto imposibilita la reconstrucción del movimiento longitudinal del centro de masa en la interacción, y hacer uso de leyes de conservación sobre la cinemática total del evento. En cambio, teniendo en cuenta que el momento total de los partones en la dirección transversa al haz es nulo, el impulso total transverso se debe conservar durante la colisión. Por este motivo, es común utilizar solo las componentes transversales en la descripción de la cinemática del evento, definidas en términos de la pseudorapidez, como por ejemplo el momento transverso:
+Como se mencionó anteriormente, al considerar colisiones hadrónicas de altas energías se hace uso del modelo de partones. Los partones acarrean una fracción del momento inicial de los hadrones, que a priori es desconocida. Si bien es posible medir una parte de ese momento, principalmente de los partones interactuantes que conforman la interacción fuerte, hay una fracción que escapa la detección. Esto imposibilita la reconstrucción del movimiento longitudinal del centro de masa en la interacción, y hacer uso de leyes de conservación sobre la cinemática total del evento. En cambio, teniendo en cuenta que el momento total de los partones en la dirección transversa al haz es nulo, el impulso total transverso se debe conservar durante la colisión. Por tal motivo, es común utilizar solo las componentes transversales en la descripción de la cinemática del evento, definidas en términos de la pseudorapidez, como por ejemplo el momento transverso:
 
 \begin{equation}
 p_{T}=p\sin\theta=\frac{p}{\cosh{\eta}}
@@ -144,9 +146,7 @@ El detector ATLAS posee un poderoso sistema de imanes \cite{magnet} utilizado pa
 El solenoide rodea al detector interno, y tiene un tamaño de \magn{5.6}{m} de largo y \magn{2.56}{m} de diámetro, 
 y con un espesor de apenas \magn{4.5}{cm}. El mismo produce un campo magnético de $\sim$\magn{2}{T} en la dirección del haz, por lo que las partículas cargadas son curvadas en la dirección de $\phi$. Para minimizar la interacción de las partículas que lo atraviesan y ahorrar la mayor cantidad de material posible, el solenoide comparte la cámara de vacío del calorímetro de argón líquido (LAr) descripto en las siguientes secciones.
 
-Los toroides de ATLAS se componen de ocho bobinas, que generan campos de hasta $\sim$\magn{4}{T} en la dirección $\phi$, por lo que las partículas que lo atraviesan (prácticamente solo muones) son curvadas en la dirección $\eta$. El más grande de ellos mide \magn{25.3}{m} de largo y \magn{20.1}{m} de diámetro, y se ubica en la parte más externa del detector barrel intercalado con el Espectrómetro de Muones descripto en las siguientes secciones. Los otros dos restantes se encuentran en la región endcap, por fuera de los calorímetros, y miden \magn{5}{m} de largo y \magn{10.7}{m} de diámetro. 
-
-La Figura \ref{fig:magnet_1} muestra el esquema de imanes del detector ATLAS.
+Los toroides de ATLAS se componen de ocho bobinas, que generan campos de hasta $\sim$\magn{4}{T} en la dirección $\phi$, por lo que las partículas que lo atraviesan (prácticamente solo muones) son curvadas en la dirección $\eta$. El más grande de ellos mide \magn{25.3}{m} de largo y \magn{20.1}{m} de diámetro, y se ubica en la parte más externa del detector barrel intercalado con el Espectrómetro de Muones descripto en las siguientes secciones. Los otros dos restantes se encuentran en la región endcap, por fuera de los calorímetros, y miden \magn{5}{m} de largo y \magn{10.7}{m} de diámetro. La Figura \ref{fig:magnet_1} muestra el esquema de imanes del detector ATLAS.
 
 \begin{figure}
 \centering
@@ -164,7 +164,7 @@ El detector interno es el más próximo al haz y su función principal es la rec
 
 \begin{figure}
 \centering
-  \includegraphics[width=0.8\textwidth]{images/pixel_2.jpg}
+  \includegraphics[width=0.8\textwidth]{images/lhc/pixel_2.jpg}
   \caption{Esquema del detector interno de ATLAS \cite{Pequenao:1095926}.}
   % https://cds.cern.ch/record/1095926
   \label{fig:pixel_1}
@@ -172,9 +172,9 @@ El detector interno es el más próximo al haz y su función principal es la rec
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.4\textwidth]{images/pixel_1.png}
+  \includegraphics[width=0.45\textwidth]{images/lhc/pixel_1.png}
   % https://cds.cern.ch/record/2724037
-  \includegraphics[width=0.5\textwidth]{images/pixel_4.png}
+  \includegraphics[width=0.55\textwidth]{images/lhc/pixel_4.png}
   % https://cds.cern.ch/record/1298112
   \caption{Diferentes vistas del detector interno de ATLAS \cite{Pequenao:1095926,Kayl:1298112}.}
   \label{fig:pixel_23}
@@ -191,7 +191,7 @@ La inclusión del IBL fue una de las actualizaciones del Run 2 motivada por el i
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.7\textwidth]{images/pixel_3.png}
+  \includegraphics[width=0.7\textwidth]{images/lhc/pixel_3.png}
   % https://cds.cern.ch/record/1957197
   \caption{Esquema del detector de píxeles de ATLAS \cite{Takubo:1957197}.}
   \label{fig:pixel_3}
@@ -204,20 +204,18 @@ Se encuentra por fuera del detector de píxeles y está diseñado para medir las
 
 \subsubsection{Detector de Radiación de Transición (TRT)}
 
-Es el detector más externo del ID y está diseñado, no solo para detectar partículas cargadas, sino también para distinguir entre partículas pesadas y livianas. El TRT se compone de tubos detectores de \magn{4}{mm} de diámetro, con un gas que se ioniza al ser atravesado por partículas cargadas. Los electrones producidos son colectados por una ánodo, y el tiempo de deriva es una medida de la distancia a la traza del mismo. Además, los tubos están rodeados de fibras de polipropileno con un índice de refracción diferente, por lo que las partículas que atraviesan el detector emiten radiación con una intensidad proporcional a $\gamma=E/m$, permitiendo al TRT  distinguir partículas cargadas pesadas ($\pi^{\pm}$) de aquellas más livianas ($e^{\pm}$). La región barrel contiene $50000$ tubos paralelos al eje del haz y la región endcap $320000$ tubos orientados radialmente. Su resolución es de \magn{0.17}{mm}.
+Es el detector más externo del ID y está diseñado, no solo para detectar partículas cargadas, sino también para distinguir entre partículas pesadas y livianas. El TRT se compone de tubos detectores de \magn{4}{mm} de diámetro, con un gas que se ioniza al ser atravesado por partículas cargadas. Los electrones producidos son colectados por una ánodo, y el tiempo de deriva es una medida de la distancia a la traza del mismo. Además, los tubos están rodeados de fibras de polipropileno con un índice de refracción diferente, por lo que las partículas que atraviesan el detector emiten radiación con una intensidad proporcional a $\gamma=E/m$, permitiendo al TRT  distinguir partículas cargadas pesadas ($\pi^{\pm}$) de aquellas más livianas ($e^{\pm}$). La región barrel contiene $50000$ tubos paralelos al eje del haz y la región endcap $320000$ tubos orientados radialmente, cuya resolución es de \magn{0.17}{mm}.
 
 \subsection{Calorímetros}
 
 
 El sistema de calorímetros de ATLAS está diseñado para medir la energía y la posición de las partículas, mediante la absorción de la energía depositada por las cascadas de partículas secundarias que estas generan en el material del mismo. Además, permite discriminar entre jets producidos por quarks o gluones de los electrones y fotones, detectar aquellas partículas neutras que no dejaron trazas en el ID y realizar la selección online de eventos potencialmente interesantes (Ver Sistema de trigger). Gracias a su amplia cobertura y a que absorbe la energía de prácticamente todas las partículas producidas (salvo muones) es de gran utilidad para poder medir el desbalance de energía transversa, magnitud discriminatoria utilizada en la mayoría de análisis fuera del SM.
 
-Está compuesto de un calorímetro electromagnético (ECAL) dedicado principalmente a la medida de las deposiciones de partículas como fotones y electrones (partículas interactuantes principalmente vía interacción EM), y otro hadrónico (HCAL) dedicado a las cascadas de partículas producto de la hadronización de los quarks o gluones (jets) (partículas interactuantes principalmente vía interacción fuerte).
-
-La Figura \ref{fig:calo_1} muestra un esquema de los calorímetros del detector ATLAS.
+Está compuesto de un calorímetro electromagnético (ECAL) dedicado principalmente a la medida de las deposiciones de partículas como fotones y electrones (partículas interactuantes principalmente vía interacción EM), y otro hadrónico (HCAL) dedicado a las cascadas de partículas producto de la hadronización de los quarks o gluones (jets) (partículas interactuantes principalmente vía interacción fuerte). La Figura \ref{fig:calo_1} muestra un esquema de los calorímetros del detector ATLAS.
 
 \begin{figure}
 \centering
-  \includegraphics[width=0.7\textwidth]{images/calo_1.jpg}
+  \includegraphics[width=0.7\textwidth]{images/lhc/calo_1.jpg}
   % https://cds.cern.ch/record/1095927 calo_1.png
   % https://cds.cern.ch/record/2239809 calo_2.png
   \caption{Esquema de los calorímetros del detector ATLAS \cite{Pequenao:1095927}.}
@@ -246,7 +244,14 @@ barrel, y mayor a 24 $X_0$ en los endcap, donde una longitud de radiación se de
 como la distancia promedio sobre la cual la energía de un electrón se reduce a $1/e$
 de su energía inicial. Para el caso de los fotones, una reducción similar se obtiene a
 $9/7$ de $X_0$ . Por tanto, toda la energía electromagnética es absorbida en el ECAL y
-sólo parte de la componente hadrónica llega al HCAL.
+sólo parte de la componente hadrónica llega al HCAL. En la Figura \ref{fig:ecal} se observa un segmento del ECAL donde se muestra la granularidad de cada una de sus capas.
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.7\textwidth]{images/lhc/ecal.pdf}
+  \caption{Segmento del ECAL del detector ATLAS en la región con $\eta=0$ \cite{PERF-2017-01}.}
+  \label{fig:ecal}
+\end{figure}
 
 \subsubsection{Calorímetro hadrónico (HCAL)}
 
@@ -256,7 +261,7 @@ El primero de los calorímetros se denomina \textit{Tile Calorimeter}, es un cal
 periódico, se conectan a una fibra óptica que trasporta la luz producida por el paso
 de partículas, hacia un tubo fotomultiplicador. Este arreglo se extiende radialmente, de los
 \magn{2.28}{m} a los \magn{4.25}{m}. 
-En la región endcap se encuentra un calorímetro hadrónico de muestreo (HEC) con placas de cobre como absorbente y argón líquido como material activo, que consiste en dos ruedas, una atrás de la otra con las placas planas de cobre dispuestas perpendicularmente al eje del haz, con un radio de 2.3\ m. Finalmente se encuentra el \texttt{Forward Calorimeter} (FCAL), un calorímetro de muestreo que extiende la cobertura del sistema a $|\eta|<4.9$, coaxial
+En la región endcap se encuentra un calorímetro hadrónico de muestreo (HEC) con placas de cobre como absorbente y argón líquido como material activo, que consiste en dos ruedas, una atrás de la otra con las placas planas de cobre dispuestas perpendicularmente al eje del haz, con un radio de 2.3\ m. Finalmente se encuentra el \textit{Forward Calorimeter} (FCAL), un calorímetro de muestreo que extiende la cobertura del sistema a $|\eta|<4.9$, coaxial
 al eje del haz y ubicado a \magn{4.7}{m} a cada lado del punto de interacción. El material
 principal de los módulos es argón líquido (con cobre o tungsteno), y si bien no se
 utiliza para mediciones de precisión, provee información para el cómputo de la energía transversa faltante y la reconstrucción de jets en regiones muy cercanas al eje
@@ -279,7 +284,7 @@ El MS se compone de diferentes tipos de cámaras de detección de muones (ver Fi
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.7\textwidth]{images/muon_1.jpg}
+  \includegraphics[width=0.7\textwidth]{images/lhc/muon_1.jpg}
   \caption{Espetrómetro de muones del detector ATLAS \cite{Pequenao:1095929}.}
   % https://cds.cern.ch/record/1095929
   \label{fig:muon_1}
@@ -288,15 +293,15 @@ El MS se compone de diferentes tipos de cámaras de detección de muones (ver Fi
 \section{Sistema de \textit{trigger}}
 \label{trigger}
 
-Como se mencionó anteriormente, el diseño del LHC permite tener una frecuencia de cruces de haces de 40 MHz y en promedio 34 interacciones por cruce, lo que da una tasa de interacción protón-protón del orden del GHz. Tal frecuencia requeriría un ancho de banda de escritura y una la capacidad de almacenamiento excesivos. De todas formas, no todos los eventos son de interés para la colaboración, como por ejemplo la colisión elástica de los protones que no genera ningún tipo de decaimiento. El sistema de trigger del detector ATLAS \cite{TRIG-2016-01} es el encargado de filtrar esos eventos de poco interés y, junto con el sistema de adquisición de datos (DAQ), almacena aquellos que potencialmente pueden llegar a ser de interés para los distintos análisis, reduciendo así la frecuencia de flujo de datos al orden del kHz. El sistema de trigger cumple un rol central en el correcto funcionamiento de todo el experimento, ya que en definitiva determina qué tipos de análisis se realizarán y qué nueva física podrá encontrarse. El mismo debe tener una alta eficiencia, para no desechar eventos importantes, pero con el compromiso de mantener el flujo de datos relativamente bajo. 
+Como se mencionó anteriormente, el diseño del LHC permite tener una frecuencia de cruces de paquetes de 40 MHz y del orden de 30 interacciones promedio por cruce de paquetes ($\langle \mu \rangle$), lo que da una tasa de interacción protón-protón del orden del GHz. Tal frecuencia requeriría un ancho de banda de escritura y una la capacidad de almacenamiento excesivos. De todas formas, no todos los eventos son de interés para la colaboración, como por ejemplo la colisión elástica de los protones que no genera ningún tipo de decaimiento. El sistema de trigger del detector ATLAS \cite{TRIG-2016-01} es el encargado de filtrar esos eventos de poco interés y, junto con el sistema de adquisición de datos (DAQ), almacena aquellos que potencialmente pueden llegar a ser de interés para los distintos análisis, reduciendo así la frecuencia de flujo de datos al orden del kHz. El sistema de trigger cumple un rol central en el correcto funcionamiento de todo el experimento, ya que en definitiva determina qué tipos de análisis se realizarán y qué nueva física podrá encontrarse. El mismo debe tener una alta eficiencia, para no desechar eventos importantes, pero con el compromiso de mantener el flujo de datos relativamente bajo. 
 
-El sistema de trigger está compuesto por dos niveles consecutivos capaces de realizar una identificación de partículas cada vez más compleja: un primer nivel de trigger (L1) basado en hardware y luego un trigger de alto nivel basado en software (HLT). La Figura \ref{tdaq} muestra un esquema del sistema trigger y DAQ del detector ATLAS.
+El sistema de trigger está compuesto por dos niveles consecutivos capaces de realizar una identificación de partículas cada vez más compleja: un primer nivel de trigger (L1) basado en hardware y luego un trigger de alto nivel basado en software (HLT). La Figura \ref{tdaq} muestra un esquema del sistema trigger y DAQ del detector ATLAS. Una secuencia de algoritmos del L1 y del HLT se denomina cadena de trigger \footnote{En inglés \textit{Trigger chain}, pero también dentro de la jerga se las puede llamar simplemente triggers}, que impone requisitos sobre las características de los objetos presentes en el evento y a partir de ellas decide si el evento es aceptado. El conjunto de cadenas de triggers que se emplea durante la toma de datos se denomina \textit{Trigger menu}, que se optimiza previamente para satisfacer las condiciones del LHC sin afectar la adquisición de datos. Para controlar la tasa de eventos aceptados, a algunos triggers se les asigna un valor denominado \textit{prescale}, el cual puede estar tanto en el L1 como en el HLT. Para un prescale de valor $n$, el evento tiene una probabilidad $1/n$ de ser aceptado por dicho trigger. El valor del prescale puede ser mayor a uno, reduciendo así la tasa de eventos aceptados (inclusive anulándola por completo), o igual a uno (`sin prescale' o \textit{unprescaled}). En este caso todos los eventos son evaluados, y se emplea en general para los triggers principales orientados para su uso en análisis físicos. El prescale es modificado de acuerdo a la luminosidad durante una toma de datos, para mantener la tasa de datos constante, sin saturar el ancho de banda. Para el caso de los triggers con prescale o aquellos directamente deshabilitados, se los puede configurar en un modo denominado \textit{rerun}, para el cual los algoritmos del trigger se corren offline una vez que el evento fue aceptado por otro trigger. A continuación se describen los dos niveles que componen al sistema de trigger.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.7\textwidth]{images/tdaq.png}
+  \includegraphics[width=0.7\textwidth]{images/lhc/tdaqFullNew2017.pdf}
   % https://twiki.cern.ch/twiki/pub/AtlasPublic/ApprovedPlotsDAQ/tdaqFullNew2017.png
-  \caption{Esquema del sistema de trigger y el sistema de adquisición de datos de ATLAS.}
+  \caption{Esquema del sistema de trigger y el sistema de adquisición de datos de ATLAS \cite{tdaq_plot}.}
   \label{tdaq}
 \end{figure}
 
@@ -311,26 +316,24 @@ Cuando un evento es aceptado por el L1, el mismo pasa a ser analizado por High L
 
 Los algoritmos del HLT constan de dos etapas: los algoritmos de reconstrucción rápida ejecutados primero, y luego los algoritmos de reconstrucción de precisión similar a los que se utilizan en la selección offline. Los algoritmos de reconstrucción rápida utilizan la información de los calorímetros y de las trazas sólo dentro de la RoI para realizar la selección e identificación de los candidatos, y realizar el rechazo de fondo lo más rápido y temprano posible. Si la partícula candidata pasa los criterios definidos por la selección de reconstrucción rápida, se ejecutan los algoritmos de selección de precisión. Estos tienen acceso a la información del detector fuera de la RoI, con la máxima granularidad e incluyendo detalles sobre la calibración de energía de los calorímetros, la alineación de los subdetectores y el mapa de campo magnético. Los eventos aceptados por el HLT son finalmente grabados a disco y distribuidos, accesibles offline para todos los diferentes estudios y análisis.
 
-\tosolve{Definir pileup, prescale y rerun}
+% \tosolve{Definir pileup, prescale y rerun} Done!
 
 \section{Modelo computacional y distribución de datos}\label{sec:lhc_samples}
 
-% esta igual a la tesis de joaco!
+% esta igual a la tesis de joaco, arreglar: Done!!! Searching for Dark Matter with the ATLAS Detector, Steven Schramm
 
-El detector ATLAs recolecta una cantidad de datos del orden del $\sim$\,PB al año, y los mismos deben ser accesibles a todos los miembros de la colaboración de una manera ágil y directa. Para ello se precisa de 
+La enorme cantidad de datos tanto producidos por las colisiones en el LHC ($\sim$\,PB al año), como por las simulaciones de MC requiere un sistema de cómputo de alta complejidad, que permita el acceso de los mismos a todos los miembros de la colaboración de una manera ágil y directa. Esto se logra mediante la \textit{Worldwide LHC Computing Grid} (WLCG), la cual comparte el poder de procesamiento y la capacidad de almacenamiento entre distintos centros de cómputo distribuidos alrededor del mundo (\textit{Tiers}). Todos los eventos son inicialmente almacenados en el Tier 0 del CERN, el cual contiene el 20\% de cal capacidad de cómputo total del WLCG. A medida que se van procesando esos datos y reduciendo su tamaño, se van repartiendo entre acorde los Tier 1, 2 y 3.
 
-La arquitectura computacional de ATLAS está diseñada para permitir a todos los miembros de la colaboración un acceso ágil, directo y distribuido a la gran cantidad de datos colectados por el detector ($\sim$ PB/año). La arquitectura se basa en la tecnología GRID \cite{grid}, compartiendo el poder de procesamiento y la capacidad de almacenamiento disponibles en distintos centros de cómputo asociados alrededor del
-mundo.
+Inicialmente los eventos aceptados por el HLT son almacenados como \textit{Raw Data Objects} (RDOs), los cuales contienen una enorme cantidad de información del detector. Esta información es de poca utilidad para los usuarios, y por ende es procesada en distintos formatos que contienen los objetos finales útiles para los análisis. Para ello se aplican distintos criterios de \textit{sliming} (se remueven los eventos que no son de interés), \textit{skiming} (se remueve la información irrelevante de los objetos) y \textit{thining} (se remueven objetos y/o colecciones de objetos irrelevantes) según los estudios y análisis que se vayan a realizar sobre los datos colectados. Los RDOs son empleados para la reconstrucción y calibración de objetos físicos, que se almacenan en el formato \textit{Event Summary Data} (ESD). Adicionalmente se realiza un procesamiento el cual descarta la mayoría de la información de las celdas, generando el formato \textit{Analysis Object Data} (AOD), el cual tiene un tamaño de $\sim$100\,kB por evento. Para el Run 2, se empleó un formato adicional (\texttt{xAOD}) que reducía significativamente este formato (10-15\,kB por evento). Estos últimos formatos son archivos accesibles vía el entorno de análisis de datos \texttt{ROOT} \cite{root}, que contienen el conjunto de  objetos físicos finales reconstruidos, y son empleados por los usuarios para realizar los distintos análisis.
+El software de ATLAS se desarrolla dentro un entorno \texttt{C++} común llamado \texttt{ATHENA} \cite{ATLAS-TDR-17, analysistools, athena}, en el que se realiza todo el procesamiento de datos. 
 
-El software de ATLAS se desarrolla dentro un entorno \texttt{C++} común llamado \texttt{ATHENA} \cite{ATLAS-TDR-17, analysistools, athena}, en el que se realiza todo el procesamiento de datos. Los eventos aceptados por el trigger deben ser procesados para reducir su tamaño y ser utilizados para los análisis offline. A la salida del HLT, los eventos son almacenados como \textit{Raw Data Objects} (RDOs). Luego de aplicar los algoritmos de reconstrucción y calibración, las colecciones de los distintos objetos físicos obtenidas son almacenadas en formato ESD (Event Summary Data) y AOD (Analysis Object Data), una versión reducida del primero ($\sim$100 kB/evento). A partir de las ESDs/AODs, se ha definido un formato de datos significativamente más pequeño (10-15 kB/evento) conocido como xAOD, sobre el que se realiza el análisis final. Las xAOD son archivos accesibles vía el entorno de análisis de datos ROOT \cite{root}, que contienen el conjunto de variables de diferentes objetos físicos, según las necesidades de los distintos grupos de análisis dentro de ATLAS. En base a esto y para agilizar el análisis final, la colaboración preselecciona eventos offline en las llamadas derivaciones. Desde los raw data hasta las distintas derivaciones, se aplican distintos criterios de sliming (se remueven los eventos que no son de interés), skiming (se remueve la información irrelevante de los objetos) y thining (se remueven objetos y/o colecciones de objetos irrelevantes) según los estudios y análisis que se vayan a realizar sobre los datos colectados.
-
-Las derivaciones de interés para esta tesis son las denominadas \texttt{EGAM3}, \texttt{EGAM4} y \texttt{SUSY1}. Las \texttt{EGAM3} y \texttt{EGAM4} son utilizadas en esta tesis para la medida de la eficiencia de los trigger de fotones, ya que preseleccionan eventos con bosones $Z$ decayendo radiativamente a partir de electrones o muones respectivamente. La derivación \texttt{SUSY1} es utilizada en esta tesis para preseleccionar los eventos para la búsqueda de supersimetría, y en general selecciona eventos con objetos energéticos. A continuación se lista un resumen de las selecciones que deben cumplir los eventos para ser aceptados por estas derivaciones:
+Adicionalmente se puede aplicar una selección a los eventos de las \texttt{xAOD} para reducir aún más su tamaño. Esta selección produce el formato \textit{Derived Analysis Objetc Data} (DAOD), o simplemente derivación, y existen varias dependiendo de la selección empleada por cada análisis. Las derivaciones de interés para esta tesis son las denominadas \texttt{EGAM3}, \texttt{EGAM4} y \texttt{SUSY1}. Las \texttt{EGAM3} y \texttt{EGAM4} son utilizadas en esta tesis para la medida de la eficiencia de los trigger de fotones, ya que preseleccionan eventos con bosones $Z$ decayendo radiativamente a partir de electrones o muones respectivamente. La derivación \texttt{SUSY1} es utilizada en esta tesis para preseleccionar los eventos para la búsqueda de supersimetría, y en general selecciona eventos con objetos energéticos. A continuación se lista un resumen de las selecciones que deben cumplir los eventos para ser aceptados por estas derivaciones:
 
 
 \begin{itemize}
   \item \texttt{EGAM3}: El evento debe tener al menos dos electrones de carga opuesta y un fotón, en general con $\pt>9.5\,\gev$. Este último requisito varía dependiendo de los criterios de calidad de los electrones. A su vez se solicita una masa invariante de los leptones mayor a \magn{40}{GeV}.
   \item \texttt{EGAM4}: Similar a \texttt{EGAM3} pero seleccionando muones en vez de electrones.
-  \item \texttt{SUSY1}: Selecciona eventos con jets o fotones cuyo momento transverso supere los \magn{150}{GeV}. A su vez eventos con al menos un electrón, muón o fotón con $\pt>100\, \gev$, o al menos dos electrones o muones con $\pt>20\,\gev$, o al menos menos dos fotones con $\pt>50\, \gev$.
+  \item \texttt{SUSY1}: Selecciona eventos con jets o fotones cuya suma de momentos transversos supere los \magn{150}{GeV}. A su vez selecciona eventos con al menos un electrón, muón o fotón con $\pt>100\, \gev$, o al menos dos electrones o muones con $\pt>20\,\gev$, o al menos menos dos fotones con $\pt>50\, \gev$.
 \end{itemize}
 
 % \subsubsection{\texttt{EGAM3}}
@@ -372,68 +375,67 @@ Las derivaciones de interés para esta tesis son las denominadas \texttt{EGAM3},
 
 \section{Simulaciones de Monte Carlo}
 
-% principalmente de la tesis de joaco
+% principalmente de la tesis de joaco: solucionado!!!
 
 El método de Monte Carlo utiliza una serie de algoritmos computacionales basados en la repetición de eventos con un factor variable y aleatorio, que permite obtener resultados numéricos globales.
 En el contexto de la física de partículas no solo se utiliza para reproducir la aleatoriedad impuesta por la mecánica cuántica, sino también para realizar diferentes aproximaciones, como es el caso de integrales numéricas.
 Las simulaciones de Monte Carlo cumplen un rol fundamental a la hora de realizar predicciones de la teoría, teniendo un rol primordial en prácticamente todos los análisis realizados por la colaboración ATLAS. 
 
-Las simulaciones de colisiones de protones se realizan a partir de complejos cálculos basados en la teoría de QCD y descriptas brevemente en la Sección \ref{sec:qcd_pp}. Las mismas comienzan calculando el elemento de matriz de un dado proceso de dispersión dura (\textit{Hard Scatter}, HS) entre los partones iniciales a distintos niveles en teoría de perturbaciones. El elemento de matriz contiene la información de la función de onda
-para los partones entrantes y salientes, y depende principalmente del acoplamiento
-fuerte y la escala de energía de la dispersión. 
-
-Debido a que los quarks son cargados bajo QCD y los gluones tienen acoplamientos triples y cuádruples, puede suceder que los partones emitan quarks o gluones antes de la dispersión dura (\textit{Initial State Radiation}, ISR). De manera análoga, los partones salientes pueden emitir gluones o
-producir pares de quarks/anti-quarks (\textit{Final State Radiation}, FSR). 
-
-A su vez, se pueden dar interacciones adicionales entre partones pertenecientes a los protones originales, que no participaron de la dispersión dura, dando lugar a múltiples
-interacciones en el evento (MPI), mayoritariamente interacciones de bajo momento
-(soft). La actividad no asociada con la dispersión dura se llama evento subyacente
-(\textit{Underlying Event}, UE), que debido a la baja energía de las interacciones que lo
-componen, no puede ser tratado de manera perturbativa y se requieren de modelos
-fenomenológicos para describirlos.
-
-La evolución de todos los partones producidos se realiza mediante un modelo
-de lluvia de partones (\textit{Parton Shower}, PS), que genera cascadas de radiación formadas por un gran
-número de gluones soft y quarks livianos, además de las partículas de la dispersión
-dura, hasta el límite de validez del régimen perturbativo, lo que se conoce como la
-escala de hadronización $\Lambda_{\text{QCD}}\sim 1$ GeV. Es importante mencionar en este punto
-que la combinación entre la dispersión dura y la lluvia partónica debe realizarse
+Las simulaciones de colisiones de protones se realizan a partir de complejos cálculos basados en la teoría de QCD y descriptas brevemente en la Sección \ref{sec:qcd_pp}. 
+El punto central de la simulación es la dispersión dura (\textit{Hard Scatter}, HS) que se calcula a un dado orden de la teoría de perturbaciones. Para ello se emplean programas generadores de elementos de matriz (ME), las cuales contienen  la información de la función de onda para los partones entrantes y salientes, y depende principalmente del acoplamiento
+fuerte y la escala de energía de la dispersión. La evolución de los partones producidos se realiza mediante un modelo de lluvia de partones (\textit{Parton Shower}, PS) que conecta la escala dura de los partones de color, con la escala de la hadronización donde se generan los hadrones de color, y es el límite de validez del régimen perturbativo $\Lambda_{\text{QCD}}\sim 1$\,GeV. En esta etapa los partones son transformados en hadrones primarios aplicando modelos de fragmentación puramente fenomenológicos, generando así una cascada de partículas formada por un gran número de gluones y quarks de baja energía. La combinación entre la dispersión dura y la lluvia partónica debe realizarse
 con especial cuidado de no duplicar en la PS los partones ya producidos y evitar
 así el doble conteo. Las estrategias principales para esto se conocen como CKKW
-(Catani-Krauss-Kuhn-Webber) \cite{ckkw_1, ckkw_2} y MLM \cite{mlm}.
+(Catani-Krauss-Kuhn-Webber) \cite{ckkw_1, ckkw_2} y MLM \cite{mlm}. Finalmente los hadrones son decaídos en partículas estables que son las que observa el detector.
 
-Por último, la cadena termina con el proceso de hadronización, donde los partones en el estado final se recombinan para formar hadrones de color neutro, debido a
-las bajas energías alcanzadas y el confinamiento de QCD. Estos hadrones, y el producto de sus decaimientos, se propagan a través del detector y pueden ser medidos
-experimentalmente. Para esto se cuenta con modelos fenomenológicos, ya que hasta
-el momento no hay forma de calcular su evolución en este régimen, debido a que no
-puede ser tratado perturbativamente.
+Adicional al HS existen otros procesos QCD que ocurren en la colisión. Debido a que los quarks son cargados bajo QCD y los gluones tienen acoplamientos triples y cuádruples, puede suceder que los partones emitan quarks o gluones antes de la dispersión dura (\textit{Initial State Radiation}, ISR). De manera análoga, los partones salientes pueden emitir gluones o
+producir pares de quarks/anti-quarks (\textit{Final State Radiation}, FSR). A su vez, pueden darse interacciones adicionales entre partones pertenecientes a los protones originales, que no participaron de la dispersión dura, dando lugar a múltiples
+interacciones en el evento, mayoritariamente interacciones de bajo momento. La actividad no asociada con la dispersión dura se llama evento subyacente
+(\textit{Underlying Event}, UE), que debido a la baja energía de las interacciones que lo
+componen, no puede ser tratado de manera perturbativa y se requieren de modelos
+fenomenológicos para describirlos. En la Figura \ref{fig:mc_qcd} se puede observar el diagrama de una colisión entre partones, junto con la cascada de partículas producto de la misma.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.8\textwidth]{images/mc_simulation.png}
+  \includegraphics[width=0.8\textwidth]{images/lhc/mc_qcd.pdf}
   \caption{Esquema de una colisión protón-protón simulada por un generador de
 eventos de Monte-Carlo. La región roja en el centro representa la dispersión dura,
-rodeada por una estructura parecida a un árbol que representa al Bremsstrahlung
-como es simulado por los PS. La parte violeta indica un evento secundario 
+rodeada por una estructura representa que radiación de QCD
+simulada por los PS. La parte violeta indica un evento subyacente 
 de dispersión dura. Las transiciones de partones a hadrones están representadas
 por las partes verdes claras, mientras que las partes verdes oscuras indican el 
 decaimiento de los hadrones. Finalmente, las líneas amarillas señalan la radiación de
-fotones\cite{mc_simulation}. \tosolve{Mejorar imagen}}
+fotones\cite{mc_simulation}.}
+\label{fig:mc_qcd}
 \end{figure}
 
-\subsubsection{Correciones a las simulacioness}
+Algunos de los programas empleados para la generación de eventos y simulación de PS son \texttt{Sherpa} \cite{SherpaGen, Schumann:2007mg, Bothmann:2019yzt}, \texttt{PYTHIA} \cite{Sjostrand:2014zea} y \texttt{MadGraph} \cite{Alwall:2014hca}. A su vez pueden ser utilizados con un conjunto de parámetros ajustados por la colaboración ATLAS, en lo que se denomina \textit{tuning} A14 \cite{ATL-PHYS-PUB-2014-021} para el conjunto de PDFs CTEQ6L1 \cite{cteq}, MSTW2008LO \cite{mstw1, mstw2, mstw3}, NNPDF23LO \cite{nnpdf}. 
 
-% Agregar 
-% Se generaron muestras tanto de los fondos del SM como de la señal de SUSY utilizando generadores de Monte Carlo (MC) a $\sqrt{s} = 13\ \tev$. Las muestras de fondo se realizaron con una simulación completa del detector basada en \textsc{Geant4} \cite{Geant4} y reconstruidas con los mismos
-% algoritmos utilizados en los datos. Las muestras de señal se realizaron con una simulación rápida del detector ATLAS, \textsc{ATLFAST-II} \cite{Richter-Was:683751,Lukas_2012}, que simula la interacción en el calorímetro de forma simplificada para ahorrar tiempo de cómputo.
 
-% Un peso evento a evento es aplicado
-% a todas las muestras de MC para modelar las condiciones del detector de la muestra de datos bajo estudio,
-% haciendo coincidir la distribución simulada del número de colisiones inelásticas $pp$ por cruce de haces con el observado en los datos.
+Luego de la generación de los eventos y las partículas presentes en el mismo, se simula la interacción de las partículas con el detector. 
+Para ello se emplean programas que simulan el paso de partículas a través de la materia, junto con una simulación completa del detector ATLAS, en donde se detalla precisamente los materiales empleados y las dimensiones de los mismos. Este paso se realiza mediante el programa \texttt{Geant 4} \cite{Geant4} para simulaciones completas del detector. A su vez se puede realizar una simulación de la interacción en el calorímetro de forma simplificada para ahorrar recursos y tiempo de cómputo, denominada \texttt{ATLFAST-II} \cite{Richter-Was:683751,Lukas_2012}. Una vez realizada la simulación del detector, los eventos son reconstruidos con los mismos algoritmos empleados para datos. Se realizaron tres campañas de simulaciones, \texttt{mc16a}, \texttt{mc16d} y \texttt{mc16e}, generadas con la distribución prevista de pile-up para los datos tomados en los años 2015+2016, 2017 y 2018 respectivamente.
 
-% Las simulaciones se corrigen a su vez con factores de escala de eficiencia.
-% y correciones en la escala de energía de fotones, leptones y
-% jets, para describir mejor los datos. Las muestras se generaron con un
-% distribución de pileup esperada, denominadas MC16a, MC16d y MC16e para el conjunto de datos 2015-2016, 2017 y
-% 2018 respectivamente, con un peso adicional para igualar
-% el perfil de interacción real de los datos. 
+
+
+
+
+
+\subsubsection{Correcciones a las simulaciones}
+
+Si bien las simulaciones logran reproducir muchos procesos con una alta eficacia, es necesario aplicarles a las mismas una serie de correcciones tanto a nivel generador, como en la instancia de reconstrucción de objetos. En general estas correcciones se aplican como pesos a los eventos, los cuales aumentan o disminuyen el impacto de dicho evento en el análisis.
+
+La primer corrección proviene de los generadores que producen los eventos con un peso intrínseco, propio de los cálculos que hace, los cuales deben ser aplicados siempre a cada evento. Estos pesos en general toman valores cercanos a la unidad, pero no hay un impedimento sobre los mismos que inclusive a veces toman valores negativos. Si bien no ocurre con la mayoría de eventos, esto puede generar que en una selección muy estricta de un análisis la suma total de eventos dé negativa, algo que uno no esperaría en un experimento de conteo. Si bien no es fácil entender de forma directa estos pesos, en general existen para evitar un doble conteo de un cierto proceso. Aún así no pueden ser descartados y de deben encontrar métodos alternativos para lidiar con ellos.
+
+Otra de las correcciones que se aplican a las simulaciones es la normalización por luminosidad. En la Ecuación \ref{eq:lumi_xs} se puede observar la relación entre la luminosidad y el número de eventos de un proceso con una dada sección eficaz. Como las simulaciones son generadas con un número arbitrariamente grande de eventos ($N$), se les aplica un peso a las mismas para que el número de eventos final corresponda al de la producción de dicho proceso un período con una cierta luminosidad, $w_\text{lumi}=\mathcal{L}\sigma/N$. Por otro lado, existe una corrección asociada al pile-up que se debe aplicar a las simulaciones. Las tres campañas de simulaciones fueron generadas con la distribución prevista de pile-up, y mediante la aplicación de un peso a los eventos, se puede corregir tal distribución para que se asemeje a la observada en datos.
+
+Las simulaciones hacen uso de distintos algoritmos para la reconstrucción general del evento y sus objetos, entre los que se encueran algoritmos del trigger, y los empleados para la reconstrucción, identificación y aislamiento de objetos. Si bien estos algoritmos son los mismos que se usan para los datos, los resultados obtenidos para las simulaciones no siempre se asemejan a ellos, y por eso se les aplica un factor multiplicativo denominado factor de escala (SF). Estos factores son aplicados multiplicativamente al evento en el caso de que el mismo haya hecho uso del algoritmo asociado al factor de escala, generando un peso de la forma: 
+
+\begin{equation}
+  w_{\text{SF}} = \text{SF}_\text{Reco} \times \text{SF}_\text{ID} \times  \text{SF}_\text{Iso} \times  \text{SF}_\text{Trigger} \times  \text{SF}_\text{Opcional}
+\end{equation}
+
+\noindent
+donde el último factor engloba correciones opcionales, como por ejemplo a la carga de los electrones o de reconstrucción en la región forward. En general estos factor son muy cercanos a la unidad y se calculan en función de alguna de las variables del objeto. En la Sección \ref{sec:trig_sf} se describe un método para obtener los factores de escala asociados a la eficiencia del trigger de fotones.
+
+Correcciones adicionales pueden ser aplicadas a las simulaciones. Por ejemplo los cálculos a NLO pueden ser encapsulados en un factor denominado \textit{k-factor}, que es el cociente entre la sección eficaz de un dado proceso a NLO y a LO. Este factor multiplicativo puede ser aplicado a las simulaciones hechas a LO para incluir de alguna forma simple las correcciones a NLO \tosolve{consultar}. También  puede ocurrir que al generar un cierto proceso, solo sea necesario quedarse con aquellos eventos que pasen con una cierta selección, evitando almacenar el resto de los eventos que no lo hagan. Para ello se aplica un filtro a nivel generador, que en el caso de aplicarlo en necesaria la corrección de dichas simulaciones a partir de un factor multiplicativo que tenga en cuenta este filtrado.
+

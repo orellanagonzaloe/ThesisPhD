@@ -43,7 +43,7 @@ Adicionalmente se pone al mismo en el régimen de desacoplamiento con $m_A = 2\ 
 
 Debido a que son varios los análisis que estudian la producción de gluinos, la colaboración ATLAS puso a disposición unos archivos comunes a todos los análisis donde ya tiene almacenada la información de varios eventos de producción de gluinos. Estos archivos se denominan Les Houches Event (LHE), que le ahorran a cada análisis esta etapa de simulación, y sólo le resta generar las cadenas de decaimiento de los gluinos de acuerdo a sus modelos. En el presente análisis se omitieron correcciones radiativas así la masa de los los gluinos coincidía con el parámetro $M_3$, pudiendo así coincidir con los archivos LHE que están en función de la masa del mismo.
 
-Los únicos parámetros libres del modelo son entonces $\mu$ y $M_3$ que determinan básicamente la masa de los \ninoone y gluinos. Se simularon 80 modelos distintos (puntos) con 10000 eventos en función de ambos parámetros, donde $150\ \gev<m_{\ninoone}<(m_{\tilde{g}}50)\ \gev$ y $1200\ \gev < m_{\tilde{g}}<2800\ \gev$. El arreglo completo de puntos de señal (grid) se puede observar en la Figura \ref{fig:grid_points}. Las muestras se realizaron con la simulación rápida del detector \textsc{ATLFAST-II} \tosolve{se supone que la voy a comentar en el segundo capitulo}. El espectro de masas completo, las fracciones de decaimiento de las sparticles y los anchos de decaimientos fueron calculados a partir del conjunto de parámetros anteriormente mencionados utilizando SUSPECT v2.43 \cite{Djouadi2007426}, SDECAY v1.5 \cite{Muhlleitner:2004mka} y HDECAY v3.4 \cite{Djouadi:1997yw}, que son parte del paquete SUSYHIT v1.5a \cite{Djouadi:2006bz}.
+Los únicos parámetros libres del modelo son entonces $\mu$ y $M_3$ que determinan básicamente la masa de los \ninoone y gluinos. Se simularon 80 modelos distintos (puntos) con 10000 eventos en función de ambos parámetros, donde $150\ \gev<m_{\ninoone}<(m_{\tilde{g}}50)\ \gev$ y $1200\ \gev < m_{\tilde{g}}<2800\ \gev$. El arreglo completo de puntos de señal (grid) se puede observar en la Figura \ref{fig:grid_points}. Las muestras se realizaron con la simulación rápida del detector \textsc{ATLFAST-II}. El espectro de masas completo, las fracciones de decaimiento de las sparticles y los anchos de decaimientos fueron calculados a partir del conjunto de parámetros anteriormente mencionados utilizando SUSPECT v2.43 \cite{Djouadi2007426}, SDECAY v1.5 \cite{Muhlleitner:2004mka} y HDECAY v3.4 \cite{Djouadi:1997yw}, que son parte del paquete SUSYHIT v1.5a \cite{Djouadi:2006bz}.
 Como ejemplo se muestra en la Figura \ref{fig:mass_spec} un espectro de masas para unos de los puntos de señal con ($M_3$, $\mu$) = (1800 GeV, -1050 GeV). Un ejemplo de posibles decaimientos de los gluinos para ese mismo punto de señal se puede observar en la Figura \ref{fig:gluino_decays}. 
 
 \begin{figure}
@@ -113,7 +113,7 @@ Los fondos del SM con fotones `reales' fueron modelados utilizando simulaciones 
 Cabe mencionar que también el fondo \znunuph es considerado de alta importancia en el análisis, pero la dificultad para diseñar una región de control dedicada llevó a la decisión de utilizarlo con las normalizaciones usuales. La parte del análisis que se basa en la producción electrodébil  sí hace uso de una región de control dedicada para este análisis, y se describe en el Capítulo \ref{cap:analysis_EWK}.
 
 Todos los procesos salvo \ttbarph fueron simulador utilizando el generador \texttt{SHERPA} v2.2 \cite{Bothmann:2019yzt}. Los elementos de la matriz se calculan para un máximo de cuatro partones
-a LO y se fusionan con la lluvia de partones de \texttt{SHERPA} \cite{Schumann:2007mg} utilizando la prescripción de \texttt{MEPS@LO} \cite{Hoeche:2012yf}. La muestra de \ttbarph se genera con \texttt{MadGgraph5\_aMC@NLO} \cite{Alwall:2014hca} a segundo orden en teoría de perturbaciones (NLO), con \texttt{Pythia8} para el modelo de la lluvia de partones \cite{Sjostrand:2014zea}. \tosolve{algún dato más debería poner, cual?}. En la Tabla \ref{tab:mc_samples} se muestran todas las muestras de fondos utilizadas en el análisis, las mismas se encuentras segmentadas (\textit{slicing}) de acuerdo a diferentes criterios.
+a LO y se fusionan con la lluvia de partones de \texttt{SHERPA} \cite{Schumann:2007mg} utilizando la prescripción de \texttt{MEPS@LO} \cite{Hoeche:2012yf}. La muestra de \ttbarph se genera con \texttt{MadGgraph5\_aMC@NLO} \cite{Alwall:2014hca} a segundo orden en teoría de perturbaciones (NLO), con \texttt{Pythia8} para el modelo de la lluvia de partones \cite{Sjostrand:2014zea}. \tosolve{algún dato más debería poner, cual?}. Para todas las muestras se utilizó en la simulación del detector el progama \texttt{Geant 4}. En la Tabla \ref{tab:mc_samples} se muestran todas las muestras de fondos utilizadas en el análisis, las mismas se encuentras segmentadas (\textit{slicing}) de acuerdo a diferentes criterios.
 
 \begin{table}[h!]
   \centering
@@ -401,7 +401,7 @@ El presente análisis hace uso de la totalidad de datos con una energía de cent
 
 Los datos y simulaciones de MC empleados para el análisis fueron preseleccionados con la derivación \texttt{SUSY1} descripta en la Sección \ref{sec:lhc_samples}, orientada a análisis con moderada actividad hadrónica y con la presencia de un fotón energético entre otras cosas.
 
-Los objetos de interés para esta Tesis son los fotones, jets y leptones (electrones y muones) a los que se les aplica diferentes requisitos offline. Inicialmente se les requiere una selección base (\textit{baseline}) siguiendo algunas de las recomendaciones que hace el grupo de SUSY de la colaboración ATLAS y que se describe a continuación. La misma se emplea para aplicar un requisito de solapamiento (\textit{overlap removal}) entre los distintos objetos del evento y posteriormente empleados para el cálculo de \met. Finalmente a los fotones, jets y leptones se les aplica una selección denominada \textit{signal}, siendo estos objetos los que definen las distintas regiones del análisis. \tosolve{mencionar a VgammaORTool}
+Los objetos de interés para esta Tesis son los fotones, jets y leptones (electrones y muones) a los que se les aplica diferentes requisitos offline. Inicialmente se les requiere una selección base (\textit{baseline}) siguiendo algunas de las recomendaciones que hace el grupo de SUSY de la colaboración ATLAS y que se describe a continuación. La misma se emplea para aplicar un requisito de solapamiento (\textit{overlap removal}) entre los distintos objetos del evento y posteriormente empleados para el cálculo de \met \tosolve{Ojo con esto al final no se usaba para met, no?}. Finalmente a los fotones, jets y leptones se les aplica una selección denominada \textit{signal}, siendo estos objetos los que definen las distintas regiones del análisis. \tosolve{mencionar a VgammaORTool}
 
 \tosolve{como son cortos, capaz los siguientes items podrían ser subsubsection}
 
@@ -412,17 +412,22 @@ Los fotones baseline deben pasar la selección de identificación \texttt{Tight}
 
 \subsection{Electrones}
 
-Los electrones baseline son requeridos tener $\pt>10\ \gev$, $|\eta|<2.47$ excluyendo la región crack y ser originados en el vértice primario. El requerimiento de identificación \texttt{LooseAndBLayerLLH} es aplicado \tosolve{definir o poner solo loose}. Los electrones signal son seleccionados además con $\pt>25\ \gev$, aplicando la identificación \texttt{TightLLH} y el requisito de aislamiento \texttt{FCLoose}, o \texttt{FCHighPtCaloOnly} si tienen $\pt>200\ \gev$.
+Los electrones baseline son requeridos tener $\pt>10\ \gev$, $|\eta|<2.47$ excluyendo la región crack y ser originados en el vértice primario. El requerimiento de identificación \texttt{Loose}
+% \tosolve{en realidad es LooseAndBLayerLLH} 
+es aplicado \tosolve{definir o poner solo loose}. Los electrones signal son seleccionados además con $\pt>25\ \gev$, aplicando la identificación \texttt{Tight}
+% \tosolve{en realidad es TightLLH} 
+y el requisito de aislamiento \texttt{FCLoose}, o \texttt{FCHighPtCaloOnly} si tienen $\pt>200\ \gev$.
 
 
 \subsection{Muon}
 
-Los muones baseline son seleccionados con la identificación \texttt{Medium}, tener $\pt>10\ \gev$, $|\eta|<2.7$ y ser originados del vértice primario. A los muones signal se les requiere adicionalmente tener $\pt>25\ \gev$ y el WP de aislamiento \texttt{Loose\_VarRad}.
+Los muones baseline son seleccionados con la identificación \texttt{Medium}, tener $\pt>10\ \gev$, $|\eta|<2.7$ y ser originados del vértice primario. A los muones signal se les requiere adicionalmente tener $\pt>25\ \gev$ y el WP de aislamiento \texttt{FixedCutLoose}.
+% % \tosolve{en realidad es Loose\_VarRad pero no encuentro su definición y es muy probable que sea igual a FixedCutLoose} 
 
 
 \subsection{Jets}
 
-Jets baseline son seleccionados con $\pt>30\ \gev$ y $|\eta|<2.8$. Este último requisito no es empleado en el cálculo de \met. Selecciones basadas en las trazas son aplicadas para rechazar jets con $\pt<120\ \gev$ y $|\eta|<2.4$ que se originen de las interacciones de pileup. Jets signal son seleccionados con $\pt>30\ \gev$ y $|\eta|<2.5$. La identificación de $b$-jets es empleada en la definición de algunas regiones de control. Para ello se utiliza el algoritmo \texttt{MV2c10}, con una eficiencia de selección de los mismos del 77\%.
+Se emplean Jets \texttt{EMTopo} y la selección baseline se define como aquellos con $\pt>30\ \gev$ y $|\eta|<2.8$. Este último requisito no es empleado en el cálculo de \met. Selecciones basadas en las trazas son aplicadas para rechazar jets con $\pt<120\ \gev$ y $|\eta|<2.4$ que se originen de las interacciones de pileup. Jets signal son seleccionados con $\pt>30\ \gev$ y $|\eta|<2.5$. La identificación de $b$-jets es empleada en la definición de algunas regiones de control. Para ello se utiliza el algoritmo \texttt{MV2c10}, con una eficiencia de selección de los mismos del 77\%.
 
 \subsection{Overlap removal}
 
