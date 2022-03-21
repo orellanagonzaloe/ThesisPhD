@@ -57,8 +57,8 @@ Las hipótesis pueden estar completamente determinadas o estar caracterizadas po
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.65\textwidth]{images_tmp/nullh.png}
-  \caption{Distribución del estadístico de prueba bajo la hipótesis nula $H_0$ (azul) y la alternativa$H_1$ (roja). El corte en $t_c$ define a la región crítica y de aceptancia. El área azul ($\alpha$) se denomina error de tipo I, y representa la probabilidad de rechazar $H_0$ siendo esta es verdadera. El área roja ($\beta$) se denomina error de tipo II, y representa la probabilidad de acepta $H_0$ siendo esta es falsa. \tosolve{hacer imagen propia}}
+  \includegraphics[width=0.8\textwidth]{images/statistics/hypo_test.pdf}
+  \caption{Distribución del estadístico de prueba bajo la hipótesis nula $H_0$ (azul) y la alternativa $H_1$ (roja). El corte en $t_c$ define a la región crítica y de aceptancia. El área azul ($\alpha$) se denomina error de tipo I, y representa la probabilidad de rechazar $H_0$ siendo esta es verdadera. El área roja ($\beta$) se denomina error de tipo II, y representa la probabilidad de acepta $H_0$ siendo esta es falsa.}
   \label{fig:nullh}
 \end{figure}
 
@@ -73,10 +73,11 @@ Un p-value chico implica una evidencia importante en contra de dicha hipótesis,
 
 \begin{equation}
 	Z=\Phi^{-1}(1-p)
+	\label{ec:sign}
 \end{equation}
 
 \noindent
-donde $\Phi^{-1}$ es la inversa de la cumulativa (cuantil) de la distribución gaussiana. La comunidad de física de partículas tiende a definir un rechazo de hipótesis de solo fondo con una significancia superior a los $5\sigma$ ($p=2.87 \cdot 10^{-7}$) como un nivel apropiado para definir un descubrimiento. Para excluir hipótesis de señal se define en cambio a partir de $1.64$ sigmas ($p=0.05$). Cabe destacar que el rechazar la hipótesis de solo fondo es solo parte del proceso de descubrimiento de un nuevo fenómeno. La certeza de que un nuevo proceso está presente va a depender en general de otros factores, como la plausibilidad de una nueva hipótesis de señal, y el grado al cual la misma describe a los datos observados.
+donde $\Phi^{-1}$ es la inversa de la cumulativa (cuantil) de la distribución gaussiana. 
 
 
 \section{Estadísticos de prueba}
@@ -117,7 +118,7 @@ De la definición de $\lambda(\mu)$ se puede observar que la misma puede tomar v
 \noindent
 donde ahora valores grandes de $t_{\mu}$ implica una gran incompatibilidad entre datos y $\mu$.
 
-\tosolve{El paper de Cowan define estadísticos de prueba alternativos, pero no sé si son los que se usan con HF}
+\tosolve{El paper de Cowan define estadísticos de prueba alternativos, pero no sé si son los que se usan con HF. Pongo esos pero capaz no van, y lo que sigue a continuación está de más.}
 
 En muchos análisis la contribución del proceso de señal al valor medio de eventos se asume como no negativo, lo que implica que cualquier estimador de 
 $\mu$ debería ser no negativo. Aún si no fuese así el caso, es conveniente definir un estimador efectivo $\hat{\mu}$ que maximice el likelihood y que tenga la posibilidad de tomar valores negativos (siempre y cuando los valores medios de Poisson, $\mu s_i + b_i$, sean no negativos). Esto va a permitir más adelante modelar a $\hat{\mu}$ como una variable con distribución gaussiana. 
@@ -151,6 +152,7 @@ Si los datos observados resultan menores a las predicciones del fondo, se tiene 
 	\label{ec:pvalue_0}
 \end{equation}
 
+La comunidad de física de partículas tiende a definir un rechazo de hipótesis de `solo fondo' con una significancia superior a los $5\sigma$ ($p=2.87 \cdot 10^{-7}$) como un nivel apropiado para definir un descubrimiento. Para excluir hipótesis de señal se define en cambio a partir de $1.64$ sigmas ($p=0.05$). Cabe destacar que el rechazar la hipótesis de solo fondo es solo parte del proceso de descubrimiento de un nuevo fenómeno. La certeza de que un nuevo proceso está presente va a depender en general de otros factores, como la plausibilidad de una nueva hipótesis de señal, y el grado al cual la misma describe a los datos observados.
 
 \section{Límites superiores de exclusión}
 
@@ -196,7 +198,7 @@ donde
 \noindent
 siendo $f(q_\mu|\mu)$ la pdf del estadístico de prueba $q_\mu$, y $f(q_\mu|0)$ la pdf bajo la hipótesis de `solo fondo'.
 
-Cuanto más bajo es el $\text{CL}_{s}$, menos compatibilidad entre los datos y la hipótesis de `señal+fondo'. Se define por convención al límite superior ($\mu_{\text{up}}$) como aquel $\mu$ que tiene un $\text{CL}_{s}=95\%$, y se rechazan entonces lo modelos con $\mu$ menores a $\mu_{\text{up}}$.
+Cuanto más bajo es el $\text{CL}_{s}$, menos compatibilidad entre los datos y la hipótesis de `señal+fondo'. Se define por convención al límite superior ($\mu_{\text{up}}$) como aquel $\mu$ que tiene un $\text{CL}_{s}=5\%$, y se rechazan entonces lo modelos con $\mu$ menores a $\mu_{\text{up}}$.
 
 
 
@@ -214,7 +216,7 @@ Considerando al PLR de la Ecuación \ref{ec:plr}, determinado por el parámetro 
 \noindent
 donde $\mu$ sigue una distribución Gaussiana con una media $\mu'$ y una desviación estándar $\sigma$, y $N$ representa el tamaño de la muestra. 
 % Si despreciamos el término $\mathcal{O}(1/\sqrt{N})$ se puede mostrar que el estadístico de prueba $t_{\mu}$ sigue una distribución de $\chi^{2}$ no central con un grado de libertad.
-En el límite asintótico, $N\to\infty$, se puede mostrar que el estadístico de prueba $t_{\mu}$ sigue una distribución de $\chi^{2}$ no central con un grado de libertad, y en ese caso el estadístico de prueba para descubrimiento ($q_{0}$) de la Ecuación \ref{eq:st_q0} puede aproximarse como:
+En el límite asintótico se puede mostrar que el estadístico de prueba $t_{\mu}$ sigue una distribución de $\chi^{2}$ no central con un grado de libertad, y en ese caso el estadístico de prueba para descubrimiento ($q_{0}$) de la Ecuación \ref{eq:st_q0} puede aproximarse como:
 
 \begin{equation}
 	q_{0}=
@@ -224,68 +226,119 @@ En el límite asintótico, $N\to\infty$, se puede mostrar que el estadístico de
 	\end{cases}
 \end{equation}
 
-Al p-value se lo puede aproximar como $p_{\mu}=1-\Phi(\sqrt{q_{\mu}})$ y a su correspondiente significancia equivalente como $Z_{\mu}=\sqrt{q_{\mu}}$. La misma aproximación vale para el estadístico de prueba para límites superiores ($q_\mu$) de la Ecuación \ref{ec:st_qmu}.
+De la misma forma, al p-value se lo puede aproximar como $p_{\mu}=1-\Phi(\sqrt{q_{\mu}})$ y a su correspondiente significancia equivalente como $Z_{\mu}=\sqrt{q_{\mu}}$. La misma aproximación vale para el estadístico de prueba para límites superiores ($q_\mu$) de la Ecuación \ref{ec:st_qmu}.
 
-Estas aproximaciones permiten conocer las distribuciones muéstrales y calcular valores-p y significancias en el caso de un gran número de datos, de una forma simple y computacionalmente poco
-costosa. A pesar de que estrictamente es válido para $N\to\infty$, esta aproximación es suficientemente
-precisa para un número de eventos de fondo $\sim \mathcal{O}(10)$.
-Para muestras de datos muy pequeñas, o en casos donde la precisión es importante, siempre pueden
-validarse estas aproximaciones utilizando la generación Monte Carlo. Para esto es necesario utilizar
-simulaciones Monte Carlo para generar lo que se denomina `pseudo-experimentos'. El procedimiento
-consiste en generar el conjunto de observables x utilizando la pdf $f(x|H)$ y calcular el valor del
-estadístico de prueba $t(x)$ para cada conjunto. Este proceso se repite hasta acumular suficiente
-estadística en la distribución muestral del estadístico $g(t|H)$.
+Cuando la estadística es reducida, se abandona el régimen asintótico, y las aproximaciones anteriores dejan de tener validez. \tosolve{Explicar toys: todavía no entiendo bien qué es lo que se varía} \tosolve{Debería explicar Asimov?} % O(\sim 10)
+ 
+% Estas aproximaciones permiten conocer las distribuciones muéstrales y calcular valores-p y significancias en el caso de un gran número de datos, de una forma simple y computacionalmente poco
+% costosa. A pesar de que estrictamente es válido para $N\to\infty$, esta aproximación es suficientemente
+% precisa para un número de eventos de fondo $\sim \mathcal{O}(10)$.
+% Para muestras de datos muy pequeñas, o en casos donde la precisión es importante, siempre pueden
+% validarse estas aproximaciones utilizando la generación Monte Carlo. Para esto es necesario utilizar
+% simulaciones Monte Carlo para generar lo que se denomina `pseudo-experimentos'. El procedimiento
+% consiste en generar el conjunto de observables x utilizando la pdf $f(x|H)$ y calcular el valor del
+% estadístico de prueba $t(x)$ para cada conjunto. Este proceso se repite hasta acumular suficiente
+% estadística en la distribución muestral del estadístico $g(t|H)$.
 
-\section{Optimización de las regiones de señal}\label{sec:exp_sig}
+\section{Significancia esperada}\label{sec:exp_sig}
 
-La búsqueda comienza definiendo las regiones de señal. Las mismas están caracterizadas por un estado final (motivado por un modelo en particular) que determina los cortes preliminares de la región. Adicional a esos cortes se agregan otros que aumentan el poder discriminatorio de las regiones de señal. El proceso de definir el conjunto de SRs y los cortes más aptos de cada una se denomina optimización. Es posible definir un conjunto de SRs optimizadas para discriminar al mismo modelo pero con distintos parámetros (masas por ejemplo), pudiendo estas ser independientes entre sí u ortogonales. Esto último puede ser ventajoso dependiendo de si se está realizando la búsqueda con el objetivo de descubrir algún fenómeno, o si se quiere poner límites al modelo estudiado. Cabe mencionar que si bien se buscan las regiones con mayor poder discriminatorio, es importante evitar definirlas basándose fuertemente en las predicciones del modelo. En caso de realizar una búsqueda muy dependiente del modelo y de no observar un exceso, se estarían poniedo límites a un modelo muy particular resultando poco útil para la comunidad científica. En por eso que el proceso de optimización, si bien está motivado por un estado final determinado por el modelo, termina siendo un compromiso entre un buen poder discriminatorio sin perder la idependencia al mismo. Una forma de garantizar esa independiencia es utilizar cortes un poco más relajados y pedir un número mínimo de eventos de señal y fondo.
-
- ...
-
-% Una parte clave del proceso de optimización es poder definir a priori el poder discriminatorio de una dada signal region.
-%  To
-% establish a discovery of the signal, one can calculate the p-value of the hypothesis that s = 0,
-% or equivalently it is convenient to use the Gaussian significance, Z. This is related to the
-% p-value by
-% Z = Φ−1(1 − p)
-% where Φ−1 is the quantile of the standard Gaussian (inverse of the cumulative distribution).
-% For the case where the p-value refers to the background-only (s = 0) hypothesis, we will
-% refer to the corresponding Z value as the discovery significance. In particle physics a widely
-% used threshold for a discovery has been a p-value of 2.9 × 10−7 or less, corresponding to a
-% significance of Z = 5 or more
-% When designing a new experiment it is important to know what discovery significance to
-% expect if a certain signal model is in fact true. For this one can report the mean or median
-% value of Z under assumption of some nominal value of s, i.e., assuming that n will have a
-% mean of s + b. As noted in Ref. [1], because the p-value and significance Z have a nonlinear,
-% monotonic relation, it is convenient to take “expected significance” to refer to the median,
-% so that the median Z is given by Z evaluated with the median p.
-
-%  a Poisson distributed quantity n with
-% a large mean value s+b can be approximated by a Gaussian distributed variable x with mean
-% s + b and standard deviation √s + b. The p-value of the background-only hypothesis given
-% an observation x is therefore
-
-% where μ = b and σ = √b refer to the mean and standard deviation of x under assumption of
-% s = 0. Using this with Eq. (1) gives the discovery significance
+El diseño de las regiones de señal para el análisis es un proceso denominado `optimización', que define el conjunto de cortes óptimo para discriminar el fondo de la señal. Tal discriminación es cuantizada mediante la significancia de la Ecuación \ref{ec:sign}, la cual a priori es desconocida. Para estimar el valor de significancia ($Z$) que uno esperaría tener un experimento, que espera observar un número de eventos igual a la suma de las estimaciones de fondo y señal ($n=s+b$), se puede emplear la significancia esperada, que se define como la mediana de $Z$. Como el p-value y $Z$ tienen una relación lineal y monotónica \cite{Cowan:2010js}, la mediana de $Z$ se puede obtener a partir de la mediana del p-value.
 
 
+Por ejemplo, si tenemos una variable $n$ que sigue una distribución de Poisson y tiene media $s+b$, si la media es lo suficientemente grande, es posible aproximar a la misma mediante una distribución gaussiana, con media $s+b$ y desviación estándar $\sqrt{s+b}$. El p-value para la hipótesis de `solo fondo' ($s=0$) dada a observación $x$ es:
 
-\section{Ajuste de solo fondo}
+\begin{equation}
+	p = 1 - \Phi\left( \frac{x-\mu}{\sigma} \right) = 1 - \Phi\left( \frac{x-b}{\sqrt{b}} \right)
+\end{equation}
 
-Key ingredients of the fitting procedure are the ratios of expected event counts, called transfer
-factors, or TFs, of each normalized background process between each SR and each CR. The TFs
-allow the observations in the CRs to be converted into background estimates in the SRs, using:
+A partir de esto se puede obtener la significancia para descubrimiento:
+
+\begin{equation}
+	Z = \frac{x-b}{\sqrt{b}}
+\end{equation}
+
+La media de $Z$ coincide con la mediana, y como la media de $x$ es $s+b$, se obtiene:
+
+\begin{equation}
+	\text{med}[Z|s] = \frac{s}{\sqrt{b}}
+\end{equation}
+
+Esta magnitud fue históricamente empleada en física de partículas para la estimación de la significancia esperada. La misma se puede interpretar como la fracción de eventos de señal esperados con respecto a la incerteza estadística del número esperado de eventos total asumiendo la ausencia de señal.
+
+Si el numero esperado de eventos de fondo $b$ es desconocido, debe ser incluido como parámetro nuisance. En ese caso $b$ puede ser ajustado libremente al número de eventos observados, y sería imposible rechazar la hipótesis de `solo fondo' ($s=0$) a menos que se introduzca información adicional que limite dicho parámetro. Para ellos se incluyen las regiones de control, donde no hay eventos de señal y donde la estimación del fondo en esta región puede relacionarse con la estimación en las regiones de señal. Estas regiones son incluidas la función likelihood como distribuciones de Poisson, de igual forma que las regiones de señal. Procediendo de forma similar que en el ejemplo anterior, empleando la  hipótesis de `solo fondo' ($s=0$) y la aproximación mediante `datos de Asimov' \cite{Cowan:2010js}, se puede obtener una expresión para la significancia esperada en función de la estimación del fondo basada en la región de control y su incertidumbre ($\sigma_b$):
+
+\begin{equation}
+	Z = \sqrt{ 2 (s+b) \ln{\left[ \frac{(s+b)(b+\sigma_b^2)}{b^2 + (s+b)\sigma_b^2} \right]} - \frac{2 b^2}{\sigma_b^2} \ln{ \left[ 1 + \frac{s \sigma_b^2}{b(b+\sigma_b^2)} \right] } }
+\end{equation}
+
+La estimación de la significancia esperada depende también del tipo de experimento que se desea realizar. En la práctica se emplea un método descripto en las Referencias \cite{Linnemann:2003vw, stat_1, ATL-PHYS-PUB-2020-025}, y que se engloba en una función del framework \texttt{ROOT} \footnote{\texttt{ROOT.RooStats.NumberCountingUtils.BinomialExpZ}}, que depende de la estimación de la señal y fondo, junto con su incertidumbre. En general, para la incerteza del fondo se hace una estimación conservadora del 30\%. 
+
+% La búsqueda comienza definiendo las regiones de señal. Las mismas están caracterizadas por un estado final (motivado por un modelo en particular) que determina los cortes preliminares de la región. Adicional a esos cortes se agregan otros que aumentan el poder discriminatorio de las regiones de señal. El proceso de definir el conjunto de SRs y los cortes más aptos de cada una se denomina optimización. Es posible definir un conjunto de SRs optimizadas para discriminar al mismo modelo pero con distintos parámetros (masas por ejemplo), pudiendo estas ser independientes entre sí u ortogonales. Esto último puede ser ventajoso dependiendo de si se está realizando la búsqueda con el objetivo de descubrir algún fenómeno, o si se quiere poner límites al modelo estudiado. Cabe mencionar que si bien se buscan las regiones con mayor poder discriminatorio, es importante evitar definirlas basándose fuertemente en las predicciones del modelo. En caso de realizar una búsqueda muy dependiente del modelo y de no observar un exceso, se estarían poniedo límites a un modelo muy particular resultando poco útil para la comunidad científica. En por eso que el proceso de optimización, si bien está motivado por un estado final determinado por el modelo, termina siendo un compromiso entre un buen poder discriminatorio sin perder la idependencia al mismo. Una forma de garantizar esa independiencia es utilizar cortes un poco más relajados y pedir un número mínimo de eventos de señal y fondo.
+
+
+
+
+% \section{Ajuste de solo fondo}
+
+% Key ingredients of the fitting procedure are the ratios of expected event counts, called transfer
+% factors, or TFs, of each normalized background process between each SR and each CR. The TFs
+% allow the observations in the CRs to be converted into background estimates in the SRs, using:
+
+% \begin{equation}
+%     N^{(SR)}_{p}(est.) = N^{(SR)}_{p}(raw) \times \frac{N^{(CR)}_{p}(obs.)}{N^{(CR)}_{p}(est.)} = \mu_{p} \times N^{(SR)}_{p}(raw)
+% \end{equation}
+
+% where Np(SR,est.) is the SR background estimate for each simulated physics processes p considered
+% in the analysis, Np(CR,obs.) is the observed number of data events in the CR for the process, and
+% MCp(SR,raw) and MCp(CR,raw) are raw and unnormalized estimates of the contributions from
+% the process to the SR and CR respectively, as obtained from MC simulation. An important feature of using TFs is that systematic uncertainties on the predicted background
+% processes can be canceled in the extrapolation; a virtue of using the ratio of MC estimates. The total uncertainty on the number of background events in the SR is then a combination of the
+% statistical uncertainties in the CR(s) and the residual systematic uncertainties of the extrapolation.
+% For this reason, CRs are often defined by somewhat looser cuts than the SR, in order to increase
+% CR data event statistics without significantly increasing residual uncertainties in the TFs, which in
+% turn reduces the extrapolation uncertainties to the SR
+
+
+\section{Modelo estadístico y flujo de búsqueda}
+
+La función de likelihood empleada para esta tesis se escribe como:
+
+\tosolve{Traté de que incluya la mayor información posible en una sola expresión, inclusive el ajuste solo fondo. Como en algunos ajustes se incluye el muSig en las CR (es cierto?), me pareció que podía poner a todas las regiones en una misma productoria (en el paper separan SR de CR porque a las CR no les incluye señal). También puse explícito el TF para los fondos que corresponda.}
+
+\begin{equation}
+	\begin{split}
+	\mathcal{L} (\textbf{n}, \bm{\theta}^0 | \mu_\text{sig}, \bm{\mu}_b, \bm{\theta}) & = P_\text{SR+CR} \times  C_\text{syst} (\bm{\theta}^0, \bm{\theta}) \\
+	& = \prod_{i \in \text{SR+CR}} \frac{(\mu_\text{sig} s_i + \bm{\mu}_b \cdot \textbf{b}_i)^{n_i}}{n_i!} \prod_{i \in S} G(\theta_j^0 - \theta_j) \\
+	\end{split}
+	\label{eq:analysis_lh}
+\end{equation}
+
+
+La misma se compone de la distribución de los datos observados en cada SR y CR, y un factor adicional que engloba las incertezas sistemáticas. Los datos obedecen la distribución de Poisson con media $\mu_\text{sig} s_i + \bm{\mu}_b \cdot \textbf{b}_i$, donde $\mu_\text{sig}$ es la intensidad de señal, $s_i$ es la estimación de señal en la región $i$, $\textbf{b}_i$ es la estimación de cada fondo para la región $i$, y $\bm{\mu}_b$ son los factores de normalización de cada fondo (cuyo uso se explica más adelante). Las incertezas sistemáticas ($S$) son incluidas usando la pdf $C_\text{syst} (\bm{\theta}^0, \bm{\theta})$, donde $\bm{\theta}^0$ son los valores centrales medidos alrededor de los cuales el parámetro $\bm{\theta}$ puede fluctuar al realizar un ajuste. Las variaciones de estos parámetros nuisance tiene un impacto directo en las estimaciones de los fondos y señal ($\textbf{b}_i$ y $s_i$). Para parámetros nuisance independientes, esta pdf es simplemente el producto de cada incerteza, la cual corresponde con una gaussiana con media $\theta_j^0 - \theta_j$. \tosolve{Mencionar pulls}
+
+El estadístico de prueba empleado es el PLR descripto en la Ecuación \ref{ec:plr} a partir del likelihood de la Ecuación \ref{eq:analysis_lh}, y modificado para la evaluación del descubrimiento (Ecuación \ref{eq:st_q0}) o para los límites de exclusión (Ecuación \ref{ec:st_qmu}).
+
+La búsqueda comienza con el diseño de las SRs a partir de la estimación de los procesos de señal y fondo, buscando maximizar la significancia esperada descripta en la Sección \ref{sec:exp_sig}. Luego se diseñan las CRs con el objetivo de normalizar los fondos de MC principales a los datos observados, realizando lo que se denomina el \textbf{Ajuste de solo fondo}. Para ello se omite en el likelihood a las SRs en la productoria y se fija $\mu_\text{sig}=0$. El objetivo de dicho ajuste es obtener el \textbf{factor de transferencia} ($\bm{\mu}_b$), que se aplica a cada fondo para corregir la estimación de los mismos a los datos en las CRs, y luego extrapolar dicha corrección a todas las regiones del análisis de la forma:
+
+\tosolve{Acá mes desvié un poco con la notación, corregir!}
 
 \begin{equation}
     N^{(SR)}_{p}(est.) = N^{(SR)}_{p}(raw) \times \frac{N^{(CR)}_{p}(obs.)}{N^{(CR)}_{p}(est.)} = \mu_{p} \times N^{(SR)}_{p}(raw)
 \end{equation}
 
-where Np(SR,est.) is the SR background estimate for each simulated physics processes p considered
-in the analysis, Np(CR,obs.) is the observed number of data events in the CR for the process, and
-MCp(SR,raw) and MCp(CR,raw) are raw and unnormalized estimates of the contributions from
-the process to the SR and CR respectively, as obtained from MC simulation. An important feature of using TFs is that systematic uncertainties on the predicted background
-processes can be canceled in the extrapolation; a virtue of using the ratio of MC estimates. The total uncertainty on the number of background events in the SR is then a combination of the
-statistical uncertainties in the CR(s) and the residual systematic uncertainties of the extrapolation.
-For this reason, CRs are often defined by somewhat looser cuts than the SR, in order to increase
-CR data event statistics without significantly increasing residual uncertainties in the TFs, which in
-turn reduces the extrapolation uncertainties to the SR
+% los que no normalizamos los dejamos en 1
+Una ventaja de emplear este método es que las incertezas sistemáticas en las predicciones de los fondos se cancelan en dicha extrapolación. La incerteza total en el número de fondo en cada SR es una combinación de la incerteza estadística de las CRs, y el residual de las incertezas sistemáticas. Para ello se emplea en las CR cortes más relajados, con la idea de aumentar la estadística sin incrementar las incertezas residuales, lo cual reduce la extrapolación de las incertezas a las SRs. El factor de transferencia se emplea también para las VRs, que de alguna forma evalúan la calidad de dicha extrapolación. Una vez que se considera que el modelado de los fondos es el adecuado, se procede a observar los datos en las SRs (\textit{unblinding}). A partir del unblind se puede evaluar si se está en presencia de un descubrimiento o no. El ajuste ahora es similar al anterior, con la hipótesis de `solo fondo' $\mu_\text{sig}=0$, pero incluyendo también las SRs y empleando los factores de transferencia calculados anteriormente \tosolve{Esto es así?}. Finalmente se calcula el p-value del estadístico de prueba y dependiendo de su valor se determina si se puede afirmar la observación de un nuevo fenómeno.
+
+En caso de no haber descubrimiento es posible imponer límites sobre el modelo estudiado, en lo que se denomina \textbf{Ajuste dependiente del modelo}. Entonces se realiza un ajuste similar al de solo fondo, solo que ahora se considera la contribución de la señal tanto en las SRs como en las CRs, corregidos por el parámetro de intensidad de señal $\mu_\text{sig}\ne0$. Este ajuste se realiza para cada modelo de señal en cada SR, obteniéndose el $\mu_\text{sig}$, empleado para obtener aquellos modelos con $\text{CL}_{s}=5\%$. Los modelos en general se realizan variando algún parámetro (masa por ejemplo) y las simulaciones se realizan para valores discretos de dicho parámetro. En caso de que el límite se encuentre entre dos modelos, se realiza una extrapolación para calcular el límite adecuado.
+
+Es posible a su vez establecer límites independientes del modelo, mediante lo que se denomina \textbf{Ajuste independiente del modelo}. Para ello se establecen límites superiores al número de eventos en cada SR, de tal forma de poder saber si algún modelo alternativo ya está excluido por el análisis actual, simplemente estimando el número de eventos de dicho modelo en las SRs. Para ello se realiza un ajuste similar a los anteriores, solo que ahora no se permite contaminación de señal en las CR \tosolve{Por qué?}, y como no se conoce los eventos esperados de señal, se emplea una señal \textit{dummy} dejando la estimación $s_i=1$. \tosolve{Consultar efectivamente qué es lo que se obtiene de este fit} \tosolve{Y ahora me surgió la duda: diferencias entre los expected y observed limits???}
+
+
+% queda entonces:
+% toys
+% asimov
+% consultar que estadistico de prueba se usa
+% si esta bien el likelihood
+% exclusion vs observed
+% independent limit, que se busca en realidad?
+
