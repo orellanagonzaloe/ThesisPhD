@@ -221,7 +221,16 @@ La segunda variable de aislamiento se obtiene en base a las trazas de los objeto
 
 % \tosolve{Poner en algún lado esto?: prompt electrons, isolated or produced in a busy environment, vs electrons from heavy-flavour decays or light hadrons misidentified as electrons}. Creo que no hace falta 
 
-A partir de estas variables se definen distintos WPs de aislamiento de electrones dependiendo de si se desea mantener constante la eficiencia o si se desea aplicar cortes fijos en las variables de aislamiento. Un ejemplo de WP de aislamiento para electrones es el \texttt{FixedCutLoose} con una eficiencia de selección mayor a 90\% para electrones con $\ET>10\,\gev$ \cite{EGAM-2018-01}. En el caso de fotones también se definen distintos WPs que pueden no utilizar todas las variables de aislamiento, como el caso del WP \texttt{FixedCutTightCaloOnly} que solo utiliza un corte en la variable $\ETcone{40}$. Las definiciones de los distintos WPs de interés para esta tesis se listan en la Tabla \ref{tab:IDWPs}.
+A partir de estas variables se definen distintos WPs de aislamiento de electrones dependiendo de si se desea mantener constante la eficiencia o si se desea aplicar cortes fijos en las variables de aislamiento. Un ejemplo de WP de aislamiento para electrones es el \texttt{FixedCutLoose} con una eficiencia de selección mayor a 90\% para electrones con $\ET>10\,\gev$ \cite{EGAM-2018-01}. En el caso de fotones también se definen distintos WPs que pueden no utilizar todas las variables de aislamiento, como el caso del WP \texttt{FixedCutTightCaloOnly} que solo utiliza un corte en la variable $\ETcone{40}$. Las definiciones de los distintos WPs de interés para esta tesis se listan en la Tabla \ref{tab:IDWPs}. Es común definir las siguientes variables de aislamiento basadas en los WPs:
+
+\begin{equation}
+  \begin{split}
+    \ETiso & = \ETcone{40} - 0.022\times\ET - 2.45\,\gev \\
+    \pTiso = \pTcone{20}/\ET<0.05
+  \end{split}
+\end{equation}
+ 
+Quedando por ejemplo el WP \texttt{FixedCutTight} como $\ETiso<0\,\gev$ y $\pTiso<0.05$.
 
 
 

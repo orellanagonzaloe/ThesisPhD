@@ -415,14 +415,14 @@ Algunos de los programas empleados para la generación de eventos y simulación 
 
 
 Luego de la generación de los eventos y las partículas presentes en el mismo, se simula la interacción de las partículas con el detector. 
-Para ello se emplean programas que simulan el paso de partículas a través de la materia, junto con una simulación completa del detector ATLAS, en donde se detalla precisamente los materiales empleados y las dimensiones de los mismos. Este paso se realiza mediante el programa \texttt{Geant 4} \cite{Geant4} para simulaciones completas del detector. A su vez se puede realizar una simulación de la interacción en el calorímetro de forma simplificada para ahorrar recursos y tiempo de cómputo, denominada \texttt{ATLFAST-II} \cite{Richter-Was:683751,Lukas_2012}. Una vez realizada la simulación del detector, los eventos son reconstruidos con los mismos algoritmos empleados para datos. Se realizaron tres campañas de simulaciones, \texttt{mc16a}, \texttt{mc16d} y \texttt{mc16e}, generadas con la distribución prevista de pile-up para los datos tomados en los años 2015+2016, 2017 y 2018 respectivamente.
+Para ello se emplean programas que simulan el paso de partículas a través de la materia, junto con una simulación completa del detector ATLAS, en donde se detalla precisamente los materiales empleados y las dimensiones de los mismos. Este paso se realiza mediante el programa \texttt{Geant4} \cite{Geant4} para simulaciones completas del detector. A su vez se puede realizar una simulación de la interacción en el calorímetro de forma simplificada para ahorrar recursos y tiempo de cómputo, denominada \texttt{ATLFAST-II} \cite{Richter-Was:683751,Lukas_2012}. Una vez realizada la simulación del detector, los eventos son reconstruidos con los mismos algoritmos empleados para datos. Se realizaron tres campañas de simulaciones, \texttt{mc16a}, \texttt{mc16d} y \texttt{mc16e}, generadas con la distribución prevista de pile-up para los datos tomados en los años 2015+2016, 2017 y 2018 respectivamente.
 
 
 
 
 
 
-\subsubsection{Correcciones a las simulaciones}
+\subsubsection{Correcciones a las simulaciones}\label{sec:mc_weights}
 
 Si bien las simulaciones logran reproducir muchos procesos con una alta eficacia, es necesario aplicarles a las mismas una serie de correcciones tanto a nivel generador, como en la instancia de reconstrucción de objetos. En general estas correcciones se aplican como pesos a los eventos, los cuales aumentan o disminuyen el impacto de dicho evento en el análisis.
 
