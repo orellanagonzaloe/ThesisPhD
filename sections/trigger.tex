@@ -44,14 +44,17 @@ se utiliza una ventana de $3\times7$ ($\Delta\eta\times\Delta\phi = 0.075\times0
 Si el candidato pasa la selección anterior se utiliza una región levemente mayor a la RoI para ejecutar los algoritmos de precisión. Estos algoritmos son los mismos empleados en la reconstrucción offline \cite{Lampl:1099735} para construir el clusters y técnicas multivariable \cite{PERF-2017-03} para hacer correcciones en su energía. La identificación online de fotones utiliza las mismas variables discriminatorias que en la reconstrucción offline, definiendo tres WPs: \texttt{Loose}, \texttt{Medium} (empleado solamente en el HLT), y \texttt{Tight}.
 Adicionalmente es posible incluir requisitos de aislamiento calorimétrico utilizando topo-clusters, de forma similar a la reconstrucción offline. Para ello se reconstruye la totalidad de los topo-clusters presentes en el evento para calcular la densidad de energía del evento en el HLT, necesaria para sustraer el ruido de la señal en el cono de aislamiento. El cono se construye con un radio de  $\Delta R < 0.2\:(0.4)$ alrededor del candidato para el punto de trabajo de aislamiento \texttt{Very-Loose} (\texttt{Tight}), denotado en el nombre del trigger como \texttt{icalovloose} (\texttt{icalotight}). Un fotón en el HLT se considera aislado si la fracción entre la energía transversa del topo-cluster y la del candidato es menor a
 % \commentyellow{if the ratio of the transverse energy in the topo-clusters to the transverse energy of the photon candidate is less than: no me queda claro donde entra el cono acá...} 
-10\% (3\% con un corrimiento de energía de 2.45 GeV similar al de la Tabla \ref{IDWPs}). La reconstrucción de los topo-clusters del evento se realiza una sola vez en el evento y es utilizado por todos los triggers, inclusive aquellos que no utilizan fotones. La Figura \ref{fig:hlt_alg} muestra un esquema del algoritmo empleado para la reconstrucción de fotones en le HTL.
+10\% (3\% con un corrimiento de energía de 2.45 GeV similar al de la Tabla \ref{IDWPs}). La reconstrucción de los topo-clusters del evento se realiza una sola vez en el evento y es utilizado por todos los triggers, inclusive aquellos que no utilizan fotones. 
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.45\textwidth]{images/trigger/hlt_alg.pdf}
-  \caption{Esquema del algoritmo empleado para la reconstrucción de fotones en el HLT. \tosolve{actualizar a run 2}}
-  \label{fig:hlt_alg}
-\end{figure}
+% No iria esta iamgen...
+% La Figura \ref{fig:hlt_alg} muestra un esquema del algoritmo empleado para la reconstrucción de fotones en le HTL.
+
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=0.45\textwidth]{images/trigger/hlt_alg.pdf}
+%   \caption{Esquema del algoritmo empleado para la reconstrucción de fotones en el HLT. \tosolve{actualizar a run 2}}
+%   \label{fig:hlt_alg}
+% \end{figure}
 
 
 \section{Nomenclatura y trigger primarios de fotones}

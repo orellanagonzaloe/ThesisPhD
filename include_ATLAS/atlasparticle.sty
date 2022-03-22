@@ -18,11 +18,12 @@
 \newcommand*{\tbar}{\ensuremath{\bar{t}}\xspace}
 \newcommand*{\ttbar}{\antibar{t}}
 % SIunits already defines \bbar - supersede the definition
-\@ifpackageloaded{SIunits}{%}
-  \renewcommand*{\bbar}{\ensuremath{\bar{b}}\xspace}
-}{%
-  \newcommand*{\bbar}{\ensuremath{\bar{b}}\xspace}
-}
+% \@ifpackageloaded{SIunits}{%}
+%   \renewcommand*{\bbar}{\ensuremath{\bar{b}}\xspace}
+% }{%
+%   \newcommand*{\bbar}{\ensuremath{\bar{b}}\xspace}
+% }
+\newcommand*{\bbar}{\ensuremath{\bar{b}}\xspace}
 \newcommand*{\bbbar}{\antibar{b}}
 \newcommand*{\cbar}{\ensuremath{\bar{c}}\xspace}
 \newcommand*{\ccbar}{\antibar{c}}
@@ -64,7 +65,7 @@
 % +--------------------------------------------------------------------+
 % |  Vector bosons                                                     |
 % +--------------------------------------------------------------------+
-\newcommand*{\Zzero}{\ensuremath{Z}\xspace}
+\newcommand*{\Zzero}{\ensuremath{Z^0}\xspace}
 \newcommand*{\Zboson}{\ensuremath{Z}\xspace}
 \newcommand*{\Wplus}{\ensuremath{W^{+}}\xspace}
 \newcommand*{\Wminus}{\ensuremath{W^{-}}\xspace}

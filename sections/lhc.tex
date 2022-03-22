@@ -49,7 +49,8 @@ El número total de eventos esperados para un dado proceso con una sección efic
 N=\sigma \int \mathcal{L} dt = \sigma \mathcal{L}_{\text{int}}
 \label{eq:lumi_xs}
 \end{equation}	
-%
+
+\noindent
 donde al factor integral se lo conoce como luminosidad integrada.
 
 El LHC comenzó a funcionar en 2009 en lo que se denominó \textit{Run 1}. Durante el 2011 se realizaron colisiones a una energía de de centro de masa de \magn{7}{TeV}, y durante el 2012 a \magn{8}{TeV}, logrando finalmente recolectar una luminosidad total integrada de \magn{28.2}{\ifb} \cite{DAPR-2011-01,DAPR-2013-01}, que era apta para análisis físicos \footnote{El termino `apto para física' hace referencia a los datos que pasaron una selección de calidad mínima para ser empleados en análisis físicos, y naturalmente son menores a los detectados por ATLAS y más aún a los proveídos por el LHC.}. En el 2013 finaliza la toma de datos y comienza el \textit{Long shutdown 1}, período que se utilizó para realizar distintas actualizaciones tanto al LHC como a los detectores, y preparándose así para la siguiente toma de datos. En el 2015 comenzó el \textit{Run 2} que operaba a una energía de de centro de masa de \magn{13}{TeV} y proveyendo una luminosidad total integrada de \magn{139}{\ifb} \cite{lumi_13tev}, para luego finalizar en el 2018 y dar lugar al \textit{Long shutdown 2}. Este último estaba previsto con una duración de dos años, pero dada la situación epidemiológica de COVID-19 el mismo se terminó extendiendo hasta 2022.
@@ -122,8 +123,9 @@ donde $E$ es la energía total de la partícula y $p_{z}$ es la componente en la
 
 \noindent
 estando completamente relacionada con el ángulo $\theta$. La razón detrás de esta transformación de coordenadas se debe a que
- \tosolve{consultar}
- % Lo vi en la tesis de fran y en wikipedia pero dice `loosely speaking' y no entiendo bien a qué se refiere
+ % \tosolve{consultar}
+ % Lo vi en la tesis de fran y en wikipedia pero dice `loosely speaking' y no entiendo bien a qué se refiere.
+ % Basicamente la cantidad de particulas que se produce esta mas concetrada en la region forward, al hacer esta variable dependiente de pt como que se distribuye de forma uniforme...
  la multiplicidad de partículas producidas es aproximadamente constante como función de $\eta$, y que 
  la diferencia de pseudorapidez entre dos partículas es invariante frente a transformaciones de Lorentz a lo largo de la dirección del haz. 
 
@@ -437,5 +439,5 @@ Las simulaciones hacen uso de distintos algoritmos para la reconstrucción gener
 \noindent
 donde el último factor engloba correciones opcionales, como por ejemplo a la carga de los electrones o de reconstrucción en la región forward. En general estos factor son muy cercanos a la unidad y se calculan en función de alguna de las variables del objeto. En la Sección \ref{sec:trig_sf} se describe un método para obtener los factores de escala asociados a la eficiencia del trigger de fotones.
 
-Correcciones adicionales pueden ser aplicadas a las simulaciones. Por ejemplo los cálculos a NLO pueden ser encapsulados en un factor denominado \textit{k-factor}, que es el cociente entre la sección eficaz de un dado proceso a NLO y a LO. Este factor multiplicativo puede ser aplicado a las simulaciones hechas a LO para incluir de alguna forma simple las correcciones a NLO \tosolve{consultar}. También  puede ocurrir que al generar un cierto proceso, solo sea necesario quedarse con aquellos eventos que pasen con una cierta selección, evitando almacenar el resto de los eventos que no lo hagan. Para ello se aplica un filtro a nivel generador, que en el caso de aplicarlo en necesaria la corrección de dichas simulaciones a partir de un factor multiplicativo que tenga en cuenta este filtrado.
+Correcciones adicionales pueden ser aplicadas a las simulaciones. Por ejemplo los cálculos a NLO pueden ser encapsulados en un factor denominado \textit{k-factor}, que es el cociente entre la sección eficaz de un dado proceso a NLO y a LO. Este factor multiplicativo puede ser aplicado a las simulaciones hechas a LO para incluir de alguna forma simple las correcciones a NLO. De forma equivalente se puede obtener un \textit{k-factor} para cálculos de órden superior a NLO. También  puede ocurrir que al generar un cierto proceso, solo sea necesario quedarse con aquellos eventos que pasen con una cierta selección, evitando almacenar el resto de los eventos que no lo hagan. Para ello se aplica un filtro a nivel generador, que en el caso de aplicarlo en necesaria la corrección de dichas simulaciones a partir de un factor multiplicativo que tenga en cuenta este filtrado.
 

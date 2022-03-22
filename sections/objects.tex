@@ -101,14 +101,17 @@ y luego se le adjuntan los topo-clusters satélites producidos generalmente por 
    \label{fig:superclusters_sat}
  \end{figure}
 
-Como el algoritmo se utiliza de forma independiente tanto para electrones como para fotones, puede ocurrir que un mismo supercluster se asocie tanto a un electrón como a un fotón simultáneamente. En ese caso se utilizan una serie de criterios de ambigüedad que permiten determinar si el candidato es un electrón o un fotón. En el caso que aún no pasen los criterios de ambigüedad, el candidato es guardado como electrón y fotón simultáneamente, pero marcados como ambiguos y es decisión de cada análisis incluirlos en el mismo. Los criterios de ambigüedad se muestran en la Figura \ref{fig:ambig}.
+Como el algoritmo se utiliza de forma independiente tanto para electrones como para fotones, puede ocurrir que un mismo supercluster se asocie tanto a un electrón como a un fotón simultáneamente. En ese caso se utilizan una serie de criterios de ambigüedad que permiten determinar si el candidato es un electrón o un fotón. En el caso que aún no pasen los criterios de ambigüedad, el candidato es guardado como electrón y fotón simultáneamente, pero marcados como ambiguos y es decisión de cada análisis incluirlos en el mismo. 
 
- \begin{figure}
-   \includegraphics[width=0.9\textwidth]{images/objects/ambig.pdf}
-   \caption{
-   Criterios de ambigüedad aplicados para discriminar superclusters reconstruidos como electrones y fotones simultáneamente. Un `hit más profundo' se define como un hit en la parte más cercana al haz a lo largo de la trayectoria de la traza, $E/p$ es la fracción entre la energía del supercluster y el momento medido de la traza asociada, $R_{\text{conv}}$ es la posición radial del vértice de conversión, y $R_{\text{fisrtHit}}$ es la menor posición radial de un hit en las trazas que forman un vértice de conversión  \cite{EGAM-2018-01}.}
-   \label{fig:ambig}
- \end{figure}
+% Se decidio omitir esta imagen...
+% Los criterios de ambigüedad se muestran en la Figura \ref{fig:ambig}.
+
+%  \begin{figure}
+%    \includegraphics[width=0.9\textwidth]{images/objects/ambig.pdf}
+%    \caption{
+%    Criterios de ambigüedad aplicados para discriminar superclusters reconstruidos como electrones y fotones simultáneamente. Un `hit más profundo' se define como un hit en la parte más cercana al haz a lo largo de la trayectoria de la traza, $E/p$ es la fracción entre la energía del supercluster y el momento medido de la traza asociada, $R_{\text{conv}}$ es la posición radial del vértice de conversión, y $R_{\text{fisrtHit}}$ es la menor posición radial de un hit en las trazas que forman un vértice de conversión  \cite{EGAM-2018-01}.}
+%    \label{fig:ambig}
+%  \end{figure}
 
 
 Finalmente se calibra la energía de los superclusters, las trazas son nuevamente ajustadas pero ahora utilizando los superclusters anteriores, y la energía es recalibrada teniendo en cuenta este nuevo último ajuste siguiendo el procedimiento descripto en la Referencia \cite{PERF-2017-03}.
@@ -216,7 +219,7 @@ La variable de aislamiento calorimétrico \cite{PERF-2017-01} (\ETcone{X}) se de
 % \commentgreen{Lo había pensado así: en el primer parrafo indico que hay 2 tipos de aislamiento, y después le dedico un párrafo no muy extenso a cada uno. Modifiqué un poco para que tenga algo más de continuidad}
 La segunda variable de aislamiento se obtiene en base a las trazas de los objetos reconstruidos (\pTcone{XX}), se define como la suma del momento transverso de todas las trazas contenidas dentro de un cono centrado en la traza del electrón o en la dirección del cluster del fotón convertido. La traza asociada al electrón o al fotón convertido son excluidas de esta suma, al igual que aquellas que no pasen una serie de criterios de calidad mínima. Como los electrones producidos en el decaimiento de partículas pesadas pueden estar en cercanía de otras partículas, la variable de aislamiento de trazas utiliza un cono de radio variable, cuyo tamaño se reduce a alto \pt. La variable se denomina \pTvarcone{XX} donde XX es el radio máximo utilizado, que para el caso de los electrones es $\Delta R_{\text{máx}} = 0.2$ (\pTvarcone{20}). En el caso de los fotones el radio del cono mide $\Delta R = 0.2$ (\pTcone{20}).
 
-% \tosolve{Poner en algún lado esto?: prompt electrons, isolated or produced in a busy environment, vs electrons from heavy-flavour decays or light hadrons misidentified as electrons}. 
+% \tosolve{Poner en algún lado esto?: prompt electrons, isolated or produced in a busy environment, vs electrons from heavy-flavour decays or light hadrons misidentified as electrons}. Creo que no hace falta 
 
 A partir de estas variables se definen distintos WPs de aislamiento de electrones dependiendo de si se desea mantener constante la eficiencia o si se desea aplicar cortes fijos en las variables de aislamiento. Un ejemplo de WP de aislamiento para electrones es el \texttt{FixedCutLoose} con una eficiencia de selección mayor a 90\% para electrones con $\ET>10\,\gev$ \cite{EGAM-2018-01}. En el caso de fotones también se definen distintos WPs que pueden no utilizar todas las variables de aislamiento, como el caso del WP \texttt{FixedCutTightCaloOnly} que solo utiliza un corte en la variable $\ETcone{40}$. Las definiciones de los distintos WPs de interés para esta tesis se listan en la Tabla \ref{tab:IDWPs}.
 
