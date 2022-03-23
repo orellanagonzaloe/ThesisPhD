@@ -26,8 +26,15 @@
 
         \fmf{ewkino,fore=red,lab=\color{red}\ninoone,lab.side=right,lab.di=0.1cm}{v2,v3}
 
-            \fmf{plain}{v3,h}
-            \fmflabel{$h$}{h}
+            % \fmf{dashes}{v3,h}
+            % \fmflabel{$h$}{h}
+
+            \fmf{phantom}{v3,phantomv3}
+            
+                \fmf{phantom}{phantomv3,h}
+                \fmflabel{$h$}{h}
+
+                \fmf{phantom}{phantomv3,phantomh}
 
             \fmf{ewkino,fore=red}{v3,LSP1}
             \fmflabel{\color{red}\gravino}{LSP1}
@@ -43,27 +50,39 @@
     \fmf{plain}{v4,q6}
     \fmflabel{$q$}{q6}
 
-    \fmf{ewkino,fore=red,lab=$\color{red}\chinoonepm$,lab.side=left,lab.di=0.1cm,tension=2}{v4,v5}
+    \fmf{ewkino,fore=red,lab=$\color{red}\ninotwo$,lab.side=left,lab.di=0.1cm,tension=2}{v4,v5}
     \fmfv{d.sh=circle,d.fi=30,d.si=5}{v5}
 
         \fmf{plain}{v5,q7}
-        \fmflabel{$q,\nu_l$}{q7}
+        \fmflabel{$q,l,l$}{q7}
 
         \fmf{plain}{v5,q8}
-        \fmflabel{$q,l$}{q8}
+        \fmflabel{$q,l,\nu_l$}{q8}
 
         \fmf{ewkino,fore=red,lab=\color{red}\ninoone,lab.side=left,lab.di=0.1cm}{v5,v6}
 
-            \fmf{boson}{v6,ph}
-            \fmflabel{$\gamma$}{ph}
+            % \fmf{boson}{v6,ph}
+            % \fmflabel{$\gamma$}{ph}
+
+            \fmf{phantom}{v6,phantomv6}
+            
+                \fmf{phantom}{phantomv6,ph}
+                \fmflabel{$\gamma$}{ph}
+
+                \fmf{phantom}{phantomv6,phantomph}
 
             \fmf{ewkino,fore=red}{v6,LSP2}
             \fmflabel{\color{red}\gravino}{LSP2}
         
 % ORDER OF FINAL PARTICLES: BOTTOM, RIGHT, TOP    
 \fmftop{,,q1,q2,q3,,}
-\fmfright{q8,ph,LSP2,LSP1,h,q4}
+\fmfright{q8,,ph,phantomph,LSP2,,LSP1,phantomh,h,,q4}
 \fmfbottom{,,q5,q6,q7,,}
+
+\fmffreeze
+\fmf{boson}{v6,ph}
+\fmffreeze
+\fmf{dashes}{v3,h}
 
 \end{fmfgraph*}
 \input{footer.tx}
