@@ -438,6 +438,8 @@ La incerteza sistemática se estima variando las ventanas de integración a $[\m
 
 Finalmente, el fondo para cada región (R) del análisis se estima definiendo una correspondiente región de control de electrones (CSE), definida de igual forma que R pero reemplazando los cortes sobre fotones por electrones. Se estima la contribución del fondo entonces como:
 
+% \tosolve{no me convence poner (\absEta) en los siguientes terminos}
+
 \begin{equation}
   N^{\text{R}}_{e\rightarrow\gamma} = \text{FF}_{e\to\gamma} \cdot N^{\text{R}}_{\mathrm{CSE}} 
   \label{eq:efake_cs}
@@ -451,20 +453,25 @@ En el caso de no observar eventos en alguna CSE, se hace una estimación conserv
 
 \section{Selección de eventos y objetos para el análisis}\label{sec:selection}
 
-El presente análisis hace uso de la totalidad de datos con una energía de centro de masa de $13$ TeV tomados con el detector ATLAS durante el Run 2 y que son aptos para física \tosolve{definir esto}, acumulando una luminosidad integrada de $139\ \ifb$. Los datos fueron seleccionados a partir del trigger \texttt{HLT\_g140\_loose}, que selecciona eventos con al menos un fotón con identificación \texttt{Loose} y con $\ET>140\,\gev$. Este trigger es completamente eficiente \cite{TRIG-2018-05}, superando el 99\% de eficiencia para $\ET>145\,\gev$, estable frente a pileup y sin dependencia con $\eta$.
+El presente análisis hace uso de la totalidad de datos con una energía de centro de masa de $13$ TeV tomados con el detector ATLAS durante el Run 2 y que son `aptos para física', acumulando una luminosidad integrada de $139\,\ifb$. Los datos fueron seleccionados a partir del trigger \texttt{HLT\_g140\_loose}, que selecciona eventos con al menos un fotón con identificación \texttt{Loose} y con $\ET>140\,\gev$. Este trigger es completamente eficiente \cite{TRIG-2018-05}, superando el 99\% de eficiencia para $\ET>145\,\gev$, estable frente a pileup y sin dependencia con $\eta$.
 
 Los datos y simulaciones de MC empleados para el análisis fueron preseleccionados con la derivación \texttt{SUSY1} descripta en la Sección \ref{sec:lhc_samples}, orientada a análisis con moderada actividad hadrónica y con la presencia de un fotón energético entre otras cosas.
 
-Los objetos de interés para esta Tesis son los fotones, jets y leptones (electrones y muones) a los que se les aplica diferentes requisitos offline. Inicialmente se les requiere una selección base (\textit{baseline}) siguiendo algunas de las recomendaciones que hace el grupo de SUSY de la colaboración ATLAS y que se describe a continuación. La misma se emplea para aplicar un requisito de solapamiento (\textit{overlap removal}) entre los distintos objetos del evento y posteriormente empleados para el cálculo de \met \tosolve{Ojo con esto al final no se usaba para met, no?}. Finalmente a los fotones, jets y leptones se les aplica una selección denominada \textit{signal}, siendo estos objetos los que definen las distintas regiones del análisis. \tosolve{mencionar a VgammaORTool}
+Los objetos de interés para esta Tesis son los fotones, jets y leptones (electrones y muones) a los que se les aplica diferentes requisitos offline. Inicialmente se les requiere una selección base (\textit{baseline}) 
+% siguiendo algunas de las recomendaciones que hace el grupo de SUSY de la colaboración ATLAS y
+% \tosolve{hernan sugiere sacarlo, pero despues justificarlos, no se si habria que sacarlo} 
+que se describe a continuación. La misma se emplea para aplicar un requisito de solapamiento (\textit{overlap removal}) entre los distintos objetos del evento y posteriormente empleados para el cálculo de \met \tosolve{Ojo con esto al final no se usaba para met, no?}. Finalmente a los fotones, jets y leptones se les aplica una selección denominada \textit{signal}, siendo estos objetos los que definen las distintas regiones del análisis. Adicionalmente a los fondos de MC se les aplica una selección a nivel generador para evitar un solapamiento o doble conteo entre muestras. Por ejemplo, a las muestras de \zph, \wph, \ttbarph y \phj se les solicita que tengan uno y solo un fotón a nivel generador, y en cambio a las \zphph y \wphph dos fotones. 
 
-\tosolve{como son cortos, capaz los siguientes items podrían ser subsubsection}
+% \tosolve{mencionar a VgammaORTool} Done
 
-\subsection{Fotones}
+% \tosolve{como son cortos, capaz los siguientes items podrían ser subsubsection} Yep
+
+\subsubsection{Fotones}
 
 Los fotones baseline deben pasar la selección de identificación \texttt{Tight}, tener $\ET>25\,\gev$, $|\eta|<2.37$ excluyendo la región del crack. Para los fotones signal se requiere adicionalmente tener $\ET>50\,\gev$, aunque para la selección de las regiones se pide adicionalmente que el fotón leading tenga $\ET>145\,\gev$ para garantizar la eficiencia del trigger. Adicionalmente se les aplica un requisito de aislamiento tanto calorimétrico como de traza, mediante el WP \texttt{FixedCutTight}.
 
 
-\subsection{Electrones}
+\subsubsection{Electrones}
 
 Los electrones baseline son requeridos tener $\pt>10\,\gev$, $|\eta|<2.47$ excluyendo la región crack y ser originados en el vértice primario. El requerimiento de identificación \texttt{Loose}
 % \tosolve{en realidad es LooseAndBLayerLLH} 
@@ -473,20 +480,20 @@ es aplicado \tosolve{definir o poner solo loose}. Los electrones signal son sele
 y el requisito de aislamiento \texttt{FCLoose}, o \texttt{FCHighPtCaloOnly} si tienen $\pt>200\,\gev$.
 
 
-\subsection{Muon}
+\subsubsection{Muon}
 
 Los muones baseline son seleccionados con la identificación \texttt{Medium}, tener $\pt>10\,\gev$, $|\eta|<2.7$ y ser originados del vértice primario. A los muones signal se les requiere adicionalmente tener $\pt>25\,\gev$ y el WP de aislamiento \texttt{FixedCutLoose}.
 % % \tosolve{en realidad es Loose\_VarRad pero no encuentro su definición y es muy probable que sea igual a FixedCutLoose} 
 
 
-\subsection{Jets}
+\subsubsection{Jets}
 
-Se emplean Jets \texttt{EMTopo} y la selección baseline se define como aquellos con $\pt>30\,\gev$ y $|\eta|<2.8$. Este último requisito no es empleado en el cálculo de \met. Selecciones basadas en las trazas son aplicadas para rechazar jets con $\pt<120\,\gev$ y $|\eta|<2.4$ que se originen de las interacciones de pileup. Jets signal son seleccionados con $\pt>30\,\gev$ y $|\eta|<2.5$. La identificación de $b$-jets es empleada en la definición de algunas regiones de control. Para ello se utiliza el algoritmo \texttt{MV2c10}, con una eficiencia de selección de los mismos del 77\%.
+Se emplean Jets \texttt{EMTopo} y la selección baseline se define como aquellos con $\pt>30\,\gev$ y $|\eta|<2.8$. Este último requisito no es empleado en el cálculo de \met. Selecciones basadas en las trazas son aplicadas para rechazar jets con $\pt<120\,\gev$ y $|\eta|<2.4$ que se originen de las interacciones de pileup \cite{ATL-PHYS-PUB-2014-001}. Jets signal son seleccionados con $\pt>30\,\gev$ y $|\eta|<2.5$. La identificación de $b$-jets es empleada en la definición de algunas regiones de control. Para ello se utiliza el algoritmo \texttt{MV2c10}, con una eficiencia de selección de los mismos del 77\%.
 
-\subsection{Overlap removal}
+\subsubsection{Overlap removal}
 
 Como se mencionó en capítulos anteriores, los algoritmos de reconstrucción pueden fallar en los criterios de ambigüedad entre objetos, decidiendo almacenar simultáneamente a ambos. Una forma de lidiar con esto es eliminando al objeto que comparta alguna región espacial del detector con otro, en lo que se denomina overlap removal \cite{Adams:1743654}. Esta eliminación se hace en diferentes pasos, y en cada uno hay un objeto eliminado en presencia de otro. Los objetos eliminados en un dado paso no influye en los sucesivos.
-El overlap removal sigue unas recomendaciones diseñadas específicamente para el tipo de análisis \cite{ATL-COM-PHYS-2016-1518}, y los diferentes pasos aplicados en el presente análisis se resumen a continuación: 
+El overlap removal está diseñado específicamente para el tipo de análisis \cite{ATL-COM-PHYS-2016-1518}, y los diferentes pasos aplicados en el presente análisis se resumen a continuación: 
 
 \begin{itemize}
   \item los muones CT que compartan traza con algún electrón de se eliminan
@@ -501,24 +508,39 @@ El overlap removal sigue unas recomendaciones diseñadas específicamente para e
 \end{itemize}
 
 
-\subsection{Energía transversa faltante}
+\subsubsection{Energía transversa faltante}
 
-El cálculo de \met se realiza de acuerdo a lo descripto en la Sección \ref{sec:met}. Los depósitos de energía en el calorímetro son asociados a los objetos de alto \pt en el siguiente orden: electrones, fotones, jets y muones. Las trazas que no fueron asociadas con ninguno de los objetos anteriores son incluidas en el término soft. Para el análisis una vez hecha la selección final de los objetos se hace una selección de eventos con $\met>50\,\gev$ \tosolve{chequear}.
+El cálculo de \met se realiza de acuerdo a lo descripto en la Sección \ref{sec:met}. Los depósitos de energía en el calorímetro son asociados a los objetos de alto \pt en el siguiente orden: electrones, fotones, jets y muones. Las trazas que no fueron asociadas con ninguno de los objetos anteriores son incluidas en el término soft. Para el análisis una vez hecha la selección final de los objetos se hace una selección de eventos con $\met>50\,\gev$.
+% \tosolve{chequear}. Yep, pero solo para MC, ni aclarar igual
 
 
 \section{Definición de las regiones del análisis}
 
-Una vez obtenidas las muestras de señal y una primera estimación de los fondos del SM, el objetivo del análisis es poder diseñar regiones de señal que permitan hacer una discriminación entre ambos. Este proceso se denomina optimización y fue descripto en la Sección \ref{sec:exp_sig}. El mismo consiste en obtener del espacio de parámetros, la combinación de requisitos (cortes) que maximice la significancia esperada (Ecuación \ref{Agregar}). La optimización se realiza en primer instancia conociendo a priori la cinemática del estado final del fondo y señal, y luego mediante un proceso iterativo para encontrar los valores de cortes más óptimos. Si bien el objetivo es maximizar la significancia esperada, se intenta no tener regiones muy dependientes del modelo. Con el objetivo de evitar problemas extremos de estadística o con el manejo de sistemáticos, se buscaron regiones que no tengan un número de eventos de fondo nulo, poniéndose un mínimo requerido de tres eventos. 
+Una vez obtenidas las muestras de señal y una primera estimación de los fondos del SM, el objetivo del análisis es poder diseñar regiones de señal que permitan hacer una discriminación entre ambos,
+% Este proceso se denomina optimización y fue 
+como se describe en la Sección \ref{sec:exp_sig}. Para ello se obtiene del espacio de parámetros, la combinación de requisitos o cortes que maximice la significancia esperada.
+ % (Ecuación \ref{Agregar}). 
+La optimización se realiza en primer instancia conociendo a priori la cinemática del estado final del fondo y señal, y luego mediante un proceso iterativo para encontrar los valores de cortes más óptimos. Si bien el objetivo es maximizar la significancia esperada, se intenta no tener regiones muy dependientes del modelo. Con el objetivo de evitar problemas extremos de estadística o con el manejo de sistemáticos, se buscaron regiones que no tengan un número de eventos de fondo nulo, poniéndose un mínimo requerido de tres eventos. 
 
-Una vez definidas las SRs, se puede proceder a la definición de las regiones de control y validación. Estas determinan un paso clave en el análisis para poder lograr un correcto modelado de los fondos del análisis. Las CRs se diseñaron para encontrar la normalización de los fondos principales del análisis mediante un ajuste de solo fondo a los datos. Las VRs en cambio fueron diseñadas cubriendo el espacio de parámetros entre las SRs y las CRs, con el objetivo de verificar que el modelado de los fondos es correcto. Como ambas hacen uso de los datos es indispensable que las mismas sean ortogonales a las SR para evitar un posible sesgo en los resultados finales.
+Una vez definidas las SRs, se puede proceder a la definición de las regiones de control y validación, que determinan un paso clave en el análisis para poder lograr un correcto modelado de los fondos. Las CRs se diseñaron para encontrar la normalización de los fondos principales del análisis mediante un ajuste de solo fondo a los datos. Las VRs en cambio fueron diseñadas cubriendo el espacio de parámetros entre las SRs y las CRs, con el objetivo de verificar que el modelado de los fondos y su extrapolación a las VRs es correcto. Como ambas hacen uso de los datos es indispensable que las mismas sean ortogonales a las SR para evitar un posible sesgo en los resultados finales y garantizar así las condiciones para el blinding.
 
 A continuación se detallan los pasos que se siguieron en la optimización hasta el diseño final de las SRs y sus respectivas CRs y VRs.
 
 \subsection{Selección de eventos de señal}\label{sec:sig_selection}
 
-El estado final del modelo bajo estudio consiste en al menos un fotón, presencia de jets y elevada \met, como describe el diagrama de la Figura \ref{fig:phb_feyn}. Para seleccionar eventos con al menos un fotón es necesario el trigger de fotones simple con menor umbral y sin prescale, el cual es el \texttt{HLT\_g140\_loose}, por lo que a todos los fotones leading de las regiones se les solicita tener $\pt>145\,\gev$, donde el trigger es completamente eficiente. Una selección inclusiva en el número de fotones contempla el caso en el que ambos \ninoone decaen mediante fotones. El decaimiento a \gravino produce grandes cantidades de \met, que se espera que sea al menos mayor a $200\,\gev$, un valor bastante más alto que los procesos usuales del SM. Los jets del estado final pueden provenir tanto de los decaimientos de los \chinoonepm o \ninotwo, como de la ISR o del decaimiento del higgs. Para el primero de los casos el número de jets va a depender de la diferencia de masas entre el gluino y el \ninoone. Si la diferencia es pequeña (escenario comprimido) el decaimiento del gluino va a ir en mayor proporción al \ninoone, por lo que la cadena será corta y el número de jets bajo. En cambio si la diferencia es grande, el gluino tiene otros gauginos intermedios para decaer hasta el \ninoone, por lo que lo hará más en múltiples etapas dejando un número de jets mayor. A su vez esta diferencia afecta al \pt del fotón y a \met. En el escenario comprimido, la masa del neutralino es relativamente alta y por ende el producto de sus decaimientos pueden ser más energéticos. A diferencia del caso con masas de neutralino bajas, donde se esperan fotones de menor \pt y menor \met. Estas diferencias entre los distintos puntos de señal motivó al diseño de tres regiones de señal, optimizadas para distintas puntos de señal. La SRH, optimizada para el escenario comprimida, caracterizada por fotones y \met energéticos, pero bajo número de jets. En contraposición, está la SRL optimizada para masas de \ninoone baja, y caracterizada por un mayor número de jets, pero con fotones y \met no tan energéticos. Finalmente la SRM fue optimizada para un región intermedia y con características de las anteriores SRs. La Figura \ref{fig:sr_design} \tosolve{agregar} muestra el espacio de puntos para los cuales fue diseñada cada SR. Finalmente, si bien se pueden generar leptones en el estado final, se aplica un veto a los mismos para evitar el solapamiento con otro análisis que realiza una búsqueda similar con fotones y leptones en el estado final \cite{diph_8TeV}.
+El estado final del modelo bajo estudio consiste en al menos un fotón, presencia de jets y elevada \met, como describe el diagrama de la Figura \ref{fig:phb_feyn}. 
+% Para seleccionar eventos con al menos un fotón es necesario
+Se seleccionan los eventos con al menos un fotón mediante 
+el trigger de fotones simple con menor umbral y sin prescale, el cual es el \texttt{HLT\_g140\_loose}, por lo que a todos los fotones leading de las regiones se les solicita tener $\pt>145\,\gev$, donde el trigger es completamente eficiente. Una selección inclusiva en el número de fotones contempla el caso en el que ambos \ninoone decaen mediante fotones. El decaimiento a \gravino produce grandes cantidades de \met, que se espera que sea al menos mayor a $200\,\gev$, un valor bastante más alto que los procesos usuales del SM. 
+Los jets del estado final pueden provenir de los decaimientos de los \chinoonepm o \ninotwo, de la ISR o del decaimiento del Higgs, mientras que \met y los fotones provienen del \ninoone.
+A grandes rasgos, la cinemática del evento depende de la diferencia de masa entre el \gluino y el \ninoone. 
+Cuando la diferencia supera los $\sim 1000\,\gev$, el \gluino decae en etapas sucesivas hasta llegar al \ninoone, generando jets adicionales. A su vez, los productos del decaimiento del \ninoone son poco energéticos. En cambio, cuando la diferencia de masa es menor a $\sim 300\,\gev$ (escenario comprimido), el \gluino decae en mayor proporción de forma directa al \ninoone. En ese caso se generan menos jets en el evento, y tanto el \pt del fotón como \met van a ser relativamente más energéticos.
+% Si la diferencia es pequeña , por lo que la cadena será corta y el número de jets bajo. En cambio si la diferencia es grande, el gluino tiene otros gauginos intermedios para decaer hasta el \ninoone, por lo que lo hará más en múltiples etapas dejando un número de jets mayor. A su vez esta diferencia afecta al \pt del fotón y a \met. En el escenario comprimido, la masa del neutralino es relativamente alta y por ende el producto de sus decaimientos pueden ser más energéticos. A diferencia del caso con masas de neutralino bajas, donde se esperan fotones de menor \pt y menor \met. 
+Estas diferencias entre los distintos puntos de señal motivó al diseño de tres regiones de señal, optimizadas para distintos puntos de señal. La SRH, optimizada para el escenario comprimido, caracterizada por fotones y \met energéticos, y bajo número de jets. En contraposición, está la SRL optimizada para masas de \ninoone baja, y caracterizada por un mayor número de jets, y con fotones y \met no tan energéticos. Finalmente la SRM fue optimizada para un región intermedia y con características conjuntas de las anteriores SRs. La Figura \ref{fig:sr_design} \tosolve{agregar} muestra el espacio de puntos para los cuales fue diseñada cada SR. Finalmente, si bien se pueden generar leptones en el estado final, se aplica un veto a los mismos para evitar el solapamiento con otro análisis que realiza una búsqueda similar con fotones y leptones en el estado final \cite{diph_8TeV}.
 
-Definidas las selecciones básicas caracterizadas por el estado final del modelo, se procede a agregar variables que hagan efectiva la discriminación de fondo y señal. Para reducir fondos donde \met es principalmente instrumental, se aplica una separación angular entre la misma y los objetos presentes en el evento. En la señal \met proviene principalmente de los \gravino, que se espera que no tenga ninguna correlación angular con los fotones y jets, a diferencia de \met instrumental que se espera que esté alineada con los mismos. En procesos donde \met proviene de la reconstrucción errónea de alguno de los objetos, es esperable que la misma esté alineada con ese objeto. Por ese motivo se aplica un corte inferior en las siguientes variables:
+% \tosolve{La aplicación y explicación de estos cortes no tendría que ir antes de la optimización ?} No lo se...
+
+Definidas las selecciones caracterizadas por el estado final del modelo, se procede a agregar variables que hagan efectiva la discriminación de fondo y señal. Para reducir fondos donde \met es principalmente instrumental, se aplica una separación angular entre la misma y los objetos presentes en el evento. En la señal \met proviene principalmente de los \gravino, que se espera que no tenga ninguna correlación angular con los fotones y jets, a diferencia de \met instrumental que se espera que esté alineada con los mismos. En procesos donde \met proviene de la reconstrucción errónea de alguno de los objetos, es esperable que la misma esté alineada con ese objeto. Por ese motivo se aplica un corte inferior en las siguientes variables:
 
 \begin{equation}
   \begin{split}
@@ -526,26 +548,29 @@ Definidas las selecciones básicas caracterizadas por el estado final del modelo
   \dphijetmet & = \text{min}(\phi^{\text{leading}\: \text{jet}} - \phi^{\text{miss}}, \phi^{\text{sub-leading}\: \text{jet}} - \phi^{\text{miss}}) \\
   \end{split}
 \end{equation}
-% 
+
+\noindent
 donde las diferencias se definen de tal forma de que resulten siempre entre $0$ y $\pi$.
 
-Otra variable que se encontró de gran utilidad para la discriminación de fondo es $\HT$, la cual se define como:
+% Otra variable que se encontró de gran utilidad para la discriminación de fondo es $\HT$, la cual se define como:
+Para una mejor discriminación entre señal y fondo se emplea la variable $\HT$, definida como:
 
 \begin{equation}
   \HT = \ptph + \sum_{i \in \text{jets}} p_{\text{T}}^{(i)}
 \end{equation}
 
-Para a señal de SUSY que tiene un fotón energético con presencia de varios jets que también pueden ser energéticos, se pueden esperar valores de \HT superiores a $1500\,\gev$.
+Para una señal de SUSY con un fotón energético y elevada actividad hadrónica, se pueden esperar valores de \HT superiores a $1500\,\gev$.
 
-Finalmente, se empleó una variable realizaba una reducción de fondo adicional:
+Finalmente, para realizar una reducción de fondo adicional, se emplea la variable:
 
 \begin{equation}
   R_{\text{T}}^{N} = \frac{\sum_{i=1}^{N} p_{\text{T}}^{(\text{jet}_i)}}{\sum_{i \in \text{jets}} p_{\text{T}}^{(i)}}
 \end{equation}
 
-donde $1\le N \le N_{\text{jets}}$, que representa la fracción de \pt de los primeros $N$ jets con respecto a la totalidad de jets. Para el presente análisis se encontró que la variable \rtf daba los valores más óptimos de significancia. Las señales de SUSY se espera que contengan eventos con múltiples jets energéticos y por ende valores bajos de \rtf, a diferencia de los procesos del SM con baja actividad hadrónica y de baja energía, con valores de \rtf cercanos a la unidad. Cabe destacar que esta variable sólo es posible usarla en regiones que soliciten al menos cuatro jets.
+\noindent
+donde $1\le N \le N_{\text{jets}}$, que representa la fracción de \pt de los primeros $N$ jets con respecto a la totalidad de jets. Para el presente análisis se encontró que la variable \rtf daba los valores más óptimos de significancia. Las señales de SUSY se espera que contengan eventos con múltiples jets energéticos y por ende valores bajos de \rtf, a diferencia de los procesos del SM con baja actividad hadrónica y de baja energía, con valores de \rtf cercanos a la unidad. Cabe destacar que esta variable sólo es posible definirla en regiones que soliciten al menos cuatro jets.
 
-\tosolve{mencionar lo que paso con el analisis phb? que se pensaba que los bjets del higgs podian llegar a servir para una nueva SR pero la imposibildiad de reconstruirlos correctamente no presentaba ninguna ventaja con estas SR, que en definitiva ya eran sensibles al analisis}
+% \tosolve{mencionar lo que paso con el analisis phb? que se pensaba que los bjets del higgs podian llegar a servir para una nueva SR pero la imposibildiad de reconstruirlos correctamente no presentaba ninguna ventaja con estas SR, que en definitiva ya eran sensibles al analisis} Nope
 
 La definición formal de las regiones de señales se muestra en la Tabla \ref{tab:sr_def}.
 
@@ -578,20 +603,22 @@ La definición formal de las regiones de señales se muestra en la Tabla \ref{ta
 
 \subsection{Regiones de control y validación}\label{sec:cr_vr_sel}
 
-En el presente análisis se consideraron que los procesos \phj, \wph y \ttbarph eran los de mayor impacto por lo que se diseñaron regiones de control dedicadas a los mismos, denominadas CRQ, CRW y CRT respectivamente. Todas las CRs requieren al menos un fotón con $\pt>145\,\gev$ y luego un conjunto de cortes que no solo generen una buena estadística del fondo a modelar, sino también garanticen la ortogonalidad con las SRs. El corte en \HT en general es reducido con respecto a las SRs para aumentar así la estadística de los fondos, y por la misma razón el corte en \rtf se omite en todas ellas. Cabe destacar que las tres regiones de control fueron empleadas para todas las regiones de señal, a diferencia de otros análisis donde hacen uso de CRs dedicadas además para cada SR.
+En el presente análisis los procesos de mayor impacto son \phj, \wph y \ttbarph, para los cuales se diseñan regiones de control dedicadas a los mismos, denominadas CRQ, CRW y CRT respectivamente. Todas las CRs requieren al menos un fotón con $\pt>145\,\gev$ y luego un conjunto de cortes que no solo generen una buena estadística del fondo a modelar, sino también garanticen la ortogonalidad con las SRs. El corte en \HT en general es reducido con respecto a las SRs para aumentar así la estadística de los fondos, y por la misma razón el corte en \rtf se omite en todas ellas. 
+Si bien algunos análisis definen regiones de control dedicadas a diferentes procesos para cada región de señal, en el análisis actual se emplean las mismas CRs para todas las SRs.
+% Cabe destacar que las tres regiones de control fueron empleadas para todas las regiones de señal, a diferencia de otros análisis donde hacen uso de CRs dedicadas además para cada SR.
 
-La producción de pares de top, en su decaimiento leptónico, genera un estado final con dos $b$-jets, dos leptones y \met. La CRT dedicada a este proceso requiere entonces la presencia de al menos dos $b$-jets y un leptón, garantizando así la ortogonalidad con las SRs. Para evitar contaminación de señal se pone un corte superior en \met, ya que la misma en este proceso se espera que no sea tan alta como en la señal de SUSY. 
+La producción de pares de top, en su decaimiento leptónico, genera un estado final con dos $b$-jets, dos leptones y \met. La CRT dedicada a este proceso requiere entonces la presencia de al menos dos $b$-jets y un leptón, garantizando así la ortogonalidad con las SRs. Para evitar contaminación de señal se emplea un corte superior en \met, ya que para este proceso se espera que no sea tan alta como en la señal de SUSY. 
 
 La CRW dedicada a \wph se diseña de forma similar a la CRT, pero aplicando un veto en los $b$-jets para evitar una contaminación del fondo de \ttbarph.
 
-En los procesos como \phj, donde \met es principalmente instrumental, se espera que el vector \met esté alineado con alguno de los jets. La CRQ aplica un corte superior en \dphijetmet para incrementar la abundancia de este fondo, garantizando también la ortogonalidad con las SRs. Si bien \met es baja para este proceso, se aplica un corte inferior en la misma ya que hay suficiente estadística y para no estar muy alejada de las SRs.
+En los procesos como \phj, donde \met es principalmente instrumental, se espera que el vector \met esté alineado con alguno de los jets. La CRQ aplica un corte superior en \dphijetmet para incrementar la abundancia de este fondo, garantizando también la ortogonalidad con las SRs. Si bien \met es baja para este proceso, como hay suficiente estadística, se aplica un corte inferior en la misma para tener mayor semejanza con las SRs.
 
 En la Tabla \ref{tab:cr_def} se muestra la definición completa de las tres regiones de control. \tosolve{mostrar signal contamination?}.
 
 
 \begin{table}[ht!]
   \centering
-  \caption{Definición de las regiones de control de control CRQ, CRW y CRT, dedicadas a los fondos \phj, \wph y \ttbarph respectivamente. En color están los cortes que garantizan la ortogonalidad con las SRs.}
+  \caption{Definición de las regiones de control de control CRQ, CRW y CRT, dedicadas a los fondos \phj, \wph y \ttbarph respectivamente. En color los cortes que garantizan la ortogonalidad con las SRs.}
   \begin{tabular}{l|r|r|r}
     \hline
     \hline
@@ -615,14 +642,14 @@ En la Tabla \ref{tab:cr_def} se muestra la definición completa de las tres regi
 
 
 
-A continuación se definen las VRs, las cuales fueron diseñadas para verificar el correcto modelado de los fondos. Las mismas se encuentran en una región intermedia entre las CRs y las SRs, siempre siendo ortogonales a estas últimas. Se diseñaron un conjunto de VRs orientadas al modelado de los fondos de \wph y \ttbarph, otras para el de \phj y una dedicada al fondo de electrones erróneamente reconstruidos como fotones. Nuevamente se requiere en todas ellas al menos un fotón con $\pt>145\,\gev$.
+A continuación se definen las VRs, las cuales fueron diseñadas para verificar el correcto modelado de los fondos y su extrapolación a las SRs. Las mismas se encuentran en una región intermedia entre las CRs y las SRs, siempre siendo ortogonales a estas últimas. Se diseñaron un conjunto de VRs orientadas al modelado de los fondos de \wph y \ttbarph, otras para el de \phj y una dedicada al fondo de electrones erróneamente reconstruidos como fotones. Nuevamente se requiere en todas ellas al menos un fotón con $\pt>145\,\gev$.
 
-Se definieron cinco VRs orientadas al fondo de \phj. Estas regiones recuperan el corte en \dphijetmet de las SRs, pero agregan un corte superior en \met de $200\,\gev$, siendo así ortogonales a ellas. Entre ellas se encuentran las VRM1L y VRM1H, orientadas a validar las regiones SRL y SRH respectivamente, emulando sus cortes en \pt del fotón y \met. A su vez la VRM1L incluye un corte similar en \rtf para validar la aplicación del mismo en las SRs. Ambas tienen un corte inferior en \met de $100\,\gev$, y se desprenden de ambas regiones de validación equivalente pero con un corte inferior en \met de $150\,\gev$, denominadas VRM2L y VRM2H. Finalmente se encuentra la VRQ, que es un compromiso entre las regiones anteriores, solicitando una baja cantidad de jets y a su vez bajo \pt de fotones. La definición completa de las VRs dedicadas al fondo de \phj se muestra en la Tabla \ref{tab:vrm_def}.
+Se definieron cinco VRs orientadas al fondo de \phj. Estas regiones recuperan el corte en \dphijetmet de las SRs, pero agregan un corte superior en \met de $200\,\gev$, siendo así ortogonales a ellas. Entre ellas se encuentran las VRM1L y VRM1H, orientadas a validar las regiones SRL y SRH respectivamente, emulando sus cortes en \pt del fotón y \met. A su vez la VRM1L incluye un corte similar en \rtf para validar la aplicación del mismo en las SRs. Ambas tienen un corte inferior en \met de $100\,\gev$, y se desprenden de ambas regiones de validación equivalente pero con un corte inferior en \met de $150\,\gev$, denominadas VRM2L y VRM2H. Finalmente se encuentra la VRQ, que es un compromiso entre las regiones anteriores, solicitando un reducido número de jets y a su vez el mínimo \pt para fotones. La definición completa de las VRs dedicadas al fondo de \phj se muestra en la Tabla \ref{tab:vrm_def}.
 
 
 \begin{table}[ht!]
   \centering
-  \caption{Definición de las regiones de validación VRQ, VRM1L, VRM2L, VRM1H y VRM2H, empleadas para la validación del fondo de \phj. En color están los cortes que garantizan la ortogonalidad con las SRs.}
+  \caption{Definición de las regiones de validación VRQ, VRM1L, VRM2L, VRM1H y VRM2H, empleadas para la validación del fondo de \phj. En color los cortes que garantizan la ortogonalidad con las SRs.}
   %% \resizebox{\textwidth}{!}{
     \begin{tabular}{l|r|r|r|r|r}
     \hline
@@ -672,7 +699,7 @@ Para los fondos \wph y \ttbarph se definieron cuatro regiones de validación, po
 \end{table}
 
 
-Finalmente se diseñó la región de validación para el fondo de electrones erróneamente reconstruidos como fotones. La misma fue diseñada sin el veto de leptones y requiriendo al menos un $b$-jet. Como es un fondo donde el fotón es `falso' se espera que su energía no esté del todo bien reconstruida y esto genere \met instrumental. En ese caso \met y el fotón deberían estar alineados y por eso se pide un corte superior en \dphigammet, garantizando a su vez la ortogonalidad con las SRs. La definición de la misma se puede observar en la Tabla \ref{tab:vre_def}.
+Finalmente se encuentra la región de validación para el fondo de electrones erróneamente reconstruidos como fotones. La misma se diseña sin el veto de leptones y requiriendo al menos un $b$-jet. Como es un fondo donde el fotón es `falso' se espera que su energía no esté correctamente reconstruida y esto genere \met instrumental. En ese caso \met y el fotón deberían estar alineados, por lo que se aplica un corte superior en \dphigammet, garantizando a su vez la ortogonalidad con las SRs. La definición de la misma se puede observar en la Tabla \ref{tab:vre_def}.
 
 
 \begin{table}[ht!]
@@ -703,28 +730,33 @@ Finalmente se diseñó la región de validación para el fondo de electrones err
 
 \section{Incertezas sistemáticas}
 
-Un factor clave en el análisis es la estimación de las incertezas sistemáticas involucradas en el análisis, las cuales afectan tanto la estimación de los fondos como de la señal en las distintas regiones del análisis. Las mismas son incluidas como parámetros nuisance en los distintos ajustes realizados. Existen dos tipos de incertidumbres sistemáticas, las experimentales y las teóricas, y se describen a continuación.
+Un factor clave en el análisis es la estimación de las incertezas sistemáticas involucradas, las cuales afectan tanto la estimación de los fondos como de la señal en las distintas regiones del análisis. Las mismas son incluidas como parámetros nuisance en los distintos ajustes realizados. Existen dos tipos de incertidumbres sistemáticas, las experimentales y las teóricas, y se describen a continuación.
 
 
 \subsection{Incertezas sistemáticas experimentales}
 
-Las incertezas experimentales están asociadas a la estimación de los fondos, ya sea por incertidumbres provenientes del detector en las simulaciones como en los métodos de estimación de fondos basados en datos.
+Las incertezas experimentales están asociadas a la estimación de los fondos, ya sea por incertidumbres provenientes de la simulación del detector y la reconstrucción de objetos, como en los métodos de estimación de fondos basados en datos.
 
 
 \subsubsection{Incerteza en la luminosidad}
 
-La luminosidad del LHC en el Run 2 se midió utilizando el detector de Cherenkov LUCID2 \cite{lucid2} durante tomas de datos especiales de baja luminosidad del LHC, usando el método van der Meer \cite{vandermeer1,vandermeer2}. La misma es empleada en general para la medida de secciones eficaces, aunque en este análisis cumple un rol fundamental en la normalización de las simulaciones de MC a las condiciones del LHC del Run 2. La incertidumbre en la luminosidad total del Run 2 fue de $1.7$\% \cite{ATLAS-CONF-2019-021}.
+La luminosidad del LHC durante el Run 2 se mide utilizando el detector de Cherenkov LUCID2 \cite{lucid2} y se calibra a partir tomas de datos especiales de baja luminosidad del LHC, usando el método van der Meer \cite{vandermeer1,vandermeer2}. La misma es empleada en general para la medida de secciones eficaces, aunque en este análisis cumple un rol fundamental en la normalización de las simulaciones de MC a las condiciones del LHC del Run 2. La incertidumbre en la luminosidad integrada combinada del Run 2 es de $1.7$\% \cite{ATLAS-CONF-2019-021}.
 
 
 \subsubsection{Incertezas asociadas a fotones, electrones y muones}
 
-Las incertezas en la identificación y aislamiento de fotones son estimadas a partir de las diferencias que hay en las shower shapes \tosolve{no se si esta definido} entre datos y MC, utilizando eventos de bosón $Z$ decayendo radiativamente \cite{ph_unc1}. La escala de energía es determinada utilizando eventos de $Z\to ee$ y $J/\Psi \to ee$, y sus correcciones fueron aplicadas como variaciones de una desviación estándar del valor nominal. La misma metodología se empleó para correcciones en la resolución.
-
-De manera similar se obtuvieron los sistemáticos asociados a electrones \cite{ATLAS-CONF-2014-032} y muones \cite{PERF-2015-10}, las cuales fueron determinadas a partir de eventos $Z\to l^+l^-$, $J\Psi\to l^+l^-$ y $W\to l^\pm \nu$. Las incertidumbres consideradas fueron en la identificación, reconstrucción, aislamiento y escala de energía de los electrones. Para los muones se consideraron las incertidumbres en la resolución y escala del momento, la dependencia del momento con la carga, reconstrucción y aislamiento.
+Las incertezas en la identificación y aislamiento de fotones son estimadas a partir de las diferencias que hay en las \textit{shower shapes}
+% \tosolve{no se si esta definido} Si
+entre datos y MC, utilizando eventos de bosón $Z$ decayendo radiativamente \cite{ph_unc1}. La escala de energía es determinada utilizando eventos de $Z\to ee$ y $J/\Psi \to ee$, y sus correcciones fueron aplicadas como variaciones de una desviación estándar del valor nominal. La misma metodología se empleó para correcciones en la resolución.
+De manera similar se obtienen los sistemáticos asociados a electrones \cite{ATLAS-CONF-2014-032} y muones \cite{PERF-2015-10}, los cuales se determinan a partir de eventos $Z\to l^+l^-$, $J/\Psi\to l^+l^-$ y $W\to l^\pm \nu$. Las incertidumbres consideradas fueron en la identificación, reconstrucción, aislamiento y escala de energía de los electrones. Para los muones se consideraron las incertidumbres en la resolución y escala del momento, la dependencia del momento con la carga, reconstrucción y aislamiento.
+% \tosolve{por que solo para la carga de los muones? supongo por como se mide la carga, algo del charge flip tambien, podria averiguar}
 
 \subsubsection{Incertezas asociadas a jets}
 
-Las incertezas asociadas a jets se estiman siguiendo la metodología descripta en las Referencias \cite{PERF-2011-03} y \cite{ATLAS-CONF-2015-037}. Las incertezas consideradas son varias y aportan una gran cantidad de parámetros nuisance, entre ellas están la incertidumbre asociadas a la resolución y escala de energía, las eficiencias de identificación de sabor del jet y la incertidumbre en el JVT. \tosolve{Me pareció que describirlas en detalle era demasiada información sin precisiones...}.
+Las incertezas asociadas a jets se estiman siguiendo la metodología descripta en las Referencias \cite{PERF-2011-03} y \cite{ATLAS-CONF-2015-037}, las cuales aportan una gran cantidad de parámetros nuisance. entre ellas están la incertidumbre asociadas a la resolución y escala de energía, las eficiencias de identificación de sabor del jet y la incertidumbre en el JVT. 
+
+\tosolve{Me pareció que describirlas en detalle era demasiada información sin precisiones...}.
+\tosolve{Bueno, deberia detallar un poco mas, tal vez inclusive en la de fotones y leptones}.
 
 \subsubsection{Incertezas asociadas a \met}
 
@@ -736,19 +768,19 @@ El factor de corrección de pile-up se obtiene para hacer coincidir el número p
 
 \subsubsection{Incertezas en los métodos de estimación de fondos basados en datos}
 
-Los métodos para la estimación de fondos de jets y electrones reconstruidos erróneamente como fotones, descriptos en las Secciones \ref{sec:jfakes} y \ref{sec:efakes}, tienen también incertezas asociadas. Una es la propia incerteza estadística propia de la muestra de control durante la estimación de estos fondos (Ecuación \ref{eq:efake_cs} \tosolve{Debería estar la de jfakes no?}). La otra es la incerteza propia de los FFs descripta en esas mismas Secciones y ambas son incluidas como parámetros nuisance.
+Los métodos para la estimación de fondos de jets y electrones reconstruidos erróneamente como fotones, descriptos en las Secciones \ref{sec:jfakes} y \ref{sec:efakes}, tienen también incertezas asociadas. Una es la propia incerteza estadística propia de la muestra de control durante la estimación de estos fondos (Ecuaciones \ref{eq:jfake_cs} y \ref{eq:efake_cs}). La otra es la incerteza propia de los FFs descripta en esas mismas Secciones y ambas son incluidas como parámetros nuisance.
 
 
 \subsection{Incertezas sistemáticas teóricas}
 
 Las incertezas teóricas afectan a todas las simulaciones de MC, y provienen principalmente tanto del generador empleado como de los distintos parámetros de la teoría utilizados en los cálculos de las propias simulaciones. 
 
-Para cada muestra de fondo en cada región del análisis se calculó una incertidumbre teórica total que incluía los efectos que más adelante se describen. Contrario a lo que se esperaría, las incertezas sistemáticas se ven afectadas por la estadística de la muestra, principalmente cuando la región tiene bajo número de eventos. Es por esto que para el cálculo de las incertidumbres teóricas se emplearon regiones equivalentes a la del análisis pero relajando varios de sus cortes para ganar una mayor estadística. Se empleó una región para sistemáticos común a todas las SRs del análisis, y una para cada grupo de VRs, las cuales se muestran en la Tabla \ref{tab:syst_reg}. Para las CRs se decidió utilizar exactamente las mismas ya que por definición abundan los eventos de un dado fondo. 
+Para cada muestra de fondo en cada región del análisis se calcula una incertidumbre teórica total que incluye los efectos que más adelante se describen. Contrario a lo que se espera, las incertezas sistemáticas se ven afectadas por la estadística de la muestra, principalmente cuando la región tiene bajo número de eventos. Es por esto que para el cálculo de las incertidumbres teóricas se emplean regiones equivalentes a la del análisis pero relajando varios de sus cortes para ganar una mayor estadística. Se emplea una región para sistemáticos común a todas las SRs del análisis, y una para cada grupo de VRs, las cuales se muestran en la Tabla \ref{tab:syst_reg}. Para las CRs se usan exactamente las mismas ya que por definición abundan los eventos de un dado fondo.
 
 \begin{table}[ht!]
   \caption{Regiones empleadas para el cálculo de los sistemáticos teóricos. Las mismas fueron obtenidas a partir de las regiones del análisis pero relajando algunos de sus cortes. Para las CRs se emplearon las mismas regiones del análisis por lo que no se muestran.}
   \centering
-   \resizebox{.9\textwidth}{!}{
+   % \resizebox{.9\textwidth}{!}{
     \begin{tabular}{l|r|r|r|r}
     \hline
     \hline
@@ -767,17 +799,19 @@ Para cada muestra de fondo en cada región del análisis se calculó una incerti
       \hline
       \hline
     \end{tabular}
-    }
+    % }
 \label{tab:syst_reg}
 \end{table}
 
-Todas las muestras de fondo contenían un conjunto de pesos internos que representan el efecto de la variación de distintos parámetros de la teoría. Las variaciones consideradas para cada muestra fueron las de la escala de renormalización ($\mu_R$) y factorización ($\mu_F$), la variación de los elementos de matriz (ME) de la PDF nominal, variación de la familia de PDFs empleada en la generación de los eventos, y las incertidumbres asociadas a la determinación y truncamiento de la constante de acoplamiento fuerte ($\alpha_S$). Para la muestra de \ttbarph solo estaban disponible las dos primeras variaciones, las cuales se esperaba que sean las predominantes. Tampoco se tuvieron en cuenta variaciones en la escala de matching (CKKW) \tosolve{mirar esto} ni en la escala de resumación (QSF). Estas variaciones requerían la generación de unas nuevas muestras pero se omitieron ya que se esperaban que sean despreciables. 
+Todas las muestras de fondo incluyen 
+% \tosolve{podria comentar que es 'incuir'}
+un conjunto de pesos internos que representan el efecto de la variación de distintos parámetros de la teoría. Las variaciones consideradas para cada muestra fueron las de la escala de renormalización ($\mu_R$) y factorización ($\mu_F$), la variación de los elementos de matriz (ME) de la PDF nominal, variación de la familia de PDFs empleada en la generación de los eventos, y las incertidumbres asociadas a la determinación y truncamiento de la constante de acoplamiento fuerte ($\alpha_S$). Para la muestra de \ttbarph se emplean solo las dos primeras variaciones, las cuales son las predominantes. Tampoco se tienen en cuenta variaciones en la escala de \textit{matching} (CKKW) \tosolve{mirar esto} ni en la escala de resumación (QSF), ya que las mismas son despreciables y requieren la generación de unas nuevas muestras adicionales. 
 
-El cálculo de la incertidumbre teórica total se calculó siguiendo las recomendaciones \texttt{PDF4LHC} \tosolve{no se si fue asi... en todo caso citar}. Para calcular las variaciones de los MEs de las PDFs se empleó \texttt{LHAPDF} \cite{lhapdf} con la PDF nominal, \texttt{NNPDF30\_nnlo\_as\_0118}, y 100 variaciones de sus MEs. A su vez se consideraron dos familias de PDFs alternativas, \texttt{CT14} y \texttt{MMHT2014nnlo68c1}. Para las variaciones de escala se consideraron siete posibles valores: $(\mu_R, \mu_F) = (0.5,0.5), (1,0.5), (0.5,1), (1,1), (2,1), (1,2), (2,2)$. Finalmente se consideraron dos variaciones asociadas a $\alpha_S$. Todas estas variaciones fueron combinadas en una sola incertidumbre total para cada muestra y para cada región, y cuyos valores porcentuales promedio se muestran en la Tabla \ref{tab:syst_values}.
+El cálculo de la incertidumbre teórica total se calculó siguiendo las recomendaciones \texttt{PDF4LHC} \tosolve{no se si fue asi... en todo caso citar}. Para calcular las variaciones de los MEs de las PDFs se empleó \texttt{LHAPDF} \cite{lhapdf} con la PDF nominal, \texttt{NNPDF30\_nnlo\_as\_0118}, y 100 variaciones de sus MEs. A su vez se consideraron dos familias de PDFs alternativas, \texttt{CT14} y \texttt{MMHT2014nnlo68c1}. Para las variaciones de escala se consideraron siete posibles valores: $(\mu_R, \mu_F) = (0.5,0.5), (1,0.5), (0.5,1), (1,1), (2,1), (1,2), (2,2)$. Finalmente se consideraron dos variaciones asociadas a $\alpha_S$. Todas estas variaciones fueron combinadas en una sola incertidumbre total para cada muestra y para cada región, y cuyos valores porcentuales promedio se muestran en la Tabla \ref{tab:syst_values}. Aquellos procesos donde en ciertas regiones tienen una estadística reducida, se consideran de poco impacto para dicha región, y se fija conservadoramente una incerteza del 100\%.
 
 \begin{table}[ht!]
   \centering
-  \caption{Valores porcentuales promedios de las incertidumbres teóricas de cada muestra de fondo en cada región. Los fondos con baja estadística no afectaban el análisis y sus incertidumbres fueron fijadas a 100\%.}
+  \caption{Valores porcentuales promedios de las incertidumbres teóricas de cada muestra de fondo en cada región. Los fondos con baja estadística no afectan los resultados en la región y sus incertidumbres se fijan conservadoramente a 100\%.}
   \resizebox{.9\textwidth}{!}{
   \begin{tabular}{  r | c | c | c | c | c | c | c }
     \hline
@@ -802,7 +836,7 @@ El cálculo de la incertidumbre teórica total se calculó siguiendo las recomen
 
 Finalmente, se calcularon las incertezas teóricas para las muestras de señal, empleadas al establecer límites al modelo. Las mismas se obtuvieron a partir del número de eventos en cada región, variando la estimación de la sección eficaz en una desviación estándar tanto para arriba como abajo.
 
-\tosolve{poner algun plot de las barras de sistematicos?}
+% \tosolve{poner algun plot de las barras de sistematicos?} nope
 
 
 
