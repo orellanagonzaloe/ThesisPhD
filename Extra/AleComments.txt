@@ -1,0 +1,69 @@
+intro
+
+prdeicioon postulado
+
+presentar primero el problema diferencia escala, snesibildiad masa higgs a la escala de nueva fisica, antes de presentar susy
+
+susu + higgs extendido y depsues mecionar parteniere
+
+sacar todavia
+
+
+teoria
+
+antiparticuoas: lo mismo ocurre para las antiparticulas
+
+quiralidad: sacar segunda oracion. fermiones nomas, bosones no. campos de quiralidad izquierda o derecha. suma campo derecho e izquerdo
+
+imagen: puede quedar quiralidad
+
+
+g_sm: u(1) simetria hipercargar. 
+
+su(2): spin 0, nooo
+ 
+
+quarks: combinaciones de estdos, no. leptones -> son
+
+mecanismo de higgs: pierde la invarianza electrodebil (no solo su2)
+
+masas a mano, contadiad infinitas: bosones de spin 1, no son bosones de gauge (no tiene la comp logntidinal), necesitas la ivarianza de gauge y la rupura espontanea, los propagadores explotan sino, agregar un grado de libertad para tener progpaadores sin omponenet longitudinal.
+
+masas nulas: decir explicitamnet, teroai con masas
+
+hhiggs fuente: sacar oracion
+
+romp esp de sim: simetria global, no es una simetria de gauge (ni siquiera es una simetria, ) mirar mejor esto, capaz omitir oracion
+
+una cosa es el mecanismo de higgs y otra es yukawa para la masa de leptones. por la simetria del sm estan permitidas las interacicon de yuk, que dan lugar a las masa de los frmioes
+
+sacar renormalizacion. qcd, running producto de la renormaliacion, ahi si se podria mencioanr
+
+
+qcd: lo de no abeliano es que puede auntointratuar, (sacar principalmente). el running es por la renomalizacion. El grupo de renormalizacion afecta a la consta...
+
+mirar si anti-kt genera conos
+
+limitaciones: sacar "en el caso del SM"
+
+
+
+susy: no mencionar la ecuacion 1.8
+
+"si bien los demas bosones..." sacar la primera parte de la oracion
+
+helicidad -> quiralidad
+
+vectorial -> escalar
+
+
+numeros en negrit es la representacion del grupo, y la barra es la anti represntcion
+
+footnote para superpotencial
+
+sacar corresponden con yukawa...
+
+f term de <F>
+
+
+alpha_a coupling de gauge
