@@ -459,13 +459,13 @@ Una vez ajustada cada distribución, la función se integra alrededor del pico d
 Cabe mencionar que al aplicar un corte en $\pt>145\,\gev$ se introduce un sesgo en la distribución de la masa invariante de los pares, el cual se considera despreciable dada su lejanía con el pico del $Z$. Dicho efecto se observa en la región de masas de \magn{300}{GeV}, para el cual se incluye una función Gaussiana adicional al fondo, centrada en esa zona.
 
 
-\begin{figure*}[ht!]
+\begin{figure}[ht!]
   \centering
   \includegraphics[width=0.45\textwidth]{images/analysis/egFF_fit_ee_eta_0_06.pdf}
   \includegraphics[width=0.45\textwidth]{images/analysis/egFF_fit_eg_eta_0_06.pdf}
   \caption{Distribución de la masa invariante para los pares $ee$ (izquierda) and $e\gamma$ (derecha) con $|\eta| \in [0-0.6]$, junto con las funciones ajustadas de señal (rojo) y fondo (verde). La región celeste representa la ventana de integración empleada para calcular los FFs. A alto \pt una Gaussiana adicional es incluida para tener en cuenta el sesgo al aplicar un corte en \pt, pero resulta despreciable su contribución en el número de eventos cerca del pico del $Z$.}
   \label{fig:efakes_fit}
-\end{figure*}
+\end{figure}
 
 
 La incerteza sistemática se estima variando las ventanas de integración a $[\mu - 2\sigma, \mu + 2\sigma]$ y $[\mu - 4\sigma, \mu + 4\sigma]$. Adicionalmente se calculan los FFs sin la sustracción del fondo, incluyendo esta variación como un sistemático que contempla el sesgo en la elección de la función de ajuste. Finalmente, como la energía del fotón `falso' es reconstruida con algoritmos para fotones, cuando en realidad deberían haber sido empleados los de electrones, y se considera esto como una incertidumbre sistemática. Para ellos se calculan nuevamente los FFs ahora modificando el valor de energía de los fotones en un factor 1.5\%. Dicho valor se obtiene de las diferencias que existen en el $\mu$ de las distribuciones con pares $ee$ y pares $e\gamma$ \cite{EXOT-2016-32}. Los valores obtenidos para los FFs junto con sus incertidumbres se pueden observar en la Tabla \ref{tab:efakes_ff}. Se puede ver como los mismos aumentan con $|\eta|$, relacionados con la cantidad de material que atraviesan y con la mayor fracción de reconstrucción de fotones convertidos con una sola traza.
@@ -601,7 +601,14 @@ A grandes rasgos, la cinemática del evento depende de la diferencia de masa ent
 Cuando la diferencia supera los $\sim 1000\,\gev$, el \gluino decae en etapas sucesivas hasta llegar al \ninoone, generando jets adicionales. A su vez, los productos del decaimiento del \ninoone son poco energéticos. En cambio, cuando la diferencia de masa es menor a $\sim 300\,\gev$ (escenario comprimido), el \gluino decae en mayor proporción de forma directa al \ninoone. En ese caso se generan menos jets en el evento, y tanto el \pt del fotón como \met van a ser relativamente más energéticos.
 % \solved{descripto}
 % Si la diferencia es pequeña , por lo que la cadena será corta y el número de jets bajo. En cambio si la diferencia es grande, el gluino tiene otros gauginos intermedios para decaer hasta el \ninoone, por lo que lo hará más en múltiples etapas dejando un número de jets mayor. A su vez esta diferencia afecta al \pt del fotón y a \met. En el escenario comprimido, la masa del neutralino es relativamente alta y por ende el producto de sus decaimientos pueden ser más energéticos. A diferencia del caso con masas de neutralino bajas, donde se esperan fotones de menor \pt y menor \met. 
-Estas diferencias entre los distintos puntos de señal motivó al diseño de tres regiones de señal, optimizadas para distintos puntos de señal. La SRH, optimizada para el escenario comprimido, caracterizada por fotones y \met energéticos, y bajo número de jets. En contraposición, está la SRL optimizada para masas de \ninoone baja, y caracterizada por un mayor número de jets, y con fotones y \met no tan energéticos. Finalmente la SRM fue optimizada para un región intermedia y con características conjuntas de las anteriores SRs. La Figura \ref{fig:sr_design} \tosolve{agregar} muestra el espacio de puntos para los cuales fue diseñada cada SR. Finalmente, si bien se pueden generar leptones en el estado final, se aplica un veto a los mismos para evitar el solapamiento con otro análisis que realiza una búsqueda similar con fotones y leptones en el estado final \cite{diph_8TeV}.
+Estas diferencias entre los distintos puntos de señal motivó al diseño de tres regiones de señal, optimizadas para distintos puntos de señal. La SRH, optimizada para el escenario comprimido, caracterizada por fotones y \met energéticos, y bajo número de jets. En contraposición, está la SRL optimizada para masas de \ninoone baja, y caracterizada por un mayor número de jets, y con fotones y \met no tan energéticos. Finalmente la SRM fue optimizada para un región intermedia y con características conjuntas de las anteriores SRs. La Figura \ref{fig:sr_design} muestra el espacio de puntos para los cuales fue diseñada cada SR. Finalmente, si bien se pueden generar leptones en el estado final, se aplica un veto a los mismos para evitar el solapamiento con otro análisis que realiza una búsqueda similar con fotones y leptones en el estado final \cite{diph_8TeV}.
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/analysis/sr_design.pdf}
+  \caption{Regiones en el espacio de masas del \gluino y \ninoone para los cuales se optimiza cada región de señal. La SRH está dedicada al escenario comprimido, la SRL para la región de baja masa del \ninoone, y la SRM como una región intermedia entre las dos anteriores.}
+  \label{fig:sr_design}
+\end{figure}
 
 % \solved{La aplicación y explicación de estos cortes no tendría que ir antes de la optimización ?} se referia a que la optimizacion se hace sobre las varaibles que no son fijas, en realidad ninguna esta fija, solo el numero de fotones. ademas ni se menciona la palabra optimizacion
 
