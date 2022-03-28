@@ -907,9 +907,11 @@ Todas las muestras de fondo se generan con un conjunto de pesos internos, que al
  % \tosolve{mirar esto} 
  ni en la escala de resumación (QSF), ya que las mismas son despreciables y requieren la generación de unas nuevas muestras adicionales. 
 
+\begin{sloppypar} % porque el muR muF me quedaba en el margen
 El cálculo de la incertidumbre teórica total se realiza siguiendo las recomendaciones \texttt{PDF4LHC} \cite{Butterworth:2015oua}.
 % \solved{no se si fue asi... en todo caso citar} deberia ser esto, que se yo...
 Para calcular las variaciones de los MEs de las PDFs se emplea \texttt{LHAPDF} \cite{lhapdf} con la PDF nominal, \texttt{NNPDF30\_nnlo\_as\_0118}, y 100 variaciones de sus MEs. A su vez se consideraron dos familias de PDFs alternativas, \texttt{CT14} y \texttt{MMHT2014nnlo68c1}. Para las variaciones de escala se consideraron siete posibles valores: $(\mu_R, \mu_F) = (0.5,0.5), (1,0.5), (0.5,1), (1,1), (2,1), (1,2), (2,2)$. Finalmente se consideraron dos variaciones asociadas a $\alpha_S$. Todas estas variaciones fueron combinadas en una sola incertidumbre total para cada muestra y para cada región, y cuyos valores porcentuales promedio se muestran en la Tabla \ref{tab:syst_values}. Aquellos procesos donde en ciertas regiones tienen una estadística reducida, se consideran de poco impacto para dicha región, y se fija conservadoramente una incerteza del 100\%.
+\end{sloppypar} 
 
 \begin{table}[ht!]
   \centering
