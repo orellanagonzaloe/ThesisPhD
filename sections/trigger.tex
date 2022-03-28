@@ -8,13 +8,13 @@ En este Capítulo se discute en particular la medida de la eficiencia de los tri
 
 La medida de la eficiencia de los triggers de fotones y el cálculo de su factores de escala fueron parte de una cualificación de la colaboración de ATLAS para ser miembro autor de la misma. Tales resultados son empleados por todos los análisis que usen los triggers de fotones primarios para la selección de eventos.
 
-% \tosolve{Justificar o motivar de una mejor forma el por qué explicamos el método del Zrad si los triggers que usamos en el análisis son medidos con Bootstrap} Done!
+% \solved{Justificar o motivar de una mejor forma el por qué explicamos el método del Zrad si los triggers que usamos en el análisis son medidos con Bootstrap} Done!
 
 
 \section{Reconstrucción de fotones en el trigger}
 
 La reconstrucción de fotones \cite{TRIG-2018-05} (y de forma similar la de electrones) en el trigger comienza en el L1 con la construcción de regiones de interés (RoIs) utilizando sólo la información del calorímetro. A partir de esas RoIs el HLT ejecuta algoritmos de reconstrucción rápida que utilizan adicionalmente información del detector interno dentro de la RoI, permitiendo una selección e identificación inicial de fotones junto con un temprano rechazo de fondo. En el caso de que el candidato cumpla los requisitos de selección rápidos se ejecuta a continuación los algoritmos de precisión, que utilizan información adicional en regiones del detector fuera de la RoI. Estos algoritmos son similares a los utilizados en la reconstrucción offline con la diferencia de que no reconstruyen superclusters de fotones. Utilizando sólo la información del calorímetro es suficiente para tener una alta eficiencia por lo que los mismos son reconstruidos bajo la hipótesis de que no son convertidos, no se reconstruyen trazas ni se aplican criterios de ambigüedad con los electrones, reduciendo notablemente el consumo de CPU. 
-% \tosolve{tampoco hace ambiguity con electrons, los electrones pueden pasar el trigger de fotones!!!}
+% \solved{tampoco hace ambiguity con electrons, los electrones pueden pasar el trigger de fotones!!!} lo puse
 A continuación se detallan los mecanismos realizados en ambas etapas del trigger.
 
 \subsubsection{Reconstrucción de fotones en el L1}
@@ -52,7 +52,7 @@ Adicionalmente es posible incluir requisitos de aislamiento calorimétrico utili
 % \begin{figure}
 %   \centering
 %   \includegraphics[width=0.45\textwidth]{images/trigger/hlt_alg.pdf}
-%   \caption{Esquema del algoritmo empleado para la reconstrucción de fotones en el HLT. \tosolve{actualizar a run 2}}
+%   \caption{Esquema del algoritmo empleado para la reconstrucción de fotones en el HLT. }
 %   \label{fig:hlt_alg}
 % \end{figure}
 
@@ -75,7 +75,7 @@ El nivel del trigger puede ser tanto L1 como HLT. La multiplicidad representa la
 \end{figure}
 
 Los principales triggers de fotones se detallan en la Tabla \ref{tab:prim_ph_trig}. El trigger primario de un fotón con menor umbral y sin prescale 
-% \tosolve{Lo voy a definir en el capitulo del LHC/Trigger} Done!
+% \solved{Lo voy a definir en el capitulo del LHC/Trigger} Done!
 está diseñado para búsquedas de física nueva más allá del SM con fotones de alto \ET, mientras que el de dos fotones se utiliza principalmente para seleccionar eventos con bosones de Higgs decayendo a fotones. Los triggers de dos fotones con umbrales bajos e identificación \texttt{Tight} son empleados para estudios más allá del SM con resonancias de baja masa ($\sim60\,\gev$).
 
 
@@ -159,7 +159,7 @@ La muestra de datos se obtiene a partir de eventos que pasaron los triggers prim
 
 Finalmente las eficiencias se obtienen contando el número de eventos que pasa esta selección, y que representa el denominador en la Ecuación \ref{eq:trig_eff}. Para el numerador se cuenta cuántos de esos eventos, el fotón presente en el mismo pasó la selección del trigger a evaluar. Las eficiencias fueron calculadas para los triggers listados en la Tabla \ref{tab:trigg_eff}, empleando los datos correspondientes a su año. Las mismas son calculadas en función de \ET para fotones fuera de la región crack, y de $\eta$ y $\langle\mu\rangle$ para fotones con \ET mayor a \magn{5}{GeV} del umbral del trigger. En el caso de que el trigger o una de sus componentes se haya configurado con un prescale, el mismo se emplea en modo rerun para la medida de su eficiencia. En las Figuras \ref{fig:photon_trig_eff_2015}, \ref{fig:photon_trig_eff_2016}, \ref{fig:photon_trig_eff_2017} y \ref{fig:photon_trig_eff_2018} se pueden observar algunos de dichos resultados en función de distintas variables. En general todas son cercanas a la unidad y constantes, salvo para $\langle\mu\rangle$ que se observa una pequeña dependencia algo esperable dado el incremento de colisiones por cruce de haces. Esto se ve en mayor medida en los triggers \texttt{HLT\_g20\_tight\_icalovloose\_L1EM15VHI} y \texttt{HLT\_g22\_tight\_L1EM15VHI} debido a que 
 el aislamiento en el L1 no contemplaba ninguna corrección por pile-up.
-% \tosolve{No recuerdo bien a qué se debía esta disminución en la eficiencia, algo del seed del L1?}. Done!
+% \solved{No recuerdo bien a qué se debía esta disminución en la eficiencia, algo del seed del L1?}. Done!
 En la Figura \ref{fig:bs_vs_zrad} se muestra una comparación de las eficiencias calculadas con el método Bootstrap \cite{tesis_joaco} y el método del bosón $Z$ radiativo para un mismo trigger, en la que se puede observar una pequeña mejora en la eficiencia utilizando este último método, lo que motiva a su uso para triggers de bajo \ET.
 
 \begin{table}
@@ -265,7 +265,7 @@ Las eficiencias del trigger para simulaciones se calculan de la misma forma que 
 En las Figuras \ref{fig:SFs_2015_2016} y \ref{fig:SFs_2017_2018} se observan algunos de los SFs calculados para triggers de distintos años con WPs de aislamiento \texttt{FixedCutTightCaloOnly}. 
 En todos los casos los SFs son muy cercanos a la unidad, lo que deja en evidencia el buen diseño y construcción del sistema de trigger y las simulaciones. Tanto las eficiencias como los factores de escala obtenidos en este trabajo son utilizados actualmente por todos los análisis de la colaboración ATLAS que utilicen una selección de datos con triggers de fotones del Run 2.
 
-% \tosolve{Tanto para eficiencias como para SF, debería mencionar la tabla con los triggers para los cuales se calcularon?} Done!
+% \solved{Tanto para eficiencias como para SF, debería mencionar la tabla con los triggers para los cuales se calcularon?} Done!
 
 \begin{figure}[!htpb]
   \centering
@@ -283,20 +283,3 @@ En todos los casos los SFs son muy cercanos a la unidad, lo que deja en evidenci
 \end{figure}
 
 
-% \tosolve{Algunas imágenes que me gustaría incluir...}
-
-
-% \begin{figure}
-  % \includegraphics[width=0.5\textwidth]{images_tmp/trigger/1.png} % egamma reco, me parece que no es necesario
-  % \includegraphics[width=0.5\textwidth]{images_tmp/trigger/2.png} % egamma reco, Done
-  % \includegraphics[width=0.5\textwidth]{images_tmp/trigger/3.png} % egamma reco
-  % \includegraphics[width=0.5\textwidth]{images_tmp/trigger/4.png} % trigger paper, Done, mejorado en realidad
-  % \includegraphics[width=0.5\textwidth]{images_tmp/trigger/5.png} % 1902.04655, Done
-% \end{figure}
-
-% \begin{figure}
-  % \includegraphics[width=0.5\textwidth]{images_tmp/trigger/6.png} % 1611.09661 Done
-  % \includegraphics[width=0.5\textwidth]{images_tmp/trigger/7.png} % 1611.09661 No creo que haga falta
-  % \includegraphics[width=0.5\textwidth]{images_tmp/trigger/8.png} % 1810.05087 Done
-  % \includegraphics[width=0.5\textwidth]{images_tmp/trigger/9.png} % 1810.05087 Done
-% \end{figure}

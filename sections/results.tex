@@ -7,7 +7,12 @@ En el siguiente Capítulo se muestran los resultados obtenidos para el análisis
 \section{Resultados del ajuste de solo fondo en las regiones de control y validación}
 
 
-En la Tabla \ref{tab:bkgonly_cr} se muestran los resultados del ajuste de solo fondo para el conjunto de datos del Run 2. En la misma están listados el aporte que realiza cada fondo antes de realizar el ajuste y después de hacerlo. A su vez se muestra el número de eventos observados en cada región, la pureza del fondo asociado a cada una de ellas y el factor de normalización. Si bien el objetivo del ajuste es corregir los defectos de las simulaciones principales y que se parezcan lo mayor posible a los datos, es esperable que las mismas sean a prior bastante acertadas y por ende los factores de normalización cercanos a la unidad. Si bien esto ocurre para el factor de la CRW ($\mu_W$), no se cumple para los otros dos. El factor de la CRT ($\mu_T$) dio superior a la unidad lo que significa una subestimación del fondo de \ttbarph. Esto se pudo entender más adelante, en el análisis de producción débil del Capítulo \ref{cap:analysis_EWK} como una falta de inclusión de fondos con el mismo estado final que \ttbarph. Al incluir posteriormente al fondo de producción de tops y higgs decayendo a fotones, se observó un valor más cercano a la unidad. Con respecto al factor de la CRQ $\mu_Q$, la distancia a la unidad es bastante más significativa, implicando que prácticamente el fondo estaba siendo doblemente sobre estimado. Si bien este efecto se observó en otros análisis \cite{Alonso:2689095} \tosolve{Era el de monophoton?}, se asumió que la muestra no estaba diseñada para regiones de tan elevado \met y debido a su bajo impacto en las SRs, esta desviación no se consideró crítica. 
+En la Tabla \ref{tab:bkgonly_cr} se muestran los resultados del ajuste de solo fondo para el conjunto de datos del Run 2. En la misma están listados el aporte que realiza cada fondo antes de realizar el ajuste y después de hacerlo. A su vez se muestra el número de eventos observados en cada región, la pureza del fondo asociado a cada una de ellas y el factor de normalización. 
+% Si bien el objetivo del ajuste es corregir los defectos de las simulaciones principales y que coincidan con alta precisión a lo esperado en datos, 
+% es esperable que las mismas sean a prior bastante acertadas y por ende los factores de normalización cercanos a la unidad. 
+Para la CRW el factor de normalización ($\mu_W$) es cercano a la unidad, lo que implica un correcto modelado del fondo previo a la normalización inclusive. El factor de la CRT ($\mu_T$) es superior a la unidad lo que significa una subestimación del fondo de \ttbarph. Esto se explica más adelante, en el análisis de producción débil del Capítulo \ref{cap:analysis_EWK}, como una falta de inclusión de fondos con el mismo estado final que \ttbarph. Al incluir posteriormente al fondo de producción de tops y Higgs decayendo a fotones, se observa un valor más cercano a la unidad. Con respecto al factor de la CRQ ($\mu_Q$), la distancia a la unidad es bastante más significativa, implicando que prácticamente el fondo está doblemente sobre estimado. Si bien este efecto se observa de forma similar en otros análisis \cite{Alonso:2689095} 
+% \tosolve{Era el de monophoton?}
+, se concluye que la muestra no está diseñada para regiones de tan elevado \met, y debido a su bajo impacto en las SRs, esta desviación no se considera crítica. 
 
 \begin{table}[ht!]
   \centering
@@ -16,85 +21,46 @@ En la Tabla \ref{tab:bkgonly_cr} se muestran los resultados del ajuste de solo f
   \label{tab:bkgonly_cr}
 \end{table}
 
-En las Figuras \ref{fig:crw_dist},\ref{fig:crt_dist} y \ref{fig:crq_dist} se pueden observar las distribuciones de distintas variables para cada región de control luego de hacer el ajuste de solo fondo \tosolve{No soy muy partidario de poner tantos plots, creo que con poner 2 o 3 variables por región estaría bien}. En las mismas se muestra el aporte de cada fondo, siendo predominante el que correspondía a cada CR, y la comparación con los datos observados. En la Figura \ref{fig:signal_contamination_CR} se observa la contaminación de señal para cada CR, donde se observa que la misma es prácticamente despreciable en todos los puntos de señal.
+En la Figura \ref{fig:cr_dist} se pueden observar las distribuciones de distintas variables para cada región de control luego de hacer el ajuste de solo fondo. En las mismas se muestra el aporte de cada fondo, siendo predominante el que correspondía a cada CR, y la comparación con los datos observados. En la Figura \ref{fig:signal_contamination_CR_bb} se observa la contaminación de señal para cada CR, donde se observa que la misma es prácticamente despreciable en todos los puntos de señal.
 
 
 
 \begin{figure}[ht!]
   \begin{center}
 
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRW_ph_pt0_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRW_met_et_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRW_meff_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_CRW_ph_pt0_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_CRW_jet_n_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_CRW_dphi_jetmet_afterFit.pdf}
 
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRW_jet_n_afterFit}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRW_jet_pt0_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRW_rt4_afterFit}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_CRT_ph_pt0_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_CRT_jet_n_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_CRT_dphi_jetmet_afterFit.pdf}
 
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRW_dphi_jetmet_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRW_dphi_gammet_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRW_dphi_gamjet_afterFit.pdf}
-    \caption{Distribuciones en la región de control CRW luego del ajuste de solo fondo. Las incertidumbre mostradas son sólo estadísticas.}
-    \label{fig:crw_dist}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_CRQ_ph_pt0_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_CRQ_jet_n_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_CRQ_met_et_afterFit.pdf}
+
+    \caption{Distribuciones de algunas variables significativas en las regiones de control CRW (arriba), CRT (medio) y CRQ (abajo) luego del ajuste de solo fondo. Las incertidumbre mostradas son sólo estadísticas.}
+    \label{fig:cr_dist}
   \end{center}
 \end{figure}
 
-\begin{figure}[ht!]
-  \begin{center}
 
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRT_ph_pt0_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRT_met_et_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRT_meff_afterFit.pdf}
-
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRT_jet_n_afterFit}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRT_jet_pt0_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRT_rt4_afterFit}
-
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRT_dphi_jetmet_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRT_dphi_gammet_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRT_dphi_gamjet_afterFit.pdf}
-
-    \caption{Distribuciones en la región de control CRT luego del ajuste de solo fondo. Las incertidumbre mostradas son sólo estadísticas.}
-    \label{fig:crt_dist}
-  \end{center}
-\end{figure}
-
-\begin{figure}[ht!]
-  \begin{center}
-
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRQ_ph_pt0_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRQ_met_et_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRQ_meff_afterFit.pdf}
-
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRQ_jet_n_afterFit}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRQ_jet_pt0_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRQ_rt4_afterFit}
-
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRQ_dphi_jetmet_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRQ_dphi_gammet_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_CRQ_dphi_gamjet_afterFit.pdf}
-
-    \caption{Distribuciones en la región de control CRQ luego del ajuste de solo fondo. Las incertidumbre mostradas son sólo estadísticas.}
-  \label{fig:crq_dist}
-  \end{center}
-\end{figure}
 
 \begin{figure}[ht!]
 
   \centering
-  \includegraphics[width=0.47\textwidth]{images_tmp/results/signal_contamination_bb_CRQ_139ifb.pdf}
-  \includegraphics[width=0.47\textwidth]{images_tmp/results/signal_contamination_bb_CRW_139ifb.pdf}
-  \includegraphics[width=0.47\textwidth]{images_tmp/results/signal_contamination_bb_CRT_139ifb.pdf}
+  \includegraphics[width=0.47\textwidth]{images/results/signal_contamination_bb_CRQ_139ifb.pdf}
+  \includegraphics[width=0.47\textwidth]{images/results/signal_contamination_bb_CRW_139ifb.pdf}
+  \includegraphics[width=0.47\textwidth]{images/results/signal_contamination_bb_CRT_139ifb.pdf}
   \caption{Contaminación porcentual para cada muestra de señal en las regiones de control CRQ (arriba izquierda), CRW (arriba derecha) y CRT (abajo). La misma se define como la fracción de eventos de señal con respecto al número de eventos de señal más fondo.}
   \label{fig:signal_contamination_CR_bb}
 
 \end{figure}
 
 
-En las Tablas \ref{tab:bkgonly_result_vrm}, \ref{tab:bkgonly_result_vrm} y \ref{tab:bkgonly_result_vre} se muestran los resultados de cada estimación de fondo en cada región de validación. En general se observa un buen acuerdo entre los fondos y los datos observados, dando a entender que la estimación realizada es del todo acertada. 
-% A su vez en las Figuras \ref{fig:dist_vrq_bkgonly}, \ref{fig:dist_vrm1l_bkgonly}, \ref{fig:dist_vrm2l_bkgonly}, \ref{fig:dist_vrm1h_bkgonly}, \ref{fig:dist_vrm2h_bkgonly}, \ref{fig:dist_vrl1_bkgonly}, \ref{fig:dist_vrl2_bkgonly}, \ref{fig:dist_vrl3_bkgonly}, \ref{fig:dist_vrl4_bkgonly} y \ref{fig:dist_vre_bkgonly} 
-A su vez en las Figuras \ref{fig:dist_vrq_bkgonly}-\ref{fig:dist_vre_bkgonly} 
-se observan las distribuciones de algunas variables del análisis para cada región de validación \tosolve{Ídem CRs, no pondría tantos plots}.
+En las Tablas \ref{tab:bkgonly_result_vrm}, \ref{tab:bkgonly_result_vrm} y \ref{tab:bkgonly_result_vre} se muestran los resultados de cada estimación de fondo en cada región de validación, y algunas de las distribuciones observadas en las regiones de validación se muestran en las Figuras \ref{fig:dist_vrqm_bkgonly} y \ref{fig:dist_vrle_bkgonly}. Se encuentra un buen acuerdo entre los fondos y los datos observados para todas las regiones de validación, dando a entender que la estimación realizada es precisa, y permitiendo continuar con el siguiente paso, donde se comparan los datos observados y las predicciones en las regiones de señal. 
+
 
 \begin{table}[ht!]
   \centering
@@ -124,201 +90,55 @@ se observan las distribuciones de algunas variables del análisis para cada regi
 \begin{figure}[ht!]
   \begin{center}
 
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRQ_ph_pt0_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRQ_met_et_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRQ_meff_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRQ_ph_pt0_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRQ_jet_n_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRQ_dphi_jetmet_afterFit.pdf}
 
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRQ_jet_n_afterFit}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRQ_jet_pt0_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRQ_rt4_afterFit}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRM1L_ph_pt0_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRM1L_rt4_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRM1L_dphi_jetmet_afterFit.pdf}
 
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRQ_dphi_jetmet_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRQ_dphi_gammet_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRQ_dphi_gamjet_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRM1H_ph_pt0_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRM1H_jet_n_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRM1H_dphi_jetmet_afterFit.pdf}
 
-    \caption{Distribuciones en la región de control VRQ luego del ajuste de solo fondo. Las incertidumbre mostradas son sólo estadísticas.}
-    \label{fig:dist_vrq_bkgonly}
+    
+    \caption{Distribuciones de algunas variables significativas en las regiones de validación VRQ (arriba), VRM1H (medio) y VRM1L (abajo) luego del ajuste de solo fondo. Las incertidumbre mostradas son sólo estadísticas.}
+    \label{fig:dist_vrqm_bkgonly}
   \end{center}
 \end{figure}
 
 \begin{figure}[ht!]
   \begin{center}
 
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM1L_ph_pt0_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM1L_met_et_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM1L_meff_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRL3_ph_pt0_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRL3_met_et_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRL3_dphi_jetmet_afterFit.pdf}
 
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM1L_jet_n_afterFit}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM1L_jet_pt0_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM1L_rt4_afterFit}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRL4_ph_pt0_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRL4_met_et_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRL4_jet_n_afterFit.pdf}
 
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM1L_dphi_jetmet_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM1L_dphi_gammet_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM1L_dphi_gamjet_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRE_ph_pt0_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRE_met_et_afterFit.pdf}
+    \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRE_jet_n_afterFit.pdf}
 
-    \caption{Distribuciones en la región de control VRM1L luego del ajuste de solo fondo. Las incertidumbre mostradas son sólo estadísticas.}
-    \label{fig:dist_vrm1l_bkgonly}
-  \end{center}
-\end{figure}
-
-\begin{figure}[ht!]
-  \begin{center}
-
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM2L_ph_pt0_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM2L_met_et_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM2L_meff_afterFit.pdf}
-
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM2L_jet_n_afterFit}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM2L_jet_pt0_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM2L_rt4_afterFit}
-
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM2L_dphi_jetmet_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM2L_dphi_gammet_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM2L_dphi_gamjet_afterFit.pdf}
-
-    \caption{Distribuciones en la región de control VRM2L luego del ajuste de solo fondo. Las incertidumbre mostradas son sólo estadísticas.}
-    \label{fig:dist_vrm2l_bkgonly}
-  \end{center}
-\end{figure}
-
-\begin{figure}[ht!]
- \begin{center}
-
-   \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM1H_ph_pt0_afterFit.pdf}
-   \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM1H_met_et_afterFit.pdf}
-   \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM1H_meff_afterFit.pdf}
-
-   \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM1H_jet_n_afterFit}
-   \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM1H_jet_pt0_afterFit.pdf}
-   \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM1H_rt4_afterFit}
-
-   \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM1H_dphi_jetmet_afterFit.pdf}
-   \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM1H_dphi_gammet_afterFit.pdf}
-   \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM1H_dphi_gamjet_afterFit.pdf}
-
-   \caption{Distribuciones en la región de control VRM1H luego del ajuste de solo fondo. Las incertidumbre mostradas son sólo estadísticas.}
-   \label{fig:dist_vrm1h_bkgonly}
- \end{center}
-\end{figure}
-
-\begin{figure}[ht!]
- \begin{center}
-
-   \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM2H_ph_pt0_afterFit.pdf}
-   \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM2H_met_et_afterFit.pdf}
-   \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM2H_meff_afterFit.pdf}
-
-   \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM2H_jet_n_afterFit}
-   \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM2H_jet_pt0_afterFit.pdf}
-   \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM2H_rt4_afterFit}
-
-   \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM2H_dphi_jetmet_afterFit.pdf}
-   \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM2H_dphi_gammet_afterFit.pdf}
-   \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRM2H_dphi_gamjet_afterFit.pdf}
-
-   \caption{Distribuciones en la región de control VRM2H luego del ajuste de solo fondo. Las incertidumbre mostradas son sólo estadísticas.}
-   \label{fig:dist_vrm2h_bkgonly}
- \end{center}
-\end{figure}
-
-
-\begin{figure}[ht!]
-  \begin{center}
-
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL1_ph_pt0_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL1_met_et_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL1_meff_afterFit.pdf}
-
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL1_jet_n_afterFit}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL1_jet_pt0_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL1_rt4_afterFit}
-
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL1_dphi_jetmet_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL1_dphi_gammet_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL1_dphi_gamjet_afterFit.pdf}
-
-    \caption{Distribuciones en la región de control VRL1 luego del ajuste de solo fondo. Las incertidumbre mostradas son sólo estadísticas.}
-    \label{fig:dist_vrl1_bkgonly}
-  \end{center}
-\end{figure}
-
-\begin{figure}[ht!]
-  \begin{center}
-
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL2_ph_pt0_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL2_met_et_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL2_meff_afterFit.pdf}
-
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL2_jet_n_afterFit}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL2_jet_pt0_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL2_rt4_afterFit}
-
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL2_dphi_jetmet_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL2_dphi_gammet_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL2_dphi_gamjet_afterFit.pdf}
-
-    \caption{Distribuciones en la región de control VRL2 luego del ajuste de solo fondo. Las incertidumbre mostradas son sólo estadísticas.}
-    \label{fig:dist_vrl2_bkgonly}
-  \end{center}
-\end{figure}
-
-\begin{figure}[ht!]
-  \begin{center}
-
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL3_ph_pt0_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL3_met_et_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL3_meff_afterFit.pdf}
-
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL3_jet_n_afterFit}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL3_jet_pt0_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL3_rt4_afterFit}
-
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL3_dphi_jetmet_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL3_dphi_gammet_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL3_dphi_gamjet_afterFit.pdf}
-
-    \caption{Distribuciones en la región de control VRL3 luego del ajuste de solo fondo. Las incertidumbre mostradas son sólo estadísticas.}
-    \label{fig:dist_vrl3_bkgonly}
-  \end{center}
-\end{figure}
-
-\begin{figure}[ht!]
-  \begin{center}
-
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL4_ph_pt0_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL4_met_et_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL4_meff_afterFit.pdf}
-
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL4_jet_n_afterFit}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL4_jet_pt0_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL4_rt4_afterFit}
-
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL4_dphi_jetmet_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL4_dphi_gammet_afterFit.pdf}
-    \includegraphics[width=0.32\textwidth]{images_tmp/results/fr2/can_VRL4_dphi_gamjet_afterFit.pdf}
-
-    \caption{Distribuciones en la región de control VRL4 luego del ajuste de solo fondo. Las incertidumbre mostradas son sólo estadísticas.}
-    \label{fig:dist_vrl4_bkgonly}
+    
+    \caption{Distribuciones de algunas variables significativas en las regiones de validación VRL3 (arriba), VRL4 (medio) y VRE (abajo) luego del ajuste de solo fondo. Las incertidumbre mostradas son sólo estadísticas.}
+    \label{fig:dist_vrle_bkgonly}
   \end{center}
 \end{figure}
 
 
-\begin{figure}[ht!]
-  \begin{center}
-    \includegraphics[width=0.47\textwidth]{images_tmp/results/fr2/can_VRE_met_et_afterFit.pdf}
-    \includegraphics[width=0.47\textwidth]{images_tmp/results/fr2/can_VRE_dphi_gammet_afterFit.pdf}
-    \caption{Distribuciones en la región de control VRE luego del ajuste de solo fondo. Las incertidumbre mostradas son sólo estadísticas.}
-    \label{fig:dist_vre_bkgonly}
-  \end{center}
-\end{figure}
+% \solved{Cosas que no estoy poniendo: signal contamination en las VRs, correlacion parametros del ajuste, tabla de incertezas sistematicas, pull de los NPs} solo tabla de sistematicos
 
-\tosolve{Cosas que no estoy poniendo: signal contamination en las VRs, correlacion parametros del ajuste, tabla de incertezas sistematicas, pull de los NPs}
+\tosolve{Falta la tabla de sistematicos}
 
 
 
-\section{Resultados en las regiones de señal luego del unblinding}
+\section{Resultados en las regiones de señal}
 
-Luego de la estimación de los fondos en las regiones de señal y su correcta validación en sus respectivas VRs, se procedió a la observación de los datos en dichas regiones. En la Tabla \ref{tab:fit_result_sr_unblinded} se muestra el número de eventos observados y la estimación de los fondos en cada región de señal. El número total de eventos observados para la SRL fue de $2$, para la SRM de $0$ y para la SRH de $5$. A su vez en la Figura \ref{fig:regions_pulls_unblinded} se observa el resumen de la estimación de fondo y datos observados para cada región del análisis. En la Figura \ref{fig:met_n-1_SRL_SRM_SRH_fr2} se observa la distribución de \met para las tres regiones de señal, pero omitiendo el corte en esa variable de las mismas (gráfico N-1). Allí se muestra las estimaciones de los fondos, la de los datos observados y las del punto de señal con (2000, 250).
+Luego de la estimación de los fondos en las regiones de señal y su correcta validación en sus respectivas VRs, se procedió a la observación de los datos en dichas regiones. En la Tabla \ref{tab:fit_result_sr_unblinded} se muestra el número de eventos observados y la estimación de los fondos en cada región de señal. El número total de eventos observados para la SRL fue de $2$, para la SRM de $0$ y para la SRH de $5$. A su vez en la Figura \ref{fig:regions_pulls_unblinded} se observa el resumen de la estimación de fondo y datos observados para cada región del análisis. En la Figura \ref{fig:met_n-1_SRL_SRM_SRH_fr2} se observa la distribución de \met para las tres regiones de señal, pero omitiendo el corte en esa variable de las mismas (gráfico N-1). Allí se muestra las estimaciones de los fondos, la de los datos observados y las del punto de señal con $(M_3, \mu) = (2000, -250)$.
 
 
 \begin{table}[ht!]
@@ -330,7 +150,7 @@ Luego de la estimación de los fondos en las regiones de señal y su correcta va
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics[width=0.89\textwidth]{images_tmp/results/fr2_unblind/regions_pull_significance.pdf}
+  \includegraphics[width=0.89\textwidth]{images/results/fr2_unblind/regions_pull_significance.pdf}
   \caption{Resumen de la estimación de fondo y datos observados para cada región de control, validación y señal empleadas en el análisis. Abajo se muestra la diferencia entre el fondo estimado y los datos observados, en unidades de desviación estándar con respecto a la incertidumbre total del fondo.}
   \label{fig:regions_pulls_unblinded}
 \end{figure}
@@ -338,9 +158,9 @@ Luego de la estimación de los fondos en las regiones de señal y su correcta va
 
 \begin{figure}[!hb]
    \begin{center}
-   \includegraphics[width=0.5\textwidth]{images_tmp/results/fr2_unblind/sigReg_SRL_fr2_met_et.pdf}%
-   \includegraphics[width=0.5\textwidth]{images_tmp/results/fr2_unblind/sigReg_SRM_fr2_met_et.pdf}
-   \includegraphics[width=0.5\textwidth]{images_tmp/results/fr2_unblind/sigReg_SRH_fr2_met_et.pdf}
+   \includegraphics[width=0.5\textwidth]{images/results/fr2_unblind/sigReg_SRL_fr2_met_et.pdf}%
+   \includegraphics[width=0.5\textwidth]{images/results/fr2_unblind/sigReg_SRM_fr2_met_et.pdf}
+   \includegraphics[width=0.5\textwidth]{images/results/fr2_unblind/sigReg_SRH_fr2_met_et.pdf}
    \caption{Distribución de \met en las regiones de señal SRL (izquierda), SRM (derecha) y SRH (abajo), en las cuales se omite el corte en esa misma variable.}
    \label{fig:met_n-1_SRL_SRM_SRH_fr2}
  \end{center}
@@ -348,9 +168,9 @@ Luego de la estimación de los fondos en las regiones de señal y su correcta va
 
 
 
-\section{Límites en independientes del modelo}
+\section{Límites independientes del modelo}
 
-Dado el buen acuerdo entre la estimación del fondo y los datos observados en las distintas SRs, se establecen límites superiores en el número de eventos de cualquier fenómeno más allá del SM con el estado final del análisis. Los límites se establecen para cada SR con un nivel de confianza del 95\% utilizando el profile likelihood ratio con las prescripciones para los $CL_s$ \cite{Read:2002hq}. Para ello se realiza un muestreo del número de eventos de señal para un cierto modelo, y se encuentra cuando el valor de $CL_s$ cae por debajo del 5\%, método descripto en el Capítulo \ref{cap:statistical}.
+Dado el buen acuerdo entre la estimación del fondo y los datos observados en las distintas SRs, se establecen límites superiores en el número de eventos de cualquier fenómeno más allá del SM con el estado final del análisis. Los límites se establecen para cada SR con un nivel de confianza del 95\% utilizando el profile likelihood ratio con las prescripciones para los $\text{CL}_{s}$ \cite{Read:2002hq}. Para ello se realiza un muestreo del número de eventos de señal para un cierto modelo, y se encuentra cuándo el valor de $\text{CL}_{s}$ cae por debajo del 5\%, método descripto en el Capítulo \ref{cap:statistical}. Los estadísticos de prueba se realizaron mediante la generación de \tosolve{XXX} toys.
 
 En la Tabla \ref{tab:model_indep_ul} se muestran los límites superiores para el número de eventos en cada región de señal. A su vez se muestra el límite en la sección eficaz, obtenido a partir de dividir el anterior límite por la luminosidad total integrada. 
 
@@ -377,7 +197,7 @@ En la Tabla \ref{tab:model_indep_ul} se muestran los límites superiores para el
 \section{Límites dependientes del modelo}
 
 
-A su vez se establecieron los límites dependientes del modelo, al considerar en el ajuste simultáneo tanto al fondo como a las muestras de señal, método descripto en el Capítulo \ref{cap:statistical}. Estos límites son con un 95\% de intervalo de confianza para cada punto de señal y para cada región de señal. Luego se combinó el resultado del límite de cada SR, eligiendo aquella que tenga mejor sensibilidad para cada punto de señal. En la Figura \ref{fig:limit_plot_combined} se muestran los límites observados y esperados combinando los resultados de las tres regiones de señal \tosolve{mencionar toys}. Estos límites excluyen a 95\% de intervalo de confianza la producción de gluinos con masas de hasta aproximadamente $2300\ \gev$, para la mayoría de las masas de neutralino estudiadas.
+Se establecieron los límites dependientes del modelo, al considerar en el ajuste simultáneo tanto al fondo como a las muestras de señal, método descripto en el Capítulo \ref{cap:statistical}. Estos límites con 95\% de intervalo de confianza para cada punto de señal y para cada región de señal. Luego se combinó el resultado del límite de cada SR, eligiendo aquella que tenga mejor sensibilidad para cada punto de señal. En la Figura \ref{fig:limit_plot_combined} se muestran los límites observados y esperados combinando los resultados de las tres regiones de señal. Los estadísticos de prueba se realizaron mediante la generación de \tosolve{XXX} toys. Estos límites excluyen a 95\% de intervalo de confianza la producción de gluinos con masas de hasta aproximadamente $2300\ \gev$, para la mayoría de las masas de neutralino estudiadas.
 
 
 \begin{figure}[ht!]
@@ -388,8 +208,9 @@ A su vez se establecieron los límites dependientes del modelo, al considerar en
   %\includegraphics[width=0.45\textwidth]{figures/fr2_unblind/phb_contour_plot_BestSR_wMatplotLib.pdf}
   % \includegraphics[width=0.45\textwidth]{figures/limits_plots/contour_plot_gHBestSR_wMatplotLib_full.pdf}
 
-  \includegraphics[width=0.9\textwidth]{images_tmp/results/limits_plots/contour_plot_gHBestSR_wMatplotLib_full.pdf}
-  \caption{Límites observados y esperados a 95\% de intervalo de confianza combinando los resultados de las tres regiones de señal en la que mejor sensibilidad otorgue para cada punto de señal, para una luminosidad integrada de $139\ \ifb$.}
+  \includegraphics[width=0.9\textwidth]{images/results/limits_plots/contour_plot_gHBestSR_wMatplotLib_full.pdf}
+
+  \caption{Límites observados (línea roja) y esperados (línea negra punteada) para una luminosidad integrada de $139\ \ifb$ a 95\% de intervalo de confianza, combinando los resultados de las tres regiones de señal en la que mejor sensibilidad esperada otorgue para cada punto de señal. Las incertezas en los límites se obtienen variando en $\pm1\sigma$ las incertezas experimentales y en la sección eficaz de los puntos de señal. Los números en gris muestran el $\text{CL}_{s}$ para cada punto de señal.}
   \label{fig:limit_plot_combined}
 
 \end{figure}

@@ -353,11 +353,18 @@ En la Tabla \ref{tab:jfake_ff} se puede observar los valores de los FFs obtenido
 
 El fondo para cada región (R) del análisis se estima definiendo una correspondiente región de control de jets (CSJ), que cumple el rol de la región $N_B$ y se define de igual forma que R pero reemplazando los cortes sobre fotones por jets. Se estima la contribución del fondo entonces como:
 
+% \begin{equation}
+%   N^{\text{R}}_{j\rightarrow\gamma} = \text{FF}_{\text{iso}} \cdot N^{\text{R}}_{\mathrm{CSJ}} 
+%   \label{eq:jfake_cs}
+% \end{equation}
+
 \begin{equation}
-  N^{\text{R}}_{j\rightarrow\gamma} = \text{FF}_{\text{iso}} \cdot N^{\text{R}}_{\mathrm{CSJ}} 
+  N^{\text{R}}_{j\rightarrow\gamma} = \sum_{i,j,k} \text{FF}_{\text{iso}}(|\eta_i|, p_{\text{T}\,j}, E_{\text{T}\,k}^{\text{miss}}) \cdot N^{\text{R}}_{\mathrm{CSJ}}(|\eta_i|, p_{\text{T}\,j}, E_{\text{T}\,k}^{\text{miss}})
   \label{eq:jfake_cs}
 \end{equation}
 
+\noindent
+donde la suma se realiza sobre los distintos intervaloes de \absEta, \pt y \met.
 En el caso de no observar eventos en alguna CSJ, se hace una estimación conservadora con un evento.
 
 
@@ -503,13 +510,20 @@ La incerteza sistemática se estima variando las ventanas de integración a $[\m
 
 Finalmente, el fondo para cada región (R) del análisis se estima definiendo una correspondiente región de control de electrones (CSE), definida de igual forma que R pero reemplazando los cortes sobre fotones por electrones. Se estima la contribución del fondo entonces como:
 
-% \tosolve{no me convence poner (\absEta) en los siguientes terminos} creo que podria poner una sumatoria de bines, es algo menor
+% \solved{no me convence poner (\absEta) en los siguientes terminos} creo que podria poner una sumatoria de bines, es algo menor. ponele que asi esta bien...
+
+% \begin{equation}
+%   N^{\text{R}}_{e\rightarrow\gamma} = \text{FF}_{e\to\gamma} \cdot N^{\text{R}}_{\mathrm{CSE}} 
+%   \label{eq:efake_cs}
+% \end{equation}
 
 \begin{equation}
-  N^{\text{R}}_{e\rightarrow\gamma} = \text{FF}_{e\to\gamma} \cdot N^{\text{R}}_{\mathrm{CSE}} 
+  N^{\text{R}}_{e\rightarrow\gamma} = \sum_{i} \text{FF}_{e\to\gamma}(|\eta_i|) \cdot N^{\text{R}}_{\mathrm{CSE}} (|\eta_i|)
   \label{eq:efake_cs}
 \end{equation}
 
+\noindent
+donde la suma se realiza sobre los distintos intervalos de \absEta.
 En el caso de no observar eventos en alguna CSE, se hace una estimación conservadora con un evento.
 % \solved{no sabia esto!!!}. Era importante cuando no teniamos eventos en algunas regiones en 2016, ahora no pasa eso
 
