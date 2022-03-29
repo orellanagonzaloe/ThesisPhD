@@ -88,7 +88,7 @@ En las Tablas \ref{tab:bkgonly_result_vrm}, \ref{tab:bkgonly_result_vrm} y \ref{
 \end{table}
 
 \begin{figure}[ht!]
-  \begin{center}
+  \centering
 
     \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRQ_ph_pt0_afterFit.pdf}
     \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRQ_jet_n_afterFit.pdf}
@@ -105,11 +105,10 @@ En las Tablas \ref{tab:bkgonly_result_vrm}, \ref{tab:bkgonly_result_vrm} y \ref{
     
     \caption{Distribuciones de algunas variables significativas en las regiones de validación VRQ (arriba), VRM1H (medio) y VRM1L (abajo) luego del ajuste de solo fondo. Las incertidumbre mostradas son sólo estadísticas.}
     \label{fig:dist_vrqm_bkgonly}
-  \end{center}
 \end{figure}
 
 \begin{figure}[ht!]
-  \begin{center}
+  \centering
 
     \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRL3_ph_pt0_afterFit.pdf}
     \includegraphics[width=0.32\textwidth]{images/results/fr2_unblind/can_VRL3_met_et_afterFit.pdf}
@@ -126,19 +125,17 @@ En las Tablas \ref{tab:bkgonly_result_vrm}, \ref{tab:bkgonly_result_vrm} y \ref{
     
     \caption{Distribuciones de algunas variables significativas en las regiones de validación VRL3 (arriba), VRL4 (medio) y VRE (abajo) luego del ajuste de solo fondo. Las incertidumbre mostradas son sólo estadísticas.}
     \label{fig:dist_vrle_bkgonly}
-  \end{center}
 \end{figure}
 
 
 % \solved{Cosas que no estoy poniendo: signal contamination en las VRs, correlacion parametros del ajuste, tabla de incertezas sistematicas, pull de los NPs} solo tabla de sistematicos
 
-\tosolve{Falta la tabla de sistematicos}
 
 
 
 \section{Resultados en las regiones de señal}
 
-Luego de la estimación de los fondos en las regiones de señal y su correcta validación en sus respectivas VRs, se procedió a la observación de los datos en dichas regiones. En la Tabla \ref{tab:fit_result_sr_unblinded} se muestra el número de eventos observados y la estimación de los fondos en cada región de señal. El número total de eventos observados para la SRL fue de $2$, para la SRM de $0$ y para la SRH de $5$. A su vez en la Figura \ref{fig:regions_pulls_unblinded} se observa el resumen de la estimación de fondo y datos observados para cada región del análisis. En la Figura \ref{fig:met_n-1_SRL_SRM_SRH_fr2} se observa la distribución de \met para las tres regiones de señal, pero omitiendo el corte en esa variable de las mismas (gráfico N-1). Allí se muestra las estimaciones de los fondos, la de los datos observados y las del punto de señal con $(M_3, \mu) = (2000, -250)$.
+Luego de la estimación de los fondos en las regiones de señal y su correcta validación en sus respectivas VRs, se procedió a la observación de los datos en dichas regiones. En la Tabla \ref{tab:fit_result_sr_unblinded} se muestra el número de eventos observados y la estimación de los fondos en cada región de señal. El número total de eventos observados para la SRL fue de $2$, para la SRM de $0$ y para la SRH de $5$. A su vez en la Figura \ref{fig:regions_pulls_unblinded} se observa el resumen de la estimación de fondo y datos observados para cada región del análisis. En la Figura \ref{fig:met_n-1_SRL_SRM_SRH_fr2} se observa la distribución de \met para las tres regiones de señal, pero omitiendo el corte en esa variable de las mismas (gráfico N-1). Allí se muestra las estimaciones de los fondos, la de los datos observados y las del punto de señal con $(M_3, \mu) = (2000, -250)$. En la Tabla \ref{tab:syst_rel_impact} se muestra el aporte porcentual de cada sistemático en las regiones de señal.
 
 
 \begin{table}[ht!]
@@ -157,18 +154,70 @@ Luego de la estimación de los fondos en las regiones de señal y su correcta va
 
 
 \begin{figure}[!hb]
-   \begin{center}
-   \includegraphics[width=0.5\textwidth]{images/results/fr2_unblind/sigReg_SRL_fr2_met_et.pdf}%
-   \includegraphics[width=0.5\textwidth]{images/results/fr2_unblind/sigReg_SRM_fr2_met_et.pdf}
-   \includegraphics[width=0.5\textwidth]{images/results/fr2_unblind/sigReg_SRH_fr2_met_et.pdf}
+   \centering
+   \includegraphics[width=0.5\textwidth]{images/results/fr2_unblind/sigReg_SRL_fr2_met_et_v2.pdf}
+   \includegraphics[width=0.5\textwidth]{images/results/fr2_unblind/sigReg_SRM_fr2_met_et_v2.pdf}
+   \includegraphics[width=0.5\textwidth]{images/results/fr2_unblind/sigReg_SRH_fr2_met_et_v2.pdf}
    \caption{Distribución de \met en las regiones de señal SRL (izquierda), SRM (derecha) y SRH (abajo), en las cuales se omite el corte en esa misma variable.}
    \label{fig:met_n-1_SRL_SRM_SRH_fr2}
- \end{center}
 \end{figure}
+
+
+% \solved{Falta la tabla de sistematicos} done
+
+\begin{table}[ht!]
+  \centering
+  \caption{Summary of the different systematic uncertainties in the SM background expectation (in \%) for the different SRs after the background-only fit applied to the CRs. The individual uncertainties can be correlated and do not necessarily add in quadrature to equal the total (stat.\ + syst.) uncertainty.}
+  %\resizebox{\textwidth}{!}{
+    \begin{tabular}{lccc}
+      \toprule
+      \toprule
+                                                  & SRL [\%] & SRM [\%] & SRH [\%] \\
+      \midrule
+      Total (stat.\ + syst.) uncertainty           & 28~~~~~      & 25~~~~~      &  17~~~~~ \\
+      Statistical uncertainty                     & 20~~~~~      & 15~~~~~      &  12~~~~~ \\
+      %Expected SM events & $2.67 \pm 0.54$ & $2.55 \pm 0.39$ & $2.55 \pm 0.31$ \\ %This uncertainty here is only statistical, because it was obtained without systematics.
+      \midrule
+      Jet energy scale and resolution             & 18~~~~~      & 19~~~~~      & 4.1  \\
+      $b$-tagging calibration                       & 3.2     & 4.3     & 3.6  \\
+      Jet fakes                                   & 2.1     & 2.5     & 2.3  \\
+      MC theory                                   & 3.6     & 3.1     & 10~~~~~   \\
+      Electron fakes                              & 1.4     & 1.9     & < 1~~~~~~  \\
+      Electron/photon energy resolution and scale & 5.5     & 1.1     & 4.1  \\
+      Muon reconstruction and identification      & 2.6     & 1.8     & < 1~~~~~~  \\
+      Photon identification and isolation                     & 2.6     & 2.1     & 1.1  \\
+      Pile-up reweighting                         & < 1~~~~~~     & 1.2     & 1.0  \\
+      \MET\ soft-term scale and resolution        & < 1~~~~~~     & < 1~~~~~~     & < 1~~~~~~  \\
+      Luminosity                                  & < 1~~~~~~     & < 1~~~~~~     & < 1~~~~~~  \\
+      %                                             & SRL [\%] & SRM [\%] & SRH [\%] \\
+      % \midrule
+      % Total (stat. + syst.) uncertainty           & 28.0     & 24.9     &  17.4 \\
+      % Statistical uncertainty                     & 20.2     & 15.3     &  12.2 \\
+      % %Expected SM events & $2.67 \pm 0.54$ & $2.55 \pm 0.39$ & $2.55 \pm 0.31$ \\ %This uncertainty here is only statistical, because it was obtained without systematics.
+      % \midrule
+      % Jet energy scale and resolution             & 17.8    & 18.5    & 4.1  \\
+      % b-tagging calibration                       & 3.2     & 4.3     & 3.6  \\
+      % Jet fakes                                   & 2.1     & 2.5     & 2.3  \\
+      % MC theory                                   & 3.6     & 3.1     & 10.2 \\
+      % Electron fakes                              & 1.4     & 1.9     & < 1  \\
+      % Electron/photon energy resolution and scale & 5.5     & 1.1     & 4.1  \\
+      % Muon reconstruction and identification      & 2.6     & 1.8     & < 1  \\
+      % Photon ID and isolation                     & 2.6     & 2.1     & 1.1  \\
+      % Pile-up reweighting                         & < 1     & 1.2     & 1.0  \\
+      % \MET\ soft-term scale and resolution        & < 1     & < 1     & < 1  \\
+      \bottomrule
+      \bottomrule
+    \end{tabular}
+  %}
+\label{tab:syst_rel_impact}
+\end{table}
+
 
 
 
 \section{Límites independientes del modelo}
+
+\tosolve{explicar bien como se obtuvieron estos limites}
 
 Dado el buen acuerdo entre la estimación del fondo y los datos observados en las distintas SRs, se establecen límites superiores en el número de eventos de cualquier fenómeno más allá del SM con el estado final del análisis. Los límites se establecen para cada SR con un nivel de confianza del 95\% utilizando el profile likelihood ratio con las prescripciones para los $\text{CL}_{s}$ \cite{Read:2002hq}. Para ello se realiza un muestreo del número de eventos de señal para un cierto modelo, y se encuentra cuándo el valor de $\text{CL}_{s}$ cae por debajo del 5\%, método descripto en el Capítulo \ref{cap:statistical}. Los estadísticos de prueba se realizaron mediante la generación de \tosolve{XXX} toys.
 
@@ -179,17 +228,21 @@ En la Tabla \ref{tab:model_indep_ul} se muestran los límites superiores para el
   \centering
   \caption{Límites superiores al número de eventos y sección eficaz,con un 95\% de intervalo de confianza, para las distintas regiones de señal. \tosolve{Actualizar valores de la tabla. No creo que ponga ni pvalue, ni $S_{obs}$, ni $S_{exp}$}}
 
-  \begin{tabular}{l|c|c|ccccc}
-    \hline
-    \hline
-    Signal Region & $N_{\mathrm{obs}}$  & $N_{\mathrm{exp}}$  & $\langle\epsilon{\sigma}\rangle_{\mathrm{obs}}^{95}$ [fb]  & $\langle\epsilon{\sigma}\rangle_{\mathrm{exp}}^{95}$ [fb] & $S_{\mathrm{obs}}^{95}$  & $S_{\mathrm{exp}}^{95}$ & $p_{0}$(Z))\\
-    \hline
-    SRL           & 2                   & $2.67 \pm 0.75$     &               0.0296                                       &         $0.0339^{+0.0188}_{-0.0114}$               &                       4.12  &  $4.71^{+2.61}_{-1.58}$ &  0.5 (0.00) \\
-    SRM           & 0                   & $2.55 \pm 0.64$     &               0.0185                                       &         $0.0319^{+0.0181}_{-0.0111}$               &                       2.56  &  $4.44^{+2.51}_{-1.55}$ &  0.5 (0.00) \\
-    SRH           & 5                   & $2.55 \pm 0.44$     &               0.0534                                       &         $0.0340^{+0.0189}_{-0.0114}$               &                       7.43  &  $4.72^{+2.64}_{-1.58}$ & 0.0873 (1.36)) \\
-    \hline
-    \hline
-  \end{tabular}
+    \begin{tabular}{lccccc}
+    %\begin{tabular}{l|c|c|ccccc}
+      \toprule
+      \toprule
+      Signal Region  & $S_{\mathrm{obs}}^{95}$  & $S_{\mathrm{exp}}^{95}$ & $\langle\epsilon{\sigma}\rangle_{\mathrm{obs}}^{95}$ [fb]  & $\langle\epsilon{\sigma}\rangle_{\mathrm{exp}}^{95}$ [fb] & $p_{0}$ ($Z$)\\
+      \midrule
+      SRL     &   4.73   &   $4.7^{+2.2}_{-1.2}$ &  0.034   &   $0.034^{+0.016}_{-0.009}$    &    0.50 (0.00)  \\ 
+      SRM    &   3~~~~~      &   $4.6^{+1.8}_{-1.1}$ &  0.022   &   $0.033^{+0.013}_{-0.008}$     &    0.50 (0.00)  \\ 
+      SRH     &   7.55   &   $4.8^{+1.9}_{-1.4}$ &  0.054   &   $0.035^{+0.014}_{-0.010}$    &    0.09 (1.32)  \\
+      \bottomrule
+      \bottomrule
+    \end{tabular}
+    \label{tab:model_indep_ul}
+  \end{table}
+
   \label{tab:model_indep_ul}
 \end{table}
 
