@@ -72,7 +72,7 @@ Las hipótesis pueden estar completamente determinadas o estar caracterizadas po
 Alternativamente, se puede cuantizar el acuerdo entre el resultado de dicha búsqueda y una hipótesis dada, calculando el \textbf{\textit{p-value}}. El mismo se define como la probabilidad bajo dicha hipótesis, de obtener un resultado igual o menos incompatible con las predicciones de la hipótesis:
 
 \begin{equation}
-	p_H = \int_{t_{obs}}^{\infty} g(t|H)dt
+	p_H = \int_{t_{H,obs}}^{\infty} g(t|H)dt
 \end{equation}
 
 Un p-value chico implica una evidencia importante en contra de dicha hipótesis, y la misma se excluye si el p-value observado es menor a un cierto valor previamente definido.  Alternativamente se puede convertir el p-value en la significancia equivalente, $Z$. La misma se define como el número de desviaciones estándar ($\sigma$) que se debe encontrar por encima de su media, una variable con distribución Gaussiana para tener una probabilidad superior igual al p-value:
@@ -183,9 +183,9 @@ Cuando el p-value obtenido es mayor al límite definido para un descubrimiento, 
 
 % sacado de fran
 
-% \tosolve{Este párrafo no lo entiendo bien}
+% \solved{Este párrafo no lo entiendo bien} ya esta
 
-La razón para poner $\tilde{q}_{\mu} = 0$ para $\hat{\mu}>\mu$ es que cuando se establece un límite superior, el hecho de que $\hat{\mu}>\mu$ representa menos compatibilidad con $\mu$ que los datos obtenidos, y por lo tanto no se considera parte de la región de rechazo de la contrastación. Cabe destacar que el $\tilde{q}_0$ anteriormente definido, no es un caso particular de este estadístico de prueba, ya que $q_0$ es cero si los datos fluctúan hacia abajo ($\hat{\mu}\langle 0\rangle$), pero $\tilde{q}_{\mu}$ es cero si los datos fluctúan hacia arriba ($\hat{\mu}>\mu$).
+La razón para poner $\tilde{q}_{\mu} = 0$ para $\hat{\mu}>\mu$ es que cuando se establece un límite superior, el hecho de que $\hat{\mu}>\mu$ representa menos compatibilidad con $\mu$ que los datos obtenidos, y por lo tanto no se considera parte de la región de rechazo de la contrastación. Cabe destacar que el $\tilde{q}_0$ anteriormente definido, no es un caso particular de este estadístico de prueba, ya que $q_0$ es cero si los datos fluctúan hacia abajo ($\hat{\mu}<0$), pero $\tilde{q}_{\mu}$ es cero si los datos fluctúan hacia arriba ($\hat{\mu}>\mu$).
 
 Con este estadístico de prueba se busca encontrar el valor de $\mu$ para el cual deja de ser posible el rechazo de la hipótesis <<señal+fondo>> (o viceversa, hasta que valor de $\mu$ es posible un rechazo de la hipótesis). Para ello se definen el nivel de confianza \cite{Read:2002hq}:
 
@@ -256,19 +256,19 @@ Cuando la estadística es reducida ($\mathcal{O}(10)$), se abandona el régimen 
 El diseño de las regiones de señal para el análisis es un proceso denominado <<optimización>>, que define el conjunto de cortes óptimo para discriminar el fondo de la señal. Tal discriminación es cuantizada mediante la significancia de la Ecuación \ref{ec:sign}, la cual a priori es desconocida. Para estimar el valor de significancia ($Z$) que uno esperaría tener en un dado experimento, con un número de eventos igual a la suma de las estimaciones de fondo y señal ($n=s+b$), se puede emplear la significancia esperada, que se define como la mediana de $Z$. Como el p-value y $Z$ tienen una relación lineal y monotónica \cite{Cowan:2010js}, la mediana de $Z$ se puede obtener a partir de la mediana del p-value.
 
 
-Por ejemplo, si tenemos una variable $n$ que sigue una distribución de Poisson y tiene media $s+b$, si la media es lo suficientemente grande, es posible aproximar a la misma mediante una distribución Gaussiana, con media $s+b$ y desviación estándar $\sqrt{s+b}$. El p-value para la hipótesis de <<solo fondo>> ($s=0$) dada una observación $x$ es:
+Por ejemplo, si tenemos una variable $n$ que sigue una distribución de Poisson y tiene media $s+b$, si la media es lo suficientemente grande, es posible aproximar a la misma mediante una distribución Gaussiana, con media $s+b$ y desviación estándar $\sqrt{s+b}$. El p-value para la hipótesis de <<solo fondo>> ($s=0$) dada una observación $n$ es:
 
 \begin{equation}
-	p = 1 - \Phi\left( \frac{x-\mu}{\sigma} \right) = 1 - \Phi\left( \frac{x-b}{\sqrt{b}} \right)
+	p = 1 - \Phi\left( \frac{n-\mu}{\sigma} \right) = 1 - \Phi\left( \frac{n-b}{\sqrt{b}} \right)
 \end{equation}
 
 Lo que permite obtener la significancia para descubrimiento:
 
 \begin{equation}
-	Z = \frac{x-b}{\sqrt{b}}
+	Z = \frac{n-b}{\sqrt{b}}
 \end{equation}
 
-La media de $Z$ coincide con la mediana, y como la media de $x$ es $s+b$, se obtiene:
+La media de $Z$ coincide con la mediana, y como la media de $n$ es $s+b$, se obtiene:
 
 \begin{equation}
 	\text{med}[Z|s] = \frac{s}{\sqrt{b}}
