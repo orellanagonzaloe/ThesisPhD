@@ -7,16 +7,18 @@
 % El análisis para el cual está orientada esta Tesis consiste en la búsqueda de Supersimetría en eventos con un fotón aislado muy energético, jets y gran cantidad de energía faltante en estado final \cite{Alonso:2147473,ATLAS:2016fks,Collaboration:2198651}. La estrategia general de la búsqueda consiste en el conteo del número de eventos observado en exceso sobre el SM en una cierta región del espacio de observables rica en eventos de la señal considerada.
 
 
-El trabajo realizado en esta Tesis se centra en la búsqueda de Supersimetría en eventos con un fotón energético y aislado, jets y gran cantidad de energía faltante en el estado final. La estrategia general de la búsqueda consiste en el conteo del número de eventos observado en exceso sobre el SM en una cierta región del espacio de observables rica en eventos de la señal considerada, siguiendo método descripto en el Capítulo \ref{cap:statistical}. El objetivo es poder discriminar de los datos observados aquellos que podrían ser producto de un proceso supersimétricos (señal) de aquellos producto de procesos del SM (fondo).
+El trabajo realizado en esta Tesis se centra en la búsqueda de Supersimetría en eventos con al menos un fotón energético y aislado, jets y gran cantidad de energía faltante en el estado final. La estrategia general de la búsqueda consiste en el conteo del número de eventos observados, y su comparación con las predicciones del SM, en regiones del espacio de observables ricas en eventos de la señal, siguiendo los métodos descriptos en el Capítulo \ref{cap:statistical}. El objetivo es poder discriminar en los datos observados, aquellos que podrían ser producto de un proceso supersimétrico (señal), de aquellos provenientes de procesos del SM (fondo).
 
 
 \section{Muestras de señal a partir de simulaciones Monte Carlo}\label{sec:signal_samples}
 
-El modelo supersimétrico que motiva a la presente búsqueda consiste en un modelo GGM, por lo tanto la LSP es el gravitino cuya masa será del orden de unos pocos eV. La NLSP es en este caso el neutralino más liviano, que va a consistir en un estado de gauge mezcla de bino y higgsino, lo que le permite acoplar a fotones, bosones $Z$ y bosones de Higgs.
-Análisis anteriores se centraron en los casos donde el neutralino acopla solamente a fotones y bosones $Z$ \cite{tesis_fran, tesis_joaco, Collaboration:2198651}, o solamente a fotones \cite{Jinnouchi:2233741}. El trabajo realizado en esta Tesis se centra en el caso fenomenológico en el cual el neutralino más liviano decae en proporciones iguales a $\gamma+\gravino$ y a $h+\gravino$. Esto último es posible si se elige al parámetro $\mu<0$ que favorece el decaimiento al higgs, y reduce % \solved{puse reduce porque no lo suprime del todo} ok
-el decaimiento al bosón $Z$, en cuyo caso ya fue previamente estudiado por otros análisis \cite{tesis_fran, tesis_joaco}. Para la producción de partículas supersimétricas a partir de la colisión $pp$ se consideró inicialmente la producción de gluinos. La parte del análisis que comprende la producción electrodébil se describe en el Capítulo \ref{cap:analysis_EWK}. Los gluinos pueden decaer subsecuentemente en partículas más livianas, hasta llegar a las NLSP y luego a la LSP, produciendo jets 
-% \tosolve{produciendo jets como parte de su decaimiento a neutralino sin carga de color} no entendi
-a su paso y generando el estado final buscado. Cadenas de decaimiento típicas de este modelo se pueden observar en la Figura \ref{fig:phb_feyn}.
+El modelo supersimétrico que motiva a la presente búsqueda consiste en un modelo GGM, y por lo tanto el gravitino es la LSP, cuya masa es del orden de unos pocos eV. La NLSP, en este caso, es el neutralino más liviano, que consiste en un estado de gauge mezcla de bino y higgsino, lo que le permite acoplar a fotones, bosones $Z$ y bosones de Higgs.
+Análisis anteriores se centraron en los casos donde el neutralino acopla solamente a fotones y bosones $Z$ \cite{tesis_fran, tesis_joaco, Collaboration:2198651}, o solamente a fotones \cite{Jinnouchi:2233741}. El trabajo realizado en esta Tesis se centra en el caso fenomenológico en el cual el neutralino más liviano decae en proporciones iguales a $\gamma+\gravino$ y a $h+\gravino$. Esto último es posible si el parámetro $\mu$ toma valores negativos, favoreciendo así el decaimiento al Higgs, y reduciendo notablemente% \solved{puse reduce porque no lo suprime del todo} ok
+el decaimiento al bosón $Z$.
+% , en cuyo caso ya fue previamente estudiado por otros análisis \cite{tesis_fran, tesis_joaco}. 
+Para la producción de partículas supersimétricas a partir de la colisión $pp$ se considera inicialmente la producción de gluinos. La parte del análisis que comprende la producción electrodébil se describe en el Capítulo \ref{cap:analysis_EWK}. Dichos gluinos decaen subsecuentemente en partículas más livianas, hasta llegar a las NLSP y luego a la LSP.
+Como el gluino tiene carga de color y la NSLP no, el decaimiento esta intermediado por squarks virtuales, produciendo jets adicionales.
+Cadenas de decaimiento típicas de este modelo se pueden observar en la Figura \ref{fig:phb_feyn}.
 
 \begin{figure}
   \centering
@@ -31,12 +33,11 @@ En la Sección \ref{sec:susy} se describe al MSSM junto con la gran cantidad de 
 % Cuando se desea generar muestras para un modelo, se debe elegir valores para esos parámetros que a priori son arbitrarios, y cuya única posible elección son los distintos objetivos del análisis. A su vez, se busca que al seleccionar valores para esos parámetros, tener el compromiso de no ser muy específicos con esos valores, ya que de esa forma el análisis terminaría siendo demasiado dedicado a un modelo particular. Ni tampoco muy arbitrarios, ya que se busca seguir manteniendo de alguna forma la fenomenología del mismo. Lo que se hace entonces es reducir los parámetros que caracterizan al modelo a unos pocos, y utilizar distintos programas de calculo que se encargan a partir de ellos generar tanto el espectro completo de masas, como los distintos posibles decaimientos de cada partícula.
 Al realizar el estudio experimental, motivado por un dado modelo, se debe acotar la cantidad de parámetros y sus posibles valores, maximizando de esta forma la producción del estado final buscado. En este contexto, si bien se realizan búsquedas motivadas por un dado modelo, al seleccionar y definir las regiones de señal, se posibilita que el espacio de parámetros seleccionado pueda ser también inclusivo a otros potenciales modelos de nueva física. 
 
-El parámetro característico de este modelo es $\mu$, el cual se elige negativo para habilitar el decaimiento del \ninoone a Higgs. A su vez se desea suprimir completamente el decaimiento al bosón $Z$, y que el decaimiento a fotones tenga la misma proporción que al de Higgs, y para ello se eligió el valor óptimo de $M_1\sim -\mu$.
+El parámetro característico de este modelo es $\mu$, el cual toma valores negativos para habilitar el decaimiento del \ninoone a Higgs. A su vez, se busca suprimir el decaimiento al bosón $Z$, y que el decaimiento a fotones sea igual de probable que el decaimiento al Higgs. Como se desea tener este comportamiento de forma uniforme para todas las masas de \ninoone estudiadas, es necesario encontrar un valor óptimo de $M_1$ que satisfaga dichas condiciones. Se encuentra que mediante la relación $M_1 \sim |\mu|$,
 % \solved{Acá había encontrado una fórmula mediante un fit para M(mu), pero no se si es importante} Mejor no ponerlo...
-Con estos valores fue posible reducir el decaimiento al bosón $Z$ hasta casi un 10\%, dejando a los otros dos decaimientos aproximadamente en un 45\% como muestra la Figura \ref{fig:n1_br}. 
+es posible reducir el decaimiento al bosón $Z$ hasta casi un 10\%, dejando a los otros dos decaimientos aproximadamente en un 45\% para todas las masas de \ninoone, como muestra la Figura \ref{fig:n1_br}. 
 % Como el modelo es un GGM, se fijó la masa del \gravino en $1$ eV 
 % \solved{esto no es tan así, la masa variaba de acuerdo al mu, lo deberia poner?}. Corregido
-La masa del \gravino, la LSP impuesta por los modelos GGM, se determinó del orden de \magn{1}{eV}.
 
 \begin{figure}
   \centering
@@ -45,17 +46,17 @@ La masa del \gravino, la LSP impuesta por los modelos GGM, se determinó del ord
   \label{fig:n1_br}
 \end{figure}
 
-Las muestras fueron generadas considerando la producción de gluinos a partir de la colisión $pp$, con 0, 1 o 2 jets adicionales de ISR. Para esto se determinó al gluino como la única partícula supersimétrica de color relevante, por lo que las masas de los squarks fueron fijadas a \magn{5}{TeV}, evitando así toda posible producción de los mismos. Los gluinos producidos en la colisión podían decaer un par de quark-antiquark más algún gaugino como se muestra en la Ecuación \ref{eq:gluino_dec}. Esto ocurre mediante squarks virtuales los cuales son completamente degenerados, pudiendo ser cualquiera de los 12 estados de sabor/quiralidad.
-Además, se fijo a $M_2=3\ \tev$ y a $\tan{\beta}=1.5$, observándose reducida sensibilidad a variaciones de dichos parámetros. Todos los términos de acoplamiento trilineal fueron fijados a 0. Se eligió a la masa de los sleptons igual a $5$ TeV, para evitar así su producción la cual es estudiada por otros análisis. El bosón de higgs tiene una masa igual a la medida por las colaboraciones ATLAS y CMS \cite{higgs_mass}, $m_h=125\,\gev$, y sus decaimientos son elegidos de acuerdo a las predicciones del SM, 
+Las muestras se generan considerando la producción de gluinos a partir de la colisión $pp$, con 0, 1 o 2 jets adicionales de ISR. Para esto, se considera al gluino como la única partícula supersimétrica de color relevante, por lo que las masas de los squarks se fijan a \magn{5}{TeV}, evitando así toda posible producción \textit{on-shell} de los mismos (en lo que se denomina desacoplamiento). Los gluinos producidos en la colisión, decaen a un par de quark-antiquark más algún gaugino como se muestra en la Ecuación \ref{eq:gluino_dec}. Esto ocurre mediante squarks virtuales los cuales son completamente degenerados, pudiendo ser cualquiera de los 12 estados de sabor/quiralidad.
+Al igual que con los squarks, se elige la masa de los sleptons igual a \magn{5}{TeV}, evitando así su producción, la cual es estudiada por otros análisis \tosolve{citar analisis}. Además, se anulan todos los términos de acoplamiento trilineal, y se fija $M_2=3\,\tev$ y $\tan{\beta}=1.5$, observándose reducida sensibilidad del análisis a variaciones de dichos parámetros. Se emplea el bosón de Higgs observado por las colaboraciones ATLAS y CMS \cite{higgs_mass}, con una masa de $m_h=125\,\gev$, y sus decaimientos ocurren de acuerdo a las predicciones del SM, 
 % \solved{es asi?} Si, ponele...
-donde el predominante con un $\sim58$\% es a dos $b$-jets.
+donde el predominante es a dos $b$-jets con un $\sim58$\% de probabilidad de ocurrencia.
 % \solved{Cual mismo?} 
 % Adicionalmente se pone al mismo en el régimen de desacoplamiento con $m_A = 2\ \tev$. 
-Adicionalmente se colocan a los estados de masas de los dobletes de Higgs en el régimen de desacoplamiento con una masa de \magn{2}{TeV}.
-Al \ninoone se le fija su vida media, $c\tau_{\text{NLSP}}<0.1$ mm, de tal forma de que decaiga rápidamente  para que su vértice no esté muy desplazado del punto de colisión. 
+Adicionalmente, se colocan a los estados de masas de los dobletes de Higgs en el régimen de desacoplamiento con una masa de \magn{2}{TeV}.
+Se fija la vida media del \ninoone, $c\tau_{\text{NLSP}}<0.1$ mm, de tal forma que decaiga rápidamente para que su vértice no esté considerablemente desplazado del punto de colisión. 
+La masa del \gravino, la LSP impuesta por los modelos GGM, se fija del orden de \magn{1}{eV}.
+La relación entre los parámetros $M_1$ y $\mu$ determina la masa de los gauginos, y genera que los tres primeros neutralinos estén levemente degenerados junto con el primer chargino. Tanto el \ninofour como el \chinotwopm quedan completamente desacoplados. Los posibles decaimientos del \ninotwo son principalmente a \ninoone junto con un par de quarks, leptones o neutrinos. Los del \ninothree son principalmente a \ninoone junto con un fotón. El \chinoonepm decae principalmente a \ninoone junto con un par de quarks o un par leptón-neutrino. Finalmente se anularon los decaimientos directos del \gluino, \ninotwo, \ninothree y \chinoonepm. Como ejemplo, se muestra en la Figura \ref{fig:mass_spec} un espectro de masas para uno de los puntos de señal con $(M_3, \mu) = (2000\,\gev, -1050\,\gev)$. En la Figura \ref{fig:gluino_decays} se observa la fracción de los posibles decaimiento del \gluino con una masa de \magn{2000}{GeV} en función de la masa del \ninoone. 
 
-
-Los relación entre los parámetros $M_1$ y $\mu$ determina la masa de los gauginos, y genera que los tres primeros neutralinos estén levemente degenerados junto con el primer chargino. Tanto el \ninofour como el \chinotwopm quedan completamente desacoplados. Los posibles decaimientos del \ninotwo son principalmente a \ninoone junto con un par de quarks, leptones o neutrinos. Los del \ninothree son principalmente a \ninoone junto con un fotón. El \chinoonepm decae principalmente a \ninoone junto con un par de quarks o un par leptón-neutrino. Finalmente se anularon los decaimientos directos del \gluino, \ninotwo, \ninothree y \chinoonepm. Como ejemplo, se muestra en la Figura \ref{fig:mass_spec} un espectro de masas para uno de los puntos de señal con $(M_3, \mu) = (2000\,\gev, -1050\,\gev)$. En la Figura \ref{fig:gluino_decays} se observa la fracción de los posibles decaimiento del \gluino con una masa de \magn{2000}{GeV} en función de la masa del \ninoone. 
 
 \begin{figure}
   \centering
@@ -71,13 +72,14 @@ Los relación entre los parámetros $M_1$ y $\mu$ determina la masa de los gaugi
   \label{fig:gluino_decays}
 \end{figure}
 
+
 % \solved{mencionar decaimientos masas de los demas neutralnos y charginos} done
 
-Debido a que son varios los análisis que estudian la producción de gluinos, la colaboración ATLAS genera archivos comunes a todos los análisis donde ya tiene almacenada la información de varios eventos de producción de gluinos. Estos archivos se denominan Les Houches Event (LHE) \cite{Alwall:2006yp}, que estandarizan esta etapa de simulación, y sólo resta generar las cadenas de decaimiento de los gluinos de acuerdo a los distintos modelos estudiados. En el presente análisis se omitieron correcciones radiativas así la masa de los los gluinos coincidía con el parámetro $M_3$.
+Debido a que son varios los análisis que estudian la producción de gluinos, la colaboración ATLAS genera archivos comunes a todos los análisis donde ya tiene almacenada la información de varios eventos de producción de gluinos. Estos archivos se denominan Les Houches Event (LHE) \cite{Alwall:2006yp}, que estandarizan esta etapa de simulación, y sólo resta generar las cadenas de decaimiento de los gluinos de acuerdo a los distintos modelos estudiados. En el presente análisis se omiten las correcciones radiativas así la masa de los los gluinos coincide con el parámetro $M_3$.
 % \solved{reescrito}
 % , pudiendo así coincidir con los archivos LHE que están en función de la masa del mismo.
 
-Los únicos parámetros libres del modelo son entonces $\mu$ y $M_3$ que determinan la masa de los \ninoone y gluinos respectivamente. Se simularon 80 modelos distintos (puntos) con 10000 eventos en función de ambos parámetros, donde $150\,\gev<m_{\ninoone}<(m_{\gluino}-50)\,\gev$ y $1200\,\gev < m_{\gluino}<2800\,\gev$. El arreglo completo de puntos de señal (grid) se puede observar en la Figura \ref{fig:grid_points}. Las muestras se realizaron con la simulación rápida del detector \texttt{ATLFAST-II}. El espectro de masas completo, las fracciones de decaimiento de las sparticles y los anchos de decaimientos fueron calculados a partir del conjunto de parámetros anteriormente mencionados utilizando {\texttt{SUSPECT} v2.43} \cite{Djouadi2007426}, {\texttt{SDECAY} v1.5} \cite{Muhlleitner:2004mka} y {\texttt{HDECAY} v3.4} \cite{Djouadi:1997yw}, que son parte del paquete {\texttt{SUSYHIT} v1.5a} \cite{Djouadi:2006bz}.
+Los únicos parámetros libres del modelo son entonces $\mu$ y $M_3$, que determinan la masa de los \ninoone y gluinos respectivamente. Se simulan 80 combinaciones de dichos parámetros (puntos) con 10000 eventos cada uno, donde $150\,\gev<m_{\ninoone}<(m_{\gluino}-50)\,\gev$ y $1200\,\gev < m_{\gluino}<2800\,\gev$. El arreglo completo de puntos de señal (grid) se muestra en la Figura \ref{fig:grid_points}, las cuales se realizan mediante la simulación rápida del detector \texttt{ATLFAST-II}. El espectro de masas completo, las fracciones de decaimiento de las sparticles y los anchos de decaimientos, se calculan a partir del conjunto de parámetros anteriormente mencionados utilizando {\texttt{SUSPECT} v2.43} \cite{Djouadi2007426}, {\texttt{SDECAY} v1.5} \cite{Muhlleitner:2004mka} y {\texttt{HDECAY} v3.4} \cite{Djouadi:1997yw}, que son parte del paquete {\texttt{SUSYHIT} v1.5a} \cite{Djouadi:2006bz}.
 
 
 \begin{figure}
@@ -89,14 +91,14 @@ Los únicos parámetros libres del modelo son entonces $\mu$ y $M_3$ que determi
 
 \begin{sloppypar} % porque el NNLO... me quedaba en el margen
 La sección eficaz de las muestras se calcula en función de la masa del \gluino a 
-NNLO$_\text{approx}$+NNLL \cite{Beenakker:1996ch, Kulesza:2008jb, Kulesza:2009kq, Beenakker:2009ha, Beenakker:2011fu}. La sección eficaz nominal junto con su incertidumbre se obtienen de la combinación 
+NNLO$_\text{approx}$+NNLL \cite{Beenakker:1996ch, Kulesza:2008jb, Kulesza:2009kq, Beenakker:2009ha, Beenakker:2011fu}. La sección eficaz nominal, junto con su incertidumbre, se obtienen de la combinación 
 % envelope
-de los distintas secciones eficaces empleando diferentes conjuntos de PDFs, y modificando los factores de renormalización y factorización, como se describe en la Referencia \cite{Borschensky:2014cia}. En la Tabla \ref{tab:gino_xs} se muestran los valores de las secciones eficaces para las distintas masas de \gluino empleadas para las muestras.
+de las distintas secciones eficaces empleando diferentes conjuntos de PDFs, y modificando los factores de renormalización y factorización, como se describe en la Referencia \cite{Borschensky:2014cia}. En la Tabla \ref{tab:gino_xs} se muestran los valores de las secciones eficaces para las distintas masas de \gluino empleadas para las muestras.
 \end{sloppypar}
 
 \begin{table}[ht!]
   \centering
-  \caption{Sección eficaz de producción de pares de \gluino en función de su masa, para los distintos puntos de señal.}
+  \caption{Sección eficaz de producción de pares de \gluino en función de su masa, para los distintos puntos de señal \cite{susy_xs}.}
   \begin{tabular}{l r r}
   \hline
   \hline
@@ -127,7 +129,7 @@ de los distintas secciones eficaces empleando diferentes conjuntos de PDFs, y mo
 \section{Fondos del Modelo Estándar}\label{sec:sm_backgrounds}
 
 
-Los procesos del SM que son de interés como fondo para el análisis son aquellos que tienen un estado final igual al de la señal: fotones, jets y energía transversa faltante. Los mismos pueden clasificarse en distintos tipos. Por un lado, los procesos que dan lugar a eventos con un fotón y energía faltante real, es decir, los que se llaman fondos irreducibles. En este caso la energía la faltante proviene de los neutrinos, por lo que se componen principalmente de partículas que decaen a ellos, junto con fotones y jets de la ISR. Los procesos que cumplen con estos requisitos son la producción de bosones $Z$, $W$ y pares de top quarks que decaen subsecuentemente a bosones $W$:
+Los procesos del SM que cumplen el rol de fondo para el presente análisis, son aquellos que tienen el mismo estado final que la señal, es decir, fotones, jets y energía transversa faltante. Los mismos pueden ser clasificados en distintos tipos. Por un lado, los procesos que dan lugar a eventos con un fotón y energía faltante real, denominados fondos irreducibles. En ellos, la energía faltante proviene de los neutrinos, y se componen principalmente de partículas que decaen a ellos, junto con fotones y jets de la ISR. Los procesos que cumplen con estos requisitos son la producción de bosones $Z$, $W$ y pares de top quarks que decaen subsecuentemente a bosones $W$:
 
 \begin{itemize}
   \item $Z(\rightarrow \nu\nu) + \gamma + \text{jets}$
@@ -137,7 +139,7 @@ Los procesos del SM que son de interés como fondo para el análisis son aquello
   \item $t\bar{t} + \gamma + \text{jets}$
 \end{itemize}
 
-Adicionalmente es posible tener procesos que si bien no producen fotones, uno de los objetos presentes en el mismo sea erróneamente reconstruido como fotón, y genere un estado final igual al buscado pero con fotones `falsos'. Los objetos que pueden ser erróneamente reconstruidos como fotones en este caso pueden ser electrones o jets, por lo que hay que considerar aquellos procesos en los que se produzcan junto a neutrinos. Estos pueden ser:
+Adicionalmente, es posible tener procesos que si bien no producen fotones, uno de los objetos presentes en el mismo es erróneamente reconstruido como fotón, y genere un estado final igual al buscado pero con fotones <<falsos>>. Los objetos que pueden ser erróneamente reconstruidos como fotones son los electrones y los jets. Se considera entonces aquellos procesos que no tienen fotones reales, pero se producen electrones o jets junto a neutrinos:
 
 \begin{itemize}
   \item $Z(\rightarrow \nu\nu) + \text{jets}$
@@ -145,7 +147,7 @@ Adicionalmente es posible tener procesos que si bien no producen fotones, uno de
   \item $t\bar{t} + \text{jets}$
 \end{itemize}
 
-Por último, puede ocurrir que si bien en el proceso no hay neutrinos, una reconstrucción errónea de la energía de los distintos objetos presentes en el evento genere un desbalance al calcular la energía transversa faltante, y por ende tengan una cantidad no despreciable de la misma denominada energía transversa faltante instrumental. Este tipo de eventos puede ocurrir también en simultáneo junto con fotones `falsos', por lo que existen diversos procesos que cumplan estos requisitos, entre ellos se encuentran:
+Por último, puede ocurrir que si bien en el proceso no hay neutrinos, una reconstrucción errónea de la energía de los distintos objetos presentes en el evento, genere un desbalance al calcular la energía transversa faltante, y por ende tengan una cantidad no despreciable de la misma, denominada energía transversa faltante instrumental. Este tipo de eventos puede ocurrir también en simultáneo junto con fotones <<falsos>>, por lo que existen diversos procesos que cumplan tales requisitos, entre los que se encuentran:
 
 \begin{itemize}
   \item jets (denominado Multijet o QCD)
@@ -156,23 +158,23 @@ Por último, puede ocurrir que si bien en el proceso no hay neutrinos, una recon
   \item $Z(\rightarrow ll) + \gamma + \gamma + \text{jets}$
 \end{itemize}
 
-A partir de aquí, como notación simplificada de los fondos del análisis, se omite en el nombre tanto el `+' como la producción de jets en la ISR. Cabe destacar que existen más procesos que cumplen las condiciones anteriores pero que no fueron considerados para el análisis. Lo que ocurre con ellos es que la sección eficaz es despreciable comparada con los otros procesos considerados, o el estado final se encuentra suprimido por las selecciones básicas del análisis, por lo que su contribución es completamente despreciable. Algunos ejemplos de ellos son la producción doble de bosones  ($WW$, $ZZ$, $WZ$), bosones decayendo a quarks ($W(\rightarrow qq)$, $Z(\rightarrow qq)$), producción de top ($t\gamma$, $tW$), entre otros.
+Como notación simplificada de los fondos del análisis, se omite en el nombre tanto el <<+>> como la producción de jets en la ISR. Cabe destacar que existen más procesos que cumplen las condiciones anteriores, pero que no son considerados para el análisis. Esto se debe a que la sección eficaz es despreciable comparada con los otros procesos considerados, o el estado final se encuentra suprimido por las selecciones básicas del análisis, por lo que su contribución es completamente despreciable. Algunos ejemplos de ellos son la producción doble de bosones ($WW$, $ZZ$, $WZ$), bosones decayendo a quarks ($W(\rightarrow qq)$, $Z(\rightarrow qq)$), producción de top ($t\gamma$, $tW$), entre otros.
 
-Para modelar los fondos con fotones `reales' se utilizaron simulaciones de MC, mientras que para aquellos con fotones `falsos' se utilizaron técnicas basadas en datos. 
+Para modelar los fondos con fotones <<reales>> se utilizan simulaciones de MC, mientras que para aquellos con fotones <<falsos>> se utilizan técnicas basadas en datos. 
 % \solved{mencionar que para la optimizacion sí se usaron MC para los fakes?} Na...
-Para los jets falseando fotones (\textit{jfakes}) se utilizó un método denominado \texttt{ABCD}, y para los electrones falseando fotones (\textit{efakes}) un método denominado \texttt{Tag\&Probe}. El modelado de todos los fondos se describe en las siguientes Secciones.
+Para los jets falseando fotones (\textit{jfakes}) se emplea un método denominado \texttt{ABCD}, y para los electrones falseando fotones (\textit{efakes}) un método denominado \texttt{Tag\&Probe}. El modelado de todos los fondos se describe en las siguientes Secciones.
 
 \subsection{Muestras de fondo a partir de simulaciones de Monte Carlo}
 
-Los fondos del SM con fotones `reales' fueron modelados utilizando simulaciones de MC, los cuales consisten en: \phj, \wph, \ttbarph, \wphph, \zph, \zphph, \phph. Los tres primeros son considerados los de mayor impacto en el análisis y por ende fueron normalizados en respectivas regiones de control. Para el resto de los fondos solo se utilizaron las simulaciones con las normalizaciones descriptas en la Sección \ref{sec:mc_weights}. 
+Los fondos del SM con fotones <<reales>> son modelados utilizando simulaciones de MC, los cuales consisten en: \phj, \wph, \ttbarph, \wphph, \zph, \zphph, \phph. Los tres primeros son considerados de mayor impacto en el análisis y por ende son normalizados en respectivas regiones de control. Para el resto de los fondos solo se utilizan las simulaciones con las normalizaciones descriptas en la Sección \ref{sec:mc_weights}. 
 % \solved{reescrito}
 % Cabe mencionar que también el fondo \znunuph es considerado de alta importancia en el análisis, pero la dificultad para diseñar una región de control dedicada llevó a la decisión de utilizarlo con las normalizaciones usuales. La parte del análisis que se basa en la producción electrodébil  sí hace uso de una región de control dedicada para este análisis, y se describe en el Capítulo \ref{cap:analysis_EWK}.
-Cabe mencionar que también el fondo \znunuph tiene un impacto considerable en algunas regiones del análisis, pero la dificultad para diseñar una región de control para dicho fondo sin contaminación de señal, llevó a la decisión de utilizarlo sin una normalización dedicada. 
+Cabe mencionar que también el fondo \znunuph tiene un impacto considerable en algunas regiones del análisis, pero la dificultad de diseñar una región de control para dicho fondo sin contaminación de señal, llevó a la decisión de utilizarlo sin una normalización dedicada. 
 % \solved{sigue estando mal poner normalizaciones usuales si ya lo describi en una seccion ?} Reescrito, omitiendo la palabra usuales
-La parte del análisis que se basa en la producción electrodébil sí hace uso de una región de control dedicada para este análisis, debido a que el impacto de dicho proceso es mucho más elevado, como se describe en el Capítulo \ref{cap:analysis_EWK}.
+La parte del análisis que se basa en la producción electrodébil sí hace uso de una región de control dedicada para este fondo, debido a que el impacto de dicho proceso es mucho más elevado, como se describe en el Capítulo \ref{cap:analysis_EWK}.
 
-Todos los procesos salvo \ttbarph fueron simulados utilizando el generador {\texttt{SHERPA} v2.2} \cite{Bothmann:2019yzt}. Los elementos de la matriz se calculan para un máximo de cuatro partones
-a LO y se fusionan con la lluvia de partones de \texttt{SHERPA} \cite{Schumann:2007mg} utilizando la prescripción de \texttt{MEPS@LO} \cite{Hoeche:2012yf}. La muestra de \ttbarph se genera con \texttt{MadGgraph5\_aMC@NLO} \cite{Alwall:2014hca} a segundo orden en teoría de perturbaciones (NLO), con \texttt{Pythia8} para el modelo de la lluvia de partones \cite{Sjostrand:2014zea}. 
+Todos los procesos, salvo \ttbarph, fueron simulados utilizando el generador {\texttt{SHERPA} v2.2} \cite{Bothmann:2019yzt}. Los elementos de la matriz se calculan para un máximo de cuatro partones
+a LO, y se fusionan con la lluvia de partones de \texttt{SHERPA} \cite{Schumann:2007mg} utilizando la prescripción de \texttt{MEPS@LO} \cite{Hoeche:2012yf}. La muestra de \ttbarph se genera con \texttt{MadGgraph5\_aMC@NLO} \cite{Alwall:2014hca} a segundo orden en teoría de perturbaciones (NLO), con \texttt{Pythia8} para el modelo de la lluvia de partones \cite{Sjostrand:2014zea}. 
 % \solved{algún dato más debería poner, cual?}. % nope
 Para todas las muestras se utilizó en la simulación del detector el programa \texttt{Geant4}. En la Tabla \ref{tab:mc_samples} se listan todas las muestras de fondos utilizadas en el análisis, las mismas se encuentras segmentadas (\textit{slicing}) según se aclara explícitamente para cada una.
 
@@ -257,21 +259,21 @@ Para todas las muestras se utilizó en la simulación del detector el programa \
 
 \subsection{Fondo de jets erróneamente reconstruidos como fotones}\label{sec:jfakes}
 
-Es posible que un jet sea erróneamente reconstruido como un fotón principalmente cuando proviene de un $\pi^0$. Los piones neutrales decaen rápidamente a dos fotones que naturalmente son reconstruidos en el ECAL. Para poder distinguir el decaimiento de un pión de la producción de un fotón individual se utiliza la primera capa del calorímetro, que tiene mayor granularidad (Sección \ref{sec:ph_id}). En el caso de que el pión se produzca con un elevado \pt, los dos fotones pueden estar muy colimados y por ende ser prácticamente indistinguibles de un fotón individual. Si bien la identificación \texttt{Tight} se encarga se suprimir en gran parte esta reconstrucción errónea, aún así puede contener una contaminación moderada de este proceso. Este tipo de fondo proviene principalmente de procesos como Multijets, $W+\text{jets}$ o de \ttbar decayendo semi-leptónicamente. 
+Es posible que un jet sea erróneamente reconstruido como un fotón principalmente cuando proviene de un $\pi^0$. Los piones neutrales decaen rápidamente a dos fotones, que naturalmente son reconstruidos en el ECAL. Para poder distinguir el decaimiento de un pión de la producción de un fotón individual, se utiliza la primera capa del calorímetro, que tiene mayor granularidad (Sección \ref{sec:ph_id}). En el caso de que el pión se produzca con un elevado \pt, los dos fotones pueden estar muy colimados y por ende ser prácticamente indistinguibles de un fotón individual. Si bien la identificación \texttt{Tight} se encarga se suprimir en gran parte esta reconstrucción errónea, aún así puede contener una contaminación moderada de este proceso. Este tipo de fondo proviene principalmente de procesos como Multijets, $W+\text{jets}$ o de \ttbar decayendo semi-leptónicamente. 
 % \solved{reescrito}
 % Esta reconstrucción errónea de jets no es esperable que sea modelada correctamente mediante simulaciones de MC, por lo que se utilizan técnicas basadas en datos para estimar su contribución.
-Como es extremadamente difícil modelar con precisión la tasa de errónea de jets a fotones, se emplean técnicas basadas en datos para estimar su contribución.
+Como es extremadamente difícil modelar con precisión la tasa de errónea de jets a fotones mediante simulaciones, se emplean técnicas basadas en datos para estimar su contribución.
 
 
-El método empleado para estimar este fondo se denomina \texttt{ABCD} \cite{Alonso:2233238}. El mismo hace uso de la diferencia que existe en las variables de aislamiento de fotones `reales' (señal en este contexto) y la de los `falsos' (fondo), para poder selecciones eventos de uno u otro.
+El método empleado para estimar este fondo se denomina \texttt{ABCD} \cite{Alonso:2233238}. El mismo hace uso de la diferencia que existe en las variables de aislamiento de fotones <<reales>> (señal en este contexto) y la de los <<falsos>> (fondo), para poder selecciones eventos de uno u otro.
 % \solved{Esto cuando se utilizaría? Me parece que mirar las formas quedó de un método viejo no? Ahora solo miramos número de eventos. O es para la correlación?} % lo cambie a variables y listo
-En el contexto de este método se definen fotones aislados como aquellos que pasan el WP \texttt{FixedCutTight},
+En el contexto de este método, se definen fotones aislados como aquellos que pasan el WP \texttt{FixedCutTight},
  % \solved{esta bien esto?} Si...
  $-20\,\gev<\ETiso<0\,\gev$ y $0<\pTiso<0.05$, y los no-aislados aquellos con $8\,\gev<\ETiso<80\,\gev$ o $0.15<\pTiso<1$.
 % \solved{capaz deba definir estas variables aca, o en la parte de fotones} Done, en fotones
-A su vez se utiliza una selección de identificación adicional que discrimina los fotones `reales' \texttt{Tight} de los fotones `falsos'. Este criterio de identificación se denomina \texttt{Non-Tight} (denominado también \textit{pseudo-photons}, \texttt{Tight-4} o \texttt{LoosePrime}) y consiste en los fotones que pasan la selección \texttt{Loose} pero que no pasan alguno de los criterios de selección \texttt{Tight} que emplea las variables $w_{s3}$, $F_{\text{side}}$, $\Delta E$ o $E_{\text{ratio}}$, por lo que esta selección es un subconjunto de los eventos seleccionados por el trigger de fotones \texttt{Loose} pero completamente ortogonal a la identificación \texttt{Tight}. 
+A su vez se utiliza una selección de identificación adicional que discrimina los fotones <<reales>> \texttt{Tight} de los fotones <<falsos>>. Este criterio de identificación se denomina \texttt{Non-Tight} (denominado también \textit{pseudo-photons}, \texttt{Tight-4} o \texttt{LoosePrime}) y consiste en los fotones que pasan la selección \texttt{Loose} pero que no pasan alguno de los criterios de selección \texttt{Tight} que emplea las variables $w_{s3}$, $F_{\text{side}}$, $\Delta E$ o $E_{\text{ratio}}$, por lo que esta selección es un subconjunto de los eventos seleccionados por el trigger de fotones \texttt{Loose}, pero completamente ortogonal a la identificación \texttt{Tight}. 
 
-El método \texttt{ABCD}, utilizado en este análisis en particular, preselecciona eventos con al menos un fotón con $\pt>1450\,\gev$, al menos dos jets y ningún leptón, cuyos requisitos son idénticos a los que se usan en el análisis descriptos en la Sección \ref{sec:selection}. A partir de ello define cuatro regiones \cite{ATL-COM-PHYS-2016-1626}:
+El método \texttt{ABCD}, utilizado en este análisis en particular, preselecciona eventos con al menos un fotón con $\pt>1450\,\gev$, al menos dos jets y ningún leptón, cuyos requisitos son idénticos a los que se usan en el análisis descriptos en la Sección \ref{sec:selection}. A partir de ello se definen cuatro regiones \cite{ATL-COM-PHYS-2016-1626}:
 
 \begin{itemize}
   \item Región A: fotones \texttt{Tight} y aislados
@@ -313,15 +315,15 @@ donde:
 
 \noindent
 son los denominados \textit{Fake Factors} (FF). 
-Si bien ambos factores deberían dar resultado equivalente, se encontró que al usar $\text{FF}_{\text{iso}}$ las incertidumbres sistemáticas se veían reducidas, y por ende se decidió usar al mismo en el análisis.
+Si bien ambos factores deben dar resultados equivalentes, se encuentra que al usar $\text{FF}_{\text{iso}}$ las incertezas sistemáticas se ven reducidas, y por ende se decide usarlo en el análisis.
 
-Distintas correcciones se realizan sobre este método. El primero es considerar la posibilidad de una contribución de fotones reales de señal en las regiones B, C y D. La misma se estima utilizando simulaciones de MC con fotones `reales' a nivel generador, y luego se resta a los datos observados para asegurar de este modo solo el conteo de eventos de fondo en cada región. Adicionalmente se considera una posible correlación entre variables calorimétricas y de identificación, que se puede agregar como un factor multiplicativo a la Ecuación \ref{eq:jfakes_ff}. Ese factor se define como:
+Distintas correcciones se realizan sobre este método. El primero es considerar la posibilidad de una contribución de fotones reales de señal en las regiones B, C y D. La misma se estima utilizando simulaciones de MC con fotones <<reales>> a nivel generador, y luego se resta a los datos observados, para asegurar de este modo solo el conteo de eventos de fondo en cada región. Adicionalmente, se considera una posible correlación entre variables calorimétricas y de identificación, que se puede agregar como un factor multiplicativo a la Ecuación \ref{eq:jfakes_ff}. Ese factor se define como:
 
 \begin{equation}
   R = \frac{N_a^b N_D^b}{N_B^b N_C^b} \neq 1
 \end{equation}
 
-Debido al blinding del análisis, no es posible conocer el número de eventos en la región A, por lo que se calcula el factor $R$ en regiones contenidas dentro de la zona de eventos de fondo, asumiendo que tienen la misma correlación entre ellas:
+Debido al blinding del análisis, no es posible conocer el número de eventos observados en la región A, por lo que se calcula el factor $R$ en regiones contenidas dentro de la zona de eventos de fondo, asumiendo que tienen la misma correlación entre ellas:
 
 \begin{equation}
   R' = \frac{N_a' N_D'}{N_B' N_C'} \neq 1
@@ -337,7 +339,7 @@ donde:
 \end{itemize}
 
 \noindent
-cuyas definiciones se basan en tener regiones exclusivamente con fondo pero con una estadística suficiente.
+cuyas definiciones se basan en tener regiones exclusivamente con fondo, pero con una estadística suficiente.
 
 Con estas correcciones la estimación del fondo final queda de la forma:
 
@@ -345,13 +347,13 @@ Con estas correcciones la estimación del fondo final queda de la forma:
     N_{\jfake} = N_A^b = \left[R' \frac{N_C - N_C^s}{N_D - N_D^s} \left( 1 - \frac{N_B^s}{N_B} \right)  \right] \times N_B = \text{FF}_{\text{iso}}(\absEta, \pt, \met) \times N_B \\
 \end{equation}
 
-Los FFs se estiman en función del \pt y \absEta del fotón, y la \met del evento. Distintas fuentes de incertidumbre sistemática son consideradas. 
+Los FFs se estiman en función del \pt y \absEta del fotón, y \met del evento. Distintas fuentes de incertidumbre sistemática son consideradas. 
 % \solved{Motivar elecciones} anotado como pregunta de jurado
-Una de ellas es cambiar la definición de la identificación \texttt{Non-Tight} utilizando ahora \texttt{Tight-3}\footnote{Selección \texttt{Loose} que no pasa alguno de los criterios de selección \texttt{Tight} que emplea las variables $w_{s3}$, $F_{\text{side}}$ o $\Delta E$} y \texttt{Tight-5}\footnote{Selección \texttt{Loose} que no pasa alguno de los criterios de selección \texttt{Tight} que emplea las variables $w_{s3}$, $F_{\text{side}}$, $\Delta E$, $E_{\text{ratio}}$ o $w_{\text{stot}}$}. A su vez se considera los efectos de la correlación residual calculado los FFs con $R'=1$ e incluyéndolos como sistemáticos.
+Una de ellas es cambiar la definición de la identificación \texttt{Non-Tight}, utilizando ahora \texttt{Tight-3}\footnote{Selección \texttt{Loose} que no pasa alguno de los criterios de selección \texttt{Tight} que emplea las variables $w_{s3}$, $F_{\text{side}}$ o $\Delta E$} y \texttt{Tight-5}\footnote{Selección \texttt{Loose} que no pasa alguno de los criterios de selección \texttt{Tight} que emplea las variables $w_{s3}$, $F_{\text{side}}$, $\Delta E$, $E_{\text{ratio}}$ o $w_{\text{stot}}$}. A su vez se considera los efectos de la correlación residual, calculando los FFs con $R'=1$, e incluyendo las variaciones como sistemáticos.
 
-En la Tabla \ref{tab:jfake_ff} se puede observar los valores de los FFs obtenidos en función del \pt y $|\eta|$ del fotón, y la \met del evento. Los valores obtenidos para $R'$ dieron cercanos a la unidad con desviaciones cercanas al 10\%.
+En la Tabla \ref{tab:jfake_ff} se puede observar los valores de los FFs obtenidos en función del \pt y $|\eta|$ del fotón, y \met del evento. Los valores obtenidos para $R'$ dan cercanos a la unidad con desviaciones cercanas al 10\%.
 
-El fondo para cada región (R) del análisis se estima definiendo una correspondiente región de control de jets (CSJ), que cumple el rol de la región $N_B$ y se define de igual forma que R pero reemplazando los cortes sobre fotones por jets. Se estima la contribución del fondo entonces como:
+El fondo para cada región (R) del análisis se estima definiendo una correspondiente región de control de jets (CSJ), que cumple el rol de la región $N_B$, y se define de igual forma que R pero reemplazando los cortes sobre fotones por jets. Se estima la contribución del fondo entonces como:
 
 % \begin{equation}
 %   N^{\text{R}}_{j\rightarrow\gamma} = \text{FF}_{\text{iso}} \cdot N^{\text{R}}_{\mathrm{CSJ}} 
@@ -370,7 +372,7 @@ En el caso de no observar eventos en alguna CSJ, se hace una estimación conserv
 
 \begin{table}[!ht]
   \centering
-  \caption{Valores obtenidos para los factores de reconstrucción errónea de jets en fotones en función del \pt y $|\eta|$ del fotón, y la \met del evento. Las incertidumbres son tanto estadísticas como sistemáticas.}
+  \caption{Valores obtenidos para los factores de reconstrucción errónea de jets en fotones en función del \pt y $|\eta|$ del fotón, y \met del evento. Las incertidumbres son tanto estadísticas como sistemáticas.}
   \resizebox{.6\textwidth}{!}{
   \begin{tabular}{c|l|ccc}
     \hline
@@ -380,19 +382,19 @@ En el caso de no observar eventos en alguna CSJ, se hace una estimación conserv
     \hline
     \hline
     \multirow{6}{*}{Barrel}       & $[145-200]$   & 0.055 $\pm$ 0.008 & 0.042 $\pm$ 0.005 &  0.07 $\pm$ 0.02 \\
-  & $[200-250]$                      & 0.044 $\pm$ 0.005 & 0.027 $\pm$ 0.003 &  0.06 $\pm$ 0.02 \\
-  & $[250-300]$                      & 0.041 $\pm$ 0.003 & 0.022 $\pm$ 0.005 &  0.06 $\pm$ 0.01 \\
-  & $[300-350]$                      & 0.037 $\pm$ 0.004 & 0.019 $\pm$ 0.003 &  0.05 $\pm$ 0.01  \\
-  & $[350-400]$                      & 0.036 $\pm$ 0.003 & 0.019 $\pm$ 0.004 &  0.06 $\pm$ 0.01 \\
-  & $>400$                           & 0.038 $\pm$ 0.005 & 0.013 $\pm$ 0.002 &  0.05 $\pm$ 0.01  \\
+    & $[200-250]$ & 0.044 $\pm$ 0.005 & 0.027 $\pm$ 0.003 &  0.06 $\pm$ 0.02 \\
+    & $[250-300]$ & 0.041 $\pm$ 0.003 & 0.022 $\pm$ 0.005 &  0.06 $\pm$ 0.01 \\
+    & $[300-350]$ & 0.037 $\pm$ 0.004 & 0.019 $\pm$ 0.003 &  0.05 $\pm$ 0.01  \\
+    & $[350-400]$ & 0.036 $\pm$ 0.003 & 0.019 $\pm$ 0.004 &  0.06 $\pm$ 0.01 \\
+    & $>400$      & 0.038 $\pm$ 0.005 & 0.013 $\pm$ 0.002 &  0.05 $\pm$ 0.01  \\
 
     \hline
     \multirow{6}{*}{End-cap}      & $[145-200]$                      & 0.05 $\pm$ 0.02 & 0.05 $\pm$ 0.01 & 0.2 $\pm$ 0.1 \\
-       & $[200-250]$                      & 0.05 $\pm$ 0.01 & 0.04 $\pm$ 0.01 & 0.2 $\pm$ 0.1  \\
-   & $[250-300]$                      & 0.050  $\pm$ 0.008 & 0.04 $\pm$ 0.01 & 0.14 $\pm$ 0.04  \\
-   & $[300-350]$                      & 0.052 $\pm$ 0.009 & 0.030  $\pm$ 0.006 & 0.08  $\pm$ 0.05 \\
-   & $[350-400]$                      & 0.058 $\pm$ 0.007 & 0.043 $\pm$ 0.008 & 0.2 $\pm$ 0.1 \\
-   & $>400$                           & 0.07  $\pm$ 0.01 & 0.047 $\pm$ 0.008 & 0.14 $\pm$ 0.05 \\
+   & $[200-250]$ & 0.05 $\pm$ 0.01 & 0.04 $\pm$ 0.01 & 0.2 $\pm$ 0.1  \\
+   & $[250-300]$ & 0.050  $\pm$ 0.008 & 0.04 $\pm$ 0.01 & 0.14 $\pm$ 0.04  \\
+   & $[300-350]$ & 0.052 $\pm$ 0.009 & 0.030  $\pm$ 0.006 & 0.08  $\pm$ 0.05 \\
+   & $[350-400]$ & 0.058 $\pm$ 0.007 & 0.043 $\pm$ 0.008 & 0.2 $\pm$ 0.1 \\
+   & $>400$      & 0.07  $\pm$ 0.01 & 0.047 $\pm$ 0.008 & 0.14 $\pm$ 0.05 \\
     \hline
     \hline
 
@@ -422,8 +424,8 @@ En el caso de no observar eventos en alguna CSJ, se hace una estimación conserv
 
 Los fotones y los electrones pueden dejar lluvias electromagnéticas muy
 similares en el ECAL, cuya reconstrucción se describe en la Sección \ref{sec:ph_el}.
-Si bien los algoritmos de reconstrucción de electrones y fotones están diseñados para poder discriminar uno de otros, una pequeña fracción residual de electrones puede ser reconstruida erróneamente como fotones. Si bien la reconstrucción de los clusters es altamente efectiva, la fracción de electrones mal reconstruidos se debe prácticamente a ineficiencias en la reconstrucción de trazas. Por ejemplo, la traza de un electrón puede ser mal reconstruida como un vértice de conversión y por ende el mismo es reconstruido como un fotón convertido. O inclusive una errónea asociación de la traza con el cluster puede hacer que el electrón sea reconstruido como fotón no convertido.
-Puede ocurrir a su vez, que el cluster no satisfaga los criterios de ambigüedad y el objeto sea almacenado por duplicado como electrón y fotón. Esto en general es fácil de suprimir aplicando requisitos de solapamiento, pero estos pueden favorecer al electrón y por ende tener en la selección del análisis nuevos electrones mal reconstruidos. Este tipo de efectos se ve principalmente en procesos como $W(l\nu)+\text{jets}$, $Z(ee)+\text{jets}$ o \ttbar. Nuevamente, como es prácticamente imposible estimar esta reconstrucción errónea con simulaciones de MC, se utiliza una técnica basada en datos para estimar dicha fracción de reconstrucción. Para ello se utiliza una muestra de eventos con producción de bosones $Z$. Como el mismo no puede decaer a $e+\gamma$, los eventos con este par de partículas y que parecieran provenir del decaimiento de un $Z$ son un buen indicio de que ese fotón en realidad es un electrón mal reconstruido. En ese caso se puede estimar una fracción de reconstrucción errónea (Fake Factor, FF) como:
+Si bien los algoritmos de reconstrucción de electrones y fotones están diseñados para poder discriminar uno de otros, una pequeña fracción residual de electrones puede ser reconstruida erróneamente como fotones. Si bien la reconstrucción de los clusters es altamente efectiva, la fracción de electrones mal reconstruidos se debe prácticamente a ineficiencias en la reconstrucción de trazas. Por ejemplo, la traza de un electrón puede ser mal reconstruida como un vértice de conversión, y por ende el mismo es reconstruido como un fotón convertido. O inclusive una errónea asociación de la traza con el cluster puede hacer que el electrón sea reconstruido como fotón no convertido.
+Puede ocurrir a su vez, que el cluster no satisfaga los criterios de ambigüedad, y el objeto sea almacenado por duplicado como electrón y fotón. Esto en general es fácil de suprimir aplicando requisitos de solapamiento, aunque dichos requisitos pueden favorecer al electrón, y tener nuevamente en la selección del análisis electrones mal reconstruidos. Este tipo de efectos se ve principalmente en procesos como $W(l\nu)+\text{jets}$, $Z(ee)+\text{jets}$ o \ttbar. Al igual que con los jets, como es prácticamente imposible estimar esta reconstrucción errónea con simulaciones de MC, se utiliza una técnica basada en datos para estimar dicha fracción de reconstrucción errónea. Para ello se utiliza una muestra de eventos con producción de bosones $Z$, como el mismo no puede decaer a $e+\gamma$, los eventos con este par de partículas y que parecieran provenir del decaimiento de un $Z$, son un buen indicio de que ese fotón en realidad es un electrón mal reconstruido. En ese caso se puede estimar una fracción de reconstrucción errónea (Fake Factor, FF) como:
 
 \begin{equation}
   F_{e\to \gamma} \equiv \frac{P(e^{\text{real}}\to \gamma^{\text{reco}})}{P(e^{\text{real}}\to e^{\text{reco}})}  = \frac{\epsilon(e^{\text{real}}\to \gamma^{\text{reco}})}{\epsilon(e^{\text{real}}\to e^{\text{reco}})} \frac{\epsilon^{\text{ID}}_{\gamma}}{\epsilon^{\text{ID}}_{e}} = \frac{N_{e^{\text{real}}\to \gamma^{\text{reco}}}}{N_{e^{\text{real}}\to e^{\text{reco}}}} \frac{\epsilon^{\text{ID}}_{\gamma}}{\epsilon^{\text{ID}}_{e}}
@@ -431,7 +433,7 @@ Puede ocurrir a su vez, que el cluster no satisfaga los criterios de ambigüedad
 \end{equation} 
 
 \noindent
-donde $P(e\to e(\gamma))$ es la probabilidad de reconstruir e identificar un electrón `real' como un electrón (fotón), $\epsilon(e^{\text{real}}\to e(\gamma)^{\text{reco}})$ es la eficiencia de reconstruir un electrón `real' como un electrón (fotón)\footnote{Definida como $\frac{N_{e^{\text{real}}\to e(\gamma)^{\text{reco}}}}{N_{e^{\text{real}}\to e^{\text{reco}}}+N_{e^{\text{real}}\to \gamma^{\text{reco}}}}$}, $\epsilon^{\text{ID}}_{e} (\epsilon^{\text{ID}}_{\gamma})$ es la eficiencia de identificar un electrón (fotón) y $N_{\text{real } e\to \text{reco } e(\gamma)}$ el número electrones reconstruidos como electrones (fotones). Como no es posible saber a partir de los datos cuándo un electrón es `real', este factor debe ser estimado a partir de los objetos ya reconstruidos y sus eficiencias, magnitudes que sí son mensurables en datos. Para una dada muestra con eventos de bosones $Z$, la probabilidad de reconstruir a sus productos de decaimiento como pares $ee$ o $e\gamma$ esta dada por:
+donde $P(e\to e(\gamma))$ es la probabilidad de reconstruir e identificar un electrón <<real>> como un electrón (fotón), $\epsilon(e^{\text{real}}\to e(\gamma)^{\text{reco}})$ es la eficiencia de reconstruir un electrón <<real>> como un electrón (fotón)\footnote{Definida como $\frac{N_{e^{\text{real}}\to e(\gamma)^{\text{reco}}}}{N_{e^{\text{real}}\to e^{\text{reco}}}+N_{e^{\text{real}}\to \gamma^{\text{reco}}}}$}, $\epsilon^{\text{ID}}_{e} (\epsilon^{\text{ID}}_{\gamma})$ es la eficiencia de identificar un electrón (fotón), y $N_{\text{real}\ e\to \text{reco}\ e(\gamma)}$ el número electrones reconstruidos como electrones (fotones). Como no es posible saber a partir de los datos cuándo un electrón es <<real>>, este factor debe ser estimado a partir de los objetos ya reconstruidos y sus eficiencias, magnitudes que sí son mensurables en datos. Para una dada muestra con eventos de bosones $Z$, la probabilidad de reconstruir a sus productos de decaimiento como pares $ee$ o $e\gamma$ esta dada por:
 % \solved{tengo que pensar mejor estas fórmulas, pero va por aca la cosa} O sea están bien, se omitio un paso nomas que se basa en el footnote...
 
 \begin{equation}
@@ -451,7 +453,7 @@ Usando la Ecuación \ref{eq:efake_ff} se puede escribir al FF en función de los
 
 El método emplea una muestra a partir de todos los datos tomados durante el Run 2, seleccionando aquellos que contengan al menos dos electrones, o al menos un electrón y un fotón. En el caso de múltiples posibles pares en el evento, se utiliza la combinación cuya masa invariante esté más cerca de $m_Z=91.1876\,\gev$ \cite{z_pdg}. A su vez, se aplica un corte con $\met<40\,\gev$ para suprimir eventos con $W$ decayendo a electrones. Los requisitos de los objetos son idénticos a los que se usan en el análisis descriptos en la Sección \ref{sec:selection}.
 
-Para identificar si el par proviene del decaimiento de un bosón $Z$ se reconstruye su masa invariante, de forma separada dependiendo si el par es $ee$ o $e\gamma$. Como el FF se calcula en función de $|\eta|$, se obtienen distribuciones de la masa invariante de cada par para distintos intervalos de $|\eta|$, como se describe en la Figura \ref{fig:efakes_matrix}. En estas selecciones puede ocurrir que haya un conjunto de eventos que no provenga del $Z$ (fondo no resonante), por lo que se ajusta una función del tipo `señal+fondo' a cada distribución de masa. Para la señal se utiliza una función del tipo \textit{Double-sided crystal ball}\footnote{La misma se define como una Gaussiana cuyas colas se modifican por funciones potenciales. Los parámetros libres son la media y desviación estándar de la Gaussiana, junto con los factores de cada potencia y las fronteras donde se juntan con la Gaussiana} \cite{Das:2016stf} y para el fondo una función Gaussiana.
+Para identificar si el par proviene del decaimiento de un bosón $Z$ se reconstruye su masa invariante, de forma separada, dependiendo si el par es $ee$ o $e\gamma$. Como el FF se calcula en función de $|\eta|$, se obtienen distribuciones de la masa invariante de cada par, para distintos intervalos de $|\eta|$ como se describe en la Figura \ref{fig:efakes_matrix}. En estas selecciones, puede ocurrir que haya un conjunto de eventos que no provenga del $Z$ (fondo no resonante), por lo que se ajusta una función del tipo <<señal+fondo>> a cada distribución de masa. Para la señal se utiliza una función del tipo \textit{Double-sided crystal ball}\footnote{La misma se define como una Gaussiana, cuyas colas se modifican por funciones potenciales. Los parámetros libres son la media y desviación estándar de la Gaussiana, junto con los factores de cada potencia y las fronteras donde se juntan con la Gaussiana} \cite{Das:2016stf} y para el fondo una función Gaussiana.
 
 \begin{figure}
   \centering
@@ -460,7 +462,7 @@ Para identificar si el par proviene del decaimiento de un bosón $Z$ se reconstr
   \label{fig:efakes_matrix}
 \end{figure}
 
-Una vez ajustada cada distribución, la función se integra alrededor del pico del $Z$ en una ventana definida como $[\mu - 3\sigma, \mu + 3\sigma]$, para obtener el número de eventos que se emplea en los factores de la Ecuación \ref{eq:efake_ff} para cada intervalo de $|\eta|$. En la Figura \ref{fig:efakes_fit} se puede observar el resultado del ajuste para la distribución de masa invariante de pares $ee$ y $e\gamma$ con $|\eta| \in [0-0.6]$. 
+Una vez ajustada cada distribución, la función se integra alrededor del pico del $Z$ en una ventana definida como $[\mu - 3\sigma, \mu + 3\sigma]$, para obtener el número de eventos que se emplea en los factores de la Ecuación \ref{eq:efake_ff}, para cada intervalo de $|\eta|$. En la Figura \ref{fig:efakes_fit} se puede observar el resultado del ajuste para la distribución de masa invariante de pares $ee$ y $e\gamma$, con $|\eta| \in [0-0.6]$. 
 % \solved{reescrito}
 % Cabe mencionar que anteriormente el método empleada una clasificación adicional en \pt, y que eso introducía un sesgo en las distribuciones que era contemplado agregando una función Gaussiana adicional, centrada en valores. Como actualmente se aplica un corte en $\pt>145\,\gev$ el efecto del mismo es completamente despreciable para los eventos cerca del pico del $Z$.
 Cabe mencionar que al aplicar un corte en $\pt>145\,\gev$ se introduce un sesgo en la distribución de la masa invariante de los pares, el cual se considera despreciable dada su lejanía con el pico del $Z$. Dicho efecto se observa en la región de masas de \magn{300}{GeV}, para el cual se incluye una función Gaussiana adicional al fondo, centrada en esa zona.
@@ -470,12 +472,12 @@ Cabe mencionar que al aplicar un corte en $\pt>145\,\gev$ se introduce un sesgo 
   \centering
   \includegraphics[width=0.45\textwidth]{images/analysis/egFF_fit_ee_eta_0_06.pdf}
   \includegraphics[width=0.45\textwidth]{images/analysis/egFF_fit_eg_eta_0_06.pdf}
-  \caption{Distribución de la masa invariante para los pares $ee$ (izquierda) and $e\gamma$ (derecha) con $|\eta| \in [0-0.6]$, junto con las funciones ajustadas de señal (rojo) y fondo (verde). La región celeste representa la ventana de integración empleada para calcular los FFs. A alto \pt una Gaussiana adicional es incluida para tener en cuenta el sesgo al aplicar un corte en \pt, pero resulta despreciable su contribución en el número de eventos cerca del pico del $Z$.}
+  \caption{Distribución de la masa invariante para los pares $ee$ (izquierda) and $e\gamma$ (derecha) con $|\eta| \in [0-0.6]$, junto con las funciones ajustadas de señal (rojo) y fondo (verde). La región celeste representa la ventana de integración empleada para calcular los FFs. A alto \pt, una Gaussiana adicional es incluida para tener en cuenta el sesgo al aplicar un corte en dicha variable, que resulta despreciable su contribución en el número de eventos cerca del pico del $Z$.}
   \label{fig:efakes_fit}
 \end{figure}
 
 
-La incerteza sistemática se estima variando las ventanas de integración a $[\mu - 2\sigma, \mu + 2\sigma]$ y $[\mu - 4\sigma, \mu + 4\sigma]$. Adicionalmente se calculan los FFs sin la sustracción del fondo, incluyendo esta variación como un sistemático que contempla el sesgo en la elección de la función de ajuste. Finalmente, como la energía del fotón `falso' es reconstruida con algoritmos para fotones, cuando en realidad deberían haber sido empleados los de electrones, y se considera esto como una incertidumbre sistemática. Para ellos se calculan nuevamente los FFs ahora modificando el valor de energía de los fotones en un factor 1.5\%. Dicho valor se obtiene de las diferencias que existen en el $\mu$ de las distribuciones con pares $ee$ y pares $e\gamma$ \cite{EXOT-2016-32}. Los valores obtenidos para los FFs junto con sus incertidumbres se pueden observar en la Tabla \ref{tab:efakes_ff}. Se puede ver como los mismos aumentan con $|\eta|$, relacionados con la cantidad de material que atraviesan y con la mayor fracción de reconstrucción de fotones convertidos con una sola traza.
+La incerteza sistemática se estima variando las ventanas de integración a $[\mu - 2\sigma, \mu + 2\sigma]$ y $[\mu - 4\sigma, \mu + 4\sigma]$. Adicionalmente se calculan los FFs sin la sustracción del fondo, incluyendo esta variación como un sistemático que contempla el sesgo en la elección de la función de ajuste. Finalmente, como la energía del fotón <<falso>> es reconstruida con algoritmos para fotones, cuando en realidad deberían haber sido empleados los de electrones, se considera esto como una incertidumbre sistemática. Para ellos se calculan nuevamente los FFs ahora modificando el valor de energía de los fotones en un factor 1.5\%. Dicho valor se obtiene de las diferencias que existen entre el $\mu$ de las distribuciones con pares $ee$ y pares $e\gamma$ \cite{EXOT-2016-32}. Los valores obtenidos para los FFs junto con sus incertidumbres se pueden observar en la Tabla \ref{tab:efakes_ff}. Se puede ver como los mismos aumentan con $|\eta|$, relacionados con la cantidad de material que atraviesan y con la mayor fracción de reconstrucción de fotones convertidos con una sola traza.
 
 
 \begin{table}
@@ -532,17 +534,17 @@ En el caso de no observar eventos en alguna CSE, se hace una estimación conserv
 
 \section{Selección de eventos y objetos para el análisis}\label{sec:selection}
 
-El presente análisis hace uso de la totalidad de datos con una energía de centro de masa de $13$ TeV tomados con el detector ATLAS durante el Run 2 y que son `aptos para física', acumulando una luminosidad integrada de $139\,\ifb$. Los datos fueron seleccionados a partir del trigger \texttt{HLT\_g140\_loose}, que selecciona eventos con al menos un fotón con identificación \texttt{Loose} y con $\ET>140\,\gev$. Este trigger es completamente eficiente \cite{TRIG-2018-05}, superando el 99\% de eficiencia para $\ET>145\,\gev$, estable frente a pileup y sin dependencia con $\eta$.
+El presente análisis hace uso de la totalidad de datos con una energía de centro de masa de \magn{13}{TeV}, tomados con el detector ATLAS durante el Run 2 y que son <<aptos para física>>, acumulando una luminosidad total integrada de $139\,\ifb$. Los datos son seleccionados a partir del trigger \texttt{HLT\_g140\_loose}, que selecciona eventos con al menos un fotón con identificación \texttt{Loose} y con $\ET>140\,\gev$. Este trigger es completamente eficiente \cite{TRIG-2018-05}, superando el 99\% de eficiencia para $\ET>145\,\gev$, estable frente a pileup y sin dependencia en $\eta$.
 
-Los datos y simulaciones de MC empleados para el análisis fueron preseleccionados con la derivación \texttt{SUSY1} descripta en la Sección \ref{sec:lhc_samples}, orientada a análisis con moderada actividad hadrónica y con la presencia de un fotón energético entre otras cosas.
+Los datos y simulaciones de MC empleados para el análisis son preseleccionados con la derivación \texttt{SUSY1} descripta en la Sección \ref{sec:lhc_samples}, orientada a análisis con moderada actividad hadrónica y con la presencia de un fotón energético entre otras cosas.
 
-Los objetos de interés para esta Tesis son los fotones, jets y leptones (electrones y muones) a los que se les aplica diferentes requisitos offline. Inicialmente se les requiere una selección base (\textit{baseline}) 
+Los objetos de interés para esta Tesis son los fotones, jets y leptones (electrones y muones) a los que se les aplica diferentes requisitos offline. Inicialmente se les requiere una selección base (\textit{baseline}),
 % siguiendo algunas de las recomendaciones que hace el grupo de SUSY de la colaboración ATLAS y
-% \solved{hernan sugiere sacarlo, pero despues justificarlos, no se si habria que sacarlo} Si, evitemos usar 'recomendaciones', verbalmente se puede aclarar despues que de previos análisis se aprendio tal cosa...
-que se describe a continuación. La misma se emplea para aplicar un requisito de solapamiento (\textit{overlap removal}) entre los distintos objetos del evento.
+% \solved{hernan sugiere sacarlo, pero despues justificarlos, no se si habria que sacarlo} Si, evitemos usar <<recomendaciones>>, verbalmente se puede aclarar despues que de previos análisis se aprendio tal cosa...
+que se emplea para aplicar un requisito de solapamiento (\textit{overlap removal}) entre los distintos objetos del evento.
  % y posteriormente empleados para el cálculo de \met 
  % \solved{Ojo con esto al final no se usaba para met, no?}. NOPE
-Finalmente a los fotones, jets y leptones se les aplica una selección denominada \textit{signal}, siendo estos objetos los que definen las distintas regiones del análisis. Adicionalmente a los fondos de MC se les aplica una selección a nivel generador para evitar un solapamiento o doble conteo entre muestras. Por ejemplo, a las muestras de \zph, \wph, \ttbarph y \phj se les solicita que tengan uno y solo un fotón a nivel generador, y en cambio a las \zphph y \wphph dos fotones. 
+Finalmente a los fotones, jets y leptones se les aplica una selección denominada \textit{signal}, siendo estos objetos los que definen las distintas regiones del análisis. Adicionalmente, a los fondos de MC se les aplica una selección a nivel generador para evitar un solapamiento o doble conteo entre muestras. Por ejemplo, a las muestras de \zph, \wph, \ttbarph y \phj, se les solicita que tengan uno y solo un fotón a nivel generador, y en cambio a las \zphph y \wphph dos fotones. 
 
 % \solved{mencionar a VgammaORTool} Done
 
@@ -555,9 +557,9 @@ Los fotones baseline deben pasar la selección de identificación \texttt{Tight}
 
 \subsubsection{Electrones}
 
-Los electrones baseline son requeridos tener $\pt>10\,\gev$, $|\eta|<2.47$ excluyendo la región crack y ser originados en el vértice primario. El requerimiento de identificación \texttt{Loose}
+A los electrones baseline se los selecciona con $\pt>10\,\gev$, $|\eta|<2.47$ excluyendo la región crack, y ser originados en el vértice primario. El requerimiento de identificación \texttt{Loose}
 % \solved{en realidad es LooseAndBLayerLLH} 
-es aplicado. Los electrones signal son seleccionados además con $\pt>25\,\gev$, aplicando la identificación \texttt{Tight}
+es aplicado. Los electrones signal son seleccionados además, con un $\pt>25\,\gev$, aplicando la identificación \texttt{Tight}
 % \solved{en realidad es TightLLH} 
 y el requisito de aislamiento \texttt{FCLoose}, o \texttt{FCHighPtCaloOnly} si tienen $\pt>200\,\gev$.
 
@@ -570,7 +572,7 @@ Los muones baseline son seleccionados con la identificación \texttt{Medium}, te
 
 \subsubsection{Jets}
 
-Se emplean Jets \texttt{EMTopo} y la selección baseline se define como aquellos con $\pt>30\,\gev$ y $|\eta|<2.8$. Este último requisito no es empleado en el cálculo de \met. Selecciones basadas en las trazas son aplicadas para rechazar jets con $\pt<120\,\gev$ y $|\eta|<2.4$ que se originen de las interacciones de pileup \cite{ATL-PHYS-PUB-2014-001}. Jets signal son seleccionados con $\pt>30\,\gev$ y $|\eta|<2.5$. La identificación de $b$-jets es empleada en la definición de algunas regiones de control. Para ello se utiliza el algoritmo \texttt{MV2c10}, con una eficiencia de selección de los mismos del 77\%.
+Se emplean Jets \texttt{EMTopo}, y la selección baseline se define como aquellos con $\pt>30\,\gev$ y $|\eta|<2.8$. Este último requisito no es empleado en el cálculo de \met. Selecciones basadas en las trazas son aplicadas para rechazar jets con $\pt<120\,\gev$ y $|\eta|<2.4$ que se originen de las interacciones de pile-up \cite{ATL-PHYS-PUB-2014-001}. Jets signal son seleccionados con $\pt>30\,\gev$ y $|\eta|<2.5$. La identificación de $b$-jets es empleada en la definición de algunas regiones de control. Para ello se utiliza el algoritmo \texttt{MV2c10}, con una eficiencia de selección de los mismos del 77\%.
 
 \subsubsection{Overlap removal}
 
@@ -578,32 +580,31 @@ Como se mencionó en capítulos anteriores, los algoritmos de reconstrucción pu
 El overlap removal está diseñado específicamente para el tipo de análisis \cite{ATL-COM-PHYS-2016-1518}, y los diferentes pasos aplicados en el presente análisis se resumen a continuación: 
 
 \begin{itemize}
-  \item los muones CT que compartan traza con algún electrón de se eliminan
-  \item los electrones que compartan traza con algún muon se eliminan
-  \item los fotones que tengan $\Delta R<0.4$ con algún electrón se eliminan
-  \item los fotones que tengan $\Delta R<0.4$ con algún muón se eliminan
-  \item los jets que tengan $\Delta R<0.2$ con algún electrón se eliminan
-  \item los electrones que tengan $\Delta R<0.4$ con algún jet se eliminan
-  \item los jets con número de trazas menor a 3 y que tengan $\Delta R<0.2$ con algún muón se eliminan
-  \item los muones que tengan $\Delta R<0.4$ con algún jet se eliminan
-  \item los jets que tengan $\Delta R<0.4$ con algún fotón se eliminan
+  \item se remueven aquellos muones CT que compartan traza con algún electrón
+  \item se remueven aquellos electrones que compartan traza con algún muon
+  \item se remueven aquellos fotones que tengan $\Delta R<0.4$ con algún electrón
+  \item se remueven aquellos fotones que tengan $\Delta R<0.4$ con algún muón
+  \item se remueven aquellos jets que tengan $\Delta R<0.2$ con algún electrón
+  \item se remueven aquellos electrones que tengan $\Delta R<0.4$ con algún jet
+  \item se remueven aquellos jets con número de trazas menor a 3 y que tengan $\Delta R<0.2$ con algún muón
+  \item se remueven aquellos muones que tengan $\Delta R<0.4$ con algún jet
+  \item se remueven aquellos jets que tengan $\Delta R<0.4$ con algún fotón
 \end{itemize}
 
 
 \subsubsection{Energía transversa faltante}
 
-El cálculo de \met se realiza de acuerdo a lo descripto en la Sección \ref{sec:met}. Los depósitos de energía en el calorímetro son asociados a los objetos de alto \pt en el siguiente orden: electrones, fotones, jets y muones. Las trazas que no fueron asociadas con ninguno de los objetos anteriores son incluidas en el término soft. Para el análisis una vez hecha la selección final de los objetos se hace una selección de eventos con $\met>50\,\gev$.
+El cálculo de \met se realiza de acuerdo a lo descripto en la Sección \ref{sec:met}. Los depósitos de energía en el calorímetro son asociados a los objetos de alto \pt en el siguiente orden: electrones, fotones, jets y muones. Las trazas que no fueron asociadas con ninguno de los objetos anteriores, son incluidas en el término soft. Durante el análisis, una vez hecha la selección final de los objetos, se hace una selección de eventos con $\met>50\,\gev$.
 % \solved{chequear}. Yep, pero solo para MC, ni aclarar igual
 
 
 \section{Definición de las regiones del análisis}
 
-Una vez obtenidas las muestras de señal y una primera estimación de los fondos del SM, el objetivo del análisis es poder diseñar regiones de señal que permitan hacer una discriminación entre ambos. Para ello se obtiene del espacio de parámetros, la combinación de requisitos o cortes que maximice la significancia esperada, descripta en la Sección \ref{sec:exp_sig}.
-La optimización se realiza en primer instancia conociendo a priori la cinemática del estado final del fondo y señal, y luego mediante un proceso iterativo para encontrar los valores de cortes más óptimos. Si bien el objetivo es maximizar la significancia esperada, se intenta no tener regiones muy dependientes del modelo. Con el objetivo de evitar problemas extremos de estadística o con el manejo de sistemáticos, se buscaron regiones que no tengan un número de eventos de fondo nulo, poniéndose un mínimo requerido de tres eventos. A su vez se realiza una estimación conservadora de las incertezas sistemáticas del 30\% del fondo total estimado.
+Una vez obtenidas las muestras de señal y una primera estimación de los fondos del SM, el objetivo del análisis es poder diseñar regiones de señal que permitan hacer una discriminación entre ambos. Para ello se obtiene del espacio de parámetros, la combinación de requisitos o cortes que maximiza la significancia esperada, descripta en la Sección \ref{sec:exp_sig}.
+La optimización se realiza en primer instancia conociendo a priori la cinemática del estado final del fondo y señal, y luego mediante un proceso iterativo para encontrar los valores de cortes más óptimos. Al maximizar significancia, se intenta además, no tener regiones muy dependientes del modelo. Con el objetivo de evitar problemas extremos de baja estadística, que causen problemas en el manejo de los sistemáticos, se buscan regiones que no tengan un número de eventos de fondo nulo, poniéndose un mínimo requerido de tres eventos. A su vez se realiza una estimación conservadora de las incertezas sistemáticas del 30\% del fondo total estimado.
 
-Una vez definidas las SRs, se puede proceder a la definición de las regiones de control y validación, que determinan un paso clave en el análisis para poder lograr un correcto modelado de los fondos. Las CRs se diseñaron para encontrar la normalización de los fondos principales del análisis mediante un ajuste de solo fondo a los datos. Las VRs en cambio fueron diseñadas cubriendo el espacio de parámetros entre las SRs y las CRs, con el objetivo de verificar que el modelado de los fondos y su extrapolación a las VRs es correcto. Como ambas hacen uso de los datos es indispensable que las mismas sean ortogonales a las SR para evitar un posible sesgo en los resultados finales y garantizar así las condiciones para el blinding.
-
-A continuación se detallan los pasos que se siguieron en la optimización hasta el diseño final de las SRs y sus respectivas CRs y VRs.
+Una vez definidas las SRs, se procede a la definición de las regiones de control y validación, que determinan un paso clave en el análisis para poder lograr un correcto modelado de los fondos. Las CRs se diseñan para normalizar los fondos principales del análisis, mediante un ajuste de solo fondo a los datos. Las VRs, en cambio, son diseñadas cubriendo el espacio de parámetros entre las SRs y las CRs, con el objetivo de verificar que el modelado de los fondos, y su extrapolación a las VRs, es correcto. Como ambas hacen uso de los datos, es indispensable que las mismas sean ortogonales a las SR para evitar un posible sesgo en los resultados finales, garantizando así las condiciones para el blinding.
+A continuación, se detallan los pasos que se siguieron en la optimización, hasta el diseño final de las SRs y sus respectivas CRs y VRs.
 
 \subsection{Selección de eventos de señal}\label{sec:sig_selection}
 
@@ -626,7 +627,7 @@ Estas diferencias entre los distintos puntos de señal motivó al diseño de tre
 
 % \solved{La aplicación y explicación de estos cortes no tendría que ir antes de la optimización ?} se referia a que la optimizacion se hace sobre las varaibles que no son fijas, en realidad ninguna esta fija, solo el numero de fotones. ademas ni se menciona la palabra optimizacion
 
-Definidas las selecciones caracterizadas por el estado final del modelo, se procede a agregar variables que hagan efectiva la discriminación de fondo y señal. Para reducir fondos donde \met es principalmente instrumental, se aplica una separación angular entre la misma y los objetos presentes en el evento. En la señal \met proviene principalmente de los \gravino, que se espera que no tenga ninguna correlación angular con los fotones y jets, a diferencia de \met instrumental que se espera que esté alineada con los mismos. En procesos donde \met proviene de la reconstrucción errónea de alguno de los objetos, es esperable que la misma esté alineada con ese objeto. Por ese motivo se aplica un corte inferior en las siguientes variables:
+Definidas las selecciones caracterizadas por el estado final del modelo, se procede a agregar variables que hagan efectiva la discriminación de fondo y señal. Para reducir fondos donde \met es principalmente instrumental, se aplica una separación angular entre la misma y los objetos presentes en el evento. En la señal, \met proviene principalmente de los \gravino, que se espera que no tenga ninguna correlación angular con los fotones y jets. En cambio, en procesos donde \met proviene de la reconstrucción errónea de alguno de los objetos, es esperable que la misma esté alineada con ese mismo objeto. Por ese motivo se aplica un corte inferior en las siguientes variables:
 
 \begin{equation}
   \begin{split}
@@ -653,10 +654,8 @@ Finalmente, para realizar una reducción de fondo adicional, se emplea la variab
 \end{equation}
 
 \noindent
-donde $1\le N \le N_{\text{jets}}$, que representa la fracción de \pt de los primeros $N$ jets con respecto a la totalidad de jets. Para el presente análisis se encontró que la variable \rtf daba los valores más óptimos de significancia. Las señales de SUSY se espera que contengan eventos con múltiples jets energéticos y por ende valores bajos de \rtf, a diferencia de los procesos del SM con baja actividad hadrónica y de baja energía, con valores de \rtf cercanos a la unidad. Cabe destacar que esta variable sólo es posible definirla en regiones que soliciten al menos cuatro jets.
-
+donde $1\le N \le N_{\text{jets}}$, que representa la fracción de \pt de los primeros $N$ jets con respecto a la totalidad de jets. Para el presente análisis se encuentra que la variable \rtf daba los valores más óptimos de significancia. Las señales de SUSY se espera que contengan eventos con múltiples jets energéticos, y por ende valores bajos de \rtf, a diferencia de los procesos del SM con baja actividad hadrónica y de baja energía, con valores de \rtf cercanos a la unidad. Cabe destacar que esta variable sólo es posible definirla en regiones que soliciten al menos cuatro jets.
 % \solved{mencionar lo que paso con el analisis phb? que se pensaba que los bjets del higgs podian llegar a servir para una nueva SR pero la imposibildiad de reconstruirlos correctamente no presentaba ninguna ventaja con estas SR, que en definitiva ya eran sensibles al analisis} Nope
-
 La definición formal de las regiones de señales se muestra en la Tabla \ref{tab:sr_def}.
 
 \begin{table}[ht!]
@@ -695,7 +694,7 @@ Si bien algunos análisis definen regiones de control dedicadas a diferentes pro
 
 La producción de pares de top, en su decaimiento leptónico, genera un estado final con dos $b$-jets, dos leptones y \met. La CRT dedicada a este proceso requiere entonces la presencia de al menos dos $b$-jets y un leptón, garantizando así la ortogonalidad con las SRs. Para evitar contaminación de señal se emplea un corte superior en \met, ya que para este proceso se espera que no sea tan alta como en la señal de SUSY. 
 
-La CRW dedicada a \wph se diseña de forma similar a la CRT, pero aplicando un veto en los $b$-jets para evitar una contaminación del fondo de \ttbarph.
+La CRW, dedicada a \wph, se diseña de forma similar a la CRT, pero aplicando un veto en los $b$-jets para evitar una contaminación del fondo de \ttbarph.
 
 En los procesos como \phj, donde \met es principalmente instrumental, se espera que el vector \met esté alineado con alguno de los jets. La CRQ aplica un corte superior en \dphijetmet para incrementar la abundancia de este fondo, garantizando también la ortogonalidad con las SRs. Si bien \met es baja para este proceso, como hay suficiente estadística, se aplica un corte inferior en la misma para tener mayor semejanza con las SRs.
 
@@ -730,9 +729,9 @@ En la Tabla \ref{tab:cr_def} se muestra la definición completa de las tres regi
 
 
 
-A continuación se definen las VRs, las cuales fueron diseñadas para verificar el correcto modelado de los fondos y su extrapolación a las SRs. Las mismas se encuentran en una región intermedia entre las CRs y las SRs, siempre siendo ortogonales a estas últimas. Se diseñaron un conjunto de VRs orientadas al modelado de los fondos de \wph y \ttbarph, otras para el de \phj y una dedicada al fondo de electrones erróneamente reconstruidos como fotones. Nuevamente se requiere en todas ellas al menos un fotón con $\pt>145\,\gev$.
+A continuación, se definen las VRs, las cuales fueron diseñadas para verificar el correcto modelado de los fondos, y su extrapolación a las SRs. Las mismas se encuentran en una región intermedia entre las CRs y las SRs, siempre siendo ortogonales a estas últimas. Se diseñaron un conjunto de VRs orientadas al modelado de los fondos de \wph y \ttbarph, otras para el de \phj, y una dedicada al fondo de electrones erróneamente reconstruidos como fotones. Nuevamente se requiere en todas ellas al menos un fotón con $\pt>145\,\gev$.
 
-Se definieron cinco VRs orientadas al fondo de \phj. Estas regiones recuperan el corte en \dphijetmet de las SRs, pero agregan un corte superior en \met de $200\,\gev$, siendo así ortogonales a ellas. Entre ellas se encuentran las VRM1L y VRM1H, orientadas a validar las regiones SRL y SRH respectivamente, emulando sus cortes en \pt del fotón y \met. A su vez la VRM1L incluye un corte similar en \rtf para validar la aplicación del mismo en las SRs. Ambas tienen un corte inferior en \met de $100\,\gev$, y se desprenden de ambas regiones de validación equivalente pero con un corte inferior en \met de $150\,\gev$, denominadas VRM2L y VRM2H. Finalmente se encuentra la VRQ, que es un compromiso entre las regiones anteriores, solicitando un reducido número de jets y a su vez el mínimo \pt para fotones. La definición completa de las VRs dedicadas al fondo de \phj se muestra en la Tabla \ref{tab:vrm_def}.
+Se definieron cinco VRs orientadas al fondo de \phj. Estas regiones recuperan el corte en \dphijetmet de las SRs, pero agregan un corte superior en \met de $200\,\gev$, siendo así ortogonales a ellas. Entre dichas regiones se encuentran las VRM1L y VRM1H, orientadas a validar las regiones SRL y SRH respectivamente, emulando sus cortes en \pt del fotón y \met. A su vez la VRM1L incluye un corte similar en \rtf para validar la aplicación del mismo en las SRs. Ambas tienen un corte inferior en \met de $100\,\gev$, y se desprenden de ambas, regiones de validación equivalentes pero con un corte inferior en \met de $150\,\gev$, denominadas VRM2L y VRM2H. Finalmente se encuentra la VRQ, que es un compromiso entre las regiones anteriores, solicitando un reducido número de jets y a su vez el mínimo \pt para fotones. La definición completa de las VRs dedicadas al fondo de \phj se muestra en la Tabla \ref{tab:vrm_def}.
 
 
 \begin{table}[ht!]
@@ -762,7 +761,7 @@ Se definieron cinco VRs orientadas al fondo de \phj. Estas regiones recuperan el
 \end{table}
 
 
-Para los fondos \wph y \ttbarph se definieron cuatro regiones de validación, por lo que todas requieren al menos un leptón y lo que las hace ortogonales a las SRs. La VRL1 y VRL2 estudian la región de bajo \met y validando distintos valores de \HT, mientras que las VRL3 y VRL4 lo hacen para $\met>200\,\gev$. Además VRL4 invierte el corte en \dphijetmet para validar esa variable en regiones con combinaciones distintas de la misma. La Tabla \ref{tab:vrl_def} muestras las definiciones completas de las VRs dedicadas a estos fondos.
+Para los fondos \wph y \ttbarph se definieron cuatro regiones de validación, por lo que todas requieren al menos un leptón, lo que las hace ortogonales a las SRs. La VRL1 y VRL2 estudian la región de bajo \met, validando distintos valores de \HT, mientras que las VRL3 y VRL4 lo hacen para $\met>200\,\gev$. Además VRL4 invierte el corte en \dphijetmet para validar esa variable en regiones con combinaciones distintas de la misma. La Tabla \ref{tab:vrl_def} muestras las definiciones completas de las VRs dedicadas a estos fondos.
 
 \begin{table}[ht!]
   \centering
@@ -787,12 +786,12 @@ Para los fondos \wph y \ttbarph se definieron cuatro regiones de validación, po
 \end{table}
 
 
-Finalmente se encuentra la región de validación para el fondo de electrones erróneamente reconstruidos como fotones. La misma se diseña sin el veto de leptones y requiriendo al menos un $b$-jet. Como es un fondo donde el fotón es `falso' se espera que su energía no esté correctamente reconstruida y esto genere \met instrumental. En ese caso \met y el fotón deberían estar alineados, por lo que se aplica un corte superior en \dphigammet, garantizando a su vez la ortogonalidad con las SRs. La definición de la misma se puede observar en la Tabla \ref{tab:vre_def}.
+Finalmente se encuentra la región de validación para el fondo de electrones erróneamente reconstruidos como fotones (VRE). La misma se diseña sin el veto de leptones y requiriendo al menos un $b$-jet. Como es un fondo donde el fotón es <<falso>>, se espera que su energía no esté correctamente reconstruida y esto genere \met instrumental. En ese caso \met y el fotón deberían estar alineados, por lo que se aplica un corte superior en \dphigammet, garantizando a su vez la ortogonalidad con las SRs. La definición de la misma se puede observar en la Tabla \ref{tab:vre_def}.
 
 
 \begin{table}[ht!]
   \centering
-  \caption{Definición de la región de validación VRE, empleadas para la validación del fondo de electrones erróneamente reconstruidos como fotones. En color están los cortes que garantizan la ortogonalidad con las SRs.}
+  \caption{Definición de la región de validación VRE, empleada para la validación del fondo de electrones erróneamente reconstruidos como fotones. En color están los cortes que garantizan la ortogonalidad con las SRs.}
 
   \begin{tabular}{l|r}
     \hline
@@ -818,7 +817,7 @@ Finalmente se encuentra la región de validación para el fondo de electrones er
 
 \section{Incertezas sistemáticas}
 
-Un factor clave en el análisis es la estimación de las incertezas sistemáticas involucradas, las cuales afectan tanto la estimación de los fondos como de la señal en las distintas regiones del análisis. Las mismas son incluidas como parámetros nuisance en los distintos ajustes realizados. Existen dos tipos de incertidumbres sistemáticas, las experimentales y las teóricas, y se describen a continuación.
+Un factor clave en el análisis es la estimación de las incertezas sistemáticas involucradas, las cuales afectan tanto la estimación de los fondos como de la señal en las distintas regiones del análisis. Las mismas son incluidas como parámetros nuisance en los distintos ajustes realizados, llegando a ser del orden de 60 incertezas. Existen dos tipos de incertidumbres sistemáticas, las experimentales y las teóricas, y se describen a continuación.
 
 
 \subsection{Incertezas sistemáticas experimentales}
@@ -828,7 +827,7 @@ Las incertezas experimentales están asociadas a la estimación de los fondos, y
 
 \subsubsection{Incerteza en la luminosidad}
 
-La luminosidad del LHC durante el Run 2 se mide utilizando el detector de Cherenkov LUCID2 \cite{lucid2} y se calibra a partir tomas de datos especiales de baja luminosidad del LHC, usando el método van der Meer \cite{vandermeer1,vandermeer2}. La misma es empleada en general para la medida de secciones eficaces, aunque en este análisis cumple un rol fundamental en la normalización de las simulaciones de MC a las condiciones del LHC del Run 2. La incertidumbre en la luminosidad integrada combinada del Run 2 es de $1.7$\% \cite{ATLAS-CONF-2019-021}.
+La luminosidad del LHC durante el Run 2 se mide utilizando el detector de Cherenkov LUCID2 \cite{lucid2}, y se calibra a partir tomas de datos especiales de baja luminosidad del LHC, utilizando el método van der Meer \cite{vandermeer1,vandermeer2}. La misma es empleada en general para la medida de secciones eficaces, aunque en este análisis cumple un rol fundamental en la normalización de las simulaciones de MC a las condiciones del Run 2 del LHC. La incertidumbre en la luminosidad integrada combinada del Run 2 es de $1.7$\% \cite{ATLAS-CONF-2019-021}.
 
 
 \subsubsection{Incertezas asociadas a fotones, electrones y muones}
@@ -863,22 +862,22 @@ Cuando se modifica la escala o resolución de energía de algún objeto, esa var
 
 \subsubsection{Incertezas asociadas al pile-up}
 
-El factor de corrección de pile-up se obtiene para hacer coincidir el número promedio de interacciones por cruces de haces de las simulaciones de MC con la de datos. El mismo era de $1/1.03$ y  la incerteza sistemática se obtuvo variando el mismo a $1/0.99$ y $1/1.07$. 
+El factor de corrección de pile-up se obtiene para hacer coincidir el número promedio de interacciones por cruces de haces de las simulaciones de MC con la de datos. El mismo es de $1/1.03$, y la incerteza sistemática se obtiene variando el mismo a $1/0.99$ y $1/1.07$. 
 % \tosolve{Esto nunca lo expliqué y no lo sé bien, seguro que se aplica estas variaciones?} consultar con fran
 
 \subsubsection{Incertezas en los métodos de estimación de fondos basados en datos}
 
-Los métodos para la estimación de fondos de jets y electrones reconstruidos erróneamente como fotones, descriptos en las Secciones \ref{sec:jfakes} y \ref{sec:efakes}, tienen también incertezas asociadas. Una es la propia incerteza estadística propia de la muestra de control durante la estimación de estos fondos (Ecuaciones \ref{eq:jfake_cs} y \ref{eq:efake_cs}). La otra es la incerteza propia de los FFs descripta en esas mismas Secciones y ambas son incluidas como parámetros nuisance.
+Los métodos para la estimación de fondos de jets y electrones reconstruidos erróneamente como fotones, descriptos en las Secciones \ref{sec:jfakes} y \ref{sec:efakes}, tienen también incertezas asociadas. Una es la incerteza estadística propia de la muestra de control, empleada para la estimación final de estos fondos (Ecuaciones \ref{eq:jfake_cs} y \ref{eq:efake_cs}), y que se incluye como parámetro nuisance. A su vez, la incerteza proveniente del cálculo FFs, descripta en esas mismas Secciones, es considerada como incerteza sistemática.
 
 
 \subsection{Incertezas sistemáticas teóricas}
 
-Las incertezas teóricas afectan a todas las simulaciones de MC, y provienen principalmente tanto del generador empleado como de los distintos parámetros de la teoría utilizados en los cálculos de las propias simulaciones. 
+Las incertezas teóricas afectan a todas las simulaciones de MC, y provienen principalmente tanto del generador empleado, como de los distintos parámetros de la teoría utilizados en los cálculos de las propias simulaciones. 
 
-Para cada muestra de fondo en cada región del análisis se calcula una incertidumbre teórica total que incluye los efectos que más adelante se describen. Contrario a lo que se espera, las incertezas sistemáticas se ven afectadas por la estadística de la muestra, principalmente cuando la región tiene bajo número de eventos. Es por esto que para el cálculo de las incertidumbres teóricas se emplean regiones equivalentes a la del análisis pero relajando varios de sus cortes para ganar una mayor estadística. Se emplea una región para sistemáticos común a todas las SRs del análisis, y una para cada grupo de VRs, las cuales se muestran en la Tabla \ref{tab:syst_reg}. Para las CRs se usan exactamente las mismas ya que por definición abundan los eventos de un dado fondo.
+Para cada muestra de fondo, en cada región del análisis, se calcula una incertidumbre teórica total que incluye los efectos que más adelante se describen. Contrario a lo que se espera, las incertezas sistemáticas se ven afectadas por la estadística de la muestra, principalmente cuando la región tiene bajo número de eventos. Es por esto, que para el cálculo de las incertidumbres teóricas, se emplean regiones equivalentes a la del análisis pero relajando varios de sus cortes, eliminando así la dependencia con la estadística. Se emplea una región para sistemáticos común a todas las SRs del análisis, y una para cada grupo de VRs, las cuales se muestran en la Tabla \ref{tab:syst_reg}. Para las CRs se usan exactamente las mismas ya que por definición abundan los eventos de un dado fondo.
 
 \begin{table}[ht!]
-  \caption{Regiones empleadas para el cálculo de los sistemáticos teóricos. Las mismas fueron obtenidas a partir de las regiones del análisis pero relajando algunos de sus cortes. Para las CRs se emplearon las mismas regiones del análisis por lo que no se muestran.}
+  \caption{Regiones empleadas para el cálculo de los sistemáticos teóricos. Las mismas fueron obtenidas a partir de las regiones del análisis, pero relajando algunos de sus cortes. Para las CRs se emplearon las mismas regiones del análisis por lo que no son mostradas.}
   \centering
    % \resizebox{.9\textwidth}{!}{
     \begin{tabular}{l|r|r|r|r}
@@ -903,14 +902,14 @@ Para cada muestra de fondo en cada región del análisis se calcula una incertid
 \label{tab:syst_reg}
 \end{table}
 
-Todas las muestras de fondo se generan con un conjunto de pesos internos, que al aplicarlo a cada evento, representan el efecto que generaría la variación de distintos parámetros de la teoría. Las variaciones consideradas para cada muestra fueron las de la escala de renormalización ($\mu_R$) y factorización ($\mu_F$), la variación de los elementos de matriz (ME) de la PDF nominal, variación de la familia de PDFs empleada en la generación de los eventos, y las incertidumbres asociadas a la determinación y truncamiento de la constante de acoplamiento fuerte ($\alpha_S$). Para la muestra de \ttbarph se emplean solo las dos primeras variaciones, las cuales son las predominantes. Tampoco se tienen en cuenta variaciones en la escala de \textit{matching} (CKKW)
+Todas las muestras de fondo se generan con un conjunto de pesos internos, que al aplicarlo a cada evento, representan el efecto que generaría la variación de distintos parámetros de la teoría. Las variaciones consideradas para cada muestra son las de la escala de renormalización ($\mu_R$) y factorización ($\mu_F$), la variación de los elementos de matriz (ME) de la PDF nominal, variación de la familia de PDFs empleada en la generación de los eventos, y las incertidumbres asociadas a la determinación y truncamiento de la constante de acoplamiento fuerte ($\alpha_S$). Para la muestra de \ttbarph, se emplean solo las dos primeras variaciones, las cuales son las predominantes. Tampoco se tienen en cuenta variaciones en la escala de \textit{matching} (CKKW),
  % \tosolve{mirar esto} 
- ni en la escala de resumación (QSF), ya que las mismas son despreciables y requieren la generación de unas nuevas muestras adicionales. 
+ ni en la escala de resumación (QSF), ya que las mismas son despreciables y requieren la generación de muestras adicionales. 
 
 \begin{sloppypar} % porque el muR muF me quedaba en el margen
 El cálculo de la incertidumbre teórica total se realiza siguiendo las recomendaciones \texttt{PDF4LHC} \cite{Butterworth:2015oua}.
 % \solved{no se si fue asi... en todo caso citar} deberia ser esto, que se yo...
-Para calcular las variaciones de los MEs de las PDFs se emplea \texttt{LHAPDF} \cite{lhapdf} con la PDF nominal, \texttt{NNPDF30\_nnlo\_as\_0118}, y 100 variaciones de sus MEs. A su vez se consideraron dos familias de PDFs alternativas, \texttt{CT14} y \texttt{MMHT2014nnlo68c1}. Para las variaciones de escala se consideraron siete posibles valores: $(\mu_R, \mu_F) = (0.5,0.5), (1,0.5), (0.5,1), (1,1), (2,1), (1,2), (2,2)$. Finalmente se consideraron dos variaciones asociadas a $\alpha_S$. Todas estas variaciones fueron combinadas en una sola incertidumbre total para cada muestra y para cada región, y cuyos valores porcentuales promedio se muestran en la Tabla \ref{tab:syst_values}. Aquellos procesos donde en ciertas regiones tienen una estadística reducida, se consideran de poco impacto para dicha región, y se fija conservadoramente una incerteza del 100\%.
+Para calcular las variaciones de los MEs de las PDFs se emplea \texttt{LHAPDF} \cite{lhapdf} con la PDF nominal, \texttt{NNPDF30\_nnlo\_as\_0118}, y 100 variaciones de sus MEs. Adicionalmente, se emplean dos familias de PDFs alternativas, \texttt{CT14} y \texttt{MMHT2014nnlo68c1}. Para las variaciones de escala, se consideran siete posibles valores: $(\mu_R, \mu_F) = (0.5,0.5), (1,0.5), (0.5,1), (1,1), (2,1), (1,2), (2,2)$, mientras que para las variaciones asociadas a $\alpha_S$, se consideran dos (<<up>> y <<down>>). Todas estas variaciones son combinadas en una sola incertidumbre total para cada muestra y para cada región, y cuyos valores porcentuales promedio se muestran en la Tabla \ref{tab:syst_values}. Dichas incertezas son del orden del 30-40\% para cada proceso relevante en cada región. Aquellos procesos donde en ciertas regiones tienen una estadística reducida, se consideran de poco impacto para dicha región, y se fija conservadoramente una incerteza del 100\%. 
 \end{sloppypar} 
 
 \begin{table}[ht!]

@@ -233,7 +233,7 @@ En el límite asintótico se puede mostrar que el estadístico de prueba $t_{\mu
 
 De la misma forma, a su respectivo p-value se lo puede aproximar como $p_{0}=1-\Phi(\sqrt{q_{0}})$ y a la significancia equivalente como $Z_{0}=\sqrt{q_{0}}$. La misma aproximación vale para el estadístico de prueba para límites superiores ($\tilde{q}_{\mu}$) de la Ecuación \ref{ec:st_qmu}, cuya expresión se describe en la Referencia \cite{Cowan:2010js}.
 
-Cuando la estadística es reducida ($\mathcal{O}(10)$), se abandona el régimen asintótico, y las aproximaciones anteriores dejan de tener validez. En ese caso el estadístico de prueba se obtiene a partir de lo que se denominan \textit{toys} o <<psuedo-experimentos>> \cite{Baak:2014wma}. Para ello se varían los parámetros $\mu_\text{sig}$ y $\bm{\theta}^0$, generando una estadística suficiente para tener una estimación conservadora del p-value, y por ejemplo, si se obtiene un $\text{CL}_{s}>5\%$ para alguna de esas variaciones, no es posible excluir a la hipótesis empleada. Este método puede resultar poco práctico, sobre todo cuando hay un gran número de sistemáticos, y se puede entonces realizar una estimación de los parámetros $\bm{\theta}^0$ que maximizan el p-value. Para ello inicialmente se ajustan dichos parámetros a los datos observados y basándose en un dado valor de $\mu_\text{sig}$. Los valores obtenidos para $\bm{\theta}^0$ mediante este ajuste son luego empleados para las siguientes iteraciones que permiten calcular el p-value. El hecho de emplear datos al realizar los toys, genera una dependencia residual en el cálculo de algunos límites, obtenidos solamente a partir de las estimaciones de fondo esperadas.
+Cuando la estadística es reducida ($\mathcal{O}(10)$), se abandona el régimen asintótico, y las aproximaciones anteriores dejan de tener validez. En ese caso el estadístico de prueba se obtiene a partir de lo que se denominan \textit{toys} o <<psuedo-experimentos>> \cite{Baak:2014wma}. Para ello, se varían los parámetros $\mu_\text{sig}$ y $\bm{\theta}^0$, generando una estadística suficiente para tener una estimación conservadora del p-value, y por ejemplo, si se obtiene un $\text{CL}_{s}>5\%$ para alguna de esas variaciones, no es posible excluir a la hipótesis empleada. Este método puede resultar poco práctico, sobre todo cuando hay un gran número de sistemáticos, por lo que alternativamente se puede realizar una estimación previa de los parámetros $\bm{\theta}^0$ que maximizan el p-value. Para ello se ajustan dichos parámetros a los datos observados, para un dado valor de $\mu_\text{sig}$. Los valores obtenidos para $\bm{\theta}^0$ mediante este ajuste son luego empleados para las siguientes iteraciones que permiten calcular el p-value. El hecho de emplear datos al realizar los toys, genera una dependencia residual en el cálculo de algunos límites, obtenidos solamente a partir de las estimaciones de fondo esperadas.
  
 
 
@@ -241,15 +241,7 @@ Cuando la estadística es reducida ($\mathcal{O}(10)$), se abandona el régimen 
 % \solved{Debería explicar Asimov?} nope
 
  
-% Estas aproximaciones permiten conocer las distribuciones muéstrales y calcular valores-p y significancias en el caso de un gran número de datos, de una forma simple y computacionalmente poco
-% costosa. A pesar de que estrictamente es válido para $N\to\infty$, esta aproximación es suficientemente
-% precisa para un número de eventos de fondo $\sim \mathcal{O}(10)$.
-% Para muestras de datos muy pequeñas, o en casos donde la precisión es importante, siempre pueden
-% validarse estas aproximaciones utilizando la generación Monte Carlo. Para esto es necesario utilizar
-% simulaciones Monte Carlo para generar lo que se denomina `pseudo-experimentos'. El procedimiento
-% consiste en generar el conjunto de observables x utilizando la pdf $f(x|H)$ y calcular el valor del
-% estadístico de prueba $t(x)$ para cada conjunto. Este proceso se repite hasta acumular suficiente
-% estadística en la distribución muestral del estadístico $g(t|H)$.
+
 
 \section{Significancia esperada}\label{sec:exp_sig}
 
