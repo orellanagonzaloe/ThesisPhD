@@ -21,9 +21,8 @@ El modelo que motiva a la presente búsqueda es similar al descripto en la Secci
 \end{figure}
 
 
-Se generaron 12 puntos de señal en función de la masa del \ninoone, cuyos valores son: \magn{150}{GeV}, \magn{250}{GeV}, \magn{350}{GeV}, \magn{450}{GeV}, \magn{650}{GeV}, \magn{750}{GeV}, \magn{850}{GeV}, \magn{950}{GeV}, \magn{1050}{GeV}, \magn{1250}{GeV} y \magn{1450}{GeV}. Los decaimientos del mismos se fijaron a $33\%$ de igual forma para $\gamma + \gravino$, $Z + \gravino$ y $h + \gravino$. Los estados finales de cada evento están caracterizados por los posibles decaimientos de los dos \ninoone de la cadena de decaimiento, los cuales pueden ser $\gamma\gamma$, $\gamma Z$, $\gamma h$, $ZZ$, $Zh$ y $hh$ (omitiendo los \gravino por simplicidad). Al estar permitidos todos los decaimientos es posible realizar un ponderado de los eventos, con el objetivo generar todas las combinaciones de decaimiento posibles. Es decir, que aquellos decaimientos que no sean de interés se les asigna un peso menor con respecto a los que se desea estudiar. Esto permite analizar múltiples modelos utilizando una sola muestra, y además calcular posibles límites de exclusión en función de las fracciones de decaimiento.
-Cada modelo está caracterizado por un conjunto de fracciones de decaimientos que genera un par de partículas en el estado final. A nivel generador de las muestras es posible saber cuáles partículas se generaron y aplicarles un peso al evento dependiendo de eso. El peso que se aplica a cada evento, dependiendo del par de partículas producido y en función de las fracciones de decaimientos es:
-
+Se generan 12 puntos de señal en función de la masa del \ninoone, cuyos valores son: \magn{150}{GeV}, \magn{250}{GeV}, \magn{350}{GeV}, \magn{450}{GeV}, \magn{650}{GeV}, \magn{750}{GeV}, \magn{850}{GeV}, \magn{950}{GeV}, \magn{1050}{GeV}, \magn{1250}{GeV} y \magn{1450}{GeV}. Los decaimientos del mismos se fijaron a $33\%$ de igual forma para $\gamma + \gravino$, $Z + \gravino$ y $h + \gravino$. Los estados finales de cada evento están caracterizados por los posibles decaimientos de los dos \ninoone de la cadena de decaimiento, los cuales pueden ser $\gamma\gamma$, $\gamma Z$, $\gamma h$, $ZZ$, $Zh$ y $hh$ (omitiendo los \gravino por simplicidad). Al estar permitidos los tres decaimientos, es posible realizar un ponderado de los eventos, con el objetivo de estudiar diferentes combinaciones de fracciones de decaimiento. Es decir, aquellos decaimientos que no sean de interés, se los puede suprimir asignándole un peso nulo, permitiendo estudiar los otros dos restantes. Esto permite analizar diferentes modelos a partir de una misma muestra, y además calcular posibles límites de exclusión en función de las fracciones de decaimiento.
+La metodología para asignar dichos pesos a los eventos va a depender, tanto de las fracciones de decaimiento que se deseen estudiar, como del tipo de partículas que se genera en el estado final. A nivel generador de las muestras, es posible saber cuáles partículas se generaron en los decaimientos de los \ninoone, y aplicarle el siguiente peso al evento:
 
 % \begin{equation}
 % \begin{split}
@@ -44,11 +43,13 @@ Cada modelo está caracterizado por un conjunto de fracciones de decaimientos qu
   \end{cases}
 \end{equation}
 
-El peso está normalizado de tal forma que la suma de todas las probabilidades de decaimiento de la unidad. En particular, y a modo de estudio preliminar, la búsqueda se centró en dos modelos: el modelo equivalente al de producción fuerte, donde el \ninoone decaía $50\%$ a $\gamma + \gravino$ y $50\%$ a $\gamma + h$, denominado modelo `ph+h' donde $w(0.5, 0, 0.5)$. Y el modelo donde el \ninoone decaía $50\%$ a $\gamma + \gravino$ y $50\%$ a $\gamma + Z$, denominado modelo `ph+Z' donde $w(0.5, 0.5, 0)$.
+\noindent
+donde $\text{BR}_{X}$ es la fracción de decaimiento del proceso $\ninoone \to \gravino X$ que se desea estudiar.
+El peso está normalizado de tal forma que la suma de todas las fracciones de decaimiento de la unidad. En particular, y a modo de estudio preliminar, la búsqueda se centra en dos modelos: el modelo equivalente al estudiado en la producción fuerte, donde el \ninoone decae $50\%$ a $\gamma + \gravino$ y $50\%$ a $\gamma + h$, denominado modelo `ph+h' donde $w(0.5, 0, 0.5)$. Y por otro lado, el modelo donde el \ninoone decae $50\%$ a $\gamma + \gravino$ y $50\%$ a $\gamma + Z$, denominado modelo `ph+Z' donde $w(0.5, 0.5, 0)$.
 
-Las masas del \ninotwo y \chinopm se eligieron levemente degeneradas, e iguales a la del \ninoone más \magn{10}{GeV} y \magn{11}{GeV} respectivamente. 
+Las masas del \ninotwo y \chinopm se eligen levemente degeneradas, e iguales a la del \ninoone más \magn{10}{GeV} y \magn{11}{GeV} respectivamente. 
 % \solved{justificar esto?} fue una primera referencia para una posible extension
-Sus decaimientos se fijaron en $100\%$ al \ninoone a través de un $Z$ o $W$ virtual, con sus respectivos decaimientos del SM. Todas las demás partículas SUSY se desacoplaron con una masa de \magn{4500}{GeV}. A partir de ellos se consideraron todos los posibles canales de producción electrodébil, los cuales eran: $\ninoone \ninotwo$, $\ninoone \chinoonepm$, $\ninotwo \chinoonepm$ y $\chinoonep \chinoonem$. La sección eficaz de producción de cada uno se calculó utilizando \texttt{RESUMMINO-3.0.0} \cite{Beenakker:1999xh,Debove:2010kf,Fuks:2012qx,Fuks:2013vua,Fiaschi:2018hgm} con una precisión de NLO+NLL, utilizando la familia de PDFs \texttt{CTEQ6.6} y \texttt{MSTW2008}, siguiendo las recomendaciones de \texttt{PDF4LHC} \cite{Butterworth:2015oua}. La Figura \ref{fig:SUSY_EWK_xs} muestra las secciones eficaces de cada proceso junto con la total.
+Sus decaimientos se fijan en $100\%$ al \ninoone a través de un $Z$ o $W$ virtual, con sus respectivos decaimientos del SM. Todas las demás partículas SUSY se desacoplan con una masa de \magn{4500}{GeV}. A partir de ellos, se consideran todos los posibles canales de producción electrodébil, los cuales son: $\ninoone \ninotwo$, $\ninoone \chinoonepm$, $\ninotwo \chinoonepm$ y $\chinoonep \chinoonem$. La sección eficaz de producción de cada uno se calcula utilizando \texttt{RESUMMINO-3.0.0} \cite{Beenakker:1999xh,Debove:2010kf,Fuks:2012qx,Fuks:2013vua,Fiaschi:2018hgm} con una precisión de NLO+NLL, utilizando la familia de PDFs \texttt{CTEQ6.6} y \texttt{MSTW2008}, siguiendo las recomendaciones de \texttt{PDF4LHC} \cite{Butterworth:2015oua}. La Figura \ref{fig:SUSY_EWK_xs} muestra las secciones eficaces de cada proceso junto con la total.
 
 \begin{figure}
   \centering
@@ -61,7 +62,7 @@ Sus decaimientos se fijaron en $100\%$ al \ninoone a través de un $Z$ o $W$ vir
 
 \section{Fondos del Modelo Estándar}
 
-Tantos las simulaciones de fondos del SM, como las técnicas para modelar fondos a partir de datos descriptas en la Sección \ref{sec:sm_backgrounds}, se emplearon de forma equivalente para esta búsqueda. Adicionalmente, se incluyen simulaciones de producción de tops y bosones de Higgs decayendo a fotones, listadas en la Tabla \ref{tab:higgs_bkg}. Esto está motivado por el valor del factor de normalización obtenido para la región de control CRT, que al ser superior a la unidad es indicio de que algún procesos con el mismo estado final no está siendo considerado.
+Tantos las simulaciones de fondos del SM, como las técnicas para modelar fondos a partir de datos descriptas en la Sección \ref{sec:sm_backgrounds}, se emplean de forma equivalente para esta búsqueda. Adicionalmente, se incluye el fondo de producción de tops y bosones de Higgs decayendo a fotones, listadas en la Tabla \ref{tab:higgs_bkg}. Esto está motivado por el valor del factor de normalización obtenido para la región de control CRT, que al ser superior a la unidad, puede ser un indicio de que algún proceso con el mismo estado final no está siendo considerado.
 
 \begin{table}[h!]
   \centering
@@ -90,31 +91,30 @@ Tantos las simulaciones de fondos del SM, como las técnicas para modelar fondos
 
 \section{Selección de eventos y objetos para el análisis}
 
-Para la presente búsqueda se empleó el conjunto de datos con un centro de masa de \magn{13}{TeV} y una luminosidad integrada de \magn{139}{\ifb} tomados durante el Run 2. Los datos fueron seleccionados con el trigger \texttt{HLT\_g140\_loose}, y se empleó la derivación \texttt{SUSY1} tanto para los datos como para las simulaciones. La selección de objetos fue similar a la descripta en la Sección \ref{sec:selection}, con modificaciones en los leptones. Dentro de la colaboración existen grupos dedicados a combinar los resultados obtenidos para distintos análisis de SUSY. Para ello los análisis combinados deben tener selecciones ortogonales, por lo que se establece una selección particular de leptones para lograr dicho objetivo. La presente búsqueda, en base a una posible combinación con otros análisis, selecciona electrones baseline con un $\pt>4.5\ \gev$ y los signal con un $\pt>10 \ \gev$, mientras que los muones baseline se seleccionan con un $\pt>3\ \gev$ y los signal con un $\pt>10\ \gev$. A su vez en todas las regiones del análisis se solicita que el número de leptones baseline sea igual al número de leptones signal. Los jets empleados en la selección de eventos son \texttt{PFlow} jets con un $\pt>20\ \gev$. El algoritmo para identificar $b$-jets es el \texttt{DL1r}, con un $77\%$ de eficiencia.
+Para la presente búsqueda se emplea el conjunto de datos con centro de masa de \magn{13}{TeV}, y una luminosidad integrada de \magn{139}{\ifb} tomados durante el Run 2. Los datos son seleccionados con el trigger \texttt{HLT\_g140\_loose}, y empleando la derivación \texttt{SUSY1} tanto para los datos como para las simulaciones. La selección de objetos es similar a la descripta en la Sección \ref{sec:selection}, con leves modificaciones en los leptones y jets. Dentro de la colaboración existen grupos dedicados a combinar los resultados obtenidos para distintos análisis de SUSY. Para ello, los análisis combinados deben tener selecciones ortogonales, por lo que se establece una selección particular de leptones para lograr dicho objetivo. La presente búsqueda, en base a una posible combinación con otros análisis, selecciona electrones baseline con un $\pt>4.5\ \gev$ y los signal con un $\pt>10 \ \gev$, mientras que los muones baseline se seleccionan con un $\pt>3\ \gev$ y los signal con un $\pt>10\ \gev$. A su vez en todas las regiones del análisis se solicita que el número de leptones baseline sea igual al número de leptones signal. Los jets empleados en la selección de eventos son \texttt{PFlow} jets con un $\pt>20\ \gev$. El algoritmo para identificar $b$-jets es el \texttt{DL1r}, con un $77\%$ de eficiencia.
 
 
 
 \section{Definición de las regiones del análisis}
 
 La definición de las regiones de señal se realiza siguiendo metodología de optimización similar a la descripta en la Sección \ref{sec:sig_selection}.
-Si bien el estado final de esta búsqueda coincide con la búsqueda anterior, la cinemática de los mismos tiene algunos aspectos distintos. Dada la baja masa de los gauginos producidos en la colisión, con respecto a la producción de gluinos, se espera que los productos generados en el decaimiento sean menos energéticos. Con el mismo criterio el número de jets reconstruidos de la cadena de decaimiento se espera que sea menor.
+Si bien el estado final de esta búsqueda coincide con la búsqueda anterior, la cinemática de los mismos tiene algunos aspectos distintos. Dada la baja masa de los gauginos producidos en la colisión, con respecto a la producción de gluinos, se espera que los productos generados en el decaimiento sean menos energéticos. Con el mismo criterio, el número de jets reconstruidos de la cadena de decaimiento se espera que sea menor.
 
-Se optó por diseñar cuatro regiones de señal dedicadas a cubrir todo el espectro de masas de \ninoone de las muestras de señal. Las regiones se definen empleando los mismos cortes para todas salvo por un corte inclusivo en \met. Estos cortes consistían en al menos un fotón con $\pt>145\ \gev$, un veto de leptones, al menos un jet y las mismas separaciones angulares en \dphijetmet y \dphigammet. A su vez se agregaron cortes en dos variables para incrementar la separación de señal y fondo. La primera definida como:
+Se diseñan cuatro regiones de señal dedicadas a cubrir todo el espectro de masas de \ninoone de las muestras de señal. Las regiones se definen con cortes comunes para todas, salvo por un corte inclusivo en \met. Estos cortes consisten en al menos un fotón con $\pt>145\ \gev$, un veto de leptones, al menos un jet, y separaciones angulares de \dphijetmet y \dphigammet mayores a $0.4$. A su vez, se incluyen cortes en dos variables adicionales para incrementar la separación de señal y fondo. La primera definida como:
 
 \begin{equation}
   \frac{\met}{\meff} = \frac{\met}{\HT + \met}
 \end{equation}
 
-
-La misma se entiende como la fracción de \met presente entre todos los objetos del eventos, que para una señal de SUSY con gran actividad de partículas no interactuantes es esperable que sea mayor a $0.5$ 
+La misma se entiende como la fracción de \met presente con respecto a la energía total presente en el evento, que para una señal de SUSY con gran actividad de partículas no interactuantes es esperable que sea mayor a $0.5$.
 % \solved{en realidad todavía no entendemos esta variable...} % ponele que si
-. La segunda variable empleada es la Significancia de \met ($\mathcal{S}$) con una reconstrucción denominada \textit{object-based} que se describe en la Referencia \cite{ATLAS-CONF-2018-038}. La misma sirve para discriminar eventos con \met proveniente de partículas poco interactuantes, de aquella producto de la reconstrucción ineficiente de las partículas (instrumental), valores altos de $\mathcal{S}$ son un indicio del primer caso. Finalmente, y solo en el caso de eventos con dos fotones, se aplica un corte en la masa invariante de los mismos, excluyendo el rango de valores centrados en la masa del Higgs. Esto se hace con el objetivo de ser ortogonales a un análisis con estado final similar, que selecciona dos fotones provenientes del decaimiento de bosones de Higgs. La selección empleada para las distintas regiones de señal se muestra en la Tabla \ref{tab:sr_ewk}.
+La segunda variable empleada es la Significancia de \met ($\mathcal{S}$), con una reconstrucción denominada \textit{object-based} descripta en la Referencia \cite{ATLAS-CONF-2018-038}. La misma sirve para discriminar eventos con \met proveniente de partículas poco interactuantes, de aquella producto de la reconstrucción ineficiente de las partículas (instrumental), ya que valores altos de $\mathcal{S}$ son un indicio del primer caso. Finalmente, y solo en el caso de eventos con dos fotones, se aplica un corte en la masa invariante de los mismos, excluyendo el rango de valores centrados en la masa del Higgs. Esto se hace con el objetivo de ser ortogonales al análisis con estado final similar, que selecciona dos fotones provenientes del decaimiento del bosón de Higgs. La selección empleada para las distintas regiones de señal se muestra en la Tabla \ref{tab:sr_ewk}.
 
 
 
 \begin{table} 
 \centering
-  \caption{Regiones de señal empleadas para el análisis de búsqueda de SUSY con producción electrodébil.}
+  \caption{Regiones de señal de descubrimiento, empleadas para el análisis de búsqueda de SUSY con producción electrodébil.}
   % \resizebox{\linewidth}{!}{
     \begin{tabular}{ l | c | c | c | c }
     \hline
@@ -134,7 +134,7 @@ La misma se entiende como la fracción de \met presente entre todos los objetos 
     % \hline
     $\met/\meff$ & \multicolumn{4}{c}{$>0.5$} \\
     % \hline
-    $\met$ Sig. & \multicolumn{4}{c}{$>21$} \\
+    $\mathcal{S}$ & \multicolumn{4}{c}{$>21$} \\
     % \hline
     \dphijetmet & \multicolumn{4}{c}{$>0.4$} \\
     % \hline
@@ -155,11 +155,11 @@ La misma se entiende como la fracción de \met presente entre todos los objetos 
 % \solved{mencionar SRs para exclusion?} done
 
 Las regiones de señal anteriormente mencionadas, están diseñadas para obtener la mejor significancia esperada, lo que no implica que en el caso hipotético de no observar algún descubrimiento, los límites esperados que se impongan con las mismas sean los más óptimos. 
-En base a eso, se diseña un conjunto de regiones señal destinadas exclusivamente a imponer límites de exclusión. Para poder distinguirlas se denomina a las primeras como regiones de señal para descubrimiento, y a las segundas para exclusión. Las regiones para exclusión se obtienen en base a las de descubrimiento, modificando sus cortes para obtener la combinación que permita tener los límites esperados más altos. Para tener una estimación preliminar de dichos límites se emplea la aproximación asintótica enunciada en la Sección \ref{sec:aprox_test}, y se omiten los sistemáticos para simplificar los cálculos. Se encuentra que para obtener mejores limites, los cortes en \met no deben ser inclusivos (sino ortogonales), y que además se debe omitir el corte en $\met/\meff$. La definición de las regiones de señal para exclusión se muestran en la Tabla \ref{tab:sr_ewk_excl}.
+En base a eso, se diseña un conjunto de regiones señal destinadas exclusivamente a imponer límites de exclusión. Para poder distinguirlas, se denomina a las primeras como regiones de señal para descubrimiento (SRd_XXX), y a las segundas para exclusión (SRe_XXX). Las regiones para exclusión se obtienen en base a las de descubrimiento, modificando sus cortes para obtener la combinación que permita tener los límites esperados más altos. Para tener una estimación preliminar de dichos límites, se emplea la aproximación asintótica enunciada en la Sección \ref{sec:aprox_test}, y se omiten los sistemáticos para simplificar los cálculos. Se encuentra que para obtener mejores limites, los cortes en \met no deben ser inclusivos (sino ortogonales), y que además se debe omitir el corte en $\met/\meff$. La definición de las regiones de señal para exclusión se muestran en la Tabla \ref{tab:sr_ewk_excl}.
 
 \begin{table} 
 \centering
-  \caption{Regiones de señal empleadas para el análisis de búsqueda de SUSY con producción electrodébil.}
+  \caption{Regiones de señal para exclusión, empleadas para el análisis de búsqueda de SUSY con producción electrodébil.}
   % \resizebox{\linewidth}{!}{
   \begin{tabular}{ l | c | c | c | c }
   \hline
@@ -177,7 +177,7 @@ En base a eso, se diseña un conjunto de regiones señal destinadas exclusivamen
   % \hline
   \ptph [GeV] & \multicolumn{4}{c}{$>145$} \\
   % \hline
-  $\met$ Sig. & \multicolumn{4}{c}{$>21$} \\
+  $\mathcal{S}$ & \multicolumn{4}{c}{$>21$} \\
   % \hline
   \dphijetmet & \multicolumn{4}{c}{$>0.4$} \\
   % \hline
@@ -193,10 +193,10 @@ En base a eso, se diseña un conjunto de regiones señal destinadas exclusivamen
     \end{table}
 
 
-Los fondos del SM con mayor impacto en el análisis son \wph, \ttbarph, $\ttbar h$ y \znunuph, y para las cuales se diseñan regiones de control dedicada. El fondo \phj no se considera importante, debido a la presente selección en los objetos del estado final buscado, y por ende no tiene su respectiva región de control. Todas las regiones de control emplean selecciones similares a las descriptas en la Sección \ref{sec:cr_vr_sel} para favorecer cada fondo, pero adaptadas a las actuales SRs. En todas se omite el corte en $\met/\meff$ y en la Significancia de \met, debido a la elevada reducción de fondo que producen.
+Los fondos del SM con mayor impacto en el análisis son \wph, \ttbarph, $\ttbar h$ y \znunuph, para las cuales se diseñan regiones de control dedicadas. El fondo \phj no se considera importante, debido a la presente selección en los objetos del estado final buscado, y por ende no tiene su respectiva región de control. Todas las regiones de control emplean selecciones similares a las descriptas en la Sección \ref{sec:cr_vr_sel} para favorecer cada fondo, pero adaptadas a las actuales SRs. En todas se omite el corte en $\met/\meff$ y $\mathcal{S}$, debido a la elevada reducción de fondo que producen.
 
 
-Los fondos \ttbarph y $\ttbar h$, son normalizados simultáneamente en una región de control CRT que selecciona al menos un leptón y dos $b$-jets. Para el fondo de \wph se diseña una región de control CRW que selecciona un leptón con un veto a los $b$-jets, junto con un corte en la masa transversa de \met y el leptón \footnote{$\mtlep = \sqrt{2p_{\text{T}}^{\text{leptón}}\met[1-\cos(\phi^{\text{miss}}-\phi^{\text{leptón}})]}$}, que incrementa la pureza del fondo. Dado que el fondo de \znunuph presenta un estado final similar al de la señal, resulta prácticamente imposible diseñar una región de control para ese fondo que no tenga contaminación de señal. Para ello se emplea un método alternativo, en donde se diseñan regiones de control para los procesos \zeeph y \zmumuph, y se asume que las correcciones que necesita la simulación van a ser equivalentes para la simulación de \znunuph, por lo que se aplica el mismo factor de normalización a los tres fondos simultáneamente. Como los fondos \zeeph y \zmumuph tienen \met despreciable, se construye una una energía transversa alternativa pero omitiendo del cálculo a los leptones. De esta forma se obtiene una \met alineada con los leptones del evento, a la cual se le aplica un corte para ser lo más similar posible a las SRs. A su vez los cortes empleados para \dphijetmet y \dphigammet se obtienen en base a este cálculo de \met. En la Figura \ref{fig:met_inv} se puede observar una comparación entre \met de \znunuph y la reconstruida en las simulaciones de \zeeph y \zmumuph, en la que se demuestra un buen acuerdo entre las distintas estimaciones de \met. La definición de las regiones de control empleadas para el presente análisis se muestran en la Tabla \ref{tab:cr_ewk}.
+Los fondos \ttbarph y $\ttbar h$, son normalizados simultáneamente en una región de control (CRT) que selecciona al menos un leptón y dos $b$-jets. Para el fondo de \wph se diseña una región de control (CRW) que selecciona un leptón con un veto a los $b$-jets, junto con un corte en la masa transversa de \met y el leptón \footnote{$\mtlep = \sqrt{2p_{\text{T}}^{\text{leptón}}\met[1-\cos(\phi^{\text{miss}}-\phi^{\text{leptón}})]}$}, para incrementar la pureza del fondo. Dado que el fondo de \znunuph presenta un estado final similar al de la señal, resulta prácticamente imposible diseñar una región de control para ese fondo que no tenga contaminación de señal. Para ello, se emplea un método alternativo, en donde se diseñan regiones de control para los procesos \zeeph y \zmumuph (CRZ\_el y CRZ\_mu), y se asume que las correcciones que necesita la simulación son equivalentes para la simulación de \znunuph, por lo que se aplica el mismo factor de normalización a los tres fondos simultáneamente. Como los fondos \zeeph y \zmumuph tienen \met despreciable, se construye una una energía transversa alternativa pero omitiendo del cálculo a los leptones. De esta forma se obtiene una \met alineada con los leptones del evento, a la cual se le aplica un corte para ser lo más similar posible a las SRs. A su vez, los cortes empleados para \dphijetmet y \dphigammet se obtienen en base a este cálculo de \met. En la Figura \ref{fig:met_inv} se puede observar una comparación entre \met de \znunuph y la reconstruida en las simulaciones de \zeeph y \zmumuph, en la que se demuestra un buen acuerdo entre las distintas estimaciones de \met. La definición de las regiones de control empleadas para el presente análisis se muestran en la Tabla \ref{tab:cr_ewk}.
 
 \begin{figure}
   \centering
@@ -210,7 +210,7 @@ Los fondos \ttbarph y $\ttbar h$, son normalizados simultáneamente en una regi�
 
 \begin{table}
 \centering
-    \caption{Definición de las regiones de control para el análisis con producción electrodébil. El asterisco representa que la \met empleada en ese corte es calculada removiendo los leptones de su cálculo.}
+    \caption{Definición de las regiones de control para el análisis con producción electrodébil. El asterisco representa que dicha \met empleada en ese corte es calculada removiendo los leptones de su cálculo.}
   % \resizebox{\linewidth}{!}{
     \begin{tabular}{ l | c | c | c | c }
     \hline
@@ -251,13 +251,13 @@ Los fondos \ttbarph y $\ttbar h$, son normalizados simultáneamente en una regi�
 
 
 
-Finalmente se incluye un diseño preliminar para regiones de validación. Las mismas se diseñan para validar la extrapolación de los distintos fondos normalizados en las control regiones, a las regiones de señal. Se diseñan cinco regiones de señal, cuatro asociadas a las regiones de control (VRW, VRT, VRZee y VRZmm) y una adicional para el fondo de electrones reconstruidos erróneamente como fotones (VRE). Las regiones basadas en las CRs incluyen ahora el corte en $\met/\meff$ y $\mathcal{S}$ para acercarse cinemáticamente a las SRs, y son ortogonales a estas últimas debido a la selección de leptones. La VRE se construye invirtiendo el corte en \dphigammet, favoreciendo al fondo de efakes y adicionalmente siendo ortogonales a las regiones de señal. En la Tabla \ref{tab:vr_ewk} se muestran las definiciones de las regiones de validación.
+Finalmente se incluye un diseño preliminar para regiones de validación. Las mismas se diseñan para validar la extrapolación de los distintos fondos normalizados en las control regiones, a las regiones de señal. Se diseñan cinco regiones de señal, cuatro asociadas a las regiones de control (VRW, VRT, VRZee y VRZmm) y una adicional para el fondo de electrones reconstruidos erróneamente como fotones (VRE). Las regiones basadas en las CRs incluyen ahora el corte en $\met/\meff$ y $\mathcal{S}$ para acercarse cinemáticamente a las SRs, y son ortogonales a estas últimas debido a la selección de leptones. La VRE se construye invirtiendo el corte en \dphigammet, favoreciendo al fondo de \textit{efakes}, y adicionalmente siendo ortogonal a las regiones de señal. En la Tabla \ref{tab:vr_ewk} se muestran las definiciones de las regiones de validación.
 
 
 
 \begin{table}
 \centering
-    \caption{Definición de las regiones de validación para el análisis con producción electrodébil. El asterisco representa que la \met empleada en ese corte es calculada removiendo los leptones de su cálculo.}
+    \caption{Definición de las regiones de validación para el análisis con producción electrodébil. El asterisco representa que dicha \met empleada en ese corte es calculada removiendo los leptones de su cálculo.}
   % \resizebox{\linewidth}{!}{
       \begin{tabular}{ l | c | c | c | c | c }
       \hline
@@ -284,7 +284,7 @@ Finalmente se incluye un diseño preliminar para regiones de validación. Las mi
       % \hline
       $\met/\meff$ & $>0.25$ & $>0.2$ & $>0.25$ & $>0.25$ & $>0.25$ \\
       % \hline
-      $\met$ Sig. & $>10$ & $>8$ & $>10$  & $>10$  & $>10$  \\
+      $\mathcal{S}$ & $>10$ & $>8$ & $>10$  & $>10$  & $>10$  \\
       % \hline
       \met (*) [GeV] & - & - & $>200$ & $>200$ & - \\
       \hline
