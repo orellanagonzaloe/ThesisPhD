@@ -1,18 +1,20 @@
-\chapter{Resultados e interpretación del análisis}
-% \addcontentsline{toc}{chapter}{Resultados e interpretación del análisis}
-\chaptermark{Resultados e interpretación del análisis}
+% \chapter{Resultados e interpretación del análisis}
+% % \addcontentsline{toc}{chapter}{Resultados e interpretación del análisis}
+% \chaptermark{Resultados e interpretación del análisis}
 
-En el siguiente Capítulo se muestran los resultados obtenidos para el análisis utilizando el conjunto completo de datos del Run 2. Esto incluye los resultados del modelado de fondo en cada una de las regiones, el ajuste de solo fondo en las regiones de control, el acuerdo en las regiones de validación y los valores finales en las regiones de señal. En estas últimas, se presenta además el número de eventos observados unblinded, junto con los límites de exclusión tanto dependientes como independientes del modelo. 
+\section{Resultados e interpretación del análisis}
+% % \addcontentsline{toc}{chapter}{Resultados e interpretación del análisis}
+% \chaptermark{Resultados e interpretación del análisis}
 
-\section{Resultados del ajuste de solo fondo en las regiones de control y validación}
+A continuación se presentan los resultados obtenidos utilizando el conjunto completo de datos del Run 2. Esto incluye los resultados del modelado de fondo en cada una de las regiones, el ajuste de solo fondo en las regiones de control, el acuerdo en las regiones de validación y los valores finales en las regiones de señal. En estas últimas, se presenta además el número de eventos observados unblinded, junto con los límites de exclusión tanto dependientes como independientes del modelo. Los métodos estadísticos empleados son los descriptos en el Capítulo \ref{cap:statistical}, llevados a cabo mediante los programas \texttt{HistFitter} \cite{Baak_2015} y \texttt{HistFactory} \cite{Cranmer:1456844}, dedicados a cálculos para la búsqueda de nueva física.
+
+\subsection{Resultados del ajuste de solo fondo en las regiones de control y validación}
 
 
 En la Tabla \ref{tab:bkgonly_cr} se muestran los resultados del ajuste de solo fondo para el conjunto de datos del Run 2. En la misma están listados el aporte que realiza cada fondo antes de realizar el ajuste y después de hacerlo. A su vez, se muestra el número de eventos observados en cada región, la pureza del fondo asociado a cada una de ellas, y el factor de normalización. 
 % Si bien el objetivo del ajuste es corregir los defectos de las simulaciones principales y que coincidan con alta precisión a lo esperado en datos, 
 % es esperable que las mismas sean a prior bastante acertadas y por ende los factores de normalización cercanos a la unidad. 
-En la CRW el factor de normalización ($\mu_W$) es cercano a la unidad, lo que implica un correcto modelado del fondo previo a la normalización inclusive. El factor de la CRT ($\mu_T$) es superior a la unidad lo que significa una subestimación del fondo de \ttbarph. Esto se explica más adelante, en el análisis de producción débil del Capítulo \ref{cap:analysis_EWK}, como una falta de inclusión de fondos con el mismo estado final que \ttbarph. Al incluir posteriormente el fondo de producción de tops y Higgs decayendo a fotones, se observa un valor más cercano a la unidad. Con respecto al factor de la CRQ ($\mu_Q$), la distancia a la unidad es bastante más significativa, implicando que prácticamente el fondo está doblemente sobre estimado. Si bien este efecto se observa de forma similar en otros análisis \cite{Alonso:2689095} 
-% \tosolve{Era el de monophoton?}
-, se concluye que la muestra no está diseñada para regiones de tan elevado \met, y debido a su moderado o bajo impacto en las SRs, esta desviación no se considera crítica. 
+En la CRW el factor de normalización ($\mu_W$) es cercano a la unidad, lo que implica un correcto modelado del fondo previo a la normalización inclusive. El factor de la CRT ($\mu_T$) es superior a la unidad lo que significa una subestimación del fondo de \ttbarph. Esto se explica más adelante, en el análisis de producción débil del Capítulo \ref{cap:analysis_EWK}, como una falta de inclusión de fondos con el mismo estado final que \ttbarph. Al incluir posteriormente el fondo de producción de tops y Higgs decayendo a fotones, se observa un valor más cercano a la unidad. Con respecto al factor de la CRQ ($\mu_Q$), la distancia a la unidad es bastante más significativa, implicando que prácticamente el fondo está doblemente sobre estimado. Si bien este efecto se observa de forma similar en otros análisis \cite{Alonso:2689095}, se concluye que la muestra no está diseñada para regiones de tan elevado \met, y debido a su moderado o bajo impacto en las SRs, esta desviación no se considera crítica. 
 
 \begin{table}[ht!]
   \centering
@@ -133,7 +135,7 @@ En las Tablas \ref{tab:bkgonly_result_vrm}, \ref{tab:bkgonly_result_vrm} y \ref{
 
 
 
-\section{Resultados en las regiones de señal}
+\subsection{Resultados en las regiones de señal}
 
 Luego de la estimación de los fondos en las regiones de señal y su correcta validación en sus respectivas VRs, se procedió a la observación de los datos en dichas regiones. En la Tabla \ref{tab:fit_result_sr_unblinded} se muestra el número de eventos observados y la estimación de los fondos en cada región de señal. El número total de eventos observados para la SRL es de $2$, para la SRM de $0$ y para la SRH de $5$, mientras que el número de eventos esperados es de $2.67\pm0.75$, $2.55\pm0.64$ y $2.55\pm0.44$ respectivamente. A su vez, en la Figura \ref{fig:regions_pulls_unblinded} se observa el resumen de la estimación de fondo y datos observados para cada región del análisis. En la Figura \ref{fig:met_n-1_SRL_SRM_SRH_fr2} se observa la distribución de \met para las tres regiones de señal, pero omitiendo el corte en esa variable de las mismas (gráfico N-1), donde se incluye las estimaciones de los fondos, la de los datos observados y la señal. En la Tabla \ref{tab:syst_rel_impact} se muestra el aporte porcentual de cada sistemático en las regiones de señal, siendo predominantes las asociadas a la escala de energía de los jets y las incertezas teóricas.
 
@@ -217,7 +219,7 @@ Luego de la estimación de los fondos en las regiones de señal y su correcta va
 
 
 
-\section{Límites independientes del modelo}
+\subsection{Límites independientes del modelo}
 
 
 Dado el buen acuerdo entre la estimación del fondo y los datos observados en las distintas SRs, se establecen límites superiores en el número de eventos de cualquier fenómeno más allá del SM con el estado final del análisis. Los límites se establecen para cada SR con un nivel de confianza del 95\%, utilizando el estadístico de prueba definido en la Ecuación \ref{ec:st_qmu}, y las prescripciones para los $\text{CL}_{s}$ de la Ecuación \ref{eq:cls_limits}. Para ello se realiza un muestreo del número de eventos de señal para un cierto modelo, y se encuentra cuándo el valor de $\text{CL}_{s}$ cae por debajo del 5\%, método descripto en la Sección \ref{sec:flujo_busqueda}. La distribución de los distintos estadísticos de prueba se aproxima mediante la generación de {$\smallsim$}50000 toys.
@@ -249,7 +251,7 @@ Se incluye el p-value de descubrimiento, que para regiones donde la predicción 
 
 
 
-\section{Límites dependientes del modelo}
+\subsection{Límites dependientes del modelo}
 
 
 Se establecen los límites dependientes del modelo, buscando aquellos puntos del modelo de señal para los cuales $\text{CL}_{s}=0.05$, como se describe en la Sección \ref{sec:flujo_busqueda}. Dichos límites son calculados de forma independiente para cada región de señal, y luego combinados en un límite total. Para ello se elige de cada punto de señal, la región con mejor límite esperado, y se emplea su $\text{CL}_{s}$ para realizar la interpolación. La misma se realiza mediante el módulo \texttt{Scipy} \cite{2020SciPy-NMeth}, empleando la interpolación \texttt{multiquadratic} con el parámetro \texttt{smooth} igual a $0.1$. La distribución de los distintos estadísticos de prueba se aproxima mediante la generación de {$\smallsim$}50000 toys.

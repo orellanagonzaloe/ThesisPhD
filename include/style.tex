@@ -10,6 +10,8 @@
 \setlength{\headheight}{18.0pt}
 \columnsep1cm
 
+\renewcommand\labelitemi{\small$\bullet$}
+
 
 \setlength{\dinmargin}{\dinwidth}
 \addtolength{\dinmargin}{-\textwidth}
@@ -46,11 +48,12 @@
 \definecolor{lightgreen2}{HTML}{6CC551}
 \definecolor{bluelink}{RGB}{75, 136, 162}
 \definecolor{rose}{RGB}{236, 70, 90}
+\definecolor{orange1}{HTML}{F8503A}
 
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
-    citecolor=green,
+    citecolor=orange1,
     filecolor=black,
     linkcolor=black,
     urlcolor=black
@@ -73,7 +76,9 @@
 \renewcommand{\headrulewidth}{0.6pt}
 %===================================
 
-\renewcommand\thefootnote{\textcolor{red}{\arabic{footnote}}}
+
+\definecolor{rose}{RGB}{236, 70, 90}
+\renewcommand\thefootnote{\textcolor{orange1}{\arabic{footnote}}}
 
 
 
