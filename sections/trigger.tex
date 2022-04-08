@@ -6,7 +6,7 @@
 En la Sección \ref{sec:trigger} se detalló el funcionamiento del sistema de trigger y su importancia para los distintos análisis que se realizan dentro de la colaboración. La medida precisa de la eficiencia de los triggers es empleada para tener conocimiento del rendimiento de los mismos y poder entonces determina la aceptancia de los análisis físicos de interés que involucran cada uno de los triggers utilizados. 
 En este Capítulo se discute en particular la medida de la eficiencia de los triggers de fotones, que son de especial importancia para esta tesis, y a su vez se detalla el cálculo de los factores de escala asociados a dichas eficiencia . El método empleado se basa una muestra de datos con fotones de alta pureza seleccionados a partir de eventos con bosones $Z$ que decaen radiativamente. Este método se utiliza para la medida de la eficiencia de triggers con fotones de bajo \ET, debido a la baja estadística de la muestra cuando los fotones tienen $\ET>60\,\gev$. Complementariamente, para triggers con fotones de mayor \ET, se utiliza otro método denominado \textit{Bootstrap}, que tiene una mayor estadística en ese rango a costa de una menor pureza, el cual no es descripto en esta Tesis.
 
-La medida de la eficiencia de los triggers de fotones y el cálculo de su factores de escala fueron parte de una cualificación de la colaboración de ATLAS para ser miembro autor de la misma. Tales resultados son empleados por todos los análisis que usen los triggers de fotones primarios para la selección de eventos.
+La medida de la eficiencia de los triggers de fotones y el cálculo de su factores de escala fueron hechos bajo el marco de la \textit{ATLAS Qualification}, un trabajo de un año de servicio, obligatorio para nuevos ingresantes, y requisito para ser miembro de la colaboración. Tales resultados son empleados por todos los análisis que usen los triggers de fotones primarios para la selección de eventos.
 
 % \solved{Justificar o motivar de una mejor forma el por qué explicamos el método del Zrad si los triggers que usamos en el análisis son medidos con Bootstrap} Done!
 
@@ -209,9 +209,9 @@ En la Figura \ref{fig:bs_vs_zrad} se muestra una comparación de las eficiencias
 \end{figure}
 
 
-La incertidumbre estadística para las eficiencias se obtiene como el intervalo de confianza de un estimador de Bayes con el método de Jeffrey \cite{Casadei_2012}.
+La incerteza estadística para las eficiencias se obtiene como el intervalo de confianza de un estimador de Bayes con el método de Jeffrey \cite{Casadei_2012}.
 Las incertezas sistemáticas se obtienen a partir de las variaciones en las eficiencias al modificar algunas de las selecciones empleadas en el método, principalmente las asociadas a los leptones para evitar un posible sesgo en esa selección. El requisito sobre las masas invariantes se varió de $36\,\gev<m_{ll}<87\,\gev$ a $44\,\gev<m_{ll}<79\,\gev$, y de 
-$82\,\gev<m_{ll\gamma}<100\,\gev$ a $88\,\gev<m_{ll\gamma}<94\,\gev$, y se modificó el requerimiento de identificación de los leptones a \texttt{Tight} y \texttt{Medium}, y el de aislamiento a \texttt{FixedCutTight}. En general las incertidumbres totales tomaban valores menores al 10\%.
+$82\,\gev<m_{ll\gamma}<100\,\gev$ a $88\,\gev<m_{ll\gamma}<94\,\gev$, y se modificó el requerimiento de identificación de los leptones a \texttt{Tight} y \texttt{Medium}, y el de aislamiento a \texttt{FixedCutTight}. En general las incertezas totales tomaban valores menores al 10\%.
 
 
 
@@ -259,7 +259,7 @@ Las simulaciones de Monte Carlo logran reproducir los procesos físicos en gener
 	\text{SF}(\pt, \eta) = \frac{\epsilon^{\text{(datos)}}(\pt, \eta)}{\epsilon^{\text{(MC)}}(\pt, \eta)}
 \end{equation}
 
-Las eficiencias del trigger para simulaciones se calculan de la misma forma que en datos, pero utilizando simulaciones con procesos de producción de bosones $Z$ decayendo a electrones o muones, los cuales pueden irradiar un fotón. Los SFs con calculados para los mismos triggers que se calculó la eficiencia listados en la Tabla \ref{tab:trigg_eff}, en bines de \ET y $\eta$ simultáneamente y para distintos WPs de aislamiento. Las incertidumbres son calculadas directamente propagando las incertidumbres de ambos términos del cociente. Para valores de alto \ET el valor del SF es extrapolado a partir de los bines de bajo \ET, donde el método del bosón $Z$ radiativo tiene validez. En la región con \ET menor al umbral y en la región del crack, donde las eficiencias son prácticamente nulas, se fijan los SFs igual $1\pm1$. 
+Las eficiencias del trigger para simulaciones se calculan de la misma forma que en datos, pero utilizando simulaciones con procesos de producción de bosones $Z$ decayendo a electrones o muones, los cuales pueden irradiar un fotón. Los SFs con calculados para los mismos triggers que se calculó la eficiencia listados en la Tabla \ref{tab:trigg_eff}, en bines de \ET y $\eta$ simultáneamente y para distintos WPs de aislamiento. Las incertezas son calculadas directamente propagando las incertezas de ambos términos del cociente. Para valores de alto \ET el valor del SF es extrapolado a partir de los bines de bajo \ET, donde el método del bosón $Z$ radiativo tiene validez. En la región con \ET menor al umbral y en la región del crack, donde las eficiencias son prácticamente nulas, se fijan los SFs igual $1\pm1$. 
  
 En las Figuras \ref{fig:SFs_2015_2016} y \ref{fig:SFs_2017_2018} se observan algunos de los SFs calculados para triggers de distintos años con WPs de aislamiento \texttt{FixedCutTightCaloOnly}. 
 En todos los casos los SFs son muy cercanos a la unidad, lo que deja en evidencia el buen diseño y construcción del sistema de trigger y las simulaciones. Tanto las eficiencias como los factores de escala obtenidos en este trabajo son utilizados actualmente por todos los análisis de la colaboración ATLAS que utilicen una selección de datos con triggers de fotones del Run 2.
@@ -270,14 +270,14 @@ En todos los casos los SFs son muy cercanos a la unidad, lo que deja en evidenci
   \centering
       {\includegraphics[width=0.45\textwidth]{images/trigger/2015_h_sf_et_eta_tr_HLT_g35_loose_FixedCutTightCaloOnly.pdf}}
       {\includegraphics[width=0.45\textwidth]{images/trigger/2016_h_sf_et_eta_tr_HLT_g35_loose_FixedCutTightCaloOnly.pdf}}
-      \caption{Scale Factors para el trigger \texttt{HLT\_g35\_loose} en función de $\ET$ y $\eta$ con un WP de aislamiento \texttt{FixedCutTightCaloOnly}, para el año 2015 (izquierda) y 2016 (derecha). En rojo las incertidumbres estadísticas.}
+      \caption{Scale Factors para el trigger \texttt{HLT\_g35\_loose} en función de $\ET$ y $\eta$ con un WP de aislamiento \texttt{FixedCutTightCaloOnly}, para el año 2015 (izquierda) y 2016 (derecha). En rojo las incertezas estadísticas.}
       \label{fig:SFs_2015_2016}
 \end{figure}
 \begin{figure}[!htpb]
   \centering
       {\includegraphics[width=0.45\textwidth]{images/trigger/2017_h_sf_et_eta_tr_HLT_g25_loose_FixedCutTightCaloOnly.pdf}}
       {\includegraphics[width=0.45\textwidth]{images/trigger/2018_h_sf_et_eta_tr_HLT_g25_loose_FixedCutTightCaloOnly.pdf}}
-      \caption{Scale Factors para el trigger \texttt{HLT\_g25\_loose} en función de $\ET$ y $\eta$ con un WP de aislamiento \texttt{FixedCutTightCaloOnly}, para el año 2017 (izquierda) y 2018 (derecha). En rojo las incertidumbres estadísticas.}
+      \caption{Scale Factors para el trigger \texttt{HLT\_g25\_loose} en función de $\ET$ y $\eta$ con un WP de aislamiento \texttt{FixedCutTightCaloOnly}, para el año 2017 (izquierda) y 2018 (derecha). En rojo las incertezas estadísticas.}
       \label{fig:SFs_2017_2018}
 \end{figure}
 

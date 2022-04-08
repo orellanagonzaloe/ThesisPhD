@@ -93,7 +93,7 @@ Los únicos parámetros libres del modelo son entonces $\mu$ y $M_3$, que determ
 
 \begin{sloppypar} % porque el NNLO... me quedaba en el margen
 La sección eficaz de las muestras se calcula en función de la masa del \gluino a 
-NNLO$_\text{approx}$+NNLL \cite{Beenakker:1996ch, Kulesza:2008jb, Kulesza:2009kq, Beenakker:2009ha, Beenakker:2011fu}. La sección eficaz nominal, junto con su incertidumbre, se obtienen de la combinación 
+NNLO$_\text{approx}$+NNLL \cite{Beenakker:1996ch, Kulesza:2008jb, Kulesza:2009kq, Beenakker:2009ha, Beenakker:2011fu}. La sección eficaz nominal, junto con su incerteza, se obtienen de la combinación 
 % envelope
 de las distintas secciones eficaces empleando diferentes conjuntos de PDFs, y modificando los factores de renormalización y factorización, como se describe en la Referencia \cite{Borschensky:2014cia}. En la Tabla \ref{tab:gino_xs} se muestran los valores de las secciones eficaces para las distintas masas de \gluino empleadas para las muestras.
 \end{sloppypar}
@@ -349,7 +349,7 @@ Con estas correcciones la estimación del fondo final queda de la forma:
     N_{\jfake} = N_A^b = \left[R' \frac{N_C - N_C^s}{N_D - N_D^s} \left( 1 - \frac{N_B^s}{N_B} \right)  \right] \times N_B = \text{FF}_{\text{iso}}(\absEta, \pt, \met) \times N_B \\
 \end{equation}
 
-Los FFs se estiman en función del \pt y \absEta del fotón, y \met del evento. Distintas fuentes de incertidumbre sistemática son consideradas. 
+Los FFs se estiman en función del \pt y \absEta del fotón, y \met del evento. Distintas fuentes de incertezas sistemáticas son consideradas. 
 % \solved{Motivar elecciones} anotado como pregunta de jurado
 Una de ellas es cambiar la definición de la identificación \texttt{Non-Tight}, utilizando ahora \texttt{Tight-3}\footnote{Selección \texttt{Loose} que no pasa alguno de los criterios de selección \texttt{Tight} que emplea las variables $w_{s3}$, $F_{\text{side}}$ o $\Delta E$} y \texttt{Tight-5}\footnote{Selección \texttt{Loose} que no pasa alguno de los criterios de selección \texttt{Tight} que emplea las variables $w_{s3}$, $F_{\text{side}}$, $\Delta E$, $E_{\text{ratio}}$ o $w_{\text{stot}}$}. A su vez se considera los efectos de la correlación residual, calculando los FFs con $R'=1$, e incluyendo las variaciones como sistemáticos.
 
@@ -374,7 +374,7 @@ En el caso de no observar eventos en alguna CSJ, se hace una estimación conserv
 
 \begin{table}[!ht]
   \centering
-  \caption{Valores obtenidos para los factores de reconstrucción errónea de jets en fotones en función del \pt y $|\eta|$ del fotón, y \met del evento. Las incertidumbres son tanto estadísticas como sistemáticas.}
+  \caption{Valores obtenidos para los factores de reconstrucción errónea de jets en fotones en función del \pt y $|\eta|$ del fotón, y \met del evento. Las incertezas son tanto estadísticas como sistemáticas.}
   \resizebox{.6\textwidth}{!}{
   \begin{tabular}{c|l|ccc}
     \hline
@@ -479,17 +479,17 @@ Cabe mencionar que al aplicar un corte en $\pt>145\,\gev$ se introduce un sesgo 
 \end{figure}
 
 
-La incerteza sistemática se estima variando las ventanas de integración a $[\mu - 2\sigma, \mu + 2\sigma]$ y $[\mu - 4\sigma, \mu + 4\sigma]$. Adicionalmente se calculan los FFs sin la sustracción del fondo, incluyendo esta variación como un sistemático que contempla el sesgo en la elección de la función de ajuste. Finalmente, como la energía del fotón <<falso>> es reconstruida con algoritmos para fotones, cuando en realidad deberían haber sido empleados los de electrones, se considera esto como una incertidumbre sistemática. Para ellos se calculan nuevamente los FFs ahora modificando el valor de energía de los fotones en un factor 1.5\%. Dicho valor se obtiene de las diferencias que existen entre el $\mu$ de las distribuciones con pares $ee$ y pares $e\gamma$ \cite{EXOT-2016-32}. Los valores obtenidos para los FFs junto con sus incertidumbres se pueden observar en la Tabla \ref{tab:efakes_ff}. Se puede ver como los mismos aumentan con $|\eta|$, relacionados con la cantidad de material que atraviesan y con la mayor fracción de reconstrucción de fotones convertidos con una sola traza.
+La incerteza sistemática se estima variando las ventanas de integración a $[\mu - 2\sigma, \mu + 2\sigma]$ y $[\mu - 4\sigma, \mu + 4\sigma]$. Adicionalmente se calculan los FFs sin la sustracción del fondo, incluyendo esta variación como un sistemático que contempla el sesgo en la elección de la función de ajuste. Finalmente, como la energía del fotón <<falso>> es reconstruida con algoritmos para fotones, cuando en realidad deberían haber sido empleados los de electrones, se considera esto como una incerteza sistemática. Para ellos se calculan nuevamente los FFs ahora modificando el valor de energía de los fotones en un factor 1.5\%. Dicho valor se obtiene de las diferencias que existen entre el $\mu$ de las distribuciones con pares $ee$ y pares $e\gamma$ \cite{EXOT-2016-32}. Los valores obtenidos para los FFs junto con sus incertezas se pueden observar en la Tabla \ref{tab:efakes_ff}. Se puede ver como los mismos aumentan con $|\eta|$, relacionados con la cantidad de material que atraviesan y con la mayor fracción de reconstrucción de fotones convertidos con una sola traza.
 
 
 \begin{table}
 \centering
-\caption{Factores de reconstrucción errónea de electrones como fotones en función de $|\eta|$ para todos los datos del Run 2. Se muestran explícitas las incertidumbres estadísticas y sistemáticas provenientes de variar la ventana de integración, no emplear la sustracción de fondo y el sesgo en la energía de los fotones.}
+\caption{Factores de reconstrucción errónea de electrones como fotones en función de $|\eta|$ para todos los datos del Run 2. Se muestran explícitas las incertezas estadísticas y sistemáticas provenientes de variar la ventana de integración, no emplear la sustracción de fondo y el sesgo en la energía de los fotones.}
 \resizebox{\textwidth}{!}{
 \begin{tabular}{ l | c | c c c c | c }
 \hline
 \hline
-\multirow{2}{*}{$|\eta|$} & \multirow{2}{*}{Fake factor} & Incertidumbre & \multicolumn{3}{c |}{Incertidumbre sistemática} & Incertidumbre \\
+\multirow{2}{*}{$|\eta|$} & \multirow{2}{*}{Fake factor} & incerteza & \multicolumn{3}{c |}{incerteza sistemática} & incerteza \\
 \cline{4-6}
  & & estadística. & V. integración & Sin sustracción & Sesgo energía & Total\\
 \hline
@@ -819,17 +819,17 @@ Finalmente se encuentra la región de validación para el fondo de electrones er
 
 \section{Incertezas sistemáticas}
 
-Un factor clave en el análisis es la estimación de las incertezas sistemáticas involucradas, las cuales afectan tanto la estimación de los fondos como de la señal en las distintas regiones del análisis. Las mismas son incluidas como parámetros nuisance en los distintos ajustes realizados, llegando a ser del orden de 60 incertezas. Existen dos tipos de incertidumbres sistemáticas, las experimentales y las teóricas, y se describen a continuación.
+Un factor clave en el análisis es la estimación de las incertezas sistemáticas involucradas, las cuales afectan tanto la estimación de los fondos como de la señal en las distintas regiones del análisis. Las mismas son incluidas como parámetros nuisance en los distintos ajustes realizados, llegando a ser del orden de 60 incertezas. Existen dos tipos de incertezas sistemáticas, las experimentales y las teóricas, y se describen a continuación.
 
 
 \subsection{Incertezas sistemáticas experimentales}
 
-Las incertezas experimentales están asociadas a la estimación de los fondos, ya sea por incertidumbres provenientes de la simulación del detector, en la reconstrucción y calibración de objetos, correcciones por pile-up, medida de la luminosidad, como también en los métodos de estimación de fondos basados en datos.
+Las incertezas experimentales están asociadas a la estimación de los fondos, ya sea por incertezas provenientes de la simulación del detector, en la reconstrucción y calibración de objetos, correcciones por pile-up, medida de la luminosidad, como también en los métodos de estimación de fondos basados en datos.
 
 
 \subsubsection{Incerteza en la luminosidad}
 
-La luminosidad del LHC durante el Run 2 se mide utilizando el detector de Cherenkov LUCID2 \cite{Avoni:2018iuv}, y se calibra a partir tomas de datos especiales de baja luminosidad del LHC, utilizando el método van der Meer \cite{vanderMeer:296752,Grafstrom:2153734}. La misma es empleada en general para la medida de secciones eficaces, aunque en este análisis cumple un rol fundamental en la normalización de las simulaciones de MC a las condiciones del Run 2 del LHC. La incertidumbre en la luminosidad integrada combinada del Run 2 es de $1.7$\% \cite{ATLAS-CONF-2019-021}.
+La luminosidad del LHC durante el Run 2 se mide utilizando el detector de Cherenkov LUCID2 \cite{Avoni:2018iuv}, y se calibra a partir tomas de datos especiales de baja luminosidad del LHC, utilizando el método van der Meer \cite{vanderMeer:296752,Grafstrom:2153734}. La misma es empleada en general para la medida de secciones eficaces, aunque en este análisis cumple un rol fundamental en la normalización de las simulaciones de MC a las condiciones del Run 2 del LHC. La incerteza en la luminosidad integrada combinada del Run 2 es de $1.7$\% \cite{ATLAS-CONF-2019-021}.
 
 
 \subsubsection{Incertezas asociadas a fotones, electrones y muones}
@@ -838,7 +838,7 @@ Las incertezas en la identificación y aislamiento de fotones son estimadas a pa
 % \solved{no se si esta definido} Si
 entre datos y MC, utilizando eventos de bosón $Z$ decayendo radiativamente \cite{ph_unc1}. La escala de energía es determinada utilizando eventos de $Z\to ee$ y $J/\Psi \to ee$, y sus correcciones fueron aplicadas como variaciones de una desviación estándar del valor nominal. La misma metodología se emplea para las variaciones en la resolución.
 De manera similar se obtienen los sistemáticos asociados a electrones \cite{ATLAS-CONF-2014-032} y muones \cite{PERF-2015-10}, los cuales se determinan a partir de eventos $Z\to l^+l^-$, $J/\Psi\to l^+l^-$ y $W\to l^\pm \nu$. 
-Las incertidumbres consideradas para electrones son la variación de la escala de su momento, y variaciones en la incerteza del factor de escala de reconstrucción, identificación e aislamiento.
+Las incertezas consideradas para electrones son la variación de la escala de su momento, y variaciones en la incerteza del factor de escala de reconstrucción, identificación e aislamiento.
 Para muones son consideran las variaciones en la escala y resolución de su momento 
 % (\textit{smearing} de la traza en el ID/MS)
 , en la dependencia escala del momento con la carga, en la incerteza del factor de escala de reconstrucción y aislamiento, en los factores de escala de asociación entre traza y vértices, y el rechazo de muones con baja resolución de momento.
@@ -848,13 +848,13 @@ Para muones son consideran las variaciones en la escala y resolución de su mome
 
 Las incertezas asociadas a jets se estiman siguiendo la metodología descripta en las Referencias \cite{PERF-2011-03} y \cite{ATLAS-CONF-2015-037}, las cuales provienen de múltiples fuentes y aportan una gran cantidad de parámetros nuisance. 
 
-% Entre ellas están la incertidumbre asociadas a la resolución y escala de energía, las eficiencias de identificación de sabor del jet y la incertidumbre en el JVT. 
+% Entre ellas están la incerteza asociadas a la resolución y escala de energía, las eficiencias de identificación de sabor del jet y la incerteza en el JVT. 
 
-Entre ellas están la incertidumbre asociadas a la resolución de energía, obtenida a partir de la variación del \textit{smearing} de jets de MC a datos para la corrección de la resolución, usando eventos con dos jets y datos sin sesgo de trigger mediante conos aleatorios.
+Entre ellas están la incerteza asociadas a la resolución de energía, obtenida a partir de la variación del \textit{smearing} de jets de MC a datos para la corrección de la resolución, usando eventos con dos jets y datos sin sesgo de trigger mediante conos aleatorios.
 % \tosolve{esto es un monton jaja}
-La variación de la escala de energía, proveniente de la intercalibración en $\eta$ de eventos con dos jets, balance \zj, balance \phj, balance Multijet, y de incertidumbres asociadas a la propagación de partículas individuales, el haz de prueba, pile-up, identificación de sabor y fuga hadrónica.
+La variación de la escala de energía, proveniente de la intercalibración en $\eta$ de eventos con dos jets, balance \zj, balance \phj, balance Multijet, y de incertezas asociadas a la propagación de partículas individuales, el haz de prueba, pile-up, identificación de sabor y fuga hadrónica.
 % falto MC non-closure, no se traducirla
-Finalmente se consideran incertidumbres asociadas a la eficiencia de la identificación de sabor del jet, y de la contaminación residual de jets luego de la supresión de pile-up (JVT) y la elección del generador de MC.
+Finalmente se consideran incertezas asociadas a la eficiencia de la identificación de sabor del jet, y de la contaminación residual de jets luego de la supresión de pile-up (JVT) y la elección del generador de MC.
 
 % \solved{agregar mas detalles, capaz en leptones tambien}. Done
 
@@ -876,7 +876,7 @@ Los métodos para la estimación de fondos de jets y electrones reconstruidos er
 
 Las incertezas teóricas afectan a todas las simulaciones de MC, y provienen principalmente tanto del generador empleado, como de los distintos parámetros de la teoría utilizados en los cálculos de las propias simulaciones. 
 
-Para cada muestra de fondo, en cada región del análisis, se calcula una incertidumbre teórica total que incluye los efectos que más adelante se describen. Contrario a lo que se espera, las incertezas sistemáticas se ven afectadas por la estadística de la muestra, principalmente cuando la región tiene bajo número de eventos. Es por esto, que para el cálculo de las incertidumbres teóricas, se emplean regiones equivalentes a la del análisis pero relajando varios de sus cortes, eliminando así la dependencia con la estadística. Se emplea una región para sistemáticos común a todas las SRs del análisis, y una para cada grupo de VRs, las cuales se muestran en la Tabla \ref{tab:syst_reg}. Para las CRs se usan exactamente las mismas ya que por definición abundan los eventos de un dado fondo.
+Para cada muestra de fondo, en cada región del análisis, se calcula una incerteza teórica total que incluye los efectos que más adelante se describen. Contrario a lo que se espera, las incertezas sistemáticas se ven afectadas por la estadística de la muestra, principalmente cuando la región tiene bajo número de eventos. Es por esto, que para el cálculo de las incertezas teóricas, se emplean regiones equivalentes a la del análisis pero relajando varios de sus cortes, eliminando así la dependencia con la estadística. Se emplea una región para sistemáticos común a todas las SRs del análisis, y una para cada grupo de VRs, las cuales se muestran en la Tabla \ref{tab:syst_reg}. Para las CRs se usan exactamente las mismas ya que por definición abundan los eventos de un dado fondo.
 
 \begin{table}[ht!]
   \caption{Regiones empleadas para el cálculo de los sistemáticos teóricos. Las mismas fueron obtenidas a partir de las regiones del análisis, pero relajando algunos de sus cortes. Para las CRs se emplearon las mismas regiones del análisis por lo que no son mostradas.}
@@ -904,19 +904,19 @@ Para cada muestra de fondo, en cada región del análisis, se calcula una incert
 \label{tab:syst_reg}
 \end{table}
 
-Todas las muestras de fondo se generan con un conjunto de pesos internos, que al aplicarlo a cada evento, representan el efecto que generaría la variación de distintos parámetros de la teoría. Las variaciones consideradas para cada muestra son las de la escala de renormalización ($\mu_R$) y factorización ($\mu_F$), la variación de los elementos de matriz (ME) de la PDF nominal, variación de la familia de PDFs empleada en la generación de los eventos, y las incertidumbres asociadas a la determinación y truncamiento de la constante de acoplamiento fuerte ($\alpha_S$). Para la muestra de \ttbarph, se emplean solo las dos primeras variaciones, las cuales son las predominantes. Tampoco se tienen en cuenta variaciones en la escala de \textit{matching} (CKKW),
+Todas las muestras de fondo se generan con un conjunto de pesos internos, que al aplicarlo a cada evento, representan el efecto que generaría la variación de distintos parámetros de la teoría. Las variaciones consideradas para cada muestra son las de la escala de renormalización ($\mu_R$) y factorización ($\mu_F$), la variación de los elementos de matriz (ME) de la PDF nominal, variación de la familia de PDFs empleada en la generación de los eventos, y las incertezas asociadas a la determinación y truncamiento de la constante de acoplamiento fuerte ($\alpha_S$). Para la muestra de \ttbarph, se emplean solo las dos primeras variaciones, las cuales son las predominantes. Tampoco se tienen en cuenta variaciones en la escala de \textit{matching} (CKKW),
  % \solved{mirar esto}  a estudiar, algo puse igual en la tesis
  ni en la escala de resumación (QSF), ya que las mismas son despreciables y requieren la generación de muestras adicionales. 
 
 \begin{sloppypar} % porque el muR muF me quedaba en el margen
-El cálculo de la incertidumbre teórica total se realiza siguiendo las recomendaciones \texttt{PDF4LHC} \cite{Butterworth:2015oua}.
+El cálculo de la incerteza teórica total se realiza siguiendo las recomendaciones \texttt{PDF4LHC} \cite{Butterworth:2015oua}.
 % \solved{no se si fue asi... en todo caso citar} deberia ser esto, que se yo...
-Para calcular las variaciones de los MEs de las PDFs se emplea \texttt{LHAPDF} \cite{lhapdf} con la PDF nominal, \texttt{NNPDF30\_nnlo\_as\_0118}, y 100 variaciones de sus MEs. Adicionalmente, se emplean dos familias de PDFs alternativas, \texttt{CT14} y \texttt{MMHT2014nnlo68c1}. Para las variaciones de escala, se consideran siete posibles valores: $(\mu_R, \mu_F) = (0.5,0.5), (1,0.5), (0.5,1), (1,1), (2,1), (1,2), (2,2)$, mientras que para las variaciones asociadas a $\alpha_S$, se consideran dos (<<up>> y <<down>>). Todas estas variaciones son combinadas en una sola incertidumbre total para cada muestra y para cada región, y cuyos valores porcentuales promedio se muestran en la Tabla \ref{tab:syst_values}. Dichas incertezas son del orden del 30-40\% para cada proceso relevante en cada región. Aquellos procesos donde en ciertas regiones tienen una estadística reducida, se consideran de poco impacto para dicha región, y se fija conservadoramente una incerteza del 100\%. 
+Para calcular las variaciones de los MEs de las PDFs se emplea \texttt{LHAPDF} \cite{lhapdf} con la PDF nominal, \texttt{NNPDF30\_nnlo\_as\_0118}, y 100 variaciones de sus MEs. Adicionalmente, se emplean dos familias de PDFs alternativas, \texttt{CT14} y \texttt{MMHT2014nnlo68c1}. Para las variaciones de escala, se consideran siete posibles valores: $(\mu_R, \mu_F) = (0.5,0.5), (1,0.5), (0.5,1), (1,1), (2,1), (1,2), (2,2)$, mientras que para las variaciones asociadas a $\alpha_S$, se consideran dos (<<up>> y <<down>>). Todas estas variaciones son combinadas en una sola incerteza total para cada muestra y para cada región, y cuyos valores porcentuales promedio se muestran en la Tabla \ref{tab:syst_values}. Dichas incertezas son del orden del 30-40\% para cada proceso relevante en cada región. Aquellos procesos donde en ciertas regiones tienen una estadística reducida, se consideran de poco impacto para dicha región, y se fija conservadoramente una incerteza del 100\%. 
 \end{sloppypar} 
 
 \begin{table}[ht!]
   \centering
-  \caption{Promedio porcentual entre la variación superior e inferior de las incertidumbres teóricas de cada muestra de fondo en cada región. Los fondos con baja estadística no afectan los resultados en la región y sus incertidumbres se fijan conservadoramente a 100\%.
+  \caption{Promedio porcentual entre la variación superior e inferior de las incertezas teóricas de cada muestra de fondo en cada región. Los fondos con baja estadística no afectan los resultados en la región y sus incertezas se fijan conservadoramente a 100\%.
   % \solved{definir promedio} done
   }
   \resizebox{.9\textwidth}{!}{
