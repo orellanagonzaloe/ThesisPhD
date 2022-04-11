@@ -4,12 +4,12 @@
 
 Las búsquedas de supersimetría están clasificadas por distintas características, en particular en la que se trabaja en esta tesis, está identificada con la producción fuerte de gluinos, y los resultados de la misma se muestran en los Capítulos anteriores. De forma análoga, es posible realizar una búsqueda con el mismo estado final, motivada por un modelo supersimétrico similar al anterior, pero dedicado a la producción electrodébil de partículas.
 
-La metodología empleada para realizar dicha búsqueda es similar a la búsqueda con producción fuerte, que consiste en el modelado de muestras de señal y fondo, diseño de regiones sensibles a dicho modelo, y una posterior comparación entre las estimaciones de los fondos y los eventos observados. El presente Capítulo describe una búsqueda con dichas características, hasta la realización del ajuste de solo fondo.
+La metodología empleada para realizar dicha búsqueda consiste nuevamente en el modelado de muestras de señal y fondo, diseño de regiones sensibles a dicho modelo, y una posterior comparación entre las estimaciones de los fondos y los eventos observados. El presente Capítulo describe el diseño de una búsqueda con dichas características, su correspondiente validación y la sensibilidad esperada a una luminosidad de $139\,\ifb$. 
 
 
 \section{Muestras de señal a partir de simulaciones de Monte Carlo}
 
-El modelo que motiva a la presente búsqueda es similar al descripto en la Sección \label{sec:signal_samples} con algunas salvedades. En el mismo se optimizaron los parámetros del modelo para obtener las masas y decaimientos deseados, en los cuales no estaba contemplado el decaimiento a bosones $Z$. La búsqueda electrodébil emplea una estrategia simplificada para generar las muestras de señal. En principio se fijan directamente las masas y los decaimientos de todas las partículas, sin centrarse en los parámetros de la teoría que llevan a tales valores. A su vez, la búsqueda se realiza de forma sensible a posibles decaimientos del \ninoone a fotones, bosones $Z$ y Higgs. La Figura \ref{fig:EWK_GGM_diagrams} muestra los posibles diagramas de decaimiento para la búsqueda electrodébil.
+El modelo que motiva a la presente búsqueda es una extensión al descripto en la Sección \ref{sec:signal_samples}. En el mismo se optimizaron los parámetros del modelo para obtener las masas y decaimientos deseados, en los cuales no estaba contemplado el decaimiento a bosones $Z$. La búsqueda electrodébil emplea una estrategia simplificada para generar las muestras de señal. En principio se fijan directamente las masas y los decaimientos de todas las partículas, sin centrarse en los parámetros de la teoría que llevan a tales valores. A su vez, la búsqueda se realiza de forma sensible a posibles decaimientos del \ninoone a fotones, bosones $Z$ y Higgs. La Figura \ref{fig:EWK_GGM_diagrams} muestra los posibles diagramas de decaimiento para la búsqueda electrodébil.
 
 
 \begin{figure}
@@ -45,7 +45,7 @@ La metodología para asignar dichos pesos a los eventos va a depender, tanto de 
 
 \noindent
 donde $\text{BR}_{X}$ es la fracción de decaimiento del proceso $\ninoone \to \gravino X$ que se desea estudiar.
-El peso está normalizado de tal forma que la suma de todas las fracciones de decaimiento de la unidad. En particular, y a modo de estudio preliminar, la búsqueda se centra en dos modelos: el modelo equivalente al estudiado en la producción fuerte, donde el \ninoone decae $50\%$ a $\gamma + \gravino$ y $50\%$ a $\gamma + h$, denominado modelo `ph+h' donde $w(0.5, 0, 0.5)$. Y por otro lado, el modelo donde el \ninoone decae $50\%$ a $\gamma + \gravino$ y $50\%$ a $\gamma + Z$, denominado modelo `ph+Z' donde $w(0.5, 0.5, 0)$.
+El peso está normalizado de tal forma que la suma de todas las fracciones de decaimiento de la unidad. En particular, y a modo de estudio preliminar, la búsqueda se centra en dos modelos: el modelo equivalente al estudiado en la producción fuerte, donde el \ninoone decae $50\%$ a $\gamma + \gravino$ y $50\%$ a $\gamma + h$, denominado modelo <<ph+h>> donde $w(0.5, 0, 0.5)$. Y por otro lado, el modelo donde el \ninoone decae $50\%$ a $\gamma + \gravino$ y $50\%$ a $\gamma + Z$, denominado modelo <<ph+Z>> donde $w(0.5, 0.5, 0)$.
 
 Las masas del \ninotwo y \chinopm se eligen levemente degeneradas, e iguales a la del \ninoone más \magn{10}{GeV} y \magn{11}{GeV} respectivamente. 
 % \solved{justificar esto?} fue una primera referencia para una posible extension
@@ -66,7 +66,7 @@ Tantos las simulaciones de fondos del SM, como las técnicas para modelar fondos
 
 \begin{table}[h!]
   \centering
-  \caption{Muestras de de producción de tops y bosones de Higgs decayendo a fotones utilizadas en el análisis con producción electrodébil, donde se especifica su generador, sección eficaz, $k$-factor y eficiencia de filtro.}
+  \caption{Muestras de fondos de MC con producción de tops y bosones de Higgs decayendo a fotones, utilizadas en el análisis con producción electrodébil, donde se especifica su generador, sección eficaz, $k$-factor y eficiencia de filtro.}
   \label{tab:higgs_bkg}
   \resizebox{\textwidth}{!}{
   \begin{tabular}{llrrr}
@@ -210,7 +210,7 @@ Los fondos \ttbarph y $\ttbar h$, son normalizados simultáneamente en una regi�
 
 \begin{table}
 \centering
-    \caption{Definición de las regiones de control para el análisis con producción electrodébil. El asterisco representa que dicha \met empleada en ese corte es calculada removiendo los leptones de su cálculo.}
+    \caption{Definición de las regiones de control para el análisis con producción electrodébil. El asterisco en las variables que emplean \met representa que el valor de dicha variable es estimado removiendo los leptones del cálculo.}
   % \resizebox{\linewidth}{!}{
     \begin{tabular}{ l | c | c | c | c }
     \hline
@@ -257,7 +257,7 @@ Finalmente se incluye un diseño preliminar para regiones de validación. Las mi
 
 \begin{table}
 \centering
-    \caption{Definición de las regiones de validación para el análisis con producción electrodébil. El asterisco representa que dicha \met empleada en ese corte es calculada removiendo los leptones de su cálculo.}
+    \caption{Definición de las regiones de validación para el análisis con producción electrodébil. El asterisco en las variables que emplean \met representa que el valor de dicha variable es estimado removiendo los leptones del cálculo.}
   % \resizebox{\linewidth}{!}{
       \begin{tabular}{ l | c | c | c | c | c }
       \hline
@@ -296,14 +296,14 @@ Finalmente se incluye un diseño preliminar para regiones de validación. Las mi
 
 \section{Resultados preliminares}
 
-% \tosolve{Arreglar sistematicos en las tablas}
+% \solved{Arreglar sistematicos en las tablas} % Done
 
 
 En la Tabla \ref{tab:bkg_only_fit_ewk} se muestran los resultados preliminares del ajuste de solo fondo, empleando las cuatro regiones de control. En las mismas se muestra el aporte de cada fondo antes y después del ajuste, junto con la pureza del fondo y el factor de normalización. Los fondos \ttbarph y $\ttbar h$ se ajustan con el mismo factor de normalización en la CRT, mientras que los fondos de \znunuph, \zeeph y \zmumuph lo hacen con su respectivo factor en las CRZ\_el y CRZ\_mu. De forma preliminar se emplea un sistemático \textit{dummy} del $25\%$ para todos los fondos en todas las regiones, emulando el aporte de los sistemáticos teóricos y del detector, observado en el análisis descripto en el Capítulo \ref{cap:analysis}. En general se obtuvieron factores de normalización cercanos a la unidad, lo que evidencia un correcto modelado por parte de las simulaciones. En las Figuras \ref{fig:crw_crt_dist_ewk} y \ref{fig:crz_el_mu_dist_ewk} se puede observar el buen acuerdo entre las simulaciones y los datos luego del ajuste.
 
 \begin{table}
   \centering
-  \caption{Resultados del ajuste de solo fondo en las diferentes regiones de control para el análisis de producción electrodébil. Se muestran los resultados antes y después del ajuste, la pureza del fondo y los factores de normalización.}
+  \caption{Resultados preliminares del ajuste de solo fondo en las diferentes regiones de control para el análisis de producción electrodébil. Se muestran los resultados antes y después del ajuste, la pureza del fondo y los factores de normalización.}
   \resizebox{\textwidth}{!}{\input{tables/analysis_EWK/table_cr.tex}}
   \label{tab:bkg_only_fit_ewk}
 \end{table}
@@ -321,7 +321,7 @@ En la Tabla \ref{tab:bkg_only_fit_ewk} se muestran los resultados preliminares d
     \includegraphics[width=0.32\textwidth]{images/analysis_EWK/v192_1_nosyst/can_CRT_met_etmeff_afterFit.pdf}
     \includegraphics[width=0.32\textwidth]{images/analysis_EWK/v192_1_nosyst/can_CRT_met_sig_obj_afterFit.pdf}
 
-    \caption{Distribuciones en la región de control CRW y CRT luego del ajuste de solo fondo, para el análisis de producción electrodébil. Las incertezas mostradas son sólo estadísticas.}
+    \caption{Distribuciones preliminares en la región de control CRW y CRT luego del ajuste de solo fondo, para el análisis de producción electrodébil. Las incertezas mostradas son sólo estadísticas.}
     \label{fig:crw_crt_dist_ewk}
 
 \end{figure}
@@ -333,7 +333,7 @@ En la Tabla \ref{tab:bkg_only_fit_ewk} se muestran los resultados preliminares d
     \includegraphics[width=0.49\textwidth]{images/analysis_EWK/v192_1_nosyst/can_CRZ_el_met_noele_et_afterFit.pdf}
     \includegraphics[width=0.49\textwidth]{images/analysis_EWK/v192_1_nosyst/can_CRZ_mu_met_nomuon_et_afterFit.pdf}
 
-    \caption{Distribuciones en la región de control CRZ\_el y CRZ\_mu luego del ajuste de solo fondo, para el análisis de producción electrodébil. Las incertezas mostradas son sólo estadísticas.}
+    \caption{Distribuciones preliminares de \met en las regiones de control CRZ\_el y CRZ\_mu luego del ajuste de solo fondo, para el análisis de producción electrodébil. En el cálculo de dicha variable se remueve los correspondientes leptones. Las incertezas mostradas son sólo estadísticas.}
     \label{fig:crz_el_mu_dist_ewk}
 \end{figure}
 
@@ -343,7 +343,7 @@ En la Tabla \ref{tab:fit_result_vr} se muestran los resultados de las estimació
 
 \begin{table}[ht!]
   \centering
-  \caption{Estimación de los fondos y de la señal en las distintas regiones de validación luego del ajuste de solo fondo para el análisis de producción electrodébil.}
+  \caption{Estimación preliminar de los fondos y de la señal en las distintas regiones de validación luego del ajuste de solo fondo para el análisis de producción electrodébil.}
   \resizebox{\textwidth}{!}{\input{tables/analysis_EWK/table_vr.tex}}
   \label{tab:fit_result_vr}
 \end{table}
@@ -358,17 +358,17 @@ En la Tabla \ref{tab:fit_result_vr} se muestran los resultados de las estimació
     \includegraphics[width=0.24\textwidth]{images/analysis_EWK/v192_1_nosyst/can_VRT_met_et_afterFit.pdf}
     \includegraphics[width=0.24\textwidth]{images/analysis_EWK/v192_1_nosyst/can_VRT_met_sig_obj_afterFit.pdf}
 
-    \includegraphics[width=0.24\textwidth]{images/analysis_EWK/v192_1_nosyst/can_VRZee_met_noele_et_afterFit.pdf}
-    \includegraphics[width=0.24\textwidth]{images/analysis_EWK/v192_1_nosyst/can_VRZmm_met_nomuon_et_afterFit.pdf}
     \includegraphics[width=0.24\textwidth]{images/analysis_EWK/v192_1_nosyst/can_VRE_met_et_afterFit.pdf}
     \includegraphics[width=0.24\textwidth]{images/analysis_EWK/v192_1_nosyst/can_VRE_met_sig_obj_afterFit.pdf}
+    \includegraphics[width=0.24\textwidth]{images/analysis_EWK/v192_1_nosyst/can_VRZee_met_noele_et_afterFit.pdf}
+    \includegraphics[width=0.24\textwidth]{images/analysis_EWK/v192_1_nosyst/can_VRZmm_met_nomuon_et_afterFit.pdf}
 
-    \caption{Distribuciones de \met y $\mathcal{S}$ en las regiones de validación VRW, VRT, VRZee y VRZmm, luego del ajuste de solo fondo para el análisis de producción electrodébil. Las incertezas mostradas son sólo estadísticas.}
+    \caption{Distribuciones preliminares de \met y $\mathcal{S}$ en las regiones de validación VRW, VRT y VRE, luego del ajuste de solo fondo para el análisis de producción electrodébil. Se muestra a su vez las distribuciones preliminares de \met en las VRZee y VRZmm removiendo los respectivos leptones en el cálculo de dicha variable. Las incertezas mostradas son sólo estadísticas. P}
     \label{fig:vr_ewk}
 
 \end{figure}
 
-En la Tabla \ref{tab:fit_result_sr} se muestran los resultados blinded en las regiones de señal de descubrimiento para el presente análisis. En la Figura \ref{fig:srd_ewk} se observan distribuciones para las regiones de señal de descubrimiento. Se puede apreciar como cada región de señal es sensible a un cierto rango de masas de \ninoone, llegándose a ser sensible hasta masas de \magn{750}{GeV}. Cabe mencionar, que al observar la distribución de $\mathcal{S}$, se puede apreciar que con cortes más estrictos de dicha variable, se obtienen valores de significancia más altos. Esto tiene como consecuencia una reducción importante del fondo, lo que conlleva a diversos problemáticas, como no encontrarse en el régimen asintótico para la aproximación de los estadísticos de prueba, o inconvenientes al ajustar los sistemáticos para PLR. Se priorizó entonces tener un número de fondo importante, al costo de una reducción de sensibilidad.
+En la Tabla \ref{tab:fit_result_sr} se muestran los resultados blinded en las regiones de señal de descubrimiento para el presente análisis. En la Figura \ref{fig:srd_ewk} se observan distribuciones para las regiones de señal de descubrimiento. Se puede apreciar como cada región de señal es sensible a un cierto rango de masas de \ninoone, llegándose a ser sensible hasta masas de \magn{750}{GeV}. Cabe mencionar, que al observar la distribución de $\mathcal{S}$, se puede apreciar que con cortes más estrictos de dicha variable, se obtienen valores de significancia más altos. Esto tiene como consecuencia una reducción importante del fondo, lo que conlleva a diversos problemáticas, como no encontrarse en el régimen asintótico para la aproximación de los estadísticos de prueba, o inconvenientes al ajustar los sistemáticos para PLR. Se priorizó entonces tener un número de fondo significante, al costo de una reducción de sensibilidad.
 La Figura \ref{fig:sre_ewk} se muestran los límites esperados empleando ambos conjuntos de regiones de señal, donde se puede observar que con las regiones de señal de exclusión los límites son mejores.
 % \solved{También se hizo los limites con un shape fit, y dan un poco mejor, el tema es que hay que explicar que es un shape fit...} no se explicar ni se menciona
 Dichos limites son del orden de \magn{1200}{GeV}, lo que podría significar un importante aporte a los límites impuestos en la actualidad a dichos procesos, los cuales se observan en la Figura \ref{fig:ewk_limits}.
@@ -376,7 +376,7 @@ Dichos limites son del orden de \magn{1200}{GeV}, lo que podría significar un i
 
 \begin{table}[ht!]
   \centering
-  \caption{Estimación de los fondos y de la señal en las distintas regiones de señal luego del ajuste de solo fondo para el análisis de producción electrodébil.}
+  \caption{Estimación preliminar de los fondos y de la señal en las distintas regiones de señal luego del ajuste de solo fondo para el análisis de producción electrodébil.}
   \resizebox{\textwidth}{!}{\input{tables/analysis_EWK/table_sr.tex}}
   \label{tab:fit_result_sr}
 \end{table}
@@ -388,7 +388,7 @@ Dichos limites son del orden de \magn{1200}{GeV}, lo que podría significar un i
     \includegraphics[width=0.49\textwidth]{images/analysis_EWK/v192_1_nosyst/can_SRd_200_met_et_afterFit.pdf}
     \includegraphics[width=0.49\textwidth]{images/analysis_EWK/v192_1_nosyst/can_SRd_200_met_sig_obj_afterFit.pdf}
 
-    \caption{Distribuciones de \met y $\mathcal{S}$ en la región de señal SRd\_200 luego del ajuste de solo fondo, para el análisis de producción electrodébil. Las incertezas mostradas son sólo estadísticas.}
+    \caption{Distribuciones preliminares de \met y $\mathcal{S}$ en la región de señal SRd\_200 luego del ajuste de solo fondo, para el análisis de producción electrodébil. Las incertezas mostradas son sólo estadísticas.}
     \label{fig:srd_ewk}
 
 \end{figure}
@@ -399,7 +399,7 @@ Dichos limites son del orden de \magn{1200}{GeV}, lo que podría significar un i
     \includegraphics[width=0.49\textwidth]{images/analysis_EWK/plots_exp_excl_ewk/expected_limit_mass_vs_BR_yZ_cmp_SRL_vs_SR.png}
     \includegraphics[width=0.49\textwidth]{images/analysis_EWK/plots_exp_excl_ewk/expected_limit_mass_vs_BR_yh_cmp_SRL_vs_SR.png}
 
-    \caption{Límites esperados en función de la fracción de decaimiento del \ninoone a $\gamma+\gravino$ y su masa, para el modelo `ph+Z' (izquierda) y el modelo `ph+h', comparando los resultados obtenidos empleando las regiones de señal de descubrimiento (rojo) y las de exclusión (azul).}
+    \caption{Límites esperados en función de la fracción de decaimiento del \ninoone a $\gamma+\gravino$ y su masa, para el modelo <<ph+Z>> (izquierda) y el modelo <<ph+h>>, comparando los resultados obtenidos empleando las regiones de señal de descubrimiento (rojo) y las de exclusión (azul).}
     \label{fig:sre_ewk}
 
 \end{figure}
