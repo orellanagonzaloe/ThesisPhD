@@ -7,7 +7,7 @@
 % \chaptermark{Resultados e interpretación del análisis}
 
 % \tosolve{citar paper?}
-A continuación se presentan los resultados obtenidos utilizando el conjunto completo de datos del Run 2. Esto incluye los resultados del modelado de fondo en cada una de las regiones, el ajuste de solo fondo en las regiones de control, el acuerdo en las regiones de validación y los valores finales en las regiones de señal. En estas últimas, se presenta además el número de eventos observados unblinded, junto con los límites de exclusión tanto dependientes como independientes del modelo. Los métodos estadísticos empleados son los descriptos en el Capítulo \ref{cap:statistical}, llevados a cabo mediante los programas \texttt{HistFitter} \cite{Baak_2015} y \texttt{HistFactory} \cite{Cranmer:1456844}, dedicados a cálculos para la búsqueda de nueva física.
+A continuación se presentan los resultados obtenidos utilizando el conjunto completo de datos del Run 2 \cite{ATLAS:2021ijy}. Esto incluye los resultados del modelado de fondo en cada una de las regiones, el ajuste de solo fondo en las regiones de control, el acuerdo en las regiones de validación y los valores finales en las regiones de señal. En estas últimas, se presenta además el número de eventos observados unblinded, junto con los límites de exclusión tanto dependientes como independientes del modelo. Los métodos estadísticos empleados son los descriptos en el Capítulo \ref{cap:statistical}, llevados a cabo mediante los programas \texttt{HistFitter} \cite{Baak_2015} y \texttt{HistFactory} \cite{Cranmer:1456844}, dedicados a cálculos para la búsqueda de nueva física.
 
 \subsection{Resultados del ajuste de solo fondo en las regiones de control y validación}
 
@@ -150,7 +150,7 @@ Luego de la estimación de los fondos en las regiones de señal y su correcta va
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics[width=0.89\textwidth]{images/results/fr2_unblind/regions_pull_significance.pdf}
+  \includegraphics[width=0.89\textwidth]{images/results/regions_pull_significance_CR_VR.pdf}
   \caption{Resumen de la estimación de fondo y datos observados para cada región de control, validación y señal empleadas en el análisis. Abajo se muestra la diferencia entre el fondo estimado y los datos observados, en unidades de desviación estándar con respecto a la incerteza total del fondo.}
   \label{fig:regions_pulls_unblinded}
 \end{figure}
@@ -254,7 +254,7 @@ Se incluye el p-value de descubrimiento, que para regiones donde la predicción 
 \subsection{Límites dependientes del modelo}
 
 
-Se establecen los límites dependientes del modelo, buscando aquellos puntos del modelo de señal para los cuales $\text{CL}_{s}=0.05$, como se describe en la Sección \ref{sec:flujo_busqueda}. Dichos límites son calculados de forma independiente para cada región de señal, y luego combinados en un límite total. Para ello se elige de cada punto de señal, la región con mejor límite esperado, y se emplea su $\text{CL}_{s}$ para realizar la interpolación. La misma se realiza mediante el módulo \texttt{Scipy} \cite{2020SciPy-NMeth}, empleando la interpolación \texttt{multiquadratic} con el parámetro \texttt{smooth} igual a $0.1$. La distribución de los distintos estadísticos de prueba se aproxima mediante la generación de {$\smallsim$}50000 toys.
+Se establecen los límites dependientes del modelo, buscando aquellos puntos del modelo de señal para los cuales $\text{CL}_{s}=0.05$, como se describe en la Sección \ref{sec:flujo_busqueda}. Dichos límites son calculados de forma independiente para cada región de señal, y luego combinados en un límite total. Para ello se elige de cada punto de señal, la región con mejor límite esperado, y se emplea su $\text{CL}_{s}$ para realizar la interpolación. La misma se realiza mediante el módulo \texttt{Scipy} \cite{Virtanen:2019joe}, empleando la interpolación \texttt{multiquadratic} con el parámetro \texttt{smooth} igual a $0.1$. La distribución de los distintos estadísticos de prueba se aproxima mediante la generación de {$\smallsim$}50000 toys.
 
 En la Figura \ref{fig:limit_plot_combined} se muestran los límites observados y esperados, combinando los resultados de las tres regiones de señal, para los que se incluye la variación de las incertezas sistemáticas en $\pm1\sigma$. Para los límites esperados se varían las incertezas experimentales, mientras que para los observados la incerteza en el cálculo de la sección eficaz del modelo. Estos límites excluyen a 95\% de intervalo de confianza la producción de gluinos con masas de hasta aproximadamente $2300\ \gev$, para la mayoría de las masas de neutralino estudiadas. 
 
