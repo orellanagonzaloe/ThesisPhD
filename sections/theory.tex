@@ -42,10 +42,10 @@ El grupo de simetría del SM se define como:
 	\mathcal{G}_{\text{SM}} = SU(3)_C \otimes SU(2)_L \otimes U(1)_Y
 \end{equation}
 
-La primer simetría a mencionar es la $SU(2)_L \otimes U(1)_Y$, relacionada con la interacción electrodébil. Los bosones de gauge requeridos por la invarianza de la teoría ante estas transformaciones son el $B_{\mu}$ y los $W_{\mu}^{i}$. El índice $\mu$ está presente debido a que los mismos deben transformarse bajo rotaciones espaciales de la misma forma que la derivada tradicional, garantizando así que las dichas partículas tengan spin 1. El índice $i$ representa cada uno de los tres bosones de spin 1, asociados a los tres generadores de las transformaciones $SU(2)$.
+La primera simetría a mencionar es la $SU(2)_L \otimes U(1)_Y$, relacionada con la interacción electrodébil. Los bosones de gauge requeridos por la invarianza de la teoría ante estas transformaciones son el $B_{\mu}$ y los $W_{\mu}^{i}$. El índice $\mu$ está presente debido a que los mismos deben transformarse bajo rotaciones espaciales de la misma forma que la derivada tradicional, garantizando así que las dichas partículas tengan spin 1. El índice $i$ representa cada uno de los tres bosones de spin 1, asociados a los tres generadores de las transformaciones $SU(2)$.
 
 % \solved{reescrito}
-% La primer simetría a mencionar es la $U(1)$, relacionada con la interacción electromagnética. El bosón de gauge requerido para mantener la invarianza se denomina $B_{\mu}$. El índice $\mu$ está presente debido a que $B_{\mu}$ debe transformarse bajo rotaciones espaciales de la misma forma que la derivada tradicional, garantizando así que la partícula tenga spin 1.
+% La primera simetría a mencionar es la $U(1)$, relacionada con la interacción electromagnética. El bosón de gauge requerido para mantener la invarianza se denomina $B_{\mu}$. El índice $\mu$ está presente debido a que $B_{\mu}$ debe transformarse bajo rotaciones espaciales de la misma forma que la derivada tradicional, garantizando así que la partícula tenga spin 1.
 % A su vez, todas las partículas deben tener una segunda invarianza denominada $SU(2)$ electrodébil. Los bosones de gauge asociados se denominan $W_{\mu}^{i}$. El índice $i$ representa cada uno de los tres bosones de spin 1 asociados a los tres generadores de las transformaciones $SU(2)$.
 
 Finalmente, la última simetría requerida es la $SU(3)_C$, con los bosones de gauge asociados $G_{\mu}^{a}$. El índice $a$ representa cada uno de los ocho bosones de spin 1, asociados a los ocho generadores de las transformaciones $SU(3)$. Estos bosones son los gluones, y la teoría que los describe es la cromodinámica cuántica (QCD).
@@ -118,7 +118,7 @@ donde $Q$ es la carga eléctrica, $Y_W$ es el anterior mencionado generador de $
 De la misma forma se puede obtener el Lagrangiano asociado a QCD, mirando solo los términos $SU(3)$. Aún así no es posible sacar conclusiones de la misma forma que para la teoría electrodébil, debido al confinamiento de los quarks y gluones, que no permiten observarlos de forma aislada en la naturaleza. En la Sección \ref{sec:qcd_pp}, se describen de mejor forma algunos detalles de QCD, que resultan útiles a la hora de entender a las colisiones $pp$.
 
 % Corregido: Por último cabe mencionar que en ningún momento se hizo distinción alguna entre las familias de leptones, por lo que es posible reemplazar en cualquier momento al electrón por el muón y lo mismo para su neutrino, y las ecuaciones siguen valiendo de la misma forma. 
-Por último cabe mencionar que en ningún momento se hizo distinción alguna entre las familias de fermiones. Lo que permite, en las ecuaciones anteriores, reemplazar a los fermiones de la primer familia ($e$, $\nue$, $u$, $d$), por cualquiera de los de otras dos familias ($\mu$, $\numu$, $c$, $s$) o ($\tau$, $\nutau$, $t$, $b$), y las mismas seguirían teniendo validez.
+Por último cabe mencionar que en ningún momento se hizo distinción alguna entre las familias de fermiones. Lo que permite, en las ecuaciones anteriores, reemplazar a los fermiones de la primera familia ($e$, $\nue$, $u$, $d$), por cualquiera de los de otras dos familias ($\mu$, $\numu$, $c$, $s$) o ($\tau$, $\nutau$, $t$, $b$), y las mismas seguirían teniendo validez.
 Esto se denomina universalidad leptónica, y es una propiedad que ha sido de interés a lo largo de los años, en diferentes experimentos. Si la universalidad leptónica ha de cumplirse, los acoplamientos a los bosones de gauge debería ser iguales, y la única diferencia entre los leptones reside solo su masa. Una forma de medir este fenómeno es observando las fracciones de decaimiento a leptones de distintas partículas, como $\mu$, $\tau$ y principalmente hadrones con quarks bottom (hadrones $B$). Si bien en general las mediciones de estas fracciones están de acuerdo con las predicciones del SM, medidas recientes han observado desviaciones importantes\footnote{De aproximadamente 3-sigma, lo que en la jerga implica que aún no son significativas como para hablar de descubrimiento.} con respecto al mismo \cite{lepton_uni_1, lepton_uni_2}, lo que ha motivado el estudio de nuevas teorías que las expliquen (por ejemplo \textit{leptoquarks} \cite{leptoquark_1, Okumura:2744026}).
 
 
@@ -238,8 +238,9 @@ m_f = \frac{g_f v}{\sqrt{2}}
 
 El mecanismo de Higgs da un cierre al SM, que queda completamente determinado por 19 parámetros\footnote{No se están contando los ángulos de mezcla y masas de los neutrinos} listados en la Tabla \ref{tab:sm_para}, los cuales deben ser medidos experimentalmente.
 
+\vspace{1.5cm}
 
-\begin{table} 
+\begin{table}[!ht] 
 	
 	\centering
 	\caption{Parámetros del SM y su valor experimental medido, donde en algunos se especifica la escala de la medida de dicho valor.}
@@ -325,7 +326,7 @@ a medida que pierden energía los mismos se van combinando con los quarks y anti
 
 El LHC es principalmente un colisionador de protones, por lo que describir las interacciones que subyacen en la colisión misma, no solo es importante para entender los fenómenos que se producen, sino también para poder generar simulaciones de dichos procesos con una elevada precisión. Las colisiones $pp$, son ventajosas para obtener energías de colisión elevadas, pero con las desventaja de estar gobernadas principalmente por interacciones QCD, que son complejas en su propia naturaleza al realizar una descripción teórica. Para ello se utiliza el <<modelo de partones>>, introducido por Feynman \cite{PhysRevLett.23.1415} y Bjorken \cite{PhysRev.185.1975} a fines de los años 60. 
 
-El modelo de partones propone que a altas energías los hadrones están compuesto por partículas puntuales denominadas partones, que vienen a representar los quarks de valencia, y los quarks, antiquarks y gluones del mar, presentes en el protón. Cada uno de los partones lleva entonces una fracción de la energía y momento del protón, que a priori son desconocidas, lo que representa un problema a la hora de calcular secciones eficaces partónicas, $\sigma(qg\to qg)$.
+El modelo de partones propone que a altas energías los hadrones están compuestos por partículas puntuales denominadas partones, que vienen a representar los quarks de valencia, y los quarks, antiquarks y gluones del mar, presentes en el protón. Cada uno de los partones lleva entonces una fracción de la energía y momento del protón, que a priori son desconocidas, lo que representa un problema a la hora de calcular secciones eficaces partónicas, $\sigma(qg\to qg)$.
 Se suma además, en el caso de realizar una verificación experimental de la misma, el hecho de que los quarks y gluones del estado final no son observados de forma directa debido a la hadronización. En cambio, se calcula una sección eficaz hadrónica, $\sigma(pp\to jj)$, entre los protones incidentes y los jets del estado final. Para realizar este pasaje se emplea el teorema de factorización \cite{ELLIS1978281}, que permite una separación sistemática
 entre las interacciones de corta distancia (de los partones), y las interacciones de larga distancia (responsables del confinamiento de color y la formación de hadrones). El teorema establece que la sección eficaz de producción de cualquier proceso de QCD del tipo $A+B\to X$, puede ser expresada como:
 
@@ -403,7 +404,7 @@ El caso más conocido tal vez, son los 17 órdenes de magnitud de diferencia ent
 Por otro lado, observaciones cosmológicas sostienen que el SM solo describe casi el 5\% de la materia <<visible>>, y que existe un 25\% de materia que escapa la detección. Esta se denomina <<materia oscura>>, debido a que no es posible observarla mediante instrumentos que utilicen radiación electromagnética, pero sí a partir de sus efectos gravitatorios. El SM no provee una partícula candidata que logre cumplir todos los requisitos necesarios para ser materia oscura (eléctricamente nula y débilmente interactuante, entre otras cosas). Tampoco considera la asimetría bariónica, ya que en el universo abunda la materia con respecto a la antimateria, y el SM no es capaz de explicar dichas diferencias.
 
 La observación de la oscilación de neutrinos, implica que si bien los neutrinos tienen una masa muy pequeña, la misma no es nula, en contraposición con lo que formula el SM. Si bien hay varios mecanismos para incluir las mismas dentro del SM, no hay evidencia suficiente para saber cuál es la forma correcta, 
-sumado a que algunos modelos proponen la existencia de partículas adicionales aún no observadas \cite{gellmann2013,Sawada:1979dis,Glashow:1979nm,Ramond1998}.
+sumado a que algunos modelos proponen la existencia de nuevas partículas pesadas aún no observadas \cite{gellmann2013,Sawada:1979dis,Glashow:1979nm,Ramond1998}.
 % sumado a los nuevos desafíos teóricos que implica dicha inclusión (por ejemplo, existencia de nuevas partículas aun no observadas).
 
 Por último, cabe destacar que varias magnitudes de la teoría, y medidas con una elevada precisión, han sido observadas desviándose de los valores predichos por el SM. Uno de especial interés en la actualidad, es la anomalía en la medida del momento dipolar magnético del muon (<<muon $g-2$>>) \cite{Muong-2:2021ojo}. Estas diferencias no necesariamente significan un defecto en el SM, pero muchas veces puede ser una motivación para la formulación de nuevas teorías.
@@ -507,7 +508,8 @@ Los espinores son objetos complejos, por lo que $Q^{\dagger}$ es también un gen
 		[P^{\mu},Q] & = [P^{\mu},Q^{\dagger}] = 0\\
 	\end{split}	
 \end{equation}
-%
+
+\noindent
 donde $P^{\mu}$ es el cuadrivector generador de las traslaciones espaciotemporales (los índices sobre los operadores $Q$ y $Q^{\dagger}$ fueron suprimidos intencionalmente).
 
 
@@ -531,7 +533,7 @@ En la Tabla \ref{tab:mssm_particles} se resume todas las partículas requeridas 
 
 % \solved{Faltaría el gravitino no?} done
 
-\begin{table} 
+\begin{table}[!ht] 
 
 	\centering
 
@@ -737,7 +739,7 @@ El superpotencial de la Ecuación \ref{eq:susy_potential} es mínimamente sufici
 	\label{eq:lb_viol}
 \end{equation}
 
-Los supermultipletes $Q$ tienen $B=+1/3$, los $\bar{u}_i$ y $\bar{d}_i$ tienen $B=-1/3$ y el resto $B=0$, en cambio los $L_i$ tienen $L=+1$, los $\bar{e}_i$ tienen $L=-1$ y el resto $L=0$. Por lo que la primer igualdad de la Ecuación \ref{eq:lb_viol} viola el número bariónico en una unidad, y la segunda el número leptónico en una unidad. En caso de cumplirse esa relación el protón tendría la posibilidad de decaer, por ejemplo a un pion y un electrón, en una fracción muy pequeña de tiempo. Esto contradice las observaciones experimentales, donde se ponen cotas superiores al tiempo de vida media mayores a $10^{32}$ años. Motivada por esta y otras conservaciones, se podría postular directamente la conservación de $B$ y $L$ directamente en el MSSM, pero esto sería un retroceso con respecto al SM, donde esta conservación sale de forma 
+Los supermultipletes $Q$ tienen $B=+1/3$, los $\bar{u}_i$ y $\bar{d}_i$ tienen $B=-1/3$ y el resto $B=0$, en cambio los $L_i$ tienen $L=+1$, los $\bar{e}_i$ tienen $L=-1$ y el resto $L=0$. Por lo que la primera igualdad de la Ecuación \ref{eq:lb_viol} viola el número bariónico en una unidad, y la segunda el número leptónico en una unidad. En caso de cumplirse esa relación el protón tendría la posibilidad de decaer, por ejemplo a un pión y un electrón, en una fracción muy pequeña de tiempo. Esto contradice las observaciones experimentales, donde se ponen cotas superiores al tiempo de vida media mayores a $10^{32}$ años. Motivada por esta y otras conservaciones, se podría postular directamente la conservación de $B$ y $L$ directamente en el MSSM, pero esto sería un retroceso con respecto al SM, donde esta conservación sale de forma 
 % <<natural>>
 <<accidental>>
 . Para resolver esto se introduce una nueva simetría, que elimina la posibilidad de una violación de $B$ y $L$:
@@ -747,7 +749,7 @@ Los supermultipletes $Q$ tienen $B=+1/3$, los $\bar{u}_i$ y $\bar{d}_i$ tienen $
 \end{equation}
 
 \noindent
-donde $s$ es el spín de la partícula. Las partículas del SM más los bosones de Higgs tienen $P_R = +1$, mientras que el resto de las partículas del MSSM tienen $P_R = -1$. Si $P_R$ se conserva, no puede haber mezcla entre las partículas con $P_R$ opuestos, y cada vértice de interacción de la teoría debe tener un número par de partículas con $P_R=-1$. Esto a su vez implica que la LSP debe ser completamente estable. En caso de ser la LSP neutra, debe interactuar débilmente con la materia ordinaria y por ende es un candidato interesante para materia oscura. Por otro lado, cada partícula supersimétrica que no sea la LSP, debe decaer a un estado con número impar de partículas supersimétricas, que eventualmente termina en la LSP. También a partir de esta simetría se puede concluir que en experimentos de colisión las partículas supersimétricas son producidas de a número par, generalmente de a dos.
+donde $s$ es el spín de la partícula. Las partículas del SM más los bosones de Higgs tienen $P_R = +1$, mientras que el resto de las partículas del MSSM tienen $P_R = -1$. Si $P_R$ se conserva, no puede haber mezcla entre las partículas con $P_R$ opuestos, y cada vértice de interacción de la teoría debe tener un número par de partículas con $P_R=-1$. Esto a su vez implica que la LSP debe ser completamente estable. En caso de ser la LSP neutra, debe interactuar débilmente con la materia ordinaria y por ende es un candidato interesante para materia oscura. Por otro lado, cada partícula supersimétrica que no sea la LSP, debe decaer a un estado con número impar de partículas supersimétricas, que eventualmente terminan en la LSP. También a partir de esta simetría se puede concluir que en experimentos de colisión las partículas supersimétricas son producidas de a número par, generalmente de a dos.
 
 
 
@@ -767,7 +769,7 @@ Como ocurre en el SM, los estados de gauge que se muestran en la tabla \ref{tab:
 
 \subsubsection{Neutralinos y charginos}
 
-Los higgsinos y los gauginos electrodébiles se mezclan debido a la ruptura de la simetría electrodébil. Los higgsinos neutrales (\Hinouzero y \Hinodzero) y los gauginos neutrales ($\widetilde{B}$, $\widetilde{W}^0$) se combinan para formar cuatro estados de masa llamados neutralinos (\ninoone, \ninotwo, \ninothree, \ninofour). Los higgsinos cargados (\Hinoup y \Hinodm) y los winos ($\widetilde{W}^+$, $\widetilde{W}^-$) se combinan para formar dos estados de masa con carga, llamados charginos (\chinoonepm, \chinotwopm). Por convención se utiliza el subíndice para ordenarlos de forma ascendente a partir de su masa. En general se supone al neutralino más liviano, \ninoone, como la LSP ya que es la única partícula del MSSM que es buen candidato a materia oscura\footnote{Esto no ocurre en modelos con gravitinos más livianos, o con violación de la paridad R}. A partir de los estados de gauge, los valores de las masas se obtienen entonces diagonalizando las matrices que entran en el término de masa del Lagrangiano. En el caso de los neutralinos, la matriz $4\times4$ no es fácil resolver analíticamente. Una de las posibles aproximaciones, propone que la ruptura de simetría electrodébil se puede considerar como una pequeña perturbación en la matriz de masa de los neutralinos. Asumiendo entonces que: 
+Los higgsinos y los gauginos electrodébiles se mezclan debido a la ruptura de la simetría electrodébil. Los higgsinos neutrales (\Hinouzero y \Hinodzero) y los gauginos neutrales ($\widetilde{B}$, $\widetilde{W}^0$) se combinan para formar cuatro estados de masa llamados neutralinos (\ninoone, \ninotwo, \ninothree, \ninofour). Los higgsinos cargados (\Hinoup y \Hinodm) y los winos ($\widetilde{W}^+$, $\widetilde{W}^-$) se combinan para formar dos estados de masa con carga, llamados charginos (\chinoonepm, \chinotwopm). Por convención se utiliza el subíndice para ordenarlos de forma ascendente a partir de su masa. En general se supone al neutralino más liviano, \ninoone, como la LSP ya que es la única partícula del MSSM que es buen candidato a materia oscura\footnote{Esto no ocurre en modelos con gravitinos más livianos, o con violación de la paridad R}. A partir de los estados de gauge, los valores de las masas se obtienen entonces diagonalizando las matrices que entran en el término de masa del Lagrangiano. En el caso de los neutralinos, la matriz $4\times4$ no es fácil de resolver analíticamente. Una de las posibles aproximaciones, propone que la ruptura de simetría electrodébil se puede considerar como una pequeña perturbación en la matriz de masa de los neutralinos. Asumiendo entonces que: 
 
 \begin{equation}
 	m_Z \ll |\mu \pm M_1|, |\mu \pm M_2|
@@ -816,7 +818,7 @@ Para el caso de los squarks y sleptons, como en principio todo escalar con la mi
 
 \subsubsection{Escalares de Higgs}
 
-Los campos de Higgs escalares en le MSSM se componen de dos dobletes de $SU(2)$ complejos, con ocho grados de libertad. Cuando ocurre la ruptura de simetría electrodébil tres de ellos son los bosones de Nambu-Goldstone, que se convierten en los modos longitudinales de los bosones $Z^0$ y $W^{\pm}$. Los cincos restantes consisten en dos escalares neutrales CP-par $h^0$ y $H^0$, un escalar neutral CP-impar $A^0$, y dos escalares cargados $H^+$ y $H^-$. Por convención $h^0$ es el más liviano, y se lo designa como bosón de Higgs del SM. Las masas de los mismos se pueden escribir como:
+Los campos de Higgs escalares en el MSSM se componen de dos dobletes de $SU(2)$ complejos, con ocho grados de libertad. Cuando ocurre la ruptura de simetría electrodébil tres de ellos son los bosones de Nambu-Goldstone, que se convierten en los modos longitudinales de los bosones $Z^0$ y $W^{\pm}$. Los cincos restantes consisten en dos escalares neutrales CP-par $h^0$ y $H^0$, un escalar neutral CP-impar $A^0$, y dos escalares cargados $H^+$ y $H^-$. Por convención $h^0$ es el más liviano, y se lo designa como bosón de Higgs del SM. Las masas de los mismos se pueden escribir como:
 
 % \solved{la masa de h0 y H0 son iguales?} nop, hay un mas menos ahi
 
@@ -928,7 +930,7 @@ o interacciones electrodébiles:
 	\end{split}
 \end{equation}
 
-En la Figura \ref{fig:sp_production} se puede observar los principales diagramas de Feynman de las distintas producciones. En la Figura \ref{fig:susy_xs} se muestras las secciones eficaces de producción de los distintos procesos, donde se manifiesta que la producción electrodébil tiene una sección eficaz notablemente menor a la fuerte.
+En la Figura \ref{fig:sp_production} se puede observar los principales diagramas de Feynman de las distintas producciones. En la Figura \ref{fig:susy_xs} se muestran las secciones eficaces de producción de los distintos procesos, donde se manifiesta que la producción electrodébil tiene una sección eficaz notablemente menor a la fuerte.
 
 \begin{figure}
   \centering

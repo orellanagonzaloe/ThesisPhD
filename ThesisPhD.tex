@@ -41,26 +41,27 @@
 \input{sections/title.tex} 
 
 \thispagestyle{empty} 
+\cleardoublepage
+\thispagestyle{empty} 
 
 \input{sections/abstract.tex}
 
+\mbox{}
 \thispagestyle{empty}
-
-% \cleardoublepage
+\newpage
+\thispagestyle{empty} 
+\cleardoublepage
+\thispagestyle{empty} 
 
 \pagenumbering{roman}    
 
 \tableofcontents  
    
-\cleardoublepage 
+\cleardoublepage\thispagestyle{empty}
 
 \pagenumbering{arabic}
-
 \setcounter{page}{1}
-
 \pagestyle{fancy}
-
-% \input{sections/todo.tex} 
 
 \input{sections/introduction.tex}
 
@@ -104,8 +105,7 @@
 
 \input{sections/acknowledgements.tex}
 
-\thispagestyle{empty}
-
+\clearpage\thispagestyle{empty}
 
 %%
 %%   Bibliography

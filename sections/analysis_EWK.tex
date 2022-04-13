@@ -196,7 +196,9 @@ En base a eso, se diseña un conjunto de regiones señal destinadas exclusivamen
 Los fondos del SM con mayor impacto en el análisis son \wph, \ttbarph, $\ttbar h$ y \znunuph, para las cuales se diseñan regiones de control dedicadas. El fondo \phj no se considera importante, debido a la presente selección en los objetos del estado final buscado, y por ende no tiene su respectiva región de control. Todas las regiones de control emplean selecciones similares a las descriptas en la Sección \ref{sec:cr_vr_sel} para favorecer cada fondo, pero adaptadas a las actuales SRs. En todas se omite el corte en $\met/\meff$ y $\mathcal{S}$, debido a la elevada reducción de fondo que producen.
 
 
-Los fondos \ttbarph y $\ttbar h$, son normalizados simultáneamente en una región de control (CRT) que selecciona al menos un leptón y dos $b$-jets. Para el fondo de \wph se diseña una región de control (CRW) que selecciona un leptón con un veto a los $b$-jets, junto con un corte en la masa transversa de \met y el leptón\footnote{$\mtlep = \sqrt{2p_{\text{T}}^{\text{leptón}}\met[1-\cos(\phi^{\text{miss}}-\phi^{\text{leptón}})]}$}, para incrementar la pureza del fondo. Dado que el fondo de \znunuph presenta un estado final similar al de la señal, resulta prácticamente imposible diseñar una región de control para ese fondo que no tenga contaminación de señal. Para ello, se emplea un método alternativo, en donde se diseñan regiones de control para los procesos \zeeph y \zmumuph (CRZ\_el y CRZ\_mu), y se asume que las correcciones que necesita la simulación son equivalentes para la simulación de \znunuph, por lo que se aplica el mismo factor de normalización a los tres fondos simultáneamente. Como los fondos \zeeph y \zmumuph tienen \met despreciable, se construye una una energía transversa alternativa pero omitiendo del cálculo a los leptones. De esta forma se obtiene una \met alineada con los leptones del evento, a la cual se le aplica un corte para ser lo más similar posible a las SRs. A su vez, los cortes empleados para \dphijetmet y \dphigammet se obtienen en base a este cálculo de \met. En la Figura \ref{fig:met_inv} se puede observar una comparación entre \met de \znunuph y la reconstruida en las simulaciones de \zeeph y \zmumuph, en la que se demuestra un buen acuerdo entre las distintas estimaciones de \met. La definición de las regiones de control empleadas para el presente análisis se muestran en la Tabla \ref{tab:cr_ewk}.
+Los fondos \ttbarph y $\ttbar h$, son normalizados simultáneamente en una región de control (CRT) que selecciona al menos un leptón y dos $b$-jets. Para el fondo de \wph se diseña una región de control (CRW) que selecciona un leptón con un veto a los $b$-jets, junto con un corte en la masa transversa de \met y el leptón\footnote{$\mtlep = \sqrt{2p_{\text{T}}^{\text{leptón}}\met[1-\cos(\phi^{\text{miss}}-\phi^{\text{leptón}})]}$}, para incrementar la pureza del fondo. Dado que el fondo de \znunuph presenta un estado final similar al de la señal, resulta prácticamente imposible diseñar una región de control para ese fondo que no tenga contaminación de señal. Para ello, se emplea un método alternativo, en donde se diseñan regiones de control para los procesos \zeeph y \zmumuph (CRZ\_el y CRZ\_mu), y se asume que las correcciones que necesita la simulación son equivalentes para la simulación de \znunuph, por lo que se aplica el mismo factor de normalización a los tres fondos simultáneamente. Como los fondos \zeeph y \zmumuph tienen \met despreciable, se construye una una energía transversa alternativa pero omitiendo del cálculo a los leptones. De esta forma se obtiene una \met alineada con los leptones del evento, a la cual se le aplica un corte para ser lo más similar posible a las SRs. A su vez, los cortes empleados para \dphijetmet y \dphigammet se obtienen en base a este cálculo de \met. 
+\linebreak
+En la Figura \ref{fig:met_inv} se puede observar una comparación entre \met de \znunuph y la reconstruida en las simulaciones de \zeeph y \zmumuph, en la que se demuestra un buen acuerdo entre las distintas estimaciones de \met. La definición de las regiones de control empleadas para el presente análisis se muestran en la Tabla \ref{tab:cr_ewk}.
 
 \begin{figure}
   \centering
@@ -301,7 +303,21 @@ Finalmente se incluye un diseño preliminar para regiones de validación. Las mi
 
 En la Tabla \ref{tab:bkg_only_fit_ewk} se muestran los resultados preliminares del ajuste de solo fondo, empleando las cuatro regiones de control. En las mismas se muestra el aporte de cada fondo antes y después del ajuste, junto con la pureza del fondo y el factor de normalización. Los fondos \ttbarph y $\ttbar h$ se ajustan con el mismo factor de normalización en la CRT, mientras que los fondos de \znunuph, \zeeph y \zmumuph lo hacen con su respectivo factor en las CRZ\_el y CRZ\_mu. De forma preliminar se emplea un sistemático \textit{dummy} del $25\%$ para todos los fondos en todas las regiones, emulando el aporte de los sistemáticos teóricos y del detector, observado en el análisis descripto en el Capítulo \ref{cap:analysis}. En general se obtuvieron factores de normalización cercanos a la unidad, lo que evidencia un correcto modelado por parte de las simulaciones. En las Figuras \ref{fig:crw_crt_dist_ewk} y \ref{fig:crz_el_mu_dist_ewk} se puede observar el buen acuerdo entre las simulaciones y los datos luego del ajuste.
 
-\begin{table}
+
+En la Tabla \ref{tab:fit_result_vr} se muestran los resultados de las estimación de los fondos y su comparación con los datos en las regiones de validación, mientras que en la Figura \ref{fig:vr_ewk} se muestran algunas de las distribuciones más significativas. El acuerdo en dichas regiones se considera que es apropiado. 
+
+En la Tabla \ref{tab:fit_result_sr} se muestran los resultados blinded en las regiones de señal de descubrimiento para el presente análisis. En la Figura \ref{fig:srd_ewk} se observan distribuciones para las regiones de señal de descubrimiento. Se puede apreciar cómo cada región de señal es sensible a un cierto rango de masas de \ninoone, llegando a ser sensible hasta masas de \magn{750}{GeV}. Cabe mencionar, que al observar la distribución de $\mathcal{S}$, se puede apreciar que con cortes más estrictos de dicha variable, se obtienen valores de significancia más altos. Esto tiene como consecuencia una reducción importante del fondo, lo que conlleva a diversas problemáticas, como no encontrarse en el régimen asintótico para la aproximación de los estadísticos de prueba, o inconvenientes al ajustar los sistemáticos para PLR. Se priorizó entonces tener un número de fondo significante, al costo de una reducción de sensibilidad.
+La Figura \ref{fig:sre_ewk} se muestran los límites esperados empleando ambos conjuntos de regiones de señal, donde se puede observar que con las regiones de señal de exclusión los límites son mejores.
+% \solved{También se hizo los límites con un shape fit, y dan un poco mejor, el tema es que hay que explicar que es un shape fit...} no se explicar ni se menciona
+Dichos límites son del orden de \magn{1200}{GeV}, lo que podría significar un importante aporte a los límites impuestos en la actualidad a dichos procesos, los cuales se observan en la Figura \ref{fig:ewk_limits}.
+
+
+En la Figura \ref{fig:pull_ewk} se muestra el resumen de todos los fondos estimados y datos observados (excepto en las SRs) para todas las regiones del análisis.
+
+\vspace{2cm}
+
+
+\begin{table}[ht!]
   \centering
   \caption{Resultados preliminares del ajuste de solo fondo en las diferentes regiones de control para el análisis de producción electrodébil. Se muestran los resultados antes y después del ajuste, la pureza del fondo y los factores de normalización.}
   \resizebox{\textwidth}{!}{\input{tables/analysis_EWK/table_cr.tex}}
@@ -309,7 +325,7 @@ En la Tabla \ref{tab:bkg_only_fit_ewk} se muestran los resultados preliminares d
 \end{table}
 
 
-\begin{figure}
+\begin{figure}[ht!]
 
 \centering
 
@@ -327,7 +343,7 @@ En la Tabla \ref{tab:bkg_only_fit_ewk} se muestran los resultados preliminares d
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[ht!]
 
 \centering
     \includegraphics[width=0.49\textwidth]{images/analysis_EWK/v192_2_nosyst/can_CRZ_el_met_noele_et_afterFit.pdf}
@@ -339,7 +355,6 @@ En la Tabla \ref{tab:bkg_only_fit_ewk} se muestran los resultados preliminares d
 
 
 
-En la Tabla \ref{tab:fit_result_vr} se muestran los resultados de las estimación de los fondos y su comparación con los datos en las regiones de validación, mientras que en la Figura \ref{fig:vr_ewk} se muestran algunas de las distribuciones más significativas. El acuerdo en dichas regiones se considera que es apropiado. 
 
 \begin{table}[ht!]
   \centering
@@ -349,7 +364,7 @@ En la Tabla \ref{tab:fit_result_vr} se muestran los resultados de las estimació
 \end{table}
 
 
-\begin{figure}
+\begin{figure}[ht!]
 
     \centering
 
@@ -368,10 +383,6 @@ En la Tabla \ref{tab:fit_result_vr} se muestran los resultados de las estimació
 
 \end{figure}
 
-En la Tabla \ref{tab:fit_result_sr} se muestran los resultados blinded en las regiones de señal de descubrimiento para el presente análisis. En la Figura \ref{fig:srd_ewk} se observan distribuciones para las regiones de señal de descubrimiento. Se puede apreciar cómo cada región de señal es sensible a un cierto rango de masas de \ninoone, llegando a ser sensible hasta masas de \magn{750}{GeV}. Cabe mencionar, que al observar la distribución de $\mathcal{S}$, se puede apreciar que con cortes más estrictos de dicha variable, se obtienen valores de significancia más altos. Esto tiene como consecuencia una reducción importante del fondo, lo que conlleva a diversas problemáticas, como no encontrarse en el régimen asintótico para la aproximación de los estadísticos de prueba, o inconvenientes al ajustar los sistemáticos para PLR. Se priorizó entonces tener un número de fondo significante, al costo de una reducción de sensibilidad.
-La Figura \ref{fig:sre_ewk} se muestran los límites esperados empleando ambos conjuntos de regiones de señal, donde se puede observar que con las regiones de señal de exclusión los límites son mejores.
-% \solved{También se hizo los límites con un shape fit, y dan un poco mejor, el tema es que hay que explicar que es un shape fit...} no se explicar ni se menciona
-Dichos límites son del orden de \magn{1200}{GeV}, lo que podría significar un importante aporte a los límites impuestos en la actualidad a dichos procesos, los cuales se observan en la Figura \ref{fig:ewk_limits}.
 
 
 \begin{table}[ht!]
@@ -404,8 +415,15 @@ Dichos límites son del orden de \magn{1200}{GeV}, lo que podría significar un 
 
 \end{figure}
 
-En la Figura \ref{fig:pull_ewk} se muestra el resumen de todos los fondos estimados y datos observados (excepto en las SRs) en todas las regiones del análisis.
+\begin{figure}[ht!]
+  \centering
 
+    \includegraphics[width=0.65\textwidth]{images/analysis_EWK/actual_limits.png}
+
+    \caption{Últimos límites impuestos a la masa de los gauginos para modelos GGM en función de su fracción de decaimiento a Higgs, combinando distintos resultados observados por la colaboración ATLAS \cite{susy_public_results}.}
+    \label{fig:ewk_limits}
+
+\end{figure}
 
 
 \begin{figure}[ht!]
@@ -418,14 +436,5 @@ En la Figura \ref{fig:pull_ewk} se muestra el resumen de todos los fondos estima
 
 \end{figure}
 
-\begin{figure}[ht!]
-  \centering
-
-    \includegraphics[width=0.65\textwidth]{images/analysis_EWK/actual_limits.png}
-
-    \caption{Últimos límites impuestos a la masa de los gauginos para modelos GGM en función de su fracción de decaimiento a Higgs, combinando distintos resultados observados por la colaboración ATLAS \cite{susy_public_results}.}
-    \label{fig:ewk_limits}
-
-\end{figure}
 
 

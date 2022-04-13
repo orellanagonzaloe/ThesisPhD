@@ -10,7 +10,7 @@ El Gran Colisionador de Hadrones (\textit{\textbf{L}arge \textbf{H}adron \textbf
 \section{El Gran Colisionador de Hadrones}
 
 % \solved{mejorar el inicio, mencionar iones pesados?} no hace falta
-La producción de protones comienza extrayendose los electrones de un contenedor con gas de hidrógeno mediante campos magnéticos. Luego los protones pasan por un complejo de aceleradores, que en el pasado funcionaban como experimentos y que actualmente se utilizan para incrementan la energía de los protones en sucesivas etapas, como muestra la Figura \ref{fig:LHC_complex}. Inicialmente los protones son inyectados al acelerador lineal LINAC 2, que mediante cavidades de radiofrecuencia, acelera a los protones a una energía de \magn{50}{MeV}. Desde aquí son dirigidos al \textit{Proton Synchrotron Booster}, que consiste en cuatro anillos superpuestos con un radio de \magn{25}{m}, que aceleran los protones hasta una energía de \magn{1.4}{GeV}. Este último inyecta los protones en el \textit{Proton Synchroton}, de \magn{628}{m} de circunferencia, que acelera los protones a una energía de hasta \magn{26}{GeV} en el \textit{Super Proton Synchroton}. El mismo tiene una circunferencia de \magn{7}{km}, e inyecta protones de hasta \magn{450}{GeV} en ambos anillos del LHC. 
+La producción de protones comienza extrayéndose los electrones de un contenedor con gas de hidrógeno mediante campos magnéticos. Luego los protones pasan por un complejo de aceleradores, que en el pasado funcionaban como experimentos y que actualmente se utilizan para incrementar la energía de los protones en sucesivas etapas, como muestra la Figura \ref{fig:LHC_complex}. Inicialmente los protones son inyectados al acelerador lineal LINAC 2, que mediante cavidades de radiofrecuencia, acelera a los protones a una energía de \magn{50}{MeV}. Desde aquí son dirigidos al \textit{Proton Synchrotron Booster}, que consiste en cuatro anillos superpuestos con un radio de \magn{25}{m}, que aceleran los protones hasta una energía de \magn{1.4}{GeV}. Este último inyecta los protones en el \textit{Proton Synchroton}, de \magn{628}{m} de circunferencia, que acelera los protones a una energía de hasta \magn{26}{GeV} en el \textit{Super Proton Synchroton}. El mismo tiene una circunferencia de \magn{7}{km}, e inyecta protones de hasta \magn{450}{GeV} en ambos anillos del LHC. 
 
 \begin{figure}
   \centering
@@ -63,7 +63,7 @@ Los planes a futuro del LHC prevén un \textit{Run 3} a \magn{13.6}{TeV} de tres
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.8\textwidth]{images/lhc/intlumivstimeRun2DQall.pdf}
+  \includegraphics[width=0.7\textwidth]{images/lhc/intlumivstimeRun2DQall_v2.pdf}
   \caption{Luminosidad total integrada acumulada durante los días del Run 2 \cite{lumi_plot}. Se muestra la luminosidad proveída por el LHC (verde), la detectada por ATLAS (amarillo) y la apta para análisis físicos (celeste).}
   \label{fig:run2_lumi}
 \end{figure}
@@ -258,7 +258,7 @@ sólo parte de la componente hadrónica llega al HCAL. En la Figura \ref{fig:eca
 \subsubsection{Calorímetro hadrónico}
 
 El HCAL es un conjunto de calorímetros que rodean al ECAL, extendiendo la aceptancia del calorímetro de ATLAS hasta cubrir prácticamente la totalidad de ángulo sólido del punto de colisión. El primero de los calorímetros se denomina \textit{Tile Calorimeter}, y es un calorímetro de muestreo que utiliza acero como material absorbente y tejas centelladoras plásticas como material activo. Se encuentra en la región barrel, y está dividido en dos partes que tienen una cobertura de $|\eta|<1.0$ y $0.8<|\eta|<1.7$ respectivamente. Las tejas centelladoras están dispuestas en un arreglo
-periódico, y se conectan a una fibra óptica que trasporta la luz producida por el paso
+periódico, y se conectan a una fibra óptica que transporta la luz producida por el paso
 de partículas hacia un tubo fotomultiplicador. Este arreglo se extiende radialmente, de los
 \magn{2.28}{m} a los \magn{4.25}{m}. 
 A cada lado de la región endcap, se encuentra un calorímetro hadrónico de muestreo (HEC) con placas de cobre como absorbente y argón líquido como material activo. El mismo consiste en dos ruedas con un radio de \magn{2.3}{m}, una atrás de la otra, con las placas planas de cobre dispuestas perpendicularmente al eje del haz. Finalmente se encuentra el \textit{Forward Calorimeter} (FCAL), un calorímetro de muestreo que extiende la cobertura del sistema a $|\eta|<4.9$, coaxial
@@ -395,9 +395,9 @@ interacciones en el evento, mayoritariamente interacciones de bajo momento. La a
 componen, no puede ser tratado de manera perturbativa y se requieren de modelos
 fenomenológicos para describirlos. En la Figura \ref{fig:mc_qcd} se puede observar el diagrama de una colisión entre partones, junto con la cascada de partículas producto de la misma.
 
-\begin{figure}
+\begin{figure}[!ht]
   \centering
-  \includegraphics[width=0.8\textwidth]{images/lhc/mc_qcd.pdf}
+  \includegraphics[width=0.75\textwidth]{images/lhc/mc_qcd.pdf}
   \caption{Esquema de una colisión protón-protón simulada por un generador de
 eventos de Monte Carlo. La región roja en el centro representa la dispersión dura,
 rodeada por una estructura que representa la radiación de QCD
@@ -435,7 +435,7 @@ Las simulaciones hacen uso de distintos algoritmos para la reconstrucción gener
 \end{equation}
 
 \noindent
-donde el último factor engloba correcciones opcionales, como por ejemplo a la carga de los electrones o de reconstrucción en la región forward. En general estos factor son muy cercanos a la unidad y se calculan en función de alguna de las variables del objeto. En la Sección \ref{sec:trig_sf} se describe un método para obtener los factores de escala asociados a la eficiencia del trigger de fotones.
+donde el último factor engloba correcciones opcionales, como por ejemplo a la carga de los electrones o de reconstrucción en la región forward. En general estos factores son muy cercanos a la unidad y se calculan en función de alguna de las variables del objeto. En la Sección \ref{sec:trig_sf} se describe un método para obtener los factores de escala asociados a la eficiencia del trigger de fotones.
 
 Correcciones adicionales pueden ser aplicadas a las simulaciones. Por ejemplo los cálculos a NLO pueden ser encapsulados en un factor denominado \textit{k-factor}, que es el cociente entre la sección eficaz de un dado proceso a NLO y a LO. Este factor multiplicativo puede ser aplicado a las simulaciones hechas a LO para incluir de alguna forma simple las correcciones a NLO. De forma equivalente se puede obtener un \textit{k-factor} para cálculos de órden superior a NLO. También  puede ocurrir que al generar un cierto proceso, solo sea necesario quedarse con aquellos eventos que pasen con una cierta selección, evitando almacenar el resto de los eventos que no lo hagan. Para ello se aplica un filtro a nivel generador, que en el caso de aplicarlo, es necesaria la corrección de dichas simulaciones a partir de un factor multiplicativo que tenga en cuenta este filtrado.
 
