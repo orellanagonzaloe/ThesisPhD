@@ -52,7 +52,7 @@ Al igual que con los squarks, se elige la masa de los sleptons igual a \magn{5}{
 % , la cual es estudiada por otros análisis \solved{citar analisis}. % na
 Además, se anulan todos los términos de acoplamiento trilineal, y se fija $M_2=3\,\tev$ y $\tan{\beta}=1.5$, observándose reducida sensibilidad del análisis a variaciones de dichos parámetros. Se emplea el bosón de Higgs observado por las colaboraciones ATLAS y CMS \cite{higgs_mass}, con una masa de $m_h=125\,\gev$, y sus decaimientos ocurren de acuerdo a las predicciones del SM, 
 % \solved{es asi?} Si, ponele...
-donde el predominante es a dos $b$-jets con un $\sim58$\% de probabilidad de ocurrencia.
+donde el predominante es a dos $b$-jets con un {$\smallsim$}58\% de probabilidad de ocurrencia.
 % \solved{Cual mismo?} 
 % Adicionalmente se pone al mismo en el régimen de desacoplamiento con $m_A = 2\ \tev$. 
 Adicionalmente, se colocan a los estados de masas de los dobletes de Higgs en el régimen de desacoplamiento con una masa de \magn{2}{TeV}.
@@ -542,12 +542,8 @@ El presente análisis hace uso de la totalidad de datos con una energía de cent
 Los datos y simulaciones de MC empleados para el análisis son preseleccionados con la derivación \texttt{SUSY1} descripta en la Sección \ref{sec:lhc_samples}, orientada a análisis con moderada actividad hadrónica y con la presencia de un fotón energético entre otras cosas.
 
 Los objetos de interés para esta Tesis son los fotones, jets y leptones (electrones y muones) a los que se les aplica diferentes requisitos offline. Inicialmente se les requiere una selección base (\textit{baseline}),
-% siguiendo algunas de las recomendaciones que hace el grupo de SUSY de la colaboración ATLAS y
-% \solved{hernan sugiere sacarlo, pero despues justificarlos, no se si habria que sacarlo} Si, evitemos usar <<recomendaciones>>, verbalmente se puede aclarar despues que de previos análisis se aprendio tal cosa...
 que se emplea para aplicar un requisito de solapamiento (\textit{overlap removal}) entre los distintos objetos del evento.
- % y posteriormente empleados para el cálculo de \met 
- % \solved{Ojo con esto al final no se usaba para met, no?}. NOPE
-Finalmente a los fotones, jets y leptones se les aplica una selección denominada \textit{signal}, siendo estos objetos los que definen las distintas regiones del análisis. Adicionalmente, a los fondos de MC se les aplica una selección a nivel generador para evitar un solapamiento o doble conteo entre muestras. Por ejemplo, a las muestras de \zph, \wph, \ttbarph y \phj, se les solicita que tengan uno y solo un fotón a nivel generador, y en cambio a las \zphph y \wphph dos fotones. 
+A su vez se les aplica una selección denominada \textit{signal}, siendo estas últimas las que definen los objetos empleados en las definiciones de las regiones del análisis. Adicionalmente, a los fondos de MC se les aplica una selección a nivel generador para evitar un solapamiento o doble conteo entre muestras. Por ejemplo, a las muestras de \zph, \wph, \ttbarph y \phj, se les solicita que tengan uno y solo un fotón a nivel generador, y en cambio a las \zphph y \wphph dos fotones. 
 
 % \solved{mencionar a VgammaORTool} Done
 
@@ -575,7 +571,7 @@ Los muones baseline son seleccionados con la identificación \texttt{Medium}, te
 
 \subsubsection{Jets}
 
-Se emplean Jets \texttt{EMTopo}, y la selección baseline se define como aquellos con $\pt>30\,\gev$ y $|\eta|<2.8$. Este último requisito no es empleado en el cálculo de \met. Selecciones basadas en las trazas son aplicadas para rechazar jets con $\pt<120\,\gev$ y $|\eta|<2.4$ que se originen de las interacciones de pile-up \cite{ATL-PHYS-PUB-2014-001}. Jets signal son seleccionados con $\pt>30\,\gev$ y $|\eta|<2.5$. La identificación de $b$-jets es empleada en la definición de algunas regiones de control. Para ello se utiliza el algoritmo \texttt{MV2c10}, con una eficiencia de selección de los mismos del 77\%.
+Se emplean Jets \texttt{EMTopo} reconstruidos con el algoritmo \textit{anti-$k_t$} con $R=0.4$, y la selección baseline se define como aquellos con $\pt>30\,\gev$ y $|\eta|<2.8$. Este último requisito no es empleado en el cálculo de \met. Selecciones basadas en las trazas son aplicadas para rechazar jets con $\pt<120\,\gev$ y $|\eta|<2.4$ que se originen de las interacciones de pile-up \cite{ATL-PHYS-PUB-2014-001}. Jets signal son seleccionados con $\pt>30\,\gev$ y $|\eta|<2.5$. La identificación de $b$-jets es empleada en la definición de algunas regiones de control. Para ello se utiliza el algoritmo \texttt{MV2c10}, con una eficiencia de selección de los mismos del 77\%.
 
 \subsubsection{Overlap removal}
 
