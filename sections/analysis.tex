@@ -132,7 +132,7 @@ de las distintas secciones eficaces empleando diferentes conjuntos de PDFs, y mo
 \section{Fondos del Modelo Estándar}\label{sec:sm_backgrounds}
 
 
-Los procesos del SM que cumplen el rol de fondo para el presente análisis, son aquellos que tienen el mismo estado final que la señal, es decir, fotones, jets y energía transversa faltante. Los mismos pueden ser clasificados en distintos tipos. Por un lado, los procesos que dan lugar a eventos con un fotón y energía faltante real, denominados fondos irreducibles. En ellos, la energía faltante proviene de los neutrinos, y se componen principalmente de partículas que decaen a ellos, junto con fotones y jets de la ISR. Los procesos que cumplen con estos requisitos son la producción de bosones $Z$, $W$ y pares de top quarks que decaen subsecuentemente a bosones $W$:
+Los procesos del SM que cumplen el rol de fondo para el presente análisis son aquellos que tienen el mismo estado final que la señal, es decir, fotones, jets y energía transversa faltante. Los mismos pueden ser clasificados en distintos tipos, por ejemplo, aquellos procesos que dan lugar a eventos con un fotón y energía faltante real son denominados fondos irreducibles. En dichos fondos, la energía faltante proviene de los neutrinos, y se componen principalmente de partículas que decaen a ellos, junto con fotones y jets de la ISR. Los procesos que cumplen con estos requisitos son la producción de bosones $Z$, $W$ y pares de top quarks que decaen subsecuentemente a bosones $W$:
 
 \begin{itemize}
   \item $Z(\rightarrow \nu\nu) + \gamma + \text{jets}$
@@ -268,13 +268,13 @@ Es posible que un jet sea erróneamente reconstruido como un fotón principalmen
 Como es extremadamente difícil modelar con precisión la tasa de errónea de jets a fotones mediante simulaciones, se emplean técnicas basadas en datos para estimar su contribución.
 
 
-El método empleado para estimar este fondo se denomina \texttt{ABCD} \cite{Alonso:2233238}. El mismo hace uso de la diferencia que existe en las variables de aislamiento de fotones <<reales>> (señal en este contexto) y la de los <<falsos>> (fondo), para poder selecciones eventos de uno u otro.
+El método empleado para estimar este fondo se denomina \texttt{ABCD} \cite{Alonso:2233238}. El mismo hace uso de la diferencia que existe en las variables de aislamiento de fotones <<reales>> (señal en este contexto) y la de los <<falsos>> (fondo), para poder seleccionar eventos de uno u otro.
 % \solved{Esto cuando se utilizaría? Me parece que mirar las formas quedó de un método viejo no? Ahora solo miramos número de eventos. O es para la correlación?} % lo cambie a variables y listo
 En el contexto de este método, se definen fotones aislados como aquellos que pasan el WP \texttt{FixedCutTight},
  % \solved{esta bien esto?} Si...
  $-20\,\gev<\ETiso<0\,\gev$ y $0<\pTiso<0.05$, y los no-aislados aquellos con $8\,\gev<\ETiso<80\,\gev$ o $0.15<\pTiso<1$.
 % \solved{capaz deba definir estas variables aca, o en la parte de fotones} Done, en fotones
-A su vez se utiliza una selección de identificación adicional que discrimina los fotones <<reales>> \texttt{Tight} de los fotones <<falsos>>. Este criterio de identificación se denomina \texttt{Non-Tight} (denominado también \textit{pseudo-photons}, \texttt{Tight-4} o \texttt{LoosePrime}) y consiste en los fotones que pasan la selección \texttt{Loose} pero que no pasan alguno de los criterios de selección \texttt{Tight} que emplea las variables $w_{s3}$, $F_{\text{side}}$, $\Delta E$ o $E_{\text{ratio}}$, por lo que esta selección es un subconjunto de los eventos seleccionados por el trigger de fotones \texttt{Loose}, pero completamente ortogonal a la identificación \texttt{Tight}. 
+A su vez se utiliza una selección de identificación adicional que discrimina los fotones <<reales>> \texttt{Tight} de los fotones <<falsos>>. Este criterio de identificación se denomina \texttt{Non-Tight} (denominado también \textit{pseudo-photons}, \texttt{Tight-4} o \texttt{LoosePrime}) y consiste en los fotones que pasan la selección \texttt{Loose} pero que no pasan alguno de los criterios de selección \texttt{Tight} que emplea las variables $w_{s3}$, $F_{\text{side}}$, $\Delta E$ o $E_{\text{ratio}}$. Esta selección es un subconjunto de los eventos seleccionados por el trigger de fotones \texttt{Loose}, pero completamente ortogonal a la identificación \texttt{Tight}. 
 
 El método \texttt{ABCD}, utilizado en este análisis en particular, preselecciona eventos con al menos un fotón con $\pt>1450\,\gev$, al menos dos jets y ningún leptón, cuyos requisitos son idénticos a los que se usan en el análisis descriptos en la Sección \ref{sec:selection}. A partir de ello se definen cuatro regiones \cite{ATL-COM-PHYS-2016-1626}:
 
@@ -318,7 +318,7 @@ donde:
 
 \noindent
 son los denominados \textit{Fake Factors} (FF). 
-Si bien ambos factores deben dar resultados equivalentes, se encuentra que al usar $\text{FF}_{\text{iso}}$ las incertezas sistemáticas se ven reducidas, y por ende se decide usarlo en el análisis.
+Si bien ambos factores deben dar resultados equivalentes, se encuentra que al usar $\text{FF}_{\text{iso}}$ las incertezas sistemáticas se ven reducidas y por ende se decide usarlo en el análisis.
 
 Distintas correcciones se realizan sobre este método. El primero es considerar la posibilidad de una contribución de fotones reales de señal en las regiones B, C y D. La misma se estima utilizando simulaciones de MC con fotones <<reales>> a nivel generador, y luego se resta a los datos observados, para asegurar de este modo solo el conteo de eventos de fondo en cada región. Adicionalmente, se considera una posible correlación entre variables calorimétricas y de identificación, que se puede agregar como un factor multiplicativo a la Ecuación \ref{eq:jfakes_ff}. Ese factor se define como:
 
